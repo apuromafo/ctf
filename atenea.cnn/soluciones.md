@@ -1,7 +1,7 @@
 El sitio es:
 https://www.ccn-cert.cni.es/soluciones-seguridad/atenea.html
 
-##no se permiten publicar soluciones
+## no se permiten publicar soluciones,Las reglas pueden ser cambiadas por los organizadores en el transcurso del desafío.
 
 cada vez que resuelves un reto se ve algo asi:
 
@@ -15,7 +15,7 @@ el alias que uses es algo personal y cada vez que subes en el ranking te lo indi
 
 cada cierto tiempo se van actualizando , es recomendable para ir aprendiendo y practicando.
 
-##Reglas del juego
+## Reglas del juego
 
 ```
 Para poder participar en alguno de los retos aquí planteados, debes registrarte en la plataforma y aceptar las siguientes normas:

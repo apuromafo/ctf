@@ -1,0 +1,78 @@
+Este reto tiene muchos pasos, el primero a leer seria la idea de otro similar
+lo primero es que parece ser aes de cbc
+pero no es el unico modo
+aes-[128|192|256]-cbc  128/192/256 bit AES in CBC mode
+        aes[128|192|256]       Alias for aes-[128|192|256]-cbc
+        aes-[128|192|256]-cfb  128/192/256 bit AES in 128 bit CFB mode
+        aes-[128|192|256]-cfb1 128/192/256 bit AES in 1 bit CFB mode
+        aes-[128|192|256]-cfb8 128/192/256 bit AES in 8 bit CFB mode
+        aes-[128|192|256]-ecb  128/192/256 bit AES in ECB mode
+        aes-[128|192|256]-ofb  128/192/256 bit AES in OFB mode
+en el pasado existio alguien que resolvio un ecb
+
+https://github.com/ctfs/write-ups-2014/tree/master/tinyctf-2014/ecb-its-easy-as-123
+https://github.com/jesstess/tinyctf/blob/master/ecb/ecb.md
+
+comenta que hay que estudiar el header y repararlo , luego de ello,
+ recien desencriptar el cuerpo y unir
+hay 3 zonas, header, cuerpo , tallo
+el header original debe estar parcialmente correcto sino no se vería el bmp
+
+haciendo uso de https://asecuritysite.com/forensics/bmp?file=activated.bmp
+hacia el link original de la imagen 
+
+refiere
+File contents analysis
+Byte 1,2 should be [0x4D 0x42]: 424D
+Bytes 3-6 (Images Size) 11BDBFEF
+Bytes 7,8 (Must be zero) 0A00
+Bytes 9,10 (Must be zero) 0000
+Bytes 11-14 (Image offset) 00360000
+Bytes 15-18 (size of BITMAPINFOHEADER structure, must be 40 [0x28]) 00280000
+Bytes 19-22 (image width) BFEF0000
+Bytes 23-26 (image height) 000002BD
+Bytes 27,28 (number of planes in the image, must be 1) 013C
+Bytes 29,30 (number of bits per pixel (1, 4, 8, or 24 [0x18])) 0000
+— Note 24 bit color, is three bytes of red, green and blue, each
+
+lo incorrecto ahi es el numero de planos y ademas los bytes por pixel
+
+ahi esta visto el header, 
+el cuerpo se usa el salt referido
+normalmente se usa algo asi
+https://vikingvpn.com/blogs/security/visualizing-weak-encryption-experiments-with-aes
+
+desde aqui se desprende el formato mas menos que se usa
+openssl aes-256-cbc -a salt -in secrets.txt -out secrets.txt
+pero aqui para desencriptar se usa
+openssl aes-256-cbc -d -a -in secrets.txt.enc -out secrets.txt.new
+normalmente se deben respetar los primeros 54 valores
+dd if=original.bmp of=encrypted.bmp bs=1 count=54 conv=notrunc
+
+openssl enc -AES128CBC -in VikingBW.bmp -out VikingAES128CBC.bmp
+
+It will then prompt you for a password, for this experiment, the password "shittypassword" (without the quotes)
+
+respecto al final del archivo
+estos son los ultimos bytes, en teoria deberian encriptarse o desencriptarse tambien, o bien ser todos 00
+24 CF 83 25 A9 32 9D DB 83 1A 4D 30 90 47 71 EC AF 97 38 D4 97 38 4A 1E 35 8E
+
+
+
+si vamos pensando solo en el salt como encripted, a pesar de tenerlo, no se sabe el largo correcto
+haciendo posibilidad sin repeticion de n valores
+6 posibles tipos de encriptados
+por
+(muchos bytes posibles de encriptacion en el salt), digamos unos 30
+y a su vez, en el valor de abajo 3 posibles (encriptado, desencriptado o 0)
+6x3x (cantidad de salt encription)
+sobrepasando 18 tipos diferentes cuando es 1, si son al menos 30 bytes
+hablamos de 18x30
+quien encuentre el salt encription tiene la primera parte lista (ver el bmp)
+
+por otro lado, si se hace bruteforce hacia el aes, sea desde la cola (tallo) final
+tenemos que tarda mas de 2 años en hacer bruteforce
+si hablamos del documento en si , aun asi sobrepasa lo esperado ,en mas de 3 años
+no tiene una alta entropia, pero no significa que sea facil de resolver.
+
+saludos Apuromafo

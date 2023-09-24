@@ -1,0 +1,8 @@
+07 - Placa
+400
+Mientras la guardia presta "enérgicamente" su turno de seguridad, un camión HINO 300 sospechoso se deteniene muy cerca del puesto de control...
+
+¿Puedes identificar la placa?
+
+Formato Flag:
+???-???/Ciudad

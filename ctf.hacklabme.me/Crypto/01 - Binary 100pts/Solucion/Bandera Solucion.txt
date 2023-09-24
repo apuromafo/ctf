@@ -1,0 +1,4 @@
+hacklab(b1n4r10z)
+
+Se usa un conversor de Binario a Texto, ejemplo
+http://www.traductorbinario.com/#binario

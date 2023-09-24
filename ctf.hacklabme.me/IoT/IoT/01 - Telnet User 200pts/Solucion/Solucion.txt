@@ -1,0 +1,12 @@
+Alphanetworks
+
+para resolver estos retos hay que usar linux, buscar bien con grep
+o bien ir descomprimiendo y analizando ..sea como sea
+se logra los valores dados
+para descomprimir solo renombrar a .tar y luego analizar con 7zip
+el comando que usaba realmente era este en formato
+user:password
+asi se lee
+Alphanetworks:$image_sign -i $lf &
+
+se deja la ruta y el archivo telnet

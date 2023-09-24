@@ -1,0 +1,10 @@
+HackLabMe(St3g01sV3r134s1)
+
+se usan herramientas de stenografia mas avanzadas 
+https://www.versioneye.com/ruby/zsteg/0.1.2
+zsteg -v Khalifa.png
+zsteg -a Khalifa.png
+encontrando
+HackLabMe(St3g01sV3r134s1)
+
+se dejan ss

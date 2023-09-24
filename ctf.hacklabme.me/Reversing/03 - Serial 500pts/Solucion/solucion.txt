@@ -1,0 +1,41 @@
+aqui el flag debe ser calculado con mucho cuidado, no sirve compartir flag
+pero el mio fue
+HackLabMe(r&fx1tPs3r1+l-2JBH;tckcTj)
+
+
+correo tipo alguncorreo@gmail.com
+serial 0  = 0123456789ABCDEFGHIJKLMNOPQRSTUVW
+eso sirve para indicar posiciones
+0 y A es comparado deben ser iguales
+(hablamos de posicion no de valor)
+el valor anterior (1)-A, debe ser igual a h(0x68)
+posicion 3 debe ser igual a  c( 0x63)
+Posicion P debe ser h
+posicion 2 debe ser a
+posicion 6 debe ser k (0x6b)
+y asi suma y sigue
+asi se analiza normalmente un programa..
+en otra parte pide el caracter +2
+en otra calcula otra cosa..y asi se forma el serial tipo que te comentaba
+Ahac7-krFLA2ctfgH5.puTF6Y
+Thac5ckrcLT-ctfHH51puTcFh
+ahora bien el reto valida la existencia de todos los guiones, solo con colocar eso, da igual lo demas
+osea 
+este fue mi serial tipo
+
+Thac7-krFLT2ctfgH5.puTF6Y
+luego cambiando en posiciones
+HackLabMe(r&fx1tPs3r1+l-2JBH;tckcTj)
+HackLabMe(r&fx1tPs3r14l-2JBH;tckcTj)
+HackLabMe(r&fx1tPs3r12l-2JBH;tckcTj)
+HackLabMe(r&fx1tPs3r1cl-2JBH;tckcTj)
+HackLabMe(r&fx1tPs3r1 l-2JBH;tckcTj)
+
+el serial valido tiene sus guiones en 
+Thac7-krFLT-ctfgH5-puTF6Y
+y cumple con todas las reglas, eso, un paso a la vez, es cada serial unico para cada uno:)
+saludos
+
+Apuromafo
+
+

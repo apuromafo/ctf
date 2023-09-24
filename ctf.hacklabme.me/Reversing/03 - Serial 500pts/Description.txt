@@ -1,0 +1,7 @@
+03 - Serial
+500
+
+Identifica el serial válido...
+Con este bastará para que obtengas la Flag.
+
+serial.exe

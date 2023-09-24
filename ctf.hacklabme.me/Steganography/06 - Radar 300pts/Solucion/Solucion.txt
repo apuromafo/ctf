@@ -1,0 +1,6 @@
+Flag(HLS0und)
+Siempre cuando uno escucha cosas potentes hay que usar un espectograma o algo asociado
+investigando de radares hablaban de morse 
+
+usando la misma tool de morse, en el espectro se ve la flag
+Flag(HLS0und)

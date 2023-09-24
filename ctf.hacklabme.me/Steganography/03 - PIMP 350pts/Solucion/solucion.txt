@@ -1,0 +1,12 @@
+smoke some weed
+
+este reto tiene 2 pasos, primero cambio de capas para ver el flag
+https://29a.ch/photo-forensics/#luminance-gradient
+
+se intenta morse, braile pero nada, copio la imagen de flag, 
+
+derrepente a contar puntos hacia el lado y alinearlo en una tabla, caia bien
+en octetos, luego ordenarlo .  es 1  y el espacio es 0
+y sale la imagen solucion (binario a texto) imagen 2
+al traducir se obtiene:
+smoke some weed

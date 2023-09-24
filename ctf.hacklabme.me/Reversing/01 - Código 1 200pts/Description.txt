@@ -1,0 +1,6 @@
+01 - Código 1
+200
+
+Identifica el password del aplicativo... El mismo es la Flag.
+
+valido.exe

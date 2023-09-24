@@ -1,0 +1,7 @@
+solo buscar en twitter
+https://twitter.com/search?l=&q=from%3AJuanes%20near%3A%22OSLO%22%20within%3A15mi&src=typd
+se copia de ahi
+https://twitter.com/juanes/status/807904194392834049
+
+sin comillas con o sin el espacio final..
+"Conferencia de prensa del concierto del Nobel de la Paz, en Oslo. Conan O'Brien hace chistes… https://www.instagram.com/p/BN3-CHCBSs5/ "

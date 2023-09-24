@@ -1,0 +1,5 @@
+BarCampSE-HackLABM3
+
+return String.fromCharCode((c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 17) ? c : c - 26);});
+                if ("SriTrdgJV-YrtbCRSD3" == ctfFlag) {
+                        alert("Correcto... Esa es la Flag");

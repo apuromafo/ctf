@@ -1,0 +1,12 @@
+08 - Cámara
+400
+Ahora no podemos identificar la marca y modelo de esta cámara...
+
+Lo siento... Pero sólo tenemos un fragmento de una fotografía...
+Alguien que sabe, logró extraer el número del serial... Él cree que con eso basta...
+Serial de la cámara:
+3495849
+
+¿Puedes hacerlo?
+Formato Flag:
+Marca ModeloX

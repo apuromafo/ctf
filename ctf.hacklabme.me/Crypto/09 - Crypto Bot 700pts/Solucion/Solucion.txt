@@ -1,0 +1,41 @@
+HackLab(Cr1pt0ch4ll3ng3Z)
+
+Para este reto hay que tener un poco de ingenio, el primero es mandar lo sugerido
+primero conectarse a nc, luego enviar el mensaje
+echo 'idea'
+el tema es que da instrucciones extrañas como que el comando no es valido o algo asi
+luego creamos un diccionario mas grande, pues encripta todo y cambia el alfabeto
+a cada rato, entonces hay que reconocer si es de windows o linux
+(hay 3 intentos)
+luego de ser linux se prueba si ejecuta comandos
+(2 intentos mas como usar bien los comandos aparte del hecho)
+echo 'diccionario' && comandolinux
+se verifica cd, ls, grep, cat, y se revisan multiples carpetas
+etc .etc  entre otros
+se confirma la existencia de un archivo llamado FLAG y FLAGtxt
+el final ya sabia que tenia un texto llamado HackLab pero me faltaban signos 
+pruebo denuevo la palabra haber si lo pillo
+coloco 3 puntos para hacer una diferencia del espacio y de ahi mirar bien el diccionario
+
+
+echo 'HackLab ...abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 !"#$%&()*+,-./:;<=>?@[\]^_{|}~' && cat .etcFlag
+
+en la consola me mostro asi
+ME[_#Ex$eeeEx[&L1Ki0Y_|j2W:Z3gD+(-P^ohrdQ/9;MbfI#X*<4>kp\J)R%,]~u`5?yBv7"$aSnTOHCzGNUce.8Aq{V'l6 =F@!wms
+ME[_#ExCd3u:D~[i?||52K5]z
+
+para decodificar se debe usar el mismo echo anterior
+HackLab ...abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 !"#$%&()*+,-./:;<=>?@[\]^_{|}~' && cat .etcFlag
+ME[_#Ex$eeeEx[&L1Ki0Y_|j2W:Z3gD+(-P^ohrdQ/9;MbfI#X*<4>kp\J)R%,]~u`5?yBv7"$aSnTOHCzGNUce.8Aq{V'l6 =F@!wms
+
+H = M
+a = E
+y asi suma y sigue cuando se termina
+el texto refiere en su interior:
+HackLab(Cr1pt0ch4ll3ng3Z)
+
+eso es todo
+
+
+
+

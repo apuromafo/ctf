@@ -1,0 +1,15 @@
+
+si buscamos la pista
+
+Hint(pista) por 100 puntos
+Super Clinton
+
+jaja no dice nada, bueno
+comenzamos buscando la primera guardada de la web
+https://web.archive.org/web/19961103232929/http://www.eltiempo.com:80/
+se aprecia:
+https://web.archive.org/web/19961103232929/mailto:juarey@aol.com
+
+por lo cual el flag es
+juarey@aol.com
+

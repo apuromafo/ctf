@@ -1,0 +1,21 @@
+HackLabMe(Fl4gStr4ng3rCOOOL)
+
+Lo primero es que estenografía requiere herramientas para analizar
+zsteg entre otros 
+las mas basicas estan aqui
+http://www.securitybydefault.com/2010/12/herramientas-de-esteganografia.html
+
+lo cual lleva a conocer
+http://www.jjtc.com/Steganography/tools.html
+y asi suma y sigue
+elijo a la web 
+https://29a.ch/photo-forensics/#strings
+en opcion de string se ve luego del fin (IEND)
+
+vamos a las string del archivo
+IEND
+*skMf{"type":"Document","metadata":{"key":"Markup Windows","creator":"markupwin","creatorVersion":"1.5.0.2307","version":"1.1","userAgentHistory":["Evernote Windows Markup/1.5.0.2307"]},"frame":{"x":0,"y":0,"width":725,"height":719},"deviceScale":1,"contentScaleFactor":1.355,"coordinateSystem":1,"children":[{"type":"Layer","layerId":"__background__","children":[{"type":"Bitmap","guid":"1e7e80fa-8dd7-4b3f-a4e7-b7cb90f50f31","style":{"shadowColor":{"red":0,"green":0,"blue":0,"alpha":0},"shadowOpacity":0.35,"shadowOffset":{"width":0,"height":0},"shadowRadius":0},"uri":"skitch+uuid:///1e7e80fa-8dd7-4b3f-a4e7-b7cb90f50f31","frame":{"x":0,"y":0,"width":725,"height":719},"contentMode":0}]},{"type":"Layer","layerId":"__annotation__","children":[]},{"type":"Layer","layerId":"__text__","children":[{"type":"Text","guid":"8450fba2-3d3f-49a9-89ff-14b02505f63d","style":{"shadowColor":{"red":0,"green":0,"blue":0,"alpha":0.35},"shadowOpacity":0.35,"shadowOffset":{"width":0,"height":3},"shadowRadius":4},"textStyle":"bubbleText","text":"HackLabMe(Fl4gStr4ng3rCOOOL)","origin":{"x":36.721,"y":351.855},"font":{"name":"Helvetica,Arial","size":39.662},"strokeColor":{"red":255,"green":255,"blue":255,"alpha":1},"fillColor":{"red":255,"green":0,"blue":0,"alpha":1},"lineWidth":10.837,"alignment":"left","direction":"leftToRight"}]}]}
+IEND
+
+es claro
+"text":"HackLabMe(Fl4gStr4ng3rCOOOL)"

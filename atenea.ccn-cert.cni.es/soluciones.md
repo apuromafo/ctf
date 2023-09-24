@@ -20,13 +20,15 @@ cada cierto tiempo se van actualizando , es recomendable para ir aprendiendo y p
 ```
 Para poder participar en alguno de los retos aquí planteados, debes registrarte en la plataforma y aceptar las siguientes normas:
 
-Cada desafío tendrá una puntuación. Los tres primeros en resolver el reto figurarán en el panel de puntuaciones con las medallas de oro, plata y bronce, respectivamente. El resto de concursantes obtendrán los puntos correspondientes.
+Cada desafío tendrá una puntuación. Los tres primeros en resolver el reto figurarán en el panel de puntuaciones con las medallas de oro, plata y bronce, respectivamente.
+ El resto de concursantes obtendrán los puntos correspondientes.
 Si has consumido todos los intentos para resolver un reto tienes la posibilidad de seguir intentándolo, pero sin recibir ningún punto.
 No están permitidos los ataques de Denegación de Servicio.
 No están permitidos los escaneos automatizados contra la plataforma.
 No están permitidos ataques destructivos (no se podrá modificar ningún desafío ya que se perjudicaría el juego de otros jugadores).
 Es preciso mantener el objetivo en los puntos que están indicados para ello.
-Si aun así encuentras una vulnerabilidad en nuestra infraestructura o algún atajo para resolver un desafío con mayor facilidad; os rogamos que nos informéis. De esta forma obtendréis un mayor reconocimiento y puntos de bonificación.
+Si aun así encuentras una vulnerabilidad en nuestra infraestructura o algún atajo para resolver un desafío con mayor facilidad; os rogamos que nos informéis. 
+ De esta forma obtendréis un mayor reconocimiento y puntos de bonificación.
 Las reglas pueden ser cambiadas por los organizadores en el transcurso del desafío.
 En algunas ocasiones, y en función del número de jugadores y el tiempo utilizado para resolver un desafío, se podrá proporcionar alguna pista adicional.
 Los jugadores que no acepten estas reglas podrán ser penalizados o, según el caso, expulsados de forma permanente de la plataforma.

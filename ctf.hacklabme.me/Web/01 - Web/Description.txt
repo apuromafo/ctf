@@ -1,9 +1,0 @@
-01 - WebLog
-300
-
-Extraer el usuario y contraseña de Admin.
-
-www.pcte.co/index.php
-
-Formato Flag:
-user/password

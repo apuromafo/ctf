@@ -1,0 +1,5 @@
+04 - Email
+400
+Ahora identifica el correo electrónico que por "error" dejaron embebido en el firmware.
+
+04.bin

@@ -1,0 +1,4 @@
+el .docx Se descomprime en 7zip, se va a buscar las imagenes
+Cypress\word\media
+
+se encuentra flag.bmp y eso es todo, a escribir el flag

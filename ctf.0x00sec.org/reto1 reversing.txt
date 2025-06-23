@@ -1,0 +1,4 @@
+el primero de reversing en windows
+challenge-001 (Gone Fishing) en mi pc comparaba con 0G932SE1L48Y6G
+dando el glag
+0x00CTF{F1SH1N9_R3QU1R3S_G00D_B4IT}

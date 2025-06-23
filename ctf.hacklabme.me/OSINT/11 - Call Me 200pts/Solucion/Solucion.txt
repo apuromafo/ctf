@@ -1,0 +1,32 @@
+este reto es un poco mas complejo, piden un telefono , desde un perfil antiguo
+siguiendo con web archive comienzo a apuntar, pero luego reacciono que tampoco
+refieren el formato, si hay que colocar mas o no
+
+primero necesitamos el twitter
+https://twitter.com/jack
+
+ 
+oct 2003
+
+ 
++1 314 393 9983
+
+
+PH: 13143939983 / IM: JACKCOMMON / EDIT: EDIT.GU.ST
+julio 2004 
+
+oct 2003
+ 
++1 314 393 9983
+
+ 
+
+JACK DORSEY +1 415 963 2357
+
+ 
+asi es el formato y respuesta del flag, luego se busca en el 200x y se encuentra:
+
+
++1 415 963 2357
+
+ 

@@ -1,0 +1,19 @@
+Lo Primero que tenemos es que hay letras con numeros
+1=GINS
+2=CFLORT
+3=A
+4=E
+a primera vista puede formarse la palabra FLAG
+INSCORTE
+luego de aqui viene la idea de intentar buscar una frase que use todo, pero
+si fuera la frase mas larga , y cada numero es la frecuencia de utilizar cada palabra
+AAACCEEEEFFGILLNOORRSTT
+
+entonces se busca, refiere que usa un diccionario snarkiano
+http://mathforum.org/kb/servlet/JiveServlet/download/265-610995-1786142-99543/att1.html
+
+palabra de 23 letras: 
+aaacceeeeffgillnoorrstt (electroencefalografista)
+
+como vemos es el mismo que tenemos nosotros, probamos la flag y esa es :)
+electroencefalografista

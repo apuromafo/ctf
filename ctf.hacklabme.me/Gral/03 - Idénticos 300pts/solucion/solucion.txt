@@ -1,0 +1,6 @@
+hackl4b(s0lv3d)
+
+Se usan servicios que comparen hexadecimales, cualquiera sirve, se apuntan los hex
+y se confirma en decodificar esos hex dando el flag correcto
+6861636b6c34622873306c76336429
+hackl4b(s0lv3d)

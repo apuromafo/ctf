@@ -1,0 +1,12 @@
+P4ssw0rd.
+
+se hace uso de herramientas como cain y Abel, se instala en windows
+se obtiene un hash normal y lm, para esto hay que agregar y salen los 2 tipos de archivos
+si no se hace, no se obtiene el hash correcto, luego se usa servicio web
+
+solucion de lm crack
+http://rainbowtables.it64.com/
+hash
+61CB73542432211CAAB783AC2E719635
+
+se obtiene el flag P4ssw0rd.

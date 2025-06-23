@@ -1,0 +1,5 @@
+02 - Telnet Password
+300
+Ahora identifica el password del usuario encontrado previamente.
+
+02.bin

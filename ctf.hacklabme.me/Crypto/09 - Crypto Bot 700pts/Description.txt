@@ -1,0 +1,12 @@
+09 - Crypto Bot
+700
+
+El CryptoBot sólo se limita a responder nuestros mensajes...
+
+¿Puedes burlarlo y obtener la Bandera?
+
+Para conectarte debes hacerlo al puerto 8888
+
+Ej:
+nc 129.213.122.66 8888
+echo mensaje

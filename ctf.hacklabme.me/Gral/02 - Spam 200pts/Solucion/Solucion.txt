@@ -1,8 +1,0 @@
-flag(Zp4m)
-
-
-busque solo para decodificar spam, salio esta web
-
-http://www.spammimic.com/decode.shtml
-al usar aparece la flag
-flag(Zp4m)

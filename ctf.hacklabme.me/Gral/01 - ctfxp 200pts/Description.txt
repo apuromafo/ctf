@@ -1,5 +1,0 @@
-01 - ctfxp
-200
-
-Recupera la contraseña del usuario ctfxp...
-Esa es la bandera (Y)

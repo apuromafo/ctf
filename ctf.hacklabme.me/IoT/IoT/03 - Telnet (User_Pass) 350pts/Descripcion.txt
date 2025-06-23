@@ -1,8 +1,0 @@
-03 - Telnet (User/Pass)
-350
-Identifica el usuario y contraseña del servicio Telnet.
-
-Formato Flag:
-user/pass
-
-03.bin

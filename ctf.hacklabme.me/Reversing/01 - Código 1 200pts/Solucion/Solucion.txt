@@ -1,0 +1,8 @@
+ch==224
+hay que desempacar en x64bytes, se usa x64dbg
+pushad popad jmp se ve en x86
+en x64 se ven algo similar, luego de llegar al oep, buscar las string
+y se encuentra el serial
+ [[0x0000000000488004]]=[0000000000488004 "ch==224"]=0
+
+password  sin las comillas"ch==224"

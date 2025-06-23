@@ -1,0 +1,22 @@
+
+<!-- saved from url=(0027)http://www.pcte.co/hl1.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+        <title>BarCampSE</title>
+ </head>
+ <body>
+        <input type="text" name="flag" id="flag" value="b4RCAMpS3-h4cklaBM3">
+        <input type="button" id="prompt" value="Enviar Flag">
+        <script type="text/javascript">
+                document.getElementById("prompt").onclick = function () {
+                var flag = document.getElementById("flag").value;
+                var ctfFlag = flag.replace(/[a-zA-Z]/g, function(c){
+                return String.fromCharCode((c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 17) ? c : c - 26);});
+                if ("SriTrdgJV-YrtbCRSD3" == ctfFlag) {
+                        alert("Correcto... Esa es la Flag");
+                } else {
+                        alert("No es correcto... Sigue intentando...");
+                }
+                }
+        </script>
+ 
+</body></html>

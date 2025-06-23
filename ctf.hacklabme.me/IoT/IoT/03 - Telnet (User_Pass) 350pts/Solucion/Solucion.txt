@@ -1,0 +1,17 @@
+admin/donttellanyone
+
+para resolver estos retos hay que usar linux, buscar bien con grep
+o bien ir descomprimiendo y analizando ..sea como sea
+se logra los valores dados
+
+hay que saber buscar solamente, hay la misma ruta
+el metodo es el mismo
+para descomprimir solo renombrar a .tar y luego analizar con 7zip
+el comando que usaba realmente era este en formato
+
+asi se lee
+telnetd -l "/usr/sbin/login" -u Alphanetworks:$image_sign -i $lf &
+user:password
+Alphanetworks:$image_sign -i $lf
+
+entonces se busca algo mas y se encuentra credentials, ahi esta todo

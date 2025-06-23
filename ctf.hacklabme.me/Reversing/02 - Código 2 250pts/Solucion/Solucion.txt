@@ -1,0 +1,6 @@
+Fl4g(printf&buffSTDIN)
+
+se buscan las strings, se copia y pega y eso es todo
+0040153F | C7 44 24 04  | mov dword ptr ss:[esp + 0x4], serial1.4 | 0x404013:"Fl4g(printf&buffSTDIN)\n"
+Fl4g(printf&buffSTDIN)
+

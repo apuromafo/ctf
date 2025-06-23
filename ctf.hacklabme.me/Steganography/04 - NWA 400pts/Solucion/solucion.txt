@@ -1,0 +1,11 @@
+FUCK_THA_POLICE
+
+este reto es igual que los otros , pero hay que mejorar la vista
+se lee primero FUCK THA POLICE pero no acepta, al cambiar un poco la vista
+con las opciones se aprecia los guiones bajos, asi que eso es todo
+tool:https://29a.ch/photo-forensics/#luminance-gradient
+
+Solución
+FUCK_THA_POLICE
+
+

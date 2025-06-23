@@ -1,0 +1,5 @@
+01 - Telnet User
+200
+Identifica el usuario del servicio/protocolo Telnet
+
+01.bin

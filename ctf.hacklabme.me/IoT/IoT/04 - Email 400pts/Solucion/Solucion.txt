@@ -1,0 +1,29 @@
+udemy@gmail.com
+
+para resolver estos retos hay que usar linux, buscar bien con grep
+o bien ir descomprimiendo y analizando ..sea como sea
+se logra los valores dados
+
+hay que saber buscar solamente, hay la misma ruta
+el metodo es el mismo
+para descomprimir solo renombrar a .tar y luego analizar con 7zip
+el comando que usaba realmente era este en formato dentro del archivo se pilla un password-file.txt asi se ve
+
+
+Congratulations for clearing round 3.Here are the password details
+
+Facebook
+Username  - udemy
+password  - udemy@firmware
+
+
+GMAIL
+Username  - udemy@gmail.com
+password  - gmail@udemy
+
+Twitter
+Username - udemyrocks
+Password - hackandattack
+
+
+ 

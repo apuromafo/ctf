@@ -57,10 +57,11 @@ Day 24 | Exploitation with cURL - Hoperation Eggsploit |
 Sidequest
 | Sidequest | Title  
 |-------|----------|
-Sidequest 1 | 1 |
-Sidequest 2 | 2 |
-Sidequest 3 | 3 |
-Sidequest 4 | 4 |
+Sidequest 1 | The Great Disappearing Act |
+Sidequest 2 | Scheme Catcher |
+Sidequest 3 | Carrotbane of My Existence |
+Sidequest 4 | BreachBlocker Unlocker |
+Sidequest 5 |Hopper's Origin |
 
 ---
 

@@ -90,6 +90,8 @@ Sidequest 5 |Hopper's Origin |
 - Burp Suite
 - Zeek
 - RITA
+- AWS CLI
+- CURL
 
 ---
 

@@ -11,58 +11,58 @@ What popular website can be used to verify if your email address or password has
 
 
 What is the name of the challenge-response authentication mechanism that uses NTLM?
-NetNtlm
+><details><summary>Click for answer</summary>NetNtlm</details>
 
 What is the username of the third valid credential pair found by the password spraying script?
-gordon.stevens
+><details><summary>Click for answer</summary>gordon.stevens</details>
 
 How many valid credentials pairs were found by the password spraying script?
-4
+><details><summary>Click for answer</summary>4</details>
 
 What is the message displayed by the web application when authenticating with a valid credential pair?
-Hello World
+><details><summary>Click for answer</summary>Hello World</details>
 
 What type of attack can be performed against LDAP Authentication systems not commonly found against Windows Authentication systems?
-LDAP Pass-back Attack
+><details><summary>Click for answer</summary>LDAP Pass-back Attack</details>
 
 What two authentication mechanisms do we allow on our rogue LDAP server to downgrade the authentication and make it clear text?
-LOGIN,PLAIN
+><details><summary>Click for answer</summary>LOGIN,PLAIN</details>
 
 What is the password associated with the svcLDAP account?
-tryhackmeldappass1@
+><details><summary>Click for answer</summary>tryhackmeldappass1@</details>
 
 What is the name of the tool we can use to poison and capture authentication requests on the network?
-Responder
+><details><summary>Click for answer</summary>Responder</details>
 
 What is the username associated with the challenge that was captured?
-svcFileCopy
+><details><summary>Click for answer</summary>svcFileCopy</details>
 
 What is the value of the cracked password associated with the challenge that was captured?
-FPassword1!
+><details><summary>Click for answer</summary>FPassword1!</details>
 
 What Microsoft tool is used to create and host PXE Boot images in organisations?
-Microsoft Deployment Toolkit
+><details><summary>Click for answer</summary>Microsoft Deployment Toolkit</details>
 
 What network protocol is used for recovery of files from the MDT server?
-TFTP
+><details><summary>Click for answer</summary>TFTP</details>
 
 What is the username associated with the account that was stored in the PXE Boot image?
-svcMDT
+><details><summary>Click for answer</summary>svcMDT</details>
 
 What is the password associated with the account that was stored in the PXE Boot image?
-PXEBootSecure1@
+><details><summary>Click for answer</summary>PXEBootSecure1@</details>
 
 What type of files often contain stored credentials on hosts?
-Configuration Files
+><details><summary>Click for answer</summary>Configuration Files</details>
 
 What is the name of the McAfee database that stores configuration including credentials used to connect to the orchestrator?
-ma.db
+><details><summary>Click for answer</summary>ma.db</details>
 
 What table in this database stores the credentials of the orchestrator?
-AGENT_REPOSITORIES
+><details><summary>Click for answer</summary>AGENT_REPOSITORIES</details>
 
 What is the username of the AD account associated with the McAfee service?
-svcAV
+><details><summary>Click for answer</summary>svcAV</details>
 
 What is the password of the AD account associated with the McAfee service?
-MyStrongPassword!
+><details><summary>Click for answer</summary>MyStrongPassword!</details>

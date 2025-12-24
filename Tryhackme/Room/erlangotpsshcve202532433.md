@@ -3,7 +3,7 @@
 
 Aprende y explota la vulnerabilidad CVE-2025-32433 de Erlang/OTP SSH en un entorno de laboratorio.
 
-<img src="[https://tryhackme-images.s3.amazonaws.com/room-icons/5f04259cf9bf5b57aed2c476-1745418138356](https://tryhackme-images.s3.amazonaws.com/room-icons/5f04259cf9bf5b57aed2c476-1745418138356)" width="250" alt=" Erlang/OTP SSH">
+<img src="https://tryhackme-images.s3.amazonaws.com/room-icons/5f04259cf9bf5b57aed2c476-1745418138356" width="250" alt=" Erlang/OTP SSH">
 
 > **Información de la sala**
 > * **Tipo:** Walkthrough (Guía paso a paso)
@@ -12,24 +12,7 @@ Aprende y explota la vulnerabilidad CVE-2025-32433 de Erlang/OTP SSH en un entor
 > * **Enlace oficial:** [https://tryhackme.com/room/erlangotpsshcve202532433](https://tryhackme.com/room/erlangotpsshcve202532433)
 > 
 > 
-
-Entendido, he restaurado los bloques de código de la **AttackBox** exactamente como estaban en el original, manteniendo las rutas (`root@attackbox:~#`) y el formato original, pero conservando el resto del documento en español para tu reporte.
-
-Aquí tienes el Markdown corregido:
-
-# Erlang/OTP SSH: CVE-2025-32433
-
-Aprende y explota la vulnerabilidad Erlang/OTP SSH CVE-2025-32433 en un entorno de laboratorio.
-
-<img src="[https://tryhackme-images.s3.amazonaws.com/room-icons/5f04259cf9bf5b57aed2c476-1745418138356](https://tryhackme-images.s3.amazonaws.com/room-icons/5f04259cf9bf5b57aed2c476-1745418138356)" width="250" alt="Erlang/OTP SSH">
-
-> **Info**
-> Room Type: walkthrough
-> Free Room. Anyone can deploy virtual machines in the room (without being subscribed)!
-> Created by: tryhackme,strategos,TactfulTurtle
-> Link: [https://tryhackme.com/room/erlangotpsshcve202532433](https://tryhackme.com/room/erlangotpsshcve202532433)
-
----
+ 
 
 ## Tarea 1: Introducción
 

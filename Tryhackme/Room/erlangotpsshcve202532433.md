@@ -3,6 +3,7 @@
 Learn about and exploit Erlang/OTP SSH CVE-2025-32433 in a lab setup.
 > [!NOTE]
 >IMG: https://tryhackme-images.s3.amazonaws.com/room-icons/5f04259cf9bf5b57aed2c476-1745418138356
+
 >Link: https://tryhackme.com/room/erlangotpsshcve202532433
 >Info
 >Room Type: walkthrough

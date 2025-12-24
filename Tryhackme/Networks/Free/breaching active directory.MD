@@ -7,7 +7,8 @@ answers
 
 
 What popular website can be used to verify if your email address or password has ever been exposed in a publicly disclosed data breach?
-HaveIBeenPwned
+><details><summary>Click for answer</summary>HaveIBeenPwned</details>
+
 
 What is the name of the challenge-response authentication mechanism that uses NTLM?
 NetNtlm

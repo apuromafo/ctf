@@ -1,7 +1,8 @@
  
 AI/ML Security Threats room info
+IMG https://tryhackme-images.s3.amazonaws.com/room-icons/6228f0d4ca8e57005149c3e3-1744795088730
 
-https://tryhackme-images.s3.amazonaws.com/room-icons/6228f0d4ca8e57005149c3e3-1744795088730
+Link: https://tryhackme.com/room/aimlsecuritythreats
 
 
 Room Type :  walkthrough
@@ -241,3 +242,22 @@ Here are some things that can be done to secure AI:
 What's the flag? 
 
 `THM{443/60/16384}`
+
+
+## Conclusion
+At the beginning of this room, it was noted that "Knowledge is power" and that this is especially true in the fight against AI cyber threats. The rate at which this technology has exploded onto the scene has left many feeling left in the dust. Now, with a better understanding of AI and the underlying technology which enables it to be the force it currently is in our (and all) industry, you understand what is posing a threat to our systems and what needs to be secured as a result. Here is a recap of what's been covered:
+
+**Artificial Intelligence** (AI) is the overarching field concerned with enabling machines/systems to mimic human behaviour.
+**Machine learning** (ML) is a subfield of AI in which a model can be fed and trained on input and used to make predictions.
+**Deep learning** (DL) is then a subfield of ML. It no longer needs human interaction and can self-tech and process mass amounts of data, possible through the use of **Neural Networks**.
+DL has enabled the emergence of technologies like **LLMs** (and other **generative AI**), which, through the use of transformer neural networks and attention, can be queried in natural language, understand it and respond in a human-like, conversational fashion.
+AI is a dangerous weapon in the hands of an attacker. It has the potential to **enhance existing cyber attacks** like phishing and increase the attack surface by **introducing AI vulnerabilities**.
+While being dangerous in the hands of attackers, AI **can be invaluable in the fight against AI cyber threats** and should be adopted, but **done so securely** so vulnerabilities are not introduced.
+
+
+
+
+Bonus:
+Phishing: When emails are sent to a target(s) purporting to be from a trusted entity to lure individuals into providing sensitive information.
+AI :  Artificial Intelligence is technology that enables computers and machines to simulate human behaviour, like learning and reasoning.
+ML :Machine Learning is the term used to describe algorithms and functions used to get computers to think and act the way humans and nature do.

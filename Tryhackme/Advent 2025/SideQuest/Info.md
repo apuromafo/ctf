@@ -1,4 +1,38 @@
-https://tryhackme.com/adventofcyber25/sidequest
+
+![Advent of Cyber 2025 Side Quests](https://tryhackme.com/images/pngs/aoc25/sidequest/cosy-cabin.webp)
+
+# Advent of Cyber 2025 Side Quests
+
+This guide contains the answer and steps necessary to get to them for the [Advent of Cyber 2025 Side Quests](https://tryhackme.com/adventofcyber25/sidequest) event. Each side quest needs a password to start them. This room only covers the steps to get these passwords. The steps for the actual side quests will be covered in their respective guides.
+
+## Table of contents
+
+- [Hopper's Origin](#hopper-s-origin)
+- [The Great Disappearing Act](#the-great-disappearing-act)
+- [Scheme Catcher](#scheme-catcher)
+- [Carrotbane of My Existence](#carrotbane-of-my-existence)
+- [BreachBlocker Unlocker](#breachblocker-unlocker)
+
+### Hopper's Origin
+
+The guide for this password is not available yet.
+
+### The Great Disappearing Act
+
+The guide for this password is not available yet.
+
+### Scheme Catcher
+
+The guide for this password is not available yet.
+
+### Carrotbane of My Existence
+
+The guide for this password cannot be shared untill the event is over after the 31st of december 2025.
+
+### BreachBlocker Unlocker
+
+The guide for this password is not available yet.
+ 
 
 Rules
 Do not share questions or hints, including in videos, streams, or any other medium while the event is running (until Dec 31st).
@@ -8,9 +42,3 @@ Teaming up is permitted.
 For a more comprehensive list, please read about the Advent of Cyber 2025 Terms and Conditions.
 
 https://help.tryhackme.com/en/articles/8537472-advent-of-cyber-2025-terms-and-condition
-
-
-
-
-Note: this github is not video or stream...
-

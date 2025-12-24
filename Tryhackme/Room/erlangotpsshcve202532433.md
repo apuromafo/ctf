@@ -1,16 +1,16 @@
-Erlang/OTP SSH: CVE-2025-32433
+## Erlang/OTP SSH: CVE-2025-32433
+
 Learn about and exploit Erlang/OTP SSH CVE-2025-32433 in a lab setup.
-Link: https://tryhackme.com/room/erlangotpsshcve202532433
+> [!NOTE]
+>IMG: https://tryhackme-images.s3.amazonaws.com/room-icons/5f04259cf9bf5b57aed2c476-1745418138356
+>Link: https://tryhackme.com/room/erlangotpsshcve202532433
+>Info
+>Room Type: walkthrough
+>Free Room. Anyone can deploy virtual machines in the room (without being subscribed)!
+>Created by: tryhackme,strategos,TactfulTurtle
+>245 days ago
+ 
 
-Info
-
-Room Type: walkthrough
-
-Free Room. Anyone can deploy virtual machines in the room (without being subscribed)!
-
-Created by: tryhackme,strategos,TactfulTurtle
-
-245 days ago
 
 ## Task 1 Introduction
 Erlang and its companion framework, the Open Telecom Platform (OTP), form a powerful ecosystem for building distributed fault-tolerant systems. Erlang is a programming language designed to build scalable real-time systems that require high availability. Originally, Erlang was developed by Ericsson for telecommunication systems; however, it has evolved over the years to become a solution for various distributed computing challenges.

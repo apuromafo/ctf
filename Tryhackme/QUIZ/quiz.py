@@ -32,12 +32,12 @@ def realizar_quiz_ciberseguridad():
         },
         "d": {
             "title": "Red Teamer",
-            "url": "https://tryhackme.com/resources/blog/red-teaming-jobs-salaries-opportunities",
+            "url": "https://tryhackme.com/careers/red-teamer",
             "desc": "A diferencia del pentesting, los red teamers prueban las capacidades de detección y respuesta de la empresa. Requiere imitar acciones de criminales cibernéticos, emular ataques maliciosos, mantener el acceso y evitar la detección."
         },
         "c": {
             "title": "Incident Responder",
-            "url": "https://tryhackme.com/resources/blog/entry-level-cyber-careers",
+            "url": "https://tryhackme.com/careers/incident-responder",
             "desc": "Responden de manera productiva a las brechas de seguridad. Creas planes, políticas y protocolos. Es una posición de alta presión con respuestas requeridas en tiempo real mientras los ataques se desarrollan."
         }
     }

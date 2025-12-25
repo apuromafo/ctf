@@ -17,8 +17,8 @@ El script evalúa y categoriza al usuario en uno de los siguientes 5 roles crít
 | **Penetration Tester** | Descubrir fallas y explotar vulnerabilidades de forma sistemática. | [Ver Carrera](https://tryhackme.com/careers/penetration-tester) |
 | **Security Analyst** | Evaluación de redes y recomendación de medidas preventivas. | [Ver Carrera](https://tryhackme.com/careers/cyber-security-analyst) |
 | **Security Engineer** | Desarrollo e implementación de soluciones contra amenazas web y de red. | [Ver Carrera](https://tryhackme.com/careers/security-engineer) |
-| **Red Teamer** | Emulación de adversarios y prueba de capacidades de detección/respuesta. | [Ver Carrera](https://tryhackme.com/resources/blog/red-teaming-jobs-salaries-opportunities) |
-| **Incident Responder** | Respuesta en tiempo real y creación de protocolos ante brechas de seguridad. | [Ver Carrera](https://tryhackme.com/resources/blog/entry-level-cyber-careers) |
+| **Red Teamer** | Emulación de adversarios y prueba de capacidades de detección/respuesta. | [Ver Carrera](https://tryhackme.com/careers/red-teamer) |
+| **Incident Responder** | Respuesta en tiempo real y creación de protocolos ante brechas de seguridad. | [Ver Carrera](https://tryhackme.com/careers/incident-responder) |
 
 ---
 

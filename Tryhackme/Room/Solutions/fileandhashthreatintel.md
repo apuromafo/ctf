@@ -1,8 +1,8 @@
- File and Hash Threat Intel
+# File and Hash Threat Intel
 This room seeks to teach on enriching file and hash artefacts using threat intelligence.
-https://tryhackme.com/room/fileandhashthreatintel
+**Room Link:**  https://tryhackme.com/room/fileandhashthreatintel
 
-https://tryhackme-images.s3.amazonaws.com/room-icons/5fc2847e1bbebc03aa89fbf2-1754051466692
+ <img src="https://tryhackme-images.s3.amazonaws.com/room-icons/5fc2847e1bbebc03aa89fbf2-1754051466692" width="250" alt="File and Hash Threat Intel">
 
 
 

@@ -9,11 +9,11 @@ This guide contains the answer and steps necessary to get to them for the [Adven
 
 ## Table of contents
 
-- [Hopper's Origin](#hopper-s-origin)
-- [The Great Disappearing Act](#the-great-disappearing-act)
-- [Scheme Catcher](#scheme-catcher)
-- [Carrotbane of My Existence](#carrotbane-of-my-existence)
-- [BreachBlocker Unlocker](#breachblocker-unlocker)
+- Sidequest 0 [Hopper's Origin](#hopper-s-origin)
+- Sidequest 1 [The Great Disappearing Act](#the-great-disappearing-act)
+- Sidequest 2 [Scheme Catcher](#scheme-catcher)
+- Sidequest 3 [Carrotbane of My Existence](#carrotbane-of-my-existence)
+- Sidequest 4 [BreachBlocker Unlocker](#breachblocker-unlocker)
 
 ### Hopper's Origin
 

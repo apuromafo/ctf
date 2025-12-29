@@ -3,7 +3,9 @@
 
 # Module: SOC Role in Blue Team
 **Room Link:**  https://tryhackme.com/room/socroleinblueteam
+
  <img src="https://tryhackme-images.s3.amazonaws.com/room-icons/678ecc92c80aa206339f0f23-1756302396554" width="250" alt="SOC Role in Blue Team">
+
 
 #### Learning Objectives
 

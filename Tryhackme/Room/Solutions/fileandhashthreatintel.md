@@ -67,7 +67,7 @@ Análisis de una muestra de ransomware moderna:
    3. `werfault.exe`
    4. `svchost.exe`
    5. `hxxp://121.182.174.27:3000/server.exe`
-   6. `454
+   6. `454`
 5. 1. `43b0ac119ff957bb209d86ec206ea1ec3c51dd87bebf7b4a649c7e6c7f3756e7`
    2. `akira, filecryptor`
    3. `2024-10-30 17:17:24 UTC`

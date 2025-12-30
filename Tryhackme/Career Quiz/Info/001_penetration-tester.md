@@ -19,7 +19,7 @@ Antes de continuar, queremos desmentir varios mitos de inmediato:
 
 ¡Sigue leyendo mientras desglosamos cada uno de los pasos para convertirte en un Penetration Tester y dar el salto en tu carrera!
 
-![penetration-tester](/static/image/become-penetration-tester.b96a9235.png)
+![penetration-tester](https://tryhackme.com/static/image/become-penetration-tester.b96a9235.png)
 
 ### ¿Qué es un Penetration Tester?
 

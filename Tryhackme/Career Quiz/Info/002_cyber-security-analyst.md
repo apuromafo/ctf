@@ -13,7 +13,7 @@ Antes de continuar, hay varios mitos que queremos desmentir de inmediato:
 
 ¿Entonces, a qué estás esperando? ¡Sigue leyendo mientras desglosamos cada uno de los pasos para convertirte en un Analista de Ciberseguridad e impulsar tu carrera!
 
-![Ilustración de Analista de SOC](https://tryhackme.com/static/image/become-soc-analyst.png)
+![Ilustración de Analista de SOC](https://tryhackme.com/static/image/soc-analyst.4d4480f6.png)
 
 ---
 

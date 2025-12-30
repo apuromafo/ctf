@@ -19,7 +19,7 @@ Antes de avanzar, hay varios mitos que queremos desmentir de inmediato:
 
 Sigue leyendo mientras desglosamos cada paso que deberás dar para impulsar tu carrera como **Security Engineer**.
 
-![become security engineer](/static/image/become-security-engineer.0491728d.jpg)
+![become security engineer](https://tryhackme.com/static/image/become-security-engineer.0491728d.jpg)
 
 ### ¿Qué es un Cyber Security Engineer?
 

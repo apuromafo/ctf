@@ -19,7 +19,7 @@ Entonces, ¿a qué estás esperando?
 
 ¡Sigue leyendo mientras desglosamos cada uno de los pasos para convertirte en un **Red Teamer** y dar el salto inicial a tu carrera!
 
-![red-teamer](/static/image/become-penetration-tester.b96a9235.png)
+![red-teamer](https://tryhackme.com/static/image/become-penetration-tester.b96a9235.png)
 
 ### ¿Qué es un Red Teamer?
 

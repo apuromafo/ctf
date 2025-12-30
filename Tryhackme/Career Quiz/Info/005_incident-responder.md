@@ -17,7 +17,7 @@ Aunque el trabajo puede no involucrar capas heroicas, la labor de los Incident R
 
 Sigue leyendo mientras desglosamos cada paso que deberás dar para impulsar tu carrera como Incident Responder.
 
-![incident-responder](/static/image/become-penetration-tester.b96a9235.png)
+![incident-responder](https://tryhackme.com/static/image/become-penetration-tester.b96a9235.png)
 
 ### ¿Qué es un Incident Responder?
 

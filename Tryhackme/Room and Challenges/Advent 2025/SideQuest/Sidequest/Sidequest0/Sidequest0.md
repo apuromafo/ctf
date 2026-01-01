@@ -143,6 +143,8 @@ Hopper's Origin
   i check the info.
  
  
+````python
+
  python .\POC.py
 [*] Intentando hackear el acceso...
 [*] Datos extraídos:
@@ -158,7 +160,10 @@ https://tryhackme.com/jr/ho-aoc2025-yboMoPbnEX
 
 when enter have the room 
 https://tryhackme.com/room/ho-aoc2025-yboMoPbnEX
+````
 
+solution:
+https://tryhackme.com/jr/ho-aoc2025-yboMoPbnEX
 
 next steps:
 

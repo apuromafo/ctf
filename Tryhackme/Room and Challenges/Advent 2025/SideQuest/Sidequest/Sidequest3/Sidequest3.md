@@ -38,6 +38,10 @@ Hopper’s uprising is just getting started.
 
 start egg decode
 `one_hopper_army`
+ 
+
+
+
 
 TUT: https://0xb0b.gitbook.io/writeups/tryhackme/2025/advent-of-cyber-25-side-quest/carrotbane-of-my-existence
 

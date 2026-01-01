@@ -28,3 +28,20 @@ https://www.youtube.com/watch?v=xINJWj8zcrQ
 
 
  
+ 
+ Solution
+ 
+ What's the CODE_FLAG?
+
+Answer format:  `THM{eggsposed_source_code}`
+
+Check
+What's the HOPFLIX_FLAG?
+
+Answer format: `THM{fluffier_things_season_4}`
+
+Check
+What's the BANK_FLAG?
+
+Answer format: `THM{neggative_balance}`
+

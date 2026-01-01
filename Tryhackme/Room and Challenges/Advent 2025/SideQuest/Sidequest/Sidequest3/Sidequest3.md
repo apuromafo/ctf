@@ -28,3 +28,21 @@ Answer format: `***{********************************}`
 
  
  
+ 
+ TUT
+ 
+ 
+Carrotbane of My Existence
+Hopper’s uprising is just getting started.
+
+
+start egg decode
+`one_hopper_army`
+
+TUT: https://0xb0b.gitbook.io/writeups/tryhackme/2025/advent-of-cyber-25-side-quest/carrotbane-of-my-existence
+
+video
+
+https://www.youtube.com/watch?v=uO743X54fs0
+
+https://www.youtube.com/watch?v=r1cUBw-G2kc

@@ -19,4 +19,12 @@ What's the BANK_FLAG?
 Answer format: ***{*********_*******}
 
 
+
+tut
+https://www.youtube.com/watch?v=xINJWj8zcrQ
+
+video
+https://www.youtube.com/watch?v=xINJWj8zcrQ
+
+
  

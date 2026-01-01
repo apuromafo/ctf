@@ -50,3 +50,28 @@ video
 https://www.youtube.com/watch?v=uO743X54fs0
 
 https://www.youtube.com/watch?v=r1cUBw-G2kc
+
+
+
+solution
+
+What is the value of flag 1?
+
+Answer format: `THM{9cd687b330554bd807a717e62910e3d0}`
+
+ 
+What is the value of flag 2?
+
+Answer format: `THM{39564de94a133349e3d76a91d3f0501c}`
+
+ 
+What is the value of flag 3?
+
+Answer format: `THM{3a07cd4e05ce03d953a22e90122c6a89}`
+
+ 
+What is the value of flag 4?
+
+Answer format: `THM{e116666ffb7fcfadc7e6136ca30f75bf}`
+
+

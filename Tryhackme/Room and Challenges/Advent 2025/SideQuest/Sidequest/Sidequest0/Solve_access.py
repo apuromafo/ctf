@@ -51,8 +51,8 @@ def pwn_hopper_vault(encrypted_str, password):
         return f"[!] Error inesperado: {e}"
 
 # --- EJECUCIÓN ---
-target_data = ""  #from  https://assets.tryhackme.com/additional/aoc2025/files/hopper-origins.txt 
-invitation_code = "" #from Sidequest 1, when send the 3 flags with have some "THM{flag}"
+target_data = "hlRAqw3zFxnrgUw1GZusk+whhQHE0F+g7YjWjoJvpZRSCoDzehjXsEX1wQ6TTlOPyEJ/k+AEiMOxdqywh/86AOmhTaXNyZAvbHUVjfMdTqdzxmLXZJwI5ynI"  #from  https://assets.tryhackme.com/additional/aoc2025/files/hopper-origins.txt   
+invitation_code = "THM{There.is.no.EASTmas.without.Hopper}"#from Sidequest 1, when send the 3 flags with have some "THM{flag}"
 
 print(f"[*] decoding.")
 resultado = pwn_hopper_vault(target_data, invitation_code)

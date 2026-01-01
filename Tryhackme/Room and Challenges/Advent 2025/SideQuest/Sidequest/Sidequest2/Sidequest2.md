@@ -260,9 +260,19 @@ What is the flag hidden in the file?
  What is the content of foothold.txt?
 `THM{byp4ss_and_pack_is_pwn_you_n33d}`
  
+
+ What is the content of user.txt?
+
+Answer format: `THM{theres_someth1g_in_th3_w4t3r_that_cannot_l3ak}`
+
  
-   but not have many time for solve now...but is pwn
-  about that is like 
+What is the content of root.txt?
+
+Answer format: `THM{final-boss_defeat3d-yay}`
+
+ 
+
+ 
   https://corgi.rip/posts/leakless_heap_1/  
   https://github.com/corgeman/leakless_research/   
   
@@ -275,16 +285,6 @@ Djalil Ayed  TryHackMe Scheme Catcher - Advent of Cyber Side Quest - Full Walkth
 https://www.youtube.com/watch?v=x_s0IofEiAQ
 
 
- 
- 
- What is the content of user.txt?
-
-Answer format: `***{******_********_**_***_*****_****_******_****}`
-
- 
-What is the content of root.txt?
-
-Answer format: `***{**********_************}`
-
+ atached a solution from id root
  
 

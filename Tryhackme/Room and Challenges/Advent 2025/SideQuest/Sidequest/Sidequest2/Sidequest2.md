@@ -29,6 +29,7 @@ start egg decode
  
  
 ya podremos continuar con mmap y otros
+```
 sudo nmap -sV -p22,80,9004,21337 -sS -T4 --min-rate 2000 -n -Pn 10.66.147.238
 Starting Nmap 7.95 ( https://nmap.org ) at 2025-12-22 01:44 -03
 Nmap scan report for 10.66.147.238
@@ -74,18 +75,21 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 19.46 seconds
-
+```
  
  
  Step 2:
  Nmap and continue with fuzz
  
+ 
  there are a dev folder-> puerto 80 `/dev` 
+```
  ./beacon.bin
 Enter key: EastMass
 Hello EastMass!
 Access granted! Starting socket server...
 Socket server listening on port 4444...
+```
 
 lectura de strings tienes la flag 1 
 
@@ -258,7 +262,8 @@ What is the flag hidden in the file?
  
  
    but not have many time for solve now...but is pwn
-  about that is like https://corgi.rip/posts/leakless_heap_1/  
+  about that is like 
+  https://corgi.rip/posts/leakless_heap_1/  
   https://github.com/corgeman/leakless_research/   
   
   
@@ -266,6 +271,7 @@ What is the flag hidden in the file?
 tuts in youtube:
 video
 Djalil Ayed  TryHackMe Scheme Catcher - Advent of Cyber Side Quest - Full Walkthrough 2025
+
 https://www.youtube.com/watch?v=x_s0IofEiAQ
 
 
@@ -273,12 +279,12 @@ https://www.youtube.com/watch?v=x_s0IofEiAQ
  
  What is the content of user.txt?
 
-Answer format: ***{******_********_**_***_*****_****_******_****}
+Answer format: `***{******_********_**_***_*****_****_******_****}`
 
  
 What is the content of root.txt?
 
-Answer format: ***{**********_************}
+Answer format: `***{**********_************}`
 
  
 

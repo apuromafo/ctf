@@ -507,10 +507,12 @@ thats is all.
 
 
 
-
+from other:
  
  TUTORIAL:
  https://0xb0b.gitbook.io/writeups/tryhackme/2025/advent-of-cyber-25-side-quest/the-great-disappearing-act
+https://jaxafed.github.io/posts/tryhackme-aoc2025_sidequest_one/
+ 
  
  video:
  https://www.youtube.com/watch?v=Hccbd7_g9mE

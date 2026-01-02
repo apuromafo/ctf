@@ -1,7 +1,12 @@
+#  Side quest 2: Scheme Catcher
 
-Sidequest 2
-https://tryhackme.com/room/sq2-aoc2025-JxiOKUSD9R
+**Room URL:** [tryhackme.com/room/sq2-aoc2025-JxiOKUSD9R](https://tryhackme.com/room/sq2-aoc2025-JxiOKUSD9R)
+ 
+ ## 📝 Descripción del Desafío
+ 
+The server holds the secrets. Hopper holds the grudge.
 
+## info for solve 
 
  What is the flag hidden in the file?
 
@@ -19,6 +24,7 @@ What is the content of root.txt?
 
 Answer format: Answer format: ***{**********_************}
 
+##tutorials 
  
 01.01.2026 
 

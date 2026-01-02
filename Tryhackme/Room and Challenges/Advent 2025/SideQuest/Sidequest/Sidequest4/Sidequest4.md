@@ -1,4 +1,4 @@
-# 🏰 Sidequest: BreachBlocker Unlocker
+#  Side Quest 4: BreachBlocker Unlocker
 
 **Room URL:** [tryhackme.com/room/sq4-aoc2025-32LoZ4zePK](https://tryhackme.com/room/sq4-aoc2025-32LoZ4zePK)
 
@@ -741,4 +741,5 @@ What's the BANK_FLAG?
 `THM{neggative_balance}`
 
 
+*Documentación para propósitos educativos y registro de CTF.*
 

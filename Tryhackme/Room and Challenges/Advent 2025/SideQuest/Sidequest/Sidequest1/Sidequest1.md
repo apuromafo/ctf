@@ -1,7 +1,9 @@
-sidequest 1,
-https://tryhackme.com/room/sq1-aoc2025-FzPnrt2SAu
+#  Side Quest 1: The Great Disappearing Act
 
-The Great Disappearing Act
+**Room URL:** [tryhackme.com/room/sq1-aoc2025-FzPnrt2SAu](https://tryhackme.com/room/sq1-aoc2025-FzPnrt2SAu)
+
+## 📝 Descripción del Desafío
+
 Can you help Hopper escape his wrongful imprisonment in HopSec asylum?
  
 #### Hopper the Court Jester 

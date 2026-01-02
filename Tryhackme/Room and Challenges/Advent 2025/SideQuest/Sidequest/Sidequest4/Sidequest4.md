@@ -328,7 +328,7 @@ def check_credentials():
 ```
 
 > It is technically possible to crack the hash from the database by using **1000 iterations** instead of 5000. However, this is not the intended solution.
-{: .prompt-tip }
+ 
 
 Although we are unable to crack the hash directly, examining the logic more closely reveals a critical flaw. From the database, we know the password length is **12 characters** (`480 / 40`). By supplying a password of this length, we can bypass the first check.
 
@@ -583,7 +583,7 @@ After selecting any of the listed email addresses, the application prompts us to
 ![web_8443_bank3](./img/web_8443_bank3.webp) 
 
 > At this point, it is technically possible to brute-force the **6-digit OTP** if you want to try.
-{: .prompt-tip }
+ 
 
 Looking at the code responsible for OTP generation, we see that the application generates a random code and then calls the `send_otp_email` function, passing both the generated code and the email address supplied by the user.
 

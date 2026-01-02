@@ -49,10 +49,11 @@ https://github.com/djalilayed/tryhackme/tree/main/Advent_of_Cyber_Side_Quest_202
 https://medium.com/@jalilayed/tryhackme-carrotbane-of-my-existence-walk-through-e6e80a4d51df
 
 video:
+YouTube Video Walk Through:
 
-https://www.youtube.com/watch?v=uO743X54fs0
+Part 1: https://youtu.be/r1cUBw-G2kc
 
-https://www.youtube.com/watch?v=r1cUBw-G2kc
+Part 2: https://youtu.be/T-Hfx8VC7Nk
 
 
 

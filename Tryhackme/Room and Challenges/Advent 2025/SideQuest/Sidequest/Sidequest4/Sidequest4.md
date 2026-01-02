@@ -200,7 +200,7 @@ There are three open ports:
 
 Checking the HTTPS server on port `8443`, we see an **emulated mobile phone** interface with the `Hopflix` and `Hopsec Bank` applications. However, both applications require credentials, which we do not have at this stage.
 
-#web_8443_index.webp 
+### web_8443_index.webp 
 ![web_8443_index](./img/web_8443_index.webp)
 
 ### First Flag

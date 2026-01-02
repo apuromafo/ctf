@@ -166,9 +166,8 @@ https://tryhackme.com/room/ho-aoc2025-yboMoPbnEX
 ````
 
 
-solution:
+#solution to start:
 https://tryhackme.com/jr/ho-aoc2025-yboMoPbnEX
-
 
 
 
@@ -181,11 +180,15 @@ next steps:
  
  
  
- video
- video invitation
-https://www.youtube.com/watch?v=guQ3MQmkUTg
+# video
+ YouTube Video Walk Through:
  
- Hoppers Origins - Misión secundaria Advent of Cyber ​​- Parte 1 (Tutorial 2025)
+ invitation
+ https://www.youtube.com/watch?v=guQ3MQmkUTg
+
+
+
+ Hoppers Origins - Advent of Cyber Side Quest - Part 1- Walkthrough 2025
  
  https://www.youtube.com/watch?v=r1cUBw-G2kc
  

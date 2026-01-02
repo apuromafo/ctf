@@ -1,40 +1,37 @@
-Sidequest 
+# 🏰 Sidequest: BreachBlocker Unlocker
 
-URL link: https://tryhackme.com/room/sq4-aoc2025-32LoZ4zePK
+**Room URL:** [tryhackme.com/room/sq4-aoc2025-32LoZ4zePK](https://tryhackme.com/room/sq4-aoc2025-32LoZ4zePK)
 
+---
 
-## BreachBlocker Unlocker
+## 📝 Descripción del Desafío
 
-Hopper needs your help to get the final key to the throne room.
- 
+Hopper necesita tu ayuda para obtener la **llave final** de la sala del trono. Este reto requiere habilidades avanzadas en diversas áreas de ciberseguridad.
 
-What's the CODE_FLAG?
+### 🛠️ Tecnologías y Técnicas (Tags)
 
-Answer format: 
-`***{*********_******_****}`
-									 
-Check
-What's the HOPFLIX_FLAG?
+`web` `fuzzing` `reverse-engineering` `python` `timing-attack` `side-channel` `smtp` `email-parsing`
 
-Answer format: 
-`***{********_******_******_*}`
+---
 
-Check
-What's the BANK_FLAG?
+## 🚩 Objetivos (Flags)
 
-Answer format: 
-`***{*********_*******}`
+| Objetivo | Formato de Respuesta |
+| --- | --- |
+| **CODE_FLAG** | `***{*********_******_****}` |
+| **HOPFLIX_FLAG** | `***{********_******_******_*}` |
+| **BANK_FLAG** | `***{*********_*******}` |
 
+---
 
-password for unlock and start from egg photo
+## 🔑 Credenciales de Acceso
 
-#password
-`throne123*`
+Para desbloquear y comenzar desde la foto del huevo (*egg photo*):
 
+> **Password:** `throne123*`
 
-+tut from jaxafed TryHackMe: AoC 2025 Side Quest Four , and adapted.
-```[web, fuzzing, reverse engineering, python, timing-attack, side-channel, smtp, email-parsing]```
- 
+---
+>Basado en el tutorial de jaxafed (TryHackMe: AoC 2025 Side Quest Four). 
 
 **Fourth Side Quest (BreachBlocker Unlocker)** 
 started by discovering the key through **reverse engineering** an HTA file from the **Advent of Cyber Day 21** room and using it to remove the firewall on the target machine.
@@ -722,9 +719,8 @@ EOF
  https://github.com/djalilayed/tryhackme/tree/main/Advent_of_Cyber_Side_Quest_2025/BreachBlocker_Unlocker
 
  
-# video
-https://www.youtube.com/watch?v=xINJWj8zcrQ
-
+# Video 
+YouTube Video Walk Through: https://youtu.be/xINJWj8zcrQ
 
  
  

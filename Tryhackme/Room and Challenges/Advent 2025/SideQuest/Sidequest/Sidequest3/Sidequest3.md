@@ -46,6 +46,7 @@ start egg decode
 Tutorial: 
 https://0xb0b.gitbook.io/writeups/tryhackme/2025/advent-of-cyber-25-side-quest/carrotbane-of-my-existence
 https://github.com/djalilayed/tryhackme/tree/main/Advent_of_Cyber_Side_Quest_2025/Side_Quest_Keys/Carrotbane_of_My_Existenc
+https://medium.com/@jalilayed/tryhackme-carrotbane-of-my-existence-walk-through-e6e80a4d51df
 
 video:
 

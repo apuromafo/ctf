@@ -505,7 +505,7 @@ Next, using the same credentials on the video portal application, we exploited a
 Finally, with our shell, we escalated privileges using a **SUID** binary and gained access as a user in the **docker** group. We leveraged this to escalate to the **root** user and discover the unlock code for the final door. Using this code, we unlocked the last door, obtained the third flag, and completed the room.
 
 
-[![Tryhackme Room Link](room_card.webp){: width="300" height="300" .shadow}](https://tryhackme.com/room/sq1-aoc2025-FzPnrt2SAu){: .center }
+[![Tryhackme Room Link](room_card.webp) (https://tryhackme.com/room/sq1-aoc2025-FzPnrt2SAu) 
 
 ## Finding the Key
 
@@ -657,7 +657,7 @@ cat /tmp/decoded_message.txt
 
 Sorry to be so convoluted, I couldn't risk making this easy while King Malhare watches. — McSkidy
 ```
-{: .wrap }
+ 
 
 It instructs us to replace the contents of `/home/socmas/2025/wishlist.txt` with the provided text, so let's do that.
 
@@ -674,7 +674,7 @@ Threat intelligence feed subscription
 
 Afterwards, checking the web application on port `8080`, we can see that it displays a ciphertext as described.
 
-![Key Web 8080 Ciphertext](key_web_8080_ciphertext.webp){: width="2500" height="1250"}
+![Key Web 8080 Ciphertext](./img/key_web_8080_ciphertext.webp) 
 
 ### Finding the Key
 
@@ -695,7 +695,7 @@ If you fancy something a little...spicier....use the FLAG you just obtained as t
 That hidden directory has been archived and encrypted with the FLAG.
 Inside it you'll find the sidequest key.
 ```
-{: .wrap }
+ 
 
 Following the steps from the note, we decrypt the `/home/eddi_knapp/.secret/dir.tar.gz.gpg` file, which gives us a tar archive. Extracting it yields a single PNG file.
 
@@ -708,7 +708,7 @@ eddi_knapp@tbfc-web01:~/.secret$ tar -xvzf dir.tar.gz
 dir/
 dir/sq1.png
 ```
-{: .wrap }
+ 
 
 Let's start an HTTP server using Python so we can download the image to our own machine.
 
@@ -732,7 +732,7 @@ Looking at the image, we can find the key on it and move on to the actual side q
 
 We start the side quest by visiting the web server on port `21337` and entering the key we discovered to remove the firewall as per the room instructions.
 
-![Web 21337 Unlock](web_21337_unlock.webp){: width="2500" height="1250"}
+![Web 21337 Unlock](./img/web_21337_unlock.webp) 
 
 ### Initial Enumeration
 
@@ -773,11 +773,11 @@ There are quite a number of services running on the target, and the ones relevan
 
 * The **social media application** on port `8000`, which gives us a login page and an account creation option.
 
-![Web 8000 Index](web_8000_index.webp){: width="2500" height="1250"}
+![Web 8000 Index](./img/web_8000_index.webp) 
 
 * The **Security Console** application on port `8080`, which presents a login page.
 
-![Web 8080 Index](web_8080_index.webp){: width="2500" height="1250"}
+![Web 8080 Index](./img/web_8080_index.webp) 
 
 * The **SCADA terminal** on port `9001`, which asks for an authorization token.
 
@@ -802,7 +802,7 @@ $ nc 10.67.161.155 9001
 
 * The **video portal** on port `13400`, which also presents a login page.
 
-![Web 13400 Index](web_13400_index.webp){: width="2500" height="1250"}
+![Web 13400 Index](./img/web_13400_index.webp)
 
 * And lastly, the **service on port `13404`**, which currently responds with `unauthorized` to any input.
 
@@ -816,97 +816,97 @@ unauthorized
 
 Since we don't have any credentials, an authorization token, or any clues about the service on port `13404`, we start by creating an account for the social media application on port `8000`.
 
-![Web 8000 Signup](web_8000_signup.webp){: width="2500" height="1250"}
+![Web 8000 Signup](./img/web_8000_signup.webp) 
 
 After creating an account and logging in, we can see posts from other users. The first post includes an interesting detail: the email of **Guard Hopkins**, which is `guard.hopkins@hopsecasylum.com`.
 
-![Web 8000 Post](web_8000_post.webp){: width="1000" height="500"}
+![Web 8000 Post](./img/web_8000_post.webp) 
 
 Checking other posts, we see that Guard Hopkins was tricked into revealing their password. Unfortunately, they mention that they changed it afterwards, and indeed the leaked password no longer works. However, we learn their **password pattern**: a capitalized word followed by digits and a special character.
 
-![Web 8000 Post Two](web_8000_post2.webp){: width="1000" height="800"}
+![Web 8000 Post Two](./img/web_8000_post2.webp)
 
 Another post reveals their **birth year**, `1982`, and it is followed by `!`.
 
-![Web 8000 Post Three](web_8000_post3.webp){: width="1000" height="500"}
+![Web 8000 Post Three](./img/web_8000_post3.webp) 
 
 Finally, another post reveals their **pet's name**, `Johnnyboy`.
 
-![Web 8000 Post Four](web_8000_post4.webp){: width="500" height="700"}
+![Web 8000 Post Four](./img/web_8000_post4.webp) 
 
 Combining what we learned, we can generate a likely password such as `Johnnyboy1982!`. Testing it on **Fakebook** (port `8000`) does not work, but testing it on the **Security Console** (port `8080`) with the email address we found allows us to successfully log in.
 
-![Web 8080 Login](web_8080_login.webp){: width="2500" height="1250"}
+![Web 8080 Login](./img/web_8080_login.webp) 
 
 > Instead of guessing the password, you can also use `cewl` to crawl the application and generate a wordlist, then use `combinator.bin` (as hinted by another post) to build candidate passwords and test them against the service on port **8080** to discover the password.
 {: .prompt-tip }
 
 After logging in, we simply click **Cells / Storage door** and unlock the cell door to obtain the first flag.
 
-![Web 8080 Flag](web_8080_flag.webp){: width="2500" height="1250"}
+![Web 8080 Flag](./img/web_8080_flag.webp) 
 
 ### Second Flag
 
 Now if we try to unlock the next door, it asks for a keycode that we don't have, so instead let's focus on the video portal application on port `13400`, where we can log in using the same credentials and access several camera feeds with one camera feed being only available to the **admin** role.
 
-![Web 13400 Dashboard](web_13400_dashboard.webp){: width="2500" height="1250"}
+![Web 13400 Dashboard](./img/web_13400_dashboard.webp) 
 
 Inspecting how the application loads camera feeds using Burp Suite, we notice that it does so through the **API** on port `13401`. It first fetches the camera list with a request to `:13401/v1/cameras`, and depending on which camera we select, it makes a **POST** request to `/v1/streams/request` containing the camera ID and our tier, for example:
 `{"camera_id":"cam-lobby","tier":"guard"}`.
 The application responds with a `ticket_id` for that stream, which is then used in the request to `/v1/streams/<ticket_id>/manifest.m3u8` to retrieve the feed.
 
-![Web 13401 Camera](web_13401_camera.webp){: width="2000" height="1000"}
+![Web 13401 Camera](./img/web_13401_camera.webp) 
 
 One interesting detail is that our role is included as the `tier` in the `/v1/streams/request` request. If we try changing the `camera_id` to the admin-only feed and set our `tier` to `admin`, the application rejects it and reverts our tier back to `guard`.
 
-![Web 13401 Camera Admin](web_13401_camera_admin.webp){: width="2000" height="1000"}
+![Web 13401 Camera Admin](./img/web_13401_camera_admin.webp) 
 
 However, if we use **any value other than** `admin`, it reflects correctly as our effective tier, suggesting that there is a specific filter blocking only the `admin` value.
 
-![Web 13401 Camera Admin Two](web_13401_camera_admin2.webp){: width="2000" height="1000"}
+![Web 13401 Camera Admin Two](./img/web_13401_camera_admin2.webp) 
 
 Attempts to bypass this using Unicode escapes or mixed-case variations do not work. Instead, we can try exploiting an **HTTP Parameter Pollution** vulnerability by passing the `tier` both in the JSON body and as a URL parameter. This works, and the server returns `admin` as the `effective_tier`.
 
-![Web 13401 Camera Admin Three](web_13401_camera_admin3.webp){: width="2000" height="1000"}
+![Web 13401 Camera Admin Three](./img/web_13401_camera_admin3.webp) 
 
 With this in mind, we turn interception on in Burp Suite and return to port `13400`. After selecting any camera, we can intercept the request to `/v1/streams/request`, change the `camera_id` to `cam-admin`, and append `?tier=admin` to the URL.
 
-![Web 13401 Camera Admin Four](web_13401_camera_admin4.webp){: width="2000" height="1000"}
+![Web 13401 Camera Admin Four](./img/web_13401_camera_admin4.webp) 
 
 This allows us to fetch the **Psych Ward Exit** camera feed, where we see someone entering a keycode.
 
-![Web 13400 Camera Admin](web_13400_camera_admin.webp){: width="2500" height="1250"}
+![Web 13400 Camera Admin](./img/web_13400_camera_admin.webp) 
 
 Returning to the Security Console on port `8080` and selecting the **Psych Ward Exit** door, we enter the keycode observed in the video to unlock the second door and obtain the first part of the second flag.
 
-![Web 8080 Flag Two](web_8080_flag2.webp){: width="2500" height="1250"}
+![Web 8080 Flag Two](./img/web_8080_flag2.webp) 
 
 This only provides half of the second flag and tells us to find the other half elsewhere. Going back to Burp Suite and examining the requests for the Psych Ward Exit camera, we notice something unusual in the returned `manifest.m3u8` file: it references several endpoints and an example RTSP URL.
 
-![Web 13401 Camera Admin Manifest](web_13401_camera_admin_manifest.webp){: width="2000" height="1000"}
+![Web 13401 Camera Admin Manifest](./img/web_13401_camera_admin_manifest.webp) 
 
 ```console
 #EXT-X-SESSION-DATA:DATA-ID="hopsec.diagnostics",VALUE="/v1/ingest/diagnostics"
 #EXT-X-DATERANGE:ID="hopsec-diag",CLASS="hopsec-diag",START-DATE="1970-01-01T00:00:00Z",X-RTSP-EXAMPLE="rtsp://vendor-cam.test/cam-admin"
 #EXT-X-SESSION-DATA:DATA-ID="hopsec.jobs",VALUE="/v1/ingest/jobs"
 ```
-{: .wrap }
+ 
 
 Checking the `/v1/ingest/diagnostics` endpoint mentioned on the API at port `13401`, we see that `GET` requests are not allowed.
 
-![Web 13401 Diagnostics](web_13401_diagnostics.webp){: width="2000" height="1000"}
+![Web 13401 Diagnostics](./img/web_13401_diagnostics.webp) 
 
 Sending a `POST` request results in the server complaining about an `invalid rtsp_url`.
 
-![Web 13401 Diagnostics Two](web_13401_diagnostics2.webp){: width="2000" height="1000"}
+![Web 13401 Diagnostics Two](./img/web_13401_diagnostics2.webp) 
 
 So we pass it the RTSP URL from the manifest: `rtsp://vendor-cam.test/cam-admin`. Doing so causes the server to return a `job_id` along with another endpoint.
 
-![Web 13401 Diagnostics Three](web_13401_diagnostics3.webp){: width="2000" height="1000"}
+![Web 13401 Diagnostics Three](./img/web_13401_diagnostics3.webp) 
 
 Visiting the `/v1/ingest/jobs/<job_id>` endpoint returned in the previous response reveals an interesting reply: the server returns a **token**, and it references port `13404`.
 
-![Web 13401 Diagnostics Jobs](web_13401_jobs.webp){: width="2000" height="1000"}
+![Web 13401 Diagnostics Jobs](./img/web_13401_jobs.webp) 
 
 If we connect to port `13404` and send the token, we see that instead of responding with `unauthorized`, the server drops us into a shell as `svc_vidops`. From there, we can read the second part of the second flag in `/home/svc_vidops/user_part2.txt`.
 
@@ -958,7 +958,7 @@ Then create the `.ssh` directory and write the public key into `/home/dockermgr/
 dockermgr@tryhackme-2404:~$ mkdir /home/dockermgr/.ssh
 dockermgr@tryhackme-2404:~$ echo 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAmEiMY2jqbmNYqFDyq/OMXHXub0XOJvG6/lVI9gNclb kali@kali' > /home/dockermgr/.ssh/authorized_keys
 ```
-{: .wrap }
+ 
 
 Now we can SSH in and confirm we have full `docker` group privileges:
 
@@ -982,7 +982,7 @@ scada_operator@1cbf40c715f4:/opt/scada$ cat scada_terminal.py | grep UNLOCK_CODE
         UNLOCK_CODE = "7[REDACTED]7"  # The numeric code required to unlock the gate
 ...
 ```
-{: .wrap }
+ 
 
 Finally, returning to the security console on port `8080` and submitting the unlock code for the exit gate allows us to obtain the third and final flag, completing the room.
 
@@ -1029,3 +1029,7 @@ from other:
 https://jaxafed.github.io/posts/tryhackme-aoc2025_sidequest_one/
 https://medium.com/@jalilayed/tryhackme-the-great-disappearing-act-f130e74c3472
 
+
+
+
+*Documentación para propósitos educativos y registro de CTF.*

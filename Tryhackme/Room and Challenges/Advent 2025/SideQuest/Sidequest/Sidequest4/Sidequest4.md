@@ -20,13 +20,13 @@ Answer format: ***{*********_*******}
 
 
 tut from jaxafed
----
+```
 title: "TryHackMe: AoC 2025 Side Quest Four"
 author: jaxafed
 categories: [TryHackMe]
 date: 2026-01-01 00:00:04 +0000
 tags: [web, fuzzing, reverse engineering, python, timing-attack, side-channel, smtp, email-parsing]
----
+```
 
 **Fourth Side Quest (BreachBlocker Unlocker)** started by discovering the key through **reverse engineering** an HTA file from the **Advent of Cyber Day 21** room and using it to remove the firewall on the target machine.
 

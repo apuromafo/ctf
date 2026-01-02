@@ -32,14 +32,9 @@ password for unlock and start from egg photo
 `throne123*`
 
 
-tut from jaxafed
-```
-title: "TryHackMe: AoC 2025 Side Quest Four"
-author: jaxafed
-categories: [TryHackMe]
-date: 2026-01-01 00:00:04 +0000
-tags: [web, fuzzing, reverse engineering, python, timing-attack, side-channel, smtp, email-parsing]
-```
++tut from jaxafed TryHackMe: AoC 2025 Side Quest Four , and adapted.
+```[web, fuzzing, reverse engineering, python, timing-attack, side-channel, smtp, email-parsing]```
+ 
 
 **Fourth Side Quest (BreachBlocker Unlocker)** 
 started by discovering the key through **reverse engineering** an HTA file from the **Advent of Cyber Day 21** room and using it to remove the firewall on the target machine.
@@ -144,19 +139,21 @@ $ grep -o "'[A-Za-z0-9+/=]\{20,\}'" stage2.ps1 | tr -d "'\n'" | base64 -d | xort
 
 Opening the resulting PNG image reveals the **key**, allowing us to move on to the **side quest**.
 
-#key_image.webp
+### key_image 
 ![key_image](./img/key_image.webp)
+
+# password
+`throne123*`
+
 
 ## Side Quest
 
 We start the side quest by visiting the web server on port `21337` and entering the key we discovered to disable the firewall.
 
 
-#password
-`throne123*`
 
 
-#web_21337_unlock.webp
+### web_21337_unlock 
 ![web_21337_unlock](./img/web_21337_unlock.webp)
 
 URL from machine: 10.66.153.21 
@@ -213,7 +210,7 @@ $ ffuf -u 'https://10.66.153.21:8443/FUZZ' -w /usr/share/seclists/Discovery/Web-
 nginx.conf              [Status: 200, Size: 890, Words: 226, Lines: 32, Duration: 186ms]
 ```
  
- 
+
 
 We are able to read the **Nginx configuration** directly.
 

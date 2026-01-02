@@ -855,6 +855,21 @@ log.info("\n[!] All attempts exhausted. Exploit failed.")
 - Exploiting memory corruption → arbitrary code execution → privilege inheritance
 - Root shell obtained immediately after RCE
 
+
+
+## 🏆 Flags & Soluciones
+
+| Objetivo | Flag |
+| --- | --- |
+| **Flag 1** | `THM{Welcom3_to_th3_eastmass_pwnland}` |
+| **Flag 2** | `THM{byp4ss_and_pack_is_pwn_you_n33d}` |
+| **Flag 3** | `THM{theres_someth1g_in_th3_w4t3r_that_cannot_l3ak}` |
+| **Flag 4** | `THM{final-boss_defeat3d-yay}` |
+
+---
+
+
+
 ---
 ## Infographics
 ![](img.png)

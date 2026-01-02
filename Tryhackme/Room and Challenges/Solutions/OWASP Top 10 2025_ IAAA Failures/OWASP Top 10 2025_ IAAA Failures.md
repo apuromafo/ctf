@@ -5,7 +5,7 @@
 
 ** Room Link: ** https://tryhackme.com/room/owasptopten2025one
 
-** Img Room : ![img](https://tryhackme-images.s3.amazonaws.com/room-icons/5de96d9ca744773ea7ef8c00-1763120773735)
+ <img src=https://tryhackme-images.s3.amazonaws.com/room-icons/5de96d9ca744773ea7ef8c00-1763120773735" width="250" alt="OWASP Top 10 2025: IAAA Failures">
 
 
 #  Answers

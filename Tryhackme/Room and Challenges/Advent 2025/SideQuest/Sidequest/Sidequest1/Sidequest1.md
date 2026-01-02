@@ -993,6 +993,7 @@ thats is all.
 # ## 🔗 Invitation to Next Challenge
 
 **URL:** `https://static-labs.tryhackme.cloud/apps/hoppers-invitation/`
+
 **Invite Code:** `THM{There.is.no.EASTmas.without.Hopper}`
 
 ---

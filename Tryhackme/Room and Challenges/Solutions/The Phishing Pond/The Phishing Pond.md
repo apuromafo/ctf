@@ -22,7 +22,7 @@
 
 Al iniciar la máquina virtual y acceder a la URL proporcionada, nos encontramos con la interfaz del juego donde debemos clasificar los correos.
 <div align="center">
-<img width="300" alt="Phishing Pond Room" src="./IMG/welcome.png" />
+<img width="600" alt="Phishing Pond Room" src="./IMG/welcome.png" />
 
 ## 📧 Walkthrough de Niveles
 
@@ -35,7 +35,7 @@ Aquí tienes el `README.md` estructurado para que se visualicen todas tus captur
 # <div align="center">[The Phishing Pond — TryHackMe Walkthrough](https://tryhackme.com/room/phishingpond)</div>
 
 <div align="center">
-<img width="300" alt="Phishing Pond Room" src="./IMG/room.png" />
+<img width="600" alt="Phishing Pond Room" src="./IMG/room.png" />
 </div>
 
 ## 📝 Introducción al Laboratorio
@@ -59,26 +59,26 @@ Analizamos el primer correo donde se observa una técnica de impersonación de u
 * **Resultado**: Phishing.
 * **Razón**: Urgencia y solicitud de transferencia bancaria.
 <div align="center">
-<img width="300" alt="Phishing Pond Room" src="./IMG/level1.png" />
+<img width="600" alt="Phishing Pond Room" src="./IMG/level1.png" />
 </div>
 
 #### Nivel 2
 
 * **Resultado**: Legítimo.
 <div align="center">
-<img width="300" alt="Phishing Pond Room" src="./IMG/level2.png" />
+<img width="600" alt="Phishing Pond Room" src="./IMG/level2.png" />
 
 #### Nivel 3
 
 * **Resultado**: Legítimo.
 <div align="center">
-<img width="300" alt="Phishing Pond Room" src="./IMG/level3.png" />
+<img width="600" alt="Phishing Pond Room" src="./IMG/level3.png" />
 
 #### Nivel 4
 
 * **Resultado**: Legítimo.
 <div align="center">
-<img width="300" alt="Phishing Pond Room" src="./IMG/level4.png" />
+<img width="600" alt="Phishing Pond Room" src="./IMG/level4.png" />
 
 #### Nivel 5
 
@@ -87,35 +87,35 @@ En este nivel detectamos un vector de ataque clásico basado en documentos ofim�
 * **Resultado**: Phishing.
 * **Razón**: El correo solicita explícitamente habilitar macros en un archivo adjunto.
 <div align="center">
-<img width="300" alt="Phishing Pond Room" src="./IMG/level5.png" />
+<img width="600" alt="Phishing Pond Room" src="./IMG/level5.png" />
 
 #### Nivel 6
 
 * **Resultado**: Phishing.
 * **Razón**: Enlace a una encuesta externa de procedencia dudosa.
 <div align="center">
-<img width="300" alt="Phishing Pond Room" src="./IMG/level6.png" />
+<img width="600" alt="Phishing Pond Room" src="./IMG/level6.png" />
 
 #### Nivel 7
 
 * **Resultado**: Phishing.
 * **Razón**: Promesa de recompensas a cambio de información sensible.
 <div align="center">
-<img width="300" alt="Phishing Pond Room" src="./IMG/level7.png" />
+<img width="600" alt="Phishing Pond Room" src="./IMG/level7.png" />
 
 #### Nivel 8
 
 * **Resultado**: Phishing.
 * **Razón**: Redirección a un portal falso de cambio de credenciales.
 <div align="center">
-<img width="300" alt="Phishing Pond Room" src="./IMG/level8.png" />
+<img width="600" alt="Phishing Pond Room" src="./IMG/level8.png" />
 
 #### Nivel 9
 
 * **Resultado**: Phishing.
 * **Razón**: El enlace utiliza un dominio "typosquatted" que imita una pasarela de pago real.
 <div align="center">
-<img width="300" alt="Phishing Pond Room" src="./IMG/level9.png" />
+<img width="600" alt="Phishing Pond Room" src="./IMG/level9.png" />
 
 #### Nivel 10
 
@@ -124,7 +124,7 @@ El reto final consolida lo aprendido con un adjunto malicioso.
 * **Resultado**: Phishing.
 * **Razón**: Reitera la técnica de macros maliciosas.
 <div align="center">
-<img width="300" alt="Phishing Pond Room" src="./IMG/level10.png" />
+<img width="600" alt="Phishing Pond Room" src="./IMG/level10.png" />
 
  
 
@@ -154,7 +154,7 @@ Tras completar correctamente todos los niveles, el sistema valida las respuestas
 
 > **Flag**: `THM{i_phish_you_not}`
 <div align="center">
-<img width="300" alt="Phishing Pond Room" src="./IMG/flag.png" />
+<img width="600" alt="Phishing Pond Room" src="./IMG/flag.png" />
 
 
 
@@ -162,7 +162,7 @@ Tras completar correctamente todos los niveles, el sistema valida las respuestas
 
 Tras enviar la flag se termina la sala
 <div align="center">
-<img width="300" alt="Phishing Pond Room" src="./IMG/End.png" />
+<img width="600" alt="Phishing Pond Room" src="./IMG/End.png" />
 
 
 

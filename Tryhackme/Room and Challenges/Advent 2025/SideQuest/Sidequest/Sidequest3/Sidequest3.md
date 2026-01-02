@@ -2,7 +2,6 @@
 #   Side Quest 3 : Carrotbane of My Existence
 
 > **Room URL:** [sq3-aoc2025-bk3vvbcgiT](https://tryhackme.com/room/sq3-aoc2025-bk3vvbcgiT)
-
 > **Event:** Advent of Cyber 2025 Side Quest
 
 ---
@@ -13,7 +12,8 @@
 
 ### 🥚 Egg Decode
 
-* **Initial Vector password:** `one_hopper_army`
+* **Initial Vector password:** 
+`one_hopper_army`
 
 ---
 

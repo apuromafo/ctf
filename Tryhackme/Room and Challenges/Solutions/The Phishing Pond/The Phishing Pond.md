@@ -6,14 +6,7 @@
 
 **Phishing Pond** es una sala diseñada para entrenar la capacidad de identificación de correos maliciosos. El objetivo es analizar diferentes escenarios de comunicación y determinar si se trata de un intento de **Phishing** o una comunicación legítima.
  
-
-### Tácticas Identificadas:
-
-* **Urgency & Scare Tactics**: Presión mediante límites de tiempo.
-* **Look-alike domains**: Dominios visualmente similares (ej. `rnicrosoft.com`).
-* **Display name impersonation**: Nombres conocidos con direcciones falsas.
-* **Malicious attachments**: Archivos con macros o malware (.doc, .xls, .zip).
-
+ 
 ---
 
 ## 🚀 Proceso de Resolución
@@ -25,11 +18,7 @@ Al iniciar la máquina virtual y acceder a la URL proporcionada, nos encontramos
 <img width="600" alt="Phishing Pond Room" src="./IMG/welcome.png" />
 
 ## 📧 Walkthrough de Niveles
-
-Entendido perfectamente. Vamos a construirlo de forma redactada, paso a paso y asegurando que cada bloque tenga la ruta de imagen correspondiente de tu carpeta `./IMG/` tal como solicitaste.
-
-Aquí tienes el `README.md` estructurado para que se visualicen todas tus capturas en orden:
-
+ 
 ---
 
 # <div align="center">[The Phishing Pond — TryHackMe Walkthrough](https://tryhackme.com/room/phishingpond)</div>
@@ -41,6 +30,33 @@ Aquí tienes el `README.md` estructurado para que se visualicen todas tus captur
 ## 📝 Introducción al Laboratorio
 
 El lab **Phishing Pond** es un desafío interactivo donde debemos actuar como analistas de seguridad para identificar correos electrónicos maliciosos. El objetivo es detectar patrones de ataque comunes y obtener la flag final tras superar 10 niveles de dificultad progresiva.
+
+ 
+
+## 🎣 Phishing: El Arte del Engaño
+
+> El **Phishing** es un tipo de estafa en la que los atacantes abusan de tu confianza para engañarte y obtener información personal, contraseñas o dinero. 
+Al dirigirse directamente a las personas en lugar de intentar hackear sistemas complejos, se ha convertido en uno de los métodos más efectivos para el robo de datos.
+
+### 🚩 Estrategias Comunes de los Atacantes
+
+Para identificar una campaña de phishing, es fundamental reconocer las tácticas psicológicas y técnicas que utilizan:
+
+* **⚠️ Urgencia y tácticas de miedo:** Asuntos como *"Acción inmediata requerida"* diseñados para presionarte a actuar sin pensar.
+* **🌐 Direcciones de remitente similares (Typosquatting):** Dominios falsos con cambios casi imperceptibles (ej. `rnicrosoft.com` en lugar de `microsoft.com`).
+* **👤 Suplantación de nombre de pantalla:** El nombre del remitente parece familiar, pero la dirección de correo electrónico real no coincide.
+* **📎 Adjuntos maliciosos:** Archivos (`.doc`, `.xls`, `.zip`) que solicitan "habilitar macros" o contienen malware directamente.
+* **🔓 Cuentas reales comprometidas:** Correos enviados desde cuentas hackeadas que parecen legítimas pero realizan solicitudes inusuales.
+* **🎁 Ofertas demasiado buenas para ser verdad:** Premios falsos, reembolsos o vacantes de empleo que requieren tus datos personales de antemano.
+
+---
+### Tácticas Identificadas:
+
+* **Urgency & Scare Tactics**: Presión mediante límites de tiempo.
+* **Look-alike domains**: Dominios visualmente similares (ej. `rnicrosoft.com`).
+* **Display name impersonation**: Nombres conocidos con direcciones falsas.
+* **Malicious attachments**: Archivos con macros o malware (.doc, .xls, .zip).
+
 
 ## 🚀 Proceso de Resolución
 

@@ -1,11 +1,15 @@
 # OWASP Top 10 2025: Application Design Flaws
- 
- 
-> Learn about A02, A03, A06, and A10 and how they related to design flaws in the application.
 
-** Room Link: ** https://tryhackme.com/room/owasptopten2025two
+> Learn about A02, A03, A06, and A10 and how they relate to design flaws in the application.
 
-<img src=https://tryhackme-images.s3.amazonaws.com/room-icons/61a7523c029d1c004fac97b3-1763120444231" width="250" alt="OWASP Top 10 2025: Application Design Flaws">
+---
+
+**Room Link:** [https://tryhackme.com/room/owasptopten2025two](https://tryhackme.com/room/owasptopten2025two)
+
+<div align="center">
+  <img src="https://tryhackme-images.s3.amazonaws.com/room-icons/61a7523c029d1c004fac97b3-1763120444231" width="250" alt="OWASP Top 10 2025: Application Design Flaws">
+</div>
+
 
 
 #  Answers

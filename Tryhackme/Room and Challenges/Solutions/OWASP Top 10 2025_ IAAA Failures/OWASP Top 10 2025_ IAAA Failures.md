@@ -1,12 +1,14 @@
 # OWASP Top 10 2025: IAAA Failures
- 
 
->  Learn about A01, A07, and A09 in how they related to failures in the applied IAAA model.
+> Learn about A01, A07, and A09 and how they relate to failures in the applied IAAA model.
 
-** Room Link: ** https://tryhackme.com/room/owasptopten2025one
+---
 
-<img src=https://tryhackme-images.s3.amazonaws.com/room-icons/5de96d9ca744773ea7ef8c00-1763120773735" width="250" alt="OWASP Top 10 2025: IAAA Failures">
+**Room Link:** [https://tryhackme.com/room/owasptopten2025one](https://tryhackme.com/room/owasptopten2025one)
 
+<div align="center">
+  <img src="https://tryhackme-images.s3.amazonaws.com/room-icons/5de96d9ca744773ea7ef8c00-1763120773735" width="250" alt="OWASP Top 10 2025: IAAA Failures">
+</div>
 
 #  Answers
 

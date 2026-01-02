@@ -165,16 +165,25 @@ when enter have the room
 https://tryhackme.com/room/ho-aoc2025-yboMoPbnEX
 ````
 
+
 solution:
 https://tryhackme.com/jr/ho-aoc2025-yboMoPbnEX
+
+
+
 
 next steps:
 
 # TUT Hoppers Origins 01.01.2026 
  https://0xb0b.gitbook.io/writeups/tryhackme/2025/advent-of-cyber-25-side-quest/hoppers-origins
+ invitation:
+ https://github.com/djalilayed/tryhackme/tree/main/Advent_of_Cyber_Side_Quest_2025/Side_Quest_Keys/invitation_code
+ 
  
  
  video
+ video invitation
+https://www.youtube.com/watch?v=guQ3MQmkUTg
  
  Hoppers Origins - Misión secundaria Advent of Cyber ​​- Parte 1 (Tutorial 2025)
  

@@ -278,6 +278,13 @@ Answer format: `THM{final-boss_defeat3d-yay}`
   
   
  
+ tutorial:
+ https://jaxafed.github.io/posts/tryhackme-aoc2025_sidequest_two/
+ https://github.com/djalilayed/tryhackme/tree/main/Advent_of_Cyber_Side_Quest_2025/Scheme_Catcher
+ 
+ 
+ 
+ 
 tuts in youtube:
 video
 Djalil Ayed  TryHackMe Scheme Catcher - Advent of Cyber Side Quest - Full Walkthrough 2025

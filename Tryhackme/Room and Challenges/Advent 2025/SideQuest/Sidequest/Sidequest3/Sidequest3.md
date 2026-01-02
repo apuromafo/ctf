@@ -8,7 +8,8 @@
 
 ## 📝 Descripción
 
-*Hopper’s uprising is just getting started.* En este reto de la serie **Advent of Cyber 2025**, nos enfrentamos a una investigación profunda para detener el levantamiento liderado por Hopper.
+*Hopper’s uprising is just getting started.* En este reto de la serie **Advent of Cyber 2025**,
+ nos enfrentamos a una investigación profunda para detener el levantamiento liderado por Hopper.
 
 ### 🥚 Egg Decode
 
@@ -33,13 +34,14 @@
 ### 📄 Artículos y Repositorios
 
 * **[GitBook Writeup](https://0xb0b.gitbook.io/writeups/tryhackme/2025/advent-of-cyber-25-side-quest/carrotbane-of-my-existence)** - Por 0xb0b.
-* **[GitHub Repository](https://github.com/djalilayed/tryhackme/tree/main/Advent_of_Cyber_Side_Quest_2025/Side_Quest_Keys/Carrotbane_of_My_Existenc)** - Scripts y archivos por djalilayed.
-* **[Medium Walkthrough](https://medium.com/@jalilayed/tryhackme-carrotbane-of-my-existence-walk-through-e6e80a4d51df)** - Guía detallada paso a paso.
+* **[GitHub Repository](https://github.com/djalilayed/tryhackme/tree/main/Advent_of_Cyber_Side_Quest_2025/Side_Quest_Keys/Carrotbane_of_My_Existenc)** -   archivos por djalilayed.
+* **[GitHub Repository](https://github.com/id-root/Carrotbane-of-My-Existence)** -   archivos por id-root
+* **[Medium Walkthrough](https://medium.com/@jalilayed/tryhackme-carrotbane-of-my-existence-walk-through-e6e80a4d51df)** - Guía detallada paso a paso por djalilayed.
 
 ### 🎥 Video Tutoriales
 
-* [▶️ Walkthrough Video 1](https://www.youtube.com/watch?v=uO743X54fs0)
-* [▶️ Walkthrough Video 2](https://www.youtube.com/watch?v=r1cUBw-G2kc)
+* [▶️ Walkthrough Video 1 por djalilayed](https://www.youtube.com/watch?v=uO743X54fs0)
+* [▶️ Walkthrough Video 2 por djalilayed](https://www.youtube.com/watch?v=r1cUBw-G2kc)
  
 ---
 

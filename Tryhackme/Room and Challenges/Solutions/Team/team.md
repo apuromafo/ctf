@@ -1,8 +1,14 @@
 # Challenge: Team
 
-**Room Link:** https://tryhackme.com/room/teamcw
+---
 
- <img src="https://tryhackme-images.s3.amazonaws.com/room-icons/e8171ef71802f0f254bd38ffb0beff4b.png" width="250" alt="Team Room">
+**Room Link:** [https://tryhackme.com/room/teamcw](https://tryhackme.com/room/teamcw)
+
+<div align="center">
+  <img src="https://tryhackme-images.s3.amazonaws.com/room-icons/e8171ef71802f0f254bd38ffb0beff4b.png" width="250" alt="Team Room">
+</div>
+
+---
 
 ## Reconocimiento
 

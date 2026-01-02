@@ -1,20 +1,24 @@
- 
+#   WaloCoins
 
-**Room Link:** http://www.tryhackme.com/jr/walocoins
- <img src="https://tryhackme-images.s3.amazonaws.com/room-icons/f457b38f7aebf742a58e88e821e8ace3.png" width="250" alt="walocoins">
- 
- 
- room en tryhackme para el repaso de los conceptos enseñados de cyptomonedas por n3v1l🇨🇱  
-http://www.tryhackme.com/jr/walocoins
-Es una sala privada y gratuita que espero les sirva para practicar y aprender una que otra cosa de los walocoins.
+> Sala para el repaso de conceptos de criptomonedas enseñados por **n3v1l** 🇨🇱.
 
- Fecha: hace 5 años aprox (2020)
- 
- Created by: clarksoft
-Created 1925 days ago
- 
- Video: https://www.youtube.com/watch?v=nAMYHdqDCc0
- 
+---
+
+**Room Link:** [https://tryhackme.com/jr/walocoins](https://tryhackme.com/jr/walocoins)
+
+<div align="center">
+  <img src="https://tryhackme-images.s3.amazonaws.com/room-icons/f457b38f7aebf742a58e88e821e8ace3.png" width="250" alt="walocoins">
+</div>
+
+### 📊 Información de la Sala
+* **Creador:** clarksoft
+* **Fecha de creación:** Hace ~5 años (2020)
+* **Estado:** Sala privada y gratuita.
+* **Recurso de apoyo:** [Video explicativo en YouTube](https://www.youtube.com/watch?v=nAMYHdqDCc0)
+
+---
+
+> **Nota de Pwn:** Al ser una sala de 2020 sobre cripto-conceptos, asegúrate de revisar bien los scripts o servicios locales que manejen carteras (wallets) o transacciones. Los vectores suelen estar en la lógica de procesamiento de la "moneda".
 
 # 🪙 Solucionario: WaloCoin (TryHackMe)
 

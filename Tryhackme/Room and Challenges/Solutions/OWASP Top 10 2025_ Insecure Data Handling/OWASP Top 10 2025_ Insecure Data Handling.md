@@ -5,7 +5,7 @@
 
 ** Room Link: ** https://tryhackme.com/room/owasptopten2025three
 
-** Img Room : ![img](https://tryhackme-images.s3.amazonaws.com/room-icons/61a7523c029d1c004fac97b3-1763120602843)
+ <img src=https://tryhackme-images.s3.amazonaws.com/room-icons/61a7523c029d1c004fac97b3-1763120602843" width="250" alt="OWASP Top 10 2025: Insecure Data Handlings">
 
 
 #  Answers

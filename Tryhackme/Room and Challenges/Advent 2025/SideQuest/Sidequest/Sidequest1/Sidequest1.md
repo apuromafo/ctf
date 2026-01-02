@@ -505,7 +505,7 @@ Next, using the same credentials on the video portal application, we exploited a
 Finally, with our shell, we escalated privileges using a **SUID** binary and gained access as a user in the **docker** group. We leveraged this to escalate to the **root** user and discover the unlock code for the final door. Using this code, we unlocked the last door, obtained the third flag, and completed the room.
 
 
-[![Tryhackme Room Link](room_card.webp) (https://tryhackme.com/room/sq1-aoc2025-FzPnrt2SAu) 
+[![Tryhackme Room Link](./img/room_card.webp) (https://tryhackme.com/room/sq1-aoc2025-FzPnrt2SAu) 
 
 ## Finding the Key
 

@@ -726,7 +726,7 @@ $ wget -q http://10.66.142.236:7777/sq1.png
 
 Looking at the image, we can find the key on it and move on to the actual side quest.
 
-![Key Image](key_image.webp){: width="550" height="550"}
+![Key Image](./img/key_image.webp) 
 
 ## Side Quest
 

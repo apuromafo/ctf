@@ -1,11 +1,11 @@
 
 # [TryHackMe] Phishing Pond - Write-up
-> **Room URL:** [The Phishing Pond — TryHackMe Walkthrough](https://tryhackme.com/room/phishingpond)
+> **Room URL:** [The Phishing Pond — Catch the phish before the phish catches you.](https://tryhackme.com/room/phishingpond)
 
 ## 📝 Descripción del Lab
 
 **Phishing Pond** es una sala diseñada para entrenar la capacidad de identificación de correos maliciosos. El objetivo es analizar diferentes escenarios de comunicación y determinar si se trata de un intento de **Phishing** o una comunicación legítima.
-
+ 
 
 ### Tácticas Identificadas:
 

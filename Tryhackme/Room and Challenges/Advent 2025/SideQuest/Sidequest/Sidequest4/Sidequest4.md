@@ -1,22 +1,35 @@
-Sidequest 4, 
-https://tryhackme.com/room/sq4-aoc2025-32LoZ4zePK
-BreachBlocker Unlocker
+Sidequest 
+
+URL link: https://tryhackme.com/room/sq4-aoc2025-32LoZ4zePK
+
+
+## BreachBlocker Unlocker
+
 Hopper needs your help to get the final key to the throne room.
  
 
 What's the CODE_FLAG?
 
-Answer format: ***{*********_******_****}
-
+Answer format: 
+`***{*********_******_****}`
+									 
 Check
 What's the HOPFLIX_FLAG?
 
-Answer format: ***{********_******_******_*}
+Answer format: 
+`***{********_******_******_*}`
 
 Check
 What's the BANK_FLAG?
 
-Answer format: ***{*********_*******}
+Answer format: 
+`***{*********_*******}`
+
+
+password for unlock and start from egg photo
+
+#password
+`throne123*`
 
 
 tut from jaxafed
@@ -28,7 +41,8 @@ date: 2026-01-01 00:00:04 +0000
 tags: [web, fuzzing, reverse engineering, python, timing-attack, side-channel, smtp, email-parsing]
 ```
 
-**Fourth Side Quest (BreachBlocker Unlocker)** started by discovering the key through **reverse engineering** an HTA file from the **Advent of Cyber Day 21** room and using it to remove the firewall on the target machine.
+**Fourth Side Quest (BreachBlocker Unlocker)** 
+started by discovering the key through **reverse engineering** an HTA file from the **Advent of Cyber Day 21** room and using it to remove the firewall on the target machine.
 
 Afterwards, we discovered a web application and its configuration through fuzzing. By examining the configuration, we noticed that it could be abused to read the application’s source code, which allowed us to capture the **first flag**.
 
@@ -137,9 +151,13 @@ Opening the resulting PNG image reveals the **key**, allowing us to move on to t
 We start the side quest by visiting the web server on port `21337` and entering the key we discovered to disable the firewall.
 
 
+#password
+`throne123*`
+
+
 #web_21337_unlock.webp
 
-
+URL from machine: 10.66.153.21 
 
 ### Initial Enumeration
 

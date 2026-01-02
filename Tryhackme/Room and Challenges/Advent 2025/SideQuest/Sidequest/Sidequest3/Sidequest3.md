@@ -1,81 +1,47 @@
 
-Sidequest 3
-https://tryhackme.com/room/sq3-aoc2025-bk3vvbcgiT
+#   Side Quest 3 : Carrotbane of My Existence
 
-Carrotbane of My Existence
-Hopper’s uprising is just getting started.
+> **Room URL:** [sq3-aoc2025-bk3vvbcgiT](https://tryhackme.com/room/sq3-aoc2025-bk3vvbcgiT)
 
- 
+> **Event:** Advent of Cyber 2025 Side Quest
 
-What is the value of flag 1?
+---
 
-Answer format: `***{********************************}`
+## 📝 Descripción
 
- 
-What is the value of flag 2?
+*Hopper’s uprising is just getting started.* En este reto de la serie **Advent of Cyber 2025**, nos enfrentamos a una investigación profunda para detener el levantamiento liderado por Hopper.
 
-Answer format: `***{********************************}`
+### 🥚 Egg Decode
 
- 
-What is the value of flag 3?
+* **Initial Vector password:** `one_hopper_army`
 
-Answer format: `***{********************************}`
+---
 
- 
-What is the value of flag 4?
+## 🏆 Flags & Soluciones
 
-Answer format: `***{********************************}`
+| Objetivo | Flag |
+| --- | --- |
+| **Flag 1** | `THM{9cd687b330554bd807a717e62910e3d0}` |
+| **Flag 2** | `THM{39564de94a133349e3d76a91d3f0501c}` |
+| **Flag 3** | `THM{3a07cd4e05ce03d953a22e90122c6a89}` |
+| **Flag 4** | `THM{e116666ffb7fcfadc7e6136ca30f75bf}` |
 
- 
- 
- 
- TUT
- 
- 
-Carrotbane of My Existence
-Hopper’s uprising is just getting started.
-
-
-start egg decode
-`one_hopper_army`
- 
-
-
-
-
-Tutorial: 
-https://0xb0b.gitbook.io/writeups/tryhackme/2025/advent-of-cyber-25-side-quest/carrotbane-of-my-existence
-https://github.com/djalilayed/tryhackme/tree/main/Advent_of_Cyber_Side_Quest_2025/Side_Quest_Keys/Carrotbane_of_My_Existenc
-https://medium.com/@jalilayed/tryhackme-carrotbane-of-my-existence-walk-through-e6e80a4d51df
-
-video:
-YouTube Video Walk Through:
-
-Part 1: https://youtu.be/r1cUBw-G2kc
-
-Part 2: https://youtu.be/T-Hfx8VC7Nk
-
-
-
-solution
-
-What is the value of flag 1?
-
-Answer format: `THM{9cd687b330554bd807a717e62910e3d0}`
+---
 
  
-What is the value of flag 2?
 
-Answer format: `THM{39564de94a133349e3d76a91d3f0501c}`
+### 📄 Artículos y Repositorios
 
+* **[GitBook Writeup](https://0xb0b.gitbook.io/writeups/tryhackme/2025/advent-of-cyber-25-side-quest/carrotbane-of-my-existence)** - Por 0xb0b.
+* **[GitHub Repository](https://github.com/djalilayed/tryhackme/tree/main/Advent_of_Cyber_Side_Quest_2025/Side_Quest_Keys/Carrotbane_of_My_Existenc)** - Scripts y archivos por djalilayed.
+* **[Medium Walkthrough](https://medium.com/@jalilayed/tryhackme-carrotbane-of-my-existence-walk-through-e6e80a4d51df)** - Guía detallada paso a paso.
+
+### 🎥 Video Tutoriales
+
+* [▶️ Walkthrough Video 1](https://www.youtube.com/watch?v=uO743X54fs0)
+* [▶️ Walkthrough Video 2](https://www.youtube.com/watch?v=r1cUBw-G2kc)
  
-What is the value of flag 3?
+---
 
-Answer format: `THM{3a07cd4e05ce03d953a22e90122c6a89}`
-
- 
-What is the value of flag 4?
-
-Answer format: `THM{e116666ffb7fcfadc7e6136ca30f75bf}`
-
+*Documentación para propósitos educativos y registro de CTF.*
 

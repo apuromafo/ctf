@@ -2,6 +2,7 @@
 #   Side Quest 0 : Hopper's Origin
 Hopper's Origin
 > **Room URL:** [ho-aoc2025-yboMoPbnEX](https://tryhackme.com/jr/ho-aoc2025-yboMoPbnEX)
+
 > **Event:** Advent of Cyber 2025 Side Quest
 ---
 

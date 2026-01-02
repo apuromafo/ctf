@@ -4,7 +4,9 @@
 >  Learn about A01, A07, and A09 in how they related to failures in the applied IAAA model.
 
 ** Room Link: ** https://tryhackme.com/room/owasptopten2025one
+
 ** Img Room : ![img](https://tryhackme-images.s3.amazonaws.com/room-icons/5de96d9ca744773ea7ef8c00-1763120773735)
+
 
 #  Answers
 

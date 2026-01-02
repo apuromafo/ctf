@@ -1,6 +1,8 @@
 #  Side Quest 4: BreachBlocker Unlocker
 
-**Room URL:** [tryhackme.com/room/sq4-aoc2025-32LoZ4zePK](https://tryhackme.com/room/sq4-aoc2025-32LoZ4zePK)
+>**Room URL:** [tryhackme.com/room/sq4-aoc2025-32LoZ4zePK](https://tryhackme.com/room/sq4-aoc2025-32LoZ4zePK)
+
+> **Event:** Advent of Cyber 2025 Side Quest
 
 ---
 

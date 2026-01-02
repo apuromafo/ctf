@@ -1,6 +1,8 @@
 #  Side Quest 1: The Great Disappearing Act
 
-**Room URL:** [tryhackme.com/room/sq1-aoc2025-FzPnrt2SAu](https://tryhackme.com/room/sq1-aoc2025-FzPnrt2SAu)
+> **Room URL:** [tryhackme.com/room/sq1-aoc2025-FzPnrt2SAu](https://tryhackme.com/room/sq1-aoc2025-FzPnrt2SAu)
+
+> **Event:** Advent of Cyber 2025 Side Quest
 
 ## 📝 Descripción del Desafío
 

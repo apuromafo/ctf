@@ -1,6 +1,8 @@
 #  Side quest 2: Scheme Catcher
 
-**Room URL:** [tryhackme.com/room/sq2-aoc2025-JxiOKUSD9R](https://tryhackme.com/room/sq2-aoc2025-JxiOKUSD9R)
+> **Room URL:** [tryhackme.com/room/sq2-aoc2025-JxiOKUSD9R](https://tryhackme.com/room/sq2-aoc2025-JxiOKUSD9R)
+
+> **Event:** Advent of Cyber 2025 Side Quest
  
  ## 📝 Descripción del Desafío
  

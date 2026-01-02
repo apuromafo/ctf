@@ -26,7 +26,7 @@ Teaming up is permitted
 
 You now take control of Hopper, with one ultimate goal. Free yourself from this wrongful imprisonment. To do this, you must follow Hopper's 5-step escape plan:
 
-<img width="1100" height="767" alt="image" src="./img/img1.png" />
+<img width="1100" height="767" alt="image" src="./img/img.png" />
 
 1. Unlock Hopper’s Cell
    

@@ -26,10 +26,6 @@ author: jaxafed
 categories: [TryHackMe]
 date: 2026-01-01 00:00:04 +0000
 tags: [web, fuzzing, reverse engineering, python, timing-attack, side-channel, smtp, email-parsing]
-render_with_liquid: false
-media_subpath: /images/tryhackme_aoc2025_sidequest_four/
-image:
-  path: room_image.webp
 ---
 
 **Fourth Side Quest (BreachBlocker Unlocker)** started by discovering the key through **reverse engineering** an HTA file from the **Advent of Cyber Day 21** room and using it to remove the firewall on the target machine.
@@ -40,7 +36,7 @@ While analyzing the source code, we discovered a flaw in the login functionality
 
 Finally, to obtain the **third flag**, we identified a flaw in the email address verification logic. By exploiting this issue to cause **domain confusion**, we were able to receive the OTP email ourselves and log in to the second application.
 
-[![Tryhackme Room Link](room_card.webp){: width="300" height="300" .shadow}](https://tryhackme.com/room/sq4-aoc2025-32LoZ4zePK){: .center }
+ Tryhackme Room Link (https://tryhackme.com/room/sq4-aoc2025-32LoZ4zePK) 
 
 ## Finding the Key
 
@@ -134,13 +130,16 @@ $ grep -o "'[A-Za-z0-9+/=]\{20,\}'" stage2.ps1 | tr -d "'\n'" | base64 -d | xort
 
 Opening the resulting PNG image reveals the **key**, allowing us to move on to the **side quest**.
 
-![Key Image](key_image.webp){: width="550" height="550"}
+#key_image.webp
 
 ## Side Quest
 
 We start the side quest by visiting the web server on port `21337` and entering the key we discovered to disable the firewall.
 
-![Web 21337 Unlock](web_21337_unlock.webp){: width="2500" height="1250"}
+
+#web_21337_unlock.webp
+
+
 
 ### Initial Enumeration
 
@@ -181,7 +180,7 @@ There are three open ports:
 
 Checking the HTTPS server on port `8443`, we see an **emulated mobile phone** interface with the `Hopflix` and `Hopsec Bank` applications. However, both applications require credentials, which we do not have at this stage.
 
-![Web 8443 Index](web_8443_index.webp){: width="2500" height="1250"}
+#web_8443_index.webp 
 
 ### First Flag
 
@@ -541,21 +540,21 @@ Testing discovered password...
 
 Using the discovered credentials `sbreachblocker@easterbunnies.thm:malharerocks`, we log in to the application and capture the **second flag**.
 
-![Web 8443 Second Flag](web_8443_second_flag.webp){: width="2500" height="1250"}
+#web_8443_second_flag.webp
 
 ### Third Flag
 
 We can also try using the same credentials we obtained for **Hopflix** to log in to the **Hopsec Bank** application.
 
-![Web 8443 Bank](web_8443_bank.webp){: width="2500" height="1250"}
+#web_8443_bank.webp 
 
 We are able to log in successfully; however, after authentication, the application asks us to choose an email address to which a **2FA OTP code** will be sent.
 
-![Web 8443 Bank Two](web_8443_bank2.webp){: width="2500" height="1250"}
+#web_8443_bank2.webp 
 
 After selecting any of the listed email addresses, the application prompts us to enter the **2FA OTP** that was supposedly sent to that email, which we do not have access to.
 
-![Web 8443 Bank Three](web_8443_bank3.webp){: width="2500" height="1250"}
+#web_8443_bank3.webp 
 
 > At this point, it is technically possible to brute-force the **6-digit OTP** if you want to try.
 {: .prompt-tip }
@@ -649,7 +648,7 @@ jxf@[192.168.161.135](@easterbunnies.thm
 
 This causes the OTP email to be delivered to `jxf@[192.168.161.135]`, while still passing the application’s validation logic.
 
-![Web 8443 Bank Four](web_8443_bank4.webp){: width="2500" height="1250"}
+#web_8443_bank4.webp
 
 Forwarding the modified request confirms that the bypass works, and we successfully receive the OTP code.
 
@@ -672,11 +671,11 @@ X-Peer: ('10.66.153.21', 54620)
 
 We can now enter the captured OTP code to complete the login process for **Hopsec Bank**.
 
-![Web 8443 Bank Five](web_8443_bank5.webp){: width="2500" height="1250"}
+#web_8443_bank5.webp 
 
 This works as expected, and we are successfully logged in.
 
-![Web 8443 Bank Six](web_8443_bank6.webp){: width="2500" height="1250"}
+#web_8443_bank6.webp
 
 Finally, by clicking the **Release Charity Funds** button, we capture the **third flag** and complete the room.
 

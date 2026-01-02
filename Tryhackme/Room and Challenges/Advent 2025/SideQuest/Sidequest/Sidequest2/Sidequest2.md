@@ -26,13 +26,29 @@ What is the content of root.txt?
 
 Answer format: Answer format: ***{**********_************}
 
-##tutorials 
  
-01.01.2026 
+## ##tutorials
 
- Tutorial from jaxafed TryHackMe: AoC 2025 Side Quest TWO
+**01.01.2026**
+
+Tutorial from jaxafed TryHackMe: AoC 2025 Side Quest TWO
+
+* **Enlace:** [Jaxafed - Scheme Catcher / Side Quest Two](https://jaxafed.github.io/posts/tryhackme-aoc2025_sidequest_two/)
+
+---
+
+### `tags:`
+
+| Categoría | Tecnologías y Técnicas |
+| --- | --- |
+| **Infraestructura** | `docker` |
+| **Web & Recon** | `web`, `fuzzing` |
+| **Explotación Inicial** | `cracking`, `reverse engineering` |
+| **Binary Exploitation (Pwn)** | `binary exploitation`, `heap exploitation` |
+| **Low Level / Kernel** | `kernel module`, `kernel exploitation` |
+
+---
  
- `tags: [web, cracking, fuzzing, reverse engineering, heap exploitation, binary exploitation, pwn, kernel module, kernel exploitation, docker]`
  
 **Second Side Quest (Scheme Catcher)** started with discovering the key in the **Advent of Cyber Day 9** room and using it to remove the firewall on the target machine.
 

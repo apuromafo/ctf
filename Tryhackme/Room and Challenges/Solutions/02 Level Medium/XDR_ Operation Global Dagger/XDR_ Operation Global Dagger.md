@@ -1,3 +1,5 @@
+Room: https://tryhackme.com/room/xdroperationglobaldagger
+
 1. No answer needed
 2. No answer needed
 3. 1. HackTool:PowerShell/PowerSploit.F

@@ -1,3 +1,6 @@
+https://tryhackme.com/room/bashscripting
+
+
 1. No answer needed
 2. 1. #
    2. BishBashBosh

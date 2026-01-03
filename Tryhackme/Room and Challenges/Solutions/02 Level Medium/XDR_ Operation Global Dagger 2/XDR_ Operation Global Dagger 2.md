@@ -9,3 +9,6 @@
    7. WMIC.exe
    8. Discovery, Execution
    9. THM{PZ874JC89DR5NZ1DAF6MS2KH}
+
+
+#source https://medium.com/@Sle3pyHead/xdr-operation-global-dagger-2-ctf-notes-tryhackme-e85eaa8daab3

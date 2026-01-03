@@ -1,0 +1,2 @@
+1. 1. THM{:::MY_DECLINATION:+62°_14'_31.4'':::}
+   2. THM{¡!¡RIGHT_ASCENSION_12h_36m_25.46s!¡!} 

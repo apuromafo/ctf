@@ -1,0 +1,2 @@
+1. 1. THM{AuthBypass3D}
+   2. THM{RUNANYCOMMAND1337}

@@ -10,3 +10,7 @@
    8. C:\Windows\System32\reg.exe
    9. Compromised account conducting hands-on-keyboard attack
    10. "ie4uinit.exe" -UserConfig
+
+
+source: https://medium.com/@Sle3pyHead/xdr-operation-global-dagger-ctf-notes-tryhackme-ceb0614b5223
+

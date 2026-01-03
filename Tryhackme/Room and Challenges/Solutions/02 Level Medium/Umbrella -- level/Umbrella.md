@@ -1,0 +1,3 @@
+1. 1. Ng1-f3!Pe7-e5?Nf3xe5
+   2. THM{d832c0e4cf71312708686124f7a6b25e}
+   3. THM{1e15fbe7978061c6bb1924124fd9eab2}

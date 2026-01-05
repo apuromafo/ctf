@@ -1,5 +1,29 @@
+https://tryhackme.com/room/raz0rblack
+
+#task1: 
+
+Throw something like a rock on the big green thingy on the right side here to deploy your box.
+
+The box has ICMP enabled. So, look at ping first before starting recon and stop slapping `-Pn` on nmap.
+
+This room is proudly made by: Xyan1d3
+
+Every solver of this box will get a free cookie when completing this box.
+
+If you enjoy this room, please let me know by tagging me on Twitter. You may also contact me in case of some unintended routes or bugs, and I will be happy to resolve them. Also, let me know which part you enjoyed and which part made you struggle.
+
+
+
 1. No answer needed
-2. 1. raz0rblack.thm
+
+#task2 :Flag Submission Panel
+
+This will test your Active Directory enumeration and exploitation knowledge.
+
+Submit your flags and answers to prove your progression.
+
+
+   1. raz0rblack.thm
    2. THM{ab53e05c9a98def00314a14ccbfa8104}
    3. electromagnetismo
    4. f220d3988deb3f516c73f40ee16c431d

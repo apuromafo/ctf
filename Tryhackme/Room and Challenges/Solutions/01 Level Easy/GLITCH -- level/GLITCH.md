@@ -1,3 +1,9 @@
+https://tryhackme.com/room/glitch
+GLITCH
+Challenge showcasing a web app and simple privilege escalation. Can you find the glitch?
+
+
+
 1. 1. No answer needed
    2. this_is_not_real
    3. THM{i_don't_know_why}

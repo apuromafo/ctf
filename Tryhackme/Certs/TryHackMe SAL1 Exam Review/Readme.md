@@ -3,8 +3,92 @@ https://tryhackme.com/certification/security-analyst-level-1
 
 https://tryhackme.com/resources/blog/creating-sal1
 
+![Sal1](./demo/sal1.png)
+
+ 
+
+## Preguntas Frecuentes (FAQ)
+
+### ¿Cuál es el proceso del examen?
+
+El examen consta de tres secciones: **80 preguntas de opción múltiple** (límite de 1 hora), un **Escenario de Simulador SOC** (límite de 2 horas) y un **segundo Escenario de Simulador SOC** (límite de 2 horas). Una vez que comiences, tienes una ventana de **24 horas** para completar el examen completo.
+
+Cada sección tiene su propio temporizador, que comienza a contar en cuanto inicias dicha sección. El temporizador corre de forma continua hasta que el tiempo expire o completes la sección.
+
+La duración total del examen es de **6 horas** dentro de la ventana de 24 horas. Debes completar las secciones en orden: primero las preguntas de opción múltiple, seguidas de los dos escenarios del simulador SOC.
+
+---
+
+### ¿En qué se diferencia de un certificado de finalización?
+
+Cuando completas todas las salas de una ruta, recibes certificados de finalización. La certificación **Security Analyst Level 1 (SAL1)** va más allá; es una certificación profesional de analista de ciberseguridad diseñada para validar tu capacidad de aplicar habilidades en el mundo real.
+
+A diferencia de los certificados estándar, la SAL1 incluye un examen inmersivo y práctico que pone a prueba tu capacidad para manejar escenarios de seguridad reales. Los empleadores buscan profesionales que puedan pensar de forma crítica, investigar amenazas y responder con eficacia. La certificación SAL1 demuestra que puedes hacerlo, convirtiéndola en una credencial valiosa para quienes buscan iniciar o avanzar en su carrera.
+
+---
+
+### ¿Existen requisitos previos?
+
+Este es un examen de **nivel inicial**. No hay requisitos previos formales: no se requiere educación previa, certificaciones ni experiencia laboral. Sin embargo, nuestro objetivo es asegurar que quienes aprueben estén realmente listos para trabajar. Para lograrlo, recomendamos una preparación exhaustiva en:
+
+* Fundamentos de computación y redes.
+* Comportamiento malicioso común.
+* Herramientas de seguridad comunes.
+* **Flujos de trabajo y actividades de SOC, incluyendo:**
+* Triaje de alertas.
+* Análisis de logs.
+* Redacción de informes.
 
 
+
+Para los usuarios de TryHackMe, recomendamos completar, como mínimo, las rutas de aprendizaje **Cyber Security 101** y **SOC Level 1**, además de practicar en los escenarios gratuitos de SOC Sim.
+
+---
+
+### Si repruebo, ¿puedo volver a tomar el examen?
+
+**¡Sí!** Cada compra de certificación incluye **un intento de recuperación gratuito**. Puedes comenzar tu recuperación tres días después de haber iniciado tu primer intento. Si es necesario, se pueden comprar intentos adicionales.
+
+---
+
+### ¿Es necesario renovar esta certificación?
+
+Sí, la certificación es **válida por tres años** y deberá ser renovada. La ciberseguridad evoluciona constantemente, y las certificaciones con vencimiento garantizan que tus conocimientos se mantengan actualizados. Puedes renovarla realizando un examen de recertificación, obteniendo otras certificaciones de TryHackMe (próximamente) o aprendiendo continuamente en la plataforma.
+
+---
+
+### ¿Por qué esta certificación tiene preguntas de opción múltiple?
+
+Introdujimos preguntas de opción múltiple (MCQs) para asegurar que los candidatos estén bien preparados para roles iniciales. Los empleadores enfatizaron la importancia de los **conocimientos fundamentales de computación y redes**, los cuales no siempre se evalúan fácilmente solo con ejercicios prácticos. Las MCQs ayudan a cerrar esa brecha, evaluando conocimientos esenciales que se esperan en las entrevistas de trabajo.
+
+---
+
+### ¿Cómo manejan el fraude (trampas)?
+
+Como empresa de seguridad, nos tomamos muy en serio la prevención del fraude. Hemos implementado múltiples salvaguardas:
+
+1. **Preguntas y escenarios aleatorios.**
+2. **Estrategias de rotación** para minimizar la exposición del contenido.
+3. **Verificación estricta de identidad.**
+4. **Controles aleatorios (spot checks)** por parte de nuestro personal.
+
+Cualquier persona sorprendida haciendo trampa verá su certificación revocada y será **baneada permanentemente**.
+
+---
+
+### Precios y descuentos
+
+| Opción | Precio | Incluye |
+| --- | --- | --- |
+| **Paquete Estándar** | **£299** | Examen + 3 meses de TryHackMe Premium |
+| **Usuarios Premium actuales** | **£255** | 15% de descuento sobre el precio del examen |
+| **Extensión de entrenamiento** | **Desde £14.99** | Tiempo adicional de preparación |
+
+* **Descuentos por volumen:** Disponibles según la cantidad de licencias.
+* **Empresas:** Si eres cliente de TryHackMe Business, contacta a tu gerente de éxito de cliente.
+
+---
+ 
 
 
 review:

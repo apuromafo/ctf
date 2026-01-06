@@ -17,23 +17,23 @@ This guide contains the answer and steps necessary to get to them for the [Adven
 
 ### Hopper's Origin
 
-The guide for this password is not available yet.
+ok
 
 ### The Great Disappearing Act
 
-The guide for this password is not available yet.
+ok
 
 ### Scheme Catcher
 
-The guide for this password is not available yet.
+ok
 
 ### Carrotbane of My Existence
 
-The guide for this password is not available yet.
+ok
 
 ### BreachBlocker Unlocker
 
-The guide for this password is not available yet.
+ok
  
 
 Rules

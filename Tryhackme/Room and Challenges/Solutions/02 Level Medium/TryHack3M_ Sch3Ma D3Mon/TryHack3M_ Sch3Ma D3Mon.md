@@ -1,3 +1,72 @@
+https://tryhackme.com/room/sch3mad3mon
+
+
+#Task 1 A Public Computer with a VPN
+
+What is the suspect’s username?
+
+lannister
+
+What is the suspect’s password?
+
+hrpTfL42wMv3
+
+#Task 2 Connected Tables
+
+What does RDBMS stand for?
+
+relational database management system
+
+What does CRUD stand for?
+
+create read update delete
+
+What does SQL stand for?
+
+Structured Query Language
+
+#Task 3 Unlisted
+
+What’s the hidden path?
+
+os_sqli.php
+
+#Task 4 From DB to OS
+
+What is the output of pwd when run via an SQL injection attack?
+
+/var/lib/mysql
+
+#Task 5 Finding a Needle in a Malwarestack
+
+What is the malware’s location?
+
+/home/products/malware/4sale/pal4tln3/MisterMeist3r/2DC6C0
+
+#Task 6 Operation Defang
+
+Now that we know which malware is the most widely purchased in this store, we can execute our plan to disrupt its damaging effects by modifying the code, effectively “defanging” it. 
+
+This ensures that the malware runs without causing actual damage, thus maintaining the illusion of regular operation for the purchasers of this malware. The longer they believe that the malware they purchased works normally, the less chance our modifications will be discovered.
+
+Explore the directory of our target malware. Something there could hint at how to disable its damaging effects.
+
+
+
+What programming language was used to develop the malware?
+
+nim
+
+Reading the source code, what file type is added to the end of encrypted files?
+
+.boogey
+
+What is the flag that appears after compiling the defanged malware?
+
+THM{3FDbU2nNy2FW7yMvMoH6WTMMM}
+
+Answers:
+
 1. 1. lannister
    2. hrpTfL42wMv3
 2. 1. Relational Database Management System

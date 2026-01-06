@@ -1,3 +1,7 @@
+https://tryhackme.com/room/hackernote
+
+
+
 1. 1. 22,80,8080
    2. go
 2. 1. No answer needed

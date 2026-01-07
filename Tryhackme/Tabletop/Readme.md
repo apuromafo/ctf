@@ -98,9 +98,9 @@ Link ** https://tryhackme.com/tabletop-exercises
 
 
 Source iframe 
->  El parámetro s=[0-19] típicamente corresponde a la diapositiva o paso específico en la demostración interactiva. siendo 0 el primero, 1 el segundo...
+>  El parámetro s=[0-21] típicamente corresponde a la diapositiva o paso específico en la demostración interactiva. siendo 0 el primero, 1 el segundo...
  
- hxxps://capture.navattic.com/cmg7vz3dr000004jv80pd8cbr?g=cmg86d09h000004labmu40ixr&s=[0-19]
+ hxxps://capture.navattic.com/cmg7vz3dr000004jv80pd8cbr?g=cmg86d09h000004labmu40ixr&s=[0-21]
 Powered by Navattic
  
  

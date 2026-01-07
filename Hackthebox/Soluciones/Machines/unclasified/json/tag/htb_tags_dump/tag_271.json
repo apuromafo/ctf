@@ -1,0 +1,8 @@
+{
+    "id": 271,
+    "status": 429,
+    "data": {
+        "message": "Too Many Attempts."
+    },
+    "url": "https://labs.hackthebox.com/api/v4/machine/tags/271"
+}

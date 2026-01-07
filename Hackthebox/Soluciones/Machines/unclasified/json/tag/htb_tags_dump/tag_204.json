@@ -1,0 +1,74 @@
+{
+    "id": 204,
+    "status": 200,
+    "data": {
+        "info": [
+            {
+                "id": 3628,
+                "name": "Web Application",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3632,
+                "name": "Vulnerability Assessment",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3639,
+                "name": "SQL Injection",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3644,
+                "name": "Weak Credentials",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3646,
+                "name": "Clear Text Credentials",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3766,
+                "name": "FTP",
+                "category": "Technology"
+            },
+            {
+                "id": 3812,
+                "name": "IPv6",
+                "category": "Technology"
+            },
+            {
+                "id": 3813,
+                "name": "Rsync",
+                "category": "Technology"
+            },
+            {
+                "id": 4132,
+                "name": "Reconnaissance",
+                "category": "Technique"
+            },
+            {
+                "id": 4158,
+                "name": "FTP Bounce attack",
+                "category": "Technique"
+            },
+            {
+                "id": 4163,
+                "name": "Brute Force Attack",
+                "category": "Technique"
+            },
+            {
+                "id": 4551,
+                "name": "Injections",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4573,
+                "name": "Authentication",
+                "category": "Area of Interest"
+            }
+        ]
+    },
+    "url": "https://labs.hackthebox.com/api/v4/machine/tags/204"
+}

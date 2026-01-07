@@ -1,0 +1,46 @@
+{
+    "machine_id": 189,
+    "endpoint": "https://labs.hackthebox.com/api/v4/machine/changelog/189",
+    "status_code": 200,
+    "headers_response": {
+        "Date": "Fri, 26 Dec 2025 23:11:03 GMT",
+        "Content-Type": "application/json",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Server": "cloudflare",
+        "CF-Ray": "9b44414dfec750ee-SCL",
+        "CF-Cache-Status": "DYNAMIC",
+        "Access-Control-Allow-Origin": "https://app.hackthebox.com",
+        "Cache-Control": "no-cache, private",
+        "Content-Encoding": "gzip",
+        "Strict-Transport-Security": "max-age=15552000; includeSubDomains",
+        "Vary": "Accept-Encoding",
+        "access-control-allow-credentials": "true",
+        "access-control-allow-headers": "Accept,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,User-Agent,X-Requested-With",
+        "access-control-allow-methods": "GET, POST, PUT, DELETE, OPTIONS",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-htb-request-id": "a0b04cfd-4058-41af-8920-92e6220caa7f",
+        "x-ratelimit-limit": "30",
+        "x-ratelimit-remaining": "23",
+        "x-xss-protection": "1; mode=block",
+        "Set-Cookie": "__cf_bm=JfHdwQlXybu6L5U9tpU6tzXYARB8KCtwyNOrJovoViI-1766790663-1.0.1.1-QLNryvMq2gSDDWXDamKGyp_mswBvaV5_3BUqLdbCtTaLAjjn7UFzXPJez86YRsy5XKL6v7WyQgVImTAtJ4DjNdcC.aN3ORoxWUvYn9ywT3M; path=/; expires=Fri, 26-Dec-25 23:41:03 GMT; domain=.hackthebox.com; HttpOnly; Secure; SameSite=None",
+        "alt-svc": "h3=\":443\"; ma=86400"
+    },
+    "data": {
+        "info": [
+            {
+                "id": 291,
+                "user_id": 16,
+                "machine_id": 189,
+                "type": "2",
+                "title": "Fixed Firewall Config",
+                "description": "Updated iptables rules to respect both static and DHCP configurations. Reconfigured DHCP settings. Adapter changed from ens160 to eth0. No change to exploitation path.",
+                "released": 1,
+                "created_at": "2023-12-01T16:10:29.000000Z",
+                "updated_at": "2023-12-01T16:12:41.000000Z"
+            }
+        ]
+    },
+    "timestamp": 1766790663.1428428
+}

@@ -1,0 +1,154 @@
+{
+    "id": 85,
+    "status_code": 200,
+    "content": {
+        "data": [
+            {
+                "id": 3545,
+                "title": "Task 1",
+                "description": "How many TCP ports are listening on SolidState?",
+                "hint": "Scan the host with `nmap`.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "masked_flag": "number, such as 3, 17, or 4567",
+                "options": []
+            },
+            {
+                "id": 3546,
+                "title": "Task 2",
+                "description": "What is the name of the application responsible for listening on TCP 25, 110, 119, and 4555?",
+                "hint": "`nmap` script will identify this.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3545,
+                "completed": false,
+                "masked_flag": "****** *****",
+                "options": []
+            },
+            {
+                "id": 3547,
+                "title": "Task 3",
+                "description": "What version of Apache James is running on SolidState?",
+                "hint": "Check the `nmap` script output.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3546,
+                "completed": false,
+                "masked_flag": "*.*.*",
+                "options": []
+            },
+            {
+                "id": 3548,
+                "title": "Task 4",
+                "description": "What is the default password for the root user on TCP 4555?",
+                "hint": "It's a very simple guess knowing the username, or look it up online.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3547,
+                "completed": false,
+                "masked_flag": "****",
+                "options": []
+            },
+            {
+                "id": 3549,
+                "title": "Task 5",
+                "description": "What is mindy's password?",
+                "hint": "Use an exploit in James 2.3.2 to get access to mailboxes on the server.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3548,
+                "completed": false,
+                "masked_flag": "************",
+                "options": []
+            },
+            {
+                "id": 3550,
+                "title": "Submit User Flag",
+                "description": "Submit the flag located in the mindy user's home directory.",
+                "hint": null,
+                "type": {
+                    "id": 1,
+                    "text": "user"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "flag_rating": null,
+                "masked_flag": "32 hex characters",
+                "options": []
+            },
+            {
+                "id": 3551,
+                "title": "Task 7",
+                "description": "What is the full path to the Python script that's run as root every three minutes?",
+                "hint": "Use a tool like `pspy` to look at running processes.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3550,
+                "completed": false,
+                "masked_flag": "full path of file",
+                "options": []
+            },
+            {
+                "id": 3552,
+                "title": "Submit Root Flag",
+                "description": "Submit the flag located in the root user's home directory.",
+                "hint": null,
+                "type": {
+                    "id": 2,
+                    "text": "root"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "flag_rating": null,
+                "masked_flag": "32 hex characters",
+                "options": []
+            }
+        ]
+    }
+}

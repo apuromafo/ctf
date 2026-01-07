@@ -1,0 +1,84 @@
+{
+    "id": 338,
+    "status": 200,
+    "data": {
+        "info": [
+            {
+                "id": 3628,
+                "name": "Web Application",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3629,
+                "name": "Enterprise Network",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3632,
+                "name": "Vulnerability Assessment",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3664,
+                "name": "Misconfiguration",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3666,
+                "name": "Prototype Pollution Injection",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3680,
+                "name": "Hard-coded Credentials",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3731,
+                "name": "JavaScript",
+                "category": "Language"
+            },
+            {
+                "id": 3780,
+                "name": "NodeJS",
+                "category": "Technology"
+            },
+            {
+                "id": 3789,
+                "name": "Kubernetes",
+                "category": "Technology"
+            },
+            {
+                "id": 3790,
+                "name": "Electron",
+                "category": "Technology"
+            },
+            {
+                "id": 4169,
+                "name": "Sandbox Escape",
+                "category": "Technique"
+            },
+            {
+                "id": 4548,
+                "name": "Broken Authentication and Authorization",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4553,
+                "name": "Virtualization",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4567,
+                "name": "Source Code Analysis",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4570,
+                "name": "Software & OS exploitation",
+                "category": "Area of Interest"
+            }
+        ]
+    },
+    "url": "https://labs.hackthebox.com/api/v4/machine/tags/338"
+}

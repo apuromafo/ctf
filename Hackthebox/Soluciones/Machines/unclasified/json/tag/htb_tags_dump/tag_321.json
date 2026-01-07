@@ -1,0 +1,139 @@
+{
+    "id": 321,
+    "status": 200,
+    "data": {
+        "info": [
+            {
+                "id": 3628,
+                "name": "Web Application",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3632,
+                "name": "Vulnerability Assessment",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3639,
+                "name": "SQL Injection",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3642,
+                "name": "Remote File Inclusion",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3644,
+                "name": "Weak Credentials",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3657,
+                "name": "Information Disclosure",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3667,
+                "name": "Arbitrary File Write",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3722,
+                "name": "PHP",
+                "category": "Language"
+            },
+            {
+                "id": 3728,
+                "name": "Go",
+                "category": "Language"
+            },
+            {
+                "id": 3736,
+                "name": "Powershell",
+                "category": "Language"
+            },
+            {
+                "id": 3756,
+                "name": "IIS",
+                "category": "Technology"
+            },
+            {
+                "id": 3759,
+                "name": "MySQL",
+                "category": "Technology"
+            },
+            {
+                "id": 3762,
+                "name": "Custom",
+                "category": "Technology"
+            },
+            {
+                "id": 3912,
+                "name": "Ajax",
+                "category": "Technology"
+            },
+            {
+                "id": 4134,
+                "name": "Web Site Structure Discovery",
+                "category": "Technique"
+            },
+            {
+                "id": 4140,
+                "name": "Impersonation",
+                "category": "Technique"
+            },
+            {
+                "id": 4141,
+                "name": "Binary Analysis",
+                "category": "Technique"
+            },
+            {
+                "id": 4150,
+                "name": "Password Cracking",
+                "category": "Technique"
+            },
+            {
+                "id": 4183,
+                "name": "Hash Capture",
+                "category": "Technique"
+            },
+            {
+                "id": 4194,
+                "name": "Potato Exploits",
+                "category": "Technique"
+            },
+            {
+                "id": 4548,
+                "name": "Broken Authentication and Authorization",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4549,
+                "name": "Databases",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4551,
+                "name": "Injections",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4568,
+                "name": "Reverse Engineering",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4570,
+                "name": "Software & OS exploitation",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4572,
+                "name": "Security Tools",
+                "category": "Area of Interest"
+            }
+        ]
+    },
+    "url": "https://labs.hackthebox.com/api/v4/machine/tags/321"
+}

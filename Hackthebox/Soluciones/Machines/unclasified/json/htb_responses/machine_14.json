@@ -1,0 +1,154 @@
+{
+    "id": 14,
+    "status_code": 200,
+    "content": {
+        "data": [
+            {
+                "id": 1186,
+                "title": "Task 1",
+                "description": "How many TCP ports are open on Granny?",
+                "hint": "Scan the host with `nmap`.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "masked_flag": "number, such as 3, 17, or 4567",
+                "options": []
+            },
+            {
+                "id": 1187,
+                "title": "Task 2",
+                "description": "What is the name of the `nmap` script that identifies the allowed HTTP methods on Granny?",
+                "hint": "Running nmap with `-sC` runs the safe scripts, which includes this one. Look at the output, and find the script name.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1186,
+                "completed": false,
+                "masked_flag": "****-******-****",
+                "options": []
+            },
+            {
+                "id": 1188,
+                "title": "Task 3",
+                "description": "Which DOTNET-based web application framework is running on the target web server?",
+                "hint": "Inspect the site's response headers. The `X-Powered-By` header is useful here.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1187,
+                "completed": false,
+                "masked_flag": "***.***",
+                "options": []
+            },
+            {
+                "id": 1189,
+                "title": "Task 4",
+                "description": "Which HTTP method can be used to upload files onto Granny?",
+                "hint": "Tools such as `davtest` are useful in enumerating WebDAV.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1188,
+                "completed": false,
+                "masked_flag": "***",
+                "options": []
+            },
+            {
+                "id": 1190,
+                "title": "Task 5",
+                "description": "What is the 2017 CVE ID for a vulnerability that takes advantage of this IIS version and WebDAV, resulting in remote code execution?",
+                "hint": "Searching for keywords \"IIS 6 webdav vulnerability\".",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1189,
+                "completed": false,
+                "masked_flag": "***-****-****",
+                "options": []
+            },
+            {
+                "id": 1191,
+                "title": "Task 6",
+                "description": "Which metasploit reconnaissance module can be used to list possible privilege escalation paths on a compromised system?",
+                "hint": "You can search through the post/multi/recon modules inside `msfconsole`.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1190,
+                "completed": false,
+                "masked_flag": "*****_*******_*********",
+                "options": []
+            },
+            {
+                "id": 1192,
+                "title": "Submit User Flag",
+                "description": "Submit the flag located on the Lakis user's desktop.",
+                "hint": null,
+                "type": {
+                    "id": 1,
+                    "text": "user"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "flag_rating": null,
+                "masked_flag": "32 hex characters",
+                "options": []
+            },
+            {
+                "id": 1193,
+                "title": "Submit Root Flag",
+                "description": "Submit the flag located on the administrator's desktop.",
+                "hint": null,
+                "type": {
+                    "id": 2,
+                    "text": "root"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "flag_rating": null,
+                "masked_flag": "32 hex characters",
+                "options": []
+            }
+        ]
+    }
+}

@@ -1,0 +1,172 @@
+{
+    "id": 21,
+    "status_code": 200,
+    "content": {
+        "data": [
+            {
+                "id": 3624,
+                "title": "Task 1",
+                "description": "How many TCP ports are listening on Haircut?",
+                "hint": "Scan the host with `nmap`.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "masked_flag": "number, such as 3, 17, or 4567",
+                "options": []
+            },
+            {
+                "id": 3625,
+                "title": "Task 2",
+                "description": "What is the relative path to the directory that is discoverable on the webserver?",
+                "hint": "Brute-force paths on the webserver with a tool like `gobuster` or `feroxbuster`.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3624,
+                "completed": false,
+                "masked_flag": "path starting with /, such as /home or /api/v1/auth/login",
+                "options": []
+            },
+            {
+                "id": 3626,
+                "title": "Task 3",
+                "description": "What is the relative path to the PHP page that checks \"Hairdresser's location\"?",
+                "hint": "Brute-force paths on the webserver again. Don't forget to include the `.php` extension.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3625,
+                "completed": false,
+                "masked_flag": "path starting with /, such as /home or /api/v1/auth/login",
+                "options": []
+            },
+            {
+                "id": 3627,
+                "title": "Task 4",
+                "description": "What common Linux program / library is the site using to fetch webpages?",
+                "hint": "Look at the output on the webpage, or have it request something from a server under your control and look at the User-Agent string.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3626,
+                "completed": false,
+                "masked_flag": "****",
+                "options": []
+            },
+            {
+                "id": 3628,
+                "title": "Task 5",
+                "description": "What is the single character curl option to save a file to the given location?",
+                "hint": "Read the `curl` man page.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3627,
+                "completed": false,
+                "masked_flag": "single ASCII character",
+                "options": []
+            },
+            {
+                "id": 3629,
+                "title": "Task 6",
+                "description": "What user is the website running as?",
+                "hint": "Upload a PHP webshell using option injection against the site.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3628,
+                "completed": false,
+                "masked_flag": "username",
+                "options": []
+            },
+            {
+                "id": 3630,
+                "title": "Submit User Flag",
+                "description": "Submit the flag located in the maria user's home directory.",
+                "hint": null,
+                "type": {
+                    "id": 1,
+                    "text": "user"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "flag_rating": null,
+                "masked_flag": "32 hex characters",
+                "options": []
+            },
+            {
+                "id": 3631,
+                "title": "Task 8",
+                "description": "What is the full path of the file owned by root that has the SetUID permission and has to do with terminal management?",
+                "hint": "`find` has options to identify SetUID programs.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3630,
+                "completed": false,
+                "masked_flag": "full path of file",
+                "options": []
+            },
+            {
+                "id": 3632,
+                "title": "Submit Root Flag",
+                "description": "Submit the flag located in the root user's home directory.",
+                "hint": null,
+                "type": {
+                    "id": 2,
+                    "text": "root"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "flag_rating": null,
+                "masked_flag": "32 hex characters",
+                "options": []
+            }
+        ]
+    }
+}

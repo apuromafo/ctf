@@ -1,0 +1,104 @@
+{
+    "id": 167,
+    "status": 200,
+    "data": {
+        "info": [
+            {
+                "id": 3628,
+                "name": "Web Application",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3632,
+                "name": "Vulnerability Assessment",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3644,
+                "name": "Weak Credentials",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3645,
+                "name": "Remote Code Execution",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3646,
+                "name": "Clear Text Credentials",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3677,
+                "name": "Weak Cryptography",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3722,
+                "name": "PHP",
+                "category": "Language"
+            },
+            {
+                "id": 3723,
+                "name": "Python",
+                "category": "Language"
+            },
+            {
+                "id": 3755,
+                "name": "Apache",
+                "category": "Technology"
+            },
+            {
+                "id": 3762,
+                "name": "Custom",
+                "category": "Technology"
+            },
+            {
+                "id": 3774,
+                "name": "Wordpress",
+                "category": "Technology"
+            },
+            {
+                "id": 3912,
+                "name": "Ajax",
+                "category": "Technology"
+            },
+            {
+                "id": 3957,
+                "name": "Latex",
+                "category": "Technology"
+            },
+            {
+                "id": 4149,
+                "name": "Password Reuse",
+                "category": "Technique"
+            },
+            {
+                "id": 4547,
+                "name": "Common Applications",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4567,
+                "name": "Source Code Analysis",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4571,
+                "name": "Cryptography",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4572,
+                "name": "Security Tools",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4573,
+                "name": "Authentication",
+                "category": "Area of Interest"
+            }
+        ]
+    },
+    "url": "https://labs.hackthebox.com/api/v4/machine/tags/167"
+}

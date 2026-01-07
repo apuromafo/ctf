@@ -1,0 +1,46 @@
+{
+    "machine_id": 18,
+    "endpoint": "https://labs.hackthebox.com/api/v4/machine/changelog/18",
+    "status_code": 200,
+    "headers_response": {
+        "Date": "Fri, 26 Dec 2025 23:10:03 GMT",
+        "Content-Type": "application/json",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Content-Encoding": "gzip",
+        "CF-Ray": "9b443fd6187e50ee-SCL",
+        "CF-Cache-Status": "DYNAMIC",
+        "Access-Control-Allow-Origin": "https://app.hackthebox.com",
+        "Cache-Control": "no-cache, private",
+        "Strict-Transport-Security": "max-age=15552000; includeSubDomains",
+        "access-control-allow-credentials": "true",
+        "access-control-allow-headers": "Accept,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,User-Agent,X-Requested-With",
+        "access-control-allow-methods": "GET, POST, PUT, DELETE, OPTIONS",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-htb-request-id": "a0b04ca1-7a03-4c46-9ec5-4456d314305e",
+        "x-ratelimit-limit": "30",
+        "x-ratelimit-remaining": "15",
+        "x-xss-protection": "1; mode=block",
+        "Set-Cookie": "__cf_bm=YY._phAZ6E5Bqv3wlR2Nv3E9w9R5pbtVrm1ETk0HC_w-1766790603-1.0.1.1-eWTuNWuIgHg9L6zP39X60CQR7gfcz.SDEDTAxwzN2_8eQ80wtlnvd4wT3YFSciHzARxFe4rSFNm.qFm3rHxf0wr.LLLYbMtPR5qWKeIhNXQ; path=/; expires=Fri, 26-Dec-25 23:40:03 GMT; domain=.hackthebox.com; HttpOnly; Secure; SameSite=None",
+        "Vary": "Accept-Encoding",
+        "Server": "cloudflare",
+        "alt-svc": "h3=\":443\"; ma=86400"
+    },
+    "data": {
+        "info": [
+            {
+                "id": 272,
+                "user_id": 16,
+                "machine_id": 18,
+                "type": "1",
+                "title": "Image Hygiene",
+                "description": "Removed floppy disk drive. No change to playability.",
+                "released": 1,
+                "created_at": "2023-10-27T09:38:58.000000Z",
+                "updated_at": "2023-10-27T09:38:58.000000Z"
+            }
+        ]
+    },
+    "timestamp": 1766790602.9930198
+}

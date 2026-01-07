@@ -1,0 +1,57 @@
+{
+    "machine_id": 184,
+    "endpoint": "https://labs.hackthebox.com/api/v4/machine/changelog/184",
+    "status_code": 200,
+    "headers_response": {
+        "Date": "Fri, 26 Dec 2025 23:11:03 GMT",
+        "Content-Type": "application/json",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Server": "cloudflare",
+        "CF-Ray": "9b44414ab9811e9d-SCL",
+        "CF-Cache-Status": "DYNAMIC",
+        "Access-Control-Allow-Origin": "https://app.hackthebox.com",
+        "Cache-Control": "no-cache, private",
+        "Content-Encoding": "gzip",
+        "Strict-Transport-Security": "max-age=15552000; includeSubDomains",
+        "Vary": "Accept-Encoding",
+        "access-control-allow-credentials": "true",
+        "access-control-allow-headers": "Accept,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,User-Agent,X-Requested-With",
+        "access-control-allow-methods": "GET, POST, PUT, DELETE, OPTIONS",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-htb-request-id": "a0b04cfc-7123-4f87-bb18-f9b669093095",
+        "x-ratelimit-limit": "30",
+        "x-ratelimit-remaining": "27",
+        "x-xss-protection": "1; mode=block",
+        "Set-Cookie": "__cf_bm=4HDxbFVu9gE6ZEP371Q.wZOPTfm16rgdaErpfbJvt_s-1766790663-1.0.1.1-wNulWP8XRR2n7vlMKyJ0KiC1NPdy.eckk68E4ftItKCLJCmooYjF6ZGo_QD2F1Ox6JRQHOh_tWQeqqPHuFgx0kEcv5j.5SaOevloeBbxJqM; path=/; expires=Fri, 26-Dec-25 23:41:03 GMT; domain=.hackthebox.com; HttpOnly; Secure; SameSite=None",
+        "alt-svc": "h3=\":443\"; ma=86400"
+    },
+    "data": {
+        "info": [
+            {
+                "id": 156,
+                "user_id": 16,
+                "machine_id": 184,
+                "type": "1",
+                "title": "Image Hygiene. No Change to Playability",
+                "description": "Cleaned up disk image to reduce size. Enabled and tested flag rotation. No changes for player point of view.",
+                "released": 1,
+                "created_at": "2022-09-29T06:48:00.000000Z",
+                "updated_at": "2022-09-30T16:40:46.000000Z"
+            },
+            {
+                "id": 304,
+                "user_id": 16,
+                "machine_id": 184,
+                "type": "2",
+                "title": "OS Update",
+                "description": "Upgraded the OS for hypervisor compatibility. Updated DHCP configuration.",
+                "released": 1,
+                "created_at": "2023-12-11T16:05:54.000000Z",
+                "updated_at": "2023-12-11T16:05:54.000000Z"
+            }
+        ]
+    },
+    "timestamp": 1766790662.6129966
+}

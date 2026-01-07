@@ -1,0 +1,46 @@
+{
+    "machine_id": 8,
+    "endpoint": "https://labs.hackthebox.com/api/v4/machine/changelog/8",
+    "status_code": 200,
+    "headers_response": {
+        "Date": "Fri, 26 Dec 2025 23:10:01 GMT",
+        "Content-Type": "application/json",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Server": "cloudflare",
+        "CF-Ray": "9b443fcb2affb510-SCL",
+        "CF-Cache-Status": "DYNAMIC",
+        "Access-Control-Allow-Origin": "https://app.hackthebox.com",
+        "Cache-Control": "no-cache, private",
+        "Content-Encoding": "gzip",
+        "Strict-Transport-Security": "max-age=15552000; includeSubDomains",
+        "Vary": "Accept-Encoding",
+        "access-control-allow-credentials": "true",
+        "access-control-allow-headers": "Accept,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,User-Agent,X-Requested-With",
+        "access-control-allow-methods": "GET, POST, PUT, DELETE, OPTIONS",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-htb-request-id": "a0b04c9e-d361-4a7f-9b72-7b855d091c9b",
+        "x-ratelimit-limit": "30",
+        "x-ratelimit-remaining": "20",
+        "x-xss-protection": "1; mode=block",
+        "Set-Cookie": "__cf_bm=vAAA.TY4RPXfOe7oOlt33FVVI11w5twuLgXGc_N8UDc-1766790601-1.0.1.1-q2k.c0rqzYjsKsh2iFMUk9OcOHDeOey5DZjGTY7gI1FsDDjuGy1bOqMwH7D57yQoZOlIYt29OjfL6zs6D0yRcYYa6qL2Ov5An6e13h1EV1E; path=/; expires=Fri, 26-Dec-25 23:40:01 GMT; domain=.hackthebox.com; HttpOnly; Secure; SameSite=None",
+        "alt-svc": "h3=\":443\"; ma=86400"
+    },
+    "data": {
+        "info": [
+            {
+                "id": 109,
+                "user_id": 16,
+                "machine_id": 8,
+                "type": "3",
+                "title": "Fixed WordPress for DHCP Images",
+                "description": "Configured wordpress to work better on DHCP images. Cleaned up disk image to reduce size. Enabled and tested flag rotation.",
+                "released": 1,
+                "created_at": "2022-08-10T11:35:28.000000Z",
+                "updated_at": "2022-08-10T11:35:46.000000Z"
+            }
+        ]
+    },
+    "timestamp": 1766790601.2638526
+}

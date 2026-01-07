@@ -1,0 +1,172 @@
+{
+    "id": 51,
+    "status_code": 200,
+    "content": {
+        "data": [
+            {
+                "id": 1159,
+                "title": "Task 1",
+                "description": "How many open TCP ports are listening on Blue? Don't include any 5-digit ports.",
+                "hint": "Run an `nmap` scan. Remember only to look at ports 9999 and below for your count.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "masked_flag": "number, such as 3, 17, or 4567",
+                "options": []
+            },
+            {
+                "id": 1160,
+                "title": "Task 2",
+                "description": "What is the hostname of Blue?",
+                "hint": "The `-sCV` flags in `nmap` will provide a lot of details, including the hostname.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1159,
+                "completed": false,
+                "masked_flag": "*****-**",
+                "options": []
+            },
+            {
+                "id": 1161,
+                "title": "Task 3",
+                "description": "What operating system is running on the target machine? Give a two-word answer with a name and high-level version.",
+                "hint": "This should also be in that same `nmap` output with `-sCV`.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1160,
+                "completed": false,
+                "masked_flag": "******* *",
+                "options": []
+            },
+            {
+                "id": 1162,
+                "title": "Task 4",
+                "description": "How many SMB shares are available on Blue?",
+                "hint": "There are three standard admin shares (and ending in `$`), as well as some more.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1161,
+                "completed": false,
+                "masked_flag": "number, such as 3, 17, or 4567",
+                "options": []
+            },
+            {
+                "id": 1163,
+                "title": "Task 5",
+                "description": "What 2017 Microsoft Security Bulletin number describes a remote code execution vulnerability in SMB?",
+                "hint": "This was a very famous vulnerability, nick-named ETERNALBLUE.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1162,
+                "completed": false,
+                "masked_flag": "****-***",
+                "options": []
+            },
+            {
+                "id": 1164,
+                "title": "Task 6",
+                "description": "Optional question: A worm was set loose on the internet in May 2017 propagating primarily through MS17-010. What is the famous name for that malware?",
+                "hint": "Searching for terms like \"worm may 2017\" should return information about the incident. It's often referred to as ransomware because it encrypted computers and asked for payment in Bitcoin. Still, it's not clear that it was actual possible to recover files even after payment.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1163,
+                "completed": false,
+                "masked_flag": "********",
+                "options": []
+            },
+            {
+                "id": 1165,
+                "title": "Task 7",
+                "description": "What user do you get execution with when exploiting MS17-010? Include the full name, including anything before a \\.",
+                "hint": "Exploit the box and run `whoami`.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1163,
+                "completed": false,
+                "masked_flag": "username",
+                "options": []
+            },
+            {
+                "id": 1166,
+                "title": "Submit User Flag",
+                "description": "Submit the flag located on the haris user's desktop.",
+                "hint": null,
+                "type": {
+                    "id": 1,
+                    "text": "user"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "flag_rating": null,
+                "masked_flag": "32 hex characters",
+                "options": []
+            },
+            {
+                "id": 1167,
+                "title": "Submit Root Flag",
+                "description": "Submit the flag located on the administrator's desktop.",
+                "hint": null,
+                "type": {
+                    "id": 2,
+                    "text": "root"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "flag_rating": null,
+                "masked_flag": "32 hex characters",
+                "options": []
+            }
+        ]
+    }
+}

@@ -1,0 +1,74 @@
+{
+    "id": 132,
+    "status": 200,
+    "data": {
+        "info": [
+            {
+                "id": 3628,
+                "name": "Web Application",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3632,
+                "name": "Vulnerability Assessment",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3641,
+                "name": "Local File Inclusion",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3646,
+                "name": "Clear Text Credentials",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3656,
+                "name": "Weak Authentication",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3672,
+                "name": "Log Poisoning",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3755,
+                "name": "Apache",
+                "category": "Technology"
+            },
+            {
+                "id": 3895,
+                "name": "VNC",
+                "category": "Technology"
+            },
+            {
+                "id": 4148,
+                "name": "Tunneling",
+                "category": "Technique"
+            },
+            {
+                "id": 4149,
+                "name": "Password Reuse",
+                "category": "Technique"
+            },
+            {
+                "id": 4177,
+                "name": "Port Forwarding",
+                "category": "Technique"
+            },
+            {
+                "id": 4551,
+                "name": "Injections",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4573,
+                "name": "Authentication",
+                "category": "Area of Interest"
+            }
+        ]
+    },
+    "url": "https://labs.hackthebox.com/api/v4/machine/tags/132"
+}

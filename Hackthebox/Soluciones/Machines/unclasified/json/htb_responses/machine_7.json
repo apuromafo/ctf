@@ -1,0 +1,154 @@
+{
+    "id": 7,
+    "status_code": 200,
+    "content": {
+        "data": [
+            {
+                "id": 3700,
+                "title": "Task 1",
+                "description": "How many TCP ports are listening on Bastard?",
+                "hint": "Scan the host with `nmap`.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "masked_flag": "number, such as 3, 17, or 4567",
+                "options": []
+            },
+            {
+                "id": 3701,
+                "title": "Task 2",
+                "description": "What content management system (CMS) is running the website on Bastard?",
+                "hint": "The logo on the page should give it away.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3700,
+                "completed": false,
+                "masked_flag": "******",
+                "options": []
+            },
+            {
+                "id": 3702,
+                "title": "Task 3",
+                "description": "What version of Drupal is running on Bastard?",
+                "hint": "Check the `/CHANGELOG.txt` file.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3701,
+                "completed": false,
+                "masked_flag": "*.**",
+                "options": []
+            },
+            {
+                "id": 3703,
+                "title": "Task 4",
+                "description": "What user is Drupal running as on Bastard?",
+                "hint": "There are multiple exploits for this version of Drupal. The intended one is [this RCE exploit](https://www.exploit-db.com/exploits/41564).",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3702,
+                "completed": false,
+                "masked_flag": "username without domain",
+                "options": []
+            },
+            {
+                "id": 3704,
+                "title": "Task 5",
+                "description": "Have any hotfixes been applied to this host?",
+                "hint": "Run `systeminfo` and check.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3703,
+                "completed": false,
+                "masked_flag": "yes or no",
+                "options": []
+            },
+            {
+                "id": 3705,
+                "title": "Task 6",
+                "description": "What is the 2015 CVE ID for a vulnerability in the Windows kernel that allows for escalation to System that was originally reported by FireEye as being used by APT28?",
+                "hint": "Microsoft patched this in MS-15-051. The original FireEye post is [here](https://cloud.google.com/blog/topics/threat-intelligence/probable-apt28-useo/).",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3704,
+                "completed": false,
+                "masked_flag": "***-****-****",
+                "options": []
+            },
+            {
+                "id": 3706,
+                "title": "Submit User Flag",
+                "description": "Submit the flag located on the dimitris user's desktop.",
+                "hint": null,
+                "type": {
+                    "id": 1,
+                    "text": "user"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "flag_rating": null,
+                "masked_flag": "32 hex characters",
+                "options": []
+            },
+            {
+                "id": 3707,
+                "title": "Submit Root Flag",
+                "description": "Submit the flag located on the Administrator user's desktop.",
+                "hint": null,
+                "type": {
+                    "id": 2,
+                    "text": "root"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "flag_rating": null,
+                "masked_flag": "32 hex characters",
+                "options": []
+            }
+        ]
+    }
+}

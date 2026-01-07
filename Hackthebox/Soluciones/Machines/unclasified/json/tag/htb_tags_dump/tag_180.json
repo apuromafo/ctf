@@ -1,0 +1,134 @@
+{
+    "id": 180,
+    "status": 200,
+    "data": {
+        "info": [
+            {
+                "id": 3628,
+                "name": "Web Application",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3629,
+                "name": "Enterprise Network",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3632,
+                "name": "Vulnerability Assessment",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3633,
+                "name": "Person",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3646,
+                "name": "Clear Text Credentials",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3647,
+                "name": "OS Command Injection",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3652,
+                "name": "XXE Injection",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3654,
+                "name": "Group Membership",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3657,
+                "name": "Information Disclosure",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3662,
+                "name": "Default Credentials",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3736,
+                "name": "Powershell",
+                "category": "Language"
+            },
+            {
+                "id": 3739,
+                "name": "C",
+                "category": "Language"
+            },
+            {
+                "id": 3811,
+                "name": "PostgreSQL",
+                "category": "Technology"
+            },
+            {
+                "id": 4132,
+                "name": "Reconnaissance",
+                "category": "Technique"
+            },
+            {
+                "id": 4139,
+                "name": "Pivoting",
+                "category": "Technique"
+            },
+            {
+                "id": 4150,
+                "name": "Password Cracking",
+                "category": "Technique"
+            },
+            {
+                "id": 4163,
+                "name": "Brute Force Attack",
+                "category": "Technique"
+            },
+            {
+                "id": 4171,
+                "name": "AppLocker Bypass",
+                "category": "Technique"
+            },
+            {
+                "id": 4181,
+                "name": "Scheduled Job Abuse",
+                "category": "Technique"
+            },
+            {
+                "id": 4183,
+                "name": "Hash Capture",
+                "category": "Technique"
+            },
+            {
+                "id": 4551,
+                "name": "Injections",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4554,
+                "name": "Protocols",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4570,
+                "name": "Software & OS exploitation",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4573,
+                "name": "Authentication",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4574,
+                "name": "Programming",
+                "category": "Area of Interest"
+            }
+        ]
+    },
+    "url": "https://labs.hackthebox.com/api/v4/machine/tags/180"
+}

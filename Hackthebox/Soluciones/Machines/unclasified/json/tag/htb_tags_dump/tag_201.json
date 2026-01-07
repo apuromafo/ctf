@@ -1,0 +1,8 @@
+{
+    "id": 201,
+    "status": 200,
+    "data": {
+        "info": []
+    },
+    "url": "https://labs.hackthebox.com/api/v4/machine/tags/201"
+}

@@ -1,0 +1,68 @@
+{
+    "machine_id": 185,
+    "endpoint": "https://labs.hackthebox.com/api/v4/machine/changelog/185",
+    "status_code": 200,
+    "headers_response": {
+        "Date": "Fri, 26 Dec 2025 23:11:03 GMT",
+        "Content-Type": "application/json",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Server": "cloudflare",
+        "CF-Ray": "9b44414d9e835a32-SCL",
+        "CF-Cache-Status": "DYNAMIC",
+        "Access-Control-Allow-Origin": "https://app.hackthebox.com",
+        "Cache-Control": "no-cache, private",
+        "Content-Encoding": "gzip",
+        "Strict-Transport-Security": "max-age=15552000; includeSubDomains",
+        "Vary": "Accept-Encoding",
+        "access-control-allow-credentials": "true",
+        "access-control-allow-headers": "Accept,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,User-Agent,X-Requested-With",
+        "access-control-allow-methods": "GET, POST, PUT, DELETE, OPTIONS",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-htb-request-id": "a0b04cfd-23b7-4fe9-9738-b9381868b941",
+        "x-ratelimit-limit": "30",
+        "x-ratelimit-remaining": "25",
+        "x-xss-protection": "1; mode=block",
+        "Set-Cookie": "__cf_bm=3LWhzrCMPhhy3oaVLwr1w4z11Pk02fatzaPDwnODIwo-1766790663-1.0.1.1-GuTDVtzhEA7yPRcXHweuLZrhrQJE0dB.dhGz2d77P8zkbIMNgoN2kyWsTuvycGnkFgJEytxG9eP1TheKaY_wCc5Qv8sRo6xKiIftZ5_QJs8; path=/; expires=Fri, 26-Dec-25 23:41:03 GMT; domain=.hackthebox.com; HttpOnly; Secure; SameSite=None",
+        "alt-svc": "h3=\":443\"; ma=86400"
+    },
+    "data": {
+        "info": [
+            {
+                "id": 90,
+                "user_id": 16,
+                "machine_id": 185,
+                "type": "2",
+                "title": "Fixed Flag Rotation",
+                "description": "Fixed issue causing flag rotation to not work properly. No changes to the steps for the player.",
+                "released": 1,
+                "created_at": "2022-05-27T15:14:58.000000Z",
+                "updated_at": "2022-05-27T15:14:58.000000Z"
+            },
+            {
+                "id": 215,
+                "user_id": 16,
+                "machine_id": 185,
+                "type": "3",
+                "title": "Fixed Broken Privesc",
+                "description": "Fixed issue that was blocking unverified upgrades from running.",
+                "released": 1,
+                "created_at": "2022-12-20T13:58:42.000000Z",
+                "updated_at": "2022-12-20T13:58:42.000000Z"
+            },
+            {
+                "id": 297,
+                "user_id": 16,
+                "machine_id": 185,
+                "type": "2",
+                "title": "Kernel Upgrade",
+                "description": "Updated the kernel for Hypervisor compatibility. Updated DHCP configuration. No change to playability of box.",
+                "released": 1,
+                "created_at": "2023-12-08T18:56:07.000000Z",
+                "updated_at": "2023-12-08T18:56:07.000000Z"
+            }
+        ]
+    },
+    "timestamp": 1766790663.0608945
+}

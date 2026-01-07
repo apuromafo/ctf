@@ -1,0 +1,99 @@
+{
+    "id": 322,
+    "status": 200,
+    "data": {
+        "info": [
+            {
+                "id": 3628,
+                "name": "Web Application",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3632,
+                "name": "Vulnerability Assessment",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3639,
+                "name": "SQL Injection",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3659,
+                "name": "Cross Site Request Forgery (CSRF)",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3660,
+                "name": "Host Header Injection",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3664,
+                "name": "Misconfiguration",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3683,
+                "name": "Path Hijacking",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3687,
+                "name": "Cross Site Websocket Hijacking (CSWH)",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3765,
+                "name": "DNS",
+                "category": "Technology"
+            },
+            {
+                "id": 3817,
+                "name": "OTP",
+                "category": "Technology"
+            },
+            {
+                "id": 3838,
+                "name": "WebSockets",
+                "category": "Technology"
+            },
+            {
+                "id": 3839,
+                "name": "Ybikey",
+                "category": "Technology"
+            },
+            {
+                "id": 4134,
+                "name": "Web Site Structure Discovery",
+                "category": "Technique"
+            },
+            {
+                "id": 4136,
+                "name": "Binary Exploitation",
+                "category": "Technique"
+            },
+            {
+                "id": 4178,
+                "name": "SUID Exploitation",
+                "category": "Technique"
+            },
+            {
+                "id": 4547,
+                "name": "Common Applications",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4548,
+                "name": "Broken Authentication and Authorization",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4568,
+                "name": "Reverse Engineering",
+                "category": "Area of Interest"
+            }
+        ]
+    },
+    "url": "https://labs.hackthebox.com/api/v4/machine/tags/322"
+}

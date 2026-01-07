@@ -1,0 +1,79 @@
+{
+    "id": 139,
+    "status": 200,
+    "data": {
+        "info": [
+            {
+                "id": 3629,
+                "name": "Enterprise Network",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3632,
+                "name": "Vulnerability Assessment",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3645,
+                "name": "Remote Code Execution",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3671,
+                "name": "Weak Permissions",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3727,
+                "name": "Ruby",
+                "category": "Language"
+            },
+            {
+                "id": 3816,
+                "name": "TFTP",
+                "category": "Technology"
+            },
+            {
+                "id": 3881,
+                "name": "ADS/NTFS",
+                "category": "Technology"
+            },
+            {
+                "id": 4144,
+                "name": "Exploit Modification",
+                "category": "Technique"
+            },
+            {
+                "id": 4146,
+                "name": "System Exploitation",
+                "category": "Technique"
+            },
+            {
+                "id": 4149,
+                "name": "Password Reuse",
+                "category": "Technique"
+            },
+            {
+                "id": 4554,
+                "name": "Protocols",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4570,
+                "name": "Software & OS exploitation",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4572,
+                "name": "Security Tools",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4573,
+                "name": "Authentication",
+                "category": "Area of Interest"
+            }
+        ]
+    },
+    "url": "https://labs.hackthebox.com/api/v4/machine/tags/139"
+}

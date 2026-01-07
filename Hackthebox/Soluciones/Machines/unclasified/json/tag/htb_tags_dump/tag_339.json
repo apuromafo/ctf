@@ -1,0 +1,89 @@
+{
+    "id": 339,
+    "status": 200,
+    "data": {
+        "info": [
+            {
+                "id": 3628,
+                "name": "Web Application",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3629,
+                "name": "Enterprise Network",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3632,
+                "name": "Vulnerability Assessment",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3639,
+                "name": "SQL Injection",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3656,
+                "name": "Weak Authentication",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3662,
+                "name": "Default Credentials",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3664,
+                "name": "Misconfiguration",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3678,
+                "name": "Anonymous/Guest Access",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3755,
+                "name": "Apache",
+                "category": "Technology"
+            },
+            {
+                "id": 3766,
+                "name": "FTP",
+                "category": "Technology"
+            },
+            {
+                "id": 3783,
+                "name": "Docker",
+                "category": "Technology"
+            },
+            {
+                "id": 4173,
+                "name": "Docker Abuse",
+                "category": "Technique"
+            },
+            {
+                "id": 4551,
+                "name": "Injections",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4553,
+                "name": "Virtualization",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4554,
+                "name": "Protocols",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4573,
+                "name": "Authentication",
+                "category": "Area of Interest"
+            }
+        ]
+    },
+    "url": "https://labs.hackthebox.com/api/v4/machine/tags/339"
+}

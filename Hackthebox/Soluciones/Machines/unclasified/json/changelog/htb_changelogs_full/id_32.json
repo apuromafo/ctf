@@ -1,0 +1,31 @@
+{
+    "machine_id": 32,
+    "endpoint": "https://labs.hackthebox.com/api/v4/machine/changelog/32",
+    "status_code": 404,
+    "headers_response": {
+        "Date": "Fri, 26 Dec 2025 23:10:08 GMT",
+        "Content-Type": "application/json",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Server": "cloudflare",
+        "CF-Ray": "9b443ff5c81bb514-SCL",
+        "CF-Cache-Status": "DYNAMIC",
+        "Access-Control-Allow-Origin": "https://app.hackthebox.com",
+        "Cache-Control": "no-cache, private",
+        "Content-Encoding": "gzip",
+        "Strict-Transport-Security": "max-age=15552000; includeSubDomains",
+        "Vary": "Accept-Encoding",
+        "access-control-allow-credentials": "true",
+        "access-control-allow-headers": "Accept,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,User-Agent,X-Requested-With",
+        "access-control-allow-methods": "GET, POST, PUT, DELETE, OPTIONS",
+        "x-htb-request-id": "a0b04ca9-3aca-484f-a91e-6b8c2be64ef3",
+        "x-ratelimit-limit": "30",
+        "x-ratelimit-remaining": "9",
+        "Set-Cookie": "__cf_bm=mLDeD7d_2rndpTQ9m0S0qlLshaQaC8Il88_i1754wuw-1766790608-1.0.1.1-cJ79i0KWqDyJuG6zPprRW..cy4hzE6MkOPi5VCeki89YH7uCkn.Z_TK6.EQq5dWCRvv7XCEpkqoFY2TpIGkmgD_4aMKSEQByDhTdmeD8J_c; path=/; expires=Fri, 26-Dec-25 23:40:08 GMT; domain=.hackthebox.com; HttpOnly; Secure; SameSite=None",
+        "alt-svc": "h3=\":443\"; ma=86400"
+    },
+    "data": {
+        "message": "Machine not found."
+    },
+    "timestamp": 1766790608.0682006
+}

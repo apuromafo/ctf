@@ -1,0 +1,64 @@
+{
+    "id": 144,
+    "status": 200,
+    "data": {
+        "info": [
+            {
+                "id": 3629,
+                "name": "Enterprise Network",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3632,
+                "name": "Vulnerability Assessment",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3645,
+                "name": "Remote Code Execution",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3648,
+                "name": "Arbitrary File Upload",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3662,
+                "name": "Default Credentials",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3724,
+                "name": "Java",
+                "category": "Language"
+            },
+            {
+                "id": 3779,
+                "name": "Tomcat",
+                "category": "Technology"
+            },
+            {
+                "id": 4163,
+                "name": "Brute Force Attack",
+                "category": "Technique"
+            },
+            {
+                "id": 4199,
+                "name": "Password Dump",
+                "category": "Technique"
+            },
+            {
+                "id": 4555,
+                "name": "Common Services",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4572,
+                "name": "Security Tools",
+                "category": "Area of Interest"
+            }
+        ]
+    },
+    "url": "https://labs.hackthebox.com/api/v4/machine/tags/144"
+}

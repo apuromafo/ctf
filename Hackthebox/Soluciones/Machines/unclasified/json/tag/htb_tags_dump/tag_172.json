@@ -1,0 +1,94 @@
+{
+    "id": 172,
+    "status": 200,
+    "data": {
+        "info": [
+            {
+                "id": 3629,
+                "name": "Enterprise Network",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3632,
+                "name": "Vulnerability Assessment",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3633,
+                "name": "Person",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3661,
+                "name": "File System Configuration",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3690,
+                "name": "LDAP Injection",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3723,
+                "name": "Python",
+                "category": "Language"
+            },
+            {
+                "id": 3730,
+                "name": "Bash",
+                "category": "Language"
+            },
+            {
+                "id": 3817,
+                "name": "OTP",
+                "category": "Technology"
+            },
+            {
+                "id": 3827,
+                "name": "LDAP",
+                "category": "Technology"
+            },
+            {
+                "id": 4132,
+                "name": "Reconnaissance",
+                "category": "Technique"
+            },
+            {
+                "id": 4133,
+                "name": "User Enumeration",
+                "category": "Technique"
+            },
+            {
+                "id": 4145,
+                "name": "Exploit Development",
+                "category": "Technique"
+            },
+            {
+                "id": 4181,
+                "name": "Scheduled Job Abuse",
+                "category": "Technique"
+            },
+            {
+                "id": 4208,
+                "name": "Authentication bypass",
+                "category": "Technique"
+            },
+            {
+                "id": 4554,
+                "name": "Protocols",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4567,
+                "name": "Source Code Analysis",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4574,
+                "name": "Programming",
+                "category": "Area of Interest"
+            }
+        ]
+    },
+    "url": "https://labs.hackthebox.com/api/v4/machine/tags/172"
+}

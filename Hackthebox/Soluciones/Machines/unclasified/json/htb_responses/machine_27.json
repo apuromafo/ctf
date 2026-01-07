@@ -1,0 +1,172 @@
+{
+    "id": 27,
+    "status_code": 200,
+    "content": {
+        "data": [
+            {
+                "id": 3615,
+                "title": "Task 1",
+                "description": "How many TCP ports are listening on Europa?",
+                "hint": "Scan the host with `nmap`.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "masked_flag": "number, such as 3, 17, or 4567",
+                "options": []
+            },
+            {
+                "id": 3616,
+                "title": "Task 2",
+                "description": "What is the admin-related subdomain of europacorp.htb?",
+                "hint": "Examine the TLS certificate on TCP port 443.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3615,
+                "completed": false,
+                "masked_flag": "domain name",
+                "options": []
+            },
+            {
+                "id": 3617,
+                "title": "Task 3",
+                "description": "The login form to the admin panel can be bypassed using what technique? Choose from \"LDAP Injection\", \"SQL Injection\", or \"Command Injection\".",
+                "hint": "Think about how the website works and what kinds of injection payload might work here. Try some basic payloads for each type and look for errors.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3616,
+                "completed": false,
+                "masked_flag": "one of the options above",
+                "options": []
+            },
+            {
+                "id": 3618,
+                "title": "Task 4",
+                "description": "When submitting an HTTP POST request to `tools.php`, what parameter contains a regular expression (regex)?",
+                "hint": "Submit the form and look at the traffic in a proxy like Burp.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3617,
+                "completed": false,
+                "masked_flag": "*******",
+                "options": []
+            },
+            {
+                "id": 3619,
+                "title": "Task 5",
+                "description": "What user is the website running as?",
+                "hint": "Read about vulnerabilities in PHP's `preg_replace` function.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3618,
+                "completed": false,
+                "masked_flag": "username",
+                "options": []
+            },
+            {
+                "id": 3620,
+                "title": "Submit User Flag",
+                "description": "Submit the flag located in the john user's home directory.",
+                "hint": null,
+                "type": {
+                    "id": 1,
+                    "text": "user"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "flag_rating": null,
+                "masked_flag": "32 hex characters",
+                "options": []
+            },
+            {
+                "id": 3621,
+                "title": "Task 7",
+                "description": "What is the full path to the file that is executed as root every minute?",
+                "hint": "Read the `/etc/crontab` file.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3620,
+                "completed": false,
+                "masked_flag": "full path of file",
+                "options": []
+            },
+            {
+                "id": 3622,
+                "title": "Task 8",
+                "description": "What is the full path of the file that is executed by `clearlogs`?",
+                "hint": "Read the script.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3621,
+                "completed": false,
+                "masked_flag": "full path of file",
+                "options": []
+            },
+            {
+                "id": 3623,
+                "title": "Submit Root Flag",
+                "description": "Submit the flag located in the root user's home directory.",
+                "hint": null,
+                "type": {
+                    "id": 2,
+                    "text": "root"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "flag_rating": null,
+                "masked_flag": "32 hex characters",
+                "options": []
+            }
+        ]
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "machine_id": 160,
+    "endpoint": "https://labs.hackthebox.com/api/v4/machine/changelog/160",
+    "status_code": 429,
+    "headers_response": {
+        "Date": "Fri, 26 Dec 2025 23:10:56 GMT",
+        "Content-Type": "application/json",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Server": "cloudflare",
+        "CF-Ray": "9b444121197e584a-SCL",
+        "CF-Cache-Status": "DYNAMIC",
+        "Retry-After": "5",
+        "Access-Control-Allow-Origin": "https://app.hackthebox.com",
+        "Cache-Control": "no-cache, private",
+        "Strict-Transport-Security": "max-age=15552000; includeSubDomains",
+        "access-control-allow-credentials": "true",
+        "access-control-allow-headers": "Accept,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,User-Agent,X-Requested-With",
+        "access-control-allow-methods": "GET, POST, PUT, DELETE, OPTIONS",
+        "x-htb-request-id": "a0b04cf2-5525-4767-ab84-e15985d13f0e",
+        "x-ratelimit-limit": "30",
+        "x-ratelimit-remaining": "0",
+        "x-ratelimit-reset": "1766790661",
+        "Set-Cookie": "__cf_bm=kDDnPtuxNluI1_mWzW2iqpgswmS7OUe9E.nlQc1etJM-1766790656-1.0.1.1-TU_dK6JT6WkzM_KdgvG74ewhWm9Ba.7TF6jw1CySAjcS0tvufSdLGmW0O_LtIgTQtXVB2cmgxtKRW9cNE6zXi2LMMjc08hssNaZN3CWQ.e4; path=/; expires=Fri, 26-Dec-25 23:40:56 GMT; domain=.hackthebox.com; HttpOnly; Secure; SameSite=None",
+        "Vary": "Accept-Encoding",
+        "alt-svc": "h3=\":443\"; ma=86400"
+    },
+    "data": {
+        "message": "Too Many Attempts."
+    },
+    "timestamp": 1766790655.9702058
+}

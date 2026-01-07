@@ -1,0 +1,118 @@
+{
+    "id": 13,
+    "status_code": 200,
+    "content": {
+        "data": [
+            {
+                "id": 1194,
+                "title": "Task 1",
+                "description": "Which version of Microsoft IIS is running on TCP port `80`?",
+                "hint": "Run `nmap` with `-sCV` to get detailed information about the services running.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "masked_flag": "*.*",
+                "options": []
+            },
+            {
+                "id": 1195,
+                "title": "Task 2",
+                "description": "Which 2017 CVE abuses a Buffer overflow in the ScStoragePathFromUrl function in that specific IIS version, allowing remote attackers to execute arbitrary code?",
+                "hint": "Search a database such as `cve.mitre.org` or `exploit-db` for keywords related to the exploit.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1194,
+                "completed": false,
+                "masked_flag": "***-****-****",
+                "options": []
+            },
+            {
+                "id": 1196,
+                "title": "Task 3",
+                "description": "Which metasploit module can be used to exploit the aforementioned CVE?",
+                "hint": "Similarly to before, you can also search for keywords inside `msfconsole`, using the `search <keyword(s)>` command.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1195,
+                "completed": false,
+                "masked_flag": "***_******_********************",
+                "options": []
+            },
+            {
+                "id": 1197,
+                "title": "Task 4",
+                "description": "Which metasploit reconnaissance module can be used to list possible privilege escalation paths on a compromised system?",
+                "hint": "You can search through the post/multi/recon modules inside `msfconsole`.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1196,
+                "completed": false,
+                "masked_flag": "*****_*******_*********",
+                "options": []
+            },
+            {
+                "id": 1198,
+                "title": "Submit User Flag",
+                "description": "Submit the flag located on the Harry user's desktop.",
+                "hint": null,
+                "type": {
+                    "id": 1,
+                    "text": "user"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "flag_rating": null,
+                "masked_flag": "32 hex characters",
+                "options": []
+            },
+            {
+                "id": 1199,
+                "title": "Submit Root Flag",
+                "description": "Submit the flag located on the administrator's desktop.",
+                "hint": null,
+                "type": {
+                    "id": 2,
+                    "text": "root"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "flag_rating": null,
+                "masked_flag": "32 hex characters",
+                "options": []
+            }
+        ]
+    }
+}

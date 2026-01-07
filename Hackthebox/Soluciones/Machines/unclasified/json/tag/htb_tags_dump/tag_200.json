@@ -1,0 +1,79 @@
+{
+    "id": 200,
+    "status": 200,
+    "data": {
+        "info": [
+            {
+                "id": 3632,
+                "name": "Vulnerability Assessment",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3633,
+                "name": "Person",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3649,
+                "name": "Directory Listing",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3657,
+                "name": "Information Disclosure",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3664,
+                "name": "Misconfiguration",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3684,
+                "name": "Format String",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3723,
+                "name": "Python",
+                "category": "Language"
+            },
+            {
+                "id": 3762,
+                "name": "Custom",
+                "category": "Technology"
+            },
+            {
+                "id": 4132,
+                "name": "Reconnaissance",
+                "category": "Technique"
+            },
+            {
+                "id": 4136,
+                "name": "Binary Exploitation",
+                "category": "Technique"
+            },
+            {
+                "id": 4145,
+                "name": "Exploit Development",
+                "category": "Technique"
+            },
+            {
+                "id": 4170,
+                "name": "ROP Chains",
+                "category": "Technique"
+            },
+            {
+                "id": 4568,
+                "name": "Reverse Engineering",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4574,
+                "name": "Programming",
+                "category": "Area of Interest"
+            }
+        ]
+    },
+    "url": "https://labs.hackthebox.com/api/v4/machine/tags/200"
+}

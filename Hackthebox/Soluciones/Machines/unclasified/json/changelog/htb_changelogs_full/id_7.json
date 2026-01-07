@@ -1,0 +1,57 @@
+{
+    "machine_id": 7,
+    "endpoint": "https://labs.hackthebox.com/api/v4/machine/changelog/7",
+    "status_code": 200,
+    "headers_response": {
+        "Date": "Fri, 26 Dec 2025 23:10:01 GMT",
+        "Content-Type": "application/json",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Server": "cloudflare",
+        "CF-Ray": "9b443fc9cd16e9a3-SCL",
+        "CF-Cache-Status": "DYNAMIC",
+        "Access-Control-Allow-Origin": "https://app.hackthebox.com",
+        "Cache-Control": "no-cache, private",
+        "Content-Encoding": "gzip",
+        "Strict-Transport-Security": "max-age=15552000; includeSubDomains",
+        "Vary": "Accept-Encoding",
+        "access-control-allow-credentials": "true",
+        "access-control-allow-headers": "Accept,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,User-Agent,X-Requested-With",
+        "access-control-allow-methods": "GET, POST, PUT, DELETE, OPTIONS",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-htb-request-id": "a0b04c9e-7c3a-4db0-b207-6eef5b4958f9",
+        "x-ratelimit-limit": "30",
+        "x-ratelimit-remaining": "24",
+        "x-xss-protection": "1; mode=block",
+        "Set-Cookie": "__cf_bm=9YyCPXEWXoRtRzXBaIu86puf09HChb3bS0OprU4izlw-1766790601-1.0.1.1-Gmar.AUTqbC6LNqeXCUeOqGGqady_Oms6JTvB.1DfC0taUqSUQ47YX1LJODKkMTfBG4hgzUv92NisM6wosfzI64G5zH0Uh.NnQCNNlUY0nM; path=/; expires=Fri, 26-Dec-25 23:40:01 GMT; domain=.hackthebox.com; HttpOnly; Secure; SameSite=None",
+        "alt-svc": "h3=\":443\"; ma=86400"
+    },
+    "data": {
+        "info": [
+            {
+                "id": 116,
+                "user_id": 16,
+                "machine_id": 7,
+                "type": "2",
+                "title": "Image Hygiene. No Change to Playability",
+                "description": "Cleaned up disk image to reduce size. Enabled and tested flag rotation. No changes for player point of view.",
+                "released": 1,
+                "created_at": "2022-08-22T14:37:32.000000Z",
+                "updated_at": "2022-08-22T14:37:32.000000Z"
+            },
+            {
+                "id": 188,
+                "user_id": 16,
+                "machine_id": 7,
+                "type": "3",
+                "title": "Fixed issue with Drupal Configuration",
+                "description": "Issue with Drupal Configuration was causing the site to load incorrectly on some DHCP instances.",
+                "released": 1,
+                "created_at": "2022-11-17T11:59:04.000000Z",
+                "updated_at": "2022-11-17T11:59:04.000000Z"
+            }
+        ]
+    },
+    "timestamp": 1766790601.0252888
+}

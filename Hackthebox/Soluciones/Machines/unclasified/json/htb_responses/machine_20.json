@@ -1,0 +1,5 @@
+{
+    "id": 20,
+    "status_code": 403,
+    "content": "{\n    \"message\": \"This action is unauthorized.\"\n}"
+}

@@ -1,0 +1,136 @@
+{
+    "id": 4,
+    "status_code": 200,
+    "content": {
+        "data": [
+            {
+                "id": 3708,
+                "title": "Task 1",
+                "description": "How many TCP ports are listening on Popcorn?",
+                "hint": "Scan the host with `nmap`.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "masked_flag": "number, such as 3, 17, or 4567",
+                "options": []
+            },
+            {
+                "id": 3709,
+                "title": "Task 2",
+                "description": "What is the relative path on the webserver to a file sharing service?",
+                "hint": "Brute force paths on the webserver with a tool like `gobuster` or `feroxbuster`.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3708,
+                "completed": false,
+                "masked_flag": "path starting with /, such as /home",
+                "options": []
+            },
+            {
+                "id": 3710,
+                "title": "Task 3",
+                "description": "What HTTP request header is being used to filter uploaded content?",
+                "hint": "This header tells the server what kind of file is being passed.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3709,
+                "completed": false,
+                "masked_flag": "*******-****",
+                "options": []
+            },
+            {
+                "id": 3711,
+                "title": "Task 4",
+                "description": "What user is the webserver running as?",
+                "hint": "Upload a PHP webshell and get execution.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3710,
+                "completed": false,
+                "masked_flag": "username",
+                "options": []
+            },
+            {
+                "id": 3712,
+                "title": "Submit User Flag",
+                "description": "Submit the flag located in the george user's home directory.",
+                "hint": null,
+                "type": {
+                    "id": 1,
+                    "text": "user"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "flag_rating": null,
+                "masked_flag": "32 hex characters",
+                "options": []
+            },
+            {
+                "id": 3713,
+                "title": "Task 6",
+                "description": "What is the 2010 CVE ID for a privilege escalation vulnerability in Linux PAM having to do with the message of the day?",
+                "hint": "Search for terms like \"PAM MOTD CVE\".",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3712,
+                "completed": false,
+                "masked_flag": "***-****-****",
+                "options": []
+            },
+            {
+                "id": 3714,
+                "title": "Submit Root Flag",
+                "description": "Submit the flag located in the root user's home directory.",
+                "hint": null,
+                "type": {
+                    "id": 2,
+                    "text": "root"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "flag_rating": null,
+                "masked_flag": "32 hex characters",
+                "options": []
+            }
+        ]
+    }
+}

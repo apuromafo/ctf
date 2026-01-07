@@ -1,0 +1,208 @@
+{
+    "id": 8,
+    "status_code": 200,
+    "content": {
+        "data": [
+            {
+                "id": 3689,
+                "title": "Task 1",
+                "description": "How many TCP ports are listening on Tenten?",
+                "hint": "Scan the host with `nmap`.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "masked_flag": "number, such as 3, 17, or 4567",
+                "options": []
+            },
+            {
+                "id": 3690,
+                "title": "Task 2",
+                "description": "What content management system (CMS) is running the website on Tenten?",
+                "hint": "Check the page footer.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3689,
+                "completed": false,
+                "masked_flag": "*********",
+                "options": []
+            },
+            {
+                "id": 3691,
+                "title": "Task 3",
+                "description": "What username can be identified through WordPress enumeration?",
+                "hint": "WPScan will show users.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3690,
+                "completed": false,
+                "masked_flag": "username",
+                "options": []
+            },
+            {
+                "id": 3692,
+                "title": "Task 4",
+                "description": "What is the name of the WordPress plugin that's running version 0.7.25?",
+                "hint": "WPScan can also enumerate installed plugins and identify vulnerabilities in them.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3691,
+                "completed": false,
+                "masked_flag": "***-*******",
+                "options": []
+            },
+            {
+                "id": 3693,
+                "title": "Task 5",
+                "description": "What is the 2015 CVE ID for a file disclosure vulnerability in this version of the job-manager plugin?",
+                "hint": "WPScan can report this. You'll need a free API key.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3692,
+                "completed": false,
+                "masked_flag": "***-****-****",
+                "options": []
+            },
+            {
+                "id": 3694,
+                "title": "Task 6",
+                "description": "What is the filename for the application that implies that a hacker has already been here.",
+                "hint": "Exploit CVE-2015-6668 to get a list of application names.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3693,
+                "completed": false,
+                "masked_flag": "*******************",
+                "options": []
+            },
+            {
+                "id": 3695,
+                "title": "Task 7",
+                "description": "What is the relative URL of the file associated with the HackAccessGranted application?",
+                "hint": "The exploit script must search for `.jpg` files, and the year should be 2017 (when Tenten was released).",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3694,
+                "completed": false,
+                "masked_flag": "path starting with /, such as /home or /api/v1/auth/login",
+                "options": []
+            },
+            {
+                "id": 3696,
+                "title": "Task 8",
+                "description": "What is the password for the SSH key hidden in the image?",
+                "hint": "Use `steghide` with no password to recover the key. Then crack it with `hashcat` or `john`.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3695,
+                "completed": false,
+                "masked_flag": "*************",
+                "options": []
+            },
+            {
+                "id": 3697,
+                "title": "Submit User Flag",
+                "description": "Submit the flag located in the takis user's home directory.",
+                "hint": null,
+                "type": {
+                    "id": 1,
+                    "text": "user"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "flag_rating": null,
+                "masked_flag": "32 hex characters",
+                "options": []
+            },
+            {
+                "id": 3698,
+                "title": "Task 10",
+                "description": "What is the full path to the file that the takis user can run as root without a password?",
+                "hint": "`sudo -l` will list the `sudo` privileges for the current user.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3697,
+                "completed": false,
+                "masked_flag": "full path of file",
+                "options": []
+            },
+            {
+                "id": 3699,
+                "title": "Submit Root Flag",
+                "description": "Submit the flag located in the root user's home directory.",
+                "hint": null,
+                "type": {
+                    "id": 2,
+                    "text": "root"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "flag_rating": null,
+                "masked_flag": "32 hex characters",
+                "options": []
+            }
+        ]
+    }
+}

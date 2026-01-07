@@ -1,0 +1,109 @@
+{
+    "id": 184,
+    "status": 200,
+    "data": {
+        "info": [
+            {
+                "id": 3628,
+                "name": "Web Application",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3632,
+                "name": "Vulnerability Assessment",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3637,
+                "name": "Security Operations",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3639,
+                "name": "SQL Injection",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3641,
+                "name": "Local File Inclusion",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3657,
+                "name": "Information Disclosure",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3668,
+                "name": "Directory Traversal",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3672,
+                "name": "Log Poisoning",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3722,
+                "name": "PHP",
+                "category": "Language"
+            },
+            {
+                "id": 3759,
+                "name": "MySQL",
+                "category": "Technology"
+            },
+            {
+                "id": 4132,
+                "name": "Reconnaissance",
+                "category": "Technique"
+            },
+            {
+                "id": 4136,
+                "name": "Binary Exploitation",
+                "category": "Technique"
+            },
+            {
+                "id": 4147,
+                "name": "Analysis of Logs",
+                "category": "Technique"
+            },
+            {
+                "id": 4157,
+                "name": "Cookie Manipulation",
+                "category": "Technique"
+            },
+            {
+                "id": 4545,
+                "name": "Session Management and Hijacking",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4551,
+                "name": "Injections",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4567,
+                "name": "Source Code Analysis",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4568,
+                "name": "Reverse Engineering",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4593,
+                "name": "Log Analysis",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4603,
+                "name": "Log Management",
+                "category": "Area of Interest"
+            }
+        ]
+    },
+    "url": "https://labs.hackthebox.com/api/v4/machine/tags/184"
+}

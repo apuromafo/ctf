@@ -1,0 +1,89 @@
+{
+    "id": 350,
+    "status": 200,
+    "data": {
+        "info": [
+            {
+                "id": 3628,
+                "name": "Web Application",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3632,
+                "name": "Vulnerability Assessment",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3633,
+                "name": "Person",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3639,
+                "name": "SQL Injection",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3652,
+                "name": "XXE Injection",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3665,
+                "name": "Server Side Template Injection (SSTI)",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3723,
+                "name": "Python",
+                "category": "Language"
+            },
+            {
+                "id": 3778,
+                "name": "NGINX",
+                "category": "Technology"
+            },
+            {
+                "id": 3919,
+                "name": "Web API",
+                "category": "Technology"
+            },
+            {
+                "id": 4132,
+                "name": "Reconnaissance",
+                "category": "Technique"
+            },
+            {
+                "id": 4157,
+                "name": "Cookie Manipulation",
+                "category": "Technique"
+            },
+            {
+                "id": 4174,
+                "name": "WAF Bypass",
+                "category": "Technique"
+            },
+            {
+                "id": 4545,
+                "name": "Session Management and Hijacking",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4551,
+                "name": "Injections",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4572,
+                "name": "Security Tools",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4574,
+                "name": "Programming",
+                "category": "Area of Interest"
+            }
+        ]
+    },
+    "url": "https://labs.hackthebox.com/api/v4/machine/tags/350"
+}

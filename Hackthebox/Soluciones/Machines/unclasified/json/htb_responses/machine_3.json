@@ -1,0 +1,136 @@
+{
+    "id": 3,
+    "status_code": 200,
+    "content": {
+        "data": [
+            {
+                "id": 1219,
+                "title": "Task 1",
+                "description": "What is the name of the service is running on TCP port `21` on the target machine?",
+                "hint": "Running nmap with `-sCV` returns detailed information about the services running. Given the information in the \"VERSION\" column.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "masked_flag": "********* ****",
+                "options": []
+            },
+            {
+                "id": 1220,
+                "title": "Task 2",
+                "description": "Which basic FTP command can be used to upload a single file onto the server?",
+                "hint": "Some FTP servers allow passwordless, anonymous logins. From there, you can run the `help` or `?` command to get a list of possible commands to run.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1219,
+                "completed": false,
+                "masked_flag": "***",
+                "options": []
+            },
+            {
+                "id": 1221,
+                "title": "Task 3",
+                "description": "Are files put into the FTP root available via the webserver?",
+                "hint": "Upload a file and then look for that same filename on the webserver.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1220,
+                "completed": false,
+                "masked_flag": "yes or no",
+                "options": []
+            },
+            {
+                "id": 1222,
+                "title": "Task 4",
+                "description": "What file extension is executed as a script on this webserver? Don't include the `.`.",
+                "hint": "The HTTP response headers will give information about the kind of webserver. From there, research what kinds of scripts are typically executed there. This is a DotNet language.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1221,
+                "completed": false,
+                "masked_flag": "****",
+                "options": []
+            },
+            {
+                "id": 1223,
+                "title": "Task 5",
+                "description": "Which metasploit reconnaissance module can be used to list possible privilege escalation paths on a compromised system?",
+                "hint": "You can search through the post/multi/recon modules inside `msfconsole`.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1222,
+                "completed": false,
+                "masked_flag": "*****_*******_*********",
+                "options": []
+            },
+            {
+                "id": 1224,
+                "title": "Submit User Flag",
+                "description": "Submit the flag located on the babis user's desktop.",
+                "hint": null,
+                "type": {
+                    "id": 1,
+                    "text": "user"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "flag_rating": null,
+                "masked_flag": "32 hex characters",
+                "options": []
+            },
+            {
+                "id": 1225,
+                "title": "Submit Root Flag",
+                "description": "Submit the flag located on the administrator's desktop.",
+                "hint": null,
+                "type": {
+                    "id": 2,
+                    "text": "root"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "flag_rating": null,
+                "masked_flag": "32 hex characters",
+                "options": []
+            }
+        ]
+    }
+}

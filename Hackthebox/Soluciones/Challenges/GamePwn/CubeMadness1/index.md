@@ -38,3 +38,8 @@ more:
 * **Tutorial Práctico:** [Uso de Cheat Engine para munición infinita en Metal Slug 3](https://medium.com/@quackquackquack/using-cheat-engine-to-make-infinite-shotgun-in-metal-slug-3-a42be48c2009)
 
 ```
+
+Nota:
+Español: Además, si solo vas a copiarlos en HTB , no los pegues de inmediato, ya que HTB los baneará, chicos intenten resolverlo y aqui lo dejo a modo de respaldo solamente .
+
+English: Also, if you're just going to copy them, don't instant paste it as HTB will ban you, guys.

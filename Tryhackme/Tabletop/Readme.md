@@ -111,24 +111,24 @@ Powered by Navattic
 
 #  Flow Guide: Tabletop Exercises (TTX)
 
-# # #  1. Initial Exercise Setup
+###  1. Initial Exercise Setup
 
 * **Rapid Creation:** Build tailored exercises in minutes. Templates can be industry-specific (e.g., CSIRT-focused) or fully customized to the organization’s unique environment.
 * **Role Assignment:** Assemble the team and assign specific roles: **Facilitator**, **Participant**, and **Observer**.
 
-# # #  2. Live Fire Execution
+###  2. Live Fire Execution
 
 * **Dynamic Inject & IoCs:** Teams respond to real-time incident "injects" and artifacts (Indicators of Compromise). The narrative evolves dynamically based on the team's decisions.
 * **Voting System:** During each phase of the Incident Response (IR) lifecycle, participants vote on the most effective course of action. Logic can be aligned with **NIST** or **ISO** frameworks.
 * **Gamification & Scoring:** The system awards points for high-impact actions. An optional "decaying points" setting simulates time pressure and the cost of delayed response.
 
-# # #  3. Facilitation and Discussion
+###  3. Facilitation and Discussion
 
 * **Real-Time AI Feedback:** An AI facilitator immediately analyzes the impact of team actions, demonstrating how alternative choices would have altered the outcome.
 * **Vote Analysis:** View vote tallies for each action to drive discussion on differing perspectives and how they influence the overall defense posture.
 * **Attack Progression:** The flow mirrors the **Cyber Kill Chain**: Initial Access  Privilege Escalation  Execution of Objectives.
 
-# # #  4. Evaluation and Reporting
+###  4. Evaluation and Reporting
 
 * **Audit-Ready Reports:** Automatically generate a comprehensive written report summarizing performance across the entire IR cycle upon completion.
 * **Actionable Takeaways:** The AI facilitator suggests five specific action items based on the actual performance and gaps identified during the drill.
@@ -138,24 +138,24 @@ Powered by Navattic
   
 #  Guía de Flujo: Tabletop Exercises (TTX)
 
-# # #  1. Configuración Inicial del Ejercicio
+###  1. Configuración Inicial del Ejercicio
 
 * **Creación Rápida:** Construcción de ejercicios a medida en minutos. Se pueden basar en la industria y el tipo de ataque (ej. CSIRT) o personalizarse completamente según el entorno de la empresa.
 * **Asignación de Roles:** Se debe reunir al equipo y asignar roles específicos: Facilitador, Participante y Observador.
 
-# # #  2. Ejecución del Ejercicio (Live Fire)
+###  2. Ejecución del Ejercicio (Live Fire)
 
 * **Inyecciones Dinámicas e IoCs:** El equipo debe responder a inyecciones de incidentes y artefactos (Indicadores de Compromiso) en tiempo real. La narrativa del ejercicio evoluciona y responde según las acciones que tome el equipo.
 * **Sistema de Votación:** En cada fase del ciclo de vida de Respuesta a Incidentes (IR), los participantes votan por la acción más efectiva. Se puede elegir entre alineaciones con marcos de trabajo **NIST** o **ISO**.
 * **Gamificación y Puntuación:** El sistema otorga puntos por las acciones más efectivas para mantener el compromiso. Existe la opción de configurar "puntos decrecientes" si el equipo tarda demasiado en actuar.
 
-# # #  3. Facilitación y Discusión
+###  3. Facilitación y Discusión
 
 * **Feedback de IA en Tiempo Real:** Un facilitador de IA revisa el impacto de las acciones del equipo de inmediato, mostrando cómo otras alternativas habrían influido en los resultados.
 * **Análisis de Votos:** Se pueden ver los recuentos de votos por cada acción para discutir por qué ciertos miembros eligieron opciones distintas y cómo influyen en la respuesta al ataque.
 * **Progresión del Ataque:** El flujo sigue las fases críticas: Acceso Inicial ->  Escalada de Privilegios ->  Ejecución de Objetivos.
 
-# # #  4. Evaluación y Reporte
+###  4. Evaluación y Reporte
 
 * **Reportes Listos para Auditoría:** Al finalizar, se genera automáticamente un informe escrito que incluye resúmenes de rendimiento en todo el ciclo de IR.
 * **Acciones Recomendadas (Take-aways):** El facilitador de IA sugiere cinco ítems de acción específicos basados en el desempeño real durante el ejercicio.

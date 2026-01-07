@@ -1,8 +1,74 @@
+ 
+---
 
+# 🏰 Fortress: Jet
+
+**IP:** ` `
+
+**Nombre del Objetivo:** Jet
+
+**Puntos:** 100
+
+## 📝 Descripción / Description
+
+**EN:** Lift off with this introductory fortress from Jet! Featuring interesting web vectors and challenges, this fortress is perfect for those getting started.
+
+**ES:** ¡Despega con esta fortaleza introductoria de Jet! Con interesantes vectores web y desafíos, esta fortaleza es perfecta para aquellos que están comenzando.
+
+---
+
+## 🏢 Información Corporativa / Company Info
+
+**Empresa:** Jet.com
+
+**URL:** [https://jet.com/careers](https://www.google.com/search?q=https://jet.com/careers)
+
+### 🎯 Misión / Mission
+
+**EN:** Jet’s mission is to become the smartest way to shop and save on pretty much anything. Combining a revolutionary pricing engine, a world-class technology and fulfillment platform.
+
+**ES:** La misión de Jet es convertirse en la forma más inteligente de comprar y ahorrar en casi cualquier cosa. Combinando un motor de precios revolucionario y una plataforma tecnológica y de distribución de clase mundial.
+
+### 🌐 Infraestructura y Entorno / Environment
+
+* **Sistemas Operativos:** Gran parte de la infraestructura está basada en **Microsoft Windows**.
+* **Arquitectura:** Configuración híbrida que utiliza servidores locales (on-premise) y servidores en la nube con **Microsoft Azure**.
+* **Gestión:** Uso mixto de Windows, Apple y Linux para plataformas de gestión de sistemas y equipos de red de última generación.
+* **Desarrollo:** Aproximadamente el 50% de la plataforma de desarrollo corre sobre Linux y el resto sobre Windows.
+
+---
+
+## 🚩 Objetivos / Flags
+
+Lista de identificadores y títulos de las flags disponibles en el entorno:
+
+| ID | Título de la Flag (Flag Title) | Valor (Points) |
+| --- | --- | --- |
+| 01 | **Connect** | 5 |
+| 02 | **Digging in...** | 5 |
+| 03 | **Going Deeper** | 5 |
+| 04 | **Bypassing Authentication** | 5 |
+| 05 | **Command** | 5 |
+| 06 | **Overflown** | 10 |
+| 07 | **Secret Message** | 10 |
+| 08 | **Elasticity** | 10 |
+| 09 | **Member Manager** | 15 |
+| 10 | **More Secrets** | 10 |
+| 11 | **Memo** | 20 |
+
+---
+
+Si necesitas que organice esta información en una carpeta numerada siguiendo el esquema que establecimos anteriormente (por ejemplo, `28_JET/JET.md`), dímelo y lo preparamos.
 JET Fortress
 
 
-### Flags de JET Fortress (HTB)
+
+--- 
+
+## Creds
+- ` admin : Hackthesystem200 `
+ 
+ ### Flags de JET Fortress (HTB)
 
 | # | Desafío / Categoría | Flag |
 | --- | --- | --- |
@@ -17,14 +83,6 @@ JET Fortress
 | **9** | Member Manager (Heap Exploit) | `JET{h34p_f0r_73h_b4bi3z}` |
 | **10** | More Secrets (RSA/Crypto) | `JET{n3xt_t1m3_p1ck_65537}` |
 | **11** | Memo | `JET{7h47s_7h3_sp1r17}` |
-
---- 
-
-## Creds
-- ` admin : Hackthesystem200 `
- 
-
-
 
 #writeup examples
 1-4 HTB-JET

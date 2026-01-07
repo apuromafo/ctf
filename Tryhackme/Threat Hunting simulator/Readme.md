@@ -1,10 +1,9 @@
-#Threat Hunting simulator
-Uncover hidden threats and expose blind spots with
-real attacker based training
-Sharpen your threat hunting process and spot real adversary behavior that evades traditional tools.
+# Threat Hunting simulator
+> Uncover hidden threats and expose blind spots with
+> real attacker based training
+> Sharpen your threat hunting process and spot real adversary behavior that evades traditional tools.
 
-
-
+ 
 #01 👋 Welcome to the Threat Hunting simulator!
 > Get hands-on experience in a secure, simulated environment. Detect hidden threats and strengthen your organisation's security posture.
 

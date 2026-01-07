@@ -161,4 +161,7 @@ Powered by Navattic
 * **Acciones Recomendadas (Take-aways):** El facilitador de IA sugiere cinco ítems de acción específicos basados en el desempeño real durante el ejercicio.
 * **Métricas de Efectividad:** Desglose detallado de la efectividad del equipo en cada fase para identificar brechas de conocimiento o procesos.
 
+ ---
+
+*Documentación para propósitos educativos y registro de CTF.*
  

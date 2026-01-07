@@ -9,7 +9,7 @@ Tackle authentic challenges, sharpen your investigative skills,
 and improve performance through actionable feedback tailored to enhance your readiness.
 
 Source iframe 
-# hxxps://capture.navattic.com/cm42ruftv000103mhg6hb4617?g=cm42rufu7003403mh3vj38fgr&s=0
+> hxxps://capture.navattic.com/cm42ruftv000103mhg6hb4617?g=cm42rufu7003403mh3vj38fgr&s=0
 
 #01 Welcome to Soc Simulator
 ![00](./IMG/00.png)

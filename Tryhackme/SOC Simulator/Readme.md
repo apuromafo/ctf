@@ -94,5 +94,6 @@ Link ** https://tryhackme.com/soc-sim/?ref=nav
 
 
 Source iframe 
-El parámetro s=[0-9] típicamente corresponde a la diapositiva o paso específico en la demostración interactiva. siendo 0 el primero, 1 el segundo...
+> El parámetro s=[0-9] típicamente corresponde a la diapositiva o paso específico en la demostración interactiva. siendo 0 el primero, 1 el segundo...
  hxxps://capture.navattic.com/cm42ruftv000103mhg6hb4617?g=cm42rufu7003403mh3vj38fgr&s=[0-10] 
+Powered by Navattic

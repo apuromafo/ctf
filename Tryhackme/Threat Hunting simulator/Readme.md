@@ -83,12 +83,13 @@ Sharpen your threat hunting process and spot real adversary behavior that evades
 ![15](./IMG/15.png)
 
 
+Link ** https://tryhackme.com/threat-hunting-sim/?ref=nav
 
-https://tryhackme.com/threat-hunting-sim/?ref=nav
 
 
-Powered by Navattic
 Source iframe
-El parámetro s=[0-14] típicamente corresponde a la diapositiva o paso específico en la demostración interactiva. siendo 0 el primero, 1 el segundo...
+> El parámetro s=[0-14] típicamente corresponde a la diapositiva o paso específico en la demostración interactiva. siendo 0 el primero, 1 el segundo...
+
 hxxps://capture.navattic.com/cmbr3h8rw000204juc1909pc4?g=cmbr3h8sb001n04ju6ed09s5g&s=[0-14]
+Powered by Navattic
 

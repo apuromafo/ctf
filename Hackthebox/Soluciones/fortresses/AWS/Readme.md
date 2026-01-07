@@ -17,7 +17,7 @@
 ---
 
 > [!CAUTION]
-> **Recordatorio:** Como mencionaste, evita el "instant paste" en HTB para prevenir baneos. Estas flags deben usarse como referencia de respaldo tras haber intentado resolver los laboratorios.
+> **Recordatorio:** Evita el "instant paste" en HTB para prevenir baneos. Estas flags deben usarse como referencia de respaldo tras haber intentado resolver los laboratorios.
 
  
 Nota:

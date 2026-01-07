@@ -1,0 +1,8 @@
+{
+    "id": 332,
+    "status": 404,
+    "data": {
+        "message": "Machine not found"
+    },
+    "url": "https://labs.hackthebox.com/api/v4/machine/tags/332"
+}

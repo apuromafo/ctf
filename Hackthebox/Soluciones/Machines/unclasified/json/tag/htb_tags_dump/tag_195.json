@@ -1,0 +1,84 @@
+{
+    "id": 195,
+    "status": 200,
+    "data": {
+        "info": [
+            {
+                "id": 3628,
+                "name": "Web Application",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3632,
+                "name": "Vulnerability Assessment",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3637,
+                "name": "Security Operations",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3641,
+                "name": "Local File Inclusion",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3643,
+                "name": "Arbitrary File Read",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3647,
+                "name": "OS Command Injection",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3700,
+                "name": "JSON",
+                "category": "Technology"
+            },
+            {
+                "id": 3731,
+                "name": "JavaScript",
+                "category": "Language"
+            },
+            {
+                "id": 3919,
+                "name": "Web API",
+                "category": "Technology"
+            },
+            {
+                "id": 3921,
+                "name": "SIEM",
+                "category": "Technology"
+            },
+            {
+                "id": 4149,
+                "name": "Password Reuse",
+                "category": "Technique"
+            },
+            {
+                "id": 4551,
+                "name": "Injections",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4570,
+                "name": "Software & OS exploitation",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4573,
+                "name": "Authentication",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4603,
+                "name": "Log Management",
+                "category": "Area of Interest"
+            }
+        ]
+    },
+    "url": "https://labs.hackthebox.com/api/v4/machine/tags/195"
+}

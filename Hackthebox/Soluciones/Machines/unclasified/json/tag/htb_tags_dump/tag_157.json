@@ -1,0 +1,74 @@
+{
+    "id": 157,
+    "status": 200,
+    "data": {
+        "info": [
+            {
+                "id": 3629,
+                "name": "Enterprise Network",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3632,
+                "name": "Vulnerability Assessment",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3644,
+                "name": "Weak Credentials",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3678,
+                "name": "Anonymous/Guest Access",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3736,
+                "name": "Powershell",
+                "category": "Language"
+            },
+            {
+                "id": 3765,
+                "name": "DNS",
+                "category": "Technology"
+            },
+            {
+                "id": 3766,
+                "name": "FTP",
+                "category": "Technology"
+            },
+            {
+                "id": 3878,
+                "name": "Certificates",
+                "category": "Technology"
+            },
+            {
+                "id": 3883,
+                "name": "OpenSSL",
+                "category": "Technology"
+            },
+            {
+                "id": 4171,
+                "name": "AppLocker Bypass",
+                "category": "Technique"
+            },
+            {
+                "id": 4193,
+                "name": "Shortcuts Abuse",
+                "category": "Technique"
+            },
+            {
+                "id": 4554,
+                "name": "Protocols",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4571,
+                "name": "Cryptography",
+                "category": "Area of Interest"
+            }
+        ]
+    },
+    "url": "https://labs.hackthebox.com/api/v4/machine/tags/157"
+}

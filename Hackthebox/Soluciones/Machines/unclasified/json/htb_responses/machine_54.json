@@ -1,0 +1,298 @@
+{
+    "id": 54,
+    "status_code": 200,
+    "content": {
+        "data": [
+            {
+                "id": 3563,
+                "title": "Task 1",
+                "description": "How many TCP ports are listening on Nineveh?",
+                "hint": "Scan the host with `nmap`.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "masked_flag": "number, such as 3, 17, or 4567",
+                "options": []
+            },
+            {
+                "id": 3564,
+                "title": "Task 2",
+                "description": "What is the relative path on the HTTPS webserver to a directory with a simple page consisting of a single image?",
+                "hint": "Brute force paths on the webserver using a tool like `gobuster` or `feroxbuster`.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3563,
+                "completed": false,
+                "masked_flag": "path starting with /, such as /home",
+                "options": []
+            },
+            {
+                "id": 3565,
+                "title": "Task 3",
+                "description": "What user's public and private keys are embedded in the image at `/secure_notes`?",
+                "hint": "Run `strings` on the image.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3564,
+                "completed": false,
+                "masked_flag": "",
+                "options": []
+            },
+            {
+                "id": 3566,
+                "title": "Task 4",
+                "description": "What is the relative path on the HTTPS webserver to a phpLiteAdmin?",
+                "hint": "Brute force the web paths using a tool like `gobster` or `feroxbuster`.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3565,
+                "completed": false,
+                "masked_flag": "path starting with /, such as /home",
+                "options": []
+            },
+            {
+                "id": 3567,
+                "title": "Task 5",
+                "description": "What is the password to access phpLiteAdmin?",
+                "hint": "Brute force it using a tool like `hydra`.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3566,
+                "completed": false,
+                "masked_flag": "***********",
+                "options": []
+            },
+            {
+                "id": 3568,
+                "title": "Task 6",
+                "description": "What is the relative path to the login page on the HTTP server?",
+                "hint": "Brute force paths using a tool like `gobuster` or `feroxbuster`.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3567,
+                "completed": false,
+                "masked_flag": "path starting with /, such as /home",
+                "options": []
+            },
+            {
+                "id": 3569,
+                "title": "Task 7",
+                "description": "What is the username for the login at `/department`?",
+                "hint": "There is a different error message for an invalid user as opposed to an invalid password. It's pretty easy to guess, or it can be brute forced.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3568,
+                "completed": false,
+                "masked_flag": "filename without path",
+                "options": []
+            },
+            {
+                "id": 3570,
+                "title": "Task 8",
+                "description": "What is the first item in the menu bar across the top after logging in to `/department`?",
+                "hint": "The password for admin can be brute forced, or bypassed with type confusion.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3569,
+                "completed": false,
+                "masked_flag": "****",
+                "options": []
+            },
+            {
+                "id": 3571,
+                "title": "Task 9",
+                "description": "What GET parameter in the authenticated site is vulnerable to local file include (LFI)?",
+                "hint": "Explore the site and try to traverse directories and read other files.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3570,
+                "completed": false,
+                "masked_flag": "*****",
+                "options": []
+            },
+            {
+                "id": 3572,
+                "title": "Task 10",
+                "description": "What user is the webserver running as?",
+                "hint": "There are ways to write files to disk using phpLiteAdmin (check out [this](https://www.exploit-db.com/exploits/24044/)). Write a webshell, and include it.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3571,
+                "completed": false,
+                "masked_flag": "username",
+                "options": []
+            },
+            {
+                "id": 3573,
+                "title": "Task 11",
+                "description": "What port knocking software is running on Nineveh?",
+                "hint": "Look at the running processes",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3572,
+                "completed": false,
+                "masked_flag": "******",
+                "options": []
+            },
+            {
+                "id": 3574,
+                "title": "Task 12",
+                "description": "What is the second of three ports that must be knocked to open SSH?",
+                "hint": "Look at the knockd configuration file.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3573,
+                "completed": false,
+                "masked_flag": "number, such as 3, 17, or 4567",
+                "options": []
+            },
+            {
+                "id": 3575,
+                "title": "Submit User Flag",
+                "description": "Submit the flag located in the amrois user's home directory.",
+                "hint": null,
+                "type": {
+                    "id": 1,
+                    "text": "user"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "flag_rating": null,
+                "masked_flag": "32 hex characters",
+                "options": []
+            },
+            {
+                "id": 3576,
+                "title": "Task 14",
+                "description": "What is the name of the binary that's meant to check for rootkits that's being running periodically by root?",
+                "hint": "It's outputting data to the `/reports` directory.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3575,
+                "completed": false,
+                "masked_flag": "filename without path",
+                "options": []
+            },
+            {
+                "id": 3577,
+                "title": "Task 15",
+                "description": "What is the full path to the file that `chkrootkit` runs that doesn't exist on Nineveh?",
+                "hint": "Check out [this exploit](https://www.exploit-db.com/exploits/33899/).",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3576,
+                "completed": false,
+                "masked_flag": "full path of file",
+                "options": []
+            },
+            {
+                "id": 3578,
+                "title": "Submit Root Flag",
+                "description": "Submit the flag located in the root user's home directory.",
+                "hint": null,
+                "type": {
+                    "id": 2,
+                    "text": "root"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "flag_rating": null,
+                "masked_flag": "32 hex characters",
+                "options": []
+            }
+        ]
+    }
+}

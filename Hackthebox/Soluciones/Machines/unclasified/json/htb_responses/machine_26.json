@@ -1,0 +1,208 @@
+{
+    "id": 26,
+    "status_code": 200,
+    "content": {
+        "data": [
+            {
+                "id": 1175,
+                "title": "Task 1",
+                "description": "How many TCP ports are listening and accessible on Bank?",
+                "hint": "Run an `nmap` scan on the host.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "masked_flag": "number, such as 3, 17, or 4567",
+                "options": []
+            },
+            {
+                "id": 1176,
+                "title": "Task 2",
+                "description": "What virtual host returns a website that isn't the default Ubuntu Apache page?",
+                "hint": "A DNS zone transfer against `bank.htb` will return results. Or you can just guess it.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1175,
+                "completed": false,
+                "masked_flag": "domain name",
+                "options": []
+            },
+            {
+                "id": 1177,
+                "title": "Task 3",
+                "description": "What is the relative path on the webserver that allows directory listing and shows a bunch of `.acc` files?",
+                "hint": "Use a directory bruteforce tool such as `gobuster` or `feroxbuster` to look for pages on the site.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1176,
+                "completed": false,
+                "masked_flag": "path starting with /, such as /home",
+                "options": []
+            },
+            {
+                "id": 1178,
+                "title": "Task 4",
+                "description": "Which `.acc` file stands out as different from the others?",
+                "hint": "There are many ways to identify this file. File size is one good way to go. Another is to download them and look for ones that don't contain the string \"++OK ENCRYPT SUCCESS\".",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1177,
+                "completed": false,
+                "masked_flag": "filename without path",
+                "options": []
+            },
+            {
+                "id": 1179,
+                "title": "Task 5",
+                "description": "Optional question: There is an alternative way to bypass the login form on Bank without finding creds for chris. What kind of vulnerability allows for this? Choose from SQLI, EAR, XSS, or XSRF.",
+                "hint": "Visit a page that requires login and look at the full HTTP response.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1178,
+                "completed": false,
+                "masked_flag": "one of the options above",
+                "options": []
+            },
+            {
+                "id": 1180,
+                "title": "Task 6",
+                "description": "What file extension will execute as PHP for debugging purposes? Don't include the . in your answer.",
+                "hint": "Check the HTML comments in the `support.php` page.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1178,
+                "completed": false,
+                "masked_flag": "file extension without leading .",
+                "options": []
+            },
+            {
+                "id": 1181,
+                "title": "Task 7",
+                "description": "What user is the web server running as?",
+                "hint": "You'll need to get execution by uploading a PHP webshell with the `.htb` extension.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1180,
+                "completed": false,
+                "masked_flag": "username",
+                "options": []
+            },
+            {
+                "id": 1182,
+                "title": "Submit User Flag",
+                "description": "Submit the flag located in the chris user's home directory.",
+                "hint": null,
+                "type": {
+                    "id": 1,
+                    "text": "user"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "flag_rating": null,
+                "masked_flag": "32 hex characters",
+                "options": []
+            },
+            {
+                "id": 1183,
+                "title": "Task 9",
+                "description": "What is the full path to the non-standard binary that has SetUID permissions such that it executes as root?",
+                "hint": "The `find` command with the `-perm -4000` options will find all SetUID binaries. Enumeration tools like LinPEAS will also identify this binary.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1182,
+                "completed": false,
+                "masked_flag": "full path of file",
+                "options": []
+            },
+            {
+                "id": 1184,
+                "title": "Submit Root Flag",
+                "description": "Submit the flag located in root's home directory.",
+                "hint": null,
+                "type": {
+                    "id": 2,
+                    "text": "root"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "flag_rating": null,
+                "masked_flag": "32 hex characters",
+                "options": []
+            },
+            {
+                "id": 1185,
+                "title": "Task 11",
+                "description": "There's an alternative path from www-data to root on Bank. What is the full path of the critical Linux system file that is world-writable that shouldn't be?",
+                "hint": "It's a file that is used to manage users on the box, and used to hold password hashes, though now they have moved to a different file.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1184,
+                "completed": false,
+                "masked_flag": "full path of file",
+                "options": []
+            }
+        ]
+    }
+}

@@ -1,0 +1,129 @@
+{
+    "id": 341,
+    "status": 200,
+    "data": {
+        "info": [
+            {
+                "id": 3628,
+                "name": "Web Application",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3629,
+                "name": "Enterprise Network",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3632,
+                "name": "Vulnerability Assessment",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3639,
+                "name": "SQL Injection",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3641,
+                "name": "Local File Inclusion",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3647,
+                "name": "OS Command Injection",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3650,
+                "name": "Deserialization",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3657,
+                "name": "Information Disclosure",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3664,
+                "name": "Misconfiguration",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3724,
+                "name": "Java",
+                "category": "Language"
+            },
+            {
+                "id": 3759,
+                "name": "MySQL",
+                "category": "Technology"
+            },
+            {
+                "id": 3774,
+                "name": "Wordpress",
+                "category": "Technology"
+            },
+            {
+                "id": 3776,
+                "name": "CMS",
+                "category": "Technology"
+            },
+            {
+                "id": 3783,
+                "name": "Docker",
+                "category": "Technology"
+            },
+            {
+                "id": 3944,
+                "name": "Apache OFBiz",
+                "category": "Technology"
+            },
+            {
+                "id": 4132,
+                "name": "Reconnaissance",
+                "category": "Technique"
+            },
+            {
+                "id": 4134,
+                "name": "Web Site Structure Discovery",
+                "category": "Technique"
+            },
+            {
+                "id": 4144,
+                "name": "Exploit Modification",
+                "category": "Technique"
+            },
+            {
+                "id": 4173,
+                "name": "Docker Abuse",
+                "category": "Technique"
+            },
+            {
+                "id": 4198,
+                "name": "Linux Capabilities",
+                "category": "Technique"
+            },
+            {
+                "id": 4551,
+                "name": "Injections",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4553,
+                "name": "Virtualization",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4570,
+                "name": "Software & OS exploitation",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4573,
+                "name": "Authentication",
+                "category": "Area of Interest"
+            }
+        ]
+    },
+    "url": "https://labs.hackthebox.com/api/v4/machine/tags/341"
+}

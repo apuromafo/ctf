@@ -1,0 +1,74 @@
+{
+    "id": 340,
+    "status": 200,
+    "data": {
+        "info": [
+            {
+                "id": 3628,
+                "name": "Web Application",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3632,
+                "name": "Vulnerability Assessment",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3646,
+                "name": "Clear Text Credentials",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3664,
+                "name": "Misconfiguration",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3678,
+                "name": "Anonymous/Guest Access",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3764,
+                "name": "SMB",
+                "category": "Technology"
+            },
+            {
+                "id": 3790,
+                "name": "Electron",
+                "category": "Technology"
+            },
+            {
+                "id": 4149,
+                "name": "Password Reuse",
+                "category": "Technique"
+            },
+            {
+                "id": 4550,
+                "name": "Custom Applications",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4568,
+                "name": "Reverse Engineering",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4570,
+                "name": "Software & OS exploitation",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4572,
+                "name": "Security Tools",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4573,
+                "name": "Authentication",
+                "category": "Area of Interest"
+            }
+        ]
+    },
+    "url": "https://labs.hackthebox.com/api/v4/machine/tags/340"
+}

@@ -1,0 +1,154 @@
+{
+    "id": 18,
+    "status_code": 200,
+    "content": {
+        "data": [
+            {
+                "id": 3641,
+                "title": "Task 1",
+                "description": "How many TCP ports are listening on Lazy?",
+                "hint": "Scan the host with `nmap`.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "masked_flag": "number, such as 3, 17, or 4567",
+                "options": []
+            },
+            {
+                "id": 3642,
+                "title": "Task 2",
+                "description": "What is the name of the cookie set by the site on logging in?",
+                "hint": "Create an account on the site and look at the traffic in Burp Proxy or the browser dev tools.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3641,
+                "completed": false,
+                "masked_flag": "****",
+                "options": []
+            },
+            {
+                "id": 3643,
+                "title": "Task 3",
+                "description": "Does the length of the cookie depend on the username of the logged in user?",
+                "hint": "Try registering users of different length names and comparing the coookies.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3642,
+                "completed": false,
+                "masked_flag": "yes or no",
+                "options": []
+            },
+            {
+                "id": 3644,
+                "title": "Task 4",
+                "description": "What are the first five characters of the decrypted cookie?",
+                "hint": "Use a padding oracle attack to decrypt the cookie. `padbuster` will be helpful.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3643,
+                "completed": false,
+                "masked_flag": "*****",
+                "options": []
+            },
+            {
+                "id": 3645,
+                "title": "Submit User Flag",
+                "description": "Submit the flag located in the mitsos user's home directory.",
+                "hint": null,
+                "type": {
+                    "id": 1,
+                    "text": "user"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "flag_rating": null,
+                "masked_flag": "32 hex characters",
+                "options": []
+            },
+            {
+                "id": 3646,
+                "title": "Task 6",
+                "description": "What is the full path of the SetUID binary owned by root made custom for Lazy?",
+                "hint": "It's in the mitsos user's home directory.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3645,
+                "completed": false,
+                "masked_flag": "full path of file",
+                "options": []
+            },
+            {
+                "id": 3647,
+                "title": "Task 7",
+                "description": "What binary does it call to read the `/etc/shadow` file?",
+                "hint": "Use `strings` or `ltrace` to examine the binary.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3646,
+                "completed": false,
+                "masked_flag": "filename without path",
+                "options": []
+            },
+            {
+                "id": 3648,
+                "title": "Submit Root Flag",
+                "description": "Submit the flag located in the root user's home directory.",
+                "hint": null,
+                "type": {
+                    "id": 2,
+                    "text": "root"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "flag_rating": null,
+                "masked_flag": "32 hex characters",
+                "options": []
+            }
+        ]
+    }
+}

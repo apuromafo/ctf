@@ -1,0 +1,154 @@
+{
+    "id": 19,
+    "status_code": 200,
+    "content": {
+        "data": [
+            {
+                "id": 3633,
+                "title": "Task 1",
+                "description": "How many TCP ports are listening on Sneaky?",
+                "hint": "Scan the host with `nmap`.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "masked_flag": "number, such as 3, 17, or 4567",
+                "options": []
+            },
+            {
+                "id": 3634,
+                "title": "Task 2",
+                "description": "What UDP post in the top 1000 ports is listening on Sneaky?",
+                "hint": "Scan with `nmap` again, this time with `-sU`.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3633,
+                "completed": false,
+                "masked_flag": "number, such as 3, 17, or 4567",
+                "options": []
+            },
+            {
+                "id": 3635,
+                "title": "Task 3",
+                "description": "What is the admin user's name?",
+                "hint": "There is a login form on the site that is bypassable with a common technique.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3634,
+                "completed": false,
+                "masked_flag": "************",
+                "options": []
+            },
+            {
+                "id": 3636,
+                "title": "Task 4",
+                "description": "What community string works to read tons of information about Sneaky?",
+                "hint": "It's the default one for read access.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3635,
+                "completed": false,
+                "masked_flag": "******",
+                "options": []
+            },
+            {
+                "id": 3637,
+                "title": "Submit User Flag",
+                "description": "Submit the flag located in the thrasivoulos user's home directory.",
+                "hint": null,
+                "type": {
+                    "id": 1,
+                    "text": "user"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "flag_rating": null,
+                "masked_flag": "32 hex characters",
+                "options": []
+            },
+            {
+                "id": 3638,
+                "title": "Task 6",
+                "description": "What is the full path of the SetUID binary owned by root that is custom made for Sneaky?",
+                "hint": "`find` is good at finding SetUID binaries.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3637,
+                "completed": false,
+                "masked_flag": "full path of file",
+                "options": []
+            },
+            {
+                "id": 3639,
+                "title": "Task 7",
+                "description": "There is a buffer overflow in the `chal` binary. How many bytes into the user provided data is the data that overwrites EIP?",
+                "hint": "Use a tool like `pattern_create` to generate a pattern. Then run in `gdb` and look at EIP when it crashes. `pattern_offset` will show the offset.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3638,
+                "completed": false,
+                "masked_flag": "number, such as 3, 17, or 4567",
+                "options": []
+            },
+            {
+                "id": 3640,
+                "title": "Submit Root Flag",
+                "description": "Submit the flag located in the root user's home directory.",
+                "hint": null,
+                "type": {
+                    "id": 2,
+                    "text": "root"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "flag_rating": null,
+                "masked_flag": "32 hex characters",
+                "options": []
+            }
+        ]
+    }
+}

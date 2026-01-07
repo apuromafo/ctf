@@ -1,0 +1,136 @@
+{
+    "id": 6,
+    "status_code": 200,
+    "content": {
+        "data": [
+            {
+                "id": 1200,
+                "title": "Task 1",
+                "description": "Which version of HttpFileServer is running on TCP port `80`?",
+                "hint": "Running nmap with `-sCV` returns detailed information about the services running.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "masked_flag": "*.*",
+                "options": []
+            },
+            {
+                "id": 1201,
+                "title": "Task 2",
+                "description": "What is the 2014 CVE ID for a remote code execution vulnerability in the `findMacroMarker` function in HttpFileServer 2.3 version?",
+                "hint": "Search a database such as `cve.mitre.org` or `exploit-db` for keywords related to the exploit.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1200,
+                "completed": false,
+                "masked_flag": "***-****-****",
+                "options": []
+            },
+            {
+                "id": 1202,
+                "title": "Task 3",
+                "description": "What user is the webserver running as? Provide the username without the domain.",
+                "hint": "There are Python POCs available, or there's a Metasploit module to exploit this CVE. You can also search for keywords inside `msfconsole` using the `search <keyword(s)>` command.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1201,
+                "completed": false,
+                "masked_flag": "username without domain",
+                "options": []
+            },
+            {
+                "id": 1203,
+                "title": "Submit User Flag",
+                "description": "Submit the flag located on the kostas user's desktop.",
+                "hint": null,
+                "type": {
+                    "id": 1,
+                    "text": "user"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "flag_rating": null,
+                "masked_flag": "32 hex characters",
+                "options": []
+            },
+            {
+                "id": 1204,
+                "title": "Task 5",
+                "description": "Optional question: What is the password for the kostas user?",
+                "hint": "Kostas' password is saved as an Autologon credential. These can be read from the register, or an enumeration tool like WinPEAS will find them. These creds are not useful for solving Optimum, but in general it's good to be able to find this kind of thing.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1203,
+                "completed": false,
+                "masked_flag": "***********",
+                "options": []
+            },
+            {
+                "id": 1205,
+                "title": "Task 6",
+                "description": "Which metasploit reconnaissance module can be used to list possible privilege escalation paths on a compromised system?",
+                "hint": "You can search through the post/multi/recon modules inside `msfconsole`.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1203,
+                "completed": false,
+                "masked_flag": "*****_*******_*********",
+                "options": []
+            },
+            {
+                "id": 1206,
+                "title": "Submit Root Flag",
+                "description": "Submit the flag located on the administrator's desktop.",
+                "hint": null,
+                "type": {
+                    "id": 2,
+                    "text": "root"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "flag_rating": null,
+                "masked_flag": "32 hex characters",
+                "options": []
+            }
+        ]
+    }
+}

@@ -1,0 +1,226 @@
+{
+    "id": 5,
+    "status_code": 200,
+    "content": {
+        "data": [
+            {
+                "id": 1207,
+                "title": "Task 1",
+                "description": "Which Linux distribution is the target machine running?",
+                "hint": "Running `nmap` with the `-sCV` flags returns detailed information about the machine and the running services.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "masked_flag": "******",
+                "options": []
+            },
+            {
+                "id": 1208,
+                "title": "Task 2",
+                "description": "What version of TLS is the web application on TCP port 443 using?",
+                "hint": "Running the `curl` command with one or more verbose flags (`-v`) can yield headers and other information about the underlying service. If Firefox won't load the page, you can edit `security.tls.version.min` to 1 in `about:config`.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1207,
+                "completed": false,
+                "masked_flag": "*.*",
+                "options": []
+            },
+            {
+                "id": 1209,
+                "title": "Task 3",
+                "description": "What is the name of the software that's hosting a webserver on 443?",
+                "hint": "Visit in a web browser and look for the name over the login form.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1208,
+                "completed": false,
+                "masked_flag": "*******",
+                "options": []
+            },
+            {
+                "id": 1210,
+                "title": "Task 4",
+                "description": "Which Elastix endpoint is vulnerable to a Local File Inclusion?",
+                "hint": "Search for vulnerabilities using resources such as `Exploit-DB`. There's a lot in Elastix - we'll focus on [37637](https://www.exploit-db.com/exploits/37637).",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1209,
+                "completed": false,
+                "masked_flag": "path starting with /, such as /home",
+                "options": []
+            },
+            {
+                "id": 1211,
+                "title": "Task 5",
+                "description": "What is the name of the FreePBX configuration file that contains the database configuration?",
+                "hint": "The POC from `searchsploit` with ID 37637 shows grabbing this file.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1210,
+                "completed": false,
+                "masked_flag": "filename without path",
+                "options": []
+            },
+            {
+                "id": 1212,
+                "title": "Task 6",
+                "description": "What additional flag is needed when attempting to SSH as root to the target machine due to a \"no matching key exchange method found\" error? It starts with `-o` and ends with `-sha1`.",
+                "hint": "Because this system is very old, modern systems consider it suspect to connect to them. Search for the error and there will be forums giving suggestions for how to connect. You can use the LFI vulnerability from the previous question",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1211,
+                "completed": false,
+                "masked_flag": "-**************=*******-*******-******-****",
+                "options": []
+            },
+            {
+                "id": 1213,
+                "title": "Submit User Flag",
+                "description": "Submit the flag located in the fanis user's home directory.",
+                "hint": null,
+                "type": {
+                    "id": 1,
+                    "text": "user"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "flag_rating": null,
+                "masked_flag": "32 hex characters",
+                "options": []
+            },
+            {
+                "id": 1214,
+                "title": "Submit Root Flag",
+                "description": "Submit the flag located in root's home directory.",
+                "hint": null,
+                "type": {
+                    "id": 2,
+                    "text": "root"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "flag_rating": null,
+                "masked_flag": "32 hex characters",
+                "options": []
+            },
+            {
+                "id": 1215,
+                "title": "Task 9",
+                "description": "There are many other ways to root Beep. These questions after the root flag are hints to help identify them. What is the 2012 CVE ID for pre-authentication remote code execution vulnerablity in FreePBX / Elastix?",
+                "hint": "Searching for \"elastix\" in `searchsploit` or ExploitDB will find this. Its exploitdb-id is 18650.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1214,
+                "completed": false,
+                "masked_flag": "***-****-****",
+                "options": []
+            },
+            {
+                "id": 1216,
+                "title": "Task 10",
+                "description": "What password from the PBX config also works to log in as root to the Webmin application listening on TCP 10000?",
+                "hint": "Try the different passwords from that file. Once logged in as root, it's possible to create a task and get code execution and a shell.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1214,
+                "completed": false,
+                "masked_flag": "************",
+                "options": []
+            },
+            {
+                "id": 1217,
+                "title": "Task 11",
+                "description": "What is the common name for the set of 2014 CVEs where this is a POC exploit: `() { :; };sleep 10`?",
+                "hint": "It's also known as bashdoor, but we're looking for the name that starts with 's'. Putting this into the user-agent string of a CGI request will execute a ten second sleep. That same payload can be modified to get a shell.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1214,
+                "completed": false,
+                "masked_flag": "**********",
+                "options": []
+            },
+            {
+                "id": 1218,
+                "title": "Task 12",
+                "description": "What is the full path to the asterisk user's mail folder on Beep?",
+                "hint": "Because there's a PHP LFI vulnerability in Beep, if we can get a webshell onto the box and then include it, we can get execution that way. Try sending asterisk an email with a webshell.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1214,
+                "completed": false,
+                "masked_flag": "full path of file",
+                "options": []
+            }
+        ]
+    }
+}

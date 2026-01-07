@@ -1,0 +1,190 @@
+{
+    "id": 57,
+    "status_code": 200,
+    "content": {
+        "data": [
+            {
+                "id": 3553,
+                "title": "Task 1",
+                "description": "How many TCP ports are listening on Apocalyst?",
+                "hint": "Scan the host with `nmap`.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "masked_flag": "number, such as 3, 17, or 4567",
+                "options": []
+            },
+            {
+                "id": 3554,
+                "title": "Task 2",
+                "description": "What content management system (CMS) is used to offer the website?",
+                "hint": "Look at the HTML source.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3553,
+                "completed": false,
+                "masked_flag": "*********",
+                "options": []
+            },
+            {
+                "id": 3555,
+                "title": "Task 3",
+                "description": "What is the username of the author of the posts on the website?",
+                "hint": "Open the site in a browser and look around. We'll need the correct domain name to make the site look normal.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3554,
+                "completed": false,
+                "masked_flag": "username",
+                "options": []
+            },
+            {
+                "id": 3556,
+                "title": "Task 4",
+                "description": "What is the relative path on the webserver that contains an HTML page with a comment that says \"needle\"?",
+                "hint": "Brute force with a tool like `gobuster` or `feroxbuster`. We'll need a custom wordlist generated from the main page to find this. `cewl` can help generate that.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3555,
+                "completed": false,
+                "masked_flag": "path starting with /, such as /home",
+                "options": []
+            },
+            {
+                "id": 3557,
+                "title": "Task 5",
+                "description": "What is the name of the file hidden in the `image.jpeg` file using steganography?",
+                "hint": "Try the `steghide` tool with an empty password.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3556,
+                "completed": false,
+                "masked_flag": "filename without path",
+                "options": []
+            },
+            {
+                "id": 3558,
+                "title": "Task 6",
+                "description": "What is the falaraki user's password to the WordPress admin panel?",
+                "hint": "Brute force using the wordlist extracted from the image.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3557,
+                "completed": false,
+                "masked_flag": "***************",
+                "options": []
+            },
+            {
+                "id": 3559,
+                "title": "Task 7",
+                "description": "What user is the website running as on Apocalyst?",
+                "hint": "Exploit WordPress admin access by editing a post or a template to get execution.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3558,
+                "completed": false,
+                "masked_flag": "username",
+                "options": []
+            },
+            {
+                "id": 3560,
+                "title": "Submit User Flag",
+                "description": "Submit the flag located in the falaraki user's home directory.",
+                "hint": null,
+                "type": {
+                    "id": 1,
+                    "text": "user"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "flag_rating": null,
+                "masked_flag": "32 hex characters",
+                "options": []
+            },
+            {
+                "id": 3561,
+                "title": "Task 9",
+                "description": "What is the full path of the critical system file that is typically world-readable but only writable by root has messed up permissions on Apocalyst?",
+                "hint": "Look around, or use a tool like LinPEAS.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3560,
+                "completed": false,
+                "masked_flag": "full path of file",
+                "options": []
+            },
+            {
+                "id": 3562,
+                "title": "Submit Root Flag",
+                "description": "Submit the flag located in the root user's home directory.",
+                "hint": null,
+                "type": {
+                    "id": 2,
+                    "text": "root"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "flag_rating": null,
+                "masked_flag": "32 hex characters",
+                "options": []
+            }
+        ]
+    }
+}

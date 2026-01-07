@@ -1,0 +1,94 @@
+{
+    "id": 168,
+    "status": 200,
+    "data": {
+        "info": [
+            {
+                "id": 3629,
+                "name": "Enterprise Network",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3632,
+                "name": "Vulnerability Assessment",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3678,
+                "name": "Anonymous/Guest Access",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3689,
+                "name": "Sensitive Data Exposure",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3766,
+                "name": "FTP",
+                "category": "Technology"
+            },
+            {
+                "id": 3785,
+                "name": "SNMP",
+                "category": "Technology"
+            },
+            {
+                "id": 3884,
+                "name": "IPSec",
+                "category": "Technology"
+            },
+            {
+                "id": 4140,
+                "name": "Impersonation",
+                "category": "Technique"
+            },
+            {
+                "id": 4144,
+                "name": "Exploit Modification",
+                "category": "Technique"
+            },
+            {
+                "id": 4150,
+                "name": "Password Cracking",
+                "category": "Technique"
+            },
+            {
+                "id": 4175,
+                "name": "Firewall Bypass",
+                "category": "Technique"
+            },
+            {
+                "id": 4192,
+                "name": "Privilege Abuse",
+                "category": "Technique"
+            },
+            {
+                "id": 4194,
+                "name": "Potato Exploits",
+                "category": "Technique"
+            },
+            {
+                "id": 4554,
+                "name": "Protocols",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4570,
+                "name": "Software & OS exploitation",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4572,
+                "name": "Security Tools",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4573,
+                "name": "Authentication",
+                "category": "Area of Interest"
+            }
+        ]
+    },
+    "url": "https://labs.hackthebox.com/api/v4/machine/tags/168"
+}

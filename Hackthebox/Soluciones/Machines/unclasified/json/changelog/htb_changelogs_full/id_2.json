@@ -1,0 +1,57 @@
+{
+    "machine_id": 2,
+    "endpoint": "https://labs.hackthebox.com/api/v4/machine/changelog/2",
+    "status_code": 200,
+    "headers_response": {
+        "Date": "Fri, 26 Dec 2025 23:10:05 GMT",
+        "Content-Type": "application/json",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Content-Encoding": "gzip",
+        "CF-Ray": "9b443fe338d52245-SCL",
+        "CF-Cache-Status": "DYNAMIC",
+        "Access-Control-Allow-Origin": "https://app.hackthebox.com",
+        "Cache-Control": "no-cache, private",
+        "Strict-Transport-Security": "max-age=15552000; includeSubDomains",
+        "access-control-allow-credentials": "true",
+        "access-control-allow-headers": "Accept,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,User-Agent,X-Requested-With",
+        "access-control-allow-methods": "GET, POST, PUT, DELETE, OPTIONS",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-htb-request-id": "a0b04ca4-b111-40a2-b95b-68b68cf82390",
+        "x-ratelimit-limit": "30",
+        "x-ratelimit-remaining": "13",
+        "x-xss-protection": "1; mode=block",
+        "Set-Cookie": "__cf_bm=_zwCOO3YvcdpZT.gT15Nr6XFmqYeTUJ.3n1HgvwVCJ0-1766790605-1.0.1.1-7woOS45PQ8EPpjiyx_42Fc_yWNsPJhLcbjdYsH6boAtJ9yCxnKwcpRKXOFm8_R0IRwM08RPmQF.75dhzp.rVJZJYAhkxrGR5WTlPZXkNBKg; path=/; expires=Fri, 26-Dec-25 23:40:05 GMT; domain=.hackthebox.com; HttpOnly; Secure; SameSite=None",
+        "Vary": "Accept-Encoding",
+        "Server": "cloudflare",
+        "alt-svc": "h3=\":443\"; ma=86400"
+    },
+    "data": {
+        "info": [
+            {
+                "id": 87,
+                "user_id": 16,
+                "machine_id": 2,
+                "type": "3",
+                "title": "Fixed Bug In DHCP Instances",
+                "description": "Fixed bug in firewall and network configurations on DHCP / dedicated instances.",
+                "released": 1,
+                "created_at": "2022-05-24T12:29:00.000000Z",
+                "updated_at": "2022-05-24T12:29:00.000000Z"
+            },
+            {
+                "id": 271,
+                "user_id": 16,
+                "machine_id": 2,
+                "type": "1",
+                "title": "Image Hygiene",
+                "description": "Removed floppy drive from image. No change to playability.",
+                "released": 1,
+                "created_at": "2023-10-26T01:28:37.000000Z",
+                "updated_at": "2023-10-26T01:28:37.000000Z"
+            }
+        ]
+    },
+    "timestamp": 1766790605.1039426
+}

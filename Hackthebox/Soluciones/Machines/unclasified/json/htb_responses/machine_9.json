@@ -1,0 +1,190 @@
+{
+    "id": 9,
+    "status_code": 200,
+    "content": {
+        "data": [
+            {
+                "id": 342,
+                "title": "Task 1",
+                "description": "On what TCP port is there an HTTP server running?",
+                "hint": "Run `nmap` with `-sCV` to get detailed information about the services running.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "masked_flag": "number, such as 3, 17, or 4567",
+                "options": []
+            },
+            {
+                "id": 343,
+                "title": "Task 2",
+                "description": "What is the web application development platform in use by the site?",
+                "hint": "This platform is from Adobe. 8500 is the default port for this framework. The folder names at the web root are also hints. Finally, you can also click through until you reach a login form, and it says it clearly.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 342,
+                "completed": false,
+                "masked_flag": "**********",
+                "options": []
+            },
+            {
+                "id": 344,
+                "title": "Task 3",
+                "description": "What is the 2010 CVE ID for a directory traversal vulnerability in `enter.cfm`?",
+                "hint": "Search for terms like \"coldfusion directory traversal\".",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 343,
+                "completed": false,
+                "masked_flag": "***-****-****",
+                "options": []
+            },
+            {
+                "id": 345,
+                "title": "Task 4",
+                "description": "Which metasploit reconnaissance module can be used to list possible privilege escalation paths on a compromised system?",
+                "hint": "You can search through the post/multi/recon modules inside `msfconsole`.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 344,
+                "completed": false,
+                "masked_flag": "*****_*******_*********",
+                "options": []
+            },
+            {
+                "id": 346,
+                "title": "Task 5",
+                "description": "What is the password for the ColdFusion admin login?",
+                "hint": "Many POCs for the exploit show reading a file that leaks a password hash. Get that and crack it.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 345,
+                "completed": false,
+                "masked_flag": "********",
+                "options": []
+            },
+            {
+                "id": 347,
+                "title": "Task 6",
+                "description": "What kind of file can be uploaded to work as a webshell on Arctic?",
+                "hint": "What lanauge is ColdFusion written in? This is the file that allows the generation of dynamic webpages in that language.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 346,
+                "completed": false,
+                "masked_flag": "file extension without leading .",
+                "options": []
+            },
+            {
+                "id": 348,
+                "title": "Task 7",
+                "description": "What user is the webserver running as? Give the username without the domain.",
+                "hint": "You can upload a JSP file via the scheduled task mechanism. Then get a shell and run `whoami`.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 347,
+                "completed": false,
+                "masked_flag": "username without domain",
+                "options": []
+            },
+            {
+                "id": 349,
+                "title": "Submit User Flag",
+                "description": "Submit the flag located on the tolis user's desktop.",
+                "hint": null,
+                "type": {
+                    "id": 1,
+                    "text": "user"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "flag_rating": null,
+                "masked_flag": "32 hex characters",
+                "options": []
+            },
+            {
+                "id": 350,
+                "title": "Task 9",
+                "description": "Have any hotfixes been applied to this system?",
+                "hint": "`systeminfo` will show the applied hotfixes. Given that there are none, the box is going to be vulnerable to numerous kernel exploits. MS10-059 would be a good one to try here.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 349,
+                "completed": false,
+                "masked_flag": "yes or no",
+                "options": []
+            },
+            {
+                "id": 351,
+                "title": "Submit Root Flag",
+                "description": "Submit the flag located on the administrator's desktop.",
+                "hint": null,
+                "type": {
+                    "id": 2,
+                    "text": "root"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "flag_rating": null,
+                "masked_flag": "32 hex characters",
+                "options": []
+            }
+        ]
+    }
+}

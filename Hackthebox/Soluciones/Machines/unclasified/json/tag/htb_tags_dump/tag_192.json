@@ -1,0 +1,74 @@
+{
+    "id": 192,
+    "status": 200,
+    "data": {
+        "info": [
+            {
+                "id": 3628,
+                "name": "Web Application",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3632,
+                "name": "Vulnerability Assessment",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3639,
+                "name": "SQL Injection",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3683,
+                "name": "Path Hijacking",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3722,
+                "name": "PHP",
+                "category": "Language"
+            },
+            {
+                "id": 3723,
+                "name": "Python",
+                "category": "Language"
+            },
+            {
+                "id": 3759,
+                "name": "MySQL",
+                "category": "Technology"
+            },
+            {
+                "id": 3776,
+                "name": "CMS",
+                "category": "Technology"
+            },
+            {
+                "id": 4132,
+                "name": "Reconnaissance",
+                "category": "Technique"
+            },
+            {
+                "id": 4150,
+                "name": "Password Cracking",
+                "category": "Technique"
+            },
+            {
+                "id": 4551,
+                "name": "Injections",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4570,
+                "name": "Software & OS exploitation",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4573,
+                "name": "Authentication",
+                "category": "Area of Interest"
+            }
+        ]
+    },
+    "url": "https://labs.hackthebox.com/api/v4/machine/tags/192"
+}

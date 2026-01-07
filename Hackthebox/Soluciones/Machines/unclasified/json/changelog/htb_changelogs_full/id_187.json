@@ -1,0 +1,46 @@
+{
+    "machine_id": 187,
+    "endpoint": "https://labs.hackthebox.com/api/v4/machine/changelog/187",
+    "status_code": 200,
+    "headers_response": {
+        "Date": "Fri, 26 Dec 2025 23:11:03 GMT",
+        "Content-Type": "application/json",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Server": "cloudflare",
+        "CF-Ray": "9b44414d0ccfb51c-SCL",
+        "CF-Cache-Status": "DYNAMIC",
+        "Access-Control-Allow-Origin": "https://app.hackthebox.com",
+        "Cache-Control": "no-cache, private",
+        "Content-Encoding": "gzip",
+        "Strict-Transport-Security": "max-age=15552000; includeSubDomains",
+        "Vary": "Accept-Encoding",
+        "access-control-allow-credentials": "true",
+        "access-control-allow-headers": "Accept,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,User-Agent,X-Requested-With",
+        "access-control-allow-methods": "GET, POST, PUT, DELETE, OPTIONS",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-htb-request-id": "a0b04cfd-03f2-4dfa-ad6a-430288514d07",
+        "x-ratelimit-limit": "30",
+        "x-ratelimit-remaining": "26",
+        "x-xss-protection": "1; mode=block",
+        "Set-Cookie": "__cf_bm=RuoTDgoH0Qh1lBD9_YETn8sXZwnNHfeLqR7HMZNNvk8-1766790663-1.0.1.1-KfkSIV6c2FcLFNY3ZVb1ZJFIHmAn9X9W_IlJBL0VYnP9pFmv6bqZ6bs9_iZFCRi4TLD9cUxQsi7Kwo11NNjE4Nny3zmfLcV0oUBjHrRU9_A; path=/; expires=Fri, 26-Dec-25 23:41:03 GMT; domain=.hackthebox.com; HttpOnly; Secure; SameSite=None",
+        "alt-svc": "h3=\":443\"; ma=86400"
+    },
+    "data": {
+        "info": [
+            {
+                "id": 102,
+                "user_id": 16,
+                "machine_id": 187,
+                "type": "2",
+                "title": "Image Hygiene. No Change to Playability",
+                "description": "Cleaned up disk image to reduce size. Enabled and tested flag rotation. No changes for player point of view.",
+                "released": 1,
+                "created_at": "2022-07-25T15:20:04.000000Z",
+                "updated_at": "2022-07-25T15:20:04.000000Z"
+            }
+        ]
+    },
+    "timestamp": 1766790662.9865046
+}

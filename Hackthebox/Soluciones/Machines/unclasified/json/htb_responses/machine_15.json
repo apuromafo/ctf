@@ -1,0 +1,190 @@
+{
+    "id": 15,
+    "status_code": 200,
+    "content": {
+        "data": [
+            {
+                "id": 3649,
+                "title": "Task 1",
+                "description": "How many TCP ports are listening on October?",
+                "hint": "Scan the host with `nmap`.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "masked_flag": "number, such as 3, 17, or 4567",
+                "options": []
+            },
+            {
+                "id": 3650,
+                "title": "Task 2",
+                "description": "What is the name of the content management system responsible for the website on TCP 80?",
+                "hint": "Visit the page in a browser and read it.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3649,
+                "completed": false,
+                "masked_flag": "**********",
+                "options": []
+            },
+            {
+                "id": 3651,
+                "title": "Task 3",
+                "description": "What is the default password for the admin user on October CMS?",
+                "hint": "Look for documentation from the timeframe of October's release, or just guess it.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3650,
+                "completed": false,
+                "masked_flag": "*****",
+                "options": []
+            },
+            {
+                "id": 3652,
+                "title": "Task 4",
+                "description": "Which of the following PHP extensions will run as PHP code and is not blocked by the CMS when doing a media upload? Choose from \"php\", \"php4\", \"php5\", \"phtml\", \"ppp\".",
+                "hint": "Try these and find out. Or read about upload filter bypasses in this version of OctoberCMS.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3651,
+                "completed": false,
+                "masked_flag": "one of the options above",
+                "options": []
+            },
+            {
+                "id": 3653,
+                "title": "Task 5",
+                "description": "What user is the CMS running as on October?",
+                "hint": "Upload a webshell using the bypass described in the previous question.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3652,
+                "completed": false,
+                "masked_flag": "username",
+                "options": []
+            },
+            {
+                "id": 3654,
+                "title": "Task 6",
+                "description": "What user is the website running as?",
+                "hint": "Upload a PHP webshell using option injection against the site.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3653,
+                "completed": false,
+                "masked_flag": "username",
+                "options": []
+            },
+            {
+                "id": 3655,
+                "title": "Submit User Flag",
+                "description": "Submit the flag located in the harry user's home directory.",
+                "hint": null,
+                "type": {
+                    "id": 1,
+                    "text": "user"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "flag_rating": null,
+                "masked_flag": "32 hex characters",
+                "options": []
+            },
+            {
+                "id": 3656,
+                "title": "Task 8",
+                "description": "What is the full path of the file owned by root that has the SetUID permission and is custom to October?",
+                "hint": "`find` has options to identify SetUID programs.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3655,
+                "completed": false,
+                "masked_flag": "full path of file",
+                "options": []
+            },
+            {
+                "id": 3657,
+                "title": "Task 9",
+                "description": "How many bytes into the user provided data that will overwrite EIP?",
+                "hint": "Use a tool like `pattern_create` to make a long pattern and pass it into `ovrflw` while running in `gdb`. Look at the data in EIP, and use `pattern_offset` to find the offset.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3656,
+                "completed": false,
+                "masked_flag": "number, such as 3, 17, or 4567",
+                "options": []
+            },
+            {
+                "id": 3658,
+                "title": "Submit Root Flag",
+                "description": "Submit the flag located in the root user's home directory.",
+                "hint": null,
+                "type": {
+                    "id": 2,
+                    "text": "root"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "flag_rating": null,
+                "masked_flag": "32 hex characters",
+                "options": []
+            }
+        ]
+    }
+}

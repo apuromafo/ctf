@@ -1,0 +1,208 @@
+{
+    "id": 64,
+    "status_code": 200,
+    "content": {
+        "data": [
+            {
+                "id": 1148,
+                "title": "Task 1",
+                "description": "What is the name of the service running on TCP port 53 on Mirai? Don't include a version number.",
+                "hint": "Scan the host with `nmap`. The `-sV` flag will show version information.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "masked_flag": "*******",
+                "options": []
+            },
+            {
+                "id": 1149,
+                "title": "Task 2",
+                "description": "What unusual HTTP header is included in the response when visiting the service on port 80?",
+                "hint": "Browse to `http://[ip]/` and inspect the HTTP requests. You can use a proxy like Burp Suite, or look in the browser dev tools on the network tab.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1148,
+                "completed": false,
+                "masked_flag": "*-**-****",
+                "options": []
+            },
+            {
+                "id": 1150,
+                "title": "Task 3",
+                "description": "What relative path on the webserver presents the Pi-hole dashboard?",
+                "hint": "Use a brute force tool like `gobuster` or `feroxbuster`, or read the Pi-hole documentation.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1149,
+                "completed": false,
+                "masked_flag": "path starting with /, such as /home",
+                "options": []
+            },
+            {
+                "id": 1151,
+                "title": "Task 4",
+                "description": "What was the default username on a Raspberry Pi device?",
+                "hint": "Search for terms like \"default raspberry pi username\".",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1150,
+                "completed": false,
+                "masked_flag": "username",
+                "options": []
+            },
+            {
+                "id": 1152,
+                "title": "Task 5",
+                "description": "What is the default password for the pi user?",
+                "hint": "Look in the same documentation as the previous question.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1151,
+                "completed": false,
+                "masked_flag": "*********",
+                "options": []
+            },
+            {
+                "id": 1153,
+                "title": "Submit User Flag",
+                "description": "Submit the flag located on the pi user's desktop.",
+                "hint": null,
+                "type": {
+                    "id": 1,
+                    "text": "user"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "flag_rating": null,
+                "masked_flag": "32 hex characters",
+                "options": []
+            },
+            {
+                "id": 1154,
+                "title": "Task 7",
+                "description": "Can the pi user run any command as root on Mirai?",
+                "hint": "`sudo -l` will show the local configuration.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1153,
+                "completed": false,
+                "masked_flag": "yes or no",
+                "options": []
+            },
+            {
+                "id": 1155,
+                "title": "Task 8",
+                "description": "The flag-less `root.txt` file mentions that it's on the USB stick. What is the mountpoint for a device that is labeled as a USB stick on this host?",
+                "hint": "There are many commands that can get this information. `mount` shows various media and where they are mounted.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1154,
+                "completed": false,
+                "masked_flag": "full path of directory",
+                "options": []
+            },
+            {
+                "id": 1156,
+                "title": "Task 9",
+                "description": "What is the full path to the device that represents the raw USB media on Mirai?",
+                "hint": "This is a file in a Unix or Linux operating system that represents a block device, such as a hard disk, USB drive, or solid-state drive. `lsblk` is a useful command to show the current devices and where they are mounted if they are mounted. Of course `mount` will show it as well.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1155,
+                "completed": false,
+                "masked_flag": "full path of file",
+                "options": []
+            },
+            {
+                "id": 1157,
+                "title": "Task 10",
+                "description": "When files are deleted from a drive, is the memory definitely immediately overwritten with something else?",
+                "hint": "Running `rm` on a file doesn't change the contents of the file in memory, it just changes the metadata around the file to tell the OS that that memory is now available for writing. That means if we can read the raw memory, the flag could still be there. `grep` and/or `strings` would be useful tools for this.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1156,
+                "completed": false,
+                "masked_flag": "yes or no",
+                "options": []
+            },
+            {
+                "id": 1158,
+                "title": "Submit Root Flag",
+                "description": "Submit the flag located on the USB device.",
+                "hint": null,
+                "type": {
+                    "id": 2,
+                    "text": "root"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "flag_rating": null,
+                "masked_flag": "32 hex characters",
+                "options": []
+            }
+        ]
+    }
+}

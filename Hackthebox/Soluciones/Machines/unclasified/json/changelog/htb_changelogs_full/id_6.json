@@ -1,0 +1,57 @@
+{
+    "machine_id": 6,
+    "endpoint": "https://labs.hackthebox.com/api/v4/machine/changelog/6",
+    "status_code": 200,
+    "headers_response": {
+        "Date": "Fri, 26 Dec 2025 23:10:01 GMT",
+        "Content-Type": "application/json",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Content-Encoding": "gzip",
+        "CF-Ray": "9b443fcc1863c23c-SCL",
+        "CF-Cache-Status": "DYNAMIC",
+        "Access-Control-Allow-Origin": "https://app.hackthebox.com",
+        "Cache-Control": "no-cache, private",
+        "Strict-Transport-Security": "max-age=15552000; includeSubDomains",
+        "access-control-allow-credentials": "true",
+        "access-control-allow-headers": "Accept,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,User-Agent,X-Requested-With",
+        "access-control-allow-methods": "GET, POST, PUT, DELETE, OPTIONS",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-htb-request-id": "a0b04c9f-124c-42eb-bacb-5486e7fb6679",
+        "x-ratelimit-limit": "30",
+        "x-ratelimit-remaining": "18",
+        "x-xss-protection": "1; mode=block",
+        "Set-Cookie": "__cf_bm=ovSs4cPY4N8YdJ_FIyJLN9mVav9f4HfmF_Uc8dfOflY-1766790601-1.0.1.1-Vh07skmqieLt72b40nb4dziEIfZrqTVix1ZHBDx6b.J8iAgL4SN5cgasRuCNjLusE8YrYixesfUT6VM3bUDHB5xVElWX5qNqx_RBaYMzpro; path=/; expires=Fri, 26-Dec-25 23:40:01 GMT; domain=.hackthebox.com; HttpOnly; Secure; SameSite=None",
+        "Vary": "Accept-Encoding",
+        "Server": "cloudflare",
+        "alt-svc": "h3=\":443\"; ma=86400"
+    },
+    "data": {
+        "info": [
+            {
+                "id": 176,
+                "user_id": 16,
+                "machine_id": 6,
+                "type": "1",
+                "title": "Image Hygiene. No Change to Playability",
+                "description": "Cleaned up disk image to reduce size. Enabled and tested flag rotation. No changes for player point of view.",
+                "released": 1,
+                "created_at": "2022-11-01T15:28:29.000000Z",
+                "updated_at": "2022-11-01T15:28:29.000000Z"
+            },
+            {
+                "id": 216,
+                "user_id": 16,
+                "machine_id": 6,
+                "type": "3",
+                "title": "Fixed Permissions on Administrator Folder",
+                "description": "Permissions for administrator folder got set too lax, allowing skipping of steps. Fixed.",
+                "released": 1,
+                "created_at": "2022-12-21T13:49:43.000000Z",
+                "updated_at": "2022-12-21T13:49:43.000000Z"
+            }
+        ]
+    },
+    "timestamp": 1766790601.4172404
+}

@@ -1,0 +1,104 @@
+{
+    "id": 335,
+    "status": 200,
+    "data": {
+        "info": [
+            {
+                "id": 3628,
+                "name": "Web Application",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3632,
+                "name": "Vulnerability Assessment",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3633,
+                "name": "Person",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3653,
+                "name": "Cross Site Scripting (XSS)",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3654,
+                "name": "Group Membership",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3657,
+                "name": "Information Disclosure",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3693,
+                "name": "Command Execution",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3730,
+                "name": "Bash",
+                "category": "Language"
+            },
+            {
+                "id": 3776,
+                "name": "CMS",
+                "category": "Technology"
+            },
+            {
+                "id": 3880,
+                "name": "Moodle",
+                "category": "Technology"
+            },
+            {
+                "id": 4132,
+                "name": "Reconnaissance",
+                "category": "Technique"
+            },
+            {
+                "id": 4149,
+                "name": "Password Reuse",
+                "category": "Technique"
+            },
+            {
+                "id": 4150,
+                "name": "Password Cracking",
+                "category": "Technique"
+            },
+            {
+                "id": 4157,
+                "name": "Cookie Manipulation",
+                "category": "Technique"
+            },
+            {
+                "id": 4179,
+                "name": "SUDO Exploitation",
+                "category": "Technique"
+            },
+            {
+                "id": 4545,
+                "name": "Session Management and Hijacking",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4548,
+                "name": "Broken Authentication and Authorization",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4570,
+                "name": "Software & OS exploitation",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4574,
+                "name": "Programming",
+                "category": "Area of Interest"
+            }
+        ]
+    },
+    "url": "https://labs.hackthebox.com/api/v4/machine/tags/335"
+}

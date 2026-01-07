@@ -1,0 +1,79 @@
+{
+    "id": 153,
+    "status": 200,
+    "data": {
+        "info": [
+            {
+                "id": 3628,
+                "name": "Web Application",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3629,
+                "name": "Enterprise Network",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3632,
+                "name": "Vulnerability Assessment",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3639,
+                "name": "SQL Injection",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3736,
+                "name": "Powershell",
+                "category": "Language"
+            },
+            {
+                "id": 3760,
+                "name": "MSSQL",
+                "category": "Technology"
+            },
+            {
+                "id": 3777,
+                "name": "RDP",
+                "category": "Technology"
+            },
+            {
+                "id": 3858,
+                "name": "WinRM",
+                "category": "Technology"
+            },
+            {
+                "id": 4150,
+                "name": "Password Cracking",
+                "category": "Technique"
+            },
+            {
+                "id": 4171,
+                "name": "AppLocker Bypass",
+                "category": "Technique"
+            },
+            {
+                "id": 4183,
+                "name": "Hash Capture",
+                "category": "Technique"
+            },
+            {
+                "id": 4551,
+                "name": "Injections",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4554,
+                "name": "Protocols",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4573,
+                "name": "Authentication",
+                "category": "Area of Interest"
+            }
+        ]
+    },
+    "url": "https://labs.hackthebox.com/api/v4/machine/tags/153"
+}

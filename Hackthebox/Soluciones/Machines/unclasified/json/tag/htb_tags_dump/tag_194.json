@@ -1,0 +1,74 @@
+{
+    "id": 194,
+    "status": 200,
+    "data": {
+        "info": [
+            {
+                "id": 3628,
+                "name": "Web Application",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3632,
+                "name": "Vulnerability Assessment",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3639,
+                "name": "SQL Injection",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3647,
+                "name": "OS Command Injection",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3664,
+                "name": "Misconfiguration",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3730,
+                "name": "Bash",
+                "category": "Language"
+            },
+            {
+                "id": 3755,
+                "name": "Apache",
+                "category": "Technology"
+            },
+            {
+                "id": 4134,
+                "name": "Web Site Structure Discovery",
+                "category": "Technique"
+            },
+            {
+                "id": 4174,
+                "name": "WAF Bypass",
+                "category": "Technique"
+            },
+            {
+                "id": 4178,
+                "name": "SUID Exploitation",
+                "category": "Technique"
+            },
+            {
+                "id": 4179,
+                "name": "SUDO Exploitation",
+                "category": "Technique"
+            },
+            {
+                "id": 4551,
+                "name": "Injections",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4566,
+                "name": "Common Security Controls",
+                "category": "Area of Interest"
+            }
+        ]
+    },
+    "url": "https://labs.hackthebox.com/api/v4/machine/tags/194"
+}

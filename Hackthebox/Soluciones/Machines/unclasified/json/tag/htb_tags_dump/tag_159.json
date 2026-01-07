@@ -1,0 +1,79 @@
+{
+    "id": 159,
+    "status": 200,
+    "data": {
+        "info": [
+            {
+                "id": 3629,
+                "name": "Enterprise Network",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3632,
+                "name": "Vulnerability Assessment",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3644,
+                "name": "Weak Credentials",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3678,
+                "name": "Anonymous/Guest Access",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3683,
+                "name": "Path Hijacking",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3783,
+                "name": "Docker",
+                "category": "Technology"
+            },
+            {
+                "id": 3885,
+                "name": "Zabbix",
+                "category": "Technology"
+            },
+            {
+                "id": 3919,
+                "name": "Web API",
+                "category": "Technology"
+            },
+            {
+                "id": 4132,
+                "name": "Reconnaissance",
+                "category": "Technique"
+            },
+            {
+                "id": 4163,
+                "name": "Brute Force Attack",
+                "category": "Technique"
+            },
+            {
+                "id": 4178,
+                "name": "SUID Exploitation",
+                "category": "Technique"
+            },
+            {
+                "id": 4553,
+                "name": "Virtualization",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4570,
+                "name": "Software & OS exploitation",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4573,
+                "name": "Authentication",
+                "category": "Area of Interest"
+            }
+        ]
+    },
+    "url": "https://labs.hackthebox.com/api/v4/machine/tags/159"
+}

@@ -1,0 +1,154 @@
+{
+    "id": 11,
+    "status_code": 200,
+    "content": {
+        "data": [
+            {
+                "id": 3681,
+                "title": "Task 1",
+                "description": "How many TCP ports are listening on Cronos?",
+                "hint": "Scan the host with `nmap`. Don't count the filtered ports.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "masked_flag": "number, such as 3, 17, or 4567",
+                "options": []
+            },
+            {
+                "id": 3682,
+                "title": "Task 2",
+                "description": "What subdomain of `cronos.htb` is serving a login page over HTTP?",
+                "hint": "Do a zone transfer against the open TCP DNS port to get a list of subdomains. Then update your `/etc/hosts` file and explore in a browser.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3681,
+                "completed": false,
+                "masked_flag": "domain name",
+                "options": []
+            },
+            {
+                "id": 3683,
+                "title": "Task 3",
+                "description": "What is the heading at the top of the webpage once authenticated?",
+                "hint": "There is an SQL injection vulnerability in the login process.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3682,
+                "completed": false,
+                "masked_flag": "*** **** **.*",
+                "options": []
+            },
+            {
+                "id": 3684,
+                "title": "Task 4",
+                "description": "What user is the website on Cronos running as?",
+                "hint": "Exploit a command injection vulnerability in the webpage and run a command like `id`.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3683,
+                "completed": false,
+                "masked_flag": "username",
+                "options": []
+            },
+            {
+                "id": 3685,
+                "title": "Submit User Flag",
+                "description": "Submit the flag located in the noulis user's home directory.",
+                "hint": null,
+                "type": {
+                    "id": 1,
+                    "text": "user"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "flag_rating": null,
+                "masked_flag": "32 hex characters",
+                "options": []
+            },
+            {
+                "id": 3686,
+                "title": "Task 6",
+                "description": "What is the full path to the file passed to `php` in a cronjob that runs every minute as the root user?",
+                "hint": "Look at `/etc/crontab`",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3685,
+                "completed": false,
+                "masked_flag": "full path of file",
+                "options": []
+            },
+            {
+                "id": 3687,
+                "title": "Task 7",
+                "description": "Does www-data have write permissions on the `artisan` binary?",
+                "hint": "`ls -l` will show the required information.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 3686,
+                "completed": false,
+                "masked_flag": "yes or no",
+                "options": []
+            },
+            {
+                "id": 3688,
+                "title": "Submit Root Flag",
+                "description": "Submit the flag located in the root user's home directory.",
+                "hint": null,
+                "type": {
+                    "id": 2,
+                    "text": "root"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "flag_rating": null,
+                "masked_flag": "32 hex characters",
+                "options": []
+            }
+        ]
+    }
+}

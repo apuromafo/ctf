@@ -1,0 +1,64 @@
+{
+    "id": 126,
+    "status": 200,
+    "data": {
+        "info": [
+            {
+                "id": 3628,
+                "name": "Web Application",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3632,
+                "name": "Vulnerability Assessment",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3652,
+                "name": "XXE Injection",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3678,
+                "name": "Anonymous/Guest Access",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3766,
+                "name": "FTP",
+                "category": "Technology"
+            },
+            {
+                "id": 3774,
+                "name": "Wordpress",
+                "category": "Technology"
+            },
+            {
+                "id": 4141,
+                "name": "Binary Analysis",
+                "category": "Technique"
+            },
+            {
+                "id": 4149,
+                "name": "Password Reuse",
+                "category": "Technique"
+            },
+            {
+                "id": 4211,
+                "name": "Password Capture",
+                "category": "Technique"
+            },
+            {
+                "id": 4547,
+                "name": "Common Applications",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4568,
+                "name": "Reverse Engineering",
+                "category": "Area of Interest"
+            }
+        ]
+    },
+    "url": "https://labs.hackthebox.com/api/v4/machine/tags/126"
+}

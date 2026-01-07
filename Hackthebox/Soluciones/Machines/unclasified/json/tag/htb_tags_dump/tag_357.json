@@ -1,0 +1,94 @@
+{
+    "id": 357,
+    "status": 200,
+    "data": {
+        "info": [
+            {
+                "id": 3629,
+                "name": "Enterprise Network",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3632,
+                "name": "Vulnerability Assessment",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 3657,
+                "name": "Information Disclosure",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3664,
+                "name": "Misconfiguration",
+                "category": "Vulnerability"
+            },
+            {
+                "id": 3736,
+                "name": "Powershell",
+                "category": "Language"
+            },
+            {
+                "id": 3800,
+                "name": "Kerberos",
+                "category": "Technology"
+            },
+            {
+                "id": 3827,
+                "name": "LDAP",
+                "category": "Technology"
+            },
+            {
+                "id": 4132,
+                "name": "Reconnaissance",
+                "category": "Technique"
+            },
+            {
+                "id": 4140,
+                "name": "Impersonation",
+                "category": "Technique"
+            },
+            {
+                "id": 4150,
+                "name": "Password Cracking",
+                "category": "Technique"
+            },
+            {
+                "id": 4160,
+                "name": "Password Spraying",
+                "category": "Technique"
+            },
+            {
+                "id": 4165,
+                "name": "Kerberos Abuse",
+                "category": "Technique"
+            },
+            {
+                "id": 4183,
+                "name": "Hash Capture",
+                "category": "Technique"
+            },
+            {
+                "id": 4552,
+                "name": "Active Directory",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4567,
+                "name": "Source Code Analysis",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4572,
+                "name": "Security Tools",
+                "category": "Area of Interest"
+            },
+            {
+                "id": 4573,
+                "name": "Authentication",
+                "category": "Area of Interest"
+            }
+        ]
+    },
+    "url": "https://labs.hackthebox.com/api/v4/machine/tags/357"
+}

@@ -1,0 +1,136 @@
+{
+    "id": 48,
+    "status_code": 200,
+    "content": {
+        "data": [
+            {
+                "id": 1168,
+                "title": "Task 1",
+                "description": "What is the name of the FTP software running on Blocky?",
+                "hint": "Running `nmap` with `-sCV` returns detailed information about the services running.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "masked_flag": "*******",
+                "options": []
+            },
+            {
+                "id": 1169,
+                "title": "Task 2",
+                "description": "What username is given by enumerating the website?",
+                "hint": "Look at who the author of the blog posts is.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1168,
+                "completed": false,
+                "masked_flag": "username",
+                "options": []
+            },
+            {
+                "id": 1170,
+                "title": "Task 3",
+                "description": "What relative path on the webserver offers two JAR files for download?",
+                "hint": "Use a directory bruteforce tool such as `gobuster` with a large enough wordlist to enumerate the webserver.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1169,
+                "completed": false,
+                "masked_flag": "path starting with /, such as /home",
+                "options": []
+            },
+            {
+                "id": 1171,
+                "title": "Task 4",
+                "description": "What password is present in the `BlockCore.jar` file?",
+                "hint": "Decompile the files with a tool like `jd-gui` and look at the java source code. It's stored in a variable named `sqlPass`.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1170,
+                "completed": false,
+                "masked_flag": "***********************",
+                "options": []
+            },
+            {
+                "id": 1172,
+                "title": "Submit User Flag",
+                "description": "Submit the flag located in the notch user's home directory.",
+                "hint": null,
+                "type": {
+                    "id": 1,
+                    "text": "user"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "flag_rating": null,
+                "masked_flag": "32 hex characters",
+                "options": []
+            },
+            {
+                "id": 1173,
+                "title": "Task 6",
+                "description": "Is notch able to run `sudo -i` and get a shell as root?",
+                "hint": "You can see which (if any) commands the current user may run as sudo using the `sudo -l` command. Or just try it.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1172,
+                "completed": false,
+                "masked_flag": "yes or no",
+                "options": []
+            },
+            {
+                "id": 1174,
+                "title": "Submit Root Flag",
+                "description": "Submit the flag located in root's home directory.",
+                "hint": null,
+                "type": {
+                    "id": 2,
+                    "text": "root"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "flag_rating": null,
+                "masked_flag": "32 hex characters",
+                "options": []
+            }
+        ]
+    }
+}

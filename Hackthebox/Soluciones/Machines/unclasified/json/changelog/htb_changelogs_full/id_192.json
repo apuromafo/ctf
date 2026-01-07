@@ -1,0 +1,46 @@
+{
+    "machine_id": 192,
+    "endpoint": "https://labs.hackthebox.com/api/v4/machine/changelog/192",
+    "status_code": 200,
+    "headers_response": {
+        "Date": "Fri, 26 Dec 2025 23:11:04 GMT",
+        "Content-Type": "application/json",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Server": "cloudflare",
+        "CF-Ray": "9b4441517e0292cf-SCL",
+        "CF-Cache-Status": "DYNAMIC",
+        "Access-Control-Allow-Origin": "https://app.hackthebox.com",
+        "Cache-Control": "no-cache, private",
+        "Content-Encoding": "gzip",
+        "Strict-Transport-Security": "max-age=15552000; includeSubDomains",
+        "Vary": "Accept-Encoding",
+        "access-control-allow-credentials": "true",
+        "access-control-allow-headers": "Accept,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,User-Agent,X-Requested-With",
+        "access-control-allow-methods": "GET, POST, PUT, DELETE, OPTIONS",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-htb-request-id": "a0b04cfe-1500-4b15-a124-aa3cbcd51375",
+        "x-ratelimit-limit": "30",
+        "x-ratelimit-remaining": "20",
+        "x-xss-protection": "1; mode=block",
+        "Set-Cookie": "__cf_bm=j6uv6rcnQzaah3c8F7rVZV3yfa7fOjiFOFvbfZjdK8M-1766790664-1.0.1.1-h3gco4jN7y4pLrEdIubIR0Ue9Ycfx2Tey_y2NUDAxVLJuPCoaW8ZZhTRU96Y502kBjs8ALP3h3Kj4u22roPIAcHuzIBc3Yw6jDshiWn85lE; path=/; expires=Fri, 26-Dec-25 23:41:04 GMT; domain=.hackthebox.com; HttpOnly; Secure; SameSite=None",
+        "alt-svc": "h3=\":443\"; ma=86400"
+    },
+    "data": {
+        "info": [
+            {
+                "id": 274,
+                "user_id": 16,
+                "machine_id": 192,
+                "type": "3",
+                "title": "Updated OS for Hypervisor Compatibility",
+                "description": "Updated OS from linux-image-4.9.0-8-amd64 to linux-image-6.1.0-13-amd64 to fix boot issue on some hypervisors. No change to exploitation path or playability.",
+                "released": 1,
+                "created_at": "2023-10-26T09:42:19.000000Z",
+                "updated_at": "2023-10-26T09:42:19.000000Z"
+            }
+        ]
+    },
+    "timestamp": 1766790663.67835
+}

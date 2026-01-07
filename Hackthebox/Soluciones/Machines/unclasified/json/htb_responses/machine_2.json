@@ -1,0 +1,136 @@
+{
+    "id": 2,
+    "status_code": 200,
+    "content": {
+        "data": [
+            {
+                "id": 1226,
+                "title": "Task 1",
+                "description": "How many TCP ports are open on Legacy?",
+                "hint": "Scan the host with `nmap`.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "masked_flag": "number, such as 3, 17, or 4567",
+                "options": []
+            },
+            {
+                "id": 1227,
+                "title": "Task 2",
+                "description": "What is the 2008 CVE ID for a vulnerability in SMB that allows for remote code execution?",
+                "hint": "Give `nmap` the following option to scan SMB for vulnerabilities: `--script=smb-vuln*`.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1226,
+                "completed": false,
+                "masked_flag": "***-****-****",
+                "options": []
+            },
+            {
+                "id": 1228,
+                "title": "Task 3",
+                "description": "What is the name of the Metasploit module that exploits CVE-2008-4250?",
+                "hint": "Use the Metasploit 'search' command to quickly search for modules.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1227,
+                "completed": false,
+                "masked_flag": "****_***_******",
+                "options": []
+            },
+            {
+                "id": 1229,
+                "title": "Task 4",
+                "description": "When exploiting MS08-067, what user does execution run as? Include the information before and after the \\.",
+                "hint": "Exploit MS08-067 using Metasploit or one of the many scripts available on GitHub. Then check what user you are running as.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1228,
+                "completed": false,
+                "masked_flag": "username",
+                "options": []
+            },
+            {
+                "id": 1230,
+                "title": "Submit User Flag",
+                "description": "Submit the flag located on the john user's desktop.",
+                "hint": null,
+                "type": {
+                    "id": 1,
+                    "text": "user"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "flag_rating": null,
+                "masked_flag": "32 hex characters",
+                "options": []
+            },
+            {
+                "id": 1231,
+                "title": "Submit Root Flag",
+                "description": "Submit the flag located on the administrator's desktop.",
+                "hint": null,
+                "type": {
+                    "id": 2,
+                    "text": "root"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "flag_rating": null,
+                "masked_flag": "32 hex characters",
+                "options": []
+            },
+            {
+                "id": 1232,
+                "title": "Task 7",
+                "description": "In addition to MS08-067, Legacy's SMB service is also vulnerable to another remote code execution vulnerability with a CVE ID from 2017. What is that ID?",
+                "hint": "The `nmap` scripts from question 2 should show this one as well.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1231,
+                "completed": false,
+                "masked_flag": "***-****-****",
+                "options": []
+            }
+        ]
+    }
+}

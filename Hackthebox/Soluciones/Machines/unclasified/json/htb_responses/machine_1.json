@@ -1,0 +1,208 @@
+{
+    "id": 1,
+    "status_code": 200,
+    "content": {
+        "data": [
+            {
+                "id": 1233,
+                "title": "Task 1",
+                "description": "How many of the `nmap` top 1000 TCP ports are open on the remote host?",
+                "hint": "Run a `nmap` scan on the target. If you don't specify which ports to scan, it does the top 1000 by default. You can explicitly tell `nmap` to scan the top X ports with the `--top-ports X` option.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "masked_flag": "number, such as 3, 17, or 4567",
+                "options": []
+            },
+            {
+                "id": 1234,
+                "title": "Task 2",
+                "description": "What version of VSFTPd is running on Lame?",
+                "hint": "`nmap` with -sV will show versions.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1233,
+                "completed": false,
+                "masked_flag": "*.*.*",
+                "options": []
+            },
+            {
+                "id": 1235,
+                "title": "Task 3",
+                "description": "There is a famous backdoor in VSFTPd version 2.3.4, and a Metasploit module to exploit it. Does that exploit work here?",
+                "hint": "Run `msfconole`, searching for vsftpd, and try the exploit. If you need help, check out the free Academy modeule, [Using the Metasploit Framework](https://academy.hackthebox.com/module/details/39).",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1234,
+                "completed": false,
+                "masked_flag": "yes or no",
+                "options": []
+            },
+            {
+                "id": 1236,
+                "title": "Task 4",
+                "description": "What version of Samba is running on Lame? Give the numbers up to but not including \"-Debian\".",
+                "hint": "`nmap` with -A should show this.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1235,
+                "completed": false,
+                "masked_flag": "*.*.**",
+                "options": []
+            },
+            {
+                "id": 1237,
+                "title": "Task 5",
+                "description": "What 2007 CVE allows for remote code execution in this version of Samba via shell metacharacters involving the `SamrChangePassword` function when the \"username map script\" option is enabled in `smb.conf`?",
+                "hint": "There are several 2007 CVEs in this version of the software. Make sure you read about them and find the correct one.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1236,
+                "completed": false,
+                "masked_flag": "***-****-****",
+                "options": []
+            },
+            {
+                "id": 1238,
+                "title": "Task 6",
+                "description": "Exploiting CVE-2007-2447 returns a shell as which user?",
+                "hint": "Run the exploit via Metasploit or one of the many proof of concept scripts available on GitHub.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1237,
+                "completed": false,
+                "masked_flag": "username",
+                "options": []
+            },
+            {
+                "id": 1239,
+                "title": "Submit User Flag",
+                "description": "Submit the flag located in the makis user's home directory.",
+                "hint": null,
+                "type": {
+                    "id": 1,
+                    "text": "user"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "flag_rating": null,
+                "masked_flag": "32 hex characters",
+                "options": []
+            },
+            {
+                "id": 1240,
+                "title": "Submit Root Flag",
+                "description": "Submit the flag located in root's home directory.",
+                "hint": null,
+                "type": {
+                    "id": 2,
+                    "text": "root"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": null,
+                "completed": false,
+                "flag_rating": null,
+                "masked_flag": "32 hex characters",
+                "options": []
+            },
+            {
+                "id": 1241,
+                "title": "Task 9",
+                "description": "We'll explore a bit beyond just getting a root shell on the box. While the official writeup doesn't cover this, you can look at [0xdf's write-up](https://0xdf.gitlab.io/2020/04/07/htb-lame.html#beyond-root---vsftpd) for more details. With a root shell, we can look at why the VSFTPd exploit failed. Our initial `nmap` scan showed four open TCP ports. Running `netstat -tnlp` shows many more ports listening, including ones on 0.0.0.0 and the boxes external IP, so they should be accessible. What must be blocking connection to these ports?",
+                "hint": "`iptables` is an example of one of these.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1240,
+                "completed": false,
+                "masked_flag": "********",
+                "options": []
+            },
+            {
+                "id": 1242,
+                "title": "Task 10",
+                "description": "When the VSFTPd backdoor is trigger, what port starts listening?",
+                "hint": "Read about the exploit. For example, look at [this POC](https://www.exploit-db.com/exploits/49757). What does it connect to after triggering the backdoor?",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1241,
+                "completed": false,
+                "masked_flag": "number, such as 3, 17, or 4567",
+                "options": []
+            },
+            {
+                "id": 1243,
+                "title": "Task 11",
+                "description": "When the VSFTPd backdoor is triggered, does port 6200 start listening on Lame?",
+                "hint": "Run the exploit and check.",
+                "type": {
+                    "id": 0,
+                    "text": "task"
+                },
+                "task_type": {
+                    "id": 0,
+                    "text": "text"
+                },
+                "prerequisite_id": 1242,
+                "completed": false,
+                "masked_flag": "yes or no",
+                "options": []
+            }
+        ]
+    }
+}

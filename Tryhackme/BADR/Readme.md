@@ -48,7 +48,7 @@ With BADR, TryHackMe is moving cyber education from test-based to action-based. 
 ---
 
 Images
-# Index de Imágenes - BADR CTF
+# Index de Imágenes - BADR  
 
 ## 🚀 Hero & Vision
 ![hero](./img/hero.3d21ecf0.svg)
@@ -57,17 +57,30 @@ Images
 
 ---
 
-## 📊 Data Examples
-![data-1](./img/data-examples-1.90d3f3ab.svg)
+## 📊 Data Examples Mobile
+ 
 ![data-1-mobile](./img/data-examples-1-mobile.80352f5d.svg)
-![data-2](./img/data-examples-2.bc189879.svg)
+ 
 ![data-2-mobile](./img/data-examples-2-mobile.da0ad108.svg)
-![data-3](./img/data-examples-3.a43d43f6.svg)
+ 
 ![data-3-mobile](./img/data-examples-3-mobile.ff2832da.svg)
-![data-4](./img/data-examples-4.b4333686.svg)
+ 
 ![data-4-mobile](./img/data-examples-4-mobile.ce012367.svg)
-![data-5](./img/data-examples-5.9cff5898.svg)
+ 
 ![data-5-mobile](./img/data-examples-5-mobile.8c8990a4.svg)
+
+
+## 📊 Data Examples no Mobile
+![data-1](./img/data-examples-1.90d3f3ab.svg)
+ 
+![data-2](./img/data-examples-2.bc189879.svg)
+ 
+![data-3](./img/data-examples-3.a43d43f6.svg)
+ 
+![data-4](./img/data-examples-4.b4333686.svg)
+ 
+![data-5](./img/data-examples-5.9cff5898.svg)
+ 
 
 ---
 

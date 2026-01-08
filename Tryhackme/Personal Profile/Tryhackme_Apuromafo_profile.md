@@ -10,7 +10,8 @@
  "Level 18" up 08.01.2026
  !["18"](./Level_18_08_01_2026.png)
  
- 
+ Progreso al 08.01.2025 con salas gratuitas
+  !["18"](./Progreso/progreso_thm.png
  
 # Reporte de Gráficos Exportados tipo skillmatrix
 

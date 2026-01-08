@@ -1,3 +1,5 @@
+https://tryhackme.com/room/defensivesecurityintroqW
+
 1. Blue Team
 2. Security Operations Centre
 3. System Memory

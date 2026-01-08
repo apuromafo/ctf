@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Echo Pwn Maze - Standalone Edition</title>
+    <style>
+        :root { --thm-green: #a2ff00; --thm-dark: #05070a; --panel: #0d1117; }
+        body { 
+            background: var(--thm-dark); color: var(--thm-green); 
+            font-family: 'Ubuntu Mono', monospace; margin: 0; 
+            display: flex; flex-direction: column; height: 100vh; overflow: hidden;
+        }
+
+        #top-bar {
+            height: 60px; background: var(--panel); border-bottom: 2px solid #232a3b;
+            display: flex; justify-content: space-between; align-items: center; padding: 0 25px;
+        }
+
+        #main-layout {
+            display: grid; grid-template-columns: 300px 1fr 300px;
+            flex-grow: 1; height: calc(100vh - 60px);
+        }
+
+        .sidebar {
+            background: var(--panel); border-right: 1px solid #232a3b;
+            display: flex; flex-direction: column; padding: 15px;
+        }
+
+        #log-container, #ranking-list {
+            flex-grow: 1; background: #000; border: 1px solid #1a1a1a;
+            padding: 10px; font-size: 11px; overflow-y: auto; color: #4e7a00;
+        }
+
+        #viewport { display: flex; justify-content: center; align-items: center; background: #000; }
+        #game-container { position: relative; width: 450px; height: 450px; border: 2px solid var(--thm-green); }
+
+        .grid { display: grid; grid-template-columns: repeat(15, 1fr); width: 100%; height: 100%; position: absolute; }
+        .cell { display: flex; align-items: center; justify-content: center; font-size: 11px; }
+        .wall { color: var(--thm-green); background: #080a05; font-weight: bold; text-shadow: 0 0 5px var(--thm-green); }
+        .path { color: #111; background: #000; }
+
+        .entity { position: absolute; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; z-index: 20; }
+        .entity img { width: 85%; height: 85%; }
+        .immune { filter: drop-shadow(0 0 10px #fff) brightness(1.5); transform: scale(1.1); z-index: 30; }
+        .rank-item { padding: 6px; border-bottom: 1px solid #1a1a1a; color: #fff; }
+    </style>
+</head>
+<body>
+
+<div id="top-bar">
+    <div id="timer-ui" style="font-size: 26px;">00:00:00</div>
+    <div>NODE: <span id="lvl-ui">--</span> | STATUS: <span id="status-ui">NORMAL</span></div>
+    <div style="font-size: 10px; opacity: 0.5;">JS_ENGINE_LOCAL</div>
+</div>
+
+<div id="main-layout">
+    <div class="sidebar">
+        <div style="margin-bottom: 8px;">[ CONSOLE_LOG ]</div>
+        <div id="log-container"></div>
+    </div>
+
+    <div id="viewport">
+        <div id="game-container">
+            <div id="grid" class="grid"></div>
+            <div id="echo-player" class="entity"><img src="personaje/img_echo.svg"></div>
+            <div id="exit-node" class="entity"><img src="personaje/paredfinal_cuadrado.svg"></div>
+            <div id="firewall" class="entity"><img src="personaje/villano_triangulo.svg"></div>
+            <div id="star" class="entity"><img src="personaje/estrella.svg"></div>
+        </div>
+    </div>
+
+    <div class="sidebar" style="border-right:0; border-left:1px solid #232a3b;">
+        <div style="margin-bottom: 8px;">[ TOP_RANKING_B64 ]</div>
+        <div id="ranking-list"></div>
+    </div>
+</div>
+
+<script>
+    let currentMaze = [], pPos = {x:1, y:1}, ePos = {x:-1, y:-1}, sPos = {x:-1, y:-1}, exitPos = {x:13, y:13};
+    let currentLvl = 1, isImmune = false, startTime = Date.now(), isSubmitting = false;
+
+    // MATRIX EFFECT: Los ceros y unos cambian de color y valor
+    setInterval(() => {
+        document.querySelectorAll('.wall').forEach(c => {
+            if(Math.random() > 0.9) {
+                c.textContent = Math.random() > 0.5 ? "1" : "0";
+                c.style.color = Math.random() > 0.5 ? "#a2ff00" : "#4e7a00";
+            }
+        });
+    }, 120);
+
+    // CRONÓMETRO
+    setInterval(() => {
+        let diff = new Date(Date.now() - startTime);
+        document.getElementById('timer-ui').textContent = diff.toISOString().substr(14, 8);
+    }, 100);
+
+    // CARGAR NIVEL (Desde JSON local)
+    async function loadLevel(num) {
+        try {
+            const res = await fetch(`json/nivel${num}.json`);
+            const data = await res.json();
+            currentMaze = data.maze;
+            pPos = {x: data.spawn[0], y: data.spawn[1]};
+            ePos = {x: data.enemy_spawn[0], y: data.enemy_spawn[1]};
+            sPos = {x: data.star[0], y: data.star[1]};
+            exitPos = {x: data.exit[0], y: data.exit[1]};
+            
+            document.getElementById('lvl-ui').textContent = num.toString().padStart(2, '0');
+            renderGrid();
+            updatePos();
+            updateRankingUI(); 
+            addLog(`Sector ${num} cargado correctamente.`);
+        } catch(e) { addLog("ERROR: No se pudo cargar el JSON."); }
+    }
+
+    function renderGrid() {
+        const g = document.getElementById('grid'); g.innerHTML = '';
+        currentMaze.forEach(row => row.forEach(v => {
+            const c = document.createElement('div');
+            c.className = `cell ${v === 1 ? 'wall' : 'path'}`;
+            c.textContent = v;
+            g.appendChild(c);
+        }));
+    }
+
+    function updatePos() {
+        const draw = (id, pos) => {
+            const el = document.getElementById(id);
+            if(pos.x === -1) el.style.display = 'none';
+            else { el.style.display = 'flex'; el.style.left = (pos.x * 30) + 'px'; el.style.top = (pos.y * 30) + 'px'; }
+        };
+        draw('echo-player', pPos); draw('exit-node', exitPos); draw('firewall', ePos); draw('star', sPos);
+    }
+
+    function handleInput(dx, dy) {
+        let nx = pPos.x + dx, ny = pPos.y + dy;
+        if(ny >= 0 && ny < 15 && nx >= 0 && nx < 15) {
+            let onWall = currentMaze[pPos.y][pPos.x] === 1;
+            if(currentMaze[ny][nx] === 0 || isImmune || onWall) {
+                pPos.x = nx; pPos.y = ny;
+                checkCollisions();
+                if(ePos.x !== -1) moveEnemy();
+                updatePos();
+            } else { addLog("Bloqueo físico detectado."); }
+        }
+    }
+
+    function moveEnemy() {
+        let dx = pPos.x > ePos.x ? 1 : pPos.x < ePos.x ? -1 : 0;
+        let dy = pPos.y > ePos.y ? 1 : pPos.y < ePos.y ? -1 : 0;
+        if(currentMaze[ePos.y + dy] && currentMaze[ePos.y + dy][ePos.x + dx] === 0) {
+            ePos.x += dx; ePos.y += dy;
+        }
+    }
+
+    function checkCollisions() {
+        if(pPos.x === sPos.x && pPos.y === sPos.y) {
+            sPos = {x:-1, y:-1}; isImmune = true;
+            addLog("OVERDRIVE activado (8s).");
+            document.getElementById('echo-player').classList.add('immune');
+            document.getElementById('status-ui').textContent = "OVERDRIVE";
+            setTimeout(() => { 
+                isImmune = false; 
+                document.getElementById('echo-player').classList.remove('immune');
+                document.getElementById('status-ui').textContent = "NORMAL";
+            }, 8000);
+        }
+        if(pPos.x === ePos.x && pPos.y === ePos.y && !isImmune) {
+            addLog("FIREWALL: Reiniciando nodo.");
+            loadLevel(currentLvl);
+        }
+        if(pPos.x === exitPos.x && pPos.y === exitPos.y) {
+            if(currentLvl < 10) { currentLvl++; loadLevel(currentLvl); }
+            else winGame();
+        }
+    }
+
+    function addLog(msg) {
+        const box = document.getElementById('log-container');
+        const d = document.createElement('div');
+        d.innerHTML = `<span style="color:#222;">></span> ${msg}`;
+        box.prepend(d);
+        if(box.childNodes.length > 30) box.removeChild(box.lastChild);
+    }
+
+    // PERSISTENCIA LOCAL (Simula scores.db usando LocalStorage)
+    function saveScoreLocal(user) {
+        let scores = JSON.parse(localStorage.getItem('pwn_scores') || "[]");
+        let entry = `USER: ${user} | LVL: ${currentLvl} | TIME: ${document.getElementById('timer-ui').textContent}`;
+        // Lo guardamos codificado en B64 como pediste
+        scores.push(btoa(entry));
+        localStorage.setItem('pwn_scores', JSON.stringify(scores));
+        updateRankingUI();
+    }
+
+    function updateRankingUI() {
+        const list = document.getElementById('ranking-list');
+        list.innerHTML = '';
+        let scores = JSON.parse(localStorage.getItem('pwn_scores') || "[]");
+        scores.reverse().forEach(b64 => {
+            let div = document.createElement('div');
+            div.className = 'rank-item';
+            div.textContent = atob(b64);
+            list.appendChild(div);
+        });
+    }
+
+    function winGame() {
+        if(isSubmitting) return;
+        isSubmitting = true;
+        let alias = prompt("SISTEMA COMPROMETIDO. Alias para el ranking:");
+        if(alias) {
+            saveScoreLocal(alias);
+            addLog("Datos inyectados localmente.");
+            setTimeout(() => location.reload(), 1500);
+        } else { isSubmitting = false; }
+    }
+
+    window.onkeydown = (e) => {
+        if(["ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].includes(e.key)) e.preventDefault();
+        if(e.key === 'ArrowUp') handleInput(0,-1);
+        if(e.key === 'ArrowDown') handleInput(0,1);
+        if(e.key === 'ArrowLeft') handleInput(-1,0);
+        if(e.key === 'ArrowRight') handleInput(1,0);
+    };
+
+    loadLevel(1);
+</script>
+</body>
+</html>

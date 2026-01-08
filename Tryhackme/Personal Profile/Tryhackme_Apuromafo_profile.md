@@ -11,34 +11,35 @@
  !["18"](./Level_18_08_01_2026.png)
  
  
- # Reporte de Gráficos Exportados tipo skillmatrix
+ 
+# Reporte de Gráficos Exportados tipo skillmatrix
 
 ## 🟢 Nivel Entry (Entrada)
-![Entry Foundational](./Skill Matrix/skill_matrix_08_01_2026/entry_foundational.png)
-![Entry Penetration Tester](./Skill Matrix/skill_matrix_08_01_2026/entry_penetration_tester.png)
-![Entry Security Analyst](./Skill Matrix/skill_matrix_08_01_2026/entry_security_analyst.png)
-![Entry Security Engineer](./Skill Matrix/skill_matrix_08_01_2026/entry_security_engineer.png)
+![Entry Foundational](./Skill%20Matrix/skill_matrix_08_01_2026/entry_foundational.png)
+![Entry Penetration Tester](./Skill%20Matrix/skill_matrix_08_01_2026/entry_penetration_tester.png)
+![Entry Security Analyst](./Skill%20Matrix/skill_matrix_08_01_2026/entry_security_analyst.png)
+![Entry Security Engineer](./Skill%20Matrix/skill_matrix_08_01_2026/entry_security_engineer.png)
 
 ---
 
 ## 🟡 Nivel Junior
-![Junior Foundational](./Skill Matrix/skill_matrix_08_01_2026/junior_foundational.png)
-![Junior Penetration Tester](./Skill Matrix/skill_matrix_08_01_2026/junior_penetration_tester.png)
-![Junior Security Analyst](./Skill Matrix/skill_matrix_08_01_2026/junior_security_analyst.png)
-![Junior Security Engineer](./Skill Matrix/skill_matrix_08_01_2026/junior_security_engineer.png)
+![Junior Foundational](./Skill%20Matrix/skill_matrix_08_01_2026/junior_foundational.png)
+![Junior Penetration Tester](./Skill%20Matrix/skill_matrix_08_01_2026/junior_penetration_tester.png)
+![Junior Security Analyst](./Skill%20Matrix/skill_matrix_08_01_2026/junior_security_analyst.png)
+![Junior Security Engineer](./Skill%20Matrix/skill_matrix_08_01_2026/junior_security_engineer.png)
 
 ---
 
 ## 🟠 Nivel Mid
-![Mid Foundational](./Skill Matrix/skill_matrix_08_01_2026/mid_foundational.png)
-![Mid Penetration Tester](./Skill Matrix/skill_matrix_08_01_2026/mid_penetration_tester.png)
-![Mid Security Analyst](./Skill Matrix/skill_matrix_08_01_2026/mid_security_analyst.png)
-![Mid Security Engineer](./Skill Matrix/skill_matrix_08_01_2026/mid_security_engineer.png)
+![Mid Foundational](./Skill%20Matrix/skill_matrix_08_01_2026/mid_foundational.png)
+![Mid Penetration Tester](./Skill%20Matrix/skill_matrix_08_01_2026/mid_penetration_tester.png)
+![Mid Security Analyst](./Skill%20Matrix/skill_matrix_08_01_2026/mid_security_analyst.png)
+![Mid Security Engineer](./Skill%20Matrix/skill_matrix_08_01_2026/mid_security_engineer.png)
 
 ---
 
 ## 🔴 Nivel Senior
-![Senior Foundational](./Skill Matrix/skill_matrix_08_01_2026/senior_foundational.png)
-![Senior Penetration Tester](./Skill Matrix/skill_matrix_08_01_2026/senior_penetration_tester.png)
-![Senior Security Analyst](./Skill Matrix/skill_matrix_08_01_2026/senior_security_analyst.png)
-![Senior Security Engineer](./Skill Matrix/skill_matrix_08_01_2026/senior_security_engineer.png)
+![Senior Foundational](./Skill%20Matrix/skill_matrix_08_01_2026/senior_foundational.png)
+![Senior Penetration Tester](./Skill%20Matrix/skill_matrix_08_01_2026/senior_penetration_tester.png)
+![Senior Security Analyst](./Skill%20Matrix/skill_matrix_08_01_2026/senior_security_analyst.png)
+![Senior Security Engineer](./Skill%20Matrix/skill_matrix_08_01_2026/senior_security_engineer.png)

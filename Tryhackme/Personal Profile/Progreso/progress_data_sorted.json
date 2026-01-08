@@ -1,0 +1,1002 @@
+[
+    {
+        "roomCode": "webhackingusingcurl-aoc2025-w8q1a4s7d0",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "cloudenum-aoc2025-y4u7i0o3p6",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "detecting-c2-with-rita-aoc2025-m9n2b5v8c1",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "sq4-aoc2025-32LoZ4zePK",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "htapowershell-aoc2025-p2l5k8j1h4",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "race-conditions-aoc2025-d7f0g3h6j9",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "ICS-modbus-aoc2025-g3m6n9b1v4",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "obfuscation-aoc2025-e5r8t2y6u9",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "sq3-aoc2025-bk3vvbcgiT",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "encoding-decoding-aoc2025-s1a4z7x0c3",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "registry-forensics-aoc2025-h6k9j2l5p8",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "webattackforensics-aoc2025-b4t7c1d5f8",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "container-security-aoc2025-z0x3v6n9m2",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "yara-aoc2025-q9w1e3y5u7",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "spottingphishing-aoc2025-r2g4f6s8l0",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "xss-aoc2025-c5j8b1m4t6",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "azuresentinel-aoc2025-a7d3h9k0p2",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "sq2-aoc2025-JxiOKUSD9R",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "attacks-on-ecrypted-files-aoc2025-asdfghj123",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "promptinjection-aoc2025-sxUMnCkvLO",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "networkservices-aoc2025-jnsoqbxgky",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "malware-sandbox-aoc2025-SD1zn4fZQt",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "react2shellcve202555182",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "idor-aoc2025-zl6MywQid9",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "AIforcyber-aoc2025-y9wWQ1zRgB",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "splunkforloganalysis-aoc2025-x8fj2k4rqp",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "phishing-aoc2025-h2tkye9fzU",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "sq1-aoc2025-FzPnrt2SAu",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "linuxcli-aoc2025-o1fpqkvxti",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "bankgpt",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "thecasesevenminutesontheseine",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "adventofcyberpreptrack",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "djangocve202564459",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "wafintroduction",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "owasptopten2025three",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "owasptopten2025two",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "owasptopten2025one",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "inputmanipulationpromptinjection",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "phishingpond",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "networktrafficbasics",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "networkdiscoverydetection",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "networksecurityessentials",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "linuxthreatdetection1",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "linuxloggingforsoc",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "chainingvulnerabilitiesZp",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "appsecir",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "detectingwebattacks",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "socroleinblueteam",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "malwareclassification",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "sessionforensics",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "introductiontoedrs",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "websecurityessentials",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "hack2win",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "loganalysiswithsiem",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "fileandhashthreatintel",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "contrabando",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "eventhorizonroom",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "soupedecode01",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "directorydfirroom",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "honeynet-collapse",
+        "progressPercentage": 2
+    },
+    {
+        "roomCode": "windowsthreatdetection1",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "aimlsecuritythreats",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "oracle9",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "windowsloggingforsoc",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "cyberkillchain",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "roundcubecve202549113",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "volatilityessentials",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "mobileacquisition",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "adbasicenumeration",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "volttyphoon",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "apt28inceptiontheory",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "writingpentestreports",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "securityfootage",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "moebius",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "erlangotpsshcve202532433",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "memoryanalysisintroduction",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "customtoolingpython",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "mayhemroom",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "socl1alertreporting",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "macosforensicsartefacts",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "xdrintroduction",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "socl1alerttriage",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "compromisedwindowsanalysis",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "breakingcryptothesimpleway",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "macosforensicsbasics",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "nextjscve202529927",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "robots",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "billing",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "HackfinityBattle",
+        "progressPercentage": 12
+    },
+    {
+        "roomCode": "kqlkustobasicqueries",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "kqlkustointroduction",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "sentinelintroduction",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "cryptofailures",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "rabbitstore",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "fat32analysis",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "bypassreallysimplesecurity",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "smol",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "mbrandgptanalysis",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "lightroom",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "lofi",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "insecurerandomness",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "silverplatter",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "adventofcyber2024",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "adventofcyber24sidequest",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "thestickershop",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "incidentresponseprocess",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "lookup",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "supplychainattacks",
+        "progressPercentage": 0
+    },
+    {
+        "roomCode": "threathuntingwithyara",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "whiterose",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "rabbitholeqq",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "webapplicationbasics",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "training",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "cryptographybasics",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "cyberchefbasics",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "socfundamentals",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "networkingconcepts",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "searchskills",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "windowscommandline",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "mountaineerlinux",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "extractedroom",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "backtrack",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "pyrat",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "thelondonbridge",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "cheesectfv10",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "breakmenu",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "linuxincidentsurface",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "irplaybooks",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "k8sruntimesecurity",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "hostedhypervisors",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "hypervisorinternals",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "yueiua",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "papercut",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "introtocoldsystemforensics",
+        "progressPercentage": 0
+    },
+    {
+        "roomCode": "microservicearchitectures",
+        "progressPercentage": 0
+    },
+    {
+        "roomCode": "blockroom",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "joomify",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "apiwizardsbreach",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "forensicimaging",
+        "progressPercentage": 0
+    },
+    {
+        "roomCode": "enumerationbruteforce",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "introductiontocryptops",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "critical",
+        "progressPercentage": 0
+    },
+    {
+        "roomCode": "k8sbestsecuritypractices",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "thenewyorkflankees",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "nosqlinjectiontutorial",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "publisher",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "winincidentsurface",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "clusterhardening",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "w1seguy",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "snykcode",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "snykopensource",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "mkingdom",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "advancedsqlinjection",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "airplane",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "linuxprocessanalysis",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "dfirtimelineanalysis",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "cyberlensp6",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "irphilosophyethics",
+        "progressPercentage": 0
+    },
+    {
+        "roomCode": "profilesroom",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "insecuredeserialisation",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "capturereturns",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "csrfV2",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "axss",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "tryhack3mbricksheist",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "sch3mad3mon",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "creative",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "clocky",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "linuxfilesystemanalysis",
+        "progressPercentage": 0
+    },
+    {
+        "roomCode": "hacksmartersecurity",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "dfirprocesslegalconsiderations",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "http2requestsmuggling",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "chrome",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "monikerlink",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "breakrsa",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "introtoiac",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "kitty",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "httprequestsmuggling",
+        "progressPercentage": 0
+    },
+    {
+        "roomCode": "umbrella",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "gitlabcve20237028",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "ssrfhr",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "whyhackme",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "armageddon2r",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "surfingyetiiscomingtotown",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "adv3nt0fdbopsjcap",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "busyvimfrosteau",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "adventofcyber2023",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "adventofcyber23sidequest",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "cactus",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "dreaming",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "servidae",
+        "progressPercentage": 0
+    },
+    {
+        "roomCode": "hijack",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "confluence202322515",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "registrypersistencedetection",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "looneytunes",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "compiled",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "logoperations",
+        "progressPercentage": 0
+    },
+    {
+        "roomCode": "introtologanalysis",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "threathuntingfoothold",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "introductiontothreathunting",
+        "progressPercentage": 0
+    },
+    {
+        "roomCode": "supersecrettip",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "4th3n4",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "introtosecurityarchitecture",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "burpsuiterepeater",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "preparation",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "introtologs",
+        "progressPercentage": 0
+    },
+    {
+        "roomCode": "identificationandscoping",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "threatemulationintro",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "crylo4a",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "securityengineerintro",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "cve202338408",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "forgottenimplant",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "splunkexploringspl",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "parrotpost",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "x8664arch",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "redisl33t",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "catpictures2",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "owaspbrokenaccesscontrol",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "cybergovernanceregulation",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "flip",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "threatintelligenceforsoc",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "raceconditions",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "becomeahackeroa",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "introtodetectionengineering",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "caseb4dm755",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "valleype",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "prioritise",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "capture",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "introtodockerk8pdqk",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "obscured",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "iampermissions",
+        "progressPercentage": 0
+    },
+    {
+        "roomCode": "thequestforleastprivilege",
+        "progressPercentage": 0
+    },
+    {
+        "roomCode": "iamcredentials",
+        "progressPercentage": 0
+    },
+    {
+        "roomCode": "attackingdefendingvpcs",
+        "progressPercentage": 0
+    },
+    {
+        "roomCode": "awss3service",
+        "progressPercentage": 0
+    },
+    {
+        "roomCode": "amazonec2attackdefense",
+        "progressPercentage": 0
+    },
+    {
+        "roomCode": "stscredentialslab",
+        "progressPercentage": 0
+    },
+    {
+        "roomCode": "awsvpcdataexfiltration",
+        "progressPercentage": 0
+    },
+    {
+        "roomCode": "awslambda",
+        "progressPercentage": 0
+    },
+    {
+        "roomCode": "cloud101aws",
+        "progressPercentage": 0
+    },
+    {
+        "roomCode": "lambdadataexfiltration",
+        "progressPercentage": 0
+    },
+    {
+        "roomCode": "iamprincipals",
+        "progressPercentage": 0
+    },
+    {
+        "roomCode": "awsiaminitialaccess",
+        "progressPercentage": 0
+    },
+    {
+        "roomCode": "awsiamenumeration",
+        "progressPercentage": 0
+    },
+    {
+        "roomCode": "awsbasicconcepts",
+        "progressPercentage": 0
+    },
+    {
+        "roomCode": "awsapigateway",
+        "progressPercentage": 0
+    },
+    {
+        "roomCode": "introductiontoawsiam",
+        "progressPercentage": 0
+    },
+    {
+        "roomCode": "opacity",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "sdlc",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "outlookntlmleak",
+        "progressPercentage": 100
+    },
+    {
+        "roomCode": "unattended",
+        "progressPercentage": 100
+    }
+]

@@ -1,0 +1,37 @@
+{
+    "status": "success",
+    "data": {
+        "skills": [
+            {
+                "code": "Security Analysis",
+                "label": "Security Analysis",
+                "score": 91
+            },
+            {
+                "code": "Digital Forensics",
+                "label": "Digital Forensics",
+                "score": 88
+            },
+            {
+                "code": "Incident Response",
+                "label": "Incident Response",
+                "score": 52
+            },
+            {
+                "code": "Security Operations",
+                "label": "Security Operations",
+                "score": 89
+            },
+            {
+                "code": "Threat Hunting",
+                "label": "Threat Hunting",
+                "score": 70
+            },
+            {
+                "code": "Detection Engineering",
+                "label": "Detection Engineering",
+                "score": 93
+            }
+        ]
+    }
+}

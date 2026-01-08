@@ -1,0 +1,37 @@
+{
+    "status": "success",
+    "data": {
+        "skills": [
+            {
+                "code": "Security Operations",
+                "label": "Security Operations",
+                "score": 90
+            },
+            {
+                "code": "Incident response",
+                "label": "Incident response",
+                "score": 54
+            },
+            {
+                "code": "Malware Analysis",
+                "label": "Malware Analysis",
+                "score": 56
+            },
+            {
+                "code": "Penetration Testing",
+                "label": "Penetration Testing",
+                "score": 87
+            },
+            {
+                "code": "Exploitation",
+                "label": "Exploitation",
+                "score": 97
+            },
+            {
+                "code": "Red Teaming",
+                "label": "Red Teaming",
+                "score": 100
+            }
+        ]
+    }
+}

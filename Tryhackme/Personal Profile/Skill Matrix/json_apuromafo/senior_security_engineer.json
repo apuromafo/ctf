@@ -1,0 +1,32 @@
+{
+    "status": "success",
+    "data": {
+        "skills": [
+            {
+                "code": "Security Architecture",
+                "label": "Security Architecture",
+                "score": 75
+            },
+            {
+                "code": "Threat Management",
+                "label": "Threat Management",
+                "score": 54
+            },
+            {
+                "code": "Incident Response",
+                "label": "Incident Response",
+                "score": 38
+            },
+            {
+                "code": "Identity Security",
+                "label": "Identity Security",
+                "score": 100
+            },
+            {
+                "code": "Security Automation",
+                "label": "Security Automation",
+                "score": 0
+            }
+        ]
+    }
+}

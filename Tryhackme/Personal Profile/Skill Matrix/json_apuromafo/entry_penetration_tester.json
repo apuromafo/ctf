@@ -1,0 +1,37 @@
+{
+    "status": "success",
+    "data": {
+        "skills": [
+            {
+                "code": "Penetration Testing",
+                "label": "Penetration Testing",
+                "score": 84
+            },
+            {
+                "code": "Red Teaming",
+                "label": "Red Teaming",
+                "score": 95
+            },
+            {
+                "code": "Exploitation",
+                "label": "Exploitation",
+                "score": 81
+            },
+            {
+                "code": "Enumeration",
+                "label": "Enumeration",
+                "score": 96
+            },
+            {
+                "code": "Privilege Escalation",
+                "label": "Privilege Escalation",
+                "score": 100
+            },
+            {
+                "code": "Vulnerability Analysis",
+                "label": "Vulnerability Analysis",
+                "score": 86
+            }
+        ]
+    }
+}

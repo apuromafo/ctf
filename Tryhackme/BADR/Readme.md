@@ -53,6 +53,9 @@ Images
 ## 🚀 Hero & Vision
 ![hero](./img/hero.3d21ecf0.svg)
 ![the-vision](./img/the-vision.3f0b242a.svg)
+
+
+## Vision Mobile
 ![the-vision-mobile](./img/the-vision-mobile.5d26450f.svg)
 
 ---
@@ -84,10 +87,21 @@ Images
 
 ---
 
-## 🛠️ How we use & What it does
-![how-1](./img/how-we-use-1.a71e3faa.svg)
+## 🛠️ How we use & What it does Mobile
+ 
 ![how-1-mobile](./img/how-we-use-1-mobile.0e458395.svg)
-![how-2](./img/how-we-use-2.096bd731.svg)
+ 
 ![how-2-mobile](./img/how-we-use-2-mobile.d4a31156.svg)
+ 
+ 
+
+## 🛠️ How we use & What it does no Mobile
+how 1
+![how-1](./img/how-we-use-1.a71e3faa.svg)
+ how 2
+![how-2](./img/how-we-use-2.096bd731.svg)
+ what it 1
 ![what-1](./img/what-it-does-1.77c26a9e.svg)
+what it 3
 ![what-3](./img/what-it-does-3.39878a4d.svg)
+

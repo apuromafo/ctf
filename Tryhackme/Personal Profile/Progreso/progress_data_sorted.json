@@ -429,7 +429,7 @@
     },
     {
         "roomCode": "supplychainattacks",
-        "progressPercentage": 0
+        "progressPercentage": 100
     },
     {
         "roomCode": "threathuntingwithyara",
@@ -533,11 +533,11 @@
     },
     {
         "roomCode": "introtocoldsystemforensics",
-        "progressPercentage": 0
+        "progressPercentage": 100
     },
     {
         "roomCode": "microservicearchitectures",
-        "progressPercentage": 0
+        "progressPercentage": 100
     },
     {
         "roomCode": "blockroom",
@@ -553,7 +553,7 @@
     },
     {
         "roomCode": "forensicimaging",
-        "progressPercentage": 0
+        "progressPercentage": 100
     },
     {
         "roomCode": "enumerationbruteforce",
@@ -565,7 +565,7 @@
     },
     {
         "roomCode": "critical",
-        "progressPercentage": 0
+        "progressPercentage": 100
     },
     {
         "roomCode": "k8sbestsecuritypractices",
@@ -629,7 +629,7 @@
     },
     {
         "roomCode": "irphilosophyethics",
-        "progressPercentage": 0
+        "progressPercentage": 100
     },
     {
         "roomCode": "profilesroom",
@@ -669,7 +669,7 @@
     },
     {
         "roomCode": "linuxfilesystemanalysis",
-        "progressPercentage": 0
+        "progressPercentage": 100
     },
     {
         "roomCode": "hacksmartersecurity",
@@ -705,7 +705,7 @@
     },
     {
         "roomCode": "httprequestsmuggling",
-        "progressPercentage": 0
+        "progressPercentage": 100
     },
     {
         "roomCode": "umbrella",
@@ -757,7 +757,7 @@
     },
     {
         "roomCode": "servidae",
-        "progressPercentage": 0
+        "progressPercentage": 100
     },
     {
         "roomCode": "hijack",
@@ -781,7 +781,7 @@
     },
     {
         "roomCode": "logoperations",
-        "progressPercentage": 0
+        "progressPercentage": 100
     },
     {
         "roomCode": "introtologanalysis",
@@ -793,7 +793,7 @@
     },
     {
         "roomCode": "introductiontothreathunting",
-        "progressPercentage": 0
+        "progressPercentage": 100
     },
     {
         "roomCode": "supersecrettip",
@@ -817,7 +817,7 @@
     },
     {
         "roomCode": "introtologs",
-        "progressPercentage": 0
+        "progressPercentage": 100
     },
     {
         "roomCode": "identificationandscoping",

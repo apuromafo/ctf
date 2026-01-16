@@ -1,0 +1,11 @@
+# New Updates to Points, Leaderboards, and Ranks
+
+**ID Original:** 64f0a68c91ff6400019bcfee
+**Slug:** updates-to-points-leaderboard-ranks
+--------------------
+
+At TryHackMe, we are always listening to our community and looking for ways to improve the platform. As such, we would like to announce some big changes to the way points are awarded and how users are presented on the leaderboard.
+## New changes (from today)
+Currently, you can accumulate [points](https://help.tryhackme.com/en/articles/6563910-how-do-points-work?ref=blog.tryhackme.com) by completing rooms. Completing challenge rooms in the same month they are released will award you with more points. The more points you collect, the higher up in the leaderboard you will be.For example, completing "walkthrough" rooms within the same month that they are released will award you 25% of the available points to your account, meanwhile, completing "challenge" rooms within the same month they are released will award 100% of the points to your account, on both the monthly and all-time leaderboards. From Friday 1st of September, 2023, **leaderboards and “Top X%” calculations on TryHackMe will only take into account users with more than 100 points**. This means that users with fewer than 100 points will no longer be featured on the leaderboards, but will have a message on their dashboard informing them how many points are left before they become ranked.
+## What the new update means for you
+With this new update, we intend to provide users with a more accurate ranking by excluding the small percentage of inactive users. As only users with more than 100 points will be included in the leaderboard, some users may notice a drop in their rank. We believe this will make the “Top X%” and leaderboard rankings more balanced and fair to our most dedicated users.TryHackMe is committed to delivering the best possible experience and, as always, we appreciate your understanding and dedication. Thank you for being a part of the TryHackMe community!If you have any questions regarding these updates, please reach out to [support@tryhackme.com](mailto:support@tryhackme.com) 📧

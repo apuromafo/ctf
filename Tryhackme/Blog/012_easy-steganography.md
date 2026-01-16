@@ -1,0 +1,17 @@
+# Easy Steganography
+
+**ID Original:** 60e84cd565e4000001040842
+**Slug:** easy-steganography
+--------------------
+
+Steganography is an art of hiding information into something that looks something else (legitimate) but in fact contains the message embedded into it. This technique is very old and have been used during the wars in order to communicate secret messages and codes within the battalions, brigades and teams. In this writeup we are going to see the same technique and will be analyzing different images containing the hidden information within them.**Note: **The techniques may differ from person to person and others might have their own ways of solving these challenges.
+
+Follow along with this writeup! [https://tryhackme.com/room/easysteganography](https://tryhackme.com/room/easysteganography?ref=blog.tryhackme.com)In this challenge we are provided with a "zip" file. Containing different images. On unzipping this zip file with "unzip" command we can find the zipped images 'jpegs'.There are 4 images. All are same images but the way information has been hid into these is different and so does the techniques used to extract the data will be different. 
+## Flag 1 - JPEG
+On opening the "flag1.jpeg" we can see that it is a simple picture and there is nothing on it. On analyzing the image with "exiftool", "binwalk" yielded not enough results. So i moved onto using strings and HexDump. Note: As we need to find the flag and we are not provided with the its pattern. I assumed that the flag might start with 'T' for 'T*', 's' for 's*', 'S' for 'S*', 'H' for 'H*', 'h' for 'h*', 'f' for 'f*' and similarly 'F' for 'F*' where * is a wildcard!While keeping these in my mind and by using strings || HexDump i was able to find the flag! hexdump -C flag1.jpeg | grep S
+## Flag 2 - JPEG
+On trying to use the 'binwalk' on the second image. It yielded a result that this image contains another image embedded within it. We need to extract this image and then we will be able to analyze that further.'binwalk' allows extracting the embedded data/files etc. when provided '-e' attribute/flag but that won't work in this scenario. We will have to use '--dd' flag/attribute to get the image.binwalk --dd '.*' flag2.jpegAs the data has been extracted. 'binwalk' creates a separate folder and puts all the data in there. We can see that we have much data and by using 'file' utility we can see that there are two other 'JPEG' files. We can use 'eog' to view these images and can find our flag! 
+## Flag 3 - JPEG
+This challenge was the most easier than the previous ones. By using the 'strings' utility we can find a line which gives us the password for this challenge and that's out flag.
+## Flag 4 - JPEG
+By using the same technique as we have used for grabbing the flag 2. We can see 'binwalk' has to tell us that this image contains some XML data.Using the same command as for flag 2 we can extract the XML files. Did you remember the note which i added within the 'Flag 1' portion?Using the 'strings' and grepping the character 'T' i was able to grab the flag.With all this we have successfully completed these little challenges. I hope that you now have an idea that this technique proved to be worth it during the wars but the fact is it is not secure. If a person is good at 'steganography', they will be able to find the hidden information.I hope you have enjoyed learning it!If you have any queries you can catch me on Twitter @[w4tch_d0g](https://twitter.com/w4tch_d0g?ref=blog.tryhackme.com) and on TryHackMe Discord.

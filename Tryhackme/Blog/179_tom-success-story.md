@@ -1,0 +1,21 @@
+# From IT Support to Pentester: Tom's Transition to Cyber
+
+**ID Original:** 662f600891ff6400019bdab0
+**Slug:** tom-success-story
+--------------------
+
+At TryHackMe, we not only love to hear about your career progression and learning journey, but also how many of you decide to transition to cyber security from IT, or even from roles unrelated to the tech industry!This time, we spoke to Tom, a Penetration Tester who previously worked in an IT support role. Keep reading to find out more about Tom’s switch from IT to a career in cyber security!
+## For users reading, please tell us about yourself and your background!
+I first started learning about cyber security while at university and through TryHackMe in my free time! I graduated from university with a computer science degree in 2021 and went straight into working for a managed service provider as a Cyber Security Support Engineer for nine months. This role involved basic support work that you would expect in a first-line position, with a small focus on end-user security, such as identifying and blocking phishing emails.I took a four-month break to dedicate to my full-time studies and ended up completing TryHackMe’s [Junior Penetration Tester](https://tryhackme.com/r/path/outline/jrpenetrationtester?ref=blog.tryhackme.com) and [Offensive Pentesting](https://tryhackme.com/r/path/outline/pentesting?ref=blog.tryhackme.com) paths. After that, I landed a Junior Pentest position at SecQuest Information Security Limited. They put me through the Cyber Scheme Team Member exam, which I passed, and then I went on to become a Penetration Tester.Since then, I have continued to progress and now specialise in Android and iOS mobile application penetration testing. I recently passed the OSCP exam, and later this month, I plan to take the SANS iOS and Android Application Security Analysis and Penetration Testing course and exam.
+## What motivated you to transition from a support role to penetration testing?
+Before I took a four-month break, I found my support role boring and repetitive. I knew I needed a more technical role that would challenge me, and I thought there would be better career progression and opportunities in penetration testing.
+## How has your experience in IT support helped you in your journey towards becoming a Penetration Tester?
+My support role was very public-facing, so I was on the phone or emailing end users on a daily basis. This experience has been useful, as I am comfortable interacting with clients in meetings or on-site.  Your social skills are important for doing well in interviews and building relationships with clients!
+## What was the most challenging part of transitioning to cyber security, and how did you rise above those challenges?
+As a Penetration Tester, you need to have a wide range of knowledge that takes a long time to build up. This meant I initially struggled with Capture the Flags (CTFs). To overcome this, I dedicated a lot of time to learning through guided content and building up my notes before attempting CTFs again.I would also recommend TryHackMe’s [Junior Penetration Tester](https://tryhackme.com/r/path/outline/jrpenetrationtester?ref=blog.tryhackme.com) and [Offensive Pentesting](https://tryhackme.com/r/path/outline/pentesting?ref=blog.tryhackme.com) learning paths. As they are very user-friendly and guided, I would recommend these paths to any beginner![Advent of Cyber](https://tryhackme.com/r/christmas?ref=blog.tryhackme.com) was the first thing I did on TryHackMe, and I found it to be a really great way to cover small topics and build a habit of learning every day.
+## What advice would you give someone in IT looking to take the leap to cyber?
+
+* Set an ambitious goal and don’t be afraid to take risks (especially if you are early in your career)
+* Start with guided learning and make detailed notes
+* Invest in yourself with [certifications](https://tryhackme.com/r/resources/blog/certifications-in-cyber-security?ref=blog.tryhackme.com) or courses
+* Don't be afraid to apply for jobs, even if you’re not fully qualified!Tom, thank you for sharing your journey from support to penetration testing, and the TryHackMe team are excited to see how you progress in your career. You can follow [Tom’s journey on LinkedIn](http://www.linkedin.com/in/tom-unsworth-817a541a1?ref=blog.tryhackme.com).

@@ -1,0 +1,43 @@
+# Our Festive Gift Guide for Security Professionals!
+
+**ID Original:** 657ad48891ff6400019bd4d7
+**Slug:** cyber-security-gift-guide
+--------------------
+
+The holiday season is upon us, so you’re likely searching for the perfect gift for a loved one. Forget about candles or deodorant sets. Give them a gift they'll really love with our festive cyber security gift ideas! Whether they're a beginner, an intermediate learner, or a seasoned professional, here are our top 12 gift ideas to delight and inspire their hacking adventures:
+## 1. TryHackMe swag
+Swag is very popular among TryHackMe users and is the perfect way for a loved one to wear their cyber security expertise with pride and style, making for a stylish and meaningful gift!Some popular choices include:
+* [Advent of Cyber Hoodie](https://store.tryhackme.com/collections/all/products/advent-of-cyber-hoodie-1?ref=blog.tryhackme.com)
+* [Advent of Cyber Unisex T-Shirt](https://store.tryhackme.com/collections/all/products/aoc-unisex-t-shirt?ref=blog.tryhackme.com)
+* [Advent of Cyber Byte Unisex T-Shirt](https://store.tryhackme.com/collections/all/products/aoc-byte-t-shirt?ref=blog.tryhackme.com)
+* [Short-Sleeve Unisex T-Shirt](https://store.tryhackme.com/collections/all/products/short-sleeve-unisex-t-shirt?ref=blog.tryhackme.com)
+* [Unisex Sweatshirt](https://store.tryhackme.com/collections/all/products/unisex-sweatshirt?ref=blog.tryhackme.com)
+* [Unisex Hoodie](https://store.tryhackme.com/collections/all/products/unisex-hoodie?ref=blog.tryhackme.com)
+* [Stainless Steel Water Bottle](https://store.tryhackme.com/collections/all/products/stainless-steel-water-bottle?ref=blog.tryhackme.com)
+## 2. Happy SOC-mas socks
+Looking for gifts for a SOC Analyst? We've got you covered! Featuring TryHackMe's very own Glitch character, our [Happy SOC-mas socks](https://store.tryhackme.com/collections/all/products/advent-of-cyber-socks?ref=blog.tryhackme.com) are perfect for security professionals, SOC analysts, and hackers alike, and bring festive cheer to every step. Crafted for comfort and durability, they keep your feet cosy while tracking down threats.
+## 3. TryHackMe stickers
+Know someone who wants to show off their love for TryHackMe? As one of our most popular store purchases, TryHackMe stickers are an affordable gift for any TryHackMe user. Whether you’re a penetration testing pro, a bug bounty hunter, or just diving into the world of ethical hacking, these high-quality, vibrant stickers are the ultimate way to customise your gear. Perfect for laptops, notebooks, water bottles, or any surface that needs a touch of cyber flair. Choose from [white](https://store.tryhackme.com/collections/all/products/white-tryhackme-sticker?ref=blog.tryhackme.com) or [grey](https://store.tryhackme.com/collections/all/products/gray-tryhackme-sticker-1?ref=blog.tryhackme.com)!
+## 4. Custom ‘Red Team’ field kit
+This might just be one of the coolest gifts for a pentester friend! Hak5’s [Custom Red Team Field Kit](https://hak5.org/pages/custom-red-team-field-kit?ref=blog.tryhackme.com) allows you to build a custom kit to help keep your loved one organised and ready for any engagement!The kit features 18 straps for Hak5 gear and O.MG Cables, two large WiFi Pineapple and antenna pockets, and a mesh accessory zipper compartment to store loose accessories. Its large laptop compartment accommodates laptops up to 16”.
+## 5. TryHackMe subscription vouchers
+What better way to support a loved one than by sharing the power of knowledge and mastering new skills! Give them access to a wealth of resources, hands-on labs, and engaging challenges designed to enhance their cyber security skills 😉With our ‘[Gift a Subscription](https://tryhackme.com/subscriptions?utm_source=giftguide&utm_medium=blog&utm_campaign=giftingsubscription)’ feature, you can purchase TryHackMe vouchers for your pals and loved ones, ranging from a one-month subscription to two years. Learning cyber security with friends helps keep learning on track and is a whole bunch of fun!Gift a Subscription!
+## 6. HackerBoxes monthly subscription box
+[HackerBoxes](https://hackerboxes.com/collections/subscriptions/products/hackerbox-monthly-subscription?selling_plan=545128537&variant=32395506257&ref=blog.tryhackme.com) is a subscription service that delivers a monthly box filled with electronics, gadgets, tools, and components geared toward hacking, making, and learning about technology. Each box typically contains a curated selection of hardware, accessories, modules, and resources aimed at fostering hands-on experience in areas like electronics, programming, hardware hacking, and DIY projects. Past boxes have included Capture the Flag projects, radio-over-internet kits, novelty items, and proximity detection gadgets. Subscribers receive a themed box each month, often centred around a particular technology or concept, enabling enthusiasts, tinkerers, and learners to explore, experiment, and create within the realm of technology and electronics.While it is a monthly subscription box, you can pause and cancel anytime!​​
+## 7. Books, books, and more books!
+Books can make excellent gifts for someone interested in cyber security, and are among our favourite gift ideas for cyber fans of any skill level. They offer in-depth knowledge, personal insights, and perspectives from experts in the field. Some of our recommended reads include:
+* “**The Art of Deception**” by Kevin Mitnick
+* “**Ghost in the Wires**” by Kevin Mitnick
+* “**Countdown to Zero Day**” by Kim Zetter
+* “**Cyber Wars: Hacks that Shocked the Business World**” by Charles Arthur
+* “**Hackers: Heroes of the Computer Revolution**” by Steven Levy
+## 8. Keyboard / mouse set
+A keyboard and mouse set can make a thoughtful and practical gift for a cyber security professional! Depending on their preferences, you could choose between wireless sets for convenience or mechanical keyboards for tactile feedback and durability. Some specialised keyboards and mice even offer additional security features like built-in fingerprint scanners or encryption, which can be valuable for someone interested in cyber!An affordable bundle is the** Logitech Wireless Combo MK270**, featuring a full-size keyboard with eight programmable hotkeys and a precision mouse, for under $35. If you have a bigger budget, the **Logitech MX Keys Keyboard** and **Logitech MX Master Mouse** are both highly recommended within the tech community!
+## 9. Cyber conference tickets
+Attending conferences is an exciting way to immerse in the world of cyber security, and for those interested in cyber careers, it can be an excellent route of networking with professionals, from hiring managers to skilled hackers and computer security experts. With hundreds of awesome cyber security events throughout the year, there are plenty to choose from!Look for local or online cyber security conferences, workshops, or seminars, and gift them a ticket or registration. We recommend checking out [Infosec Conferences](https://infosec-conferences.com/?ref=blog.tryhackme.com#March2024) to see a list of events throughout the year.
+## 10. Personalised gifts
+Personalised gifts always go down a treat, so if you want a gift that really impresses them, this is a great place to start! You can opt for personalised items like mousepads, phone cases, or laptop sleeves with cybersecurity-related designs, quotes, their favourite security concepts, or even their TryHackMe username!
+## 11. Linux Command Line Mousepad
+On the topic of mousepads, a [Linux Command Line mousepad](https://www.amazon.com/inean-Linux-Commands-Mousepads-Mouse/dp/B095NWQ1XD?th=1&ref=blog.tryhackme.com) makes for the perfect gift for cybersecurity professionals, helping users learn command line faster in everyday use with over 200 commonly used Linux commands displayed on the pad. And priced at under $30, this is an affordable gift for any novice programmer in your life!
+## 12. Raspberry Pi starter kit
+For those starting out, the Raspberry Pi 4 8GB starter kit is a pivotal asset for cyber security beginners, offering an affordable, hands-on platform to delve into the realm of cyber defence. It enables practical exploration of security concepts by facilitating the creation of personalised security systems, such as firewalls and intrusion detection systems. Ultimately, it serves as a foundational tool, fostering essential skills and practical experiences critical for budding cyber security enthusiasts!

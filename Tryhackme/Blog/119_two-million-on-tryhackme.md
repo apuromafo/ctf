@@ -1,0 +1,15 @@
+# Two Million Users on TryHackMe!
+
+**ID Original:** 647ee3bca499a7000143acd8
+**Slug:** two-million-on-tryhackme
+--------------------
+
+TryHackMe has just reached two million users!Two million users is a huge milestone for us, and one that we would like to dedicate to our community and team working behind the scenes. We wouldn’t be here without you!
+## Our Journey to Two Million
+TryHackMe was launched to overcome a significant challenge. In 2018 and fresh out of university, Ben and Ashu, our two co-founders, observed the world of cyber security education. What they saw was a fragmented, often confusing landscape. But instead of being daunted, they saw an opportunity for innovation.The idea was simple but ambitious - create a platform that transforms total beginners into cyber security pros, right up to their first job and beyond. TryHackMe was born out of this vision. Their aim was to make cyber security learning not just affordable and accessible but also enjoyable, dispelling the notion that learning in this field has to be tedious or intimidating.Through consistent effort and perseverance, they've created a platform that now proudly serves over 2 million users worldwide. This milestone isn't just a testament to their hard work but also a tribute to their belief in the potential of every TryHackMe user to succeed in the ever-evolving world of cyber security.Since launching, we’ve seen how much of an impact our community-led platform has made on people landing jobs, students delving into the industry, businesses arming defenses through upskilling, and our growing community. Our mission is to make cyber security training as engaging, real-world and beginner-friendly as possible, and we're only at the beginning of this exciting journey.We’ve seen tremendous growth in all areas of TryHackMe, and are incredibly delighted, humbled, and proud of our team and community. Our community of two million users are the beating heart of TryHackMe!
+## 
+
+## Prize Giveaway!
+To celebrate two million of us, we’re running giveaways on Facebook, Twitter, LinkedIn, and Instagram throughout this week to win our NEW [limited-edition ‘Two Million’ t-shirt](https://store.tryhackme.com/collections/all/products/two-million-unisex-t-shirt?ref=blog.tryhackme.com), annual subscriptions, and **FREE** access to our AWS Cloud Security training! Keep an eye out on our socials this week to be in with the chance of winning! 
+## What’s Next For TryHackMe?
+As always, TryHackMe will continue to release fun, engaging and applicable content to the real world. We have heaps of awesome content coming up, including learning paths for Security Engineering, SOC Level 2 Analysts, DevSecOps, Incident Response, Web Application Security training, and lots of top-secret releases just around the corner.**Once again, we’d like to thank all TryHackMe users for being a part of this journey, and we’d like to extend this gratitude to our incredible team working behind the scenes to bring you epic content.****Here’s to two million - we wouldn’t be here without you!**

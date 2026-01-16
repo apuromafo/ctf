@@ -1,0 +1,22 @@
+# This Month in Cyber Security: August 2022
+
+**ID Original:** 6306370e0181dc0001fa6741
+**Slug:** august-cyber-security-roundup
+--------------------
+
+Every month in cyber security tells a story, introducing new breaches, evolving threats, and industry news. August has brought forward some interesting (and some worrying!) changes - hitting our industry by storm.We're diving into some of the key evolutions and news in cyber security this month - including Apple security flaws, Android security patches, the 25th anniversary of Black Hat USA, and a bunch of exciting new rooms and challenges from TryHackMe.**Let’s delve into the news of August 2022.**
+## Apple Discovers Security Flaw
+Security experts are warning all Apple users to update their devices immediately following warnings of a security flaw.Described as a serious security vulnerability, the flaw could allow attackers to gain full control of devices, including bank accounts, social media, private photos, text messages, personal contacts, and even your location.As part of the Apple security alert, all Apple users are advised to take the threat seriously and update their devices immediately. Devices most at risk include iPhone 6S models or later, including all iPad and iPad Pro models, the iPod Touch (7th Generation) and Mac computers running Mac OS Monterey.While Apple claims there are no reports of cases where this has happened, they are warning that any Apple user that hasn’t yet initiated the latest Apple software update is at risk.
+## Small Businesses Unlikely to Invest in Security Due to Resource Constraints
+In a UK Government [study](https://www.gov.uk/government/publications/exploring-organisational-experiences-of-cyber-security-breaches?ref=blog.tryhackme.com) released in August 2022, multiple organisations that suffered a serious cyber security attack within the last four years were surveyed.Nearly all participants acknowledged the need for greater levels of vigilance and investment in cyber-security, despite leadership teams lacking an understanding of the serious scale of threats.Of the ten businesses surveyed, all medium and large organisations revealed formal plans and an allocated budget for further cyber security investment. In contrast, those from smaller organisations were more unlikely to invest in cyber security due to resource constraints.
+## Google Urges Android Partners to Apply Latest Security Patches
+Google has urged Android partners to address security vulnerabilities through the latest security patches, following the discovery of 37 flagged Android vulnerabilities. The most severe vulnerability could lead to remote code execution over Bluetooth, with no additional execution privileges required.All Android partners have been encouraged to fix these vulnerabilities and bundle them together in a single Android security update. Android security patch levels of 2022-08-05 (or later) will address these vulnerabilities.
+## Black Hat USA
+Black Hat ran its 25th cyber security convention in Las Vegas, USA! Since its launch, Black Hat has aimed to offer security researchers and trainers connections to their audience and industry experts. During the event, hackers, researchers, and cyber security experts gather to share their latest work and exploits in a friendly, vendor-neutral environment. Pretty cool stuff - but you know what the best part was this year? We were there! We showcased TryHackMe to thousands of businesses and individual users, and it was utterly heartwarming to meet so many of you and hear your success stories. 
+## TryHackMe Rooms &amp; Challenges
+The TryHackMe team of experts have been busy creating awesome new training labs covering key areas of cyber security. In August, we launched the following cyber security training:
+* [Threat Intelligence Tools](https://tryhackme.com/room/threatinteltools?ref=blog.tryhackme.com)
+* [Velociraptor](https://tryhackme.com/room/velociraptorhp?ref=blog.tryhackme.com)
+* [Enumeration](https://tryhackme.com/room/enumerationpe?ref=blog.tryhackme.com)
+* [Obfuscation Principles](https://tryhackme.com/room/obfuscationprinciples?ref=blog.tryhackme.com)
+* [Brim](https://tryhackme.com/room/brim?ref=blog.tryhackme.com)We release new challenge and walkthrough rooms every week, and have lots of exciting updates to come next month - you won’t want to miss it! Psssst, keep an eye on TryHackMe in early September as something **EPIC** is coming!

@@ -1,0 +1,9 @@
+# HiroNewf's Red Team Capstone Write-Up Submission
+
+**ID Original:** 64a7e41ca499a7000143b028
+**Slug:** hironewf-red-team-capstone-write-up
+--------------------
+
+To celebrate the outstanding write-up submissions we've received from our recent Red Team Capstone Challenge Network, we're sharing the final winning submission from HiroNewf, who came joint-third in the competition giveaway!HiroNewf, also known as Lauren, is a student aspiring to one day become a Penetration Tester.Congratulations, HiroNewf! Keep reading to view the attack paths HiroNewf took and the write-up submission.View Write-Up
+## HiroNewf's Attack Paths
+After performing OSINT and discovering the three main web applications exposed on the perimeter, HiroNewf leveraged the discovered information to gain access through the corporate VPN and gain remote code execution on the server! Since the VPN service was linked to Active Directory, this also provided the initial compromise of the corporate workstations.Rather than focus on the workstation range, HiroNewf directly made use of Kerberoasting to gain access to the corporate server range!In the server range, HiroNewf performed local enumeration to discover the credentials of a service account on Server1, which had DC Replication rights. Leveraging this account, HiroNewf was able to run a DC Sync attack to recover the credentials for all AD accounts and compromise the entire corporate domain!Leveraging a golden ticket attack, HiroNewf took full control of the Parent domain, thus fully compromising the entire TheReserve AD forest!To show impact, HiroNewf has to facilitate a SWIFT payment. To compromise a payment capturer, HiroNewf cracked the AD password of a SWIFT capturer. To compromise payment approver, HiroNewf recovered an approver’s credentials from their browser. With both capturer and approver compromised, HiroNewf could make the payment transfer!View Write-Up

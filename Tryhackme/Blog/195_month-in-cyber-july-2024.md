@@ -1,0 +1,22 @@
+# Cyber Security in July 2024
+
+**ID Original:** 66a8cf5591ff6400019bdf5e
+**Slug:** month-in-cyber-july-2024
+--------------------
+
+This month, we saw a single update cause global chaos, Python's entire ecosystem at risk, a major breach confirmed to impact 4.2 million users, plus much more.Keep reading as we dive in!
+## CrowdStrike update: from meltdown to global crash
+On Friday, July 19th, CrowdStrike (a cyber security company known for providing endpoint security, threat intelligence, and cyber attack response services) released a problematic update that caused nearly [8.5 million Windows PCs](https://blogs.microsoft.com/blog/2024/07/20/helping-our-customers-through-the-crowdstrike-outage/?ref=blog.tryhackme.com) to be stuck in a booting loop resulting in widespread ‘Blue Screens of Death’ (BSOD).The malfunction also disrupted Google Cloud Compute Engine, Microsoft Azure, and Amazon Web Services, crashing Windows virtual machines and requiring multiple reboots. The incident, termed one of the most significant cyber issues of 2024, impacted numerous sectors, including airlines, financial institutions, and healthcare. CrowdStrike's shares dropped 15% in premarket trading.Experts highlighted the importance of implementing multiple fail-safes and diversifying IT infrastructure to prevent such a widespread impact.You can find out more about the [CrowdStrike outage](https://tryhackme.com/r/resources/blog/crowdstrike-outage-2024?ref=blog.tryhackme.com) in our latest article, including our thoughts and learnings!Read more!
+## Accidental token leak puts Python’s entire ecosystem at risk
+This month, cyber security firm JFrog discovered an accidentally leaked GitHub Personal Access Token in a public Docker container, which could have granted elevated access to critical Python repositories, including those of the Python language, PyPI, and the Python Software Foundation.The token, found in a compiled Python file within the container, belonged to PyPI Admin Ee Durbin and was used locally to bypass GitHub API rate limits. Fortunately, the token was revoked immediately upon discovery on June 28, 2024, and there is no evidence of exploitation. This incident highlights the severe potential risks of such leaks, including the possibility of large-scale supply chain attacks.
+## Casper Network contained ‘significant’ security breach
+On July 27th, Casper Network announced that it had fallen victim to a security breach, with network activity halted to address and contain the issue. The following day, the blockchain platform took to X (formerly Twitter) to explain that the security breach had been contained, noting that “a solution is being worked on.”A post-mortem report and subsequent code updates will likely be released soon and made publicly available on Casper’s GitHub repository. That’s all we know so far, but we’ll revise this article with any further updates! Many commenting on the incident have highlighted a broader trend of security issues in the crypto community, confirming the ever-present need for vigilance and proactive measures.
+## FBCS reports major breach impact, now reaching 4.2M
+In February 2024, debt collection agency Financial Business and Consumer Solutions (FBCS) reported that a data breach had compromised sensitive information of its customers. This breach was later confirmed to have affected 1.9 million US citizens. In May, this number was confirmed to be 3.2 million people. However, it has since been revealed that 4,253,394 people in the US have been affected.The exposed data varies per individual but can include the following information:
+* Full name
+* Social Security Number (SSN)
+* Date of birth
+* Account information
+* Driver's license number or ID cardThose affected have since been warned of increased phishing and fraud risks. What type of attack led to the data breach is not known, with FBCS only confirming that they detected unauthorised access to their internal network.
+## The cyber industry prepares to take Vegas!
+It’s that time of the year again! As the cyber security community gears up for one of the most anticipated events of the year, organisations and experts are preparing to head to Las Vegas for Black Hat and DEF CON. Whether you're a seasoned professional or an aspiring security enthusiast, Black Hat and DEF CON promise a wealth of knowledge and inspiration. Want to meet the TryHackMe team and pick up some free swag? Find us at booth 2841 at Black Hat and booth 2 at DEF CON!

@@ -1,0 +1,21 @@
+# TryHackMe Red Team Month - The Story So Far
+
+**ID Original:** 6320c4b60181dc0001fa6d30
+**Slug:** red-team-month-so-far
+--------------------
+
+We’re celebrating everything offensive security in September here at TryHackMe: launching a brand new [Red Teaming pathway](https://tryhackme.com/path/outline/redteaming?ref=blog.tryhackme.com), a ticket event where users can win $21,000 worth of prizes, and sharing everything Red Teaming! [**Launch our brand new training**](https://tryhackme.com/path/outline/redteaming?ref=blog.tryhackme.com)**!**
+## What’s happened so far?
+Well, the TryHackMe team of experts have created offensive security training comprised of 48 hours of juicy juicy training - packed to the brim with 36 training labs (aka rooms). This training has been developed to show you how to emulate a potential adversary attack in complex environments. Going beyond penetration testing, users will learn to conduct successful Red Team engagements and challenge the defence capability of clients. It’s suited to individuals looking to break into or progress in the industry and for businesses training their teams. **What you’ll do in the Red Teaming pathway:**
+* Use diverse techniques for initial access
+* Enumerate and persist on targets`
+* Evade security solutions
+* Exploit Active DirectoryWhat else? Well, we’ve given away over 90,000 tickets (crazy!) to users who have taken part in our new training. So far, users have won prizes such as OSEP Vouchers, Wifi Pineapples, HAK5 Rubber Duckies, and a whole bunch of awesome TryHackMe swag. All you need to do to get your hands on epic prizes is participate in the new pathway; completing rooms enables you to earn and redeem tickets.
+## How to win more tickets
+Along with completing the new training, there are some additional ways to [earn tickets](https://tryhackme.com/room/tickets3?ref=blog.tryhackme.com)! You can invite friends to TryHackMe, make content to spread the word about our new training, and introduce your business to our labs.Follow us on social media for all the news and extra tickets - plus the chance to win exclusive swag! (Woohoo!) You can follow us on [Twitter](https://twitter.com/RealTryHackMe?ref=blog.tryhackme.com), [LinkedIn](https://www.linkedin.com/company/tryhackme/?ref=blog.tryhackme.com), [Instagram](https://www.instagram.com/realtryhackme/?ref=blog.tryhackme.com), [Facebook](https://www.facebook.com/Try-Hack-Me-101040432182368), and [Pinterest](https://www.pinterest.co.uk/RealTryHackMe/?ref=blog.tryhackme.com).
+## Interested in red teaming?
+Red teaming is an ever-evolving, exciting element of cyber security. There’s always something to learn and hack away at, and it can be a lucrative career to pursue, offering incredible progression and great compensation. It’s a wonderful place to be! With that, we understand that cyber security can be an overwhelming topic with lots of information at your fingertips. We’ve worked with some key people in the field to bring you all the relevant resources you could need. 
+* [**Red Team Month**](https://tryhackme.com/resources/blog/red-team-month?ref=blog.tryhackme.com): Learn all about the reasoning behind our month-long celebration and what else is coming out.
+* [**What is Red Teaming?**](https://tryhackme.com/resources/blog/red-teaming-in-cyber-security?ref=blog.tryhackme.com) Understand how thinking like an attacker helps expose flaws and vulnerabilities businesses can patch to mitigate risk.
+* [**Becoming a Penetration Tester: The Ins and Outs With an In-market Pentester of 12 Years.**](https://tryhackme.com/resources/blog/becoming-a-penetration-tester?ref=blog.tryhackme.com) Read our interview to understand what pentesting is, the responsibilities it entails, and continuous development.
+* Finally, here’s [**what you can achieve with Red Teaming Training.**](https://tryhackme.com/resources/blog/achieve-with-red-team-training?ref=blog.tryhackme.com)Plus, keep an eye out for the jobs and salaries you can expect to see in the field, and how offensive security can amplify your defensive security strategy. All the good stuff!!Launch Red Teaming training and join us!

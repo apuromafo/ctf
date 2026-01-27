@@ -186,7 +186,6 @@ This challenge simulates a real-world security incident investigation, covering 
 **Focus:**    > Final Compromise & AWS Exfiltration.
 
 
- 
 1. **Network share path where ransomware was placed:**
     > `\\DC-01\SYSVOL\gaze.exe`
 2. **Ransomware persistence value:**
@@ -215,6 +214,5 @@ This challenge simulates a real-world security incident investigation, covering 
     > `beta.tar.gz, latest.tar.gz`
 14. **File uploaded to S3:**
     > `YOU-HAVE-BEEN-PWNED.txt`
-
 
 ---

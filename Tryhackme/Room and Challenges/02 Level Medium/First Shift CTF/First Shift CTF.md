@@ -216,3 +216,71 @@ This challenge simulates a real-world security incident investigation, covering 
     > `YOU-HAVE-BEEN-PWNED.txt`
 
 ---
+other:
+
+VT ransomware:
+```
+https://www.virustotal.com/gui/file/6d000a159fe10af1b29ddf4e4015931a9e9d0a020aeef0c602d8c5419b5966e6
+```
+
+splunk query :
+```
+index=scenario host=SRV-JMP
+| search copy OR xcopy OR robocopy OR powershell
+| table _time CommandLine
+| sort _time
+ 
+index=scenario host=SRV-JMP
+| search encrypt OR ransomware OR vssadmin OR shadow
+| table _time EventCode Process_Name CommandLine Object_Name User
+| sort _time
+ 
+index=scenario (EventCode=12 OR EventCode=13 OR EventCode=14)
+("CurrentVersion\\Run" OR "CurrentVersion\\RunOnce")
+| table _time host User EventCode TargetObject Details Image
+| sort _time
+ 
+index=scenario host=SRV-JMP
+(CommandLine="*net view*" OR CommandLine="*wmic*" OR CommandLine="*ipconfig*")
+| table _time host Image ParentImage CommandLine
+| sort _time
+ 
+index=scenario host=SRV-JMP (CommandLine="*schtasks*" OR CommandLine="*ruche.dll*" OR CommandLine="*StartW*")
+| table _time host Image ParentImage CommandLine User
+| sort _time
+ 
+index=scenario Image="*powershell.exe*" | where isnotnull(CommandLine) AND CommandLine!=""  | search host="SRV-JMP"
+ 
+index=scenario host=SRV-JMP source="WinEventLog:Microsoft-Windows-PowerShell/Operational" EventCode=4104
+| search "Creating Scriptblock text"
+| rex field=Message "Creating Scriptblock text \((?<part>\d+) of (?<total>\d+)\):\s*(?<chunk>.*)"
+| eval part=tonumber(part), total=tonumber(total)
+| where total=24
+| sort 0 ScriptBlockId part
+| stats list(chunk) as chunks by ScriptBlockId total
+| eval full_script=mvjoin(chunks,"")
+| table ScriptBlockId total full_script
+ 
+ 
+index=scenario source="WinEventLog:Security" EventCode=4624
+| where Logon_Type IN ("3","10")
+| stats count values(IpAddress) values(Ip_Address) by host ComputerName AccountName
+| sort -count
+ 
+index=scenario Object_Name="*\\Desktop\\Shared*"
+| stats count by Object_Name
+| sort - count
+ 
+ 
+index=scenario eventSource=cloudtrail.amazonaws.com OR eventSource=s3.amazonaws.com OR eventSource=ec2.amazonaws.com OR eventSource=sts.amazonaws.com
+| stats count by sourceIPAddress
+| sort - count
+ 
+index=scenario eventSource=s3.amazonaws.com eventName=GetObject sourceIPAddress=152.42.128.207
+| stats count by requestParameters.key
+| sort - count
+ 
+index=scenario eventSource=s3.amazonaws.com eventName=PutObject sourceIPAddress=152.42.128.207
+| stats count by requestParameters.key
+
+

@@ -1,7 +1,7 @@
 # RootMe
 A ctf for beginners, can you root me?
 **Room Link:** https://tryhackme.com/room/rrootme
- <img src="https://tryhackme-images.s3.amazonaws.com/room-icons/11d59cb34397e986062eb515f4d32421.png" width="250" alt="RootMe">
+ <img src="./IMG/lab.png" width="250" alt="RootMe">
 
 ## Task 1 Deploy the machine
 

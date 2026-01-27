@@ -12,13 +12,13 @@ This challenge simulates a real-world security incident investigation, covering 
 ---
 
 ## 📑 Table of Contents
-* [1. Meet ProbablyFine](#1-meet-probablyfine)
-* [2. Probably Just Fine](#2-probably-just-fine)
-* [3. Phishing Books](#3-phishing-books)
-* [4. Portal Drop](#4-portal-drop)
-* [5. Zero Tolerance](#5-zero-tolerance)
-* [6. The Crown Jewel](#6-the-crown-jewel)
-* [7. Promotion Night](#7-promotion-night)
+* [1. Meet ProbablyFine](#1)
+* [2. Probably Just Fine](#2)
+* [3. Phishing Books](#3)
+* [4. Portal Drop](#4)
+* [5. Zero Tolerance](#5)
+* [6. The Crown Jewel](#6)
+* [7. Promotion Night](#7)
 
 ---
  

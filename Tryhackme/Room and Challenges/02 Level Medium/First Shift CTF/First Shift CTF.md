@@ -192,7 +192,7 @@ This challenge simulates a real-world security incident investigation, covering 
 2. **Ransomware persistence value:**
     > `BabyLockerKZ`
 3. **Most likely extension of encrypted files:**
-    > *(In progress)*
+    > `.danger17`
 4. **MITRE technique ID for deployment:**
     > `T1047`
 5. **Successfully scanned ports of SRV-ITFS:**
@@ -202,7 +202,7 @@ This challenge simulates a real-world security incident investigation, covering 
 7. **Artifact created for persistence:**
     > `LanguageSync`
 8. **MD5 hash of initial shellcode:**
-    > *(In progress)*
+    > `27B0D51406B5360B49D968D69DF0F3E6`
 9. **C2 framework used:**
     > `Cobalt Strike`
 10. **Hostname of adversary login:**

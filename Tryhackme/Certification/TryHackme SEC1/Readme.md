@@ -1,7 +1,7 @@
 oficial información**
 https://tryhackme.com/certification/cyber-security-101/details
 
-https://tryhackme.com/static/image/banner.e617ea5c.png 
+![Sal1](https://tryhackme.com/static/image/banner.e617ea5c.png) 
 
  
 

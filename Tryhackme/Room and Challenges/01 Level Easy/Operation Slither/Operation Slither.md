@@ -35,7 +35,10 @@ This is just the beginning. We'll be releasing more data soon. Stay tuned!
 2. **What is the value of the flag?**
 * *Format:* `***{********_******_***_*****_********}`
 > Answer: ``THM{sl1th3ry_tw33tz_4nd_l34kr_r3pl13s!}`
-nota: se debe convertir de base64 para abordarlo fuente `https://www.threads.com/@_myst1cv1x3n_/post/C6G32WIvcJW?xmt=AQF0d8N-GTgDST9Wb7IfOI8X2pNON2QwItLja80ZJNTxOg `
+
+
+> nota: se debe convertir de base64 para abordarlo fuente
+>  `https://www.threads.com/@_myst1cv1x3n_/post/C6G32WIvcJW?xmt=AQF0d8N-GTgDST9Wb7IfOI8X2pNON2QwItLja80ZJNTxOg `
 
 ---
 
@@ -70,7 +73,9 @@ You must register or log in to view this content
 2. **What is the value of the flag?**
 * *Format:* `***{*******_******_******_********}`
 > Answer: `THM{s0cm1nt_00ps3c_f1ng3r_m1scl1ck}`
-nota: se debe convertir de base64 para abordarlo fuente ` instagram , luego souncloud indica prototipe al revisar en https://soundcloud.com/v1x3n-195859753/prototype2  sale la flag `
+
+> nota: se debe convertir de base64 para abordarlo fuente
+>  ` instagram , luego souncloud indica prototipe al revisar en https://soundcloud.com/v1x3n-195859753/prototype2  sale la flag `
 
 
 ---
@@ -107,8 +112,8 @@ Contact me on REDACTED@protonmail.com
 ```
 
 ### Questions
-Nota:  para este reto hay que cruzar mucha informacion previa, hasta llegar a 
-`https://github.com/sh4d0wF4NG/red-team-infra/commit/78de1f17c45b994e97b8629aa7e5f42c31a0e7f7#diff-f0543f47d07eca9df28e768583fd7ec54a1cc943195502f06a2bd23e182ff4a5`
+> Nota:  para este reto hay que cruzar mucha informacion previa, hasta llegar a 
+> `https://github.com/sh4d0wF4NG/red-team-infra/commit/78de1f17c45b994e97b8629aa7e5f42c31a0e7f7#diff-f0543f47d07eca9df28e768583fd7ec54a1cc943195502f06a2bd23e182ff4a5`
 
 
 1. **What is the handle of the third operator?**
@@ -126,4 +131,16 @@ Nota:  para este reto hay que cruzar mucha informacion previa, hasta llegar a
 
  
 ---
+ Resumen 
+
+| Task | Pregunta | Respuesta |
+| --- | --- | --- |
+| 1 | 1 | `threads` |
+| 1 | 2 | `THM{sl1th3ry_tw33tz_4nd_l34kr_r3pl13s!}` |
+| 2 | 1 | `_myst1cv1x3n_` |
+| 2 | 2 | `THM{s0cm1nt_00ps3c_f1ng3r_m1scl1ck}` |
+| 3 | 1 | `sh4d0wF4NG` |
+| 3 | 2 | `github` |
+| 3 | 3 | `THM{sh4rp_f4ngz_l34k3d_bl00dy_pw}` |
+
  

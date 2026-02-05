@@ -1,0 +1,1 @@
+https://github.com/mfkrypt/gitbook-sync/blob/20d6a750d079c4708db595eadb2ef5c942dd60b8/ctf-writeups/hackthebox/prolabs/dante.md

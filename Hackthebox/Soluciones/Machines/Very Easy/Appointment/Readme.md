@@ -1,0 +1,1 @@
+https://app.hackthebox.com/machines/Appointment?tab=play_machine

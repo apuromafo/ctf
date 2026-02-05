@@ -24,3 +24,17 @@ Mythical is designed for penetration testers and red teamers in search of a quic
 - [ ] MSSQL attacks
 - [ ] C2 Operations
 
+### 🛠️ Technical Details
+| Feature | Detail |
+| :--- | :--- |
+| **ID** | 25 |
+| **Identifier** | MYTHICAL |
+| **Skill Level** | ADVANCED |
+| **Category** | Red Team Operator |
+| **Level** | 1 |
+| **Machines** | 3 |
+| **Flags** | 3 |
+| **Lab Servers** | 6 |
+| **Release Date** | 2025-09-30 |
+| **Type** | Mini Lab |
+| **Status** | FREE |

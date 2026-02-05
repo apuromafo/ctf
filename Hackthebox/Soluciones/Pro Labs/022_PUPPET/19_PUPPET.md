@@ -23,3 +23,17 @@ Puppet is designed for penetration testers and red teamers in search of a quick 
 - [ ] Situational awareness
 - [ ] C2 Operations
 
+### 🛠️ Technical Details
+| Feature | Detail |
+| :--- | :--- |
+| **ID** | 22 |
+| **Identifier** | PUPPET |
+| **Skill Level** | ADVANCED |
+| **Category** | Red Team Operator |
+| **Level** | 1 |
+| **Machines** | 3 |
+| **Flags** | 4 |
+| **Lab Servers** | 6 |
+| **Release Date** | 2025-09-30 |
+| **Type** | Mini Lab |
+| **Status** | FREE |

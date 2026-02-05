@@ -23,3 +23,18 @@ P.O.O., is designed for penetration testers and red teamers in search of a quick
 - [ ] Situational awareness
 - [ ] Web application enumeration and attacks
 
+
+### 🛠️ Technical Details
+| Feature | Detail |
+| :--- | :--- |
+| **ID** | 11 |
+| **Identifier** | POO |
+| **Skill Level** | BEGINNER |
+| **Category** | Red Team Operator |
+| **Level** | 1 |
+| **Machines** | 2 |
+| **Flags** | 5 |
+| **Lab Servers** | 2 |
+| **Release Date** | 2018-04-02 |
+| **Type** | Mini Lab |
+| **Status** | PAID |

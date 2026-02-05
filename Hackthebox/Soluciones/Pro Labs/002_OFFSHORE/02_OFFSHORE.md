@@ -24,3 +24,17 @@ Offshore Pro Lab has been designed to appeal to a wide variety of users, everyon
 - [ ] Reverse Engineering
 - [ ] Out-Of-The-Box Thinking
 
+### 🛠️ Technical Details
+| Feature | Detail |
+| :--- | :--- |
+| **ID** | 2 |
+| **Identifier** | OFFSHORE |
+| **Skill Level** | INTERMEDIATE |
+| **Category** | Red Team Operator |
+| **Level** | 2 |
+| **Machines** | 21 |
+| **Flags** | 38 |
+| **Lab Servers** | 6 |
+| **Release Date** | 2018-09-01 |
+| **Type** | Full Pro Lab |
+| **Status** | PAID |

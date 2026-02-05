@@ -3,6 +3,9 @@ https://tryhackme.com/certification/cyber-security-101/details
 
 ![Sal1](https://tryhackme.com/static/image/banner.e617ea5c.png) 
 
+Video https://www.youtube.com/watch?v=nVETMpalQS8
+Info https://tryhackme.com/certification/cyber-security-101
+
  
 
  
@@ -78,4 +81,4 @@ Sin embargo:
 La certificación es válida por 3 años. Deberá realizar el examen nuevamente para mantener la validez de la certificación.
 
 ---
-  
+ fecha:30.01.2026 

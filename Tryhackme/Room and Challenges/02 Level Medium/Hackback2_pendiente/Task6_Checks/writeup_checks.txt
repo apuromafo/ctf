@@ -1,0 +1,83 @@
+============================================================
+ TryHackMe - "Checks" (access-checks) - Writeup
+============================================================
+
+FLAG: THM{88ED12AC}
+
+------------------------------------------------------------
+0) Info del binario
+------------------------------------------------------------
+- Archivo: access-checks
+- Formato: ELF64 x86-64, statically linked, not stripped
+- SHA-256: BEF862A5C8C1B7503522D1D5FCAA5665A95C31ABF24E95B6F2D86610AF07C554
+- Al ejecutarlo sin tocar nada: Segmentation fault (crash en
+  getpwuid -> carga de modulos NSS dinamicos, falla en binario estatico)
+
+Símbolos propios del reto (no libc):
+  0000000000400b6d T asvv889a
+  0000000000400bd8 T main
+
+------------------------------------------------------------
+1) Análisis estático
+------------------------------------------------------------
+Strings de interés:
+  0x49e808  "Here you go: %X\n"      <- formato del flag
+  0x49e819  "SECRET_REQ"             <- nombre de env var
+  0x49e824  "800"                    <- usuario requerido (pw_name)
+  0x49e828  "coolenvvar"             <- valor de la env var
+  0x49e833  "secrets.zip"            <- archivo requerido
+  0x49e840  "hm you need to do more to get the flag"  <- fallo
+
+asvv889a (0x400b6d):
+  - movabs rax, 0x4341323144453838   ; bytes LE: 38 38 45 44 31 32 41 43 = "88ED12AC"
+  - strtol(ptr, NULL, 16)  -> 0x88ED12AC
+  - printf("Here you go: %X\n", 0x88ED12AC)  ->  88ED12AC
+
+main (0x400bd8):
+  Secuencia de checks (de ahí el nombre del reto):
+    1) getuid() -> getpwuid(uid)  ; comprueba pw_name == "800"
+    2) getenv("SECRET_REQ")       ; debe ser distinta de NULL
+    3) strcmp(env, "coolenvvar")  ; debe ser 0
+    4) access("secrets.zip", 0)   ; el archivo debe existir
+  Si TODOS pasan -> call asvv889a  (imprime el flag)
+  Si alguno falla -> printf("hm you need to do more to get the flag")
+
+------------------------------------------------------------
+2) Resolución
+------------------------------------------------------------
+El flag NO depende de los checks: asvv889a calcula e imprime el
+resultado directamente (strtol de "88ED12AC" en base 16 -> printf %X).
+
+Ruta A (dinámica, parchear main):
+  Reescribir el cuerpo de main para que llame directo a asvv889a
+  (bypass de getpwuid + los 3 checks):
+
+  En VA 0x400bd8:
+    push   rbp
+    mov    rbp,rsp
+    sub    rsp,0x10
+    mov    eax,0x0
+    call   0x400b6d <asvv889a>    ; e8 83 ff ff ff
+    mov    eax,0x0
+    leave
+    ret
+
+  bytes: 55 48 89 e5 48 83 ec 10 b8 00 00 00 00
+         e8 83 ff ff ff b8 00 00 00 00 c9 c3
+
+  Ejecución:
+    $ ./access-checks.patched
+    Here you go: 88ED12AC
+
+Ruta B (sin parchear, cumpliendo los checks):
+  Teoricamente bastaria con:
+    1) un usuario con pw_name == "800" (getpwuid devuelve el nombre del uid actual)
+    2) export SECRET_REQ=coolenvvar
+    3) crear un archivo secrets.zip en el directorio actual
+  En este entorno falla antes porque getpwuid crashea al intentar
+  cargar NSS dinamicos en un binario estatico.
+
+------------------------------------------------------------
+3) Flag
+------------------------------------------------------------
+  THM{88ED12AC}

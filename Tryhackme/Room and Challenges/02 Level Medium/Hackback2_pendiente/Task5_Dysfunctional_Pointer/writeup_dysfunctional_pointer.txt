@@ -1,0 +1,135 @@
+============================================================
+ WRITEUP - TryHackMe [Easy] [Reverse Engineering] Dysfunctional Pointer
+============================================================
+
+FECHA
+  Resuelto: 2026-08-08
+  Plataforma: Linux (ELF x86-64, GNU/Linux 3.2.0)
+  Ruta: reversing_THM/easy-re
+
+CRACKME / HASH
+  Archivo    : easy-re
+  Tamano     : 844.832 bytes
+  Tipo       : ELF 64-bit LSB executable, x86-64, statically linked,
+               not stripped (simbolos presentes: main, get_flag)
+  SHA-256    : 2EAD0D1CDCD11AEAEE1E081F8A518219D93867DDA6D7CEBE8B0466E280E3B032
+
+Uso del programa
+  ./easy-re            -> imprime mensajes y termina en Segmentation fault
+                          (el puntero de funcion apunta a una direccion invalida)
+  ./easy-re.patched    -> con el patch, llama a get_flag() e imprime el flag
+
+============================================================
+ 1) HALLAZGOS DE STRINGS
+============================================================
+  (strings -n 4 easy-re | grep ... )
+
+  "Oh wow, a program that returns the flag, easy right?"
+  "Calling function that returns flag"
+  "Oh wait, that's not the correct function"
+  "Oh wow, that looks fine"
+  "%X\n"                          <- formato con que get_flag imprime el resultado
+  "free(): invalid pointer"
+  (el resto son strings de la libc estatica)
+
+  No hay "THM{" en el binario: el flag se GENERA al ejecutar get_flag().
+
+============================================================
+ 2) HALLAZGOS DEL DECOMPILADO
+============================================================
+  Simbolos relevantes (nm easy-re):
+    0000000000400b4d T get_flag
+    0000000000400bb8 T main
+
+  main() (0x400bb8):
+    - puts("Oh wow, a program that returns the flag, easy right?")
+    - mov QWORD PTR [rbp-0x8], 0x42454546   <- puntero de funcion = "FEEB"
+                                                (deberia ser &get_flag)
+    - puts("Calling function that returns flag")
+    - rax = lea get_flag  (0x400b4d)
+    - cmp QWORD PTR [rbp-0x8], rax          <- compara el puntero con get_flag
+    - je 0x400c06        -> puts("Oh wow, that looks fine")
+      else               -> puts("Oh wait, that's not the correct function")
+    - rdx = QWORD PTR [rbp-0x8]             <- el puntero guardado
+    - call rdx                               <- llama a lo que apunta
+
+  get_flag() (0x400b4d):
+    - movabs rax, 0x6639646164343836        <- bytes little-endian: "684dad9f"
+    - mov QWORD PTR [rbp-0x10], rax         <- string en el stack
+    - strtol(&"684dad9f", NULL, 16)         -> 0x684DAD9F
+    - printf("%X\n", 0x684DAD9F)            -> imprime el flag
+
+  Bug (el "puntero disfuncional"):
+    main guarda 0x42454546 ("FEEB") como puntero de funcion en lugar de la
+    direccion de get_flag (0x400b4d). Al ejecutar call rdx intenta saltar a
+    0x42454546 -> Segmentation fault. El codigo ya tiene la rama correcta
+    (je 0x400c06) que solo se toma si el puntero == get_flag.
+
+============================================================
+ 3) HALLAZGOS DEL ALGORITMO INVOLUCRADO
+============================================================
+  Tipo: PUNTERO DE FUNCION CORRUPTO (patch de 4 bytes)
+
+  El reto NO necesita descifrar nada: basta con reparar el valor que se
+  guarda en el puntero de funcion para que apunte a get_flag.
+
+  - get_flag convierte el string hex "684dad9f" a entero (base 16)
+    y lo imprime en mayusculas con %X -> "684DAD9F".
+  - El flag del reto es:  THM{684DAD9F}
+
+============================================================
+ 4) PRUEBAS
+============================================================
+  Ejecucion ORIGINAL (sin patch):
+    > ./easy-re
+      Oh wow, a program that returns the flag, easy right?
+      Calling function that returns flag
+      Segmentation fault (core dumped)
+    El puntero vale 0x42454546, no es una direccion de codigo valida.
+
+  Patch aplicado (modifica la instruccion de main):
+    Direccion: main+0x14 (VA 0x400bcc) / offset 0xBD0 en el archivo.
+    Instruccion:  mov QWORD PTR [rbp-0x8], imm32
+    Bytes originales: 48 c7 45 f8  46 45 45 42     (imm = 0x42454546)
+    Bytes parcheados: 48 c7 45 f8  4d 0b 40 00     (imm = 0x400B4D)
+
+    Comando (Linux/WSL):
+      cp easy-re easy-re.patched
+      printf '\x4d\x0b\x40\x00' | dd of=easy-re.patched bs=1 seek=3024 conv=notrunc
+      chmod +x easy-re.patched
+
+    (NOTA: el imm32 empieza en el offset 0xBD0 = 3024 decimal. Un seek
+     incorrecto corrompe init_cacheinfo de la libc estatica.)
+
+  Ejecucion PATCHED:
+    > ./easy-re.patched
+      Oh wow, a program that returns the flag, easy right?
+      Calling function that returns flag
+      Oh wow, that looks fine
+      684DAD9F
+    Como el puntero ahora == get_flag, toma la rama "je 0x400c06",
+    imprime "Oh wow, that looks fine" y llama a get_flag() -> flag.
+
+  Verificacion del valor del flag:
+    string en get_flag:  68 4d 61 64 39 66  -> "684dad9f" (little-endian)
+    strtol("684dad9f", NULL, 16) = 0x684DAD9F
+    printf("%X\n")                         -> "684DAD9F"
+    Flag:  THM{684DAD9F}
+
+============================================================
+ 5) COMO ES Y COMO FUNCIONA EL ALGORITMO
+============================================================
+  1. main reserva un puntero de funcion en la pila y lo inicializa con un
+     valor invalido (0x42454546, los bytes "FEEB").
+  2. Compara ese puntero con la direccion real de get_flag.
+     - Si coinciden: avisa "Oh wow, that looks fine" y lo llama.
+     - Si no: avisa "Oh wait, that's not the correct function" y aun asi
+       lo llama -> crash.
+  3. El fallo esta en el valor inicial del puntero. Corrigiendo esos 4 bytes
+     para que valgan 0x400B4D (&get_flag), main toma la rama correcta y
+     ejecuta get_flag().
+  4. get_flag no contiene el flag literal: lo calcula en runtime a partir
+     del string hex "684dad9f" usando strtol(base 16) y lo imprime como
+     "684DAD9F".
+
+  FLAG = THM{684DAD9F}

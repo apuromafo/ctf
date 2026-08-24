@@ -1,294 +1,209 @@
- **Room Link:** https://tryhackme.com/room/hackback2
- 
- With prizes, accelerated interviews, swag and £1,000 up for grabs, do your best to solve as many challenges as possible. There are also rewards for teams that learn something new! The harder the question, the more points you get.
- 
- Created by:
- ben tryhackme
- 
+# HackBack2
 
-2277 days ago  (4 de octubre de 2019 aprox) 
+**Room Link:** https://tryhackme.com/room/hackback2
 
+With prizes, accelerated interviews, swag and £1,000 up for grabs, do your best to solve as many challenges as possible. There are also rewards for teams that learn something new! The harder the question, the more points you get.
 
- <img src="https://assets.tryhackme.com/img/banners/default_tryhackme.png" width="250" alt="hackback2">
- 
- 
- 
+Created by: **ben tryhackme**
+
 ---
 
 ## Task 1: Introduction
 
-* **Q1:** Join our Slack and Discord server!
-* *Respuesta:* (No requiere respuesta)
-
-
-* **Q2:** Watch the live stream using the Google Hangouts link.
-* *Respuesta:* (No requiere respuesta)
-
-
-* **Q3:** Read the rules. Breaking a rule will result in you being disqualified...
-* *Respuesta:* (No requiere respuesta)
-
-
+- **Q1:** Join our Slack and Discord server!
+  - Respuesta: (No requiere respuesta)
+- **Q2:** Watch the live stream using the Google Hangouts link.
+  - Respuesta: (No requiere respuesta)
+- **Q3:** Read the rules. Breaking a rule will result in you being disqualified and/or banned from HackBack and the platform.
+  - Respuesta: (No requiere respuesta)
 
 ---
 
 ## Task 2: [Easy] [Web Exploitation] Avengers Blog
 
-* **Q1: What is flag1?** * **Hint:** Mmm, cookies.
-* **Respuesta:** `cookie_secrets`
-
-
-* **Q2: What is flag2?** * **Hint:** Response Headers.
-* **Respuesta:** `headers_are_important`
-
-
-* **Q3: What is flag3?** * **Hint:** What other services are open on the machine? Use nmap...
-* **Respuesta:** `8fc651a739befc58d450dc48e1f1fd2e`
-
-
-* **Q4: What is flag4?** * **Hint:** GoBuster & SQLi.
-* **Respuesta:** `sanitize_queries_mr_stark`
-
-
-* **Q5: What is flag5?** * **Hint:** RCE. Be creative with your Linux commands.
-* **Respuesta:** `d335e2d13f36558ba1e67969a1718af7`
-
-
+- **Q1: What is flag1?** (Hint: Mmm, cookies.)
+  - Respuesta: `cookie_secrets`
+- **Q2: What is flag2?** (Hint: Response Headers.)
+  - Respuesta: `headers_are_important`
+- **Q3: What is flag3?** (Hint: nmap)
+  - Respuesta: `8fc651a739befc58d450dc48e1f1fd2e`
+- **Q4: What is flag4?** (Hint: GoBuster & SQLi)
+  - Respuesta: `sanitize_queries_mr_stark`
+- **Q5: What is flag5?** (Hint: RCE)
+  - Respuesta: `d335e2d13f36558ba1e67969a1718af7`
 
 ---
 
 ## Task 3: [Easy] [Forensics] Plaintext
 
-* **Q1: What is the IP of the remote machine that Bob connected to?** * **Respuesta:** `54.229.180.40`
-* **Q2: What command did Bob first run?** * **Respuesta:** `echo 'test' >> hackback123.txt`
-* **Q3: Locate and crack Tony's password. What is his plaintext password?** * **Hint:** Crack the hash using HashCat and the rockyou.txt...
-* **Respuesta:** `password123`
-
-
+- **Q1:** What is the IP of the remote machine that Bob connected to?
+  - Respuesta: `54.229.180.40`
+- **Q2:** What command did Bob first run?
+  - Respuesta: `echo 'test' >> hackback123.txt`
+- **Q3:** Locate and crack Tony's password. What is his plaintext password? (Hint: HashCat + rockyou)
+  - Respuesta: `password123`
 
 ---
 
 ## Task 4: [Insane] [Networking] Borderlands
 
-* **Q1: What is the API key that fits the following pattern: "AND*"** * **Respuesta:** `ANDVOWLDLAS5Q8OQZ2tuIPGcOu2mXk`
-* **Q2: What is the API key that fits the following pattern: "WEB*"** * **Respuesta:** `WEBLhvOJAH8d50Z4y5G5g4McG1GMGD`
-* **Q3: What is the API key that fits the following pattern: "GIT*"** * **Respuesta:** `GITtFi80llzs4TxqMWtCotiTZpf0HC`
-* **Q4: What is the flag in the /var/www directory of the web app host?** * **Respuesta:** `{FLAG:Webapp:48a5f4bfef44c8e9b34b926051ad35a6}`
-* **Q5: What is the flag in the /root/ directory of router1?** * **Respuesta:** `{FLAG:Router1:c877f00ce2b886446395150589166dcd}`
-* **Q6: What flag is transmitted from flag_server to flag_client over UDP?** * **Respuesta:** `{FLAG:UDP:3bb271d020df6cbe599a46d20e9fcb3c}`
-* **Q7: What flag is transmitted from flag_server to flag_client over TCP?** * **Respuesta:** `{FLAG:TCP:8fb04648d6b2bd40af6581942fcf483e}`
+- **Q1** (AND*, APK): `ANDVOWLDLAS5Q8OQZ2tuIPGcOu2mXk`
+- **Q2** (WEB*, webapp): `WEBLhvOJAH8d50Z4y5G5g4McG1GMGD`
+- **Q3** (GIT*, git): `GITtFi80llzs4TxqMWtCotiTZpf0HC`
+- **Q4** (/var/www): `{FLAG:Webapp:48a5f4bfef44c8e9b34b926051ad35a6}`
+- **Q5** (/root router1): `{FLAG:Router1:c877f00ce2b886446395150589166dcd}`
+- **Q6** (UDP): `{FLAG:UDP:3bb271d020df6cbe599a46d20e9fcb3c}`
+- **Q7** (TCP): `{FLAG:TCP:8fb04648d6b2bd40af6581942fcf483e}`
 
 ---
 
 ## Task 5: [Easy] [Reverse Engineering] Dysfunctional Pointer
 
-* **Q1: What is the flag?** * **Hint:** check the function pointer
-* **Respuesta:** [Pendiente] (Formato: ********)
-
-
+- **Q1: What is the flag?** (Hint: check the function pointer)
+  - Respuesta: `684DAD9F`
+  - Nota: binario con puntero de función corrupto; patch de 4 bytes para llamar a `get_flag`.
 
 ---
 
 ## Task 6: [Medium] [Reverse Engineering] Checks
 
-* **Q1: What is the flag?** * **Respuesta:** [Pendiente] (Formato: ********)
+- **Q1: What is the flag?**
+  - Respuesta: `88ED12AC`
+  - Nota: 4 checks en `main`; patch para llamar directo a la función del flag.
 
 ---
 
 ## Task 7: [Easy] [Networking] Sharing Is Caring
 
-* **Q1: What service allows you remotely access files?** * **Respuesta:** [Pendiente] (Formato: ***)
-* **Q2: What is the name of the file that contains login details?** * **Respuesta:** [Pendiente] (Formato: *****.***)
-* **Q3: What is the name of the user used to access the system?** * **Respuesta:** [Pendiente] (Formato: ****)
-* **Q4: What is in the user.txt file?** * **Respuesta:** [Pendiente] (Formato: ****************)
-* **Q5: What is the full path of the file you need to manipulate to gain root access?** * **Respuesta:** [Pendiente] (Formato: /***/*******.**)
-* **Q6: What is the content of the /root/root.txt file?** * **Respuesta:** [Pendiente] (Formato: ****************)
+- **Q1:** What service allows you remotely access files?
+  - Respuesta: [Pendiente] (Formato: ***)
+- **Q2:** What is the name of the file that contains login details?
+  - Respuesta: [Pendiente] (Formato: *****.***)
+- **Q3:** What is the name of the user used to access the system?
+  - Respuesta: [Pendiente] (Formato: ****)
+- **Q4:** What is in the user.txt file?
+  - Respuesta: [Pendiente] (Formato: ****************)
+- **Q5:** What is the full path of the file you need to manipulate to gain root access?
+  - Respuesta: [Pendiente] (Formato: /***/*******.**)
+- **Q6:** What is the content of the /root/root.txt file?
+  - Respuesta: [Pendiente] (Formato: ****************)
 
 ---
 
 ## Task 8: [Easy] [Forensics] E-Corp Takeover
 
-* **Q1: When did the compromise take place?** * **Respuesta:** [Pendiente] (Formato: **/**/****)
-* **Q2: What is the IP of the malicious update server?** * **Hint:** Locate the local DNS Cache
-* **Respuesta:** [Pendiente] (Formato: **.*.*.*)
-
-
-* **Q3: When did Emily last attempt, but fail, to logon?** * **Hint:** Audit Failure
-* **Respuesta:** [Pendiente] (Formato: **/**/**** *:**:** **)
-
-
-* **Q4: What user last successfully logged onto the machine?** * **Hint:** Other than the Administrator (you).
-* **Respuesta:** [Pendiente] (Formato: ****)
-
-
-* **Q5: What command (with arguments) is run from the scheduled task "GameOver"?** * **Respuesta:** [Pendiente] (Formato: *:******.*** **::******** * *:****.***)
-* **Q6: Whats the name of the web shell backdoor placed on the system?** * **Hint:** Where are Windows web server files located?
-* **Respuesta:** [Pendiente] (Formato: *****.***)
-
-
-* **Q7: What was the last powershell command to run?** * **Hint:** Event Viewer
-* **Respuesta:** [Pendiente] (Formato largo con espacios)
-
-
-* **Q8: What was the attackers external control and command servers IP?** * **Respuesta:** [Pendiente] (Formato: **.**.*.*)
+- **Q1:** When did the compromise take place?
+  - Respuesta: [Pendiente] (Formato: **/**/****)
+- **Q2:** IP of the malicious update server? (Hint: local DNS cache)
+  - Respuesta: [Pendiente] (Formato: **.*.*.*)
+- **Q3:** When did Emily last attempt, but fail, to logon? (Hint: audit failure)
+  - Respuesta: [Pendiente] (Formato: **/**/**** *:**:** **)
+- **Q4:** What user last successfully logged onto the machine?
+  - Respuesta: [Pendiente] (Formato: ****)
+- **Q5:** What command (with arguments) is run from the scheduled task "GameOver"?
+  - Respuesta: [Pendiente]
+- **Q6:** Whats the name of the web shell backdoor placed on the system?
+  - Respuesta: [Pendiente] (Formato: *****.***)
+- **Q7:** What was the last powershell command to run?
+  - Respuesta: [Pendiente]
+- **Q8:** What was the attackers external control and command servers IP?
+  - Respuesta: [Pendiente] (Formato: **.**.*.*)
 
 ---
 
 ## Task 9: [Medium] [Steganography] Now you see me
 
-* **Q1: What is flag 1?**
-* Respuesta: `********************************`
-
-
-* **Q2: What is flag 2?**
-* Respuesta: `*********`
-
-
-* **Q3: What is flag 3?**
-* Respuesta: `********************************`
-
-
-* **Q4: What is flag 4?**
-* Respuesta: `************`
-
-
-* **Q5: What is flag 5?**
-* Respuesta: `****** **, ****`
-
-
-* **Q6: What was his employee number when he first joined?**
-* Respuesta: `*`
-
-
-* **Q7: What is flag 7? Think outside the box...**
-* Respuesta: `**********`
-
-
+- **Q1:** What is flag 1? (Hint: Whoever took that photo?)
+  - Respuesta: `5f4dcc3b5aa765d61d8327deb882cf99`
+- **Q2:** What is flag 2? (Hint: Entropy on GitHub CyberChef)
+  - Respuesta: `2KCABKCAH`
+- **Q3:** What is flag 3?
+  - Respuesta: `00a92932a4fd522632cc7a3315ac22c0`
+- **Q4:** What is flag 4? (Hint: diff)
+  - Respuesta: `HarvardMarkI`
+- **Q5:** What is flag 5?
+  - Respuesta: `August 11, 1950`
+- **Q6:** What was his employee number when he first joined? (Hint: reverse image search)
+  - Respuesta: `7`
+- **Q7:** What is flag 7? Think outside the box... (Hint: key=hey iv=seed)
+  - Respuesta: [Pendiente] (Formato: **********)
 
 ---
 
 ## Task 10: [Hard] [Web & Networking] Cardboard
 
-* **Q1: What is flag 1?**
-* Respuesta: `********************************`
-
-
-* **Q2: What is flag 2?**
-* Respuesta: `********************************`
-
-
-* **Q3: What is flag 3?**
-* Respuesta: `********************************`
-
-
-* **Q4: What is flag 4?**
-* Respuesta: `********************************`
-
-
-* **Q5: What is flag 5?**
-* Respuesta: `********************************`
-
-
+- **Q1:** What is flag 1?
+  - Respuesta: [Pendiente] (Formato: ********************************)
+- **Q2:** What is flag 2?
+  - Respuesta: [Pendiente] (Formato: ********************************)
+- **Q3:** What is flag 3?
+  - Respuesta: [Pendiente] (Formato: ********************************)
+- **Q4:** What is flag 4?
+  - Respuesta: [Pendiente] (Formato: ********************************)
+- **Q5:** What is flag 5?
+  - Respuesta: [Pendiente] (Formato: ********************************)
 
 ---
 
 ## Task 11: [Medium] [Networking] Jack and The ELK Stalk
 
-* **Q1: Find the password in the database**
-* Respuesta: `**********************`
-
-
-* **Q2: Read the contents of the /root.txt file**
-* Respuesta: `**********`
-
-
+- **Q1:** Find the password in the database
+  - Respuesta: [Pendiente] (Formato: **********************)
+- **Q2:** Read the contents of the /root.txt file
+  - Respuesta: [Pendiente] (Formato: **********)
 
 ---
 
 ## Task 12: [Easy] [Scripting/Linux] Ninja Skills
 
-* **Q1: Which of the above files are owned by the best-group group?**
-* Respuesta: D8B3 v2Vb
-
-
-* **Q2: Which of these files contain an IP address?**
-* Respuesta: oiMO
-
-
-* **Q3: Which file has the SHA1 hash of 9d54da7584015647ba052173b84d45e8007eba94**
-* Respuesta: c4ZX
-
-
-* **Q4: Which file contains 230 lines?**
-* Respuesta: bny0
-
-
-* **Q5: Which file's owner has an ID of 502?**
-* Respuesta: X1Uy
-
-
-* **Q6: Which file is executable by everyone?**
-* Respuesta: 8V2L
-
-
+- **Q1:** Which files are owned by the best-group group?
+  - Respuesta: `D8B3 v2Vb`
+- **Q2:** Which of these files contain an IP address?
+  - Respuesta: `oiMO`
+- **Q3:** Which file has the SHA1 hash 9d54da7584015647ba052173b84d45e8007eba94?
+  - Respuesta: `c4ZX`
+- **Q4:** Which file contains 230 lines?
+  - Respuesta: `bny0`
+- **Q5:** Which file's owner has an ID of 502?
+  - Respuesta: `X1Uy`
+- **Q6:** Which file is executable by everyone?
+  - Respuesta: `8V2L`
 
 ---
 
 ## Task 13: [Easy] [Exploit] Credit Rating Shenanigans
 
-* **Q1: Compromise this machine yourself. What is the flag?**
-* Respuesta: `****************`
-
-
+- **Q1:** Compromise this machine yourself. What is the flag?
+  - Respuesta: [Pendiente] (Formato: ****************)
 
 ---
 
 ## Task 14: [OSINT] Sometimes a little is a lot
 
-* **Q1: Where has Lola gone on holiday?**
-* Respuesta: San Diego
+Email: johnson.lola1992@gmail.com
 
-
-* **Q2: What her year of birth?**
-* Respuesta: 1992
-
-
-* **Q3: Whats her occupation?**
-* Respuesta: Professional Photographer
-
-
-* **Q4: What phone does she have?**
-* Respuesta: iPhone X
-
-
-* **Q5: How long ago did she start her current job?**
-* Respuesta: 5 years ago
-
-
-* **Q6: What is the date of the capture?**
-* Respuesta: Oct 23rd
-
-
-* **Q7: What famous woman does Lola have on her web page?**
-* Respuesta: Ada Lovelace
-
-
+- **Q1:** Where has Lola gone on holiday?
+  - Respuesta: `San Diego`
+- **Q2:** What her year of birth?
+  - Respuesta: `1992`
+- **Q3:** Whats her occupation?
+  - Respuesta: `Professional Photographer`
+- **Q4:** What phone does she have?
+  - Respuesta: `iPhone X`
+- **Q5:** How long ago did she start her current job?
+  - Respuesta: `5 years ago`
+- **Q6:** What is the date of the capture?
+  - Respuesta: `Oct 23rd`
+- **Q7:** What famous woman does Lola have on her web page? (Hint: reverse image search)
+  - Respuesta: `Ada Lovelace`
 
 ---
 
 ## Task 15: [Medium] [Scripting] Very Secure Protocol
 
-* **Q1: What is the value of the PRE-AUTH-CONF string you receive?**
-* Respuesta: `******************`
-
-
-* **Q2: What is value of the cracked PSK Hask?**
-* Respuesta: `********************************`
-
-
-* **Q3: What is the value of the final flag you received from the server?**
-* Respuesta: `****************`
-
-
-
---- 
+- **Q1:** What is the value of the PRE-AUTH-CONF string you receive?
+  - Respuesta: [Pendiente] (Formato: ******************)
+- **Q2:** What is value of the cracked PSK Hash?
+  - Respuesta: [Pendiente] (Formato: ********************************)
+- **Q3:** What is the value of the final flag you received from the server?
+  - Respuesta: [Pendiente] (Formato: ****************)

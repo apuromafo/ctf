@@ -1,17 +1,17 @@
 # Costly Clouds [HARD]
 
-## 📊 Información de la Sala
-- **ID Interno:** `a31535e4-54a2-4a89-814a-f8552dd1ef28`
-- **Nivel:** `HARD`
-- **Recompensa:** `715 XP`
+## 📊 Información de la Sala / Room Information
+- **ID Interno / Internal ID:** `a31535e4-54a2-4a89-814a-f8552dd1ef28`
+- **Nivel / Level:** `HARD`
+- **Recompensa / Reward:** `715 XP`
 
-## 🎯 Objetivos
+## 🎯 Objetivos / Objectives
 - Hunt GUI-Vil actions across AWS activity and piece together the whole attack chain, from credential abuse to resource hijacking.
 - Learn to discern attacker behaviour from pressure-driven developer actions.
 - Uncover stealthy EC2 crypto-mining hidden within autoscaling bursts.
 
-## 🛠️ Alert Triage
-## Read Before You Begin
+## 🛠️ Triaje de Alertas / Alert Triage
+## Lee Antes de Empezar / Read Before You Begin
 
 - Check out the Alert Triage Playbook described below (**Alert Triage** tab)
 - Understand how to classify and escalate alerts (**Alert Classification** tab)
@@ -41,8 +41,8 @@
    - **Decide if Alert Requires Escalation**: For True Positives, refer to the same guide and follow the Escalation section
    - **Submit and Close the Alert**: Once the alert is triaged, submit and close its case report in the SOC dashboard
 
-## 🛠️ Alert Classification
-## Alert Classification
+## 🛠️ Clasificación de Alertas / Alert Classification
+## Clasificación de Alertas / Alert Classification
 
 **True Positive**
 
@@ -65,7 +65,7 @@ Classification for activities which were determined to be legitimate, meaning th
   - **False Positive:** US-based employee accessed their email from phone during a vacation in Asia
   - **False Positive:** Sales person used an approved VPN to login and triggered the alert
 
-## Alert Escalation
+## Escalada de Alertas / Alert Escalation
 
 **Escalation Required**
 
@@ -83,8 +83,8 @@ True Positive alert must be escalated if additional actions or remediation are r
 - Threat actor tried to dump credentials from the breached file server via Mimikatz, but the attempt was blocked by an existing EDR solution
 - The alert was identified as part of a larger attack chain but was initially misclassified. Here, an analyst needs to go back and update their case report
 
-## 🛠️ Alert Reporting
-## Alert Reporting
+## 🛠️ Reporte de Alertas / Alert Reporting
+## Reporte de Alertas / Alert Reporting
 
 - Provide a clear and detailed explanation of the reason why the activity is classified as TP or FP
 - Clearly explain why the alert requires escalation and which remediation actions may be required
@@ -98,7 +98,7 @@ True Positive alert must be escalated if additional actions or remediation are r
 - Specify which goals the threat actor attempted to achieve
 - (Optional) Specify which MITRE techniques or tactics the activity can be related to
 
-### Best Practice Reports
+### Reportes de Buenas Prácticas / Best Practice Reports
 
 - **True Positive - "Windows Account Brute Force"**
 
@@ -108,8 +108,8 @@ True Positive alert must be escalated if additional actions or remediation are r
 
   > This activity is classified as a False Positive. I detected that Bob Taylor attempted to log into the CORP-11 Windows host on the TryHatMe environment from the IP address 12.23.4.115. It is worth noting that this user regularly engages in activity from this IP address. During the investigation, 6 failed login attempts were found starting at 12:23 on 01.02.2025, with the reason for the failures being the user's expired password. This resulted in failed events triggering the correlation rule. No anomalies were found.
 
-## 🛠️ SOC Handover
-## SOC Shift Handover
+## 🛠️ Entrega del SOC / SOC Handover
+## Entrega de Turno del SOC / SOC Shift Handover
 
 Nothing too wild this shift, but as expected, things are heating up with the game launch happening later today. Infra’s more active than usual—definitely feels like the calm before the storm.
 Saw a handful of EC2s spun up with tags like '**gamelaunch**' and '**gameload**', which lines up with what the devs said. Sophia and Liam have been busy pushing data to S3 all day—looks like final game assets going out.
@@ -126,17 +126,17 @@ Stay paranoid. — Alex
 >
 > This is fine. — Riley
 
-## 🛠️ Company Information
-## Company Introduction
+## 🛠️ Información de la Empresa / Company Information
+## Introducción de la Empresa / Company Introduction
 
 TryHatMe Studios are an up and coming software development house, ranging from Games to utility applications, known famously for previous releases such as “CyberHeist” and the highly anticipated platformer “NeuralNexus”.
 
-### Log Sources
+### Fuentes de Registros / Log Sources
 
 - **AWS CloudTrail logs**: API-level activity across the AWS environment, capturing actions taken by users, roles, and services. Including logins, instance launches, S3 access, and permission changes.
 - **Route 53 DNS Resolution logs**: outbound DNS queries made by resources inside the VPC and captured via Amazon Route 53 Resolver. These logs are used to monitor domain lookups from EC2 instances and other AWS services.
 
-### Employees
+### Empleados / Employees
 
 | Name              | Email                              | Role                      | Org Unit         |
 |------------------|------------------------------------|---------------------------|------------------|
@@ -151,3 +151,9 @@ TryHatMe Studios are an up and coming software development house, ranging from G
 | Liam Patel       | l.patel@tryhatmestudios.thm         | Backend Developer         | Game Development |
 | Dana Brooks      | d.brooks@tryhatmestudios.thm        | Security Operations Lead  | Security         |
 | Alex Morgan      | a.morgan@tryhatmestudios.thm        | SOC Analyst (Level 2)     | Security         |
+
+---
+
+**Fuente / Source:** [TryHackMe SOC Simulator](https://tryhackme.com/soc-sim)
+**Autor del documento / Document author:** Apuromafo
+**Fecha de acceso / Access date:** 2026-09-01

@@ -1,17 +1,17 @@
 # Open Door [MEDIUM]
 
-## 📊 Información de la Sala
-- **ID Interno:** `4fe806a4-dfda-4be3-bb57-eab35457e29b`
-- **Nivel:** `MEDIUM`
-- **Recompensa:** `755 XP`
+## 📊 Información de la Sala / Room Information
+- **ID Interno / Internal ID:** `4fe806a4-dfda-4be3-bb57-eab35457e29b`
+- **Nivel / Level:** `MEDIUM`
+- **Recompensa / Reward:** `755 XP`
 
-## 🎯 Objetivos
+## 🎯 Objetivos / Objectives
 - Monitor and analyze real-time alerts during the attack lifecycle.
 - Identify key indicators of compromise (IOCs), such as malicious file downloads and C2 communications. 
 - Close alerts with detailed descriptions based on your observations to help the team understand the full scope of the breach.
 
-## 🛠️ Alert Triage
-## Read Before You Begin
+## 🛠️ Triaje de Alertas / Alert Triage
+## Lee Antes de Empezar / Read Before You Begin
 
 - Check out the Alert Triage Playbook described below (**Alert Triage** tab)
 - Understand how to classify and escalate alerts (**Alert Classification** tab)
@@ -41,8 +41,8 @@
    - **Decide if Alert Requires Escalation**: For True Positives, refer to the same guide and follow the Escalation section
    - **Submit and Close the Alert**: Once the alert is triaged, submit and close its case report in the SOC dashboard
 
-## 🛠️ Alert Classification
-## Alert Classification
+## 🛠️ Clasificación de Alertas / Alert Classification
+## Clasificación de Alertas / Alert Classification
 
 **True Positive**
 
@@ -65,7 +65,7 @@ Classification for activities which were determined to be legitimate, meaning th
   - **False Positive:** US-based employee accessed their email from phone during a vacation in Asia
   - **False Positive:** Sales person used an approved VPN to login and triggered the alert
 
-## Alert Escalation
+## Escalada de Alertas / Alert Escalation
 
 **Escalation Required**
 
@@ -83,8 +83,8 @@ True Positive alert must be escalated if additional actions or remediation are r
 - Threat actor tried to dump credentials from the breached file server via Mimikatz, but the attempt was blocked by an existing EDR solution
 - The alert was identified as part of a larger attack chain but was initially misclassified. Here, an analyst needs to go back and update their case report
 
-## 🛠️ Alert Reporting
-## Alert Reporting
+## 🛠️ Reporte de Alertas / Alert Reporting
+## Reporte de Alertas / Alert Reporting
 
 - Provide a clear and detailed explanation of the reason why the activity is classified as TP or FP
 - Clearly explain why the alert requires escalation and which remediation actions may be required
@@ -98,7 +98,7 @@ True Positive alert must be escalated if additional actions or remediation are r
 - Specify which goals the threat actor attempted to achieve
 - (Optional) Specify which MITRE techniques or tactics the activity can be related to
 
-### Best Practice Reports
+### Reportes de Buenas Prácticas / Best Practice Reports
 
 - **True Positive - "Windows Account Brute Force"**
 
@@ -108,13 +108,13 @@ True Positive alert must be escalated if additional actions or remediation are r
 
   > This activity is classified as a False Positive. I detected that Bob Taylor attempted to log into the CORP-11 Windows host on the TryHatMe environment from the IP address 12.23.4.115. It is worth noting that this user regularly engages in activity from this IP address. During the investigation, 6 failed login attempts were found starting at 12:23 on 01.02.2025, with the reason for the failures being the user's expired password. This resulted in failed events triggering the correlation rule. No anomalies were found.
 
-## 🛠️ Company Information
-# Company Information
+## 🛠️ Información de la Empresa / Company Information
+## Información de la Empresa / Company Information
 TryHatMe is one of the fastest-growing companies within the e-commerce industry, specializing in the online sale of hats. Our unique value proposition, which allows customers to virtually "try on" hats before purchasing, has distinguished us in the market and driven rapid growth.
 
-## Company Structure
+## Estructura de la Empresa / Company Structure
 
-### Employees
+### Empleados / Employees
 | Name              | Department     | Email                        | Logged-in Host | Workstation IP  |
 |-------------------|----------------|------------------------------|----------------|-----------------|
 | Henry Johnson     | CEO            | henry.johnson@tryhatme.com    | win-1101       | 10.11.117.240   |
@@ -126,17 +126,17 @@ TryHatMe is one of the fastest-growing companies within the e-commerce industry,
 | Ruby Evans        | Sales          | ruby.evans@tryhatme.com       | win-1107       | 10.11.117.130   |
 
 
-### Servers
+### Servidores / Servers
 
 | Purpose        | Hostname        |  IP Address    |
 |----------------|-----------------|----------------|
 | File Server    | file-server-01  | 10.11.117.15   |
 
 
-## Restricted Software Information
+## Información de Software Restringido / Restricted Software Information
 This is a list of software that employees are prohibited from using. If a correlation rule identifies the use of any such software and triggers an alert, the activity is classified as a True Positive. However, no escalation is required, as the responsible SOC Analyst collects this information weekly and sends a report to the client detailing the usage of restricted software.
 
-### Restricted Software List:
+### Lista de Software Restringido / Restricted Software List:
 - WinRAR
 - Torrent Clients
 - Opera Browser
@@ -149,12 +149,12 @@ This is a list of software that employees are prohibited from using. If a correl
 - BleachBit
 - Adobe
 
-## 🛠️ Tool Documentation
-# Tool Documentation
+## 🛠️ Documentación de Herramientas / Tool Documentation
+## Documentación de Herramientas / Tool Documentation
 Here you will find an overview of the primary tools currently at your disposal for monitoring, investigating, and responding to security incidents.
 
 
-#### Ingested Sources:
+#### Fuentes Ingeridas / Ingested Sources:
 - **Sysmon Logs**: System monitoring logs from machines in the network to detect process creations, modifications, and other system-level events.
 
 - **List of Sysmon Events ID**:
@@ -171,5 +171,11 @@ Here you will find an overview of the primary tools currently at your disposal f
   
 - **Security Logs**: Logs from machines which record security-related events such as user logins, access attempts, privilege changes, and other security-critical activities.
 
-#### Analyst Workstation (My Computer)
+#### Estación de Trabajo del Analista (Mi Computadora) / Analyst Workstation (My Computer)
 The Analyst Workstation is a dedicated VM specifically configured for your investigation needs. This isolated environment ensures a secure and controlled setting for analyzing and responding to potential threats.
+
+---
+
+**Fuente / Source:** [TryHackMe SOC Simulator](https://tryhackme.com/soc-sim)
+**Autor del documento / Document author:** Apuromafo
+**Fecha de acceso / Access date:** 2026-09-01

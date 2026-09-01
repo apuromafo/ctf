@@ -1,19 +1,19 @@
-# 🏹 Threat Hunting: Darker Cat [MEDIUM]
+# 🏹 Darker Cat [MEDIUM]
 
-## 📊 Perfil de la Amenaza
-- **Dificultad:** `MEDIUM`
-- **Puntos de Misión:** `1078 XP`
+## 📊 Perfil de la Amenaza / Threat Profile
+- **Dificultad / Difficulty:** `MEDIUM`
+- **Puntos de Misión / Mission Points:** `1078 XP`
 
-## 🎯 Objetivos de Hunting
+## 🎯 Objetivos de Hunting / Hunting Objectives
 - Investigate whether any leaked credentials were successfully used to gain access to a PawPressMe system. Identify the entry point and source of the login.
 - Reconstruct how the attacker moved from the initial foothold to other machines within the network, particularly Windows workstations. Determine the technique used and which accounts were leveraged.
 - Analyse system and network logs for indications that files were staged, compressed, and transferred out of the environment. Correlate any observed exfiltration with claims on the BlackCat leak site.
 - Determine how the ransomware payload was deployed across systems. Identify the payload used, delivery method, and file encryption scope.
 
-## 💡 Hipótesis de Investigación
+## 💡 Hipótesis de Investigación / Investigation Hypothesis
 > An employee reused a personal password to WatchingCatsLounge.com, which was exposed in a recent credential leak. The attacker used these credentials to access our Linux backup server via SSH. The Splunk Forwarder on that server stopped reporting shortly afterwards. A public leak-site post later confirmed data exfiltration, followed by widespread ransomware deployment across multiple systems. These events suggest the initial access originated from the leaked credentials and led to a broader compromise.
 
-## 🛠️ Scenario Details
+## 🛠️ Detalles del Escenario / Scenario Details
 # Crabs On Security
 
 ## Pawnd: WatchingCatsLounge Credential Dump Hits Dark Web
@@ -41,7 +41,7 @@ Forum responses imply that one buyer may have successfully used the dump for ini
 
 While WatchingCatsLounge itself is not considered critical infrastructure, this dump presents a high risk of credential reuse, particularly for organizations with weak access controls or shared credentials across personal and work systems.
 
-### Why It Matters
+### Por Qué Importa / Why It Matters
 Credential reuse remains one of the most consistent ways attackers gain a foothold—especially in flat networks or environments without 2FA. When employee logins from niche websites are recycled on business infrastructure, a minor leak can snowball into a full-blown incident.
 
 Organizations with users known to frequent WatchingCatsLounge (or any hobby community, for that matter) should immediately:
@@ -53,8 +53,8 @@ Organizations with users known to frequent WatchingCatsLounge (or any hobby comm
 This isn’t the first time cats have brought down a network.
 But this one might have claws.
 
-## 🛠️ Company Information
-## Company Information
+## 🛠️ Información de la Empresa / Company Information
+## Información de la Empresa / Company Information
 
 PawPressMe is a lean online media company that helps small brands and startups tell their stories through digital content, ebooks, and social media strategy.
 
@@ -62,7 +62,7 @@ From cyber security whitepapers to playful lifestyle campaigns, PawPressMe produ
 
 The company operates with a small creative team, collaborative tools, and a high-volume content pipeline, making speed and flexibility core to its value.
 
-### Employees
+### Empleados / Employees
 
 | Name               | Position                                       | Email                     | Logged-in Host |
 |--------------------|------------------------------------------------|---------------------------|----------------|
@@ -73,15 +73,21 @@ The company operates with a small creative team, collaborative tools, and a high
 | Penny Pawsworth    | Social Media Specialist                        | penny@pawpress.me         | paw-penny      |
 | Sally Felina       | Founder & Creative Director                    | sally@pawpress.me         | paw-sally      |
 
-## 🛠️ Asset Inventory
-### Network and Subnets
+## 🛠️ Inventario de Activos / Asset Inventory
+### Red y Subredes / Network and Subnets
 
 | Purpose                   | Range          |
 |---------------------------|----------------|
 | PawPressMe Corporate LAN  | 10.10.50.0/24  |
 
-### Endpoints and Network Devices
+### Endpoints y Dispositivos de Red / Endpoints and Network Devices
 
 | Purpose                | Hostname      | Public IP | Internal IP    |
 |------------------------|---------------|-----------|----------------|
 | Backup Server      | pawbackup  | –         | 10.10.50.5     |
+
+---
+
+**Fuente / Source:** [TryHackMe Threat Hunting Simulator](https://tryhackme.com/threat-hunting-sim)
+**Autor del documento / Document author:** Apuromafo
+**Fecha de acceso / Access date:** 2026-09-01

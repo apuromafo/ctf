@@ -1,25 +1,25 @@
-# 📋 Tabletop: APT34: Zeroed Out by OilRig [N/A]
+# 📋 APT34: Zeroed Out by OilRig [MEDIUM]
 
 ![Thumbnail](thumbnail.png)
 
-## 📈 Resumen Ejecutivo
-- **Industria:** Legal services
-- **Tipo de Ataque:** Espionage
-- **Arquitectura:** On-prem
-- **Sistemas Operativos:** Windows
+## 📈 Resumen Ejecutivo / Executive Summary
+- **Industria / Industry:** Legal services
+- **Tipo de Ataque / Attack Type:** Espionage
+- **Arquitectura / Architecture:** On-prem
+- **Sistemas Operativos / OS:** Windows
 
-## 📝 Contexto del Incidente
+## 📝 Contexto del Incidente / Incident Context
 A national cyber authority notifies your organization of suspected unauthorized access to your internal email systems. Media inquiries begin to surface before your internal investigation is complete.
 
-## 🎯 Objetivos de la Simulación
+## 🎯 Objetivos de la Simulación / Simulation Objectives
 - Increase Organizational Awareness and Preparedness
 - Identify and Address Gaps in Security Policies and Procedures
 - Test and Validate Incident Response Plans and Procedures
 
-## 🛠️ Aplicaciones y Herramientas Involucradas
+## 🛠️ Aplicaciones y Herramientas Involucradas / Applications & Tools Involved
 - Email platform
 - SIEM
 - Active Directory
 
 ---
-*Escenario creado por: THMDan*
+*Escenario creado por / Scenario created by: THMDan*

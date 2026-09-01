@@ -1,17 +1,17 @@
 # Phishing Unfolding [MEDIUM]
 
-## 📊 Información de la Sala
-- **ID Interno:** `1542debf-4bcd-4cd3-b52c-2203de746689`
-- **Nivel:** `MEDIUM`
-- **Recompensa:** `1880 XP`
+## 📊 Información de la Sala / Room Information
+- **ID Interno / Internal ID:** `1542debf-4bcd-4cd3-b52c-2203de746689`
+- **Nivel / Level:** `MEDIUM`
+- **Recompensa / Reward:** `1880 XP`
 
-## 🎯 Objetivos
+## 🎯 Objetivos / Objectives
 - Monitor and analyse real-time alerts as the attack unfolds.
 - Identify and document critical events such as PowerShell executions, reverse shell connections, and suspicious DNS requests.
 - Create detailed case reports based on your observations to help the team understand the full scope of the breach.
 
-## 🛠️ Alert triage
-## Read Before You Begin
+## 🛠️ Triaje de Alertas / Alert Triage
+## Lee Antes de Empezar / Read Before You Begin
 
 - Check out the Alert Triage Playbook described below (**Alert Triage** tab)
 - Understand how to classify and escalate alerts (**Alert Classification** tab)
@@ -41,8 +41,8 @@
    - **Decide if Alert Requires Escalation**: For True Positives, refer to the same guide and follow the Escalation section
    - **Submit and Close the Alert**: Once the alert is triaged, submit and close its case report in the SOC dashboard
 
-## 🛠️ Alert Classification
-## Alert Classification
+## 🛠️ Clasificación de Alertas / Alert Classification
+## Clasificación de Alertas / Alert Classification
 
 **True Positive**
 
@@ -65,7 +65,7 @@ Classification for activities which were determined to be legitimate, meaning th
   - **False Positive:** A US-based employee accessed their email from a phone during a vacation in Asia
   - **False Positive:** Salesperson used an approved VPN to log in and triggered the alert
 
-## Alert Escalation
+## Escalada de Alertas / Alert Escalation
 
 **Escalation Required**
 
@@ -83,8 +83,8 @@ True Positive alert must be escalated if additional actions or remediation are r
 - Threat actor tried to dump credentials from the breached file server via Mimikatz, but the attempt was blocked by an existing EDR solution
 - The alert was identified as part of a larger attack chain but was initially misclassified. Here, an analyst needs to go back and update their case report
 
-## 🛠️ Alert Reporting
-## Alert Reporting
+## 🛠️ Reporte de Alertas / Alert Reporting
+## Reporte de Alertas / Alert Reporting
 
 - Provide a clear and detailed explanation of the reason why the activity is classified as TP or FP
 - Clearly explain why the alert requires escalation and which remediation actions may be required
@@ -98,7 +98,7 @@ True Positive alert must be escalated if additional actions or remediation are r
 - Specify which goals the threat actor attempted to achieve
 - (Optional) Specify which MITRE techniques or tactics the activity can be related to
 
-### Best Practice Reports
+### Reportes de Buenas Prácticas / Best Practice Reports
 
 - **True Positive - "Windows Account Brute Force"**
 
@@ -108,11 +108,11 @@ True Positive alert must be escalated if additional actions or remediation are r
 
   > This activity is classified as a False Positive. I detected that Bob Taylor attempted to log into the CORP-11 Windows host on the TryHatMe environment from the IP address 12.23.4.115. It is worth noting that this user regularly engages in activity from this IP address. During the investigation, 6 failed login attempts were found starting at 12:23 on 01.02.2025, with the reason for the failures being the user's expired password. This resulted in failed events triggering the correlation rule. No anomalies were found.
 
-## 🛠️ Company information
-# Company Information
+## 🛠️ Información de la Empresa / Company Information
+## Información de la Empresa / Company Information
 TryHatMe is one of the fastest-growing companies within the e-commerce industry, specializing in the online sale of hats. Our unique value proposition, which allows customers to virtually "try on" hats before purchasing, has distinguished us in the market and driven rapid growth.
 
-### Directory
+### Directorio / Directory
 | Name                | Role       | Email                         | Logged-in Host |
 |---------------------|------------|-------------------------------|----------------|
 | Michael Ascot       | CEO        | michael.ascot@tryhatme.com    | win-3450       |
@@ -128,3 +128,9 @@ TryHatMe is one of the fastest-growing companies within the e-commerce industry,
 | Safa Prince         | Sales      | safa.prince@tryhatme.com      | win-3456       |
 | Diego Summers       | Sales      | diego.summers@tryhatme.com    | win-3457       |
 | Armaan Terry        | Sales      | armaan.terry@tryhatme.com     | win-3458       |
+
+---
+
+**Fuente / Source:** [TryHackMe SOC Simulator](https://tryhackme.com/soc-sim)
+**Autor del documento / Document author:** Apuromafo
+**Fecha de acceso / Access date:** 2026-09-01

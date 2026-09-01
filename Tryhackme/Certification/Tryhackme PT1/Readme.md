@@ -1,7 +1,9 @@
-Junior Penetration Tester (PT1) - FAQ
-Referencia oficial: https://tryhackme.com/certification/junior-penetration-tester
+# Junior Penetration Tester (PT1) — FAQ
 
-# Junior Penetration Tester (PT1) - FAQ
+> **ES/EN** — Guía de la certificación Junior Penetration Tester (PT1) de TryHackMe.
+> Guide to TryHackMe's Junior Penetration Tester (PT1) certification.
+
+Referencia oficial / Official reference: https://tryhackme.com/certification/junior-penetration-tester
 
 ### ¿Cómo es el proceso de examen?
 
@@ -123,4 +125,10 @@ At **$297**, it's a bit pricier than some alternatives, but the hands-on focus a
 Overall, PT1 was a challenging but rewarding cert. I found network easy, AD easy but tricky, and web hard — which aligned with what I expected but still pushed me. If you're into practical pentesting and have some TryHackMe experience, I recommend it. It's not a "must-have" for jobs, but it's a great way to prove your skills to yourself.
 
 If you have questions or want tips, drop a comment below. Happy hacking!
+
+---
+
+**Fuente / Source:** [TryHackMe Junior Penetration Tester (PT1)](https://tryhackme.com/certification/junior-penetration-tester)
+**Autor del documento / Document author:** Apuromafo
+**Fecha de acceso / Access date:** 2026-09-01
 

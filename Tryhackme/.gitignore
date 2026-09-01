@@ -1,0 +1,46 @@
+# ============================================
+# .gitignore — TryHackMe (Apuromafo)
+# ES/EN: SOLO ignora archivos GENERADOS/DERIVADOS.
+#        NO ignora contenido real de los retos
+#        (imágenes, PDFs, scripts, binarios de
+#        evidencia, etc.) — esos SÍ se versionan.
+# ============================================
+
+# --- Graphify: salida generada (se regenera con /graphify) ---
+graphify-out/
+.graphify_python
+.graphify_root
+.graphify_detect.json
+.graphify_extract.json
+.graphify_ast.json
+.graphify_semantic.json
+.graphify_analysis.json
+.graphify_labels.json
+.graphify_cached.json
+.graphify_uncached.txt
+.graphify_semantic_new.json
+.graphify_chunk_*.json
+cost.json
+.needs_update
+
+# --- Archivos temporales / de sistema (nunca contenido real) ---
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Entornos / caches (generados, no contenido) ---
+__pycache__/
+*.pyc
+.env
+.venv/
+venv/
+node_modules/
+
+# --- Editor / IDE (config local) ---
+.vscode/
+.idea/

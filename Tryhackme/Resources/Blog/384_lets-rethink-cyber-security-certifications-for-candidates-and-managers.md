@@ -41,3 +41,6 @@ The role of an entry-level certification should be to validate actual readiness,
 It provides a clear signal that foundational skills have been properly learned. It allows managers to trust that someone can be developed further. It gives educators a meaningful validation point that reflects real understanding rather than participation.
 Most importantly, it reduces ambiguity at the start of the cyber career journey.
 If building stronger foundations in cyber security matters to your organisation, it may be worth looking at how this translates beyond individual learners. TryHackMe for Business is designed to help teams develop practical, validated skills with clarity on progress and readiness.
+
+---
+**Fuente / Source:** [lets-rethink-cyber-security-certifications-for-candidates-and-managers](https://tryhackme.com/resources/blog/lets-rethink-cyber-security-certifications-for-candidates-and-managers)

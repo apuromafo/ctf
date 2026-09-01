@@ -25,3 +25,10 @@ We were delighted to work in collaboration with TryHackMe to provide practitione
 Feedback across teachers, students, and Education Scotland was overwhelmingly positive. The management dashboard allowed teachers to see students’ progress in one space, swiftly detecting individuals needing extra support and guidance. Seeing this collated in a private dashboard format was cited by teachers as a brilliant benefit to keeping tabs on progression.
 Almost all students found they understood cyber security concepts while using TryHackMe. They were motivated to learn and became more confident in their ability to problem solve. TryHackMe allows students to work independently or with peers in an engaging learning environment, building progressively on their skills and knowledge, with myself as a teacher there as support, asking questions and taking part in discussion.
 We’re so excited to help bring forward a new generation of cyber experts to the world. It’s incredible to see students’ progress and young people grasping concepts that initially seemed alien, and we know these drives will help to strengthen the cyber security of regions across the world.
+
+## Multimedia
+
+![](images/360_Education-Scotland-03.png)
+
+---
+**Fuente / Source:** [education-scotland](https://tryhackme.com/resources/blog/education-scotland)

@@ -104,3 +104,6 @@ a clear objective
 limited information
 a need to justify your conclusion
 This builds the same discipline you need in incident response and SOC work.
+
+---
+**Fuente / Source:** [osint-tools-you-can-practise-safely](https://tryhackme.com/resources/blog/osint-tools-you-can-practise-safely)

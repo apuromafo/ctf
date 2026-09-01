@@ -49,3 +49,6 @@ SEC0 is TryHackMe’s way of opening the doors and keeping them open. If you’v
 “Everyone else already knows more than me”
 “I don’t even know where to begin”
 SEC0 was built with you in mind. Cyber security isn’t reserved for a select few. You don’t need permission to start. You just need the right entry point. And that’s exactly what SEC0 is designed to give you.  Explore SEC0 on TryHackMe and take the first real step in your cyber journey.
+
+---
+**Fuente / Source:** [sec0-the-right-way-to-start-your-cyber-security-journey](https://tryhackme.com/resources/blog/sec0-the-right-way-to-start-your-cyber-security-journey)

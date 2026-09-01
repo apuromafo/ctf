@@ -44,3 +44,6 @@ Stop when you have answered the question - or when further pivots would require 
 The discipline of documenting as you go is what separates professional OSINT from casual Googling. An investigation that cannot show its reasoning is not actionable. Bellingcat's guides are the closest thing to a public-facing methodology reference the OSINT community has.
 Build these skills on TryHackMe
 The OSINT module on TryHackMe covers the tools and techniques from all four case study types - image geolocation, infrastructure pivoting, persona investigation, and web footprinting - in browser-based labs with no local setup needed.
+
+---
+**Fuente / Source:** [practical-osint-how-real-investigations-actually-work](https://tryhackme.com/resources/blog/practical-osint-how-real-investigations-actually-work)

@@ -34,3 +34,6 @@ We know who completed the modules. Do we know who's ready?
 If your current training approach was built to get you to the deadline, it may not be built for what comes after it.
 Readiness is a different standard. Getting there starts with being honest about whether you're meeting it.
 If you want to see how that looks in practice, book a call with our team.
+
+---
+**Fuente / Source:** [in-finserv-compliance-cant-replace-capability](https://tryhackme.com/resources/blog/in-finserv-compliance-cant-replace-capability)

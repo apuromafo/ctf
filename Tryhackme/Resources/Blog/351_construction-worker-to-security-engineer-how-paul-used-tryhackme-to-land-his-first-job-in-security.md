@@ -21,3 +21,6 @@ Cyber security can be confusing because it seems like there’s so much to learn
 Try to find someone (like a friend or partner) to learn with together. It’s beneficial because you can motivate and support each other. I introduced my wife to TryHackMe, and we regularly learn together. She loves that all the lessons are entirely web-based, giving her all the tools to get started learning anywhere, at any time!
 How did you feel about switching your career, and what would you say to others in the same position?
 I was very excited to switch my career. The best advice I can give is to make sure you give yourself credit. Everyone gets imposter syndrome, even the most skilled people, so take pride in making small progressive steps when learning!
+
+---
+**Fuente / Source:** [construction-worker-to-security-engineer-how-paul-used-tryhackme-to-land-his-first-job-in-security](https://tryhackme.com/resources/blog/construction-worker-to-security-engineer-how-paul-used-tryhackme-to-land-his-first-job-in-security)

@@ -58,3 +58,6 @@ The certifications that produce the strongest evidence are always the ones that 
 Prices sourced directly from provider pages, March 2026. THM prices are in Euros and vary by region and subscriber status. CompTIA prices are USD exam voucher only — study materials are additional. BTL1 is GBP and includes training and one free resit. OSCP includes the PEN-200 course and 90-day lab access. eJPT requires an INE subscription plus a separate voucher. All prices subject to change — confirm on the provider's page before purchasing.
 Start Building Toward the Right Certification
 TryHackMe's learning paths are structured to prepare you directly for each certification above, using the same practical, browser-based environment as the exams themselves. No local setup required.
+
+---
+**Fuente / Source:** [which-cyber-security-certifications-are-actually-worth-it-in-2026](https://tryhackme.com/resources/blog/which-cyber-security-certifications-are-actually-worth-it-in-2026)

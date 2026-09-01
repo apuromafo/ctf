@@ -51,3 +51,6 @@ That judgement does not arrive with a certification. It develops through practic
 That is what structured, practical training is designed to produce.
 Start Practising the Workflow Today
 If you want to build real SOC analyst skills in a hands-on environment, TryHackMe's SOC Level 1 path is the place to start. Work through the investigations, develop the instincts, and validate your ability with the SAL1 certification when you are ready.
+
+---
+**Fuente / Source:** [how-soc-analysts-actually-investigate-alerts-real-blue-team-workflow](https://tryhackme.com/resources/blog/how-soc-analysts-actually-investigate-alerts-real-blue-team-workflow)

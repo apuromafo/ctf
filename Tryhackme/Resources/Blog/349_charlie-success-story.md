@@ -18,3 +18,6 @@ What advice would you give someone just starting in cyber security?
 My advice for someone looking to get started in cyber security is to be persistent, have patience, and practice. Getting an entry-level job in cyber security can be challenging, and experience is sometimes hard to come by, but with TryHackMe, you can develop your general IT knowledge in Windows, Linux and Tooling and gain experience in lab work. Use your lab work examples to demonstrate your knowledge in practice within your job interviews - explain how you were able to find flags in CTF events, how you used the 8 phases of the Cyber Kill Chain to win these CTFs, and so on.
 It’s all about persistence and not giving up. You will face challenges trying to get into a cyber security role, but all that slows you down at the beginning should fuel your desire to achieve your end goal.
 Thank you so much Charlie for sharing your thoughts! You can follow Charlie’s journey on LinkedIn.
+
+---
+**Fuente / Source:** [charlie-success-story](https://tryhackme.com/resources/blog/charlie-success-story)

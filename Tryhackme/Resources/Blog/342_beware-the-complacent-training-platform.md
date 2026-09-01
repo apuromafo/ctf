@@ -25,3 +25,6 @@ Size and longevity are proxies for quality. They’re reasonably useful, until t
 Training for your cyber security teams is directly linked to your organization's ability to detect, respond to, and recover from threats. It drives a business critical outcome. The platform you choose should understand that distinction and the responsibility that come with it. You should be able to see it clearly in how they build, how often they ship, and how seriously they take the question of whether your team is actually learning.
 The safe choice and the right choice aren't always the same thing. In this category that gap matters.
 Explore how security teams are using hands-on labs and realistic simulations to build real operational readiness.
+
+---
+**Fuente / Source:** [beware-the-complacent-training-platform](https://tryhackme.com/resources/blog/beware-the-complacent-training-platform)

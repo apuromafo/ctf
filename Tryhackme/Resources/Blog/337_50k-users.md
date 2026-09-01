@@ -23,3 +23,10 @@ Closing Statement
 Thank you to everyone who has supported TryHackMe, from our Moderators who manage the ( 7,000 user strong ) Discord community, to people who have signed up and given feedback.
 So whats next? We have a lot coming out this year, from interactive network labs to more learning pathways and everything else in between. Its mind blowing that we've reached 50,000 users. Here is until the next 50.
 Thanks for reading, Ben (TryHackMe Co-Founder)
+
+## Multimedia
+
+![](images/337_Screenshot-from-2020-04-20-15-05-22.png)
+
+---
+**Fuente / Source:** [50k-users](https://tryhackme.com/resources/blog/50k-users)

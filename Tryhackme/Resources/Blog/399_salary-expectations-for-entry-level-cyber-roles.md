@@ -66,3 +66,6 @@ Entry-level cyber security salaries in 2026 remain strong relative to many other
 In the UK, expect roughly £28,000 to £38,000 to start. In the US, expect roughly $65,000 to $85,000.
 Your exact figure depends on geography, organisation type, and most importantly, practical skill level.
 If you want to maximise your earning potential from the start, focus on hands-on capability and practical validation.
+
+---
+**Fuente / Source:** [salary-expectations-for-entry-level-cyber-roles](https://tryhackme.com/resources/blog/salary-expectations-for-entry-level-cyber-roles)

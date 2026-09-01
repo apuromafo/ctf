@@ -59,3 +59,6 @@ One retake is included, whether you pass or fail
 Results are instant, no delays, no uncertainty.
 Most importantly, you walk away knowing you didn’t just study cyber security, you practiced it. If you’re ready to stop learning about cyber security and start proving you can do it, the Cyber Security 101 (SEC1) Certification is your next step.
 Validate your foundational skills with a fully hands-on exam built around real scenarios, not guesswork.
+
+---
+**Fuente / Source:** [cyber-101-certification-a-practical-way-to-prove-youre-ready-for-cyber-security](https://tryhackme.com/resources/blog/cyber-101-certification-a-practical-way-to-prove-youre-ready-for-cyber-security)

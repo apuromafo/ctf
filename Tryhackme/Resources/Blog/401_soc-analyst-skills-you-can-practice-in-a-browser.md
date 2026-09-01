@@ -39,3 +39,6 @@ Practising what actually transfers
 SOC tooling will change over the course of your career. The ability to reason through uncertain situations will not.
 Practising SOC analyst skills in a browser is not about convenience. It is about focusing on the parts of the job that matter most, before tooling complexity gets in the way.
 If you can learn how to think like an analyst, the rest becomes much easier to pick up.
+
+---
+**Fuente / Source:** [soc-analyst-skills-you-can-practice-in-a-browser](https://tryhackme.com/resources/blog/soc-analyst-skills-you-can-practice-in-a-browser)

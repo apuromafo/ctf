@@ -20,3 +20,6 @@ What advice would you give someone just starting in cyber security?
 Starting out can be overwhelming! There’s an incredibly vast amount of resources and information online, so I would stress the importance of researching the positions you’re interested in - if you’re learning for job prospects. This can be great to streamline your learning into that path. Even if you choose to adapt to different interests in the future, this is a great way to avoid being overwhelmed. I knew I wanted to learn the offensive side of security, so I enrolled in the Junior Penetration Tester path on TryHackMe and focused on offensive security rooms.
 If you’re in a similar position, tell yourself you can do it! Don’t be afraid to make mistakes, and cultivate the habit of asking questions. Keep learning, keep growing, and go and get it!
 Follow Olufela’s journey on LinkedIn
+
+---
+**Fuente / Source:** [olufelas-success-story](https://tryhackme.com/resources/blog/olufelas-success-story)

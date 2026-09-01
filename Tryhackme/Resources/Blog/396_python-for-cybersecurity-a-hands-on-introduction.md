@@ -96,3 +96,6 @@ Decisions matter
 Investigations lead somewhere
 Outputs can be validated
 If your goal is practical security work, especially SOC workflows, start here:
+
+---
+**Fuente / Source:** [python-for-cybersecurity-a-hands-on-introduction](https://tryhackme.com/resources/blog/python-for-cybersecurity-a-hands-on-introduction)

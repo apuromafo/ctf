@@ -39,3 +39,6 @@ Start with foundational capability. Validate it through hands-on assessment. The
 The key is not the number of certifications you collect. It is whether each one represents something you can actually do.
 Ready to Start Practising?
 If you want a certification path that prioritises real skill over memorisation, explore the practical routes available through TryHackMe, including SEC1, PT1, and SAL1.
+
+---
+**Fuente / Source:** [practical-certification-paths-for-cyber-beginners](https://tryhackme.com/resources/blog/practical-certification-paths-for-cyber-beginners)

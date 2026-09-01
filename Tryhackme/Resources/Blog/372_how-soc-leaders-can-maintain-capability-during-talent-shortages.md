@@ -97,3 +97,10 @@ Reassess staffing needs after efficiency gains and skill improvements.
 Conclusion
 Talent shortages in SOC teams will continue as organizations expand their attack surface and adversaries become more sophisticated. Leaders cannot depend on hiring to solve capability gaps. Instead they must reduce operational dependence on manual work, automate critical workflows, and develop existing analysts with measurable, targeted training.
 Platforms such as TryHackMe Business help leaders achieve these outcomes by providing automated skills assessments, role aligned learning, realistic SOC simulations, and analytics that reveal strengths and weaknesses with clarity. When teams improve capability through structured automation and continuous development they maintain resilience even in periods of staffing shortage.
+
+## Multimedia
+
+![](images/372_image.png)
+
+---
+**Fuente / Source:** [how-soc-leaders-can-maintain-capability-during-talent-shortages](https://tryhackme.com/resources/blog/how-soc-leaders-can-maintain-capability-during-talent-shortages)

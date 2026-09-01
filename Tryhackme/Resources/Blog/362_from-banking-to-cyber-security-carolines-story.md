@@ -66,3 +66,6 @@ The bridge between theory and real-world practice
 A supportive community that made learning less intimidating
 The best investment she made during her career switch
 And eventually, it became part of her story not just as a learner, but as someone now helping others learn too.
+
+---
+**Fuente / Source:** [from-banking-to-cyber-security-carolines-story](https://tryhackme.com/resources/blog/from-banking-to-cyber-security-carolines-story)

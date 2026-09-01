@@ -37,3 +37,12 @@ What enterprise security leaders say:
 “We (Arag) chose THM for one main reason, it made realistic practice safe and easy to adopt. the team could run hands-on scenarios in browser-based, isolated labs without touching production systems ” -Arag
 Try the Platforms Yourself
 1000+ Enterprise security teams already use TryHackMe to build measurable SOC readiness. Forrester built their evaluation on 33% of our evidence. Form your own view with 100% of the platform free. Put your SOC team through TryHackMe. Then try any leader on their list. The best evaluation is a hands-on one, let the outcomes decide.
+
+## Multimedia
+
+![](images/361_NEW-customer_logos_transparent.png)
+
+![](images/361_THM-Forrester-Img-2.png)
+
+---
+**Fuente / Source:** [forrester-got-it-wrong-heres-the-evidence](https://tryhackme.com/resources/blog/forrester-got-it-wrong-heres-the-evidence)

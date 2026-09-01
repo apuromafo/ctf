@@ -24,3 +24,6 @@ Webinar · Free to attend
 🛡️ Securing AI Coding: Governance, guardrails, and getting It done
 You can’t block AI. You can govern it.
 📅 4th March 2026 🕒  4pm GMT | 11am EST | 8am PST
+
+---
+**Fuente / Source:** [developers-and-ai-security-nightmare-or-governance-opportunity](https://tryhackme.com/resources/blog/developers-and-ai-security-nightmare-or-governance-opportunity)

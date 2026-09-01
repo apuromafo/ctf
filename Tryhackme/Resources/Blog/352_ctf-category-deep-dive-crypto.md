@@ -55,3 +55,6 @@ That habit, applied consistently, turns crypto from a category you skip into a r
 Build the Habit on TryHackMe
 The best way to get comfortable with crypto challenges before a real competition is to practise them in a low-stakes environment where you can take your time, read writeups when you are stuck, and build pattern recognition across a range of challenge types.
 TryHackMe has dedicated cryptography content including the Encryption: Crypto 101 room, which covers the fundamentals of symmetric and asymmetric encryption, RSA, and hashing in a hands-on format. The broader platform gives you access to CTF-style rooms across every category so you can build crypto fluency alongside your other skills without having to search for external practice material.
+
+---
+**Fuente / Source:** [ctf-category-deep-dive-crypto](https://tryhackme.com/resources/blog/ctf-category-deep-dive-crypto)

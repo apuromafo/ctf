@@ -25,3 +25,6 @@ That’s why TryHackMe tabletops are designed to mature with the team. You can s
 For teams running tabletops regularly, these capabilities turn individual sessions into a connected body of work that compounds learning, strengthens runbooks, and builds confidence over time.
 These tabletops are the antithesis of the ‘classic, pricey and drawn out TTX’, and they’re built to empower teams to own their capability building.
 Curious what a self-serve, AI-driven tabletop looks like in practice? Take a closer look.
+
+---
+**Fuente / Source:** [you-dont-actually-have-to-dread-tabletops](https://tryhackme.com/resources/blog/you-dont-actually-have-to-dread-tabletops)

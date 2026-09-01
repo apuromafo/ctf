@@ -54,3 +54,6 @@ The gap between "I've heard of Burp Suite" and "I know how to use Burp Suite" is
 Start Learning Burp Suite in Practice
 TryHackMe's Burp Suite module gives you hands-on labs across every tool covered in this guide, all accessible from your browser with no setup required.
 Start the Jr Penetration Tester Path
+
+---
+**Fuente / Source:** [burp-suite-advanced-techniques-for-web-penetration-testing](https://tryhackme.com/resources/blog/burp-suite-advanced-techniques-for-web-penetration-testing)

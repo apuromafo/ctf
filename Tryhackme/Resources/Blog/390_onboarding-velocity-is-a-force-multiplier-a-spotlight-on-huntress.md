@@ -29,3 +29,6 @@ These metrics were bolstered by high engagement and adoption for TryHackMe train
 As Tyler put it:
 TryHackMe has completely transformed how we onboard and train our SOC Support team. What used to take three months now takes six weeks, thanks to a streamlined and engaging training process. The platform is fun, hands-on, and has given my team the confidence and skills they need t o protect our customers. From day one, new hires are building foundational knowledge, and as a manager, the ability to assign and track progress is invaluable.
 If onboarding speed is directly tied to your team’s readiness, it may be worth reassessing how training is structured, measured, and validated across your SOC. Learn more about how TryHackMe for Business supports teams building measurable readiness.
+
+---
+**Fuente / Source:** [onboarding-velocity-is-a-force-multiplier-a-spotlight-on-huntress](https://tryhackme.com/resources/blog/onboarding-velocity-is-a-force-multiplier-a-spotlight-on-huntress)

@@ -33,3 +33,6 @@ Analysing AI-generated content pipelines for safeguards
 Investigating bulk automated actions in production systems
 Correlating system-wide telemetry with compliance triggers
 Practising these skills in labs that simulate large-scale event detection and response will make defensive teams more resilient to next-generation threats and governance-driven incidents.
+
+---
+**Fuente / Source:** [hack-news-french-prosecutors-raid-x-offices-in-cybercrime-investigation](https://tryhackme.com/resources/blog/hack-news-french-prosecutors-raid-x-offices-in-cybercrime-investigation)

@@ -13,3 +13,6 @@ Every question answered gets you an additional "wiggle" score, where there is be
 All points you get are added to your ‘All-time’ score, however not all points are added to your ‘Monthly’ score (which is reset to 0 on the last day of the month 23:59 GMT). You only get monthly points if a room has been released during that month. This stops new users being able obtain large amounts of points as they have more rooms to solve than older users - by monthly points only being awarded if a room is released this month, everyone has a fair chance to be number 1 on the ‘Monthly’ leaderboard and everyone has an equal chance to be number 1 on the ‘All-time’ leaderboard.
 The room releases will begin this Friday (Jan 17th)
 If you have previously developed virtual machines as security challenges, and are interested in becoming a paid TryHackMe content developer, please get in touch at: jobs@tryhackme.com
+
+---
+**Fuente / Source:** [regular-room-releases](https://tryhackme.com/resources/blog/regular-room-releases)

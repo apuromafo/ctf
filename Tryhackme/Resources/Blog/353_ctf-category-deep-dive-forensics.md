@@ -114,3 +114,6 @@ CTF forensics is not a perfect simulation of professional investigation. Competi
 Analysts who can work efficiently with Volatility, Wireshark, Autopsy, and file analysis tools are exactly what hiring managers look for at the entry and mid levels. TryHackMe's DFIR module and the Advanced Endpoint Investigations path bridge the gap between CTF-style forensics practice and professional investigation work, applying the same tools to realistic incident scenarios rather than designed puzzles.
 The habits built through forensics competition practice - working systematically, documenting what you tried, understanding why a technique did or did not work - are precisely the habits that experienced investigators consider essential and which are hard to teach through any other format.
 Build the methodology. Learn the tools. Capture the flag.
+
+---
+**Fuente / Source:** [ctf-category-deep-dive-forensics](https://tryhackme.com/resources/blog/ctf-category-deep-dive-forensics)

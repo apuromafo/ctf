@@ -28,3 +28,6 @@ Done right, it’s turning obligator ‘awareness’ into allyship. Colleagues w
 Make Cyber Security Awareness month, do something that lasts
 The organizations that take security seriously bring their people in. A TryHackMe CTF event is the most effective way we know to do that: competitive, inclusive, tailored to your team, and fast to set up.
 You bring your organisation. We bring the challenges, the energy, and everything your team needs to shine.
+
+---
+**Fuente / Source:** [what-if-awareness-had-true-substance](https://tryhackme.com/resources/blog/what-if-awareness-had-true-substance)

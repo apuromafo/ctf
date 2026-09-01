@@ -47,3 +47,6 @@ Hands-on pathways like PT1 focus heavily on structured methodology, including po
 If your goal is to move beyond beginner-level hacking and into structured offensive capability, privilege escalation is not optional. It is foundational.
 Ready to Practise Privilege Escalation?
 Build real escalation skills inside structured offensive labs and validate them through hands-on certification.
+
+---
+**Fuente / Source:** [how-to-learn-privilege-escalation-practically](https://tryhackme.com/resources/blog/how-to-learn-privilege-escalation-practically)

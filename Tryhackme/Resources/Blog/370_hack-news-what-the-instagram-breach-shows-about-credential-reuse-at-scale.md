@@ -55,3 +55,6 @@ This breach does not tell us that Instagram was hacked. It tells us that credent
 For defenders, the lesson is not to look for a single root cause, but to recognise credential reuse as an ongoing condition that must be mitigated, monitored, and assumed.
 The story here is not about a moment in time. It is about persistence.
 Explore defensive learning paths that focus on identity security, investigation, and real-world account compromise scenarios.
+
+---
+**Fuente / Source:** [hack-news-what-the-instagram-breach-shows-about-credential-reuse-at-scale](https://tryhackme.com/resources/blog/hack-news-what-the-instagram-breach-shows-about-credential-reuse-at-scale)

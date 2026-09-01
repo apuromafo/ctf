@@ -21,3 +21,6 @@ Dive in! Keep going, keep learning, and have fun.
 Find what resonates with you and immerse yourself in your learning. Setting up a home lab and messing things up is a great way to learn - and don’t let money be a barrier. There are many free resources, including hundreds of labs on TryHackMe. I think taking that first step of learning and breaking into cyber security can be the toughest, so it’s worth making that jump and seeing where you go. The more you know, the more valuable you are and the more doors open.
 If you’re also transitioning from a different field, remember there are so many aspects of this industry where your skills are still valuable and can help you get a leg up. Cyber security is still a new focus for many companies, and all your previous experience is relevant and valuable. Use this experience as a strength and selling point.
 Follow Michael’s journey on LinkedIn
+
+---
+**Fuente / Source:** [michaels-success-story](https://tryhackme.com/resources/blog/michaels-success-story)

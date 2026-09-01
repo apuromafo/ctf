@@ -203,3 +203,6 @@ This is not a guarantee or a formula. Individual pace varies. But the direction 
 One realistic benchmark: Completing TryHackMe's SOC Level 1 path , working through 10 to 15 CTF challenges across forensics and network analysis, and writing up your methodology for each gives you a portfolio a hiring manager can actually assess. That is achievable in three to six months of consistent effort.
 Start building the skills that get you hired
 The field needs people who can do the work. The tools, the scenarios, and the structured paths to get you there are available today, browser-ready, with no local setup required.Start with the Pre-Security path if you are brand new, or go straight to the SOC Level 1 path if you have some IT background. If you have a specific role in mind, the Jr Penetration Tester path , Cyber Defence path , and DFIR module each offer a targeted route. And when you are ready to benchmark yourself against a hiring standard, the SAL1 certification gives you something concrete to show for it.
+
+---
+**Fuente / Source:** [what-real-world-cyber-security-practice-actually-looks-like-in-2026](https://tryhackme.com/resources/blog/what-real-world-cyber-security-practice-actually-looks-like-in-2026)

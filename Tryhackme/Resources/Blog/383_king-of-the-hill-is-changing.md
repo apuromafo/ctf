@@ -12,3 +12,10 @@ If the machine ends up breaking, or becoming unusable, you can vote to reset the
 When KoTH was first released, we allowed streaming just for the 'release month'. However, after seeing the enjoyment of users watching streamers play, we've decided to allow streaming and writeups on all KoTH machines.
 Lastly, we've decided against retiring machines. Each month new machines will be added to the pool, this will help reduce the chances of playing the same machine repetitively. This will hopefully help reduce the number of auto-pwns, as eventually the machine pool will be so large the chances of having a machine (unless you over-play) pop-up again will be minimal.
 TL;DR : - King of the Hill is now free to play.. forever. - You can choose which KoTH machines you want to play in private games. - The number of resets are now based on the number of users in the game. - Streaming and Writeups are allowed - KoTH machines wont retire, the machine pool will be forever growing.
+
+## Multimedia
+
+![](images/383_tryhackme-koth-ad.-sharp.png)
+
+---
+**Fuente / Source:** [king-of-the-hill-is-changing](https://tryhackme.com/resources/blog/king-of-the-hill-is-changing)

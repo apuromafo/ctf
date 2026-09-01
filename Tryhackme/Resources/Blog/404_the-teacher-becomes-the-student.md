@@ -20,3 +20,6 @@ What advice would you give someone just starting in cyber security
 Don't give up! Cyber security can be very difficult sometimes. No matter your background or experience level, as long as you stay motivated, you will succeed.
 How did you feel about switching your career, and what would you say to others in the same position?
 I've always been interested by technology and when I got to learn about cyber security, I was extremely excited by this new career pathway. The change may feel difficult and there will be people telling you that you won't be able to do it, but as long as you're passionate about it, you will succeed.
+
+---
+**Fuente / Source:** [the-teacher-becomes-the-student](https://tryhackme.com/resources/blog/the-teacher-becomes-the-student)

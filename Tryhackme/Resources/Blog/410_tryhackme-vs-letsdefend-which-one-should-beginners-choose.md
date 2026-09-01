@@ -51,3 +51,6 @@ Strong fundamentals compound over time.
 Start Building the Right Foundations
 If you are ready to begin your journey in cyber security, start with structured learning that builds core skills before moving into advanced simulations.
 Begin with foundational knowledge on TryHackMe's Pre Security Path .
+
+---
+**Fuente / Source:** [tryhackme-vs-letsdefend-which-one-should-beginners-choose](https://tryhackme.com/resources/blog/tryhackme-vs-letsdefend-which-one-should-beginners-choose)

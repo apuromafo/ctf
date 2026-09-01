@@ -12,3 +12,6 @@ The platform's functionality will not change, although some pages may appear sli
 If you do notice a bug, please contact our support team at support@tryhackme.com
 As always, we would like to thank you for your patience and dedication.
 ~ The TryHackMe team.
+
+---
+**Fuente / Source:** [tryhackme-improvements](https://tryhackme.com/resources/blog/tryhackme-improvements)

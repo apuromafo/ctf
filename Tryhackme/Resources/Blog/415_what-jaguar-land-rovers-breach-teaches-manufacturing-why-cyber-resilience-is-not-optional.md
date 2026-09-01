@@ -25,3 +25,6 @@ Run a pilot exercise ; invite core participants (IT, operations, legal, comms) t
 Use the insights to refine your escalation paths, communication plan, vendor controls, segmentation, and backup strategy.
 Make exercises recurring: quarterly or semiannual drills let your team practice rhythm, memory, and adaptation.
 The JLR failure was not just a collapse of infrastructure — it was a failure in rehearsal, coordination, and readiness. But you can choose not to be next. With proper training, simulation, and practice, you move from surprise to control.
+
+---
+**Fuente / Source:** [what-jaguar-land-rovers-breach-teaches-manufacturing-why-cyber-resilience-is-not-optional](https://tryhackme.com/resources/blog/what-jaguar-land-rovers-breach-teaches-manufacturing-why-cyber-resilience-is-not-optional)

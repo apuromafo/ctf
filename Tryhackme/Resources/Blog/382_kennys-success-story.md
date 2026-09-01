@@ -19,3 +19,6 @@ The TryHackMe discord community has 100,000 members, where users can connect wit
 How did you feel about switching your career, and what would you say to others in a similar position?
 I won’t deny that it’s a huge leap and certainly had me questioning myself on many occasions. Again, this is where a good support network comes into its own. For me, I felt I had great support and a plan for achieving my goals. It would always be easier to play it safe and stay where I was, especially after being in my role for such a long time. However, I’m so glad that I made the decision I did. The experience and what I’m doing on a daily basis is so rewarding. There’s not a single day that I look back with any regret.
 I would say to anyone in a similar situation, have the courage to follow your dreams. If you don’t, you’ll always wonder “What if?” Follow Kenny’s journey on LinkedIn
+
+---
+**Fuente / Source:** [kennys-success-story](https://tryhackme.com/resources/blog/kennys-success-story)

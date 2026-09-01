@@ -16,3 +16,6 @@ I obtained a job in the cyber security career field right out of college. After 
 What advice would you give someone just starting in cyber security?
 Do not be discouraged by the amount of knowledge you may think you have. I was a fourth-year college student with little to no knowledge in the field. In just a few months of being introduced to TryHackMe, I was able to secure a job in the cyber security field. As long as you find a drive to keep learning, I promise you that you will be able to achieve your dream job.
 Follow Brandon’s journey on LinkedIn
+
+---
+**Fuente / Source:** [brandons-success-story](https://tryhackme.com/resources/blog/brandons-success-story)

@@ -69,3 +69,6 @@ But the analyst provides interpretation.
 Understanding how these tools interact is far more valuable than memorising their feature lists. For aspiring Blue Team professionals, the goal isn’t simply to “learn Splunk” or “install Wazuh.” It’s to build investigation fluency.
 That fluency comes from structured, hands-on defensive practice.
 If you want to develop the skills behind the tools, start with realistic SOC labs and incident simulations rather than static tutorials.
+
+---
+**Fuente / Source:** [blue-team-tooling-how-analysts-use-splunk-wazuh-sysmon](https://tryhackme.com/resources/blog/blue-team-tooling-how-analysts-use-splunk-wazuh-sysmon)

@@ -26,3 +26,6 @@ The program didn't just upskill a team. It made cybersecurity part of how ARAG I
 That's a culture shift.
 🎯 Build a structured cybersecurity training program
 See how security teams use TryHackMe to create role-based learning paths, measure skill development, and run hands-on exercises without operational risk.
+
+---
+**Fuente / Source:** [training-do-you-mean-culture-shift](https://tryhackme.com/resources/blog/training-do-you-mean-culture-shift)

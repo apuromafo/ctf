@@ -38,3 +38,6 @@ In 2026, expensive hardware is optional
 There are people who love building home labs. That’s valid. Some of them learn an enormous amount from it.
 But you don’t need to build a home lab to build cyber security skills. You need to build the habit of practice. You need repetition. You need feedback. You need environments where it’s safe to fail and easy to try again.
 If you can do that consistently, you’re already doing the thing that most learners never manage to do.
+
+---
+**Fuente / Source:** [how-to-build-practical-cyber-skills-without-expensive-hardware-in-2026](https://tryhackme.com/resources/blog/how-to-build-practical-cyber-skills-without-expensive-hardware-in-2026)

@@ -26,3 +26,6 @@ Everyone has a different style of learning; something that works for me may not 
 Do you have any advice for fellow teachers in cyber security?
 As I mentioned, hands-on exercises play a key role in the learning experience, confidence, and even employability of students. My advice to fellow cyber security teachers is to always incorporate practical exercises to illustrate the taught theoretical concepts. I would also definitely champion teachers to be excited. Cyber security is an ever-evolving, exciting field. It may not be the black hoodies, dark rooms, and green text in a terminal as portrayed in films. But the adrenaline of capturing a flag or exploiting and defending a security flaw, should be reflected in the teaching of cyber security to encourage students to also feel excited and ask questions.
 Follow Irene’s journey on LinkedIn
+
+---
+**Fuente / Source:** [irenes-success-story](https://tryhackme.com/resources/blog/irenes-success-story)

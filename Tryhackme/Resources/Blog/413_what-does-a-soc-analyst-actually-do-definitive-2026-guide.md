@@ -62,3 +62,6 @@ That is how defensive skills become career-ready capability.
 Start Your Blue Team Journey
 Build the skills employers expect from entry-level SOC analysts through guided, hands-on learning.
 Begin with fundamentals, then progress into real defensive workflows.
+
+---
+**Fuente / Source:** [what-does-a-soc-analyst-actually-do-definitive-2026-guide](https://tryhackme.com/resources/blog/what-does-a-soc-analyst-actually-do-definitive-2026-guide)

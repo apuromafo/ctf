@@ -44,3 +44,6 @@ Learning cyber security without overpaying
 Affordable cyber security learning is not about cutting corners. It is about removing unnecessary barriers and focusing on what builds skill.
 Virtual labs have made it possible to practise real techniques, workflows, and decision-making without expensive hardware or long-term commitments. For many learners, they offer the most efficient path into the field.
 The key is choosing environments that prioritise thinking and practice over polish and promises.
+
+---
+**Fuente / Source:** [affordable-ways-to-learn-cyber-security-with-virtual-labs](https://tryhackme.com/resources/blog/affordable-ways-to-learn-cyber-security-with-virtual-labs)

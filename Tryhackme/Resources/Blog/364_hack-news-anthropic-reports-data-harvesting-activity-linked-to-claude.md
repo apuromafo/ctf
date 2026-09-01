@@ -49,3 +49,6 @@ Behavioural detection at the API level — looking at request patterns, timing, 
 The 'hydra cluster' model described here has structural similarities to botnet architectures: distributed, resilient to takedowns, mixing malicious traffic with legitimate requests to reduce signal clarity.
 Model outputs as a theft vector is a relatively new category of concern. As AI systems become more capable, the value of their outputs as training data increases, creating incentives for this kind of harvesting at scale.
 Google reported a similar pattern in early February 2026, disclosing that it had identified and disrupted distillation and model extraction attempts targeting its Gemini system through more than 100,000 prompts. The pattern appears to be industry-wide.
+
+---
+**Fuente / Source:** [hack-news-anthropic-reports-data-harvesting-activity-linked-to-claude](https://tryhackme.com/resources/blog/hack-news-anthropic-reports-data-harvesting-activity-linked-to-claude)

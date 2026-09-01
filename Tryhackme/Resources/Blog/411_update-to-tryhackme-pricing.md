@@ -28,3 +28,10 @@ As our promise to you, we’ll continue to make TryHackMe fun, engaging and appl
 It’s not a decision we take lightly to increase our pricing, so our pricing has never changed since TryHackMe first launched. Even with this slight increase, TryHackMe will continue to remain the most affordable platform for real-world and highly practical security training.
 We’d like to thank all TryHackMe users for choosing us on your personal cyber security learning journey!
 Ben Spring & Ashu Savani Co-founders of TryHackMe
+
+## Multimedia
+
+![](images/411_data-src-image-46336ea7-84cc-4688-9e04-c1ef29f0abeb.png)
+
+---
+**Fuente / Source:** [update-to-tryhackme-pricing](https://tryhackme.com/resources/blog/update-to-tryhackme-pricing)

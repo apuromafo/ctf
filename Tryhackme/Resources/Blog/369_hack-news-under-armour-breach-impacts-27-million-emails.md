@@ -43,3 +43,6 @@ We cannot reproduce the Under Armour incident itself, and we shouldn’t pretend
 But you can practise the relevant skills that defenders use during these events.
 The most transferable skills include: investigating account takeover patterns, spotting credential stuffing indicators, analysing suspicious login behaviour, and responding to phishing-driven compromise attempts. Those are core SOC competencies, and they are exactly the type of work that real teams need when breach news triggers a secondary wave of abuse.
 If you want to build these skills practically, train in environments where alerts lead to evidence and decisions rather than theory.
+
+---
+**Fuente / Source:** [hack-news-under-armour-breach-impacts-27-million-emails](https://tryhackme.com/resources/blog/hack-news-under-armour-breach-impacts-27-million-emails)

@@ -40,3 +40,6 @@ If you want to understand how security teams detect and investigate attacks like
 Explore SOC-focused training on TryHackMe to learn how to defend from real incidents such as these.
 Stay Ahead of Emerging Threats
 Cyber security evolves quickly. Building practical skills helps you understand not just headlines, but the defensive work happening behind them.
+
+---
+**Fuente / Source:** [hack-news-india-facing-more-than-3-100-cyber-attacks-per-week](https://tryhackme.com/resources/blog/hack-news-india-facing-more-than-3-100-cyber-attacks-per-week)

@@ -77,3 +77,6 @@ guided command line labs
 Linux fundamentals training
 repeatable exercises that build muscle memory
 If you want structured practice that builds Linux skill in a cyber context, you can start with hands-on labs designed specifically for beginners.
+
+---
+**Fuente / Source:** [linux-for-hackers-the-complete-beginners-guide](https://tryhackme.com/resources/blog/linux-for-hackers-the-complete-beginners-guide)

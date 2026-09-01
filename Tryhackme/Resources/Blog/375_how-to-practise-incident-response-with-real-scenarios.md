@@ -66,3 +66,6 @@ The SOC Level 1 path is the recommended preparation route for SAL1. The path bui
 The gap between having read about incident response and being able to demonstrate it under time pressure is where most candidates stall. Scenario-based training on a platform built for this kind of practice closes that gap in a way that passive study cannot.
 Start building your IR skills on TryHackMe
 Whether you are new to defensive security or building toward a specific SOC or IR analyst role, the structured paths on TryHackMe provide the most direct route from learning the concepts to demonstrating the competence.
+
+---
+**Fuente / Source:** [how-to-practise-incident-response-with-real-scenarios](https://tryhackme.com/resources/blog/how-to-practise-incident-response-with-real-scenarios)

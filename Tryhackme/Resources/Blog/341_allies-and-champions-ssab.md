@@ -55,3 +55,14 @@ Frame everything in business terms - Put security in the context of revenue and 
 Start small and grow organically - Start with the most passionate people who can motivate others to join
 Seek the cyber curious - Look for people who ask questions and want to learn more
 Want to support cyber security allies within your organization? We built the SEC0, our presecurity certification to cover core tech foundations from absolute scratch. It can help the wider business “speak cyber security” so champions can be a true force multiplier.
+
+## Multimedia
+
+[Video embebido / Embedded video](https://www.loom.com/embed/d011dc101efc4a5e88f10482df3826d4)
+
+[Video embebido / Embedded video](https://www.loom.com/embed/1b42fb5cbc17486cbc49fbbb14f74bc9)
+
+[Video embebido / Embedded video](https://www.loom.com/embed/493dd740a9d34bc2912bc12d140a0ded)
+
+---
+**Fuente / Source:** [allies-and-champions-ssab](https://tryhackme.com/resources/blog/allies-and-champions-ssab)

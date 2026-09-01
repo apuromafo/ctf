@@ -49,3 +49,6 @@ BloodHound Recon
 Run BloodHound defensively, clean up privilege paths, monitor LDAP enumeration volume
 A consistent theme across all four attacks is that they exploit configuration choices rather than unpatched vulnerabilities. The Kerberoasting attack works because RC4 is still enabled. Pass-the-Hash works because NTLM is still available. LLMNR poisoning works because a 30-year-old fallback protocol is switched on by default. None of these require a zero-day. They require a misconfigured environment and a patient attacker.
 Learn and practise Active Directory attacks on TryHackMe TryHackMe's Hacking Active Directory module covers enumeration, exploitation, lateral movement, and privilege escalation in a fully browser-based lab environment. No local AD lab required.
+
+---
+**Fuente / Source:** [active-directory-security-for-beginners-common-attacks-and-defences](https://tryhackme.com/resources/blog/active-directory-security-for-beginners-common-attacks-and-defences)

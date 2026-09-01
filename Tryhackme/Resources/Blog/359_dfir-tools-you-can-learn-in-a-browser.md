@@ -90,3 +90,6 @@ The lab is already running
 The tools in this guide are the same ones professional investigators use in live incidents. The ability to practise them in a browser, against real forensic artefacts, without configuring a local lab or sourcing disk images yourself, removes the one obstacle that has historically slowed people down at this stage of their development.
 If you are working toward a DFIR role, the Digital Forensics and Incident Response module and the Advanced Endpoint Investigations path provide the most structured route through this content. For SOC analysts building toward those skills, the SOC Level 1 path provides the triage and SIEM foundation first.
 The tools are ready. The environments are provisioned. Open a browser and start.
+
+---
+**Fuente / Source:** [dfir-tools-you-can-learn-in-a-browser](https://tryhackme.com/resources/blog/dfir-tools-you-can-learn-in-a-browser)

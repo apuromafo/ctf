@@ -44,3 +44,6 @@ Ho ho hackety ho! The TryHackMe elves have been busy working behind the scenes t
 This year, topics include red teaming, digital investigations, web vulnerabilities, IoT Hacking, and Cyber Defence. Of course, it wouldn’t be Christmas without some exciting prizes up for grabs, and this year, we’re giving away over $40,000 worth of epic prizes!
 Throughout the month, expect to see juicy content from people such as John Hammond, Cybersecurity Meg, Husky Hacks, SecurityNinja, Neal Bridges, InsiderPHD, and more!
 However you choose to get involved, step into Christmas with us, amp up your cyber security skills, and learn about the Nightmare before Elfmas…
+
+---
+**Fuente / Source:** [november-cyber-security-roundup](https://tryhackme.com/resources/blog/november-cyber-security-roundup)

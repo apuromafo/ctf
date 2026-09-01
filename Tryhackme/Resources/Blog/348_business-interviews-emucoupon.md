@@ -19,3 +19,6 @@ What advice would you give to other businesses looking to invest in cyber securi
 Don’t wait - the longer you wait, the more you are exposed to online threats. Like many other small business owners, I am increasingly aware just how exposed my business is to attacks of many forms. There is understandably an element of luck in not being the target of cyber criminals yet, but to avoid damaging future breaches processes absolutely have to be enacted.
 Thank you to Elice Max for your input.
 TryHackMe offers cyber security training solutions for companies of all sizes - see how we can upskill your workforce today.
+
+---
+**Fuente / Source:** [business-interviews-emucoupon](https://tryhackme.com/resources/blog/business-interviews-emucoupon)

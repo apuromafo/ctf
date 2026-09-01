@@ -76,3 +76,6 @@ Verify backup and recovery
 Wiper malware is designed to be unrecoverable. Offline backups tested recently are your primary defence if destructive payloads deploy.
 Build your threat intelligence skills on TryHackMe
 Understanding how to read and respond to advisories like this is a core skill for SOC analysts and threat intelligence roles. The following TryHackMe rooms cover the relevant techniques.
+
+---
+**Fuente / Source:** [sophos-warns-of-rising-cyber-risk-after-us-israel-iran-strikes](https://tryhackme.com/resources/blog/sophos-warns-of-rising-cyber-risk-after-us-israel-iran-strikes)

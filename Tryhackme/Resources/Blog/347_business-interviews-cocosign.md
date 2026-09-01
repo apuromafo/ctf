@@ -17,3 +17,6 @@ TryHackMe offers gamified cyber security training solutions for companies of all
 What advice would you give to other businesses looking to invest in cyber security?
 My advice to other businesses looking to invest in cyber security is to prioritise it, ensure the use of multi-factor authentication, and put policies in place to guide staff. It’s an area businesses across the board should be looking into and putting plans in place.
 Thank you to Stephen Curry for your input.
+
+---
+**Fuente / Source:** [business-interviews-cocosign](https://tryhackme.com/resources/blog/business-interviews-cocosign)

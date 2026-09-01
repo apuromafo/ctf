@@ -47,3 +47,6 @@ There is no universally correct path. SOC suits methodical thinkers who want a c
 The more useful question is not which path pays the most or which title sounds most impressive. It is which kind of work you would still want to do after doing it for two years. That is the path worth pursuing.
 Start Building Skills Today
 If you are ready to explore cyber security practically, not just conceptually, TryHackMe provides structured learning paths for every direction covered in this guide. Start for free, find the area that suits you, and build from there.
+
+---
+**Fuente / Source:** [which-cyber-security-career-path-is-right-for-you](https://tryhackme.com/resources/blog/which-cyber-security-career-path-is-right-for-you)

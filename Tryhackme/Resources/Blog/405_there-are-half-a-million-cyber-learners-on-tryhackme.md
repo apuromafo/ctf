@@ -36,3 +36,12 @@ Looking for a job? Join our team and help half a million users learn cyber secur
 Content Engineer , to help us create interactive training content.
 Growth Engineer , to run experiments and help with our product-led growth.
 Software Engineer , to help build the platform for hundreds of thousands of users.
+
+## Multimedia
+
+![](images/405_Holo.png)
+
+[Video embebido / Embedded video](https://player.vimeo.com/video/554897147?app_id=122963)
+
+---
+**Fuente / Source:** [there-are-half-a-million-cyber-learners-on-tryhackme](https://tryhackme.com/resources/blog/there-are-half-a-million-cyber-learners-on-tryhackme)

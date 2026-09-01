@@ -16,3 +16,6 @@ The level of cyber security knowledge I’ve gained has allowed me to become a c
 What advice would you give someone just starting in cyber security?
 TryHackMe is amazingly well suited to beginners - it’s easy to see when looking at the great reputation across the cyber security community on various platforms. There’s so much available to learn that I would recommend initially taking a step back, and going through the beginner rooms at your own pace, to slowly build upon and evolve your knowledge. There are lots of progression opportunities in cyber security with the right training, but it’s important to allow yourself those actionable steps so you don’t get overwhelmed. The write-ups are also a great way to read further information on anything you struggle with.
 Follow Tepi’s journey on LinkedIn
+
+---
+**Fuente / Source:** [tepis-success-story](https://tryhackme.com/resources/blog/tepis-success-story)

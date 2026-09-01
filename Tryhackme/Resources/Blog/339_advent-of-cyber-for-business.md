@@ -45,3 +45,6 @@ Are you an existing TryHackMe Business user? Introduce the free Advent of Cyber 
 New to TryHackMe? If you don't use TryHackMe for business already, launch Advent of Cyber and combine with a free trial of the management dashboard to leverage collaborative learning and level up your cyber security!
 We teach cyber security in practice - where you can hack and defend virtual machines in a real-world environment to get realistic, transferable skills in entirely safe surroundings.
 Give your team structured learning paths and practical self-paced training to upskill in real-world environments with guided, objective-based tasks and challenges. Use our pre-built courses, or make your own that aligns with your team's requirements.
+
+---
+**Fuente / Source:** [advent-of-cyber-for-business](https://tryhackme.com/resources/blog/advent-of-cyber-for-business)

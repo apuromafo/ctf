@@ -56,3 +56,6 @@ Certifications are not magic tickets. But practical certifications can act as cr
 In 2026, demonstrable ability increasingly outweighs formal pedigree.
 Ready to Validate Your Skills?
 Explore hands-on certifications designed to prove practical cyber capability, including SEC1, SAL1, and PT1.
+
+---
+**Fuente / Source:** [which-cybersecurity-certifications-dont-require-a-degree](https://tryhackme.com/resources/blog/which-cybersecurity-certifications-dont-require-a-degree)

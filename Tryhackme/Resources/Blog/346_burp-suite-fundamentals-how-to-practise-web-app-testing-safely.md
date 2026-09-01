@@ -92,3 +92,6 @@ secure development
 defensive detection
 incident response investigations
 You don’t need to rush. Burp rewards curiosity and repetition more than talent.
+
+---
+**Fuente / Source:** [burp-suite-fundamentals-how-to-practise-web-app-testing-safely](https://tryhackme.com/resources/blog/burp-suite-fundamentals-how-to-practise-web-app-testing-safely)

@@ -110,3 +110,6 @@ Assess telemetry quality and close obvious gaps in log coverage.
 Pilot automation with a small set of alerts and a single containment action. Measure outcomes.
 Integrate training measurement so that operational gaps directly generate learning assignments.
 Automation is a force multiplier for SOC teams when applied to the right tasks and governed correctly. It reduces repetitive work, provides consistent evidence and runbooks, and shortens the path from learning to effectiveness. For enterprise SOC leaders, combined investment in automation for operations and automation for workforce readiness yields predictable improvements in time to triage, time to containment, and analyst productivity.
+
+---
+**Fuente / Source:** [increase-efficiencies-with-automation-in-your-soc-team](https://tryhackme.com/resources/blog/increase-efficiencies-with-automation-in-your-soc-team)

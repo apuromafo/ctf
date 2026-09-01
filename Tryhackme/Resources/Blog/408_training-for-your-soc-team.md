@@ -45,3 +45,6 @@ TryHackMe also has a competitive hacking game, King of the Hill . Along with tra
 Action Practical Independent Learning That Cyber Analysts Can Directly Transfer to Job Responsibilities
 Hundreds of businesses use TryHackMe to empower their employees across the globe. The nature of browser-based, bite-sized, guided training means employees can adapt their own training plans to their company goals and job responsibilities. We take the hassle out of getting employee buy-in and offer a gamified, engaging hub where teams can excel and managers can focus on managing.
 KPMG uses TryHackMe to upskill all new analyst hires and onboard them into the company; setting a standard of training that empowers employees to learn and evolve. In our ongoing partnership, employees have logged a 100% satisfaction rate, completed over 40,000 training labs in 2 months, and achieve hands-on experience to directly transition to job responsibilities.
+
+---
+**Fuente / Source:** [training-for-your-soc-team](https://tryhackme.com/resources/blog/training-for-your-soc-team)

@@ -121,3 +121,6 @@ What this sequence covers
 Working through these eight steps addresses the most commonly exploited Windows configuration weaknesses: the legacy protocols that enable credential harvesting, the default settings that allow Pass-the-Hash lateral movement, the missing controls that let attackers dump credentials from memory, and the absence of logging that lets attacks go undetected.
 None of these steps require a security product purchase. Everything above uses native Windows functionality, Group Policy, and built-in Defender features. The gap between a default Windows installation and a reasonably hardened one is almost entirely a configuration gap, not a technology gap.
 Practise these skills on TryHackMe's Windows Fundamentals module builds the foundation needed to understand the controls above, and the rooms linked throughout this guide put them into practice in a browser-based lab environment.
+
+---
+**Fuente / Source:** [how-to-practise-windows-security-hardening-step-by-step](https://tryhackme.com/resources/blog/how-to-practise-windows-security-hardening-step-by-step)

@@ -36,3 +36,16 @@ What Will Not Change
 Even as AI matures, human judgment will still be irreplaceable. AI can enrich data, automate repetitive tasks, and surface insights, but people must make the final calls. Strong fundamentals remain just as important. Without deep technical grounding, practitioners may not be able to connect the dots across attacker activity and business logic, and will be unable to question or validate what the tools tell them.
 The New Core Skills for Cyber Practitioners
 With AI changing the way SOCs are working, practitioners skillsets will also need to adapt. Starting with core security knowledge, an understanding of networks, operating systems, web technologies, and cloud. Layered onto this is AI literacy: knowing how these systems work, where they fail, and how to shape their outputs through prompt engineering. Analysts will also need fluency in low-code automation and workflow design, the ability to stitch tools together to streamline investigations. As AI starts to heavily augment the work of the L1, analysts need to build advanced skillsets in threat hunting, malware analysis, and forensics.
+
+## Multimedia
+
+![](images/363_How-GenAI-Transforms-Core-SOC-Pillars-1.png)
+
+![](images/363_Aspiring-Practitioners-FINAL.png)
+
+![](images/363_Mid-Level-and-Senior-Analysts-FINAL.png)
+
+![](images/363_SOC-Risks-in-the-Age-of-GenAI.png)
+
+---
+**Fuente / Source:** [future-skills-for-cyber-practitioners-in-the-age-of-ai](https://tryhackme.com/resources/blog/future-skills-for-cyber-practitioners-in-the-age-of-ai)

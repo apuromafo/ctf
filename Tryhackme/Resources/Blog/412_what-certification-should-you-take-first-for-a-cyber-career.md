@@ -58,3 +58,6 @@ If you are aiming for offensive security, PT1 is the certification aligned to pr
 That progression looks like this:
 SEC0 → SEC1 → (SAL1 for defensive) or (PT1 for offensive)
 It gives beginners a clear pathway without forcing an early specialisation decision, while still letting you move toward a job-relevant destination.
+
+---
+**Fuente / Source:** [what-certification-should-you-take-first-for-a-cyber-career](https://tryhackme.com/resources/blog/what-certification-should-you-take-first-for-a-cyber-career)

@@ -58,3 +58,16 @@ Where we’re going
 Agentic AI is where the security stakes are highest and frameworks are still catching up. OWASP published a dedicated Agentic AI security framework in December 2024, separate from its LLM Top 10, which signals how distinct the risk surface has become. The Anthropic case is likely a preview, not an outlier.
 The organizations building governance capability like visibility tooling, champion programs, and embedded controls now, will be better positioned than those waiting for a forcing event.
 If this conversation resonated and you're thinking about how to strengthen cybersecurity capability across your teams, see how TryHackMe helps organizations build real-world security skills through hands-on simulation s.
+
+## Multimedia
+
+[Video embebido / Embedded video](https://www.loom.com/embed/9385770ff2e7466cb457e0d5f1cd49a3)
+
+[Video embebido / Embedded video](https://www.loom.com/embed/25cbb91cf9e14afa930edb99e5e7c02a)
+
+[Video embebido / Embedded video](https://www.loom.com/embed/cbee78afd1fb4e9db79b09869ef52c5c)
+
+[Video embebido / Embedded video](https://www.loom.com/embed/593156e116df4612b959fbbfe1007b76)
+
+---
+**Fuente / Source:** [you-can-govern-ai-withouth-killing-coding-velocity](https://tryhackme.com/resources/blog/you-can-govern-ai-withouth-killing-coding-velocity)

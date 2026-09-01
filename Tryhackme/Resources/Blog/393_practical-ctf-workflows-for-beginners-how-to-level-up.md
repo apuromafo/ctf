@@ -79,3 +79,6 @@ If you do those consistently, you will stop feeling like CTFs are random. Theyâ€
 Practise CTF workflows with structured challenges
 If you want to build this workflow in a way that transfers into real ethical hacking skill, the best approach is practising in CTF-style environments that reward method, not obscure trick knowledge.
 At TryHackMe, CTF rooms are designed to teach methodology as you go, which is exactly what most learners need when trying to level up.
+
+---
+**Fuente / Source:** [practical-ctf-workflows-for-beginners-how-to-level-up](https://tryhackme.com/resources/blog/practical-ctf-workflows-for-beginners-how-to-level-up)

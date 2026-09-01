@@ -127,3 +127,14 @@ It means demonstrating readiness through realistic tabletop exercises and simula
 It means using AI to remove friction without replacing human judgment, and extending security thinking beyond your own perimeter to customers and partners.
 Most importantly, it means prioritizing people, process, and technology together, so that we’re measuring and driving continuous improvement that’s grounded in reality.
 If you found this conversation interesting and want to see how TryHackMe helps teams build real-world cybersecurity skills, take a look at our business offering.
+
+## Multimedia
+
+[Video embebido / Embedded video](https://www.loom.com/embed/e0b32f8d2e3d466e825541b2c86c8884)
+
+[Video embebido / Embedded video](https://www.loom.com/embed/fcc709387f66417b9ded605b081ce20b)
+
+[Video embebido / Embedded video](https://www.loom.com/embed/9d65a6a842174ed2a95fbd5bba010b99)
+
+---
+**Fuente / Source:** [cybersecurity-is-a-revenue-threat](https://tryhackme.com/resources/blog/cybersecurity-is-a-revenue-threat)

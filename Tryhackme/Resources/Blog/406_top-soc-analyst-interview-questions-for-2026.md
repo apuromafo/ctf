@@ -87,3 +87,6 @@ Unusual outbound connection
 For each scenario, build a repeatable answer structure:
 What triggered the alert? What’s the scope? What evidence do I check? What do I conclude? What would I do next?
 That is literally the job.
+
+---
+**Fuente / Source:** [top-soc-analyst-interview-questions-for-2026](https://tryhackme.com/resources/blog/top-soc-analyst-interview-questions-for-2026)

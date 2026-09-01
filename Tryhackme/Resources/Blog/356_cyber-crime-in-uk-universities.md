@@ -61,3 +61,6 @@ As a common method of attack, universities have become a hunting ground for phis
 Defensive teams should be able to monitor and investigate alerts around the clock and escalate security incidents when necessary, which our brand new SOC Level 1 Pathway guides your security team through. As offence is argued to be the best defence , offensive cyber security is invaluable for the cyber security positioning of educational institutions.
 With red team exercises vital to detecting, preventing and remediating cyber threats, our Red Teaming Pathway upskills your team in challenging the defence capabilities, strengthening your cyber security standing.
 Launch TryHackMe to help omit risk and the repercussions of breaches through bite-sized guided training.
+
+---
+**Fuente / Source:** [cyber-crime-in-uk-universities](https://tryhackme.com/resources/blog/cyber-crime-in-uk-universities)

@@ -24,3 +24,10 @@ Leaderboards within TryHackMe workspaces drive competition throughout your team.
 TryHackMeTraining
 Alongside collaborative workspaces and King of the Hill, we have hundreds of training labs to upskill and arm your team with the knowledge of tools and practices to mitigate cyber attacks. Our business package promotes workplace collaboration and allows you to access all rooms and pathways to present the most relevant training to your team - assigning tasks to complete purely through the browser.
 Learning through collaboration and using competition to test your workforce helps to amplify knowledge retention and engagement - forming a strong baseline for your cyber security standing.
+
+## Multimedia
+
+<!-- Imagen no disponible offline / Image not available offline. Fuente original / Original source: https://lh6.googleusercontent.com/VY8usebo38L5PVe_EjHibN_-pYGnQ0Ut7XNTbgLlrgNJAo7ms12t3eytnIB-_m1hQJp4-GzGNoFqB4w8By3g_g-va-qAN2pmX83wHFEjz1_5A9yTFah_K6OE1uXJM7yz1EJ3aDrUedUzcRJlltejuBebVu9B7boiNKtT15vPl5fJSvP7ZGcEF2dGErlG7A -->
+
+---
+**Fuente / Source:** [collaborative-hacking-koth](https://tryhackme.com/resources/blog/collaborative-hacking-koth)

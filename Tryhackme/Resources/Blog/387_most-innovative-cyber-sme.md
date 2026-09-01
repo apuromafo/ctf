@@ -16,3 +16,10 @@ Our training labs cover offensive and defensive security , ranging in difficulty
 We hone in on gamification and engagement. Our training labs incorporate storylines and interactive elements. A key benefit to this is learning retention, which is proven to amplify with interactivity, gamification, and enjoyability. Learning does not need to be linear. Learning should be fun, and we are advocates of progression through enjoyment! Along with training, our unique hacking and defending game King of the Hill allows users to compete with each other by patching and attacking machines. It enforces collaboration in cyber and gets teams to put offensive and defensive cyber skills into practice - it’s pretty awesome!
 Sign up to TryHackMe today
 “We’ve had an incredible journey since setting out to make cybersecurity training fun, gamified, and accessible. We’ve helped over a million users across groups such as 11 year olds learning at school, construction workers looking for career changes, and technical professionals aiming to break into or upskill in the industry – seeing amazing progress and heartwarming successes. It makes everything we set out to do hugely rewarding. We’re grateful to DCMS and Infosecurity for recognising the work we’re doing, and are elated to have won this competition! Winning will enable us to continue making security accessible for everyone, everywhere, contributing to pillar one of the UK Cyber Security Strategy. We want to ensure that no matter where people are based or what their background entails, they can come to TryHackMe, launch their learning journey, and smash their goals. We’re feeling delighted, humbled, and proud of our team and community – we can’t wait to see what’s to come! ” - Ashu Savani, Co-founder
+
+## Multimedia
+
+![](images/387_20220621_121207.jpg)
+
+---
+**Fuente / Source:** [most-innovative-cyber-sme](https://tryhackme.com/resources/blog/most-innovative-cyber-sme)

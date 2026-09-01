@@ -1,0 +1,21 @@
+# Changing Career Paths: From It Manager to Security Analyst
+
+**ID Original:** no disponible
+**Slug:** kennys-success-story
+--------------------
+
+Over one million people use TryHackMe to learn cyber security. We love hearing stories about how our users have used the platform to change and excel their career paths. This is the story of how Kenny used TryHackMe training to help transition from the role of IT Manager to a Security Analyst.
+Why did you start learning cyber security?
+I’ve always been a technical person at heart. Although I held the position of IT manager, every day I was hands-on involved with security as that’s where my passion was. However, following a Red-Team assessment, I saw something completely new. I was fascinated by both the approach and the subsequent findings. It completely captivated me in all honesty and I knew at that point, this is where I want to be .
+What was the most challenging part of learning cyber security, and how did you rise above those challenges?
+Security is such a massive field, simply knowing where to start was massive a challenge. I started to engage with people who were active on social media, which in itself was challenging as I had never been active on any platform previously. There are some brilliant people out there who offered me fantastic advice. I took this on board and used this to form a development plan for my transition into security. What I would say is that this field can often feel very overwhelming with the sheer number of areas to study. To try and address this, I was advised to set out specific goals to maintain my focus. Such a simple thing, but it was a great piece of advice.
+How did TryHackMe help you learn?
+Although I had laid out my development plan, at times I was struggling to get practical experience. I also felt a better structure would aid my development. The TryHackMe platform was a recommendation from an individual on social media to try and address this. It was a fantastic recommendation in all honesty. TryHackMe allowed me to put my skills into practice and get that practical experience. For example, I hadn’t used Linux at all previously, and now I was able to do this in a meaningful way. The fact that you’re engaged in “challenges” helps with motivation and keeps you interested. However, this wasn’t the only benefit. The learning paths added an additional element of structure and guidance. In fact, it was the completion of the “ Offensive Pentesting ” and “ CompTIA Pentest+ ” pathways that provided the basis for me completing both my eJPT and Pentest+ certifications.
+What have you accomplished with your new skills?
+Aside from all the challenges I’ve completed online, the biggest accomplishment is my transition into the cyber security field in my new role as a Security Analyst. I’m actively working in an area that I absolutely love, on a daily basis. It truly is one of the most exciting times in my career.
+What advice would you give someone just starting in cyber security?
+Get involved in the community. There’s plenty of people out there that are willing to help and offer great advice. It’s essential that you’ve got people to reach out to, especially when you feel overwhelmed. For me this is very important, as this feeling is inevitable given the size of this field and areas of study.
+The TryHackMe discord community has 100,000 members, where users can connect with other like-minded cyber security students to ask questions, share knowledge, and meet people on the same learning journey.
+How did you feel about switching your career, and what would you say to others in a similar position?
+I won’t deny that it’s a huge leap and certainly had me questioning myself on many occasions. Again, this is where a good support network comes into its own. For me, I felt I had great support and a plan for achieving my goals. It would always be easier to play it safe and stay where I was, especially after being in my role for such a long time. However, I’m so glad that I made the decision I did. The experience and what I’m doing on a daily basis is so rewarding. There’s not a single day that I look back with any regret.
+I would say to anyone in a similar situation, have the courage to follow your dreams. If you don’t, you’ll always wonder “What if?” Follow Kenny’s journey on LinkedIn

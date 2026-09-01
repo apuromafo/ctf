@@ -1,0 +1,28 @@
+# TryHackMe Supports Hands-on Student Development - Irene’s Success Story
+
+**ID Original:** no disponible
+**Slug:** irenes-success-story
+--------------------
+
+TryHackMe training is now utilised by over a million individuals, businesses, universities, and schools! We’re incredibly proud of putting accessibility first with low costs and ease of use, and are passionate about helping Universities upskill students - the future cyber security workforce - in a tangible, interactive way.
+Dr Eirini Anthi, also known as Irene, is a cyber security lecturer at Cardiff University. Having completed a PhD, she teaches undergraduates whilst undergoing research on the security of Industrial Control Systems and Internet of Things devices. Irene uses TryHackMe to help give students a hands-on, interactive understanding of key cyber security topics. We asked Irene about her thoughts on teaching cyber security and her journey so far. Here’s what she had to say.
+Why did you start teaching cyber security? What about the field most interested you?
+I started learning about cyber security a few years ago during my BSc undergraduate degree at Cardiff University, teaching the topic initially formed a part of my PhD. At first, I was most interested in the privacy around smartphones and network security. My interests have since evolved to include Internet of Things (IoT) and Industrial Control Systems (ICS) security, along with vulnerabilities in traditional systems - with the ultimate goal being to enhance their security.
+What has been the most challenging part of teaching cyber security, and how have you risen above these challenges?
+By far, the most challenging part of teaching cyber security has been building and distributing custom Virtual Machines (VMs) and setting up environments so that students can perform hands-on technical exercises. From a lecturer's perspective, building, maintaining, and keeping these machines up to date is extremely time-consuming, so can lead the focus of the module to be on the theoretical aspects of cyber. This gap in our teaching has been a significant missing piece of the student’s employability picture. From a student perspective, they lack practical experience in establishing and understanding approaches towards applying cyber concepts in reality.
+To overcome this key issue we have looked to adopt platforms - like TryHackMe - to upskill students towards developing fundamental practical knowledge for the industry. This practical knowledge can bridge the gap between being skilled and being employable.
+Check out TryHackMe for Education
+How has TryHackMe helped your students learn?
+TryHackMe compliments the theoretical knowledge of my lectures with hands-on, step by step labs, which allow students to apply the concepts discussed in realistic environments. I used TryHackMe in one of my Cyber security Operations lectures, where the session covered the theoretical knowledge behind cyber security analytics, different data sources, and SIEM systems to analyse such data and identify threats. To support the session, I used TryHackMe’s Splunk 101 lab which provided complementary practical exercises that helped students:
+Identify threats contained within a realistic system log dataset and analyse it using an industry-standard tool (Splunk).
+Gain a better understanding of the countermeasures that need to be deployed to defend against a specific threat by performing this analysis.
+How do students feel about learning with TryHackMe?
+The feedback from students has been extremely positive. All the students who attended the initial session said they enjoyed the lab and that it significantly enhanced their understanding of the theoretical concepts. It is also worth noting that the students had no prior experience or knowledge!
+What TryHackMe training labs and pathways have you utilised?
+I have used the Jr Penetration Tester , Cyber Defence , and Complete Beginner learning paths and I think they are absolutely brilliant. What I like about them the most is the clarity of the tasks and the level of difficulty. They keep the student motivated and engaged.
+What advice would you give people just starting their cyber security learning journeys?
+My advice to people that are just starting their cyber journey is to really take advantage of platforms like TryHackMe and all the other resources that they can find online, such as Youtube. A training platform will structure the knowledge presented and provide guided exercises.
+Everyone has a different style of learning; something that works for me may not necessarily work for someone else. In this case, I would also advise trying different learning techniques; watching videos, practical labs, tutorial books, and so on.
+Do you have any advice for fellow teachers in cyber security?
+As I mentioned, hands-on exercises play a key role in the learning experience, confidence, and even employability of students. My advice to fellow cyber security teachers is to always incorporate practical exercises to illustrate the taught theoretical concepts. I would also definitely champion teachers to be excited. Cyber security is an ever-evolving, exciting field. It may not be the black hoodies, dark rooms, and green text in a terminal as portrayed in films. But the adrenaline of capturing a flag or exploiting and defending a security flaw, should be reflected in the teaching of cyber security to encourage students to also feel excited and ask questions.
+Follow Irene’s journey on LinkedIn

@@ -1,11 +1,14 @@
-oficial información**
+# Security Analyst Level 1 (SAL1) — FAQ
+
+> **ES/EN** — Guía de la certificación Security Analyst Level 1 (SAL1) de TryHackMe.
+> Guide to TryHackMe's Security Analyst Level 1 (SAL1) certification.
+
+Información oficial / Official information:
 https://tryhackme.com/certification/security-analyst-level-1
 
 https://tryhackme.com/resources/blog/creating-sal1
 
 ![Sal1](./demo/sal1.png)
-
- 
 
 ## Preguntas Frecuentes (FAQ)
 
@@ -251,4 +254,10 @@ La certificación **SAL1** es una excelente puerta de entrada al mundo de la def
 Todo esto se desarrolla en un entorno realista e inmersivo, con una relación calidad-precio muy competitiva para un nivel *entry-level*.
 
 --- 
+
+---
+
+**Fuente / Source:** [TryHackMe Security Analyst Level 1 (SAL1)](https://tryhackme.com/certification/security-analyst-level-1)
+**Autor del documento / Document author:** Apuromafo
+**Fecha de acceso / Access date:** 2026-09-01
  

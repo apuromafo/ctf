@@ -1,14 +1,15 @@
-oficial información**
+# Cyber Security 101 (SEC1) — FAQ
+
+> **ES/EN** — Guía de la certificación Cyber Security 101 (SEC1) de TryHackMe.
+> Guide to TryHackMe's Cyber Security 101 (SEC1) certification.
+
+Información oficial / Official information:
 https://tryhackme.com/certification/cyber-security-101/details
 
 ![Sal1](https://tryhackme.com/static/image/banner.e617ea5c.png) 
 
 Video https://www.youtube.com/watch?v=nVETMpalQS8
 Info https://tryhackme.com/certification/cyber-security-101
-
- 
-
- 
 
 ## Preguntas Frecuentes (FAQ)
 ### FAQ: Certificación Cyber Security 101 (SEC1)
@@ -82,3 +83,9 @@ La certificación es válida por 3 años. Deberá realizar el examen nuevamente 
 
 ---
  fecha:30.01.2026 
+
+---
+
+**Fuente / Source:** [TryHackMe Cyber Security 101 (SEC1)](https://tryhackme.com/certification/cyber-security-101)
+**Autor del documento / Document author:** Apuromafo
+**Fecha de acceso / Access date:** 2026-09-01

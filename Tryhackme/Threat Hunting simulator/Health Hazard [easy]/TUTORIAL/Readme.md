@@ -1,6 +1,9 @@
-# Health Hazard (Riesgo para la Salud)
+# Health Hazard — Guía del Escenario / Scenario Guide [EASY]
 
-## Descripción general del escenario
+> **ES/EN** — Guía del escenario Health Hazard de TryHackMe.
+> Guide to the Health Hazard scenario on TryHackMe.
+
+## Descripción general del escenario / Scenario Overview
 
 Después de meses de hacer malabarismos con calendarios de contenido y lluvias de ideas impulsadas por la cafeína, el cofundador Tom Whiskers finalmente dedicó tiempo para crear el primer sitio web de la empresa. Se suponía que sería algo sencillo: seguir un tutorial, instalar unos cuantos paquetes y dar vida a la marca con algo de magia ligera en JavaScript.
 
@@ -18,9 +21,15 @@ Simplemente esperaba.
 
 ---
 
-## Detalles del reto
+## Detalles del reto / Challenge Details
 
-* **Tiempo estimado:** 15 mins
-* **Puntos:** +360 XP
-* **Dificultad:** Fácil (Easy)
+* **Tiempo estimado / Estimated time:** 15 mins
+* **Puntos / Points:** +360 XP
+* **Dificultad / Difficulty:** Fácil (Easy)
+
+---
+
+**Fuente / Source:** [TryHackMe Threat Hunting Simulator](https://tryhackme.com/threat-hunting-sim)
+**Autor del documento / Document author:** Apuromafo
+**Fecha de acceso / Access date:** 2026-09-01
  

@@ -23,3 +23,9 @@ Your finance team flags irregularities in payment records that appear to origina
 
 ---
 *Escenario creado por / Scenario created by: THMDan*
+
+---
+
+**Fuente / Source:** [TryHackMe Tabletop Exercises](https://tryhackme.com/tabletop-exercises)
+**Autor del documento / Document author:** Apuromafo
+**Fecha de acceso / Access date:** 2026-09-01

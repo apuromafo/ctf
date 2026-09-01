@@ -1,17 +1,17 @@
 # Introduction to Phishing [EASY]
 
-## 📊 Información de la Sala
-- **ID Interno:** `8de2e24d-1072-4f5d-8f5e-6af62d427f17`
-- **Nivel:** `EASY`
-- **Recompensa:** `360 XP`
+## 📊 Información de la Sala / Room Information
+- **ID Interno / Internal ID:** `8de2e24d-1072-4f5d-8f5e-6af62d427f17`
+- **Nivel / Level:** `EASY`
+- **Recompensa / Reward:** `360 XP`
 
-## 🎯 Objetivos
+## 🎯 Objetivos / Objectives
 - Monitor and analyze real-time alerts.
 - Identify and document critical events such as suspicious emails and attachments.
 - Create detailed case reports based on your observations to help your team understand the full scope of alerts and malicious activity.
 
-## 🛠️ Alert triage
-## Read Before You Begin
+## 🛠️ Triaje de Alertas / Alert Triage
+## Lee Antes de Empezar / Read Before You Begin
 
 - Check out the Alert Triage Playbook described below (**Alert Triage** tab)
 - Understand how to classify and escalate alerts (**Alert Classification** tab)
@@ -41,8 +41,8 @@
    - **Decide if Alert Requires Escalation**: For True Positives, refer to the same guide and follow the Escalation section
    - **Submit and Close the Alert**: Once the alert is triaged, submit and close its case report in the SOC dashboard
 
-## 🛠️ Alert Classification
-## Alert Classification
+## 🛠️ Clasificación de Alertas / Alert Classification
+## Clasificación de Alertas / Alert Classification
 
 **True Positive**
 
@@ -65,7 +65,7 @@ Classification for activities which were determined to be legitimate, meaning th
   - **False Positive:** US-based employee accessed their email from phone during a vacation in Asia
   - **False Positive:** Sales person used an approved VPN to login and triggered the alert
 
-## Alert Escalation
+## Escalada de Alertas / Alert Escalation
 
 **Escalation Required**
 
@@ -83,8 +83,8 @@ True Positive alert must be escalated if additional actions or remediation are r
 - Threat actor tried to dump credentials from the breached file server via Mimikatz, but the attempt was blocked by an existing EDR solution
 - The alert was identified as part of a larger attack chain but was initially misclassified. Here, an analyst needs to go back and update their case report
 
-## 🛠️ Alert Reporting
-## Alert Reporting
+## 🛠️ Reporte de Alertas / Alert Reporting
+## Reporte de Alertas / Alert Reporting
 
 - Provide a clear and detailed explanation of the reason why the activity is classified as TP or FP
 - Clearly explain why the alert requires escalation and which remediation actions may be required
@@ -98,7 +98,7 @@ True Positive alert must be escalated if additional actions or remediation are r
 - Specify which goals the threat actor attempted to achieve
 - (Optional) Specify which MITRE techniques or tactics the activity can be related to
 
-### Best Practice Reports
+### Reportes de Buenas Prácticas / Best Practice Reports
 
 - **True Positive - "Windows Account Brute Force"**
 
@@ -108,14 +108,14 @@ True Positive alert must be escalated if additional actions or remediation are r
 
   > This activity is classified as a False Positive. I detected that Bob Taylor attempted to log into the CORP-11 Windows host on the TryHatMe environment from the IP address 12.23.4.115. It is worth noting that this user regularly engages in activity from this IP address. During the investigation, 6 failed login attempts were found starting at 12:23 on 01.02.2025, with the reason for the failures being the user's expired password. This resulted in failed events triggering the correlation rule. No anomalies were found.
 
-## 🛠️ Company information
-## Company Information
+## 🛠️ Información de la Empresa / Company Information
+## Información de la Empresa / Company Information
 
 **The Try Daily** is a bold, energetic publication dedicated to the art of trying—every single day. Whether it’s testing new ideas, embracing challenges, or stepping outside your comfort zone, we believe that growth comes from action. Our stories, challenges, and expert insights inspire readers to take on something new. We celebrate both success and failure, because every attempt brings you closer to something great. 
 
 At **The Try Daily**, we don’t just report on change—we encourage it! Try something today! Try something tomorrow! Just keep trying!!
 
-### Tools & Data Sources
+### Herramientas y Fuentes de Datos / Tools & Data Sources
  
 - **Webserver (ModSecurity Audit Log)**: Web application firewall (WAF) logs from the company webserver, capturing HTTP request details, potential attacks, and rule violations.
 - **Email**: Email logs containing message metadata and conversation history, providing insights into internal and external communications within the company.
@@ -123,10 +123,10 @@ At **The Try Daily**, we don’t just report on change—we encourage it! Try so
 
 > **Note:** The current set of ingested sources within our SIEM is limited to the logs mentioned above. We are actively working on expanding these sources to provide you with a more comprehensive view of our security landscape. ~SOC Head
 
-### Analyst Workstation
+### Estación de Trabajo del Analista / Analyst Workstation
 - Access to the **TryDetectThis** platform via a Desktop Shortcut. Use this to submit IPs to check for maliciousness.
 
-### Employees
+### Empleados / Employees
 
 | Name              | Department         | Email                         | Logged-in Host | IP Address   |
 |-------------------|--------------------|-------------------------------|----------------|--------------|
@@ -144,8 +144,14 @@ At **The Try Daily**, we don’t just report on change—we encourage it! Try so
 | Caleb Anderson    | Content             | c.anderson@thetrydaily.thm    | win-3462       | 10.20.2.13   |
 | Charlotte Allen   | Web Development     | c.allen@thetrydaily.thm       | win-3463       | 10.20.2.25   |
 
-## 🛠️ Asset Inventory
-### Network and Subnets
+## 🛠️ Inventario de Activos / Asset Inventory
+### Red y Subredes / Network and Subnets
 | Purpose | Range |
 |---------|--------|
 | Office Network | 10.20.2.0/24 |
+
+---
+
+**Fuente / Source:** [TryHackMe SOC Simulator](https://tryhackme.com/soc-sim)
+**Autor del documento / Document author:** Apuromafo
+**Fecha de acceso / Access date:** 2026-09-01

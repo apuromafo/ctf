@@ -1,7 +1,11 @@
 
 
 
-# T‍abletop exercises   (TTX)
+# Tabletop Exercises (TTX)
+
+> **ES/EN** — Guía de la plataforma Tabletop Exercises de TryHackMe.
+> Guide to TryHackMe's Tabletop Exercises platform.
+
 > Tabletop Exercises at Lightning Speed
 > Slow, static drills are a thing of the past: generate AI-powered scenarios in seconds, test real
 > workflows, and get actionable reports instantly.
@@ -9,7 +13,7 @@
 ![00](./IMG/00.png)
 
 
-# 00⚡️ Build bespoke tabletop exercises in minutes, not days.
+## ⚡️ Build bespoke tabletop exercises in minutes, not days.
 >  Create CSIRT tabletop exercises in seconds based on industry and attack type, or build fully customised exercises tailored to your company environment and specific
 
 https://capture.navattic.com/cmg7vz3dr000004jv80pd8cbr?g=cmg86d09h000004labmu40ixr&s=0
@@ -25,35 +29,35 @@ https://capture.navattic.com/cmg7vz3dr000004jv80pd8cbr?g=cmg86d09h000004labmu40i
  
 
 
-#  🚨 Respond to dynamic injects and IoCs
+## 🚨 Respond to dynamic injects and IoCs
 >  Test your teams ability to react to injects and corresponding artefacts. As the exercise progresses, injects respond to your team's actions.
 ![00](./IMG/04.png)
 
-# vote
+## Vote
 ![00](./IMG/05.png)
 ![00](./IMG/05b.png)
 
-#  🏆 Earn more points for the most effective actions
+## 🏆 Earn more points for the most effective actions
 > Keep your team engaged with live response scores as the exercise progresses. You can even set decaying points if your team takes too long to take action!
 ![00](./IMG/06.png)
 ![00](./IMG/06b.png)
 
 
-# 💡Get realtime feedback from your AI facilitator
+## 💡 Get realtime feedback from your AI facilitator
 > Review the impacts of your team's actions immediately and how alternate actions would have influenced outcomes.
 ![00](./IMG/07.png)
 
-# 🧮 View vote counts for each action
+## 🧮 View vote counts for each action
 
 > See which members of your team voted for which options and discuss how they would influence your response to the attack.
 
 
-# ⏩ Progress through each inject of the attack
+## ⏩ Progress through each inject of the attack
 
 > Respond and take progressive actions from Initial Access through to Privilege Escalation and Goal Execution.
 
 
-# 📝 Instant, audit-ready reporting
+## 📝 Instant, audit-ready reporting
 
 > Get a written report after completing every exercise with take-away actions and performance summaries across the entire IR lifecycle
 
@@ -63,31 +67,31 @@ https://capture.navattic.com/cmg7vz3dr000004jv80pd8cbr?g=cmg86d09h000004labmu40i
 
 
 
-# 🎯 Actionable take-aways
+## 🎯 Actionable take-aways
 
 >  With every completed exercise, your AI facilitator suggests five action items for you and your team based on your performance.
 
 ![00](./IMG/10.png)
 
 
-# 📈 Assess your team's performance
+## 📈 Assess your team's performance
 
 >  Get a breakdown of team effectiveness across each phase of the IR lifecycle.
 ![00](./IMG/11.png)
 
-# 🔎 Review every inject
+## 🔎 Review every inject
 
 >  See your team's votes on actions across every phase and inject for the entire exercise for auditing and post-exercise debriefs.
 ![00](./IMG/12.png)
 
-# 🏅 Certificate of completion
+## 🏅 Certificate of completion
 
 >  Download and share proof of your exercise with all the report's details in a PDF for your records and audit compliance.
 
 ![00](./IMG/13.png)
 
 
-# 💪 Run your first exercise today
+## 💪 Run your first exercise today
 
 >  With TryHackMe tabletop exercises, it's easier and quicker than ever to run bespoke tabletop exercises for your team.
 
@@ -109,7 +113,7 @@ Powered by Navattic
  
 ---
 
-#  Flow Guide: Tabletop Exercises (TTX)
+## Flow Guide: Tabletop Exercises (TTX)
 
 ###  1. Initial Exercise Setup
 
@@ -136,7 +140,7 @@ Powered by Navattic
 
 ---
   
-#  Guía de Flujo: Tabletop Exercises (TTX)
+## Guía de Flujo: Tabletop Exercises (TTX)
 
 ###  1. Configuración Inicial del Ejercicio
 
@@ -164,4 +168,10 @@ Powered by Navattic
  ---
 
 *Documentación para propósitos educativos y registro de CTF.*
+
+---
+
+**Fuente / Source:** [TryHackMe Tabletop Exercises](https://tryhackme.com/tabletop-exercises)
+**Autor del documento / Document author:** Apuromafo
+**Fecha de acceso / Access date:** 2026-09-01
  

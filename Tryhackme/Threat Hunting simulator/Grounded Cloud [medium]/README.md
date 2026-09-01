@@ -1,18 +1,18 @@
-# 🏹 Threat Hunting: Grounded Cloud [MEDIUM]
+# 🏹 Grounded Cloud [MEDIUM]
 
-## 📊 Perfil de la Amenaza
-- **Dificultad:** `MEDIUM`
-- **Puntos de Misión:** `905 XP`
+## 📊 Perfil de la Amenaza / Threat Profile
+- **Dificultad / Difficulty:** `MEDIUM`
+- **Puntos de Misión / Mission Points:** `905 XP`
 
-## 🎯 Objetivos de Hunting
+## 🎯 Objetivos de Hunting / Hunting Objectives
 - Identify exploitation of insecure configurations for initial access.
 - Explore advanced methods of persistence and privilege escalation.
 - Discover execution paths and attempts to impact cloud environment.
 
-## 💡 Hipótesis de Investigación
+## 💡 Hipótesis de Investigación / Investigation Hypothesis
 > This threat hunting session focuses on investigating a set of TTPs commonly used by adversaries in cloud environments. The customer provided us with a list of techniques and tactics to validate during the hunt. Since TryEarthMe is a fast-growing startup with valuable and sensitive data, there is a risk that some malicious activity could already exist in their environment. The goal is to determine whether traces of such activity can be found in the customer’s cloud environment.
 
-## 🛠️ Scenario Details
+## 🛠️ Detalles del Escenario / Scenario Details
 ## Background
 
 
@@ -22,16 +22,16 @@ We suspect certain malicious activity types may already be present in their envi
 
 Your objective is to proactively analyse the cloud infrastructure, test against the provided TTPs, and uncover potential anomalies that could indicate early signs of compromise.
 
-## Objectives
+## Objetivos / Objectives
 - Identify exploitation of insecure configurations for initial access;
 - Explore advanced methods of persistence and privilege escalation;
 - Discover execution paths and attempts to impact cloud environment.
 
-## References
+## Referencias / References
 - [Attackers Exploit Public Files to Breach Cloud Accounts](https://thehackernews.com/2024/08/attackers-exploit-public-env-files-to.html)
 - [Leaked Environment Variables Enable Cloud Extortion Campaigns](https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/)
 
-## 🛠️ List of TTPs
+## 🛠️ Lista de TTPs / List of TTPs
 ## TTPs
 
 Below you can find the list of TTPs provided by the client for the threat hunting session.
@@ -53,17 +53,17 @@ Below you can find the list of TTPs provided by the client for the threat huntin
 * Data Destruction - MITRE ID T1485
 * Network Denial of Service - MITRE ID T1498
 
-## 🛠️ Company Information
-# Company Information
+## 🛠️ Información de la Empresa / Company Information
+## Información de la Empresa / Company Information
 TryEarthMe is an agri-tech startup revolutionising soil enrichment and crop production with autonomous drone technology.
 Our mission is to transform traditional agriculture into a smarter, more sustainable practice by combining advanced robotics, soil science, and real-time data.
 
 TryEarthMe’s drones analyse soil conditions, apply eco-friendly fertilisers with precision, and monitor crop health, helping farmers increase yields while reducing waste.
 As a fast-growing startup, we stand out by merging cutting-edge automation with sustainability to shape the future of global food production.
 
-## Company Structure
+## Estructura de la Empresa / Company Structure
 
-### Employees
+### Empleados / Employees
 | Name              | Position                          | Email                          | AWS Account Name         |
 |-------------------|-----------------------------------|--------------------------------|--------------------------|
 | Michael Carter    | Chief Executive Officer           | michael.carter@tryearthme.thm  | michael.carter-tem       |
@@ -77,8 +77,8 @@ As a fast-growing startup, we stand out by merging cutting-edge automation with 
 | Daniel Turner     | Lead Robotics Engineer            | daniel.turner@tryearthme.thm   | daniel.turner-tem        |
 | Sophia Collins    | Sale Specialist                   | sophia.collins@tryearthme.thm  | sophia.collins-tem       |
 
-## 🛠️ Tool Documentation
-# Tool Documentation
+## 🛠️ Documentación de Herramientas / Tool Documentation
+## Documentación de Herramientas / Tool Documentation
 Here, you will find an overview of the primary tools you currently have for monitoring, investigating, and responding to security incidents.
 
 #### Ingested Sources:
@@ -87,3 +87,9 @@ AWS CloudTrail logs from the customer’s environment have been ingested into Sp
 
 #### Analyst Workstation (My Computer)
 The Analyst Workstation is a dedicated VM specifically configured for your investigation needs. This isolated environment ensures a secure and controlled setting for analysing and responding to potential threats.
+
+---
+
+**Fuente / Source:** [TryHackMe Threat Hunting Simulator](https://tryhackme.com/threat-hunting-sim)
+**Autor del documento / Document author:** Apuromafo
+**Fecha de acceso / Access date:** 2026-09-01

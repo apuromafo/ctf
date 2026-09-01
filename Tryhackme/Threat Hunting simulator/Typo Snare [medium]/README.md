@@ -1,15 +1,15 @@
-# 🏹 Threat Hunting: Typo Snare [MEDIUM]
+# 🏹 Typo Snare [MEDIUM]
 
-## 📊 Perfil de la Amenaza
-- **Dificultad:** `MEDIUM`
-- **Puntos de Misión:** `2500 XP`
+## 📊 Perfil de la Amenaza / Threat Profile
+- **Dificultad / Difficulty:** `MEDIUM`
+- **Puntos de Misión / Mission Points:** `2500 XP`
 
-## 🎯 Objetivos de Hunting
+## 🎯 Objetivos de Hunting / Hunting Objectives
 - Investigate command-line artifacts and reconstruct process trees to reveal the attacker's steps. 
 - Correlate tool usage with MITRE ATT&CK techniques. 
 - Map compromised accounts over time. 
 
-## 💡 Hipótesis de Investigación
+## 💡 Hipótesis de Investigación / Investigation Hypothesis
 > We suspect that the attacker gained access to Perry’s system via a trojanized file he downloaded from an untrusted website. Following initial execution, the attacker may have established persistence on the host to maintain access.
 
 We further hypothesize that the attacker extracted credentials from Perry’s system using known tools such as Mimikatz, which allowed lateral movement and unauthorized access to other systems in the network. If this is confirmed, it is likely that multiple and privileged user accounts have been compromised.
@@ -17,7 +17,7 @@ We further hypothesize that the attacker extracted credentials from Perry’s sy
 As a final stage in the attack chain, the attacker encrypted user files on the compromised systems, causing disruption.
 
 
-## 🛠️ Scenario Details
+## 🛠️ Detalles del Escenario / Scenario Details
 ## Background
 
 The alert hit the SOC around 4:00 PM. Two machines, fully encrypted. Ransom notes where files used to be. The central SIEM went dark just minutes before.
@@ -36,14 +36,14 @@ A little more than one hour later, Perry’s workstation started acting weird. A
 
 Your mission as a threat hunter is to dig through the logs and reconstruct the attack chain. What happened? How did it start? How did it spread? And what damage did it do? 
 
-## Objectives
+## Objetivos / Objectives
 
 - Investigate command-line artifacts and reconstruct process trees to reveal the attacker's steps. 
 - Correlate tool usage with MITRE ATT&CK techniques. 
 - Map compromised accounts over time.
 
 ## 🛠️ IoCs
-## Indicator of Compromise List
+## Lista de Indicadores de Compromiso / Indicator of Compromise List
 
 From the initial investigation of the alert, the SOC team was able to collect the following: 
 
@@ -78,12 +78,12 @@ Hashes:
 - 61c0810a23580cf492a6ba4f7654566108331e7a4134c968c2d6a05261b2d8a1
 - fd713992f39338986e8573aff1232675323fde827328159b29a31cc3cd515874
 
-## 🛠️ Company Information
+## 🛠️ Información de la Empresa / Company Information
 SwiftSpend Finance is a dynamic financial services firm specializing in boutique investment strategies and digital asset management. By combining traditional financial expertise with modern fintech innovation, SwiftSpend delivers tailored solutions to a wide range of clients, from individual investors to small institutions.
 
 Though modest in size, the company operates at high velocity. Cross-functional teams thrive on agility, resourcefulness, and a strong problem-solving culture that keeps SwiftSpend at the forefront of fintech evolution.
 
-#### Employees
+#### Empleados / Employees
 
 | Name | Username | Role | Host (last logged in) |  |
 | --- | --- | --- | --- | --- |
@@ -103,8 +103,8 @@ Though modest in size, the company operates at high velocity. Cross-functional t
 | Daniel Foster | daniel.foster | Portfolio Manager | WKSTN-07 | 172.16.1.156 |
 | Claire Chen | claire.chen | Risk Analyst | WKSTN-11 | 172.16.1.160 |
 
-## 🛠️ Tool Documentation
-# Tool Documentation
+## 🛠️ Documentación de Herramientas / Tool Documentation
+## Documentación de Herramientas / Tool Documentation
 Here you will find an overview of the primary tools currently at your disposal for monitoring, investigating, and responding to security incidents.
 
 #### SIEM:
@@ -118,3 +118,9 @@ To access the Kibana console, use the default credentials: `elastic:elastic`
 
 #### Analyst Workstation (My Computer)
 The Analyst Workstation is a dedicated VM specifically configured for your investigation needs. This isolated environment ensures a secure and controlled setting for analyzing and responding to potential threats.
+
+---
+
+**Fuente / Source:** [TryHackMe Threat Hunting Simulator](https://tryhackme.com/threat-hunting-sim)
+**Autor del documento / Document author:** Apuromafo
+**Fecha de acceso / Access date:** 2026-09-01

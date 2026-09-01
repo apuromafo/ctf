@@ -1,17 +1,17 @@
 # APT28: Initial Access [EASY]
 
-## 📊 Información de la Sala
-- **ID Interno:** `fa34762a-dae6-4465-a6dc-3d7a1b1c5249`
-- **Nivel:** `EASY`
-- **Recompensa:** `95 XP`
+## 📊 Información de la Sala / Room Information
+- **ID Interno / Internal ID:** `fa34762a-dae6-4465-a6dc-3d7a1b1c5249`
+- **Nivel / Level:** `EASY`
+- **Recompensa / Reward:** `95 XP`
 
-## 🎯 Objetivos
+## 🎯 Objetivos / Objectives
 - Identify and triage security alerts indicating malicious behaviour consistent with APT28 activity.
 - Analyse initial access techniques used by APT28 in enterprise environments.
 - Analyse and correlate various log types to identify anomalies and gain insight into adversary activity.
 
-## 🛠️ Alert Triage
-## Read Before You Begin
+## 🛠️ Triaje de Alertas / Alert Triage
+## Lee Antes de Empezar / Read Before You Begin
 
 - Check out the Alert Triage Playbook described below (**Alert Triage** tab)
 - Understand how to classify and escalate alerts (**Alert Classification** tab)
@@ -41,8 +41,8 @@
    - **Decide if Alert Requires Escalation**: For True Positives, refer to the same guide and follow the Escalation section
    - **Submit and Close the Alert**: Once the alert is triaged, submit and close its case report in the SOC dashboard
 
-## 🛠️ Alert Classification
-## Alert Classification
+## 🛠️ Clasificación de Alertas / Alert Classification
+## Clasificación de Alertas / Alert Classification
 
 **True Positive**
 
@@ -65,7 +65,7 @@ Classification for activities which were determined to be legitimate, meaning th
   - **False Positive:** US-based employee accessed their email from phone during a vacation in Asia
   - **False Positive:** Sales person used an approved VPN to login and triggered the alert
 
-## Alert Escalation
+## Escalada de Alertas / Alert Escalation
 
 **Escalation Required**
 
@@ -83,8 +83,8 @@ True Positive alert must be escalated if additional actions or remediation are r
 - Threat actor tried to dump credentials from the breached file server via Mimikatz, but the attempt was blocked by an existing EDR solution
 - The alert was identified as part of a larger attack chain but was initially misclassified. Here, an analyst needs to go back and update their case report
 
-## 🛠️ Alert Reporting
-## Alert Reporting
+## 🛠️ Reporte de Alertas / Alert Reporting
+## Reporte de Alertas / Alert Reporting
 
 - Provide a clear and detailed explanation of the reason why the activity is classified as TP or FP
 - Clearly explain why the alert requires escalation and which remediation actions may be required
@@ -98,7 +98,7 @@ True Positive alert must be escalated if additional actions or remediation are r
 - Specify which goals the threat actor attempted to achieve
 - (Optional) Specify which MITRE techniques or tactics the activity can be related to
 
-### Best Practice Reports
+### Reportes de Buenas Prácticas / Best Practice Reports
 
 - **True Positive - "Windows Account Brute Force"**
 
@@ -108,15 +108,15 @@ True Positive alert must be escalated if additional actions or remediation are r
 
   > This activity is classified as a False Positive. I detectd that Bob Taylor attempted to log into the CORP-11 Windows host on the TryHatMe environment from the IP address 12.23.4.115. It is worth noting that this user regularly engages in activity from this IP address. During the investigation, 6 failed login attempts were found starting at 12:23 on 01.02.2025, with the reason for the failures being the user's expired password. This resulted in failed events triggering the correlation rule. No anomalies were found.
 
-## 🛠️ Company Information
-# Company Information
+## 🛠️ Información de la Empresa / Company Information
+## Información de la Empresa / Company Information
 TryGovMe is a government-affiliated research division specialising in the development of intelligent IoT and robotics solutions 
 for national energy resilience. As part of a broader state initiative to modernise and secure critical infrastructure, 
 TryGovMe designs and deploys autonomous systems, known as smart grid bots, that can monitor, maintain, and self-heal components of the national power grid. We stand out by combining robotics, secure data systems, and edge computing to help build a safer and more sustainable energy network.
 
-## Company Structure
+## Estructura de la Empresa / Company Structure
 
-### Employees
+### Empleados / Employees
 | Name             | Department                        | Email                         | Logged-in Host | Workstation IP   |
 |------------------|-----------------------------------|-------------------------------|----------------|------------------|
 | James Foster     | Director of Energy Robotics Research | jfoster@trygovme.thm         | HOST01         | 10.10.219.10     |
@@ -127,21 +127,21 @@ TryGovMe designs and deploys autonomous systems, known as smart grid bots, that 
 | Daniel Morgan    | Sensor Integration Specialist     | dmorgan@trygovme.thm          | HOST06         | 10.10.219.15     |
 | Olivia Bennett   | Energy Systems Data Analyst       | obennett@trygovme.thm         | HOST07         | 10.10.219.16     |
 
-## Servers
+## Servidores / Servers
 | Purpose         | Hostname        | IP Address     |
 |------------------|-----------------|----------------|
 | Product Server   | Dev-Server      | 10.10.219.50   |
 | QA Server        | Dev-QA-Server   | 10.10.219.40   |
 | Web Server       | Web-Server   | 10.10.219.129    |
 
-## 🛠️ Network Diagram
+## 🛠️ Diagrama de Red / Network Diagram
 #### Below is a diagram illustrating the network architecture of the TryGovMe.
 
 
 ![Network Map](https://tryhackme-images.s3.amazonaws.com/user-uploads/674d9727a22822c1eb46cb31/room-content/674d9727a22822c1eb46cb31-1747645473439.png)
 
-## 🛠️ Tool Documentation
-# Tool Documentation
+## 🛠️ Documentación de Herramientas / Tool Documentation
+## Documentación de Herramientas / Tool Documentation
 Here you will find an overview of the primary tools currently at your disposal for monitoring, investigating, and responding to security incidents.
 
 
@@ -164,3 +164,9 @@ Here you will find an overview of the primary tools currently at your disposal f
 
 #### Analyst Workstation (My Computer)
 The Analyst Workstation is a dedicated VM specifically configured for your investigation needs. This isolated environment ensures a secure and controlled setting for analysing and responding to potential threats.
+
+---
+
+**Fuente / Source:** [TryHackMe SOC Simulator](https://tryhackme.com/soc-sim)
+**Autor del documento / Document author:** Apuromafo
+**Fecha de acceso / Access date:** 2026-09-01

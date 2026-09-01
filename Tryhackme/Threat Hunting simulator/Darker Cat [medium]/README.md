@@ -14,7 +14,7 @@
 > An employee reused a personal password to WatchingCatsLounge.com, which was exposed in a recent credential leak. The attacker used these credentials to access our Linux backup server via SSH. The Splunk Forwarder on that server stopped reporting shortly afterwards. A public leak-site post later confirmed data exfiltration, followed by widespread ransomware deployment across multiple systems. These events suggest the initial access originated from the leaked credentials and led to a broader compromise.
 
 ## 🛠️ Detalles del Escenario / Scenario Details
-# Crabs On Security
+### Crabs On Security
 
 ## Pawnd: WatchingCatsLounge Credential Dump Hits Dark Web
 _By Ryan Crabs | July 9, 2025_

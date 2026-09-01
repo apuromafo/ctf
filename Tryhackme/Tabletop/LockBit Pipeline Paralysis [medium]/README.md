@@ -23,3 +23,9 @@ Engineering teams report failed deployments and system instability across multip
 
 ---
 *Escenario creado por / Scenario created by: THMDan*
+
+---
+
+**Fuente / Source:** [TryHackMe Tabletop Exercises](https://tryhackme.com/tabletop-exercises)
+**Autor del documento / Document author:** Apuromafo
+**Fecha de acceso / Access date:** 2026-09-01

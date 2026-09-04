@@ -60,7 +60,15 @@ Fuente / Source: https://hirtnelson.github.io/Writeups-CTF/farewell.html · http
 > **Nota:** Las dos flags `THM{...}` de este room aparecen redactadas en las fuentes públicas en formato texto. Si quieres completar los valores exactos, resuelve la room o proporciona una fuente que los publique.
 > **Note:** Both room flags `THM{...}` appear redacted in the public text sources. To fill in exact values, complete the room or provide a source that publishes them.
 
+*Fuente de respuestas / Answer source: https://hirtnelson.github.io/Writeups-CTF/farewell.html · https://infosecwriteups.com/farewell-thm-writeup-9fb5a7c50fe3*
+
 ---
 
-*Documentación para propósitos educativos y registro de CTF.*
-*Fuente de respuestas / Answer source: https://hirtnelson.github.io/Writeups-CTF/farewell.html · https://infosecwriteups.com/farewell-thm-writeup-9fb5a7c50fe3*
+## ⚠️ Descargo de Responsabilidad (Disclaimer)
+
+Este contenido se presenta exclusivamente con fines académicos y educativos.
+
+**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
+**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
+**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
+**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.

@@ -2036,3 +2036,14 @@ Total de registros: **2033**
 | <img src="https://secure.gravatar.com/avatar/b27f28806568f15470f3bd468135eb9a.jpg?s=200&d=robohash&r=x" width="35" height="35" style="border-radius:50%"> | **franzisophie** | iPhone 17 |
 | <img src="https://lh3.googleusercontent.com/a/ACg8ocIz82rgx7y4bRozyjQkjVkmecGNJ9CKzkXZ3dk8NpgJn_9tyfk=s200-c" width="35" height="35" style="border-radius:50%"> | **ilhamfaizul408** | iPhone 17 |
 | <img src="https://tryhackme-images.s3.amazonaws.com/user-avatars/a3043529efa112f25ed690e6dd0c9612.jpg" width="35" height="35" style="border-radius:50%"> | **victoria.cheng15** | iPhone 17 |
+
+---
+
+## ⚠️ Descargo de Responsabilidad (Disclaimer)
+
+Este contenido se presenta exclusivamente con fines académicos y educativos.
+
+**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
+**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
+**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
+**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.

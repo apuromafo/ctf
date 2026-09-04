@@ -33,7 +33,15 @@ Fuente / Source: https://systemweakness.com/linux-memory-analysis-tryhackme-ca62
 > **Pendiente:** El resto de tareas (1-4 y las respuestas restantes de tareas posteriores) no están disponibles en fuentes públicas accesibles. Medium/simontaplin/YouTube no documentan el resto de forma extraíble. Agregar cuando se resuelva la room o se disponga de acceso.
 > **Pending:** The remaining tasks (1-4 and the rest of later tasks) are not available in accessible public sources. Medium/simontaplin/YouTube do not document the rest extractably. Add once the room is completed or access is available.
 
+*Fuente de respuestas / Answer source: https://systemweakness.com/linux-memory-analysis-tryhackme-ca62220d0d86*
+
 ---
 
-*Documentación para propósitos educativos y registro de CTF.*
-*Fuente de respuestas / Answer source: https://systemweakness.com/linux-memory-analysis-tryhackme-ca62220d0d86*
+## ⚠️ Descargo de Responsabilidad (Disclaimer)
+
+Este contenido se presenta exclusivamente con fines académicos y educativos.
+
+**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
+**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
+**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
+**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.

@@ -1,3 +1,5 @@
+# Introduction to Django [EASY]
+
 1. No answer needed
 2. 1. python3 manage.py startapp Forms
    2. python3 manage.py runserver 0.0.0.0:8000

@@ -1,3 +1,5 @@
+# Recovering Active Directory [MEDIUM]
+
 1. 1. No answer needed
    2. THM{I_CAN_CONNECT}
 2. 1. C

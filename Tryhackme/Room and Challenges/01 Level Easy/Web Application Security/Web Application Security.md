@@ -1,3 +1,5 @@
+# Web Application Security [EASY]
+
 1. Browser
 2. 1. Identification and Authentication Failure
    2. Cryptographic Failures

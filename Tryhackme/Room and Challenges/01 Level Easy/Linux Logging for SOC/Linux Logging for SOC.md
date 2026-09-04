@@ -1,3 +1,5 @@
+# Linux Logging for SOC [EASY]
+
 1. No answer needed
 2. 1. ntp.ubuntu.com
    2. Becoming mindful.

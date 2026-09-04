@@ -1,3 +1,5 @@
+# Atomic Red Team [MEDIUM]
+
 1. No answer needed
 2. 1. manual
    2. auto_generated_guid

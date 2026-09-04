@@ -1,1 +1,3 @@
+# The Game [EASY]
+
 1. THM{I_CAN_READ_IT_ALL}

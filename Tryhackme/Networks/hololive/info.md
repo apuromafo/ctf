@@ -1,4 +1,4 @@
-# Holo - `hololive`
+# Holo [HARD]
 
 ![Banner](https://assets.tryhackme.com/room-banners/hololive.png)
 

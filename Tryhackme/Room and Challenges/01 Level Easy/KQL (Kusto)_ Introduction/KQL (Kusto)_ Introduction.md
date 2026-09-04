@@ -1,3 +1,5 @@
+# KQL (Kusto)_ Introduction [EASY]
+
 1. No answer needed
 2. 1. SOAR
    2. REST API Integration

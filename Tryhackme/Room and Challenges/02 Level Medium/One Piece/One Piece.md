@@ -1,3 +1,5 @@
+# One Piece [MEDIUM]
+
 https://tryhackme.com/room/ctfonepiece65
 
 Welcome to the One Piece room.
@@ -13,15 +15,11 @@ This room may be a bit different to what you are used to:
     - However, solving the (let's say) "enigmas" to know what you need to do may be trickier.
 This room is some sort of game, some sort of puzzle.
 
-
-
 Please note that if you are currently reading/watching One Piece and if you did not finish Zou arc, you will get spoiled during this room.
-
 
 #Task 1: Set Sail
 
 1. No answer needed
-
 
 #task2: Road Poneglyphs
 
@@ -68,6 +66,5 @@ What allowed Luffy to win the fight?
  
 What is the One Piece?
    3. S3cr3ts_0f_tH3_W0rlD_&_0f_Th3_P@st$
-
 
  

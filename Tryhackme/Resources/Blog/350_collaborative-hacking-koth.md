@@ -27,7 +27,9 @@ Learning through collaboration and using competition to test your workforce help
 
 ## Multimedia
 
-<!-- Imagen no disponible offline / Image not available offline. Fuente original / Original source: https://lh6.googleusercontent.com/VY8usebo38L5PVe_EjHibN_-pYGnQ0Ut7XNTbgLlrgNJAo7ms12t3eytnIB-_m1hQJp4-GzGNoFqB4w8By3g_g-va-qAN2pmX83wHFEjz1_5A9yTFah_K6OE1uXJM7yz1EJ3aDrUedUzcRJlltejuBebVu9B7boiNKtT15vPl5fJSvP7ZGcEF2dGErlG7A -->
+![Banner](images/350_Banner--8-.png)
+
+![King of the Hill](images/350_image--2-.png)
 
 ---
 **Fuente / Source:** [collaborative-hacking-koth](https://tryhackme.com/resources/blog/collaborative-hacking-koth)

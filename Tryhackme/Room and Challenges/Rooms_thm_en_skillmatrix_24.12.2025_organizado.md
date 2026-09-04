@@ -1,10 +1,10 @@
-# 🛡️ Reporte de Salas Organizado
+# 🛡️ Reporte de Salas Organizado [INFO]
 
 > **Resumen rápido:** Se han identificado **888** máquinas únicas en tu matriz de habilidades.
 
-## 📊 Dificultad: INFO
+## 📊 Dificultad: INFO / Difficulty: INFO
 
-### 🛠️ Tipo: Walkthrough
+### 🛠️ Tipo: Walkthrough / Type: Walkthrough
 
 | # | Imagen | Título / Link | Descripción |
 | :--- | :--- | :--- | :--- |
@@ -36,15 +36,15 @@
 | 26 | <img src='https://tryhackme-images.s3.amazonaws.com/room-icons/presec-room-image15.png' width='45'> | [**Windows Fundamentals 2**](https://tryhackme.com/room/windowsfundamentals2x0x) | In part 2 of the Windows Fundamentals module, discover more about System Configuration, UAC Settings, Resource Monitoring, the Windows Registry and more.. |
 | 27 | <img src='https://tryhackme-images.s3.amazonaws.com/room-icons/presec-room-image16.png' width='45'> | [**Windows Fundamentals 3**](https://tryhackme.com/room/windowsfundamentals3xzx) | In part 3 of the Windows Fundamentals module, learn about the built-in Microsoft tools that help keep the device secure, such as Windows Updates, Windows Security, BitLocker, and more... |
 
-### 🛠️ Tipo: Challenge
+### 🛠️ Tipo: Challenge / Type: Challenge
 
 | # | Imagen | Título / Link | Descripción |
 | :--- | :--- | :--- | :--- |
 | 1 | <img src='https://tryhackme-images.s3.amazonaws.com/room-icons/73d1908cb138df840abeaed43bdd9453.png' width='45'> | [**Bypass Disable Functions**](https://tryhackme.com/room/bypassdisablefunctions) | Practice bypassing disabled dangerous features that run operating system commands or start processes. |
 
-## 📊 Dificultad: EASY
+## 📊 Dificultad: EASY / Difficulty: EASY
 
-### 🛠️ Tipo: Walkthrough
+### 🛠️ Tipo: Walkthrough / Type: Walkthrough
 
 | # | Imagen | Título / Link | Descripción |
 | :--- | :--- | :--- | :--- |
@@ -339,7 +339,7 @@
 | 289 | <img src='https://tryhackme-images.s3.amazonaws.com/room-icons/0268d3412331f7802108c84007985d0d.png' width='45'> | [**tmux**](https://tryhackme.com/room/rptmux) | Learn to use tmux, one of the most powerful multi-tasking tools on linux! |
 | 290 | <img src='https://tryhackme-images.s3.amazonaws.com/room-icons/c57caf306522eea44f4b87ef2e00fd8d.png' width='45'> | [**x86 Architecture Overview**](https://tryhackme.com/room/x8664arch) | A crash course in x86 architecture to enable us in malware reverse engineering. |
 
-### 🛠️ Tipo: Challenge
+### 🛠️ Tipo: Challenge / Type: Challenge
 
 | # | Imagen | Título / Link | Descripción |
 | :--- | :--- | :--- | :--- |
@@ -468,9 +468,9 @@
 | 123 | <img src='https://tryhackme-images.s3.amazonaws.com/room-icons/0f23dd123f109b404c5bfad4c67a0dde.png' width='45'> | [**magician**](https://tryhackme.com/room/magician) | This magical website lets you convert image file formats |
 | 124 | <img src='https://tryhackme-images.s3.amazonaws.com/room-icons/016dea7c96e8b422241016405b571c8b.jpeg' width='45'> | [**tomghost**](https://tryhackme.com/room/tomghost) | Identify recent vulnerabilities to try exploit the system or read files that you should not have access to. |
 
-## 📊 Dificultad: MEDIUM
+## 📊 Dificultad: MEDIUM / Difficulty: MEDIUM
 
-### 🛠️ Tipo: Walkthrough
+### 🛠️ Tipo: Walkthrough / Type: Walkthrough
 
 | # | Imagen | Título / Link | Descripción |
 | :--- | :--- | :--- | :--- |
@@ -658,7 +658,7 @@
 | 182 | <img src='https://tryhackme-images.s3.amazonaws.com/room-icons/d65af346cba59c68f37e9709d3a3ccb4.png' width='45'> | [**ret2libc**](https://tryhackme.com/room/ret2libc) | This room teaches basic return-oriented programming (ROP), exploitation of binaries and an ASLR bypass. |
 | 183 | <img src='https://tryhackme-images.s3.amazonaws.com/room-icons/f868c322832498394ae9c2689237a1f4.png' width='45'> | [**x86 Assembly Crash Course**](https://tryhackme.com/room/x86assemblycrashcourse) | A crash course in x86 assembly to enable us in malware reverse engineering. |
 
-### 🛠️ Tipo: Challenge
+### 🛠️ Tipo: Challenge / Type: Challenge
 
 | # | Imagen | Título / Link | Descripción |
 | :--- | :--- | :--- | :--- |
@@ -840,9 +840,9 @@
 | 176 | <img src='https://tryhackme-images.s3.amazonaws.com/room-icons/715d827a2967ada237e63a92c6ea2cd6.png' width='45'> | [**pyLon**](https://tryhackme.com/room/pylonzf) | Can you penetrate the defenses and become root? |
 | 177 | <img src='https://tryhackme-images.s3.amazonaws.com/room-icons/aab108830eaf8908ce3dd0f3d4336b2d.png' width='45'> | [**toc2**](https://tryhackme.com/room/toc2) | It's a setup... Can you get the flags in time? |
 
-## 📊 Dificultad: HARD
+## 📊 Dificultad: HARD / Difficulty: HARD
 
-### 🛠️ Tipo: Walkthrough
+### 🛠️ Tipo: Walkthrough / Type: Walkthrough
 
 | # | Imagen | Título / Link | Descripción |
 | :--- | :--- | :--- | :--- |
@@ -861,7 +861,7 @@
 | 13 | <img src='https://tryhackme-images.s3.amazonaws.com/room-icons/61306d87a330ed00419e22e7-1745753944653' width='45'> | [**macOS Forensics: Applications**](https://tryhackme.com/room/macosforensicsapplications) | Learn about macOS forensic artefacts related to different applications. |
 | 14 | <img src='https://tryhackme-images.s3.amazonaws.com/room-icons/61306d87a330ed00419e22e7-1740910355550' width='45'> | [**macOS Forensics: Artefacts**](https://tryhackme.com/room/macosforensicsartefacts) | Understand the forensic artefacts in macOS and learn to leverage them for forensic analysis. |
 
-### 🛠️ Tipo: Challenge
+### 🛠️ Tipo: Challenge / Type: Challenge
 
 | # | Imagen | Título / Link | Descripción |
 | :--- | :--- | :--- | :--- |
@@ -931,9 +931,9 @@
 | 64 | <img src='https://tryhackme-images.s3.amazonaws.com/room-icons/400adbf5298b32979941301cfbe522c8.png' width='45'> | [**envizon**](https://tryhackme.com/room/envizon) | Attacking the pentesters |
 | 65 | <img src='https://tryhackme-images.s3.amazonaws.com/room-icons/41d0cdc8d99a8a3de2758ccbdf637a21.jpeg' width='45'> | [**hc0n Christmas CTF**](https://tryhackme.com/room/hc0nchristmasctf) | hackt the planet |
 
-## 📊 Dificultad: INSANE
+## 📊 Dificultad: INSANE / Difficulty: INSANE
 
-### 🛠️ Tipo: Challenge
+### 🛠️ Tipo: Challenge / Type: Challenge
 
 | # | Imagen | Título / Link | Descripción |
 | :--- | :--- | :--- | :--- |
@@ -946,7 +946,7 @@
 | 7 | <img src='https://tryhackme-images.s3.amazonaws.com/room-icons/745fb3128b486d61f737505f8ab339dc.png' width='45'> | [**You're in a cave **](https://tryhackme.com/room/inacave) | A room with some ctf elements inspired in text based RPGs |
 
 ---
-## 🏁 Final del Reporte
+## 🏁 Final del Reporte / End of Report
 **Total de máquinas únicas identificadas:** `888`
 
 *Generado automáticamente mediante el procesador JSON-to-MD.*

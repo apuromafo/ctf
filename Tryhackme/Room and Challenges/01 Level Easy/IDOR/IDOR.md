@@ -1,3 +1,5 @@
+# IDOR [EASY]
+
 1. Insecure Direct Object Reference
 2. THM{IDOR-VULN-FOUND}
 3. base64

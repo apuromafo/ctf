@@ -1,3 +1,5 @@
+# Alfred [EASY]
+
 1. 1. 3
    2. admin:admin
    3. No answer needed

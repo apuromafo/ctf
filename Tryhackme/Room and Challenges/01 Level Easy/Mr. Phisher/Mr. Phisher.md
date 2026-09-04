@@ -1,1 +1,3 @@
+# Mr. Phisher [EASY]
+
 1. flag{a39a07a239aacd40c948d852a5c9f8d1}

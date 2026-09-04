@@ -1,3 +1,5 @@
+# Advanced SQL Injection [MEDIUM]
+
 1. 3306
 2. 1. In-band
    2. HTTP

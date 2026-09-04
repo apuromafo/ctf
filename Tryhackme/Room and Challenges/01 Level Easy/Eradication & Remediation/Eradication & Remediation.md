@@ -1,3 +1,5 @@
+# Eradication & Remediation [EASY]
+
 1. No answer needed
 2. 1. Premature eradication
    2. whack-a-mole

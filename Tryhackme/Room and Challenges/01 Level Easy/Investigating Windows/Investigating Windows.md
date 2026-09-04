@@ -1,3 +1,5 @@
+# Investigating Windows [EASY]
+
 1. 1. Windows Server 2016
    2. Administrator
    3. 03/02/2019 5:48:32 PM

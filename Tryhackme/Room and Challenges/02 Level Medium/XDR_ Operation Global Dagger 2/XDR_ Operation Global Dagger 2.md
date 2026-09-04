@@ -1,5 +1,6 @@
-Room: https://tryhackme.com/room/xdroperationglobaldagger2
+# XDR_ Operation Global Dagger 2 [MEDIUM]
 
+Room: https://tryhackme.com/room/xdroperationglobaldagger2
 
 1. No answer needed
 2. No answer needed
@@ -12,6 +13,5 @@ Room: https://tryhackme.com/room/xdroperationglobaldagger2
    7. WMIC.exe
    8. Discovery, Execution
    9. THM{PZ874JC89DR5NZ1DAF6MS2KH}
-
 
 #source https://medium.com/@Sle3pyHead/xdr-operation-global-dagger-2-ctf-notes-tryhackme-e85eaa8daab3

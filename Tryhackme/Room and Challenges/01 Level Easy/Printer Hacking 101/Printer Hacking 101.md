@@ -1,3 +1,5 @@
+# Printer Hacking 101 [EASY]
+
 1. No answer needed
 2. 631
 3. 1. while true; do nc printer 9100; done

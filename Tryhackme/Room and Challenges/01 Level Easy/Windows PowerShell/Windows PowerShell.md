@@ -1,3 +1,5 @@
+# Windows PowerShell [EASY]
+
 1. No answer needed
 2. object-oriented
 3. 1. Get-Command -Name Remove*

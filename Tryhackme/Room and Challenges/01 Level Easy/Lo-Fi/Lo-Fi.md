@@ -1,1 +1,3 @@
+# Lo-Fi [EASY]
+
 1. flag{e4478e0eab69bd642b8238765dcb7d18}

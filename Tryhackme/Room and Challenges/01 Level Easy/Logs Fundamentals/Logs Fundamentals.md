@@ -1,3 +1,5 @@
+# Logs Fundamentals [EASY]
+
 1. Logs
 2. 1. Network Logs
    2. Security Logs

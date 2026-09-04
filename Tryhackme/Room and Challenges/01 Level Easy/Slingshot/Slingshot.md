@@ -1,3 +1,5 @@
+# Slingshot [EASY]
+
 1. 1. 10.0.2.15
    2. Nmap Scripting Engine
    3. Mozilla/5.0 (Gobuster)

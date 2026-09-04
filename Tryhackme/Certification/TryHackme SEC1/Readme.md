@@ -1,4 +1,4 @@
-# Cyber Security 101 (SEC1) — FAQ
+# Cyber Security 101 (SEC1) [INFO]
 
 > **ES/EN** — Guía de la certificación Cyber Security 101 (SEC1) de TryHackMe.
 > Guide to TryHackMe's Cyber Security 101 (SEC1) certification.
@@ -12,7 +12,7 @@ Video https://www.youtube.com/watch?v=nVETMpalQS8
 Info https://tryhackme.com/certification/cyber-security-101
 
 ## Preguntas Frecuentes (FAQ)
-### FAQ: Certificación Cyber Security 101 (SEC1)
+### FAQ: Certificación Cyber Security 101 (SEC1) / FAQ: Cyber Security 101 (SEC1) Certification
 
 **¿Qué es la Certificación Cyber Security 101 (SEC1)?**
 La Certificación Cyber Security 101 (SEC1) es una certificación práctica de nivel principiante diseñada para los estudiantes que completan la ruta Cyber Security 101 de TryHackMe. Valida habilidades fundamentales ofensivas, defensivas e investigativas a través de escenarios prácticos del mundo real.

@@ -1,3 +1,5 @@
+# Secret Recipe [MEDIUM]
+
 1. 1. No answer needed
    2. 6
 2. 1. JAMES

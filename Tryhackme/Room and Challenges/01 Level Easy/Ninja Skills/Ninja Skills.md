@@ -1,3 +1,5 @@
+# Ninja Skills [EASY]
+
 1. 1. D8B3 v2Vb
    2. oiMO
    3. c4ZX

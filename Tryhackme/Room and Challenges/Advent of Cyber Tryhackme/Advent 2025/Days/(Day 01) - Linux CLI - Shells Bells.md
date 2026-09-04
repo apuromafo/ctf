@@ -1,3 +1,4 @@
+# Advent 2025\Days [N/A]
 
 - `ls` is used to list the contents of the current directory
 - `cat` will display the contents of the file mentioned after it
@@ -12,7 +13,7 @@
 - Switch to the root user by running the `sudo su` command
 - every command you run is saved in a hidden history file, also called `Bash history`
 
-## Answers:
+## Respuestas / Answers
 - Which CLI command would you use to list a directory? : `ls`
 - Which command helped you filter the logs for failed logins? : `grep`
 - Which command would you run to switch to the root user? : `sudo su`

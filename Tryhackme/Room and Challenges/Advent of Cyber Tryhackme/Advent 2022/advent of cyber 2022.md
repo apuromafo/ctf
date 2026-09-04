@@ -1,3 +1,5 @@
+# Advent 2022 [N/A]
+
 Advent of Cyber 2022
 https://tryhackme.com/room/adventofcyber4
 
@@ -204,7 +206,6 @@ cdn[.]bandityeti[.]thm
 
 What is the "user-agent" value used to download the non-executable file?
 Nim httpclient/1.6.8
-
 
 What is the sha256 hash value of the executable file?
 0ce160a54d10f8e81448d0360af5c2948ff6a4dbb493fe4be756fc3e2c3f900f

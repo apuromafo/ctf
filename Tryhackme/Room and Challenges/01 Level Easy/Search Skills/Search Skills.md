@@ -1,3 +1,5 @@
+# Search Skills [EASY]
+
 1. No answer needed
 2. 1. Snake oil
    2. ss

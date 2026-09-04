@@ -1,3 +1,5 @@
+# Windows Logging for SOC [EASY]
+
 1. No answer needed
 2. Security / 4624
 3. 1. 10.10.53.248

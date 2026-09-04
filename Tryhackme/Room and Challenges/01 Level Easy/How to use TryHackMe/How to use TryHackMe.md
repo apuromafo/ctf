@@ -1,3 +1,5 @@
+# How to use TryHackMe [EASY]
+
 1. 1. No answer needed
    2. testdir
    3. No answer needed

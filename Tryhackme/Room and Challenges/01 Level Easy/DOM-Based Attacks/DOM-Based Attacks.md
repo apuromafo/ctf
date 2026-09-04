@@ -1,3 +1,5 @@
+# DOM-Based Attacks [EASY]
+
 1. No answer needed
 2. 1. Document Object Model
    2. createElement

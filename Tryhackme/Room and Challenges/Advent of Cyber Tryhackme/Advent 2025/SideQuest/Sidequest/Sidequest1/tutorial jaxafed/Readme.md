@@ -1,3 +1,4 @@
+# Advent 2025\SideQuest\Sidequest\Sidequest1\tutorial jaxafed [N/A]
 
  Tutorial from jaxafed TryHackMe: AoC 2025 Side Quest One
  
@@ -12,14 +13,13 @@ Next, using the same credentials on the video portal application, we exploited a
 
 Finally, with our shell, we escalated privileges using a **SUID** binary and gained access as a user in the **docker** group. We leveraged this to escalate to the **root** user and discover the unlock code for the final door. Using this code, we unlocked the last door, obtained the third flag, and completed the room.
 
-
 [![Tryhackme Room Link](./img/room_card.webp) (https://tryhackme.com/room/sq1-aoc2025-FzPnrt2SAu) 
 
-## Finding the Key
+## Encontrando la Llave / Finding the Key
 
 We start the side quest by trying to find the key in the [Advent of Cyber Day 1 room](https://tryhackme.com/room/linuxcli-aoc2025-o1fpqkvxti).
 
-### Finding the Fragments
+### Encontrando los Fragmentos / Finding the Fragments
 
 After getting a shell on the room with the given credentials, we find an interesting note in `/home/mcskidy/Documents/read-me-please.txt`, which provides credentials for the **eddi_knapp** user and instructs us to find **three fragments** and combine them to decrypt a message located in the `/home/eddi_knapp/Documents/` directory.
 
@@ -122,7 +122,7 @@ eddi_knapp@tbfc-web01:~$ tail -n 1 /home/eddi_knapp/Pictures/.easter_egg
 PASSFRAG3: c0M1nG
 ```
 
-### Getting the Ciphertext
+### Obteniendo el Texto Cifrado / Getting the Ciphertext
 
 Now we can combine the fragments to create a passphrase and decrypt the `/home/eddi_knapp/Documents/mcskidy_note.txt.gpg` message mentioned earlier.
 
@@ -184,7 +184,7 @@ Afterwards, checking the web application on port `8080`, we can see that it disp
 
 ![Key Web 8080 Ciphertext](./img/key_web_8080_ciphertext.webp) 
 
-### Finding the Key
+### Encontrando la Llave / Finding the Key
 
 We can decrypt this ciphertext exactly as shown in the note:
 
@@ -236,13 +236,13 @@ Looking at the image, we can find the key on it and move on to the actual side q
 
 ![Key Image](./img/key_image.webp) 
 
-## Side Quest
+## Misión Lateral / Side Quest
 
 We start the side quest by visiting the web server on port `21337` and entering the key we discovered to remove the firewall as per the room instructions.
 
 ![Web 21337 Unlock](./img/web_21337_unlock.webp) 
 
-### Initial Enumeration
+### Enumeración Inicial / Initial Enumeration
 
 Afterwards, we run an `nmap` scan to discover all the services running on the target.
 
@@ -304,7 +304,6 @@ $ nc 10.67.161.155 9001
 [!] Authentication required to access SCADA terminal
 [!] Provide authorization token from Part 1 to proceed
 
-
 [AUTH] Enter authorization token:
 ```
 
@@ -320,7 +319,7 @@ test
 unauthorized
 ```
 
-### First Flag
+### Primera Bandera / First Flag
 
 Since we don't have any credentials, an authorization token, or any clues about the service on port `13404`, we start by creating an account for the social media application on port `8000`.
 
@@ -353,7 +352,7 @@ After logging in, we simply click **Cells / Storage door** and unlock the cell d
 
 ![Web 8080 Flag](./img/web_8080_flag.webp) 
 
-### Second Flag
+### Segunda Bandera / Second Flag
 
 Now if we try to unlock the next door, it asks for a keycode that we don't have, so instead let's focus on the video portal application on port `13400`, where we can log in using the same credentials and access several camera feeds with one camera feed being only available to the **admin** role.
 
@@ -427,7 +426,7 @@ svc_vidops@tryhackme-2404:~$ wc -c /home/svc_vidops/user_part2.txt
 17 /home/svc_vidops/user_part2.txt
 ```
 
-### Third Flag
+### Tercera Bandera / Third Flag
 
 Now that we have a shell, we can start looking for privilege-escalation opportunities. Checking for **SUID** binaries, we discover `/usr/local/bin/diag_shell`, which is owned by the `dockermgr` user:
 

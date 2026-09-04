@@ -1,3 +1,5 @@
+# Simple CTF [EASY]
+
 1. 1. 2
    2. ssh
    3. CVE-2019-9053

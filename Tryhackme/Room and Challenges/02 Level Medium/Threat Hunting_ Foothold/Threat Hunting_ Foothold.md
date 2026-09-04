@@ -1,3 +1,5 @@
+# Threat Hunting_ Foothold [MEDIUM]
+
 1. No answer needed
 2. 1. Jul 3, 2023 @ 14:14:09.000
    2. config.php

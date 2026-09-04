@@ -1,3 +1,5 @@
+# Registry Persistence Detection [EASY]
+
 1. No answer needed
 2. 1. (Default)
    2. C:\Users\Administrator\AppData\Local\bd84\24d9.bat

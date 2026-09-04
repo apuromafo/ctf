@@ -1,3 +1,5 @@
+# HTTP Request Smuggling [EASY]
+
 1. No answer needed
 2. Reverse Proxy
 3. Content-Length

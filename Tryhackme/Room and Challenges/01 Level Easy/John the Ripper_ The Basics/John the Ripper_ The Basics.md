@@ -1,3 +1,5 @@
+# John the Ripper_ The Basics [EASY]
+
 1. No answer needed
 2. Jumbo John
 3. rockyou.com

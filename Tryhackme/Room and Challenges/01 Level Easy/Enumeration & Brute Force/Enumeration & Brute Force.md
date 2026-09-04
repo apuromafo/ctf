@@ -1,3 +1,5 @@
+# Enumeration & Brute Force [EASY]
+
 1. No answer needed
 2. Verbose errors
 3. canderson@gmail.com

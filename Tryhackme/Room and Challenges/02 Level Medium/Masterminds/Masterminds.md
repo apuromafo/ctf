@@ -1,3 +1,5 @@
+# Masterminds [MEDIUM]
+
 1. No answer needed
 2. 1. 192.168.75.249
    2. cambiasuhistoria.growlab.es,www.letscompareonline.com

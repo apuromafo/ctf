@@ -1,3 +1,5 @@
+# Threat Hunting With YARA [MEDIUM]
+
 1. No answer needed
 2. 1. Access Token Manipulation
    2. Detects obfuscated ROOTSAW payloads

@@ -1,3 +1,5 @@
+# Web Application Basics [EASY]
+
 1. No answer needed
 2. 1. web server
    2. web browser

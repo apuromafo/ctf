@@ -1,3 +1,5 @@
+# Windows User Account Forensics [MEDIUM]
+
 1. No answer needed
 2. 1. System and Service Accounts
    2. Domain Controller

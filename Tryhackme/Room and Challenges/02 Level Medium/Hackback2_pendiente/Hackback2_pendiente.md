@@ -1,4 +1,4 @@
-# HackBack2
+# Hackback2_pendiente [MEDIUM]
 
 **Room Link:** https://tryhackme.com/room/hackback2
 
@@ -8,7 +8,7 @@ Created by: **ben tryhackme**
 
 ---
 
-## Task 1: Introduction
+## Tarea 1: Introducción / Task 1: Introduction
 
 - **Q1:** Join our Slack and Discord server!
   - Respuesta: (No requiere respuesta)
@@ -19,7 +19,7 @@ Created by: **ben tryhackme**
 
 ---
 
-## Task 2: [Easy] [Web Exploitation] Avengers Blog
+## Tarea 2: [Easy] [Web Exploitation] Avengers Blog
 
 - **Q1: What is flag1?** (Hint: Mmm, cookies.)
   - Respuesta: `cookie_secrets`
@@ -34,7 +34,7 @@ Created by: **ben tryhackme**
 
 ---
 
-## Task 3: [Easy] [Forensics] Plaintext
+## Tarea 3: [Easy] [Forensics] Plaintext
 
 - **Q1:** What is the IP of the remote machine that Bob connected to?
   - Respuesta: `54.229.180.40`
@@ -45,7 +45,7 @@ Created by: **ben tryhackme**
 
 ---
 
-## Task 4: [Insane] [Networking] Borderlands
+## Tarea 4: [Insane] [Networking] Borderlands
 
 - **Q1** (AND*, APK): `ANDVOWLDLAS5Q8OQZ2tuIPGcOu2mXk`
 - **Q2** (WEB*, webapp): `WEBLhvOJAH8d50Z4y5G5g4McG1GMGD`
@@ -57,7 +57,7 @@ Created by: **ben tryhackme**
 
 ---
 
-## Task 5: [Easy] [Reverse Engineering] Dysfunctional Pointer
+## Tarea 5: [Easy] [Reverse Engineering] Dysfunctional Pointer
 
 - **Q1: What is the flag?** (Hint: check the function pointer)
   - Respuesta: `684DAD9F`
@@ -65,7 +65,7 @@ Created by: **ben tryhackme**
 
 ---
 
-## Task 6: [Medium] [Reverse Engineering] Checks
+## Tarea 6: [Medium] [Reverse Engineering] Checks
 
 - **Q1: What is the flag?**
   - Respuesta: `88ED12AC`
@@ -73,7 +73,7 @@ Created by: **ben tryhackme**
 
 ---
 
-## Task 7: [Easy] [Networking] Sharing Is Caring
+## Tarea 7: [Easy] [Networking] Sharing Is Caring
 
 - **Q1:** What service allows you remotely access files?
   - Respuesta: [Pendiente] (Formato: ***)
@@ -90,7 +90,7 @@ Created by: **ben tryhackme**
 
 ---
 
-## Task 8: [Easy] [Forensics] E-Corp Takeover
+## Tarea 8: [Easy] [Forensics] E-Corp Takeover
 
 - **Q1:** When did the compromise take place?
   - Respuesta: [Pendiente] (Formato: **/**/****)
@@ -111,7 +111,7 @@ Created by: **ben tryhackme**
 
 ---
 
-## Task 9: [Medium] [Steganography] Now you see me
+## Tarea 9: [Medium] [Steganography] Now you see me
 
 - **Q1:** What is flag 1? (Hint: Whoever took that photo?)
   - Respuesta: `5f4dcc3b5aa765d61d8327deb882cf99`
@@ -130,7 +130,7 @@ Created by: **ben tryhackme**
 
 ---
 
-## Task 10: [Hard] [Web & Networking] Cardboard
+## Tarea 10: [Hard] [Web & Networking] Cardboard
 
 - **Q1:** What is flag 1?
   - Respuesta: [Pendiente] (Formato: ********************************)
@@ -145,7 +145,7 @@ Created by: **ben tryhackme**
 
 ---
 
-## Task 11: [Medium] [Networking] Jack and The ELK Stalk
+## Tarea 11: [Medium] [Networking] Jack and The ELK Stalk
 
 - **Q1:** Find the password in the database
   - Respuesta: [Pendiente] (Formato: **********************)
@@ -154,7 +154,7 @@ Created by: **ben tryhackme**
 
 ---
 
-## Task 12: [Easy] [Scripting/Linux] Ninja Skills
+## Tarea 12: [Easy] [Scripting/Linux] Ninja Skills
 
 - **Q1:** Which files are owned by the best-group group?
   - Respuesta: `D8B3 v2Vb`
@@ -171,14 +171,14 @@ Created by: **ben tryhackme**
 
 ---
 
-## Task 13: [Easy] [Exploit] Credit Rating Shenanigans
+## Tarea 13: [Easy] [Exploit] Credit Rating Shenanigans
 
 - **Q1:** Compromise this machine yourself. What is the flag?
   - Respuesta: [Pendiente] (Formato: ****************)
 
 ---
 
-## Task 14: [OSINT] Sometimes a little is a lot
+## Tarea 14: [OSINT] Sometimes a little is a lot
 
 Email: johnson.lola1992@gmail.com
 
@@ -199,7 +199,7 @@ Email: johnson.lola1992@gmail.com
 
 ---
 
-## Task 15: [Medium] [Scripting] Very Secure Protocol
+## Tarea 15: [Medium] [Scripting] Very Secure Protocol
 
 - **Q1:** What is the value of the PRE-AUTH-CONF string you receive?
   - Respuesta: [Pendiente] (Formato: ******************)

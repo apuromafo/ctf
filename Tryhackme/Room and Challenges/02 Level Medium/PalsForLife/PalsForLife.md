@@ -1,3 +1,5 @@
+# PalsForLife [MEDIUM]
+
 1. No answer needed
 2. 1. flag{Stick_to_the_plan!}
    2. flag{_G0ddamit_Leeroy_}

@@ -1,3 +1,5 @@
+# Abusing Windows Internals [HARD]
+
 1. No answer needed
 2. 1. No answer needed
    2. THM{1nj3c710n_15_fun!}

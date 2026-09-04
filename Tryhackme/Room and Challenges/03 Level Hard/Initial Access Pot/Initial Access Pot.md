@@ -1,3 +1,5 @@
+# Initial Access Pot [HARD]
+
 1. No answer needed
 2. 1. /wp-login.php
    2. /var/www/html/wordpress/wp-content/themes/blocksy/404.php

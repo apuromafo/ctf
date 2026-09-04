@@ -1,3 +1,4 @@
+# Advent 2025\Days [N/A]
 
 - Ways of phishing
   smishing: short text messages 
@@ -9,13 +10,12 @@
 - port = 8000
 - all interfaces = 0.0.0.0
 
-### phishing mail:
+### Correo de phishing / phishing mail:
 Social-Engineering attacks < Mass Mailer Attack < E-Mail Attack Single Email Address 
 
 - set up server
 - social engineer toolkit: [https://github.com/trustedsec/social-engineer-toolkit](url)
 
-
-## Answers: 
+## Respuestas / Answers: 
 - What is the password used to access the TBFC portal? : `unranked-wisdom-anthem`
 - Browse to http://MACHINE_IP from within the AttackBox and try to access the mailbox of the factory user to see if the previously harvested admin password has been reused on the email portal. What is the total number of toys expected for delivery? : `1984000`

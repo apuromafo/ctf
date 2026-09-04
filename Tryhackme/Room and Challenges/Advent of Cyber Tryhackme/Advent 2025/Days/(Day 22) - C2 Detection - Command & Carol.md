@@ -1,3 +1,4 @@
+# Advent 2025\Days [N/A]
 
 - C2 -> Command and Control traffic 
 - analyzing large PCAP using **Zeek** and **RITA**
@@ -17,18 +18,15 @@
      3. Produces structured logs (conn.log, dns.log, ssl.log, etc.)
      4. Does NOT block traffic (not IDS/IPS)
 
-### Commands
+### Comandos / Commands
 - `zeek readpcap pcaps/AsyncRAT.pcap zeek_logs/asyncrat` : Converting PCAP to Zeek Logs
 - `rita import --logs ~/zeek_logs/asyncrat/ --database asyncrat` : Importing Logs into RITA
 - `rita view asyncrat` : view results
 
-
-## Answers: 
+## Respuestas / Answers:
 - How many hosts are communicating with malhare.net? : `6`
 - Which Threat Modifier tells us the number of hosts communicating to a certain destination? : `prevalence`
 - What is the highest number of connections to rabbithole.malhare.net? : `40`
 - Which search filter would you use to search for all entries that communicate to rabbithole.malhare.net with a beacon score greater than 70% and sorted by connection duration (descending)? : `dst:rabbithole.malhare.net beacon:>=70 sort:duration-desc`
 - Which port did the host 10.0.0.13 use to connect to rabbithole.malhare.net? : `80`
-
-
 

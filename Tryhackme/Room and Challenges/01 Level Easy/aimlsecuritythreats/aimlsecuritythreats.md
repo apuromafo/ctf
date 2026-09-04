@@ -10,13 +10,13 @@
 > * **Enlace oficial:** [https://tryhackme.com/room/aimlsecuritythreats](https://tryhackme.com/room/aimlsecuritythreats)
  
 
-# Amenazas de Seguridad en IA/ML
+# aimlsecuritythreats [EASY]
 
-## Los Pilares de la IA
+## Los Pilares de la IA / The Pillars of AI
 
 La inteligencia artificial se refiere a una máquina o sistema informático capaz de llevar a cabo tareas que, de otro modo, requerirían razonamiento, comprensión, resolución de problemas o creatividad humana.
 
-### Aprendizaje Automático (Machine Learning)
+### Aprendizaje Automático (Machine Learning) / Machine Learning
 
 El ML sigue un ciclo de vida estructurado para garantizar el desarrollo y despliegue confiable de los modelos.
 
@@ -24,7 +24,7 @@ Este proceso comienza con la definición del problema, como determinar si un cor
 
 El modelo es entonces entrenado utilizando un algoritmo seleccionado, seguido de una evaluación y ajuste para optimizar el rendimiento. Una vez perfeccionado, el modelo se despliega en un entorno de producción para su uso en el mundo real.
 
-### Algoritmos de Aprendizaje Automático
+### Algoritmos de Aprendizaje Automático / Machine Learning Algorithms
 
 Los algoritmos de ML son los métodos matemáticos utilizados para aprender patrones de los datos, mientras que los modelos de ML son los resultados entrenados derivados de estos algoritmos.
 
@@ -36,7 +36,7 @@ Estos algoritmos constan de tres componentes clave:
 
 Los algoritmos de ML se dividen en cuatro categorías principales: supervisado, no supervisado, semi-supervisado y por refuerzo.
 
-### Redes Neuronales y Aprendizaje Profundo (Deep Learning)
+### Redes Neuronales y Aprendizaje Profundo (Deep Learning) / Neural Networks and Deep Learning
 
 El objetivo principal de la IA es permitir que las computadoras se comporten como humanos a través del uso de redes neuronales. El cerebro humano procesa información utilizando neuronas interconectadas que se comunican entre sí mediante sinapsis.
 
@@ -44,7 +44,7 @@ Al igual que el cerebro procesa estímulos sensoriales, la **capa de entrada** r
 
 ---
 
-### Responde las siguientes preguntas
+### Responde las siguientes preguntas / Answer the following questions
 
 1. What category of machine learning combines both labelled and unlabelled data?
 
@@ -74,7 +74,7 @@ Las redes neuronales **transformer**, introducidas por Google en 2017, revolucio
 
 ---
 
-### Responde las siguientes preguntas
+### Responde las siguientes preguntas / Answer the following questions
 
 1. What type of AI model enabled major advancements in ChatGPT and similar tools?
 
@@ -90,9 +90,9 @@ Las redes neuronales **transformer**, introducidas por Google en 2017, revolucio
 
 ---
 
-## Amenazas de Seguridad en IA
+## Amenazas de Seguridad en IA / AI Security Threats
 
-### Vulnerabilidades en Modelos de IA
+### Vulnerabilidades en Modelos de IA / AI Model Vulnerabilities
 
 1. **Prompt Injection**: Sobrescribir las instrucciones originales para fines maliciosos.
 2. **Data Poisoning**: Manipular los datos de entrenamiento para sesgar el resultado.
@@ -100,7 +100,7 @@ Las redes neuronales **transformer**, introducidas por Google en 2017, revolucio
 4. **Privacy Leakage**: Revelar inadvertidamente información sensible de los datos de entrenamiento.
 5. **Model Drift**: Deterioro del rendimiento del modelo con el tiempo.
 
-### Ataques Mejorados
+### Ataques Mejorados / Enhanced Attacks
 
 1. **Malware**: Generación instantánea de código malicioso.
 2. **DeepFakes**: Replicar la voz o imagen de una persona para vulnerar la autenticación.
@@ -108,7 +108,7 @@ Las redes neuronales **transformer**, introducidas por Google en 2017, revolucio
 
 ---
 
-### Responde las siguientes preguntas
+### Responde las siguientes preguntas / Answer the following questions
 
 1. What framework was developed by MITRE to guide the understanding of AI-specific cyber threats?
 
@@ -128,7 +128,7 @@ Las redes neuronales **transformer**, introducidas por Google en 2017, revolucio
 
 ---
 
-## IA Defensiva e IA Segura
+## IA Defensiva e IA Segura / Defensive AI and Safe AI
 
 La IA mejora nuestra capacidad de **analizar**, **predecir**, **resumir** e **investigar**. Para asegurar la IA, debemos implementar:
 
@@ -139,7 +139,7 @@ La IA mejora nuestra capacidad de **analizar**, **predecir**, **resumir** e **in
 
 ---
 
-### Responde las siguientes preguntas
+### Responde las siguientes preguntas / Answer the following questions
 
 1. According to IBM, how many days faster does AI help identify and contain breaches?
 
@@ -155,9 +155,9 @@ La IA mejora nuestra capacidad de **analizar**, **predecir**, **resumir** e **in
 
 ---
 
-## Práctica y Conclusión
+## Práctica y Conclusión / Practice and Conclusion
 
-### Responde las siguientes preguntas
+### Responde las siguientes preguntas / Answer the following questions
 
 What's the flag?
 
@@ -165,7 +165,7 @@ What's the flag?
 
 ---
  
-## Conclusión
+## Conclusión / Conclusion
 
 Al comienzo de esta sala, se señaló que "el conocimiento es poder" y esto es especialmente cierto en la lucha contra las ciberamenazas de la IA. El ritmo al que esta tecnología ha irrumpido en escena ha dejado a muchos sintiéndose rezagados. Ahora, con una mejor comprensión de la IA y la tecnología subyacente que le permite ser la fuerza que es actualmente en nuestra industria (y en todas), comprendes qué está representando una amenaza para nuestros sistemas y qué debe ser asegurado como resultado. Aquí tienes un resumen de lo que se ha cubierto:
 
@@ -178,7 +178,7 @@ Al comienzo de esta sala, se señaló que "el conocimiento es poder" y esto es e
 
 ---
 
-### Glosario:
+### Glosario / Glossary:
 
 * **Phishing**: Cuando se envían correos electrónicos a uno o varios objetivos fingiendo provenir de una entidad de confianza para engañar a las personas y que proporcionen información sensible.
 * **AI (IA)**: La Inteligencia Artificial es la tecnología que permite a las computadoras y máquinas simular el comportamiento humano, como el aprendizaje y el razonamiento.

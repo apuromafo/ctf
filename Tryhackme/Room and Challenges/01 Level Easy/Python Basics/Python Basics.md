@@ -1,3 +1,5 @@
+# Python Basics [EASY]
+
 1. No answer needed
 2. THM{PRINT_STATEMENTS}
 3. 1. THM{ADDITI0N}

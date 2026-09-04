@@ -1,3 +1,5 @@
+# Tony the Tiger [EASY]
+
 1. No answer needed
 2. 1. lamp
    2. dos

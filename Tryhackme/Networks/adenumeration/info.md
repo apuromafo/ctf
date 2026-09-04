@@ -1,4 +1,4 @@
-# Enumerating Active Directory - `adenumeration`
+# Enumerating Active Directory [MEDIUM]
 
 ![Banner](https://tryhackme-images.s3.amazonaws.com/user-uploads/62c435d1f4d84a005f5df811/room-content/cb4b2246fb5ede709a4630dce9fc6d88.png)
 

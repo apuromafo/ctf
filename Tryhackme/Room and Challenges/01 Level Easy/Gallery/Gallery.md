@@ -1,3 +1,5 @@
+# Gallery [EASY]
+
 https://tryhackme.com/room/gallery666
 
 #Task 1 : Deploy and get a Shell
@@ -6,9 +8,6 @@ Start Machine
 Our gallery is not very well secured.
 
 Designed and created by Mikaa !
-
-
-
 
 1. 1. 3
    2. Simple Image Gallery

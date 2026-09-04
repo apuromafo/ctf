@@ -1,3 +1,5 @@
+# Splunk_ Dashboards and Reports [EASY]
+
 1. No answer needed
 2. index=*
 3. 1. 5

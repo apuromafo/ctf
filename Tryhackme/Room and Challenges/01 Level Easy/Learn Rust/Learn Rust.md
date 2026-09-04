@@ -1,3 +1,5 @@
+# Learn Rust [EASY]
+
 1. 1. C++
    2. Discord
    3. 70%

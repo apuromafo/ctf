@@ -1,14 +1,14 @@
-#  Side quest 2: Scheme Catcher
+# Advent 2025\SideQuest\Sidequest\Sidequest2 [N/A]
 
 > **Room URL:** [tryhackme.com/room/sq2-aoc2025-JxiOKUSD9R](https://tryhackme.com/room/sq2-aoc2025-JxiOKUSD9R)
 
 > **Event:** Advent of Cyber 2025 Side Quest
  
- ## 📝 Descripción del Desafío
+ ## 📝 Descripción del Desafío / Challenge Description
  
 The server holds the secrets. Hopper holds the grudge.
 
-## info for solve 
+## Información para resolver / info for solve 
 
  What is the flag hidden in the file?
 
@@ -27,7 +27,7 @@ What is the content of root.txt?
 Answer format: Answer format: ***{**********_************}
 
  
-## ##tutorials
+## Tutoriales / ##tutorials
 
 **01.01.2026**
 
@@ -35,8 +35,6 @@ Answer format: Answer format: ***{**********_************}
 
 * **Initial Vector password:** 
 `tit_for_tat`
-
-
 
 Personal founds.
  
@@ -254,7 +252,6 @@ __int64 create()
   }
 }
 
-
 int menu()
 {
   puts("[1] C:");
@@ -274,7 +271,7 @@ links for heap:
  
 ---
 
-# # Answers
+## # Respuestas / Answers
 
 * **What is the flag hidden in the file?**
 `THM{Welcom3_to_th3_eastmass_pwnland}`
@@ -285,11 +282,9 @@ links for heap:
 * **What is the content of root.txt?**
 `THM{final-boss_defeat3d-yay}`
 
-
-
 ---
 
-## 🏆 Flags & Soluciones
+## 🏆 Flags & Soluciones / Flags & Solutions
 
 | Objetivo | Flag |
 | --- | --- |
@@ -300,10 +295,9 @@ links for heap:
 
 ---
 
-
 ---
 
-# tutorial:
+## Tutorial / tutorial:
 
 * [Jaxafed Blog - Side Quest Two](https://jaxafed.github.io/posts/tryhackme-aoc2025_sidequest_two/)
 * [GitHub Repo - Scheme Catcher (Djalil Ayed)](https://github.com/djalilayed/tryhackme/tree/main/Advent_of_Cyber_Side_Quest_2025/Scheme_Catcher)
@@ -311,9 +305,9 @@ links for heap:
 
 ---
 
-# tuts in youtube:
+## Tutoriales en YouTube / tuts in youtube:
 
-### video
+### Video / video
 
 **Djalil Ayed: TryHackMe Scheme Catcher - Advent of Cyber Side Quest - Full Walkthrough 2025**
 
@@ -321,7 +315,7 @@ links for heap:
 
 ---
 
-# atached a solution from id root
+## Solución adjunta de id root / attached solution from id root
 
 > [!NOTE]
 > *Documentación para propósitos educativos y registro de CTF.*

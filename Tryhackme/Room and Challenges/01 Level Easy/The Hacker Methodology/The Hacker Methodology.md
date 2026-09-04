@@ -1,3 +1,5 @@
+# The Hacker Methodology [EASY]
+
 1. Reconnaissance
 2. 1. Elon Musk
    2. subdomains

@@ -1,4 +1,4 @@
-# 🛡️ Matriz de Salas - TryHackMe
+# 🛡️ Matriz de Salas - TryHackMe [INFO]
 
 Total de salas únicas procesadas: **888**
 

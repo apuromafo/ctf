@@ -1,3 +1,5 @@
+# Intro to Logs [EASY]
+
 1. No answer needed
 2. 1. Perry
    2. /var/log/gitlab/nginx/access.log

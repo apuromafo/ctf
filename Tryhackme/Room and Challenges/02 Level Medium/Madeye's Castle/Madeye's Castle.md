@@ -1,3 +1,5 @@
+# Madeye's Castle [MEDIUM]
+
 https://tryhackme.com/room/madeyescastle
 
 1. 1. RME{th3-b0Y-wHo-l1v3d-f409da6f55037fdc}

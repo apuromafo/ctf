@@ -1,1 +1,3 @@
+# Templates [MEDIUM]
+
 1. flag{3cfca66f3611059a0dfbc4191a0803b2}

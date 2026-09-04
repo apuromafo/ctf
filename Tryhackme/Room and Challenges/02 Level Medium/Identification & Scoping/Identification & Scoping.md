@@ -1,3 +1,5 @@
+# Identification & Scoping [MEDIUM]
+
 1. No answer needed
 2. 1. Weird Error in Outlook
    2. SPF, DKIM & DMARC records

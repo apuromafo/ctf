@@ -1,5 +1,4 @@
-
-# BADR | Behaviour Action Detection Reporting
+# BADR [INFO]
 
 > **Actions to Insights: A New Standard in Learning**
 
@@ -48,7 +47,8 @@ With BADR, TryHackMe is moving cyber education from test-based to action-based. 
 ---
 
 Images
-# Index de Imágenes - BADR  
+## Index de Imágenes / Image Index
+
 
 ## 🚀 Hero & Vision
 ![hero](./img/hero.3d21ecf0.svg)

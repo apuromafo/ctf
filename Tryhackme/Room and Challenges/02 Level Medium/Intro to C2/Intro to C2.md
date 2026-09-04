@@ -1,3 +1,5 @@
+# Intro to C2 [MEDIUM]
+
 1. No answer needed
 2. 1. Agent
    2. Jitter

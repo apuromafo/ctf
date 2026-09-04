@@ -1,3 +1,5 @@
+# Red Team OPSEC [MEDIUM]
+
 1. No answer needed
 2. THM{OPSEC_CRITICAL_INFO}
 3. No answer needed

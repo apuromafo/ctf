@@ -1,11 +1,11 @@
  
-# TryHackMe: Operation Slither
+# Operation Slither [EASY]
 
 **Enlace de la sala:** [Operation Slither](https://tryhackme.com/room/operationslitherIU)
 
 ---
 
-## 🐍 Task 1: The Leader
+## 🐍 Tarea 1: El Líder / Task 1: The Leader
 
 <p align="center">
 <img src="[https://tryhackme-images.s3.amazonaws.com/user-uploads/5ed5961c6276df568891c3ea/room-content/5ed5961c6276df568891c3ea-1769787523829.png](https://tryhackme-images.s3.amazonaws.com/user-uploads/5ed5961c6276df568891c3ea/room-content/5ed5961c6276df568891c3ea-1769787523829.png)" width="200px" />
@@ -13,7 +13,7 @@
 
 *Hemos obtenido acceso a un foro de hackers y encontramos información de nuestra empresa en venta. Todo lo que tenemos es este post. Encuentra cualquier información relacionada con el líder del grupo **Sneaky Viper**.*
 
-### Intel
+### Inteligencia / Intel
 
 ```shell
 Full user database TryTelecomMe on sale!!!
@@ -25,24 +25,22 @@ This is just the beginning. We'll be releasing more data soon. Stay tuned!
 
 ```
 
-### Questions
+### Preguntas / Questions
 
 1. **Aside from Twitter / X, what other platform is used by v3n0mbyt3_?** (Answer in lowercase)
 * *Format:* `*******`
 > Answer: `threads`
 
-
 2. **What is the value of the flag?**
 * *Format:* `***{********_******_***_*****_********}`
 > Answer: ``THM{sl1th3ry_tw33tz_4nd_l34kr_r3pl13s!}`
-
 
 > nota: se debe convertir de base64 para abordarlo fuente
 >  `https://www.threads.com/@_myst1cv1x3n_/post/C6G32WIvcJW?xmt=AQF0d8N-GTgDST9Wb7IfOI8X2pNON2QwItLja80ZJNTxOg `
 
 ---
 
-## 🐍 Task 2: The Sidekick
+## 🐍 Tarea 2: El Asistente / Task 2: The Sidekick
 
 <p align="center">
 <img src="[https://tryhackme-images.s3.amazonaws.com/user-uploads/5ed5961c6276df568891c3ea/room-content/5ed5961c6276df568891c3ea-1769787567454.png](https://tryhackme-images.s3.amazonaws.com/user-uploads/5ed5961c6276df568891c3ea/room-content/5ed5961c6276df568891c3ea-1769787567454.png)" width="200px" />
@@ -50,7 +48,7 @@ This is just the beginning. We'll be releasing more data soon. Stay tuned!
 
 *¡Un segundo mensaje se ha hecho público! Nuestra cuenta en el foro fue eliminada, así que no pudimos obtener el handle del operador esta vez. Sigue el rastro de la primera tarea y caza cualquier información relacionada con el segundo operador del grupo.*
 
-### Intel
+### Inteligencia / Intel
 
 ```shell
 60GB of data owned by TryTelecomMe is now up for bidding!
@@ -64,7 +62,7 @@ You must register or log in to view this content
 
 ```
 
-### Questions
+### Preguntas / Questions
 
 1. **What is the username of the second operator talking to v3n0mbyt3 from the previous platform?**
 * *Format:* `_***********_`
@@ -77,10 +75,9 @@ You must register or log in to view this content
 > nota: se debe convertir de base64 para abordarlo fuente
 >  ` instagram , luego souncloud indica prototipe al revisar en https://soundcloud.com/v1x3n-195859753/prototype2  sale la flag `
 
-
 ---
 
-## 🐍 Task 3: The Last Operator
+## 🐍 Tarea 3: El Último Operador / Task 3: The Last Operator
 
 <p align="center">
 <img src="[https://tryhackme-images.s3.amazonaws.com/user-uploads/5ed5961c6276df568891c3ea/room-content/5ed5961c6276df568891c3ea-1769787593281.png](https://tryhackme-images.s3.amazonaws.com/user-uploads/5ed5961c6276df568891c3ea/room-content/5ed5961c6276df568891c3ea-1769787593281.png)" width="200px" />
@@ -88,7 +85,7 @@ You must register or log in to view this content
 
 *Hay un nuevo post. Caza al tercer operador usando los descubrimientos pasados y encuentra detalles relacionados con la infraestructura utilizada para el ataque.*
 
-### Intel
+### Inteligencia / Intel
 
 ```shell
 FOR SALE
@@ -111,10 +108,9 @@ Contact me on REDACTED@protonmail.com
 
 ```
 
-### Questions
+### Preguntas / Questions
 > Nota:  para este reto hay que cruzar mucha informacion previa, hasta llegar a 
 > `https://github.com/sh4d0wF4NG/red-team-infra/commit/78de1f17c45b994e97b8629aa7e5f42c31a0e7f7#diff-f0543f47d07eca9df28e768583fd7ec54a1cc943195502f06a2bd23e182ff4a5`
-
 
 1. **What is the handle of the third operator?**
 * *Format:* `**********`
@@ -128,10 +124,9 @@ Contact me on REDACTED@protonmail.com
 * *Format:* `***{*****_*****_******_******_**}`
 > Answer `THM{sh4rp_f4ngz_l34k3d_bl00dy_pw}`
 
-
  
 ---
-### Resumen
+### Resumen / Summary
 
 | Task | Pregunta | Respuesta |
 | --- | --- | --- |

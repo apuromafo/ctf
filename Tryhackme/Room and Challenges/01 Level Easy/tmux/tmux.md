@@ -1,3 +1,5 @@
+# tmux [EASY]
+
 1. 1. No answer needed
    2. tmux
    3. Control

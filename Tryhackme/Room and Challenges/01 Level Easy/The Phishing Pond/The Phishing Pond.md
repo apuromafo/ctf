@@ -1,44 +1,44 @@
 
-# [TryHackMe] Phishing Pond - Write-up
+# The Phishing Pond [EASY]
 > **Room URL:** [The Phishing Pond — Catch the phish before the phish catches you.](https://tryhackme.com/room/phishingpond)
 
-## 📝 Descripción del Lab
+## 📝 Descripción del Lab / Lab Description
 
 **Phishing Pond** es una sala diseñada para entrenar la capacidad de identificación de correos maliciosos. El objetivo es analizar diferentes escenarios de comunicación y determinar si se trata de un intento de **Phishing** o una comunicación legítima.
  
  
 ---
 
-## 🚀 Proceso de Resolución
+## 🚀 Proceso de Resolución / Resolution Process
 
-### Introducción
+### Introducción / Introduction
 
 Al iniciar la máquina virtual y acceder a la URL proporcionada, nos encontramos con la interfaz del juego donde debemos clasificar los correos.
 <div align="center">
 <img width="600" alt="Phishing Pond Room" src="./IMG/welcome.png" />
 
-## 📧 Walkthrough de Niveles
+## 📧 Walkthrough de Niveles / Level Walkthrough
  
 ---
 
-# <div align="center">[The Phishing Pond — TryHackMe Walkthrough](https://tryhackme.com/room/phishingpond)</div>
+## <div align="center">[The Phishing Pond — TryHackMe Walkthrough](https://tryhackme.com/room/phishingpond)</div>
 
 <div align="center">
 <img width="600" alt="Phishing Pond Room" src="./IMG/room.png" />
 </div>
 
-## 📝 Introducción al Laboratorio
+## 📝 Introducción al Laboratorio / Laboratory Introduction
 
 El lab **Phishing Pond** es un desafío interactivo donde debemos actuar como analistas de seguridad para identificar correos electrónicos maliciosos. El objetivo es detectar patrones de ataque comunes y obtener la flag final tras superar 10 niveles de dificultad progresiva.
 
  
 
-## 🎣 Phishing: El Arte del Engaño
+## 🎣 Phishing: El Arte del Engaño / Phishing: The Art of Deception
 
 > El **Phishing** es un tipo de estafa en la que los atacantes abusan de tu confianza para engañarte y obtener información personal, contraseñas o dinero. 
 Al dirigirse directamente a las personas en lugar de intentar hackear sistemas complejos, se ha convertido en uno de los métodos más efectivos para el robo de datos.
 
-### 🚩 Estrategias Comunes de los Atacantes
+### 🚩 Estrategias Comunes de los Atacantes / Common Attacker Strategies
 
 Para identificar una campaña de phishing, es fundamental reconocer las tácticas psicológicas y técnicas que utilizan:
 
@@ -50,23 +50,22 @@ Para identificar una campaña de phishing, es fundamental reconocer las táctica
 * **🎁 Ofertas demasiado buenas para ser verdad:** Premios falsos, reembolsos o vacantes de empleo que requieren tus datos personales de antemano.
 
 ---
-### Tácticas Identificadas:
+### Tácticas Identificadas / Identified Tactics:
 
 * **Urgency & Scare Tactics**: Presión mediante límites de tiempo.
 * **Look-alike domains**: Dominios visualmente similares (ej. `rnicrosoft.com`).
 * **Display name impersonation**: Nombres conocidos con direcciones falsas.
 * **Malicious attachments**: Archivos con macros o malware (.doc, .xls, .zip).
 
+## 🚀 Proceso de Resolución / Resolution Process
 
-## 🚀 Proceso de Resolución
-
-### Inicio del Challenge
+### Inicio del Challenge / Challenge Start
 
 Al acceder a la máquina, se nos presenta la pantalla de bienvenida que explica la dinámica del juego de clasificación.
 
 ---
 
-### Análisis de los 10 Niveles
+### Análisis de los 10 Niveles / Analysis of the 10 Levels
 
 #### Nivel 1
 
@@ -144,7 +143,7 @@ El reto final consolida lo aprendido con un adjunto malicioso.
 
  
 
-### resumen
+### resumen / summary
 
 En esta primera etapa, identificamos desde fraudes de CEO hasta archivos con macros.
 
@@ -163,28 +162,23 @@ En esta primera etapa, identificamos desde fraudes de CEO hasta archivos con mac
 
 ---
 
-### Captura de la Flag
+### Captura de la Flag / Flag Capture
 
 Tras completar correctamente todos los niveles, el sistema valida las respuestas y muestra la flag
-
 
 > **Flag**: `THM{i_phish_you_not}`
 <div align="center">
 <img width="600" alt="Phishing Pond Room" src="./IMG/flag.png" />
 
-
-
-## 🏁 Finalización y Flag
+## 🏁 Finalización y Flag / Completion and Flag
 
 Tras enviar la flag se termina la sala
 <div align="center">
 <img width="600" alt="Phishing Pond Room" src="./IMG/End.png" />
 
-
-
 ---
 
-## 🛠️ Técnicas de Análisis Utilizadas
+## 🛠️ Técnicas de Análisis Utilizadas / Analysis Techniques Used
 
 1. **Inspección de Hyperlinks**: Verificación de la URL real al pasar el mouse sobre botones (hovering).
 2. **Análisis de Headers**: Verificación del dominio del remitente (`From:`) contra el dominio real de la empresa.
@@ -193,6 +187,5 @@ Tras enviar la flag se termina la sala
 ---
 
 *Documentación para propósitos educativos y registro de CTF.*
-
 
  

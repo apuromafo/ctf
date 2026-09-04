@@ -1,3 +1,5 @@
+# JavaScript Essentials [EASY]
+
 1. No answer needed
 2. loop
 3. 1. The result is: 20

@@ -1,3 +1,5 @@
+# Bebop [EASY]
+
 1. 1. No answer needed
    2. pilot
 2. 1. THM{r3m0v3_b3f0r3_fl16h7}

@@ -1,3 +1,5 @@
+# Dynamic Analysis_ Debugging [MEDIUM]
+
 1. No answer needed
 2. 1. basic dynamic analysis
    2. Packing

@@ -1,3 +1,5 @@
+# Log Operations [EASY]
+
 1. No answer needed
 2. 1. Operational
    2. Debug

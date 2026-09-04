@@ -1,4 +1,6 @@
-#Generador personal para gráficos al estilo de skill matrix, con datos json ordenados con categorías.
+# Skill Matrix [INFO]
+
+Generador personal para gráficos al estilo de skill matrix, con datos json ordenados con categorías.
 categorias en json 
 generador de imagen desde el json 
 
@@ -8,7 +10,7 @@ Saludos
 
 Ejemplos de resultado en 
 
-# Reporte de Gráficos Exportados
+## Reporte de Gráficos Exportados / Exported Charts Report
 
 ## 🟢 Nivel Entry (Entrada)
 ![Entry Foundational](./graficos_exportados/entry_foundational.png)

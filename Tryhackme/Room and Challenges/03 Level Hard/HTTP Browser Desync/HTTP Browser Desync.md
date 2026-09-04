@@ -1,3 +1,5 @@
+# HTTP Browser Desync [HARD]
+
 1. No answer needed
 2. 1. Pipelining
    2. Keep-Alive

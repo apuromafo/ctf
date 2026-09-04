@@ -1,2 +1,4 @@
+# Snowy ARMageddon [INSANE]
+
 1. 1. THM{YETI_ON_SCREEN_ELUSIVE_CAMERA_STAR}
    2. 2-K@bWJ5oHFCR8o%whAvK5qw8Sp$5qf!nCqGM3ksaK

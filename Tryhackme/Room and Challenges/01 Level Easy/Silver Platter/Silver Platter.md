@@ -1,2 +1,4 @@
+# Silver Platter [EASY]
+
 1. 1. THM{c4ca4238a0b923820dcc509a6f75849b}
    2. THM{098f6bcd4621d373cade4e832627b4f6}

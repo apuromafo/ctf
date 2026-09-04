@@ -1,3 +1,5 @@
+# macOS Forensics_ Artefacts [HARD]
+
 1. apfs-fuse -v 4 mac-disk.img ~/mac
 2. plistutil
 3. 1. 2024-12-08 17:42:28

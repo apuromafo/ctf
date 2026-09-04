@@ -1,3 +1,5 @@
+# Microsoft Windows Hardening [EASY]
+
 1. No answer needed
 2. 1. Manual
    2. {THM_REG_FLAG}

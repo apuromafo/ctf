@@ -1,1 +1,3 @@
+# Royal Router [HARD]
+
 1. THM{EXFILTRATING_A_MIPS_ROUTER}

@@ -1,13 +1,13 @@
 
 ![Advent of Cyber 2025 Side Quests](https://tryhackme.com/images/pngs/aoc25/sidequest/cosy-cabin.webp)
 
-# Advent of Cyber 2025 Side Quests
+# Advent 2025\SideQuest [N/A]
 
 This guide contains the answer and steps necessary to get to them for the [Advent of Cyber 2025 Side Quests](https://tryhackme.com/adventofcyber25/sidequest) event.
  Each side quest needs a password to start them. This room only covers the steps to get these passwords.
  The steps for the actual side quests will be covered in their respective guides.
 
-## Table of contents
+## Tabla de contenidos / Table of contents
 
 - Sidequest 0 [Hopper's Origin](#hopper-s-origin)
 - Sidequest 1 [The Great Disappearing Act](#the-great-disappearing-act)

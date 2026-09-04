@@ -1,3 +1,5 @@
+# Content Security Policy [MEDIUM]
+
 1. 1. Content Security Policy
    2. XSS
    3. header

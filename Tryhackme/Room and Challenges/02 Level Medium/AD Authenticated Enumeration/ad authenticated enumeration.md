@@ -1,3 +1,5 @@
+# AD Authenticated Enumeration [MEDIUM]
+
 AD: Authenticated Enumeration
 https://tryhackme.com/room/adauthenticatedenumeration
 

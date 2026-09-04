@@ -1,3 +1,5 @@
+# Warzone 2 [MEDIUM]
+
 1. 1. ET MALWARE Likely Evil EXE download from MSXMLHTTP non-exe extension M2
    2. ET POLICY PE EXE or DLL Windows file download HTTP
    3. 185[.]118[.]164[.]8

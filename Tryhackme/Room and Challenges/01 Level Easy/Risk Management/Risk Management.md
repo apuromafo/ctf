@@ -1,3 +1,5 @@
+# Risk Management [EASY]
+
 1. 1. Risk Reduction
    2. Risk Acceptance
 2. 1. Risk

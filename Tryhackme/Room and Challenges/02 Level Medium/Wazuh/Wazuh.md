@@ -1,3 +1,5 @@
+# Wazuh [MEDIUM]
+
 https://tryhackme.com/room/wazuhct
 
 1. 1. 2015

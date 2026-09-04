@@ -1,3 +1,5 @@
+# Yara [EASY]
+
 1. No answer needed
 2. 1. hexadecimal
    2. Yay

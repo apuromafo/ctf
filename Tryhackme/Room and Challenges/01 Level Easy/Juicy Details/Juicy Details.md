@@ -1,3 +1,5 @@
+# Juicy Details [EASY]
+
 1. I am ready!
 2. 1. nmap, hydra, sqlmap, curl, feroxbuster
    2. /rest/user/login

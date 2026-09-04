@@ -1,3 +1,5 @@
+# Advent 2025 [N/A]
+
 <h1 align="center">
 🎄 TryHackMe – Advent of Cyber 2025
 </h1>
@@ -11,7 +13,7 @@
 
 ---
 
-## 📌 About This Repository
+## 📌 Acerca de Este Repositorio / About This Repository
 
 This repository contains   notes of the **TryHackMe Advent of Cyber 2025** challenge.
 
@@ -25,7 +27,7 @@ Each day focuses on a different security concept, including:
   
 ---
 
-## 📂 Daily Write-Ups
+## 📂 Resúmenes Diarios / Daily Write-Ups
 
 | Day | Title  
 |----|------|
@@ -63,10 +65,9 @@ Sidequest 2 | Scheme Catcher |
 Sidequest 3 | Carrotbane of My Existence |
 Sidequest 4 | BreachBlocker Unlocker |
 
-
 ---
 
-## 🔧 Tools & Tech Used
+## 🔧 Herramientas y Tecnologías Usadas / Tools & Tech Used
 
 - Linux / Bash
 - TryHackMe

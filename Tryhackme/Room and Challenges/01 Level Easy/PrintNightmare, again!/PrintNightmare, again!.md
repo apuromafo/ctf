@@ -1,3 +1,5 @@
+# PrintNightmare, again! [EASY]
+
 1. 1. levelup.zip
    2. C:\Users\bmurphy\Downloads\CVE-2021-1675-main\CVE-2021-1675.ps1
    3. C:\Users\bmurphy\AppData\Local\Temp\3\nightmare.dll

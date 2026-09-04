@@ -1,3 +1,5 @@
+# Introduction to SOAR [MEDIUM]
+
 1. No answer needed
 2. Alert Fatigue
 3. 1. Orchestration

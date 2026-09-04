@@ -1,3 +1,5 @@
+# KQL (Kusto)_ Basic Queries [EASY]
+
 1. No answer needed
 2. Filtering data
 3. 1. Last 24 hours

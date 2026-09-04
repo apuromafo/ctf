@@ -1,3 +1,5 @@
+# Linux System Hardening [MEDIUM]
+
 1. No answer needed
 2. 1. grub2-mkpasswd-pbkdf2
    2. Password-Based Key Derivation Function 2

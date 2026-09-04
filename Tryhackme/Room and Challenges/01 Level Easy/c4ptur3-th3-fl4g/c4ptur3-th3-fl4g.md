@@ -1,3 +1,5 @@
+# c4ptur3-th3-fl4g [EASY]
+
 1. 1. can you capture the flag?
    2. lets try some binary out!
    3. base32 is super common in CTF's

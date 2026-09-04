@@ -1,5 +1,6 @@
-<img width="733" height="404" alt="Screenshot 2025-12-23 at 6 46 44 PM" src="https://github.com/user-attachments/assets/91b5c4f8-9fad-409e-b41a-6959c94c7eeb" />
+# Advent 2025\Days [N/A]
 
+<img width="733" height="404" alt="Screenshot 2025-12-23 at 6 46 44 PM" src="https://github.com/user-attachments/assets/91b5c4f8-9fad-409e-b41a-6959c94c7eeb" />
 
 - **CyberChef** -> data transformation tool; encode/decode data, transform formats, chain multiple operations
 - XOR is self-reversible
@@ -9,7 +10,7 @@
     3. can't reverse it mathematically
     4. Precomputed hash databases can reveal the original input
 
-## Answers: 
+## Respuestas / Answers
 - What is the password for the first lock? : `Iamsofluffy`
 - What is the password for the second lock? : `Itoldyoutochangeit!`
 - What is the password for the third lock? : `BugsBunny`

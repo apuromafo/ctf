@@ -1,3 +1,5 @@
+# Web Security Essentials [EASY]
+
 1. No answer needed
 2. 1. Yea
    2. Web App Owner

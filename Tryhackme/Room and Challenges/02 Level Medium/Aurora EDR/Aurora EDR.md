@@ -1,3 +1,5 @@
+# Aurora EDR [MEDIUM]
+
 1. No answer needed
 2. Endpoint Detection and Response
 3. 1. Providers

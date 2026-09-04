@@ -1,3 +1,5 @@
+# SQLMAP [EASY]
+
 1. No answer needed
 2. 1. -u
    2. --data

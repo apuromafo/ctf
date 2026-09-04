@@ -1,3 +1,5 @@
+# MAL_ Strings [EASY]
+
 1. 1. intellian
    2. CVE-2019-6499
    3. one

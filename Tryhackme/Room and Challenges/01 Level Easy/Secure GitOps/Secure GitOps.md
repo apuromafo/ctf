@@ -1,3 +1,5 @@
+# Secure GitOps [EASY]
+
 1. No answer needed
 2. 1. Argo CD
    2. declarative

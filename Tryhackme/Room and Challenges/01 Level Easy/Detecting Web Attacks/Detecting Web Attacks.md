@@ -1,3 +1,5 @@
+# Detecting Web Attacks [EASY]
+
 https://tryhackme.com/room/detectingwebattacks
 
 1. No answer needed

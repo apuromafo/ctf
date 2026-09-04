@@ -1,3 +1,5 @@
+# Network Discovery Detection [MEDIUM]
+
 1. No answer needed
 2. Services
 3. 1. log-session-2.csv

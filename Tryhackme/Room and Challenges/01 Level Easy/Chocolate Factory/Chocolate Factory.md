@@ -1,3 +1,5 @@
+# Chocolate Factory [EASY]
+
 1. No answer needed
 2. 1. b'-VkgXhFf6sAEcAwrC6YR-SZbiuSb8ABXeQuvhcGSQzY='
    2. cn7824

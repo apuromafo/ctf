@@ -1,3 +1,5 @@
+# JWT Security [EASY]
+
 1. No answer needed
 2. Authorization: Bearer
 3. 1. Symmetric

@@ -1,3 +1,5 @@
+# Cluster Hardening [MEDIUM]
+
 https://tryhackme.com/room/clusterhardening
 
 1. No answer needed

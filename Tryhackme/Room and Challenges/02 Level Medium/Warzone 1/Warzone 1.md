@@ -1,3 +1,5 @@
+# Warzone 1 [MEDIUM]
+
 1. 1. ET Malware MirrorBlast CnC Activity M3
    2. 172[.]16[.]1[.]102
    3. 169[.]239[.]128[.]11

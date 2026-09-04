@@ -1,4 +1,4 @@
-# Persisting Active Directory - `persistingad`
+# Persisting Active Directory [MEDIUM]
 
 ![Banner](https://assets.tryhackme.com/room-banners/attacking-ad.png)
 

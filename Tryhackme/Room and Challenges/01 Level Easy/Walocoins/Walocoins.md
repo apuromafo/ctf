@@ -1,4 +1,4 @@
-#   WaloCoins
+# Walocoins [EASY]
 
 > Sala para el repaso de conceptos de criptomonedas enseñados por **n3v1l** 🇨🇱.
 
@@ -10,7 +10,7 @@
   <img src="./IMG/room.png" width="250" alt="walocoins">
 </div>
 
-### 📊 Información de la Sala
+### 📊 Información de la Sala / Room Information
 * **Creador:** clarksoft
 * **Fecha de creación:** Hace ~5 años (2020)
 * **Estado:** Sala privada y gratuita.
@@ -20,13 +20,13 @@
 
 > **Nota de Pwn:** Al ser una sala de 2020 sobre cripto-conceptos, asegúrate de revisar bien los scripts o servicios locales que manejen carteras (wallets) o transacciones. Los vectores suelen estar en la lógica de procesamiento de la "moneda".
 
-# 🪙 Solucionario: WaloCoin (TryHackMe)
+## 🪙 Solucionario: WaloCoin (TryHackMe) / Solution: WaloCoin (TryHackMe)
 
 Guía completa de instalación, configuración y respuestas para la sala de WaloCoin.
 
 ---
 
-## Tarea 1: Introducción
+## Tarea 1: Introducción / Task 1: Introduction
 
 **Descripción:** WaloCoin es una criptomoneda educativa creada por **n3v1l** para comunidades de ciberseguridad (L4t1nHTB, HackSpace, etc.), diseñada para aprender sobre el ecosistema cripto sin riesgo real de dinero.
 
@@ -36,7 +36,7 @@ Guía completa de instalación, configuración y respuestas para la sala de Walo
 
 ---
 
-## Tarea 2: Componentes de la Blockchain
+## Tarea 2: Componentes de la Blockchain / Task 2: Blockchain Components
 
 **Descripción:** Para que el ecosistema se mantenga vivo, requiere de tres pilares fundamentales.
 
@@ -46,7 +46,7 @@ Guía completa de instalación, configuración y respuestas para la sala de Walo
 
 ---
 
-## Tarea 3: El Nodo
+## Tarea 3: El Nodo / Task 3: The Node
 
 **Descripción:** Instrucciones para desplegar un nodo en Ubuntu 18.04. Los nodos son réplicas distribuidas de la blockchain.
 
@@ -62,7 +62,7 @@ Guía completa de instalación, configuración y respuestas para la sala de Walo
 
 ---
 
-## Tarea 4: Billetera
+## Tarea 4: Billetera / Task 4: Wallet
 
 **Descripción:** Instalación de la billetera en Windows y archivos críticos de configuración.
 
@@ -73,7 +73,7 @@ Guía completa de instalación, configuración y respuestas para la sala de Walo
 
 ---
 
-## Tarea 5: Operaciones dentro de la Billetera
+## Tarea 5: Operaciones dentro de la Billetera / Task 5: Wallet Operations
 
 **Descripción:** Gestión de direcciones y comandos de consola. Se distinguen dos tipos de direcciones: **Legacy** (empiezan con `W`) y **Bech32** (empiezan con `wlc`).
 
@@ -90,7 +90,7 @@ Guía completa de instalación, configuración y respuestas para la sala de Walo
 
 ---
 
-## Tarea 6: Minero de Criptomoneda
+## Tarea 6: Minero de Criptomoneda / Task 6: Cryptocurrency Miner
 
 **Descripción:** Configuración del minado por CPU utilizando el algoritmo Scrypt.
 
@@ -115,7 +115,7 @@ Aquí tienes la transformación del **Task 7**, que sirve como cierre de la sala
 
 ---
 
-## Tarea 7: Final
+## Tarea 7: Final / Task 7: Finish
 
 **Descripción:** ¡Felicitaciones! Has terminado la introducción a Walocoin. El objetivo es que ahora compartas tus WLC, practiques el minado y te familiarices con los conceptos de blockchain sin riesgo financiero.
 

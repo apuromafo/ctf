@@ -1,3 +1,5 @@
+# IR Philosophy and Ethics [EASY]
+
 1. No answer needed
 2. 1. Isolate and quarantine
    2. Ground zero

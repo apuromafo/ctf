@@ -1,3 +1,5 @@
+# Splunk 3 [MEDIUM]
+
 1. No answer needed
 2. No answer needed
 3. 1. bstoll,btun,splunk_access,web_admin

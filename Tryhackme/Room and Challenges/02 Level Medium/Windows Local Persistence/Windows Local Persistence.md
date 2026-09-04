@@ -1,3 +1,5 @@
+# Windows Local Persistence [MEDIUM]
+
 1. No answer needed
 2. 1. THM{FLAG_BACKED_UP!}
    2. THM{IM_JUST_A_NORMAL_USER}

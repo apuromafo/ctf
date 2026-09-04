@@ -1,3 +1,5 @@
+# CyberHeroes [EASY]
+
 Want to be a part of the elite club of CyberHeroes? Prove your merit by finding a way to log in!
 
 ┌──(kali㉿kali)-[~]
@@ -40,7 +42,6 @@ OS and Service detection performed. Please report any incorrect results at https
 Nmap done: 1 IP address (1 host up) scanned in 42.02 seconds
  
 
-
 view-source:http://10.10.144.202/login.html
 ```
  <script>
@@ -72,9 +73,5 @@ login
 so ```h3ck3rBoi:SuperSecret@12345```
 
 Congrats Hacker, you made it !! Go ahead and nail other challenges as well :D flag{edb0be532c540b1a150c3a7e85d2466e} 
-
-
-
-
 
 1. flag{edb0be532c540b1a150c3a7e85d2466e}

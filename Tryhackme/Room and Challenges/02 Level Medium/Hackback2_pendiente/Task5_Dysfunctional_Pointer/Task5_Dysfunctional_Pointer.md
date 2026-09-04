@@ -1,12 +1,12 @@
-# Task 5 - Dysfunctional Pointer
+# Hackback2_pendiente\Task5_Dysfunctional_Pointer [MEDIUM]
 
 **Nivel:** Easy - Reverse Engineering
 
-## Qué era
+## Qué era / What it was
 
 Un binario que al ejecutarse se caía (segmentation fault). Dejaba el flag escondido dentro, pero se generaba al ejecutarse, no estaba escrito como texto.
 
-## Cómo se resolvió
+## Cómo se resolvió / How it was resolved
 
 1. Se miró el binario por dentro (decompilación).
 2. Se encontró una función `get_flag` que convierte `684dad9f` a mayúsculas y lo imprime.
@@ -14,6 +14,6 @@ Un binario que al ejecutarse se caía (segmentation fault). Dejaba el flag escon
 4. Se corrigió ese puntero (4 bytes) para que apuntara a la función correcta.
 5. Con el parche aplicado, el programa imprime el flag.
 
-## Flag
+## Flag / Bandera
 
 THM{684DAD9F}

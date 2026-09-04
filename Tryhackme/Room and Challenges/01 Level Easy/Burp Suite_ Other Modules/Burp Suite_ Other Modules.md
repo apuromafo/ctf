@@ -1,3 +1,5 @@
+# Burp Suite_ Other Modules [EASY]
+
 1. No answer needed
 2. Smart decode
 3. 1. TGV0J3MgU3RhcnQgU2ltcGxl

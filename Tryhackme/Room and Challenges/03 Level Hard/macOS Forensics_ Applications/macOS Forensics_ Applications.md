@@ -1,3 +1,5 @@
+# macOS Forensics_ Applications [HARD]
+
 1. No answer needed
 2. 1. 2025-04-26 06:41:43
    2. Microsoft_Word_Internal.pkg

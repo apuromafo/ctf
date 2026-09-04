@@ -1,4 +1,4 @@
-#  Side quest 2: Scheme Catcher
+# Scheme Catcher [INSANE]
 
 > **Room URL:** [tryhackme.com/room/sq2-aoc2025-JxiOKUSD9R](https://tryhackme.com/room/sq2-aoc2025-JxiOKUSD9R)
 
@@ -7,7 +7,7 @@
  
 ---
 
-# # Answers
+## # Respuestas / Answers
 
 * **What is the flag hidden in the file?**
 `THM{Welcom3_to_th3_eastmass_pwnland}`
@@ -18,11 +18,9 @@
 * **What is the content of root.txt?**
 `THM{final-boss_defeat3d-yay}`
 
-
-
 ---
 
-## 🏆 Flags & Soluciones
+## 🏆 Flags & Soluciones / Flags & Solutions
 
 | Objetivo | Flag |
 | --- | --- |
@@ -35,7 +33,7 @@
 
  
 
-# tutorial:
+## Tutorial / Tutorial:
 
 * [Jaxafed Blog - Side Quest Two](https://jaxafed.github.io/posts/tryhackme-aoc2025_sidequest_two/)
 * [GitHub Repo - Scheme Catcher (Djalil Ayed)](https://github.com/djalilayed/tryhackme/tree/main/Advent_of_Cyber_Side_Quest_2025/Scheme_Catcher)
@@ -43,9 +41,9 @@
 
 ---
 
-# tuts in youtube:
+## Tutoriales en YouTube / Tutorials on YouTube:
 
-### video
+### Vídeo / Video
 
 **Djalil Ayed: TryHackMe Scheme Catcher - Advent of Cyber Side Quest - Full Walkthrough 2025**
 

@@ -935,3 +935,14 @@ Hopper couldn't shake the memory of how he, only he, made the King's dream a rea
 The compromise of the `TBFC.LOC` domain marks the final stage of the **Hopper’s Origins** challenge. This operation successfully demonstrated the transition from a single web-based foothold to a total forest takeover by exploiting critical misconfigurations in **Active Directory Certificate Services (AD CS)**, **Linked SQL Servers**, and **cross-forest trust boundaries**. These attack vectors highlight the necessity of a defense-in-depth strategy, particularly regarding service account permissions and tiered administrative access.
 
 **Thank you for reading through this walkthrough!** I hope the technical breakdown of these exploitation paths proved helpful for your own learning and security research.
+
+---
+
+## ⚠️ Descargo de Responsabilidad (Disclaimer)
+
+Este contenido se presenta exclusivamente con fines académicos y educativos.
+
+**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
+**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
+**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
+**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.

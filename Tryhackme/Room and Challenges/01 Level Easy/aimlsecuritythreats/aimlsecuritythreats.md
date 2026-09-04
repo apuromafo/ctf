@@ -183,4 +183,14 @@ Al comienzo de esta sala, se señaló que "el conocimiento es poder" y esto es e
 * **Phishing**: Cuando se envían correos electrónicos a uno o varios objetivos fingiendo provenir de una entidad de confianza para engañar a las personas y que proporcionen información sensible.
 * **AI (IA)**: La Inteligencia Artificial es la tecnología que permite a las computadoras y máquinas simular el comportamiento humano, como el aprendizaje y el razonamiento.
 * **ML**: El Aprendizaje Automático (Machine Learning) es el término utilizado para describir los algoritmos y funciones que se utilizan para lograr que las computadoras piensen y actúen de la misma manera que lo hacen los humanos y la naturaleza.
- 
+
+---
+
+## ⚠️ Descargo de Responsabilidad (Disclaimer)
+
+Este contenido se presenta exclusivamente con fines académicos y educativos.
+
+**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
+**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
+**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
+**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.

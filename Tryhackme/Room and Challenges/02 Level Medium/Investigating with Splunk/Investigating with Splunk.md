@@ -1,3 +1,5 @@
+# Investigating with Splunk [MEDIUM]
+
 1. 1. 12256
    2. A1berto
    3. HKLM\SAM\SAM\Domains\Account\Users\Names\A1berto

@@ -1,3 +1,5 @@
+# Hacking with PowerShell [EASY]
+
 1. No answer needed
 2. Get-New
 3. 1. C:\Program Files

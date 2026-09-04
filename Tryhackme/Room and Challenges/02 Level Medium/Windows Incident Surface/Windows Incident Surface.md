@@ -1,3 +1,5 @@
+# Windows Incident Surface [MEDIUM]
+
 1. No answer needed
 2. 1. wevtutil
    2. HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\WDigest

@@ -1,3 +1,5 @@
+# SOC Role in Blue Team [EASY]
+
 1. No answer needed
 2. 1. CISO
    2. Blue Team

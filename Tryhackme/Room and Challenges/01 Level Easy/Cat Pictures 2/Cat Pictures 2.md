@@ -1,3 +1,5 @@
+# Cat Pictures 2 [EASY]
+
 1. No answer needed
 2. 1. 10d916eaea54bb5ebe36b59538146bb5
    2. 5e2cafbbf180351702651c09cd797920

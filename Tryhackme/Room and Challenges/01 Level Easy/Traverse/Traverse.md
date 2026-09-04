@@ -1,3 +1,5 @@
+# Traverse [EASY]
+
 1. 1. HEX
    2. DIRECTORY LISTING IS THE ONLY WAY
    3. email_dump.txt

@@ -1,3 +1,5 @@
+# Advent 2025\Days [N/A]
+
 - Windows Registry -> brain of the OS
 - It stores
     1. System configuration
@@ -11,8 +13,7 @@
 
 - Registry editor -> views registry on a live system; can't safely analyze compromised systems; can't open offline hives
 
-
- ## 🔍 Approach
+ ## 🔍 Enfoque / Approach
 
 First, we learned that the Windows Registry stores configuration values critical to system operation and user activity.
 
@@ -24,10 +25,9 @@ To find the file location we swapped hive to `NT_USER.dat`. We then followed the
 
 We then moved back to the `Software` hive and followed the path `HKLM\Software\Microsoft\Windows\CurrentVersion\Run` which revealed the path (`"C:\Program Files\DroneManager\dronehelper.exe" --background`) that was added so Drone Manager ran on startup.
 
-
 - **Registry explorer**
 
-## Answers: 
+## Respuestas / Answers
 - What application was installed on the dispatch-srv01 before the abnormal activity started? : 
 `DroneManager Updater`
 - What is the full path where the user launched the application (found in question 1) from? : 

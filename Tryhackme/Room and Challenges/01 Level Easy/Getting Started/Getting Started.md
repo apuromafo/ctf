@@ -1,3 +1,5 @@
+# Getting Started [EASY]
+
 1. /test-admin
 2. 1. admin:admin
    2. 3

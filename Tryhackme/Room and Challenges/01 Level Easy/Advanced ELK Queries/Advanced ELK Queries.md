@@ -1,3 +1,5 @@
+# Advanced ELK Queries [EASY]
+
 1. No answer needed
 2. 1. password:Me\&Try\=Hack!
    2. activity:hack*

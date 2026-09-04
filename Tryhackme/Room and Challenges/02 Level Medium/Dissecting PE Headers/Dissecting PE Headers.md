@@ -1,3 +1,5 @@
+# Dissecting PE Headers [MEDIUM]
+
 1. No answer needed
 2. STRUCT
 3. 1. 64

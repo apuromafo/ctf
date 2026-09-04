@@ -1,3 +1,5 @@
+# Threat Hunting_ Pivoting [MEDIUM]
+
 1. No answer needed
 2. 1. backupadm
    2. powershell.exe

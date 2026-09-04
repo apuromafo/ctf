@@ -1,3 +1,4 @@
+# Advent 2025\Days [N/A]
 
 - SCADA (Supervisory Control and Data Acquisition) -> Command centre for industrial operations; bridge human operators and physical machines
 - PLCs (Programmable Logic Controllers) -> brains of automation; read sensor input, execute logic rules, and send commands to actuators
@@ -15,6 +16,6 @@
 - Registers = configuration
 - Coils = switches
 
-## Answers: 
+## Respuestas / Answers
 - What port is commonly used by Modbus TCP? : `502`
 - What's the flag? : `THM{eGgMas0V3r}`

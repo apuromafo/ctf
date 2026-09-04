@@ -1,3 +1,5 @@
+# Intro to SSRF [EASY]
+
 1. 1. Server-Side Request Forgery
    2. Blind
 2. THM{SSRF_MASTER}

@@ -1,3 +1,5 @@
+# Shadow Trace [EASY]
+
 1. No answer needed
 2. 1. 64-bit
    2. b2a88de3e3bcfae4a4b38fa36e884c586b5cb2c2c283e71fba59efdb9ea64bfc

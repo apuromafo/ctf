@@ -1,3 +1,5 @@
+# Junior Security Analyst Intro [EASY]
+
 https://tryhackme.com/room/jrsecanalystintrouxo
 Junior Security Analyst Intro
 Play through a day in the life of a Security Analyst and experience their everyday duties.
@@ -10,7 +12,6 @@ Play through a day in the life of a Security Analyst and experience their everyd
    2. 221.181.185.159
    3. Will Griffin
    4. THM{UNTIL-WE-MEET-AGAIN}
-
 
 2026:
 1. SOC

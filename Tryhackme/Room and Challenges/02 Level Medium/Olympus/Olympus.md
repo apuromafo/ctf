@@ -1,3 +1,5 @@
+# Olympus [MEDIUM]
+
 1. No answer needed
 2. 1. flag{Sm4rt!_k33P_d1gGIng}
    2. flag{Y0u_G0t_TH3_l1ghtN1nG_P0w3R}

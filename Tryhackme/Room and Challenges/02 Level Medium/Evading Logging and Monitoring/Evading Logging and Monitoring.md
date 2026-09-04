@@ -1,3 +1,5 @@
+# Evading Logging and Monitoring [MEDIUM]
+
 1. No answer needed
 2. 1. Controllers
    2. 4726

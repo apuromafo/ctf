@@ -1,4 +1,4 @@
-# Challenge: Team
+# Team [EASY]
 
 ---
 
@@ -10,13 +10,13 @@
 
 ---
 
-## Reconocimiento
+## Reconocimiento / Reconnaissance
 
 Comenzamos ejecutando **nmap**, que mostró los puertos 21 (FTP), 22 (SSH) y 80 (HTTP) abiertos.
 
 Un par de ejecuciones con **Gobuster** y **ffuf** no arrojaron más que un 403 en `/server-status`, lo cual es estándar.
 
-## Revisando 
+## Revisando / Inspecting
 
 Tras una inspección más cercana, el título de la web decía: "If it works, add **team.thm** to your hosts file". Inicialmente pensé que no aportaría nada, pero al añadir la IP y el nombre a `/etc/hosts` y navegar a `http://team.thm`, noté de inmediato que accedía a un sitio web real.
 
@@ -26,7 +26,7 @@ Un compañero realizó un escaneo con **feroxbuster** y obtuvo hits interesantes
 
 En `script.old` encontramos credenciales para el FTP; específicamente un blob grande en base64 que, al ser decodificado, reveló: `ftpuser:T3@m$h@r3`.
 
-## FTP
+## FTP / FTP
 
 Al iniciar sesión vía FTP, localizamos un archivo de texto en `/workshare/New_site.txt` que revelaba que alguien está desarrollando una página para el equipo:
 
@@ -40,13 +40,13 @@ Gyles
 
 ```
 
-##Subdominio
+## Subdominio / Subdomain
 
 Añadimos `dev.team.thm` al archivo hosts. Es claramente un trabajo en progreso, pero parece ser el inicio de algún tipo de **team share** o carpeta compartida.
 
 ¿Podríamos subir archivos a este share para explotar alguna vulnerabilidad o subir una webshell?
 
-## lectura de contenido 
+## Lectura de contenido / Content Reading
 
 No hay webshell, pero encontramos un "parameter-thing-in-the-browser". ¿Podríamos explotar un **LFI (Local File Inclusion)** para leer archivos del servidor directamente? Tras las pruebas, confirmamos que funcionaba. Pudimos leer `/etc/passwd` y también `/etc/ssh/sshd_config`.
 
@@ -107,7 +107,7 @@ Guardamos en `key.pem`, aplicamos `chmod 600 key.pem` y entramos vía SSH:
 
 </details>
 
-## Privilege Escalation
+## Escalada de Privilegios / Privilege Escalation
 
 > Tras probar mil formas de obtener root, el proceso se resume en lo siguiente:
 
@@ -191,7 +191,7 @@ Esperamos un minuto, verificamos la creación de `/tmp/rootbash` y ejecutamos:
 
 </details>
 
-## Conclusión
+## Conclusión / Conclusion
 
 Aprendizajes clave:
 

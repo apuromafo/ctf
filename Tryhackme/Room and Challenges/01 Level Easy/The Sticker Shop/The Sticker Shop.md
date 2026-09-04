@@ -1,1 +1,3 @@
+# The Sticker Shop [EASY]
+
 1. THM{83789a69074f636f64a38879cfcabe8b62305ee6}

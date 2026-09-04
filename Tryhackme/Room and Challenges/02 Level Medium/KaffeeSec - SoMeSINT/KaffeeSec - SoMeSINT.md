@@ -1,3 +1,5 @@
+# KaffeeSec - SoMeSINT [MEDIUM]
+
 1. No answer needed
 2. 1. ks{H}
    2. ks{thomas straussman}

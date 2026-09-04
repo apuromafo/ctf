@@ -1,3 +1,5 @@
+# Squid Game [HARD]
+
 1. Yes
 2. 1. fpetraardella.band/xap_102b-AZ1/704e.php?l=litten4.gas
    2. QdZGP.exe

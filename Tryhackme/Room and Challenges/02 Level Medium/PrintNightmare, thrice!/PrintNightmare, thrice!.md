@@ -1,3 +1,5 @@
+# PrintNightmare, thrice! [MEDIUM]
+
 1. 1. 20.188.56.147
    2. THM-PRINTNIGHT0\rjones
    3. THM-PRINTNIGHT0/gentilguest

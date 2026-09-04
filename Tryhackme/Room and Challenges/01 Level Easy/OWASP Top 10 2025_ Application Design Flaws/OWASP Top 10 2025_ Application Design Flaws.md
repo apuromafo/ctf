@@ -1,4 +1,4 @@
-# OWASP Top 10 2025: Application Design Flaws
+# OWASP Top 10 2025_ Application Design Flaws [EASY]
 
 > Learn about A02, A03, A06, and A10 and how they relate to design flaws in the application.
 
@@ -10,9 +10,7 @@
   <img src="https://tryhackme-images.s3.amazonaws.com/room-icons/61a7523c029d1c004fac97b3-1763120444231" width="250" alt="OWASP Top 10 2025: Application Design Flaws">
 </div>
 
-
-
-#  Answers
+## Respuestas / Answers
 
 1. `No answer needed`
 2. `THM{V3RB0S3_3RR0R_L34K}`

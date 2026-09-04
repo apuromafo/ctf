@@ -1,3 +1,5 @@
+# Hunt Me II_ Typo Squatters [MEDIUM]
+
 1. 1. http://www.7zipp.org/a/7z2301-x64.msi
    2. 206.189.34.218
    3. 2532

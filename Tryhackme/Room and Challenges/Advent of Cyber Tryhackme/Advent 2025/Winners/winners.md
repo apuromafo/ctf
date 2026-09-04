@@ -1,4 +1,4 @@
-# 🏆 Lista de Ganadores AOC 2025
+# Advent 2025\Winners [N/A]
 Total de registros: **2033**
 
 | Foto | Usuario | Premio(s) |

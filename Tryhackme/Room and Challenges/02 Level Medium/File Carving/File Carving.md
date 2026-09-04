@@ -1,3 +1,5 @@
+# File Carving [MEDIUM]
+
 1. No answer needed
 2. 1. FFD8FFE0
    2. 4C00000001140200

@@ -1,16 +1,15 @@
 SOC L1 Alert Reporting
  **Room Link:** https://tryhackme.com/room/socl1alertreporting
 
-
 Aquí tienes el apunte en formato Markdown diseñado para organizar la información y las respuestas de la sala **SOC L1 Alert Reporting**.
 
 ---
 
-# 🛡️ SOC L1: Alert Reporting, Escalation, and Communication
+# socl1alertreporting [EASY]
 
 Este módulo se enfoca en la transición de las alertas de Nivel 1 (L1) a Nivel 2 (L2), cubriendo la documentación, la escalación técnica y los protocolos de comunicación en un SOC.
 
-## 📊 Tarea 2: Alert Funnel
+## 📊 Tarea 2: Embudo de Alertas / Alert Funnel
 
 Conceptos clave sobre el flujo de trabajo tras el triaje inicial.
 
@@ -26,7 +25,7 @@ Conceptos clave sobre el flujo de trabajo tras el triaje inicial.
 
 ---
 
-## 📝 Tarea 3: Reporting Guide
+## 📝 Tarea 3: Guía de Reportes / Reporting Guide
 
 Un buen reporte ahorra tiempo al analista L2 y sirve como registro histórico (los logs crudos expiran, pero las alertas suelen ser permanentes). Se recomienda el enfoque de las **5 Ws**:
 
@@ -45,7 +44,7 @@ Un buen reporte ahorra tiempo al analista L2 y sirve como registro histórico (l
 
 ---
 
-## 🚀 Tarea 4: Escalation Guide
+## 🚀 Tarea 4: Guía de Escalación / Escalation Guide
 
 Se debe escalar si: la alerta indica un ataque mayor, requiere acciones de remediación (aislar host, resetear password), requiere comunicación externa o si el analista L1 no comprende totalmente la alerta.
 
@@ -53,8 +52,6 @@ Se debe escalar si: la alerta indica un ataque mayor, requiere acciones de remed
 1. Escribir el reporte y dar un veredicto.
 2. Cambiar el estado a **In Progress**.
 3. Asignar al **L2 de turno**.
-
-
 
 > **Preguntas de la Tarea:**
 > * **Nombre del analista L2 actual:** `E.Fleming`
@@ -65,7 +62,7 @@ Se debe escalar si: la alerta indica un ataque mayor, requiere acciones de remed
 
 ---
 
-## 📞 Tarea 5: SOC Communication
+## 📞 Tarea 5: Comunicación SOC / SOC Communication
 
 Casos críticos y mejores prácticas de comunicación:
 
@@ -81,7 +78,7 @@ Casos críticos y mejores prácticas de comunicación:
 
 ---
 
-## 🏁 Tarea 6: Conclusion
+## 🏁 Tarea 6: Conclusión / Conclusion
 
 Esta sección resume las competencias clave adquiridas para un analista L1:
 

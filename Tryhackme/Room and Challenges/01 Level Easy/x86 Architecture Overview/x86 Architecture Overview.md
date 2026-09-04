@@ -1,3 +1,5 @@
+# x86 Architecture Overview [EASY]
+
 1. No answer needed
 2. 1. Memory
    2. Registers

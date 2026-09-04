@@ -1,3 +1,5 @@
+# Daily Bugle [HARD]
+
 1. spiderman
 2. 1. 3.7.0
    2. spiderman123

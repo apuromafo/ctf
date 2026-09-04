@@ -1,3 +1,5 @@
+# XSS [EASY]
+
 1. No answer needed
 2. 1. Stored XSS
    2. Reflected XSS

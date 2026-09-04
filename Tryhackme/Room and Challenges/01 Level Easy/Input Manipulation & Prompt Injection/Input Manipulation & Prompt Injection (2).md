@@ -1,3 +1,5 @@
+# Input Manipulation & Prompt Injection [EASY]
+
 1. No answer needed
 2. Leakage
 3. Obfuscation

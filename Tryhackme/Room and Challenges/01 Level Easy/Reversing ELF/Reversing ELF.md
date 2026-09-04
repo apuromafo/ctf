@@ -1,3 +1,5 @@
+# Reversing ELF [EASY]
+
 1. flag{not_that_kind_of_elf}
 2. 1. super_secret_password
    2. flag{if_i_submit_this_flag_then_i_will_get_points}

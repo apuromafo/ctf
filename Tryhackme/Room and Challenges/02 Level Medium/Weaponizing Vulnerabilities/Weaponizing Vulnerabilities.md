@@ -1,3 +1,5 @@
+# Weaponizing Vulnerabilities [MEDIUM]
+
 1. No answer needed
 2. remote exploit
 3. 1. 0-day

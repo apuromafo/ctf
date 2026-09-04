@@ -1,3 +1,5 @@
+# Network Traffic Basics [EASY]
+
 1. No answer needed
 2. DNS tunneling
 3. 1. 10485760

@@ -1,3 +1,5 @@
+# Advent 2025\Days [N/A]
+
 - Splunk: Data processing platform; parses logs into a readable format and allows fast query of logs
 - log sources (source type)
       web_traffic: web connections to and from the web server 
@@ -15,12 +17,11 @@
 - Automated SQLi tools: Havij, sqlmap
 
   
-### Codes
+### Códigos / Codes
 - 504: Successful SQL injection
 - 401, 403, 404: unauthorized response, forbidden, page not found
 
-
-## Answers:
+## Respuestas / Answers:
 - What is the attacker IP found attacking and compromising the web server? : `198.51.100.55`
 - Which day was the peak traffic in the logs? (Format: YYYY-MM-DD) : `2025-10-12`
 - What is the count of Havij user_agent events found in the logs? : `993`

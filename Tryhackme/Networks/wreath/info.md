@@ -1,4 +1,4 @@
-# Wreath - `wreath`
+# Wreath [EASY]
 
 ![Banner](https://assets.tryhackme.com/room-banners/wreath_banner.png)
 

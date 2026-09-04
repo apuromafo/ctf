@@ -1,3 +1,5 @@
+# NanoCherryCTF [MEDIUM]
+
 1. No answer needed
 2. 1. THM{BL4CK_M4I1}
    2. n4n0ch3rry

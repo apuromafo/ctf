@@ -1,3 +1,5 @@
+# Security Operations [EASY]
+
 1. 1. Security Operations Center
    2. 24
 2. Network security monitoring

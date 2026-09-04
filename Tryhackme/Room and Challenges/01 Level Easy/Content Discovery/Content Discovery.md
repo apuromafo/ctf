@@ -1,3 +1,5 @@
+# Content Discovery [EASY]
+
 1. 1. Manually
    2. Automated
    3. OSINT

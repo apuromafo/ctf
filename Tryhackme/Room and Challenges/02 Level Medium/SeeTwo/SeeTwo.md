@@ -1,3 +1,5 @@
+# SeeTwo [MEDIUM]
+
 1. 1. /home/bella/.bash_history
    2. mysql -u root -p'vb0xIkSGbcEKBEi'
    3. toor::0:0:root:/root:/bin/bash

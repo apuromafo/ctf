@@ -1,3 +1,5 @@
+# Crack the hash [EASY]
+
 1. 1. easy
    2. password123
    3. letmein

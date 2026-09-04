@@ -1,4 +1,5 @@
-Wreath
+# Wreath [EASY]
+
 https://tryhackme.com/room/wreath
 
 How many of the first 15000 ports are open on the target?

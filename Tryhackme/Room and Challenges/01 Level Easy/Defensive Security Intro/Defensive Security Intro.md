@@ -1,3 +1,5 @@
+# Defensive Security Intro [EASY]
+
 https://tryhackme.com/room/defensivesecurityintroQR
 
  
@@ -18,8 +20,6 @@ https://tryhackme.com/room/defensivesecurityintroQR
 * Implement rate limiting in the api endpoints
 * Implement WAF rule to block this attack pattern
 * Get the flag `THM{FAKEBANK-SECURED}`
-
-
 
 1. Blue Teaming
 2. Aaliyah

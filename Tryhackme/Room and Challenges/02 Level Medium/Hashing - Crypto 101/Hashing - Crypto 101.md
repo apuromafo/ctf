@@ -1,3 +1,5 @@
+# Hashing - Crypto 101 [MEDIUM]
+
 1. encoding
 2. 1. 16
    2. Nay

@@ -1,3 +1,5 @@
+# TryHack3M_ Bricks Heist [EASY]
+
 1. 1. THM{fl46_650c844110baced87e1606453b93f22a}
    2. nm-inet-dialog
    3. ubuntu.service

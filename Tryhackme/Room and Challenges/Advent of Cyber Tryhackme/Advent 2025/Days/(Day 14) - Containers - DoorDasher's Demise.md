@@ -1,10 +1,12 @@
+# Advent 2025\Days [N/A]
+
 - A **virtual machine** runs on a hypervisor (software that emulates and manages multiple operating systems on one physical host)
 - **Containers** share the host OS kernel, isolating only applications and their dependencies, which makes them lightweight and fast to start
 
 - Docker: build, deploy, and maintain containers; isolate application and use the host OS kernel
 - A **container escape** is a technique that enables code running inside a container to obtain rights or execute on the host kernel (or other containers) beyond its isolated environment (escaping).
 
-## Answers:
+## Respuestas / Answers
 - What exact command lists running Docker containers? : `docker ps`
 - What file is used to define the instructions for building a Docker image? : `Dockerfile`
 - What's the flag? : `THM{DOCKER_ESCAPE_SUCCESS}`

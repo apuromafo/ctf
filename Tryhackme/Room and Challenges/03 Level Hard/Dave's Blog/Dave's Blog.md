@@ -1,3 +1,5 @@
+# Dave's Blog [HARD]
+
 1. 1. THM{SuperSecureAdminPassword123}
    2. THM{5fa1f779d1835367fdcfa4741bebb88a}
    3. THM{993e107fc66844482bb5dd0e4c485d5b}

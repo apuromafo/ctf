@@ -1,6 +1,4 @@
- 
- 
- Apuromafo Tryhackme Profile
+# Apuromafo Tryhackme Profile [INFO]
  
 ***Link*** https://tryhackme.com/api/v2/badges/public-profile?userPublicId=74326 
 
@@ -13,7 +11,7 @@
  Progreso al 08.01.2025 con salas gratuitas (room)
   !["Progreso"](./Progreso/progreso_thm.png)
  
-# Reporte de Gráficos Exportados tipo skillmatrix
+## Reporte de Gráficos Exportados tipo skillmatrix / Exported Charts Report
 
 ## 🟢 Nivel Entry (Entrada)
 ![Entry Foundational](./Skill%20Matrix/skill_matrix_08_01_2026/entry_foundational.png)

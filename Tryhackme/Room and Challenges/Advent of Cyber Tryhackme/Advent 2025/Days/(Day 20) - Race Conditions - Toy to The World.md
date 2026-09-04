@@ -1,3 +1,5 @@
+# Advent 2025\Days [N/A]
+
 - Race condition vulnerability in web applications
 - Race condition happens when
      1. Two or more actions run at the same time
@@ -11,6 +13,6 @@
 
 - Race conditions exploit timing
 
-## Answers: 
+## Respuestas / Answers
 - What is the flag value once the stocks are negative for SleighToy Limited Edition? : `THM WINNER_OF_R@CE007}`
 - Repeat the same steps as were done for ordering the SleighToy Limited Edition. What is the flag value once the stocks are negative for Bunny Plush (Blue)? : `THM{WINNER_OF_Bunny_R@ce]` 

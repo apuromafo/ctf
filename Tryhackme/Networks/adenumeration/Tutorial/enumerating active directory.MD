@@ -1,4 +1,5 @@
-Enumerating Active Directory
+# Enumerating Active Directory [MEDIUM]
+
 https://tryhackme.com/room/adenumeration
 
 answers

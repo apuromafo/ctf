@@ -1,4 +1,4 @@
-# CI/CD and Build Security - `cicdandbuildsecurity`
+# CI/CD and Build Security [MEDIUM]
 
 ![Banner](https://assets.tryhackme.com/room-banners/pipelines.png)
 

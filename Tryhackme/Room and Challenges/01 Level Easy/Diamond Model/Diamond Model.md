@@ -1,3 +1,5 @@
+# Diamond Model [EASY]
+
 1. No answer needed
 2. 1. Adversary Operator
    2. Adversary Customer

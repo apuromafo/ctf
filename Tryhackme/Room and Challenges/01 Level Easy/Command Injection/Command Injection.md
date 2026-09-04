@@ -1,3 +1,5 @@
+# Command Injection [EASY]
+
 1. No answer needed
 2. 1. $title
    2. GET

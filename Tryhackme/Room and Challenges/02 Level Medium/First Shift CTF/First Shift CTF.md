@@ -1,17 +1,17 @@
-# <img src="https://tryhackme-images.s3.amazonaws.com/room-icons/678ecc92c80aa206339f0f23-1765566441707" alt="First Shift CTF Logo" style="vertical-align: middle; height: 50px;" /> First Shift CTF  
+# First Shift CTF [MEDIUM]
 
 ![First Shift CTF Banner](https://tryhackme-images.s3.eu-west-1.amazonaws.com/room-icons/678ecc92c80aa206339f0f23-1765566600342)
 
  
 **Room:**    > [First Shift CTF](https://tryhackme.com/room/first-shift-ctf) 
 
-## 📌 Overview
+## 📌 Overview / Resumen General
 This repository contains the full  solutions for the **First Shift CTF** room on TryHackMe. 
 This challenge simulates a real-world security incident investigation, covering Threat Intelligence, Phishing, EDR analysis, and Lateral Movement.
 
 ---
 
-## 📑 Table of Contents
+## 📑 Table of Contents / Tabla de Contenidos
 * [1. Meet ProbablyFine](#1)
 * [2. Probably Just Fine](#2)
 * [3. Phishing Books](#3)
@@ -23,16 +23,15 @@ This challenge simulates a real-world security incident investigation, covering 
 ---
  
 
-## 🚀 1. Meet ProbablyFine
+## 🚀 1. Conociendo a ProbablyFine / 1. Meet ProbablyFine
 **Task:**    > Initial check-in to the event.
 
 1. **Let's go! Your flag is:**    > **THM{first_shift_check_in!}**  
    > `THM{first_shift_check_in!}`
 
-
 ---
 
-## 🔍 2. Probably Just Fine
+## 🔍 2. Probablemente Solo Fine / 2. Probably Just Fine
 **Focus:**    > Threat Intelligence & Malware Profiling (LummaStealer).
 
 1. **ASN number related to the IP:**
@@ -58,7 +57,7 @@ This challenge simulates a real-world security incident investigation, covering 
 
 ---
 
-## 📧 3. Phishing Books
+## 📧 3. Phishing Books / 3. Phishing Books
 **Focus:**    > Email Analysis & Obfuscation.
 
 1. **Header check explaining filter bypass:**
@@ -88,7 +87,7 @@ This challenge simulates a real-world security incident investigation, covering 
 
 ---
 
-## 🛡️ 4. Portal Drop
+## 🛡️ 4. Portal Drop / 4. Portal Drop
 **Focus:**    > EDR Investigation & Web Exploitation.
 
 1. **IP that initiated the brute force:**
@@ -120,7 +119,7 @@ This challenge simulates a real-world security incident investigation, covering 
 
 ---
 
-## ☣️ 5. Zero Tolerance
+## ☣️ 5. Tolerancia Cero / 5. Zero Tolerance
 **Focus:**    > Beachhead Analysis & Lateral Movement.
 
 1. **Hostname of initial access:**
@@ -154,7 +153,7 @@ This challenge simulates a real-world security incident investigation, covering 
 
 ---
 
-## 💎 6. The Crown Jewel
+## 💎 6. La Joya de la Corona / 6. The Crown Jewel
 **Focus:**    > Network Forensics & PCAP Analysis.
 
 1. **From which internal IP did the suspicious connection originate?**
@@ -182,9 +181,8 @@ This challenge simulates a real-world security incident investigation, covering 
    > `DNS`
 ---
 
-## 🏆 7. Promotion Night
+## 🏆 7. Noche de Promoción / 7. Promotion Night
 **Focus:**    > Final Compromise & AWS Exfiltration.
-
 
 1. **Network share path where ransomware was placed:**
     > `\\DC-01\SYSVOL\gaze.exe`
@@ -282,5 +280,4 @@ index=scenario eventSource=s3.amazonaws.com eventName=GetObject sourceIPAddress=
  
 index=scenario eventSource=s3.amazonaws.com eventName=PutObject sourceIPAddress=152.42.128.207
 | stats count by requestParameters.key
-
 

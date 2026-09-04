@@ -1,3 +1,5 @@
+# Hamlet [MEDIUM]
+
 1. 1. vnsanctified
    2. THM{1_most_mechanical_and_dirty_hand}
    3. THM{2_ophelia_s_grave}

@@ -1,16 +1,16 @@
-# RootMe
+# RootMe [EASY]
 A ctf for beginners, can you root me?
 
 **Room Link:** https://tryhackme.com/room/rrootme
 
  <img src="./IMG/lab.png" width="250" alt="RootMe">
 
-## Task 1 Deploy the machine
+## Tarea 1 Desplegar la máquina / Task 1 Deploy the machine
 
 Deploy the machine
  > `No answer needed`
 
-## Task 2 Reconnaissance
+## Tarea 2 Reconocimiento / Task 2 Reconnaissance
 First, let's get information about the target.
 
  Scan the machine, how many ports are open?
@@ -32,7 +32,7 @@ What is the hidden directory?
  >  `/panel/`
 
  
-## Task 3 Getting a shell
+## Tarea 3 Obtener una shell / Task 3 Getting a shell
 
 Find a form to upload and get a reverse shell, and find the flag.
  
@@ -41,7 +41,7 @@ user.txt
 
  
  
-## Task 4 Privilege escalation
+## Tarea 4 Escalada de privilegios / Task 4 Privilege escalation
 
 Now that we have a shell, let's escalate our privileges to root.
 Answer the questions below
@@ -56,13 +56,9 @@ root.txt
  
 How likely are you to recommend this room to others?
 
-
-
-
-
 #Apuntes
  
-### Escaneo de puertos
+### Escaneo de puertos / Port Scanning
 
 ```shell
 nmap -p- --min-rate 5000 -sV <IP>
@@ -160,8 +156,6 @@ Una vez hecho esto seremos root...
 THM{pr1v1l3g3_3sc4l4t10n}
 ```
 
-
-
 Answers:
 
 1. No answer needed
@@ -174,5 +168,4 @@ Answers:
 4. 1. /usr/bin/python
    2. No answer needed
    3. THM{pr1v1l3g3_3sc4l4t10n}
-
 

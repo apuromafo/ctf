@@ -1,3 +1,5 @@
+# Crack The Hash Level 2 [MEDIUM]
+
 1. No answer needed
 2. 1. No answer needed
    2. RIPEMD-320

@@ -1,3 +1,5 @@
+# CMSpit [MEDIUM]
+
 1. 1. cockpit
    2. 0.11.1
    3. /auth/check

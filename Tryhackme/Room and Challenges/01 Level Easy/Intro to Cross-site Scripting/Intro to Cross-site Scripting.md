@@ -1,3 +1,5 @@
+# Intro to Cross-site Scripting [EASY]
+
 1. Cross-Site Scripting
 2. 1. document.cookie
    2. alert

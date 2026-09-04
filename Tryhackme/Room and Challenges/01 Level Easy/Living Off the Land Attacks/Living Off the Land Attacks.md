@@ -1,3 +1,5 @@
+# Living Off the Land Attacks [EASY]
+
 1. No answer needed
 2. 1. GTFOBins
    2. Sysinternals

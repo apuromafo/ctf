@@ -1,3 +1,5 @@
+# Game Zone [EASY]
+
 1. 1. No answer needed
    2. Agent 47
 2. 1. No answer needed

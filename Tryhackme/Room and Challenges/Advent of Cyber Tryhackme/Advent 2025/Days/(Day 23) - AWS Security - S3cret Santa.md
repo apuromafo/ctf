@@ -1,11 +1,11 @@
+# Advent 2025\Days [N/A]
+
 #Conceptos Fundamentales de AWS
 IAM (Identity and Access Management): Servicio de AWS utilizado para gestionar identidades, controlar quién tiene acceso a qué y definir permisos para los recursos de AWS. Es el núcleo de la seguridad en la nube.
 
 Políticas de IAM (IAM Policies): Documentos escritos en JSON que definen los permisos. En entornos reales, estas políticas suelen terminar siendo excesivamente permisivas (overly permissive), lo que abre vectores para el escalamiento de privilegios o el movimiento lateral.
 
 S3 (Simple Storage Service): El servicio de almacenamiento de objetos de AWS. Es un objetivo común en auditorías debido a configuraciones incorrectas en sus políticas de acceso o ACLs.
-
-
 
 #Comandos de Enumeración de IAM
 `aws iam list-users`: Lista todos los usuarios de IAM presentes en la cuenta. Útil para identificar objetivos potenciales.
@@ -16,7 +16,7 @@ S3 (Simple Storage Service): El servicio de almacenamiento de objetos de AWS. Es
 
 `aws iam list-groups-for-user --user-name sir.carrotbane`: Verifica la pertenencia a grupos del usuario, lo cual es clave para identificar permisos heredados.
 
-## Answers:
+## Respuestas / Answers
 - Run aws sts get-caller-identity. What is the number shown for the "Account" parameter? : 
 `123456789012`
 - What IAM component is used to describe the permissions to be assigned to a user or a group? : `

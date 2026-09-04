@@ -1,3 +1,5 @@
+# SQL Injection Lab [EASY]
+
 1. No answer needed
 2. 1. THM{dccea429d73d4a6b4f117ac64724f460}
    2. THM{356e9de6016b9ac34e02df99a5f755ba}

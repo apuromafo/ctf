@@ -1,3 +1,5 @@
+# Advent 2025\Days [N/A]
+
 - **Splunk**: inverstigate web-based command injection attack
 - Detect suspicious web requests
      1. Search Apache access logs for indicators like cmd.exe, PowerShell, and Invoke-Expression
@@ -8,7 +10,6 @@
 - looking for cmd.exe running whoami -> confirms attacker gained interactive command execution
 - Search for PowerShell using -EncodedCommand, enc, Base64 strings; If no results -> encoded payloads did not successfully execute
 
-
-## Answers: 
+## Respuestas / Answers
 - What is the reconnaissance executable file name? : `whoami.exe`
 - What executable did the attacker attempt to run through the command injection? : `PowerShell.exe`

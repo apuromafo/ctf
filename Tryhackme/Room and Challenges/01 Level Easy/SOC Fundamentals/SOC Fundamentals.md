@@ -1,3 +1,5 @@
+# SOC Fundamentals [EASY]
+
 1. Security Operations Center 
 2. 1. Detection
    2. People, Process, Technology

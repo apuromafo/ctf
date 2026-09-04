@@ -1,3 +1,5 @@
+# Retracted [EASY]
+
 1. No answer needed
 2. 1. C:\Users\Sophie\Desktop\SOPHIE.txt
    2. notepad.exe

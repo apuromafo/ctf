@@ -1,3 +1,5 @@
+# Splunk_ Setting up a SOC Lab [MEDIUM]
+
 1. No answer needed
 2. No answer needed
 3. 8000

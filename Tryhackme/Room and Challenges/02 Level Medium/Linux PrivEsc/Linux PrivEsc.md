@@ -1,3 +1,5 @@
+# Linux PrivEsc [MEDIUM]
+
 1. 1. No answer needed
    2. uid=1000(user) gid=1000(user) groups=1000(user),24(cdrom),25(floppy),29(audio),30(dip),44(video),46(plugdev)
 2. No answer needed

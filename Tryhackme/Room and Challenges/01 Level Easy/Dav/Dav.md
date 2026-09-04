@@ -57,7 +57,6 @@ by Ben "epi" Risher 🤓                 ver: 2.7.0
 200      GET      375l      968w    11321c http://10.10.137.183/index.html
 401      GET       14l       54w      460c http://10.10.137.183/webdav
 
-
 need credentials
 
 https://xforeveryman.blogspot.com/
@@ -73,7 +72,7 @@ Now that we have access, let’s confirm if the server allows us to put files:
 
 ┌──(kali㉿kali)- 
 └─$ cat Note      
-# Branch DBint
+# Dav [EASY]
 
 This branch is being used to test the code with the mysql server. 
                                                                                                          
@@ -88,8 +87,6 @@ This branch is being used to test the code with the mysql server.
 <hr />
 <address>Apache/2.4.18 (Ubuntu) Server at 10.10.137.183 Port 80</address>
 </body></html>
-
-
 
 The file  is successfully uploaded to the server. 
 
@@ -163,9 +160,6 @@ www-data@ubuntu:/home/merlin$ sudo cat /root/root.txt
 sudo cat /root/root.txt
 101101ddc16b0cdf65ba0b8a7af7afa5
 ```
-
-
-
 
 1. 1. 449b40fe93f78a938523b7e4dcd66d2a
    2. 101101ddc16b0cdf65ba0b8a7af7afa5

@@ -1,6 +1,6 @@
-# source https://github.com/djalilayed/tryhackme/
+# Advent 2025\SideQuest\Sidequest\Sidequest3\img_decode [N/A]
 
-## Carrotbane of My Existence Side Quest Access key
+## Clave de acceso a la misión secundaria Carrotbane of My Existence / Carrotbane of My Existence Side Quest Access key
 
 [Carrotbane of My Existence Side Quest Access key -  Full Walkthrough 2025](https://youtu.be/8OQX9d6igKA)
 

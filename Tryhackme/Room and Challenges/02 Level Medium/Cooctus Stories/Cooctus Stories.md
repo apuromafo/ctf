@@ -1,3 +1,5 @@
+# Cooctus Stories [MEDIUM]
+
 1. 1. THM{2dccd1ab3e03990aea77359831c85ca2}
    2. THM{c89f9f4ef264e22001f9a9c3d72992ef}
    3. THM{592d07d6c2b7b3b3e7dc36ea2edbd6f1}

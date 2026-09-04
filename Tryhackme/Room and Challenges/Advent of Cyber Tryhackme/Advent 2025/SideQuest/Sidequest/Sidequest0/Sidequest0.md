@@ -1,16 +1,14 @@
 
-#   Side Quest 0 : Hopper's Origin
+# Advent 2025\SideQuest\Sidequest\Sidequest0 [N/A]
 Hopper's Origin
 > **Room URL:** [ho-aoc2025-yboMoPbnEX](https://tryhackme.com/jr/ho-aoc2025-yboMoPbnEX)
 
 > **Event:** Advent of Cyber 2025 Side Quest
 ---
 
-## 📝 Descripción
-# Hoppers Origins
+## 📝 Descripción / Description
+## Hoppers Origins
 From HopSec Island, Eggsploits whisper through TBFC - Origins of how SOC-mas became EAST-mas.
-
-
 
 ##Hoppers Origins room info
 Room Type  Free Room. Anyone can deploy virtual machines in the room (without being subscribed)!
@@ -18,9 +16,7 @@ Room Type  Free Room. Anyone can deploy virtual machines in the room (without be
 Created by:   am03bam4n
 Created 53 days ago
 
-
-
-# Task 2
+## Tarea 2 / Task 2
 
 Flag Submissions
 Submit your flags below. Note that the flags are in alphabetical order and not the order of compromise.
@@ -136,10 +132,9 @@ Como bien sabemos desde el link de sidequest 1, una vez decodificado el contenid
 **URL:** `https://static-labs.tryhackme.cloud/apps/hoppers-invitation/`
 **Invite Code:** `THM{There.is.no.EASTmas.without.Hopper}`
 
-
 ---
 
-# Hopper's Origin
+## Origen de Hopper / Hopper's Origin
 
 **Access URL: Hopper's Invitation**
 `https://static-labs.tryhackme.cloud/apps/hoppers-invitation/`
@@ -150,7 +145,7 @@ Al ingresar la llave del final de Sidequest 1, se observa un error de CORS, pero
 **Content:**
 `hlRAqw3zFxnrgUw1GZusk+whhQHE0F+g7YjWjoJvpZRSCoDzehjXsEX1wQ6TTlOPyEJ/k+AEiMOxdqywh/86AOmhTaXNyZAvbHUVjfMdTqdzxmLXZJwI5ynI`
 
-### Ejecución del POC (Prueba de Concepto)  
+### Ejecución del POC (Prueba de Concepto) / POC Execution (Proof of Concept)
 
 ```python
 [*] Intentando hackear el acceso...
@@ -171,15 +166,15 @@ https://tryhackme.com/jr/ho-aoc2025-yboMoPbnEX
 
 ---
 
-# #solution to start:
+#solution to start:
 
 `https://tryhackme.com/jr/ho-aoc2025-yboMoPbnEX`
 
 ---
 
-# next steps:
+next steps:
 
-### # TUT Hoppers Origins 01.01.2026
+## TUT Hoppers Origins 01.01.2026
 
 * [0xb0b Gitbook - Hoppers Origins](https://0xb0b.gitbook.io/writeups/tryhackme/2025/advent-of-cyber-25-side-quest/hoppers-origins)
 * [GitHub Invitation Code (Djalil Ayed)](https://github.com/djalilayed/tryhackme/tree/main/Advent_of_Cyber_Side_Quest_2025/Side_Quest_Keys/invitation_code)
@@ -188,16 +183,13 @@ https://tryhackme.com/jr/ho-aoc2025-yboMoPbnEX
 
 ---
 
-# video
+## Video
 
-### YouTube Video Walk Through:
+### Video Walkthrough de YouTube / YouTube Video Walk Through:
 
 * **Invitation Guide:** [Watch Video](https://www.youtube.com/watch?v=guQ3MQmkUTg)
 * **Hoppers Origins - Part 1 Walkthrough:** [Watch Video](https://www.youtube.com/watch?v=r1cUBw-G2kc) (DB // AI.VANCHAT.LOC )
 * **Hoppers Origins - Part 2 Walkthrough:** [Watch Video](https://www.youtube.com/watch?v=T-Hfx8VC7Nk)
-
-
-
 
 Answers Flag  
 DB: user.txt
@@ -283,7 +275,6 @@ Web: root.txt
 
 Answer format: `THM{583d5e19-4e61-47f1-b98e-5ece3b2d41db}`
 
-
 others info  
  ```
 
@@ -319,13 +310,9 @@ password    (for soc bot)
 
 end 
 
-
-
 ``` 
 Hopper couldn't shake the memory of how he, only he, made the King's dream a reality. And after all of that, how did the King repay him? Humiliation. Incarceration. Hopper had always been overjoyed to lead the Red Team Battalion ù too overjoyed, some thought. Multiple anonymous sources reported Hopper for showing "delusions of grandeur" and early signs of going "mad with power."Surely the King would defend him? After everything Hopper had done?What the King did was the furthest thing from that. King Malhare stripped Hopper of his title and "crowned" him the new Court Jester. With no choice but to obey, Hopper was forced to entertain the royal court day after day, month after monthà until one day he failed to contain his anger and snapped back at the King.He was immediately sent to the HopSec Asylum, where he now sits.But as rumours spread that King Malhare finally intends to launch Operation EAST-mas, Hopper's rage ignites anew.He must find a way out.The story continues in this year's Advent of Cyber & SideQuest event!
 ```
-
-
 
 ---
 

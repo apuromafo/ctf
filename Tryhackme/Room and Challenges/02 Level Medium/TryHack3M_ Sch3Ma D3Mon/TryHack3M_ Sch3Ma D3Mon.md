@@ -1,5 +1,6 @@
-https://tryhackme.com/room/sch3mad3mon
+# TryHack3M_ Sch3Ma D3Mon [MEDIUM]
 
+https://tryhackme.com/room/sch3mad3mon
 
 #Task 1 A Public Computer with a VPN
 
@@ -50,8 +51,6 @@ Now that we know which malware is the most widely purchased in this store, we ca
 This ensures that the malware runs without causing actual damage, thus maintaining the illusion of regular operation for the purchasers of this malware. The longer they believe that the malware they purchased works normally, the less chance our modifications will be discovered.
 
 Explore the directory of our target malware. Something there could hint at how to disable its damaging effects.
-
-
 
 What programming language was used to develop the malware?
 

@@ -1,3 +1,5 @@
+# Mouse Trap [EASY]
+
 1. 1. THM{Terry_mouse_2_rce}
    2. THM{Terry_1s_th3_4dm1n_n0w}
    3. THM{Mouse_Trouble_#4344#}

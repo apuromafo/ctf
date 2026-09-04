@@ -1,4 +1,4 @@
-# Red Team Capstone Challenge - `redteamcapstonechallenge`
+# Red Team Capstone Challenge [HARD]
 
 ![Banner](https://tryhackme-images.s3.amazonaws.com/user-uploads/5f04259cf9bf5b57aed2c476/room-content/889794a57c33230c3bec352963d1d7a5.png)
 

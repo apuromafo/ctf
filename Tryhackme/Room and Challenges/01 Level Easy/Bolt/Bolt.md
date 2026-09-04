@@ -1,3 +1,5 @@
+# Bolt [EASY]
+
 1. No answer needed
 2. 1. 8000
    2. bolt

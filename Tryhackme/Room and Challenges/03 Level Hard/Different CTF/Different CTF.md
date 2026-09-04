@@ -1,3 +1,5 @@
+# Different CTF [HARD]
+
 1. 1. 2
    2. /announcements/
 2. 1. THM{343a7e2064a1d992c01ee201c346edff}

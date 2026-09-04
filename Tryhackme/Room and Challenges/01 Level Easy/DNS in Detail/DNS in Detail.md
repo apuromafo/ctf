@@ -1,3 +1,5 @@
+# DNS in Detail [EASY]
+
 1. Domain Name System
 2. 1. 63
    2. _

@@ -1,3 +1,5 @@
+# PrintNightmare [MEDIUM]
+
 1. No answer needed
 2. Services
 3. 1. CVE-2021-34527

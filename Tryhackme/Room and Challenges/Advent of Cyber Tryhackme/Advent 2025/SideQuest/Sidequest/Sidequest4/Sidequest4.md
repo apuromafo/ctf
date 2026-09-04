@@ -1,4 +1,4 @@
-#  Side Quest 4: BreachBlocker Unlocker
+# Advent 2025\SideQuest\Sidequest\Sidequest4 [N/A]
 
 >**Room URL:** [tryhackme.com/room/sq4-aoc2025-32LoZ4zePK](https://tryhackme.com/room/sq4-aoc2025-32LoZ4zePK)
 
@@ -6,17 +6,17 @@
 
 ---
 
-## 📝 Descripción del Desafío
+## 📝 Descripción del Desafío / Challenge Description
 
 Hopper necesita tu ayuda para obtener la **llave final** de la sala del trono. Este reto requiere habilidades avanzadas en diversas áreas de ciberseguridad.
 
-### 🛠️ Tecnologías y Técnicas (Tags)
+### 🛠️ Tecnologías y Técnicas (Tags) / Technologies and Techniques (Tags)
 
 `web` `fuzzing` `reverse-engineering` `python` `timing-attack` `side-channel` `smtp` `email-parsing`
 
 ---
 
-## 🚩 Objetivos (Flags)
+## 🚩 Objetivos (Flags) / Objectives (Flags)
 
 | Objetivo | Formato de Respuesta |
 | --- | --- |
@@ -26,7 +26,7 @@ Hopper necesita tu ayuda para obtener la **llave final** de la sala del trono. E
 
 ---
 
-## 🔑 Credenciales de Acceso
+## 🔑 Credenciales de Acceso / Access Credentials
 
 Para desbloquear y comenzar desde la foto del huevo (*egg photo*):
 
@@ -34,22 +34,19 @@ Para desbloquear y comenzar desde la foto del huevo (*egg photo*):
 
 ---
 
-
-
-### Tutorial 
-
+### Tutorial / Tutorial 
  https://jaxafed.github.io/posts/tryhackme-aoc2025_sidequest_four/
  
  https://github.com/id-root/BreachBlocker-Unlocker
 
  https://github.com/djalilayed/tryhackme/tree/main/Advent_of_Cyber_Side_Quest_2025/BreachBlocker_Unlocker
 
-# Video 
+## Video
 YouTube Video Walk Through  djalilayed :
  https://youtu.be/xINJWj8zcrQ
 
  
-## Solution 
+## Solución / Solution 
  
  What's the CODE_FLAG?
 
@@ -63,7 +60,6 @@ What's the HOPFLIX_FLAG?
 What's the BANK_FLAG?
 
 `THM{neggative_balance}`
-
 
 *Documentación para propósitos educativos y registro de CTF.*
 

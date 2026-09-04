@@ -1,3 +1,5 @@
+# Mother's Secret [EASY]
+
 1. No answer needed
 2. 1. 100375
    2. 937

@@ -1,3 +1,5 @@
+# Windows Event Logs [MEDIUM]
+
 1. No answer needed
 2. 1. No answer needed
    2. 40961

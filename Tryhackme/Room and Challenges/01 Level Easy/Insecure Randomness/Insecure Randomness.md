@@ -1,3 +1,5 @@
+# Insecure Randomness [EASY]
+
 1. No answer needed
 2. 1. entropy
    2. nay

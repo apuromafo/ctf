@@ -1,4 +1,4 @@
-# Security Analyst Level 1 (SAL1) — FAQ
+# Security Analyst Level 1 (SAL1) [INFO]
 
 > **ES/EN** — Guía de la certificación Security Analyst Level 1 (SAL1) de TryHackMe.
 > Guide to TryHackMe's Security Analyst Level 1 (SAL1) certification.
@@ -12,7 +12,7 @@ https://tryhackme.com/resources/blog/creating-sal1
 
 ## Preguntas Frecuentes (FAQ)
 
-### ¿Cuál es el proceso del examen?
+### ¿Cuál es el proceso del examen? / What is the exam process?
 
 El examen consta de tres secciones: **80 preguntas de opción múltiple** (límite de 1 hora), un **Escenario de Simulador SOC** (límite de 2 horas) y un **segundo Escenario de Simulador SOC** (límite de 2 horas). Una vez que comiences, tienes una ventana de **24 horas** para completar el examen completo.
 
@@ -22,7 +22,7 @@ La duración total del examen es de **6 horas** dentro de la ventana de 24 horas
 
 ---
 
-### ¿En qué se diferencia de un certificado de finalización?
+### ¿En qué se diferencia de un certificado de finalización? / How does it differ from a completion certificate?
 
 Cuando completas todas las salas de una ruta, recibes certificados de finalización. La certificación **Security Analyst Level 1 (SAL1)** va más allá; es una certificación profesional de analista de ciberseguridad diseñada para validar tu capacidad de aplicar habilidades en el mundo real.
 
@@ -30,7 +30,7 @@ A diferencia de los certificados estándar, la SAL1 incluye un examen inmersivo 
 
 ---
 
-### ¿Existen requisitos previos?
+### ¿Existen requisitos previos? / Are there prerequisites?
 
 Este es un examen de **nivel inicial**. No hay requisitos previos formales: no se requiere educación previa, certificaciones ni experiencia laboral. Sin embargo, nuestro objetivo es asegurar que quienes aprueben estén realmente listos para trabajar. Para lograrlo, recomendamos una preparación exhaustiva en:
 
@@ -48,25 +48,25 @@ Para los usuarios de TryHackMe, recomendamos completar, como mínimo, las rutas 
 
 ---
 
-### Si repruebo, ¿puedo volver a tomar el examen?
+### Si repruebo, ¿puedo volver a tomar el examen? / If I fail, can I retake the exam?
 
 **¡Sí!** Cada compra de certificación incluye **un intento de recuperación gratuito**. Puedes comenzar tu recuperación tres días después de haber iniciado tu primer intento. Si es necesario, se pueden comprar intentos adicionales.
 
 ---
 
-### ¿Es necesario renovar esta certificación?
+### ¿Es necesario renovar esta certificación? / Is it necessary to renew this certification?
 
 Sí, la certificación es **válida por tres años** y deberá ser renovada. La ciberseguridad evoluciona constantemente, y las certificaciones con vencimiento garantizan que tus conocimientos se mantengan actualizados. Puedes renovarla realizando un examen de recertificación, obteniendo otras certificaciones de TryHackMe (próximamente) o aprendiendo continuamente en la plataforma.
 
 ---
 
-### ¿Por qué esta certificación tiene preguntas de opción múltiple?
+### ¿Por qué esta certificación tiene preguntas de opción múltiple? / Why does this certification have multiple-choice questions?
 
 Introdujimos preguntas de opción múltiple (MCQs) para asegurar que los candidatos estén bien preparados para roles iniciales. Los empleadores enfatizaron la importancia de los **conocimientos fundamentales de computación y redes**, los cuales no siempre se evalúan fácilmente solo con ejercicios prácticos. Las MCQs ayudan a cerrar esa brecha, evaluando conocimientos esenciales que se esperan en las entrevistas de trabajo.
 
 ---
 
-### ¿Cómo manejan el fraude (trampas)?
+### ¿Cómo manejan el fraude (trampas)? / How do they handle fraud (cheating)?
 
 Como empresa de seguridad, nos tomamos muy en serio la prevención del fraude. Hemos implementado múltiples salvaguardas:
 
@@ -79,7 +79,7 @@ Cualquier persona sorprendida haciendo trampa verá su certificación revocada y
 
 ---
 
-### Precios y descuentos
+### Precios y descuentos / Prices and discounts
 
 | Opción | Precio | Incluye |
 | --- | --- | --- |
@@ -111,18 +111,18 @@ https://github.com/Remy-Haidaraly/Remy-Haidaraly.github.io/blob/4d3312a6e54ad18d
   
 ---
 
-## Overview
+## Overview / Resumen
 The **TryHackMe Security Analyst Level 1 (SAL1)** exam is a brand-new hands-on certification designed to test practical cybersecurity skills. In February 2025, TryHackMe announced its launch and offered free exam vouchers to those holding **CompTIA CySA+** or **Blue Team Level 1 (BTL1)**. Naturally, I took advantage of this opportunity, Since I already held the BTL1 Certification.
 
 ---
 
-## Should You Take SAL1?
-### You should take SAL1 if:
+## Should You Take SAL1? / ¿Deberías tomar SAL1?
+### You should take SAL1 if: / Deberías tomar SAL1 si:
 - You want a **hands-on experience** like **CompTIA CySA+** or **BTL1**.
 - You enjoy **learning through practical experience** rather than theoritical.
 - You appreciate **affordable certifications**.
 
-### You should NOT take SAL1 if:
+### You should NOT take SAL1 if: / NO deberías tomar SAL1 si:
 - You’re **only looking to boost your resume**.
 - You want a certification **just to pass HR filters**.
 
@@ -130,10 +130,10 @@ TryHackMe is a well-respected platform, but this certification is **brand new** 
 
 ---
 
-## Preparation Strategy
+## Preparation Strategy / Estrategia de Preparación
 TryHackMe recommends its **Cyber Security 101** and **SOC Level 1** pathways for exam preparation. Due to the limited time available before my free voucher expired (March 30, 2025), I just went with my knowledge from **BTL1**.
 
-### Key Takeaways:
+### Key Takeaways: / Conclusiones clave:
 - **Master Splunk:** It plays a crucial role in the exam.
 - **Prioritize hands-on exercises:** Especially SOC Simulators.
 - **Time management is critical.**
@@ -141,26 +141,26 @@ TryHackMe recommends its **Cyber Security 101** and **SOC Level 1** pathways for
 
 ---
 
-## Exam Breakdown
+## Exam Breakdown / Desglose del Examen
 The **SAL1 exam** consists of three sections, with a maximum score of **1000 points**:
 
 - **200 points** – 80 **multiple-choice questions** (**1 hour**).
 - **400 points** – **Scenario I** (hands-on investigation, **2 hours**).
 - **400 points** – **Scenario II** (hands-on investigation, **2 hours**).
 
-### Tools Provided:
+### Tools Provided: / Herramientas proporcionadas:
 - **Alerts Dashboard**
 - **Splunk** (primary tool for analysis)
 - **Analyst VM** (not heavily utilized, mostly for copying IPs into ‘TryDetectThis’, a TryHackMe fake VirusTotal)
 
-### Exam Tips:
+### Exam Tips: / Consejos para el Examen:
 - **Close all True Positive alerts before the timer expires** – incomplete scenarios earn **zero** points.
 - **Exam instructions are vague** about whether True Positives should be escalated. Over-escalation may cost points.
 - **Multiple-choice questions are straightforward** – if you’ve taken **CompTIA Security+, ISC2 SSCP, or EC-Council CND**, you’ll do fine.
 
 ---
 
-## Reporting Format
+## Reporting Format / Formato de Reporte
 During preparation, I copied a **Documentation demo of exam on how to write report** to streamline my reports:
 
 ```
@@ -189,7 +189,7 @@ Alert description: <Type of attack>
 - **State whether you are escalating the alert, if yes, then justify the reason.**
 ```
 
-### AI Grading Criteria:
+### AI Grading Criteria: / Criterios de Calificación IA:
 1. **Correctly identifying alerts** (True Positive vs. False Positive).
 2. **Providing detailed 5W analysis.**
 3. **Assessing attacker intent accurately.**
@@ -200,23 +200,23 @@ AI **strictly penalizes incorrect escalation choices** but seems to be lenient o
 
 ---
 
-## Exam Experience & Verdict
+## Exam Experience & Verdict / Experiencia del Examen y Veredicto
 One frustration was the **inability to take defensive actions** when detecting attacks in Splunk. While I could **observe** the attack unfolding, I couldn’t **isolate systems or disable compromised accounts**, which felt limiting but makes sense you are just the level 1 SOC. The lab is kind of slow and you do not have to use lot of tool except for splunk.
 
-### Exam Format Flaws:
+### Exam Format Flaws: / Fallas del Formato del Examen:
 - **No scenario details until after the timer starts.**
 - **VM boot-up time counts against your timer.**
 - **Does not allow you to confirm, so you can review all the alerts one final time before the end of each section**
 - **Tip:** Immediately start VMs before reading the scenario.
 
-### Final Thoughts:
+### Final Thoughts: / Reflexiones Finales:
 - **Well-structured exam but seems very basic compared to BTL1.**
 - **Great for SOC aspirants looking for hands-on experience. While BTL1 is focused more on incident response, this is pure SOC Scenario**
 
 
 ---
 
-## Conclusion
+## Conclusion / Conclusión
 Despite its pros and cons, **SAL1 is a solid fun hands-on blue team certification**. Beginners who complete **the relevant TryHackMe pathways** have a strong chance of passing. Upon success, you receive a **certification, Credly badge, and some well-earned bragging rights.**
 
 
@@ -226,7 +226,7 @@ Despite its pros and cons, **SAL1 is a solid fun hands-on blue team certificatio
 
 ---
 
-## Comparativa: SAL1 vs. BTL1
+## Comparativa: SAL1 vs. BTL1 / Comparison: SAL1 vs. BTL1
 
 Si estás dudando entre **SAL1 (Security Analyst Level 1)** y **BTL1 (Blue Team Level 1)**, aquí te comparto mi análisis tras haber cursado ambos:
 
@@ -242,7 +242,7 @@ Si estás dudando entre **SAL1 (Security Analyst Level 1)** y **BTL1 (Blue Team 
 Imagen del certificado (fr)
 ![Demo](./demo/sal1_remy%20haidaraly.png)
 
-## Conclusión
+## Conclusión / Conclusion
 
 La certificación **SAL1** es una excelente puerta de entrada al mundo de la defensa activa. Te capacita específicamente para:
 

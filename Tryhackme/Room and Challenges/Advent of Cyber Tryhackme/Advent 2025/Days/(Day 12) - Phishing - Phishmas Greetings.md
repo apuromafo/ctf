@@ -1,3 +1,5 @@
+# Advent 2025\Days [N/A]
+
 - You can spot impersonation attempts by looking to see if the sender's email matches the internal domain or the standard email structure of the company
 - Social engineering in phishing
 - **Typosquatting** is when an attacker registers a common misspelling of an organisation's domain
@@ -9,7 +11,7 @@
     2.  DKIM: Adds a digital signature to prove the message wasn’t changed and really came from that domain.
     3.  DMARC: Uses SPF and DKIM to decide what to do if something looks fake (for example, send it to spam or block it).
 
-## Answers:
+## Respuestas / Answers
 - Classify the 1st email, what's the flag? : `THM{yougotnumber1-keep-it-going}`
 - Classify the 2nd email. What's the flag? : `THM{nmumber2-was-not-tha-thard!}`
 - Classify the 3rd email. What's the flag? : `THM{Impersonation-is-areal-thing-keepIt}`

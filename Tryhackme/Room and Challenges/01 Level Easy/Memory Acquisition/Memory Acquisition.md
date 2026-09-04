@@ -1,3 +1,5 @@
+# Memory Acquisition [EASY]
+
 1. No answer needed
 2. 1. hiberfil.sys
    2. gcore

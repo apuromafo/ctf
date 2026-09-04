@@ -1,3 +1,5 @@
+# Windows Command Line [EASY]
+
 1. cmd.exe
 2. 1. 10.0.20348.2655
    2. WINSRV2022-CORE

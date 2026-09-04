@@ -1,4 +1,4 @@
-# Bandit - `bandit`
+# Bandit [HARD]
 
 ![Banner](https://tryhackme-images.s3.amazonaws.com/user-uploads/5ed5961c6276df568891c3ea/room-content/3de813de08870491b232d4fe5b4542f5.png)
 

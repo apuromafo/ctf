@@ -1,3 +1,5 @@
+# Mayhem [MEDIUM]
+
 1. 1. S-1-5-21-679395392-3966376528-1349639417-1103
    2. fe80::e134:1b0c:c8d5:3020%6
    3. THM{HavOc_C2_DeCRypTing_is_Fun_Fun_FUN}

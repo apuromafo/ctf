@@ -1,3 +1,5 @@
+# Recovery [MEDIUM]
+
 1. 1. THM{d8b5c89061ed767547a782e0f9b0b0fe}
    2. THM{4c3e355694574cb182ca3057a685509d}
    3. THM{72f8fe5fd968b5817f67acecdc701e52}

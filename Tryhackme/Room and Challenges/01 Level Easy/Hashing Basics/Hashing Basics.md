@@ -1,3 +1,5 @@
+# Hashing Basics [EASY]
+
 1. No answer needed
 2. 1. 77148c6f605a8df855f2b764bcc3be749d7db814f5f79134d2aa539a64b61f02
    2. 16

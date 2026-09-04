@@ -1,3 +1,5 @@
+# Linux_ Local Enumeration [EASY]
+
 1. No answer needed
 2. perl -e 'exec "/bin/bash";'
 3. 1. /home/user/.ssh/id_rsa

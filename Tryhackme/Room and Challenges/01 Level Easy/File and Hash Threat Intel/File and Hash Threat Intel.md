@@ -1,3 +1,5 @@
+# File and Hash Threat Intel [EASY]
+
 1. No answer needed
 2. payroll.pdf, Double extensions
 3. 1. 2672b6688d7b32a90f9153d2ff607d6801e6cbde61f509ed36d0450745998d58

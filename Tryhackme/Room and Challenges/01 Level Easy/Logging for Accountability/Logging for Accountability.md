@@ -1,3 +1,5 @@
+# Logging for Accountability [EASY]
+
 1. No answer needed
 2. non-repudiation
 3. 1. search head

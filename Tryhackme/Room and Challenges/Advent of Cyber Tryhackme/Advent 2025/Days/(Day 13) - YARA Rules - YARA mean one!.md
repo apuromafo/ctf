@@ -1,3 +1,5 @@
+# Advent 2025\Days [N/A]
+
 - YARA is a tool built to identify and classify malware by searching for unique patterns, the digital fingerprints left behind by attackers
 
 - When to use YARA
@@ -21,8 +23,7 @@
     1. `-r` - Allows YARA to scan directories recursively and follow symlinks
     2. `-s` - Prints the strings found within files that match the rule
 
-
-## Answers: 
+## Respuestas / Answers
 - How many images contain the string TBFC? : `5`
 - What regex would you use to match a string that begins with TBFC: followed by one or more alphanumeric ASCII characters? : `/TBFC:[A-Za-z0-9]+/`
 - What is the message sent by McSkidy? : `Find me in HopSec Island`

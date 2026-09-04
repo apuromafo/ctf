@@ -1,3 +1,5 @@
+# Security Principles [EASY]
+
 1. No answer needed
 2. THM{CIA_TRIAD}
 3. 1. Disclosure

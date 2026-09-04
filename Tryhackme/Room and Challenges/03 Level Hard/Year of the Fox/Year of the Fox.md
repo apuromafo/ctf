@@ -1,3 +1,5 @@
+# Year of the Fox [HARD]
+
 1. 1. THM{Nzg2ZWQwYWUwN2UwOTU3NDY5ZjVmYTYw}
    2. THM{Njg3NWZhNDBjMmNlMzNkMGZmMDBhYjhk}
    3. THM{ODM3NTdkMDljYmM4ZjdhZWFhY2VjY2Fk}

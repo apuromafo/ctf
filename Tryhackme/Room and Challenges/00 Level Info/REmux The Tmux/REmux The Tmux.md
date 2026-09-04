@@ -1,3 +1,5 @@
+# REmux The Tmux [INFO]
+
 1. No answer needed
 2. 1. nay
    2. tmux new -s thm

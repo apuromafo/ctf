@@ -1,5 +1,6 @@
-https://tryhackme.com/room/bashscripting
+# Bash Scripting [EASY]
 
+https://tryhackme.com/room/bashscripting
 
 1. No answer needed
 2. 1. #

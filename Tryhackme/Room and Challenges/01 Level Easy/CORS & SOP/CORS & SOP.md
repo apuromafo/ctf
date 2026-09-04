@@ -1,3 +1,5 @@
+# CORS & SOP [EASY]
+
 1. No answer needed
 2. Same-origin Policy
 3. Access-Control-Allow-Origin

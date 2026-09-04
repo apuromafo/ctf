@@ -1,3 +1,5 @@
+# Hacking Hadoop [HARD]
+
 1. No answer needed
 2. 1. Primary NameNode
    2. Edge Node

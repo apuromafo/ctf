@@ -5,9 +5,9 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-def _load_env():
+def _load_env(base_dir=BASE_DIR):
     env = {}
-    for directory in (BASE_DIR, os.path.dirname(BASE_DIR)):
+    for directory in (base_dir, os.path.dirname(base_dir)):
         path = os.path.join(directory, ".env")
         if not os.path.isfile(path):
             continue

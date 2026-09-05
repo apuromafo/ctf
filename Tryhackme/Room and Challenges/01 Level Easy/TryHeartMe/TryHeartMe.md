@@ -1,11 +1,11 @@
-# CupidBot [EASY]
+# TryHeartMe [EASY]
 
 ### Información de la Sala / Room Information
 
 * **Dificultad / Difficulty:** EASY
 * **Tipo / Type:** CTF
-* **Slug:** `lafb2026e6`
-* **Link:** https://tryhackme.com/room/lafb2026e6
+* **Slug:** `lafb2026e5`
+* **Link:** https://tryhackme.com/room/lafb2026e5
 * **Sección / Section:** 01 Level Easy
 * **Fuente / Source:** (pendiente de investigación)
 

@@ -1,5 +1,4 @@
-
-# Advent 2025\SideQuest\Sidequest\Sidequest0 [N/A]
+# Advent 2025\SideQuest\Sidequest0 [N/A]
 Hopper's Origin
 > **Room URL:** [ho-aoc2025-yboMoPbnEX](https://tryhackme.com/jr/ho-aoc2025-yboMoPbnEX)
 

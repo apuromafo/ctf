@@ -1,4 +1,4 @@
-# Advent 2025\SideQuest\Sidequest\Sidequest1 [N/A]
+# Advent 2025\SideQuest\Sidequest1 [N/A]
 
 > **Room URL:** [tryhackme.com/room/sq1-aoc2025-FzPnrt2SAu](https://tryhackme.com/room/sq1-aoc2025-FzPnrt2SAu)
 

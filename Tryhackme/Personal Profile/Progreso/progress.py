@@ -1,11 +1,31 @@
 import requests
 import matplotlib.pyplot as plt
 import json
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+def _load_env():
+    env = {}
+    for directory in (BASE_DIR, os.path.dirname(BASE_DIR)):
+        path = os.path.join(directory, ".env")
+        if not os.path.isfile(path):
+            continue
+        with open(path, encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if not line or line.startswith("#") or "=" not in line:
+                    continue
+                key, _, value = line.partition("=")
+                env[key.strip()] = value.strip().strip('"').strip("'")
+    return env
+
+ENV = _load_env()
 
 # --- CONFIGURACIÓN ---
 USUARIO = "apuromafo"
-# Asegúrate de que esta cookie sea válida, suelen expirar cada 24h aprox.
-SESSION_COOKIE = ''
+# La cookie se lee del '.env' (Personal Profile/.env). Suelen expirar cada 24h aprox.
+SESSION_COOKIE = ENV.get("THM_CONNECT_SID", "")
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
@@ -81,8 +101,10 @@ for i in range(0, len(room_codes), batch_size):
     batch_progress = data.get('data', {}).get('roomProgress', [])
     progress_list.extend(batch_progress)
 
-if not progress_list:
-    print("No se encontró información de progreso. Revisa tu cookie 'connect.sid'.")
+if not SESSION_COOKIE:
+    print("No se encontró la cookie. Define THM_CONNECT_SID en 'Personal Profile/.env'.")
+elif not progress_list:
+    print("No se encontró información de progreso. Revisa tu cookie 'connect.sid' en 'Personal Profile/.env'.")
 else:
     # Procesamiento de estadísticas
     total = len(progress_list)

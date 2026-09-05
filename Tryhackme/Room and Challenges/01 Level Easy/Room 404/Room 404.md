@@ -1,11 +1,11 @@
-# CupidBot [EASY]
+# Room 404 [EASY]
 
 ### Información de la Sala / Room Information
 
 * **Dificultad / Difficulty:** EASY
 * **Tipo / Type:** CTF
-* **Slug:** `lafb2026e6`
-* **Link:** https://tryhackme.com/room/lafb2026e6
+* **Slug:** `hh-room404-804573bf`
+* **Link:** https://tryhackme.com/room/hh-room404-804573bf
 * **Sección / Section:** 01 Level Easy
 * **Fuente / Source:** (pendiente de investigación)
 

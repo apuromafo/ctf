@@ -1,11 +1,11 @@
-# CupidBot [EASY]
+# Fools Mate [EASY]
 
 ### Información de la Sala / Room Information
 
 * **Dificultad / Difficulty:** EASY
 * **Tipo / Type:** CTF
-* **Slug:** `lafb2026e6`
-* **Link:** https://tryhackme.com/room/lafb2026e6
+* **Slug:** `foolsmate`
+* **Link:** https://tryhackme.com/room/foolsmate
 * **Sección / Section:** 01 Level Easy
 * **Fuente / Source:** (pendiente de investigación)
 

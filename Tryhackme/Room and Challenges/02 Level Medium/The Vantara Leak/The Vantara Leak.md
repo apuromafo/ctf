@@ -1,12 +1,12 @@
-# CupidBot [EASY]
+# The Vantara Leak [MEDIUM]
 
 ### Información de la Sala / Room Information
 
-* **Dificultad / Difficulty:** EASY
+* **Dificultad / Difficulty:** MEDIUM
 * **Tipo / Type:** CTF
-* **Slug:** `lafb2026e6`
-* **Link:** https://tryhackme.com/room/lafb2026e6
-* **Sección / Section:** 01 Level Easy
+* **Slug:** `thevantaraleak`
+* **Link:** https://tryhackme.com/room/thevantaraleak
+* **Sección / Section:** 02 Level Medium
 * **Fuente / Source:** (pendiente de investigación)
 
 ## Solucionario de Tareas / Task Solutions

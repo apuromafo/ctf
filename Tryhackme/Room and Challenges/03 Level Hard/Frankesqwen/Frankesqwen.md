@@ -1,12 +1,12 @@
-# CupidBot [EASY]
+# Frankesqwen [HARD]
 
 ### Información de la Sala / Room Information
 
-* **Dificultad / Difficulty:** EASY
+* **Dificultad / Difficulty:** HARD
 * **Tipo / Type:** CTF
-* **Slug:** `lafb2026e6`
-* **Link:** https://tryhackme.com/room/lafb2026e6
-* **Sección / Section:** 01 Level Easy
+* **Slug:** `frankesqwen`
+* **Link:** https://tryhackme.com/room/frankesqwen
+* **Sección / Section:** 03 Level Hard
 * **Fuente / Source:** (pendiente de investigación)
 
 ## Solucionario de Tareas / Task Solutions

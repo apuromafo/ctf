@@ -1,5 +1,4 @@
-
-# Advent 2025\SideQuest\Sidequest\Sidequest3 [N/A]
+# Advent 2025\SideQuest\Sidequest3 [N/A]
 
 > **Room URL:** [sq3-aoc2025-bk3vvbcgiT](https://tryhackme.com/room/sq3-aoc2025-bk3vvbcgiT)
 > **Event:** Advent of Cyber 2025 Side Quest

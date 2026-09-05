@@ -1,8 +1,13 @@
-# Advent 2025\SideQuest\Sidequest1 [N/A]
+# The Great Disappearing Act [HARD]
 
-> **Room URL:** [tryhackme.com/room/sq1-aoc2025-FzPnrt2SAu](https://tryhackme.com/room/sq1-aoc2025-FzPnrt2SAu)
+### Información de la Sala / Room Information
 
-> **Event:** Advent of Cyber 2025 Side Quest
+* **Dificultad / Difficulty:** HARD
+* **Tipo / Type:** CTF
+* **Slug:** `sq1-aoc2025-FzPnrt2SAu`
+* **Link:** https://tryhackme.com/room/sq1-aoc2025-FzPnrt2SAu
+* **Sección / Section:** Advent of Cyber 2025 — Side Quest
+* **Fuente / Source:** Walkthrough propio basado en la sala oficial
 
 ## 📝 Descripción del Desafío / Challenge Description
 

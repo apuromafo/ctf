@@ -1,8 +1,13 @@
-# Advent 2025\SideQuest\Sidequest4 [N/A]
+# BreachBlocker Unlocker [HARD]
 
->**Room URL:** [tryhackme.com/room/sq4-aoc2025-32LoZ4zePK](https://tryhackme.com/room/sq4-aoc2025-32LoZ4zePK)
+### Información de la Sala / Room Information
 
-> **Event:** Advent of Cyber 2025 Side Quest
+* **Dificultad / Difficulty:** HARD
+* **Tipo / Type:** CTF
+* **Slug:** `sq4-aoc2025-32LoZ4zePK`
+* **Link:** https://tryhackme.com/room/sq4-aoc2025-32LoZ4zePK
+* **Sección / Section:** Advent of Cyber 2025 — Side Quest
+* **Fuente / Source:** Walkthrough propio + [jaxafed — Side Quest Four](https://jaxafed.github.io/posts/tryhackme-aoc2025_sidequest_four/)
 
 ---
 

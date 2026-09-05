@@ -1,7 +1,13 @@
-# Advent 2025\SideQuest\Sidequest3 [N/A]
+# Carrotbane of My Existence [MEDIUM]
 
-> **Room URL:** [sq3-aoc2025-bk3vvbcgiT](https://tryhackme.com/room/sq3-aoc2025-bk3vvbcgiT)
-> **Event:** Advent of Cyber 2025 Side Quest
+### Información de la Sala / Room Information
+
+* **Dificultad / Difficulty:** MEDIUM
+* **Tipo / Type:** CTF
+* **Slug:** `sq3-aoc2025-bk3vvbcgiT`
+* **Link:** https://tryhackme.com/room/sq3-aoc2025-bk3vvbcgiT
+* **Sección / Section:** Advent of Cyber 2025 — Side Quest
+* **Fuente / Source:** Walkthrough propio + [0xb0b — GitBook](https://0xb0b.gitbook.io/writeups/tryhackme/2025/advent-of-cyber-25-side-quest/carrotbane-of-my-existence)
 
 ---
 

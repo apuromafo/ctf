@@ -88,44 +88,47 @@ def fetch_progress_data(room_codes):
         return {}
 
 # --- EJECUCIÓN PRINCIPAL ---
-exclude_windows = False
-rooms = fetch_free_rooms(exclude_windows)
-room_codes = [r['code'] for r in rooms]
+if __name__ == "__main__":
+    if not SESSION_COOKIE:
+        print("No se encontró la cookie. Define THM_CONNECT_SID en 'Personal Profile/.env'.")
+        raise SystemExit(1)
 
-# Fragmentamos la petición de progreso si son demasiadas salas (evita URL too long)
-progress_list = []
-batch_size = 30 
-for i in range(0, len(room_codes), batch_size):
-    batch = room_codes[i:i + batch_size]
-    data = fetch_progress_data(batch)
-    batch_progress = data.get('data', {}).get('roomProgress', [])
-    progress_list.extend(batch_progress)
+    exclude_windows = False
+    rooms = fetch_free_rooms(exclude_windows)
+    room_codes = [r['code'] for r in rooms]
 
-if not SESSION_COOKIE:
-    print("No se encontró la cookie. Define THM_CONNECT_SID en 'Personal Profile/.env'.")
-elif not progress_list:
-    print("No se encontró información de progreso. Revisa tu cookie 'connect.sid' en 'Personal Profile/.env'.")
-else:
-    # Procesamiento de estadísticas
-    total = len(progress_list)
-    completed = sum(1 for r in progress_list if r['progressPercentage'] == 100)
-    in_progress = sum(1 for r in progress_list if 0 < r['progressPercentage'] < 100)
-    not_started = total - completed - in_progress
+    # Fragmentamos la petición de progreso si son demasiadas salas (evita URL too long)
+    progress_list = []
+    batch_size = 30
+    for i in range(0, len(room_codes), batch_size):
+        batch = room_codes[i:i + batch_size]
+        data = fetch_progress_data(batch)
+        batch_progress = data.get('data', {}).get('roomProgress', [])
+        progress_list.extend(batch_progress)
 
-    # Gráfico
-    labels = [f'Completado ({completed})', f'En Progreso ({in_progress})', f'Sin Empezar ({not_started})']
-    sizes = [completed, in_progress, not_started]
-    colors = ['#4caf50', '#ffeb3b', '#f44336']
+    if not progress_list:
+        print("No se encontró información de progreso. Revisa tu cookie 'connect.sid' en 'Personal Profile/.env'.")
+    else:
+        # Procesamiento de estadísticas
+        total = len(progress_list)
+        completed = sum(1 for r in progress_list if r['progressPercentage'] == 100)
+        in_progress = sum(1 for r in progress_list if 0 < r['progressPercentage'] < 100)
+        not_started = total - completed - in_progress
 
-    plt.figure(figsize=(10, 7))
-    plt.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=140)
-    plt.title(f'Progreso de Salas Gratuitas de {USUARIO}')
-    plt.axis('equal')
-    
-    plt.savefig('progreso_thm.png')
-    print("Gráfico guardado como 'progreso_thm.png'")
-    plt.show()
+        # Gráfico
+        labels = [f'Completado ({completed})', f'En Progreso ({in_progress})', f'Sin Empezar ({not_started})']
+        sizes = [completed, in_progress, not_started]
+        colors = ['#4caf50', '#ffeb3b', '#f44336']
 
-    # Guardar JSON
-    with open('progress_data_sorted.json', 'w') as f:
-        json.dump(progress_list, f, indent=4)
+        plt.figure(figsize=(10, 7))
+        plt.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=140)
+        plt.title(f'Progreso de Salas Gratuitas de {USUARIO}')
+        plt.axis('equal')
+
+        plt.savefig('progreso_thm.png')
+        print("Gráfico guardado como 'progreso_thm.png'")
+        plt.show()
+
+        # Guardar JSON
+        with open('progress_data_sorted.json', 'w') as f:
+            json.dump(progress_list, f, indent=4)

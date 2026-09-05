@@ -10,9 +10,28 @@ usuario = "apuromafo"  # Cambia este valor según necesites
 # Se recomienda usar Session para persistir cookies y headers
 session = requests.Session()
 
-# Cookies mínimas necesarias para autenticación
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+def _load_env():
+    env = {}
+    for directory in (BASE_DIR, os.path.dirname(BASE_DIR)):
+        path = os.path.join(directory, ".env")
+        if not os.path.isfile(path):
+            continue
+        with open(path, encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if not line or line.startswith("#") or "=" not in line:
+                    continue
+                key, _, value = line.partition("=")
+                env[key.strip()] = value.strip().strip('"').strip("'")
+    return env
+
+ENV = _load_env()
+
+# Cookies mínimas necesarias para autenticación (se leen de 'Personal Profile/.env')
 COOKIES=({
-    'connect.sid': '',
+    'connect.sid': ENV.get("THM_CONNECT_SID", ""),
 })
 
 # Headers globales (el Referer se actualiza dinámicamente)

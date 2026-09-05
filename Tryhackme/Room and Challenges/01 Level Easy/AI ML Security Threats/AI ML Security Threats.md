@@ -161,7 +161,7 @@ SYN flood timeout = 20
 Ephemeral port range size = 16384
 ```
 
-**Flag:** `thm{REDACTED}` (la fuente marca la flag como redactada)
+**Flag:** `THM{443/60/16384}`
 
 ---
 

@@ -1,8 +1,13 @@
-# Advent 2025\SideQuest\Sidequest2 [N/A]
+# Scheme Catcher [INSANE]
 
-> **Room URL:** [tryhackme.com/room/sq2-aoc2025-JxiOKUSD9R](https://tryhackme.com/room/sq2-aoc2025-JxiOKUSD9R)
+### Información de la Sala / Room Information
 
-> **Event:** Advent of Cyber 2025 Side Quest
+* **Dificultad / Difficulty:** INSANE
+* **Tipo / Type:** CTF
+* **Slug:** `sq2-aoc2025-JxiOKUSD9R`
+* **Link:** https://tryhackme.com/room/sq2-aoc2025-JxiOKUSD9R
+* **Sección / Section:** Advent of Cyber 2025 — Side Quest
+* **Fuente / Source:** Walkthrough propio + [jaxafed — Side Quest Two](https://jaxafed.github.io/posts/tryhackme-aoc2025_sidequest_two/)
  
  ## 📝 Descripción del Desafío / Challenge Description
  

@@ -1,4 +1,17 @@
-# Advent 2025\Days [N/A]
+# IDOR - Santa’s Little IDOR [EASY]
+
+### Información de la Sala / Room Information
+
+| Propiedad / Property | Valor / Value |
+| --- | --- |
+| **Nombre / Name** | IDOR - Santa’s Little IDOR |
+| **Evento / Event** | Advent of Cyber 2025 — Día 05 |
+| **Sala / Room URL** | https://tryhackme.com/room/adventofcyber25 |
+| **Dificultad / Difficulty** | Easy |
+| **Descripción / Description** | Día 05 del calendario AoC 2025 (IDOR - Santa’s Little IDOR). Solución/respuestas del reto diario. |
+
+---
+
 
 - IDOR(insecure direct object reference): type of vulnerability
 - web server should check to ensure you are allowed to view data (ex: `https://awesome.website.thm/TrackPackage?packageID=1001`, you would just have to change the ID to get information that ur not supposed to be able to access)

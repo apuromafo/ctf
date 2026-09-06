@@ -1,4 +1,17 @@
-# Advent 2025\Days [N/A]
+# SOC Alert Triaging - Tinsel Triage [EASY]
+
+### Información de la Sala / Room Information
+
+| Propiedad / Property | Valor / Value |
+| --- | --- |
+| **Nombre / Name** | SOC Alert Triaging - Tinsel Triage |
+| **Evento / Event** | Advent of Cyber 2025 — Día 10 |
+| **Sala / Room URL** | https://tryhackme.com/room/adventofcyber25 |
+| **Dificultad / Difficulty** | Easy |
+| **Descripción / Description** | Día 10 del calendario AoC 2025 (SOC Alert Triaging - Tinsel Triage). Solución/respuestas del reto diario. |
+
+---
+
 
 - Microsoft Azure 
 <img width="993" height="408" alt="Screenshot 2025-12-22 at 1 07 37 PM" src="https://github.com/user-attachments/assets/28b57a26-2388-4ea4-9da0-73b823e3407a" />

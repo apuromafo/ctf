@@ -1,4 +1,17 @@
-# Advent 2025\Days [N/A]
+# Phishing - Phishmas Greetings [EASY]
+
+### Información de la Sala / Room Information
+
+| Propiedad / Property | Valor / Value |
+| --- | --- |
+| **Nombre / Name** | Phishing - Phishmas Greetings |
+| **Evento / Event** | Advent of Cyber 2025 — Día 12 |
+| **Sala / Room URL** | https://tryhackme.com/room/adventofcyber25 |
+| **Dificultad / Difficulty** | Easy |
+| **Descripción / Description** | Día 12 del calendario AoC 2025 (Phishing - Phishmas Greetings). Solución/respuestas del reto diario. |
+
+---
+
 
 - You can spot impersonation attempts by looking to see if the sender's email matches the internal domain or the standard email structure of the company
 - Social engineering in phishing

@@ -1,4 +1,17 @@
-# Advent 2025\Days [N/A]
+# Splunk Basics - Did you SIEM_ [EASY]
+
+### Información de la Sala / Room Information
+
+| Propiedad / Property | Valor / Value |
+| --- | --- |
+| **Nombre / Name** | Splunk Basics - Did you SIEM_ |
+| **Evento / Event** | Advent of Cyber 2025 — Día 03 |
+| **Sala / Room URL** | https://tryhackme.com/room/adventofcyber25 |
+| **Dificultad / Difficulty** | Easy |
+| **Descripción / Description** | Día 03 del calendario AoC 2025 (Splunk Basics - Did you SIEM_). Solución/respuestas del reto diario. |
+
+---
+
 
 - Splunk: Data processing platform; parses logs into a readable format and allows fast query of logs
 - log sources (source type)

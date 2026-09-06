@@ -1,4 +1,17 @@
-# Advent 2025\Days [N/A]
+# Network Discovery - Scan-ta Clause [EASY]
+
+### Información de la Sala / Room Information
+
+| Propiedad / Property | Valor / Value |
+| --- | --- |
+| **Nombre / Name** | Network Discovery - Scan-ta Clause |
+| **Evento / Event** | Advent of Cyber 2025 — Día 07 |
+| **Sala / Room URL** | https://tryhackme.com/room/adventofcyber25 |
+| **Dificultad / Difficulty** | Easy |
+| **Descripción / Description** | Día 07 del calendario AoC 2025 (Network Discovery - Scan-ta Clause). Solución/respuestas del reto diario. |
+
+---
+
 
 - nmap: port scanning
 - 22 -> default SSH port

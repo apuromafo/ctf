@@ -1,4 +1,17 @@
-# Advent 2025\Days [N/A]
+# CyberChef - Hoperation Save McSkidy [EASY]
+
+### Información de la Sala / Room Information
+
+| Propiedad / Property | Valor / Value |
+| --- | --- |
+| **Nombre / Name** | CyberChef - Hoperation Save McSkidy |
+| **Evento / Event** | Advent of Cyber 2025 — Día 17 |
+| **Sala / Room URL** | https://tryhackme.com/room/adventofcyber25 |
+| **Dificultad / Difficulty** | Easy |
+| **Descripción / Description** | Día 17 del calendario AoC 2025 (CyberChef - Hoperation Save McSkidy). Solución/respuestas del reto diario. |
+
+---
+
 
 <img width="733" height="404" alt="Screenshot 2025-12-23 at 6 46 44 PM" src="https://github.com/user-attachments/assets/91b5c4f8-9fad-409e-b41a-6959c94c7eeb" />
 

@@ -1,4 +1,17 @@
-# Advent 2025\Days [N/A]
+# XSS - Merry XSSMas [EASY]
+
+### Información de la Sala / Room Information
+
+| Propiedad / Property | Valor / Value |
+| --- | --- |
+| **Nombre / Name** | XSS - Merry XSSMas |
+| **Evento / Event** | Advent of Cyber 2025 — Día 11 |
+| **Sala / Room URL** | https://tryhackme.com/room/adventofcyber25 |
+| **Dificultad / Difficulty** | Easy |
+| **Descripción / Description** | Día 11 del calendario AoC 2025 (XSS - Merry XSSMas). Solución/respuestas del reto diario. |
+
+---
+
 
 - **XSS** is a web application vulnerability that lets attackers inject malicious code (usually JavaScript) into input fields that reflect content viewed by other users
      1. Reflected XSS: when the injection is immediately projected in a response; exploited via phishing; targets individual victims 

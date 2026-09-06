@@ -1,4 +1,17 @@
-# Advent 2025\Days [N/A]
+# Final AoC Challenge [EASY]
+
+### Información de la Sala / Room Information
+
+| Propiedad / Property | Valor / Value |
+| --- | --- |
+| **Nombre / Name** | Final AoC Challenge |
+| **Evento / Event** | Advent of Cyber 2025 — Día 25 |
+| **Sala / Room URL** | https://tryhackme.com/room/adventofcyber25 |
+| **Dificultad / Difficulty** | Easy |
+| **Descripción / Description** | Día 25 del calendario AoC 2025 (Final AoC Challenge). Solución/respuestas del reto diario. |
+
+---
+
 
 (Day 25) - Final AoC Challenge
 

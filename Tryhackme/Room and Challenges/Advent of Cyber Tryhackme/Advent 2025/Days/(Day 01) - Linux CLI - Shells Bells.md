@@ -1,4 +1,17 @@
-# Advent 2025\Days [N/A]
+# Linux CLI - Shells Bells [EASY]
+
+### Información de la Sala / Room Information
+
+| Propiedad / Property | Valor / Value |
+| --- | --- |
+| **Nombre / Name** | Linux CLI - Shells Bells |
+| **Evento / Event** | Advent of Cyber 2025 — Día 01 |
+| **Sala / Room URL** | https://tryhackme.com/room/adventofcyber25 |
+| **Dificultad / Difficulty** | Easy |
+| **Descripción / Description** | Día 01 del calendario AoC 2025 (Linux CLI - Shells Bells). Solución/respuestas del reto diario. |
+
+---
+
 
 - `ls` is used to list the contents of the current directory
 - `cat` will display the contents of the file mentioned after it

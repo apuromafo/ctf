@@ -1,4 +1,17 @@
-# Advent 2025\Days [N/A]
+# Modbus - Claus for Concern [EASY]
+
+### Información de la Sala / Room Information
+
+| Propiedad / Property | Valor / Value |
+| --- | --- |
+| **Nombre / Name** | Modbus - Claus for Concern |
+| **Evento / Event** | Advent of Cyber 2025 — Día 19 |
+| **Sala / Room URL** | https://tryhackme.com/room/adventofcyber25 |
+| **Dificultad / Difficulty** | Easy |
+| **Descripción / Description** | Día 19 del calendario AoC 2025 (Modbus - Claus for Concern). Solución/respuestas del reto diario. |
+
+---
+
 
 - SCADA (Supervisory Control and Data Acquisition) -> Command centre for industrial operations; bridge human operators and physical machines
 - PLCs (Programmable Logic Controllers) -> brains of automation; read sensor input, execute logic rules, and send commands to actuators

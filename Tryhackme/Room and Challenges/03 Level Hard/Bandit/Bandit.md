@@ -3,7 +3,7 @@
 ### Información de la Sala / Room Information
 
 * **Dificultad / Difficulty:** HARD
-* **Tipo / Type:** CTF (Free)
+* **Tipo / Type:** CTF (Premium)
 * **Slug:** `bandit`
 * **Link:** https://tryhackme.com/room/bandit
 * **Sección / Section:** 03 Level Hard

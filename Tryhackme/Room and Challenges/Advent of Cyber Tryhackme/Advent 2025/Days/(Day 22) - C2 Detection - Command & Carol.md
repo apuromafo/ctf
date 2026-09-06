@@ -1,4 +1,17 @@
-# Advent 2025\Days [N/A]
+# C2 Detection - Command & Carol [EASY]
+
+### Información de la Sala / Room Information
+
+| Propiedad / Property | Valor / Value |
+| --- | --- |
+| **Nombre / Name** | C2 Detection - Command & Carol |
+| **Evento / Event** | Advent of Cyber 2025 — Día 22 |
+| **Sala / Room URL** | https://tryhackme.com/room/adventofcyber25 |
+| **Dificultad / Difficulty** | Easy |
+| **Descripción / Description** | Día 22 del calendario AoC 2025 (C2 Detection - Command & Carol). Solución/respuestas del reto diario. |
+
+---
+
 
 - C2 -> Command and Control traffic 
 - analyzing large PCAP using **Zeek** and **RITA**

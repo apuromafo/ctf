@@ -1,4 +1,17 @@
-# Advent 2025\Days [N/A]
+# Advent of Cyber Prep Track (Warm-Up) [EASY]
+
+### Información de la Sala / Room Information
+
+| Propiedad / Property | Valor / Value |
+| --- | --- |
+| **Nombre / Name** | Advent of Cyber Prep Track (Warm-Up) |
+| **Evento / Event** | Advent of Cyber 2025 — Día 00 |
+| **Sala / Room URL** | https://tryhackme.com/room/adventofcyber25 |
+| **Dificultad / Difficulty** | Easy |
+| **Descripción / Description** | Día 00 del calendario AoC 2025 (Advent of Cyber Prep Track (Warm-Up)). Solución/respuestas del reto diario. |
+
+---
+
 make a random password
 `flag : THM{StrongStart}`
 

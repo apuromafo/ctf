@@ -1,4 +1,17 @@
-# Advent 2025\Days [N/A]
+# AI in Security - old sAInt nick [EASY]
+
+### Información de la Sala / Room Information
+
+| Propiedad / Property | Valor / Value |
+| --- | --- |
+| **Nombre / Name** | AI in Security - old sAInt nick |
+| **Evento / Event** | Advent of Cyber 2025 — Día 04 |
+| **Sala / Room URL** | https://tryhackme.com/room/adventofcyber25 |
+| **Dificultad / Difficulty** | Easy |
+| **Descripción / Description** | Día 04 del calendario AoC 2025 (AI in Security - old sAInt nick). Solución/respuestas del reto diario. |
+
+---
+
 
 <img width="1024" height="311" alt="Screenshot 2025-12-10 at 6 11 28 PM" src="https://github.com/user-attachments/assets/1c79089f-e538-455a-94a5-477b2da630c5" />
 

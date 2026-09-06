@@ -1,4 +1,17 @@
-# Advent 2025\Days [N/A]
+# YARA Rules - YARA mean one! [EASY]
+
+### Información de la Sala / Room Information
+
+| Propiedad / Property | Valor / Value |
+| --- | --- |
+| **Nombre / Name** | YARA Rules - YARA mean one! |
+| **Evento / Event** | Advent of Cyber 2025 — Día 13 |
+| **Sala / Room URL** | https://tryhackme.com/room/adventofcyber25 |
+| **Dificultad / Difficulty** | Easy |
+| **Descripción / Description** | Día 13 del calendario AoC 2025 (YARA Rules - YARA mean one!). Solución/respuestas del reto diario. |
+
+---
+
 
 - YARA is a tool built to identify and classify malware by searching for unique patterns, the digital fingerprints left behind by attackers
 

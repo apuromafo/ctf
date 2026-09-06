@@ -1,4 +1,17 @@
-# Advent 2025\Days [N/A]
+# Obfuscation - The Egg Shell File [EASY]
+
+### Información de la Sala / Room Information
+
+| Propiedad / Property | Valor / Value |
+| --- | --- |
+| **Nombre / Name** | Obfuscation - The Egg Shell File |
+| **Evento / Event** | Advent of Cyber 2025 — Día 18 |
+| **Sala / Room URL** | https://tryhackme.com/room/adventofcyber25 |
+| **Dificultad / Difficulty** | Easy |
+| **Descripción / Description** | Día 18 del calendario AoC 2025 (Obfuscation - The Egg Shell File). Solución/respuestas del reto diario. |
+
+---
+
 
 - Obfuscation -> makes data hard to read or analyze; allows attackers to evade detection, delay analysis, Bypass simple keyword-based security tools
 - Basic Obfuscation Techniques (Use cyberChef to decode)

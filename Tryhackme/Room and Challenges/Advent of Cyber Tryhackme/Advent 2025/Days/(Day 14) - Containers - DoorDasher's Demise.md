@@ -1,4 +1,17 @@
-# Advent 2025\Days [N/A]
+# Containers - DoorDasher's Demise [EASY]
+
+### Información de la Sala / Room Information
+
+| Propiedad / Property | Valor / Value |
+| --- | --- |
+| **Nombre / Name** | Containers - DoorDasher's Demise |
+| **Evento / Event** | Advent of Cyber 2025 — Día 14 |
+| **Sala / Room URL** | https://tryhackme.com/room/adventofcyber25 |
+| **Dificultad / Difficulty** | Easy |
+| **Descripción / Description** | Día 14 del calendario AoC 2025 (Containers - DoorDasher's Demise). Solución/respuestas del reto diario. |
+
+---
+
 
 - A **virtual machine** runs on a hypervisor (software that emulates and manages multiple operating systems on one physical host)
 - **Containers** share the host OS kernel, isolating only applications and their dependencies, which makes them lightweight and fast to start

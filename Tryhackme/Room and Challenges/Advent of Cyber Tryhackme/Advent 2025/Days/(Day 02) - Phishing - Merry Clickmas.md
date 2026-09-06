@@ -1,4 +1,17 @@
-# Advent 2025\Days [N/A]
+# Phishing - Merry Clickmas [EASY]
+
+### Información de la Sala / Room Information
+
+| Propiedad / Property | Valor / Value |
+| --- | --- |
+| **Nombre / Name** | Phishing - Merry Clickmas |
+| **Evento / Event** | Advent of Cyber 2025 — Día 02 |
+| **Sala / Room URL** | https://tryhackme.com/room/adventofcyber25 |
+| **Dificultad / Difficulty** | Easy |
+| **Descripción / Description** | Día 02 del calendario AoC 2025 (Phishing - Merry Clickmas). Solución/respuestas del reto diario. |
+
+---
+
 
 - Ways of phishing
   smishing: short text messages 

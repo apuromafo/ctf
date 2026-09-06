@@ -1,4 +1,17 @@
-# Advent 2025\Days [N/A]
+# Race Conditions - Toy to The World [EASY]
+
+### Información de la Sala / Room Information
+
+| Propiedad / Property | Valor / Value |
+| --- | --- |
+| **Nombre / Name** | Race Conditions - Toy to The World |
+| **Evento / Event** | Advent of Cyber 2025 — Día 20 |
+| **Sala / Room URL** | https://tryhackme.com/room/adventofcyber25 |
+| **Dificultad / Difficulty** | Easy |
+| **Descripción / Description** | Día 20 del calendario AoC 2025 (Race Conditions - Toy to The World). Solución/respuestas del reto diario. |
+
+---
+
 
 - Race condition vulnerability in web applications
 - Race condition happens when

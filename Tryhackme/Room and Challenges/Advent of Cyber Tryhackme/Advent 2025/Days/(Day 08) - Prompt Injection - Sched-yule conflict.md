@@ -1,4 +1,17 @@
-# Advent 2025\Days [N/A]
+# Prompt Injection - Sched-yule conflict [EASY]
+
+### Información de la Sala / Room Information
+
+| Propiedad / Property | Valor / Value |
+| --- | --- |
+| **Nombre / Name** | Prompt Injection - Sched-yule conflict |
+| **Evento / Event** | Advent of Cyber 2025 — Día 08 |
+| **Sala / Room URL** | https://tryhackme.com/room/adventofcyber25 |
+| **Dificultad / Difficulty** | Easy |
+| **Descripción / Description** | Día 08 del calendario AoC 2025 (Prompt Injection - Sched-yule conflict). Solución/respuestas del reto diario. |
+
+---
+
 
 Prompt Injection – Sched-yule conflict
 

@@ -1,4 +1,17 @@
-# Advent 2025\Days [N/A]
+# Passwords - A Cracking Christmas [EASY]
+
+### Información de la Sala / Room Information
+
+| Propiedad / Property | Valor / Value |
+| --- | --- |
+| **Nombre / Name** | Passwords - A Cracking Christmas |
+| **Evento / Event** | Advent of Cyber 2025 — Día 09 |
+| **Sala / Room URL** | https://tryhackme.com/room/adventofcyber25 |
+| **Dificultad / Difficulty** | Easy |
+| **Descripción / Description** | Día 09 del calendario AoC 2025 (Passwords - A Cracking Christmas). Solución/respuestas del reto diario. |
+
+---
+
 
 - Ways of guessing the password that protects a file
      1. Dictionary Attacks: Use a predefined list of potential passwords (AKA wordlist); useful in case of weak or common passwords

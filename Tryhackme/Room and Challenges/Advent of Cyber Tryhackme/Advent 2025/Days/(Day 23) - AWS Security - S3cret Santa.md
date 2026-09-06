@@ -1,4 +1,17 @@
-# Advent 2025\Days [N/A]
+# AWS Security - S3cret Santa [EASY]
+
+### Información de la Sala / Room Information
+
+| Propiedad / Property | Valor / Value |
+| --- | --- |
+| **Nombre / Name** | AWS Security - S3cret Santa |
+| **Evento / Event** | Advent of Cyber 2025 — Día 23 |
+| **Sala / Room URL** | https://tryhackme.com/room/adventofcyber25 |
+| **Dificultad / Difficulty** | Easy |
+| **Descripción / Description** | Día 23 del calendario AoC 2025 (AWS Security - S3cret Santa). Solución/respuestas del reto diario. |
+
+---
+
 
 #Conceptos Fundamentales de AWS
 IAM (Identity and Access Management): Servicio de AWS utilizado para gestionar identidades, controlar quién tiene acceso a qué y definir permisos para los recursos de AWS. Es el núcleo de la seguridad en la nube.

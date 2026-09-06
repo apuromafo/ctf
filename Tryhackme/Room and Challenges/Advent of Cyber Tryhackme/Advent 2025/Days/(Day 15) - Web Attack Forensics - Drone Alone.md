@@ -1,4 +1,17 @@
-# Advent 2025\Days [N/A]
+# Web Attack Forensics - Drone Alone [EASY]
+
+### Información de la Sala / Room Information
+
+| Propiedad / Property | Valor / Value |
+| --- | --- |
+| **Nombre / Name** | Web Attack Forensics - Drone Alone |
+| **Evento / Event** | Advent of Cyber 2025 — Día 15 |
+| **Sala / Room URL** | https://tryhackme.com/room/adventofcyber25 |
+| **Dificultad / Difficulty** | Easy |
+| **Descripción / Description** | Día 15 del calendario AoC 2025 (Web Attack Forensics - Drone Alone). Solución/respuestas del reto diario. |
+
+---
+
 
 - **Splunk**: inverstigate web-based command injection attack
 - Detect suspicious web requests

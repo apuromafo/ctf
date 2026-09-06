@@ -1,8 +1,17 @@
-# Advent 2025\SideQuest\Sidequest0 [N/A]
-Hopper's Origin
-> **Room URL:** [ho-aoc2025-yboMoPbnEX](https://tryhackme.com/jr/ho-aoc2025-yboMoPbnEX)
+# Hopper's Origins [INSANE]
 
-> **Event:** Advent of Cyber 2025 Side Quest
+### Información de la Sala / Room Information
+
+* **Dificultad / Difficulty:** INSANE
+* **Tipo / Type:** CTF (Free Room)
+* **Slug:** `ho-aoc2025-yboMoPbnEX`
+* **Link (Sala / Room):** https://tryhackme.com/room/ho-aoc2025-yboMoPbnEX
+* **Invitación / Invite (Link `/jr/`):** https://tryhackme.com/jr/ho-aoc2025-yboMoPbnEX
+* **Sección / Section:** Advent of Cyber 2025 — Side Quest
+* **Fuente / Source:** Walkthrough propio basado en la sala oficial (creada por `am03bam4n`)
+
+> **ES:** Acceso **por invitación** (link `/jr/`): sin él la sala no se abre — el link normal de sala muestra "privada". Se conservan ambos links (Sala `/room/` + Invitación `/jr/`).
+> **EN:** Access is **invite-only** (`/jr/` link): without it the room cannot be opened — the normal room link shows "private". Both links kept (Room `/room/` + Invite `/jr/`).
 ---
 
 ## 📝 Descripción / Description

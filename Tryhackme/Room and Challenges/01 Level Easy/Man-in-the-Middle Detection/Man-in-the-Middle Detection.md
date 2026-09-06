@@ -1,4 +1,4 @@
-# Man-in-the-Middle Detection [MEDIUM]
+# Man-in-the-Middle Detection [EASY]
 
 1. No answer needed
 2. No answer needed

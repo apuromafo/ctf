@@ -1,12 +1,12 @@
-# TryWinMe: Think Cyber Monopoly [EASY]
+# TryWinMe: Think Cyber Monopoly [INFO]
 
 ### Información de la Sala / Room Information
 
-* **Dificultad / Difficulty:** EASY
+* **Dificultad / Difficulty:** INFO
 * **Tipo / Type:** Walkthrough
 * **Slug:** `trywinme`
 * **Link:** https://tryhackme.com/room/trywinme
-* **Sección / Section:** 01 Level Easy
+* **Sección / Section:** 00 Level Info
 * **Fuente / Source:** Medium (suschillxettri021), Hashnode (jebitok), LinkedIn (mkfih3r), CourseHive
 
 ## Solucionario de Tareas / Task Solutions

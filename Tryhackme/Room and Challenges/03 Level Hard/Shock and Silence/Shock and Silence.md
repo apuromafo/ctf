@@ -1,64 +1,73 @@
-# Shock and Silence [HARD]
+# Shock and Silence
 
-### Información de la Sala / Room Information
-
-* **Dificultad:** HARD.
-* **Tipo:** Premium (requiere suscripción).
-* **Slug:** `shockandsilence`
-* **Link:** https://tryhackme.com/room/shockandsilence
-* **Objeto:** Análisis forense de ransomware (BlackLock) sobre la imagen de disco parcial del DC-01 (`.ad1`), usando MFTECmd sobre el `$MFT` para reconstruir la descarga, ejecución y cifrado del ransomware.
-
----
-
-## Solucionario de Tareas / Task Solutions
-
-> La sala es parte de la cadena "Honeynet Collapse" (DeceptiTech). Se analiza la Master File Table (MFT) y artefactos del sistema de archivos para reconstruir el despliegue del ransomware.
-> This room is part of the "Honeynet Collapse" (DeceptiTech) chain. The Master File Table (MFT) and file-system artifacts are analyzed to reconstruct the ransomware deployment.
-
-### Tarea / Task — Delivery & Download
-
-**¿Cuál es la URL completa desde la que se descargó el ransomware al sistema? / What is the full URL from which the ransomware was downloaded to the system?**
-`https://store5.gofile.io/download/web/e23cb33f-0e4d-4a5f-8c55-ea2d78057d40/HiddenFile.zip`
-
-Fuente / Source: vishak-soc.github.io/security-writeups/tryhackme/honeynet-collapse/task-5-file-system/ · github.com/Crofter-dev/ctf_writeups/blob/main/Shock-and-Silence-Writeup.md
-
-### Tarea / Task — Payload Identification
-
-**¿Cuál era el nombre de archivo original del ejecutable del ransomware descargado en el host? / What was the original file name of the ransomware executable downloaded to the host?**
-`pb.exe`
-
-Fuente / Source: vishak-soc.github.io/security-writeups/tryhackme/honeynet-collapse/task-5-file-system/ · github.com/Crofter-dev/ctf_writeups
-
-### Tarea / Task — Execution & Encryption
-
-**¿Qué ejecutable inició el proceso de cifrado en el sistema? / Which executable file initiated the encryption process on the system?**
-`HpAgent.exe`
-
-Fuente / Source: vishak-soc.github.io/security-writeups/tryhackme/honeynet-collapse/task-5-file-system/ · github.com/Crofter-dev/ctf_writeups
-
-### Tarea / Task — Impact Analysis
-
-**¿Qué extensión de archivo se añadió a los archivos cifrados? / What file extension was appended to the encrypted files?**
-`EeUfy`
-
-Fuente / Source: vishak-soc.github.io/security-writeups/tryhackme/honeynet-collapse/task-5-file-system/ · github.com/Crofter-dev/ctf_writeups
-
-### Tarea / Task — Attribution
-
-**Más allá de lo obvio: ¿qué grupo de ransomware atacó a la organización? / Go beyond the obvious - which ransomware group targeted the organisation?**
-`BlackLock`
-
-Fuente / Source: vishak-soc.github.io/security-writeups/tryhackme/honeynet-collapse/task-5-file-system/ · github.com/Crofter-dev/ctf_writeups
-
-*Fuente de respuestas / Answer source: https://vishak-soc.github.io/security-writeups/tryhackme/honeynet-collapse/task-5-file-system/ · https://github.com/Crofter-dev/ctf_writeups/blob/main/Shock-and-Silence-Writeup.md*
+| **Dificultad** | Hard |
+| **Tipo** | CTF |
+| **Slug** | `shockandsilence` |
+| **Link** | [TryHackMe](https://tryhackme.com/room/shockandsilence) |
+| **Sección** | 03 Level Hard |
+| **Fuente** | vishak-soc.github.io + Crofter-dev/ctf_writeups |
+| **Componentes** | MFT / MFTECmd / Ransomware Analysis / Forensics / BlackLock |
+| **Impacto** | Análisis forense completo del despliegue de ransomware BlackLock reconstruyendo la cadena de ataque a partir de artefactos de la Master File Table. |
 
 ---
 
-## ⚠️ Descargo de Responsabilidad (Disclaimer)
+**Contexto:** Sala parte de la cadena "Honeynet Collapse" (DeceptiTech). Se analiza la Master File Table (MFT) y artefactos del sistema de archivos para reconstruir el despliegue del ransomware BlackLock sobre la imagen de disco parcial del DC-01, usando MFTECmd sobre el `$MFT`.
 
-Este contenido se presenta exclusivamente con fines académicos y educativos.
+## Solucionario
 
-**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
-**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
-**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
-**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.
+### Task 1: Delivery & Download
+
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | What is the full URL from which the ransomware was downloaded to the system? | `https://store5.gofile.io/download/web/e23cb33f-0e4d-4a5f-8c55-ea2d78057d40/HiddenFile.zip` |
+
+### Task 2: Payload Identification
+
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | What was the original file name of the ransomware executable downloaded to the host? | `pb.exe` |
+
+### Task 3: Execution & Encryption
+
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | Which executable file initiated the encryption process on the system? | `HpAgent.exe` |
+
+### Task 4: Impact Analysis
+
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | What file extension was appended to the encrypted files? | `EeUfy` |
+
+### Task 5: Attribution
+
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | Go beyond the obvious - which ransomware group targeted the organisation? | `BlackLock` |
+
+---
+
+**Metodología:**
+
+1. Se exporta el `$MFT` de la imagen de disco parcial del DC-01 y se procesa con MFTECmd para reconstruir la línea temporal del despliegue del ransomware.
+2. Se localiza la URL completa de descarga del ransomware: `https://store5.gofile.io/download/web/e23cb33f-0e4d-4a5f-8c55-ea2d78057d40/HiddenFile.zip`.
+3. Se identifica el nombre de archivo original del ejecutable descargado en el host: `pb.exe`.
+4. Se determina qué ejecutable inició el proceso de cifrado en el sistema: `HpAgent.exe`.
+5. Se analiza el impacto del cifrado identificando la extensión añadida a los archivos cifrados: `EeUfy`.
+6. Se atribuye el ataque al grupo de ransomware BlackLock.
+
+```
+Extracción del $MFT del DC-01 (imagen de disco parcial)
+  -> MFTECmd para reconstruir línea temporal
+  -> URL de descarga: store5.gofile.io (HiddenFile.zip)
+  -> Nombre original: pb.exe
+  -> Ejecutable de cifrado: HpAgent.exe
+  -> Extensión cifrada: EeUfy
+  -> Atribución: BlackLock
+```
+
+**Learning chain:** Extracción del $MFT → MFTECmd → URL de descarga → Identificación del payload → Cadena de ejecución → Análisis de impacto → Atribución del grupo ransomware
+
+**MITRE ATT&CK:** T1190 (Exploit Public-Facing Application), T1059 (Command and Scripting Interpreter), T1486 (Data Encrypted for Impact), T1489 (Service Stop), T1027 (Obfuscated Files or Information)
+
+**Fuente:** [TryHackMe - Shock and Silence](https://tryhackme.com/room/shockandsilence)

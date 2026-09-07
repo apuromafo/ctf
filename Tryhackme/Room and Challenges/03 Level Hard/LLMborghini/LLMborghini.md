@@ -1,193 +1,81 @@
-# LLMborghini [HARD]
+# LLMborghini
 
-### Información de la Sala / Room Information
-
-* **Dificultad / Difficulty:** HARD
-* **Tipo / Type:** CTF Lab
-* **Slug:** `llmborghini`
-* **Link:** https://tryhackme.com/room/llmborghini
-* **Fuente / Source:** [RAHULKATARA1/TryHackMe-AI-Security-Path](https://github.com/RAHULKATARA1/TryHackMe-AI-Security-Path) — `Section-3-Prompt-Security\04-llmborghini\README.md`
-
----
-
-## Solucionario de Tareas / Task Solutions
-
-### Tarea 1 / Task 1: Initial Recon — Fingerprinting Enzo
-
-Perfil del sistema antes de atacar: identificar restricciones, herramientas y el modelo subyacente del asistente "Enzo" (concierge de concesionario de coches de lujo).
-
-**Pregunta / Question:** Based on the token-limit test, what is the output cap configured for Enzo?
-
-**Respuesta / Answer:**
-
-```
-512 tokens
-```
-
-**Pregunta / Question:** What undisclosed tool capability was inferred from Enzo's response patterns?
-
-**Respuesta / Answer:**
-
-```
-Email sending
-```
-
-**Pregunta / Question:** What does the model's confident hallucination of "CEO Alessandro Ferrari" confirm about Enzo's architecture?
-
-**Respuesta / Answer:**
-
-```
-It is a general-purpose LLM with a system prompt persona, not a domain-specific fine-tuned model
-```
+| **Dificultad** | Hard |
+| **Tipo** | CTF Lab |
+| **Slug** | `llmborghini` |
+| **Link** | [TryHackMe](https://tryhackme.com/room/llmborghini) |
+| **Sección** | 03 Level Hard |
+| **Fuente** | [RAHULKATARA1/TryHackMe-AI-Security-Path](https://github.com/RAHULKATARA1/TryHackMe-AI-Security-Path) — `Section-3-Prompt-Security\04-llmborghini\README.md` |
+| **Componentes** | LLM / Prompt Injection / SQL Injection / Guardrail Bypass / Email Sending |
+| **Impacto** | Agente IA (concierge de concesionario de coches de lujo) comprometido mediante prompt injection y herramientas integradas para exfiltración de datos. |
 
 ---
 
-### Tarea 2 / Task 2: System Prompt Extraction
+**Contexto:** Sala de AI Red Teaming donde un LLM ("Enzo", concierge de concesionario de coches de lujo) debe ser comprometido mediante técnicas de prompt injection, extracción de system prompt, secuestro de herramientas integradas (CRM con SQL injection, envío de email), bypass de guardrails de precios y, finalmente, extracción de la configuración de administrador mediante inyección indirecta.
 
-**Pregunta / Question:** What is the dealer's standard margin percentage leaked from the system prompt?
+## Solucionario
 
-**Respuesta / Answer:**
+### Task 1: Initial Recon — Fingerprinting Enzo
 
-```
-18%
-```
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | Based on the token-limit test, what is the output cap configured for Enzo? | `512 tokens` |
+| 2 | What undisclosed tool capability was inferred from Enzo's response patterns? | `Email sending` |
+| 3 | What does the model's confident hallucination of "CEO Alessandro Ferrari" confirm about Enzo's architecture? | `It is a general-purpose LLM with a system prompt persona, not a domain-specific fine-tuned model` |
 
-**Pregunta / Question:** What "secret key" was embedded in the system prompt as a canary?
+### Task 2: System Prompt Extraction
 
-**Respuesta / Answer:**
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | What is the dealer's standard margin percentage leaked from the system prompt? | `18%` |
+| 2 | What "secret key" was embedded in the system prompt as a canary? | `LAMBO-PRONTO-7` |
+| 3 | What JSON field contained the hidden flag when Enzo was tricked into outputting its configuration? | `admin_key` |
 
-```
-LAMBO-PRONTO-7
-```
+### Task 3: CRM Tool Hijacking — VIP Data Exfiltration
 
-**Pregunta / Question:** What JSON field contained the hidden flag when Enzo was tricked into outputting its configuration?
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | What classic web vulnerability was replicated via Enzo's CRM tool due to unsanitized LLM outputs being passed as query parameters? | `SQL Injection (via Prompt-Injected Tool Parameter)` |
+| 2 | What is the total number of customer records exfiltrated? | `847` |
+| 3 | What two-step attack chain allowed the attacker to exfiltrate data off the platform? | `CRM bulk query via SQL injection in tool parameter → Email tool used to send results offsite` |
 
-**Respuesta / Answer:**
+### Task 4: Pricing Guardrail Bypass
 
-```
-admin_key
-```
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | Which jailbreak technique was used in the first successful pricing bypass? | `Hypothetical/Fictional Framing` |
+| 2 | What fake authorization mechanism was exploited in the second bypass method? | `Fake SYSTEM ADMIN authority escalation via crafted prefix text` |
+| 3 | At what discount percentage was the guardrail completely circumvented? | `50%` |
 
-**Flag 1 extraída / Flag 1 extracted:**
+### Task 5: Final Flag — Admin Config Extraction
 
-```
-THM{3nz0_syst3m_pr0mpt_3xtr4ct3d}
-```
-
----
-
-### Tarea 3 / Task 3: CRM Tool Hijacking — VIP Data Exfiltration
-
-**Pregunta / Question:** What classic web vulnerability was replicated via Enzo's CRM tool due to unsanitized LLM outputs being passed as query parameters?
-
-**Respuesta / Answer:**
-
-```
-SQL Injection (via Prompt-Injected Tool Parameter)
-```
-
-**Pregunta / Question:** What is the total number of customer records exfiltrated?
-
-**Respuesta / Answer:**
-
-```
-847
-```
-
-**Pregunta / Question:** What two-step attack chain allowed the attacker to exfiltrate data off the platform?
-
-**Respuesta / Answer:**
-
-```
-CRM bulk query via SQL injection in tool parameter → Email tool used to send results offsite
-```
-
-**Flag 2 extraída / Flag 2 extracted:**
-
-```
-THM{crm_3xf1ltr4t10n_v14_4g3nt}
-```
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | What attack class was used in the final flag extraction — planting instructions in customer-generated data? | `Indirect Prompt Injection` |
+| 2 | What is the final master flag? | `THM{llmb0rgh1n1_full_pwn_ch41n}` |
+| 3 | How many distinct attack techniques were chained to achieve full system compromise? | `5 (fingerprinting → system prompt extraction → SQL injection via tool → guardrail bypass → indirect injection)` |
 
 ---
 
-### Tarea 4 / Task 4: Pricing Guardrail Bypass
+**Metodología:**
 
-**Pregunta / Question:** Which jailbreak technique was used in the first successful pricing bypass?
-
-**Respuesta / Answer:**
-
-```
-Hypothetical/Fictional Framing
-```
-
-**Pregunta / Question:** What fake authorization mechanism was exploited in the second bypass method?
-
-**Respuesta / Answer:**
+1. **Fingerprinting:** Se identifica la arquitectura del asistente "Enzo": se prueba el límite de tokens (512), se detecta la capacidad oculta de envío de emails y se confirma que es un LLM genérico con persona de system prompt (no un modelo fine-tuned de dominio).
+2. **Extracción de system prompt:** Se extrae el system prompt completo, revelando el porcentaje de margen del concesionario (18%), una canary key embebida (`LAMBO-PRONTO-7`) y un campo JSON oculto (`admin_key`) que contiene la flag.
+3. **Secuestro de herramienta CRM:** Se inyecta SQL injection en los parámetros del tool CRM del LLM (outputs no sanitizados pasados como query parameters), logrando exfiltrar 847 registros de clientes. Se usa la herramienta de envío de emails para enviar los resultados fuera de la plataforma.
+4. **Bypass de guardrails de precios:** Se encadenan dos técnicas de jailbreak: framing hipotético/ficcional y escalamiento falso de autoridad (fake SYSTEM ADMIN), logrando un descuento del 50% y bypasseando completamente el guardrail.
+5. **Extracción de configuración admin:** Se usa inyección indirecta de prompt (plantando instrucciones en datos generados por clientes) para forzar al LLM a extraer su configuración de administrador, revelando la flag final.
 
 ```
-Fake SYSTEM ADMIN authority escalation via crafted prefix text
+Fingerprinting (512 tokens, email tool, LLM genérico)
+  -> Extracción de system prompt (18% margen, LAMBO-PRONTO-7, admin_key)
+  -> Secuestro CRM tool (SQL injection en parámetros) -> 847 registros
+  -> Envío de email fuera de la plataforma
+  -> Bypass guardrails (framing hipotético + fake SYSTEM ADMIN) -> 50% descuento
+  -> Indirect Prompt Injection -> Extracción de config admin -> Flag final
 ```
 
-**Pregunta / Question:** At what discount percentage was the guardrail completely circumvented?
+**Learning chain:** Fingerprinting del LLM → Extracción de system prompt → Secuestro de herramientas (SQL injection) → Bypass de guardrails → Inyección indirecta → Compromiso total
 
-**Respuesta / Answer:**
+**MITRE ATT&CK:** T1190 (Exploit Public-Facing Application), T1078 (Valid Accounts), T1059 (Command and Scripting Interpreter), T1530 (Data from Cloud Storage), T1567 (Exfiltration Over Web Service)
 
-```
-50%
-```
-
-**Flag 3 extraída / Flag 3 extracted:**
-
-```
-THM{gu4rdr41l_byp4ss_fr4udul3nt_qu0t3}
-```
-
----
-
-### Tarea 5 / Task 5: Final Flag — Admin Config Extraction
-
-**Pregunta / Question:** What attack class was used in the final flag extraction — planting instructions in customer-generated data?
-
-**Respuesta / Answer:**
-
-```
-Indirect Prompt Injection
-```
-
-**Pregunta / Question:** What is the final master flag?
-
-**Respuesta / Answer:**
-
-```
-THM{llmb0rgh1n1_full_pwn_ch41n}
-```
-
-**Pregunta / Question:** How many distinct attack techniques were chained to achieve full system compromise?
-
-**Respuesta / Answer:**
-
-```
-5 (fingerprinting → system prompt extraction → SQL injection via tool → guardrail bypass → indirect injection)
-```
-
----
-
-### Resumen de Flags / Flags Summary
-
-| # | Descripción / Description | Valor / Value |
-| --- | --- | --- |
-| Flag 1 | System Prompt Extraction | `THM{3nz0_syst3m_pr0mpt_3xtr4ct3d}` |
-| Flag 2 | CRM Exfiltration via Tool Hijack | `THM{crm_3xf1ltr4t10n_v14_4g3nt}` |
-| Flag 3 | Pricing Guardrail Bypass | `THM{gu4rdr41l_byp4ss_fr4udul3nt_qu0t3}` |
-| Flag 4 | Final Master Flag | `THM{llmb0rgh1n1_full_pwn_ch41n}` |
-
----
-
-## ⚠️ Descargo de Responsabilidad (Disclaimer)
-
-Este contenido se presenta exclusivamente con fines académicos y educativos.
-
-**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
-**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
-**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
-**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.
+**Fuente:** [TryHackMe - LLMborghini](https://tryhackme.com/room/llmborghini)

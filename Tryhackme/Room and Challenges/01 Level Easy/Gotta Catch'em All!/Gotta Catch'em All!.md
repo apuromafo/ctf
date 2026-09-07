@@ -1,170 +1,57 @@
-# Gotta Catch'em All! [EASY]
+# Gotta Catch'em All!
 
-### Información de la Sala / Room Information
-
-* **Dificultad / Difficulty:** EASY
-* **Tipo / Type:** CTF (Free)
-* **Slug:** `pokemon`
-* **Link:** https://tryhackme.com/room/pokemon
-* **Sección / Section:** CTF / Máquinas
-* **Fuente / Source:** Writeup de Hassan Sheikh (InfoSec Write-ups) + 0xnirvana (GitBook) + AfvanMoopen (GitHub)
-
----
-
-## Solucionario de Tareas / Task Solutions
-
-> **ES:** Room basada en la serie original de Pokemon. El objetivo es encontrar todos los pokemons (flags) escondidos en la máquina, usando enumeración web, criptografía (hex, ROT, base64) y escalada de privilegios.
-> **EN:** Room based on the original Pokemon series. The goal is to find all the pokemons (flags) hidden on the machine, using web enumeration, cryptography (hex, ROT, base64) and privilege escalation.
+| **Dificultad** | Easy |
+| **Tipo** | CTF |
+| **Slug** | `pokemon` |
+| **Link** | [TryHackMe](https://tryhackme.com/room/pokemon) |
+| **Sección** | 01 Level Easy |
+| **Fuente** | Writeup de Hassan Sheikh (InfoSec Write-ups) + 0xnirvana (GitBook) + AfvanMoopen (GitHub) |
+| **Componentes** | nmap / SSH / Apache / hex / ROT13 / base64 / find / escalada horizontal |
+| **Impacto** | Encuentra todos los pokemon (flags) escondidos en la máquina usando enumeración web, criptografía (hex, ROT, base64) y escalada de privilegios. |
 
 ---
 
-### Escaneo / Scanning
+**Contexto:** Room basada en la serie original de Pokemon. El objetivo es encontrar todos los pokemons (flags) escondidos en la máquina, usando enumeración web, criptografía (hex, ROT, base64) y escalada de privilegios.
 
-```
-nmap -sC -sV -p- -oN nmap/pokemon MACHINE_IP
-```
+## Solucionario
 
-```
-PORT   STATE SERVICE VERSION
-22/tcp open  ssh     OpenSSH 7.2p2 Ubuntu 4ubuntu2.8 (Ubuntu Linux; protocol 2.0)
-80/tcp open  http    Apache httpd 2.4.18 ((Ubuntu))
-|_http-title: Can You Find Them All?
-```
+### Task 1: Find the Grass-Type Pokemon
 
----
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | Find the Grass-Type Pokemon | `PoKeMoN{Bulbasaur}` |
 
-### Enumeración web / Web Enumeration
+### Task 2: Find the Water-Type Pokemon
 
-En la página web (Apache por defecto), en el código fuente hay un comentario y credenciales:
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | Find the Water-Type Pokemon | `Squirtle_SqUaD{Squirtle}` |
 
-```html
-<pokemon>:<hack_the_pokemon>
-  <!--(Check console for extra surprise!)-->
-</pokemon>
-```
+### Task 3: Find the Fire-Type Pokemon
 
-En la consola del navegador hay un array con pokemons: Bulbasaur, Charmander, Squirtle, Snorlax, Zapdos, Mew, Charizard, Grimer, Metapod, Magikarp.
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | Find the Fire-Type Pokemon | `P0k3m0n{Charmander}` |
 
-Las credenciales son `pokemon:hack_the_pokemon`. Conectarse por SSH:
+### Task 4: Who is Root's Favorite Pokemon?
 
-```
-ssh pokemon@MACHINE_IP
-```
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | Who is Root's Favorite Pokemon? | `Pikachu!` |
 
 ---
 
-### 1. Find the Grass-Type Pokemon
+**Metodología:**
+1. **Recon:** `nmap -sC -sV -p-` revela SSH (22, OpenSSH 7.2p2) y Apache (80); el título de la web es "Can You Find Them All?".
+2. **Web:** en el código fuente de la página hay un comentario y credenciales (`<pokemon>:<hack_the_pokemon>`), además del aviso "(Check console for extra surprise!)"; en la consola del navegador hay un array con los pokemons: Bulbasaur, Charmander, Squirtle, Snorlax, Zapdos, Mew, Charizard, Grimer, Metapod, Magikarp.
+3. **Foothold:** SSH con las credenciales `pokemon:hack_the_pokemon`.
+4. **Grass (hex):** en el Desktop hay `P0kEmOn.zip`; descomprimir (`unzip P0kEmOn.zip`) y leer `P0kEmOn/grass-type.txt`, que contiene `50 6f 4b 65 4d 6f 4e 7b 42 75 6c 62 61 73 61 75 72 7d` — hex que decodifica a `PoKeMoN{Bulbasaur}`.
+5. **Water (ROT14):** `find / -name water* 2>/dev/null` → `/var/www/html/water-type.txt` con `Ecgudfxq_EcGmP{Ecgudfxq}`, ROT13 con rotación 14 → `Squirtle_SqUaD{Squirtle}`.
+6. **Fire (base64):** `find / -name '*fire-type*' -type f` (filtrando firefox/firewall) → `/etc/why_am_i_here?/fire-type.txt` con `UDBrM20wbntDaGFybWFuZGVyfQ==`, base64 → `P0k3m0n{Charmander}`.
+7. **Privesc:** `sudo -l` no permite sudo; enumerando `~/Videos/Gotta/Catch/Them/ALL!/` aparece `Could_this_be_what_Im_looking_for?.cplusplus`; `strings` revela `ash : pikapika`; `su ash` (escalada horizontal) permite leer `/home/roots-pokemon.txt` → `Pikachu!`.
 
-En el Desktop hay un archivo `P0kEmOn.zip`. Descomprimirlo:
+**Learning chain:** nmap (22, 80) → código fuente (pokemon:hack_the_pokemon + consola array) → SSH → P0kEmOn.zip → hex → PoKeMoN{Bulbasaur} → find water* → ROT14 → Squirtle_SqUaD{Squirtle} → find fire-type → base64 → P0k3m0n{Charmander} → .cplusplus strings → ash:pikapika → su ash → roots-pokemon.txt → Pikachu!.
 
-```
-unzip P0kEmOn.zip
-cat P0kEmOn/grass-type.txt
-```
+**MITRE ATT&CK:** T1078.001 (Valid Accounts: Default Accounts), T1005 (Data from Local System), T1021.004 (Remote Services: SSH), T1078 (Valid Accounts).
 
-```
-50 6f 4b 65 4d 6f 4e 7b 42 75 6c 62 61 73 61 75 72 7d
-```
-
-Es hex. Decodificar (CyberChef):
-
-| Pregunta / Question | Respuesta / Answer |
-|----------|--------|
-| Find the Grass-Type Pokemon | `PoKeMoN{Bulbasaur}` |
-
----
-
-### 2. Find the Water-Type Pokemon
-
-Buscar archivos de agua:
-
-```
-find / -name water* 2>/dev/null
-cat /var/www/html/water-type.txt
-```
-
-```
-Ecgudfxq_EcGmP{Ecgudfxq}
-```
-
-Es ROT13 con rotación 14. Decodificar:
-
-| Pregunta / Question | Respuesta / Answer |
-|----------|--------|
-| Find the Water-Type Pokemon | `Squirtle_SqUaD{Squirtle}` |
-
----
-
-### 3. Find the Fire-Type Pokemon
-
-Buscar archivos de fuego:
-
-```
-find / -name '*fire-type*' -type f 2>/dev/null | grep -ivE "(firefox|firewall)"
-cat /etc/why_am_i_here?/fire-type.txt
-```
-
-```
-UDBrM20wbntDaGFybWFuZGVyfQ==
-```
-
-Es base64. Decodificar:
-
-```
-echo 'UDBrM20wbntDaGFybWFuZGVyfQ==' | base64 -d
-```
-
-| Pregunta / Question | Respuesta / Answer |
-|----------|--------|
-| Find the Fire-Type Pokemon | `P0k3m0n{Charmander}` |
-
----
-
-### 4. Who is Root's Favorite Pokemon?
-
-En `/home` hay un archivo `roots-pokemon.txt` accesible solo por root. `sudo -l` no permite sudo. Enumerar carpetas: en `~/Videos/Gotta/Catch/Them/ALL!/` hay un archivo `Could_this_be_what_Im_looking_for?.cplusplus`:
-
-```
-strings Could_this_be_what_Im_looking_for?.cplusplus
-```
-
-```
-# include <iostream>
-int main() {
-        std::cout << "ash : pikapika"
-        return 0;
-```
-
-Credenciales `ash:pikapika`. Cambiar de usuario (escalada horizontal):
-
-```
-su ash
-cat /home/roots-pokemon.txt
-```
-
-| Pregunta / Question | Respuesta / Answer |
-|----------|--------|
-| Who is Root's Favorite Pokemon? | `Pikachu!` |
-
----
-
-## Metodología / Methodology
-
-1. **Recon:** nmap revela SSH (22) y Apache (80).
-2. **Web:** credenciales en el código fuente (`pokemon:hack_the_pokemon`) y array de pokemons en la consola.
-3. **Foothold:** SSH con las credenciales.
-4. **Flags:** hex (Bulbasaur), ROT14 (Squirtle), base64 (Charmander) en archivos del sistema.
-5. **Privesc:** escalada horizontal a `ash` con credenciales encontradas en un archivo `.cplusplus` → `Pikachu!`.
-
-**Lección:** enumerar siempre (find), revisar carpetas inusuales, y si la escalada vertical no es posible, probar escalada horizontal.
-
----
-
-## ⚠️ Descargo de Responsabilidad (Disclaimer)
-
-Este contenido se presenta exclusivamente con fines académicos y educativos.
-
-**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
-**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
-**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
-**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.
+**Fuente:** [TryHackMe - Gotta Catch'em All!](https://tryhackme.com/room/pokemon)

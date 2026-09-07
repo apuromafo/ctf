@@ -78,6 +78,6 @@
 
 **Learning chain:** AI/ML concepts (semi-supervised, neural network, deep learning) → Large Language Models (pre-training, Transformer) → AI security threats (ATLAS, model theft, deepfake, phishing) → Defensive AI (breach identification 108 days, threat hunting, model monitoring) → practical assistant values.
 
-**MITRE ATT&CK:** T1566 (Phishing), T1578 (Modify Cloud Compute Infrastructure), T1044 (File System Permissions Weakness).
+**MITRE ATT&CK:** T1566 (Phishing), T1598 (Phishing for Information), T1078.001 (Valid Accounts: Default Accounts).
 
 **Fuente:** [TryHackMe - AI ML Security Threats](https://tryhackme.com/room/aimlsecuritythreats)

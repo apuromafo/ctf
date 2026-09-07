@@ -1,7 +1,7 @@
 # Squid Game
 
 | **Dificultad** | Hard |
-| **Tipo** | CTF derivado del contenido |
+| **Tipo** | CTF |
 | **Slug** | `squidgameroom` |
 | **Link** | [TryHackMe](https://tryhackme.com/room/squidgameroom) |
 | **Sección** | 03 Level Hard |

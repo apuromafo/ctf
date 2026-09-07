@@ -1,78 +1,51 @@
-# Splunk: The Basics [EASY]
+# Splunk: The Basics
 
-### Información de la Sala / Room Information
-
-* **Dificultad / Difficulty:** EASY
-* **Tipo / Type:** Walkthrough (Free)
-* **Slug:** `splunk101`
-* **Link:** https://tryhackme.com/room/splunk101
-* **Sección / Section:** Cyber Defense / SIEM
-* **Fuente / Source:** Writeup de jesusgavancho (GitHub) + Rahul Kumar (System Weakness)
-
----
-
-## Solucionario de Tareas / Task Solutions
-
-> **ES:** Splunk es una de las soluciones SIEM líderes en el mercado que proporciona la capacidad de recopilar, analizar y correlacionar los logs de red y de máquina en tiempo real. En esta room exploramos los conceptos básicos de Splunk y sus funcionalidades.
-> **EN:** Splunk is one of the leading SIEM solutions in the market that provides the ability to collect, analyze and correlate the network and machine logs in real-time. In this room, we explore the basics of Splunk and its functionalities.
+| **Dificultad** | Easy |
+| **Tipo** | Walkthrough |
+| **Slug** | `splunk101` |
+| **Link** | [TryHackMe](https://tryhackme.com/room/splunk101) |
+| **Sección** | 01 Level Easy |
+| **Fuente** | Writeup de jesusgavancho (GitHub) + Rahul Kumar (System Weakness) |
+| **Componentes** | Splunk / SPL / Forwarder / Indexer / Search Head / SIEM |
+| **Impacto** | Fundamentos de Splunk como SIEM: componentes, ingesta de logs y búsqueda de eventos con SPL |
 
 ---
 
-### Task 1 — Introduction
+**Contexto:** Splunk es una de las soluciones SIEM líderes en el mercado que proporciona la capacidad de recopilar, analizar y correlacionar los logs de red y de máquina en tiempo real. En esta room exploramos los conceptos básicos de Splunk y sus funcionalidades: los tres componentes principales (Forwarder, Indexer y Search Head), la ingesta de datos y las búsquedas con SPL.
 
-Splunk es una de las soluciones SIEM líderes. Permite recopilar, analizar y correlacionar logs de red y de máquina en tiempo real.
+## Solucionario
 
-| Pregunta / Question | Respuesta / Answer |
-|----------|--------|
-| (Preguntas de lectura / reading questions) | `No answer needed` |
+### Task 1: Introduction
 
----
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | (Preguntas de lectura / reading questions) | `No answer needed` |
 
-### Task 2 — Splunk Components
+### Task 2: Splunk Components
 
-Splunk tiene tres componentes principales: **Forwarder**, **Indexer** y **Search Head**.
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | Which component is used to collect and send data over the Splunk instance? | `Forwarder` |
 
-* **Forwarder:** recopila y envía datos a la instancia de Splunk.
-* **Indexer:** indexa y almacena los logs.
-* **Search Head:** lugar donde los usuarios buscan los logs indexados usando SPL (Splunk Search Processing Language).
+### Task 3: Navigating Splunk
 
-| Pregunta / Question | Respuesta / Answer |
-|----------|--------|
-| Which component is used to collect and send data over the Splunk instance? | `Forwarder` |
-
----
-
-### Task 3 — Navigating Splunk
-
-Para subir datos: **Add Data** → **Upload** → seleccionar el archivo → **Select Source Type** → **Input Settings** (seleccionar el índice) → **Review** → **Done**.
-
-Subir el archivo `VPN_logs` y crear el índice `VPN_Logs`.
-
-| Pregunta / Question | Respuesta / Answer |
-|----------|--------|
-| Upload the data attached to this task and create an index "VPN_Logs". How many events are present in the log file? | `2862` |
-| How many log events by the user Maleena are captured? | `60` |
-| What is the name associated with IP 107.14.182.38? | `Smith` |
-| What is the number of events that originated from all countries except France? | `2814` |
-| How many VPN Events were observed by the IP 107.3.206.58? | `14` |
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | Upload the data attached to this task and create an index "VPN_Logs". How many events are present in the log file? | `2862` |
+| 2 | How many log events by the user Maleena are captured? | `60` |
+| 3 | What is the name associated with IP 107.14.182.38? | `Smith` |
+| 4 | What is the number of events that originated from all countries except France? | `2814` |
+| 5 | How many VPN Events were observed by the IP 107.3.206.58? | `14` |
 
 ---
 
-## Metodología / Methodology
+**Metodología:**
+1. **Componentes de Splunk:** el **Forwarder** recopila y envía datos a la instancia de Splunk; el **Indexer** indexa y almacena los logs; el **Search Head** es el lugar donde los usuarios buscan los logs indexados usando SPL (Splunk Search Processing Language).
+2. **Ingesta de logs:** para subir datos: **Add Data** → **Upload** → seleccionar el archivo → **Select Source Type** → **Input Settings** (seleccionar el índice) → **Review** → **Done**. En el lab se sube el archivo `VPN_logs` y se crea el índice `VPN_Logs`.
+3. **Búsqueda:** usar SPL para consultar los logs indexados y obtener eventos como field-value pairs: el archivo tiene `2862` eventos; la usuaria `Maleena` aparece en `60`; el IP `107.14.182.38` se asocia al nombre `Smith`; los eventos de todos los países excepto Francia son `2814`; y el IP `107.3.206.58` observa `14` eventos VPN.
 
-1. **Componentes:** Forwarder (recopila/envía), Indexer (indexa/almacena), Search Head (busca/visualiza).
-2. **Ingesta de logs:** Add Data → Upload → seleccionar source type → definir índice.
-3. **Búsqueda:** usar SPL para consultar los logs indexados y obtener eventos como field-value pairs.
+**Learning chain:** Splunk (SIEM) → componentes (Forwarder / Indexer / Search Head) → ingesta (Add Data → Upload → índice VPN_Logs) → búsqueda SPL (2862 eventos, Maleena=60, 107.14.182.38=Smith, !=France=2814, 107.3.206.58=14)
 
-**Lección:** Splunk proporciona mejor visibilidad de las actividades de red y ayuda a acelerar la detección de incidentes.
+**MITRE ATT&CK:** No aplica técnicas ofensivas; herramienta defensiva (SIEM) para monitoreo y detección de eventos de red
 
----
-
-## ⚠️ Descargo de Responsabilidad (Disclaimer)
-
-Este contenido se presenta exclusivamente con fines académicos y educativos.
-
-**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
-**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
-**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
-**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.
+**Fuente:** [TryHackMe - Splunk: The Basics](https://tryhackme.com/room/splunk101)

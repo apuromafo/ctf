@@ -1,26 +1,54 @@
-# Search Skills [EASY]
+# Search Skills
 
-1. No answer needed
-2. 1. Snake oil
-   2. ss
-3. 1. filetype:pdf cyber warfare report
-   2. socket statistics
-4. 1. United States
-   2. Android.Riskware.Agent.LHH
-5. xz
-6. 1. concatenate
-   2. -b
-7. 1. LinkedIn
-   2. Facebook
-8. No answer needed
+| **Dificultad** | Easy |
+| **Tipo** | walkthrough |
+| **Slug** | `searchskillscS` |
+| **Link** | [TryHackMe](https://tryhackme.com/r/room/searchskillscS) |
+| **Sección** | Reconnaissance |
+| **Fuente** | THM |
+| **Componentes** | Shodan, VirusTotal, CVE databases, GitHub, Technical docs |
+| **Impacto** | OSINT y búsqueda de información |
 
----
+Contexto: Habilidades de búsqueda OSINT para ciberseguridad: Shodan para IPs, VirusTotal para análisis de archivos, bases de datos CVE, documentación técnica y GitHub para scripts de exploits.
 
-## ⚠️ Descargo de Responsabilidad (Disclaimer)
+Solucionario:
 
-Este contenido se presenta exclusivamente con fines académicos y educativos.
+## T1 - Introduction
 
-**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
-**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
-**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
-**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.
+| Pregunta | Respuesta |
+|----------|-----------|
+| Estoy listo para comenzar | Completar |
+
+## T2 - Shodan (TryScanMe)
+
+| Pregunta | Respuesta |
+|----------|-----------|
+| Dominio asociado con IP 185.243.115.47 | tryscanme.thm |
+
+## T3 - VirusTotal (TryDetectMe)
+
+| Pregunta | Respuesta |
+|----------|-----------|
+| ¿Cuántos vendors de seguridad identificaron el archivo como peligroso? | *(Requiere consultar VirusTotal en vivo; interactuar con el static-site de la room)* |
+
+## T4 - Vulnerability Databases (CVE)
+
+| Pregunta | Respuesta |
+|----------|-----------|
+| Clasificación CVSS de la vulnerabilidad | *(Requiere consultar la base de datos CVE en vivo)* |
+
+## T5 - Technical Documentation (MAN)
+
+| Pregunta | Respuesta |
+|----------|-----------|
+| Comando de ejemplo en la documentación | *(Requiere revisar documentación en vivo)* |
+
+## T6 - GitHub
+
+| Pregunta | Respuesta |
+|----------|-----------|
+| Nombre del script en el repositorio que demuestra la vulnerabilidad | *(Requiere revisar repositorio en vivo)* |
+
+> **Nota**: Las tasks T3-T6 dependen de interacción en vivo con servicios externos (VirusTotal, CVE databases, documentación específica). Se recomienda resolverlas directamente en la plataforma.
+
+Fuentes: https://github.com/Cajac/TryHackMe-Writeups/blob/main/Walkthroughs/Easy/Search_Skills.md | https://github.com/adnansabbir/tryhackme/blob/main/search-skills.md

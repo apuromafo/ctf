@@ -1,75 +1,57 @@
-# Threat Hunting: Introduction [EASY]
+# Threat Hunting Introduction
 
-### Información de la Sala / Room Information
-
-* **Dificultad:** EASY.
-* **Tipo:** Free (acceso gratuito).
-* **Slug:** `threathuntingintroduction`
-* **Link:** https://tryhackme.com/room/threathuntingintroduction
-* **Objeto:** Conceptos básicos, enfoques y técnicas de Threat Hunting.
-* **Objective:** Basic concepts, approaches, and techniques of Threat Hunting.
-
----
-
-## Solucionario de Tareas / Task Solutions
-
-### Task 1 — Threat Hunting Fundamentals
-
-1.1 What is the average number of days an attacker remains undetected in a network called?
-> **Dwell time**
-
-1.2 Is threat hunting reactive or proactive?
-> **Proactive**
-
-### Task 2 — Hunting Approaches
-
-2.1 Which threat hunting approach would you use if you have received threat intelligence about an APT group targeting your industry?
-> **Intelligence-Driven Hunting**
-
-2.2 Which threat hunting approach is most efficient when you have a list of file hashes and IOCs from a threat feed?
-> **Intelligence-Driven Hunting**
-
-### Task 3 — Hunting Targets
-
-3. What category of hunting target represents artifacts left behind by attackers during their attack?
-> **Attack Residues**
-
-### Task 4 — Hunting Techniques
-
-4.1 Which hunting technique uses file hashes, IP addresses, and domain names to search for specific artifacts?
-> **Indicators of Compromise**
-
-4.2 What hunting technique is represented by searching for: "Word.exe spawns cmd.exe spawns powershell.exe that connects to external IP"?
-> **Behavioral Pattern Analysis**
-
-### Task 5 — Practical Lab: APT-Serpent
-
-5.1 How many known campaigns has APT-Serpent conducted since 2021?
-> **4**
-
-5.2 In which phase of the attack does CustomBackdoor get dropped?
-> **Execution & Persistence**
-
-5.3 What is the primary initial access vector used by APT-Serpent?
-> **Spear-phishing**
-
-5.4 What is the time interval between CustomBackdoor's HTTPS C2 beacons? (Answer the number of seconds)
-> **300**
-
-5.5 What is the flag received after choosing the correct threat hunting approach and target?
-> **THM-APT-SERPENT-INTEL**
+| **Dificultad** | Easy |
+| **Tipo** | walkthrough |
+| **Slug** | `threathuntingintroduction` |
+| **Link** | [TryHackMe](https://tryhackme.com/r/room/threathuntingintroduction) |
+| **Sección** | Threat Hunting |
+| **Fuente** | THM |
+| **Componentes** | IOC, Behavioral analysis, Hypothesis-driven, TTP, Static-site APT-Serpent |
+| **Impacto** | Threat hunting fundamentals |
 
 ---
 
-* **Fuente / Source:** [Answers for the TryHackMe Threat Hunting: Introduction Room — Simon Taplin](https://simontaplin.net/2026/07/03/answers-for-the-tryhackme-threat-hunting-introduction-room/)
+**Contexto:** Introducción al Threat Hunting: definiciones, enfoques (intelligence-driven, indicator-driven), objetivos, técnicas (IOC-based, behavioral pattern analysis) y laboratorio práctico con el grupo APT-Serpent.
+
+## Solucionario
+
+### T2 - What Is Threat Hunting
+
+| Pregunta | Respuesta | Explicación ES |
+|----------|-----------|----------------|
+| Tiempo promedio que un atacante permanece indetectado | Dwell time | El dwell time promedio ronda los 200-300 días según informes de la industria |
+| ¿El threat hunting es reactivo o proactivo? | Proactive | A diferencia del response reactivo, el hunting busca amenazas activamente antes de que generuen alertas |
+
+### T3 - Hunting Approaches
+
+| Pregunta | Respuesta |
+|----------|-----------|
+| Enfoque cuando se recibe inteligencia sobre un APT que apunta a tu industria | Intelligence-Driven Hunting |
+| Enfoque más eficiente con lista de hashes/IOCs de un feed de amenazas | Indicator-driven Hunting |
+
+### T4 - Hunting Targets
+
+| Pregunta | Respuesta |
+|----------|-----------|
+| Categoría que representa artefactos dejados por atacantes | Attack Residues |
+
+### T5 - Hunting Techniques
+
+| Pregunta | Respuesta |
+|----------|-----------|
+| Técnica que usa hashes, IPs, dominios para buscar artefactos específicos | Indicators of Compromise |
+| Técnica representada por "Word.exe genera cmd.exe genera powershell.exe que conecta a IP externa" | Behavioral Pattern Analysis |
+
+### T6 - Practical (Static-site APT-Serpent)
+
+| Pregunta | Respuesta |
+|----------|-----------|
+| ¿Cuántas campañas conocidas ha llevado a cabo APT-Serpent desde 2021? | 4 |
+| ¿En qué fase se deposita CustomBackdoor? | Execution & Persistence |
+| ¿Cuál es el vector de acceso inicial principal de APT-Serpent? | Spear-phishing |
+| ¿Cuál es el intervalo de los beacons C2 HTTPS de CustomBackdoor (segundos)? | 300 |
+| Flag tras elegir el enfoque y objetivo correctos | THM-APT-SERPENT-INTEL |
 
 ---
 
-## ⚠️ Descargo de Responsabilidad (Disclaimer)
-
-Este contenido se presenta exclusivamente con fines académicos y educativos.
-
-**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
-**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
-**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
-**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.
+**Fuentes:** https://simontaplin.net/2026/07/03/answers-for-the-tryhackme-threat-hunting-introduction-room/ | https://classroom.anir0y.in/post/thm-room-threat-hunting-introduction/

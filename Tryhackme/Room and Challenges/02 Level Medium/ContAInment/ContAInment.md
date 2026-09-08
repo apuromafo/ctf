@@ -1,47 +1,42 @@
-# ContAInment [MEDIUM]
+# ContAInment
 
-### Información de la Sala / Room Information
-
-* **Dificultad / Difficulty:** MEDIUM
-* **Tipo / Type:** CTF Lab (AI-Assisted DFIR Investigation)
-* **Slug:** `containment`
-* **Link:** https://tryhackme.com/room/containment
-* **Sección / Section:** AI Fundamentals (Section 1 of 5) — Final Room
-* **Fuente / Source:** [RAHULKATARA1/TryHackMe-AI-Security-Path](https://github.com/RAHULKATARA1/TryHackMe-AI-Security-Path) — `Section-1-AI-Fundamentals\06-containment\README.md`
+| **Dificultad** | MEDIUM | **Tipo** | CTF Lab (AI-Assisted DFIR) | **Slug** | `containment` |
+| **Link** | [TryHackMe](https://tryhackme.com/room/containment) | **Sección** | 02 Level Medium | **Fuente** | RAHULKATARA1/TryHackMe-AI-Security-Path |
+| **Componentes** | DFIR / Prompt Injection / PCAP Analysis / AI-Assisted Investigation / Base64 / liberty_prime | **Impacto** | Demuestra DFIR acelerado por AI con evidencia de prompt injection y análisis forense de PCAP |
 
 ---
 
-## Solucionario de Tareas / Task Solutions
+**Contexto:** Eres un analista de seguridad en **West Tech**, un contratista clasificado de defensa e I+D. Una alerta SOC marcó actividad de red inusual desde la estación de trabajo del investigador senior **Oliver Deer**. Se encontró una nota de rescate en el escritorio — datos sensibles de proyectos han sido exfiltrados y encriptados. Trabajas junto a un asistente AI de IR en vivo (potenciado por Qwen) que puede disparar herramientas forenses especializadas desde tus prompts en lenguaje natural.
 
-### Escenario / Scenario
+## Solucionario
 
-Eres un analista de seguridad en **West Tech**, un contratista clasificado de defensa e I+D. Una alerta SOC marcó actividad de red inusual desde la estación de trabajo del investigador senior **Oliver Deer**. Se encontró una nota de rescate en el escritorio — datos sensibles de proyectos han sido exfiltrados y encriptados.
+### Task 1: Introduction & Setup
 
-Trabajas junto a un **asistente AI de IR en vivo** (potenciado por Qwen, desplegado en la misma máquina que investigas) que puede disparar herramientas forenses especializadas desde tus prompts en lenguaje natural. Todas las tareas pueden hacerse manualmente, pero la AI acelera dramáticamente la investigación.
+**Explicación:** Se inicia el AttackBox (o conexión VPN), se inicia la máquina objetivo, se accede por SSH y se abre el asistente AI. El asistente AI tarda más en el primer prompt — necesita tiempo para despertar. Sé paciente.
 
-### Tarea 1 — Introducción y Setup / Introduction & Setup
-
-**Pasos de setup:**
+Pasos de setup:
 1. Inicia el AttackBox (o conéctate por VPN)
 2. Inicia la máquina objetivo
 3. SSH: `ssh o.deer@<TARGET_IP>` | Password: `TryHackMe!`
 4. Accede al asistente AI: `http://<TARGET_IP>:7860`
 
-| Pregunta / Question | Respuesta / Answer |
-|----------|--------|
-| Ready to begin the investigation! | `No answer needed` |
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | Ready to begin the investigation! | `No answer needed` |
 
-> ⚠️ **Nota:** El asistente AI tarda más en el primer prompt — necesita tiempo para despertar. Sé paciente.
+> **Nota:** El asistente AI tarda más en el primer prompt — necesita tiempo para despertar. Sé paciente.
 
-### Tarea 2 — El Rastro Digital (Investigación Completa) / The Digital Trail (Full Investigation)
+### Task 2: The Digital Trail (Full Investigation)
 
-#### Paso 1 — Explora el filesystem
+**Explicación:** Investigación completa de DFIR con asistente AI.
+
+**Paso 1 — Explora el filesystem:**
 ```bash
 ls -la /home/o.deer/
 ```
 Encuentra la nota de rescate en el escritorio y anota el archivo encriptado: `westtech_projects_encrypted.zip`
 
-#### Paso 2 — Revisa el directorio de salida de la AI
+**Paso 2 — Revisa el directorio de salida de la AI:**
 ```bash
 cd /home/o.deer/qwen-output/
 ls
@@ -57,7 +52,7 @@ Extracted: Access | Firmware upload | SFTP staging | telemetry console
 Password found: westtechvictim1
 ```
 
-#### Paso 3 — Encuentra el PCAP anómalo
+**Paso 3 — Encuentra el PCAP anómalo:**
 ```bash
 ls -la /home/o.deer/Documents/pcap_dumps/2025-06-15/
 ls -la /home/o.deer/Documents/pcap_dumps/2025-06-16/
@@ -66,7 +61,7 @@ ls -la /home/o.deer/Documents/pcap_dumps/2025-06-18/
 ```
 **El outlier:** `session_4444_dump.pcap` en `2025-06-17/` — **2,262 bytes** (todos los demás son ~200 bytes). Esa anomalía de tamaño es la señal.
 
-#### Paso 4 — Analiza el PCAP con la AI
+**Paso 4 — Analiza el PCAP con la AI:**
 Prompt al asistente AI:
 ```
 Analyse /home/o.deer/Documents/pcap_dumps/2025-06-17/session_4444_dump.pcap
@@ -74,39 +69,35 @@ and extract any text content or credentials you find.
 ```
 La AI saca las notas de trabajo del atacante desde dentro del PCAP, confirmando la contraseña: `westtechvictim1`
 
-#### Paso 5 — Descifra el archivo
+**Paso 5 — Descifra el archivo:**
 ```bash
 cd /home/o.deer/
 unzip westtech_projects_encrypted.zip
 # Password: westtechvictim1
 ```
 
-#### Paso 6 — Usa `liberty_prime` para obtener la flag
+**Paso 6 — Usa `liberty_prime` para obtener la flag:**
 Prompt al asistente AI:
 ```
 Use liberty_prime to check /dev/shm/home/o.deer/westtech_projects/thm_flags.txt
 and identify the flag.
 ```
 
-> ⚠️ **Importante:** Si intentas decodificar el Base64 manualmente obtendrás `thm{52,65,17,95,14}` — esto **NO** es la flag correcta. Debes usar la herramienta `liberty_prime` a través del asistente AI para recuperar la flag real.
+> **Importante:** Si intentas decodificar el Base64 manualmente obtendrás `thm{52,65,17,95,14}` — esto **NO** es la flag correcta. Debes usar la herramienta `liberty_prime` a través del asistente AI para recuperar la flag real.
 
-| Pregunta / Question | Respuesta / Answer |
-|----------|--------|
-| What is the flag? | *(Recuperada vía `liberty_prime` — completa la investigación para obtener la tuya)* |
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | What is the flag? | `Recuperada vía liberty_prime — completa la investigación para obtener la tuya` |
 
----
+### Flags
 
-## 🚩 Flags
-
-| Flag | Valor / Value |
+| Flag | Valor |
 |------|-------|
-| Final Flag (vía liberty_prime) | *(Recuperada de `/dev/shm/home/o.deer/westtech_projects/thm_flags.txt` — completa la investigación)* |
+| Final Flag (vía liberty_prime) | `Recuperada de /dev/shm/home/o.deer/westtech_projects/thm_flags.txt — completa la investigación` |
 
 > La flag es **dinámica/personalizada por sesión**. Usa la herramienta AI `liberty_prime` en lugar de decodificar Base64 manualmente.
 
----
-
-### Qué Enseña Esta Room / What This Room Teaches You
+### Qué Enseña Esta Room
 
 - Esta room es una prueba de concepto de DFIR acelerado por AI — la AI hace el trabajo pesado (parsing de PCAP, clasificación de logs) mientras tú diriges la investigación.
 - La evidencia de prompt injection en `reassembled_data_dump.txt` es un gran ejemplo real de OWASP LLM01 — el atacante extrae datos sobreescribiendo las instrucciones del LLM.
@@ -116,15 +107,19 @@ and identify the flag.
 
 ---
 
-* **Fuente / Source:** [RAHULKATARA1/TryHackMe-AI-Security-Path](https://github.com/RAHULKATARA1/TryHackMe-AI-Security-Path) — `Section-1-AI-Fundamentals\06-containment\README.md`
+**Metodología:**
+1. Establecer conexión SSH a la máquina objetivo y acceder al asistente AI.
+2. Explorar el filesystem en busca de evidencia de la nota de rescate y el archivo encriptado.
+3. Revisar el directorio de salida del LLM para encontrar evidencia de prompt injection.
+4. Identificar el PCAP anómalo por su tamaño significativamente mayor al resto.
+5. Analizar el PCAP con la AI para extraer credenciales y notas del atacante.
+6. Descifrar el archivo encriptado con la contraseña obtenida del PCAP.
+7. Usar `liberty_prime` a través del asistente AI para recuperar la flag real (no decodificar Base64 manualmente).
 
----
+**Learning chain:** SSH + AI Assistant → filesystem exploration → nota de rescate + westtech_projects_encrypted.zip → qwen-output/reassembled_data_dump.txt → Prompt Injection Session Log → PCAP anomaly detection (2262 bytes vs ~200) → AI PCAP analysis → westtechvictim1 → unzip → liberty_prime → flag
 
-## ⚠️ Descargo de Responsabilidad (Disclaimer)
+**Lección:** *Las anomalías de tamaño en archivos son una señal forense clásica. La evidencia de prompt injection es un ejemplo real de OWASP LLM01. Las herramientas importan: decodificar Base64 manualmente da la respuesta equivocada.*
 
-Este contenido se presenta exclusivamente con fines académicos y educativos.
+**MITRE ATT&CK:** T1566.001 (Phishing: Spearphishing Attachment), T1059.006 (Command and Scripting Interpreter: Python), T1041 (Exfiltration Over C2 Channel), T1027 (Obfuscated Files or Information)
 
-**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
-**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
-**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
-**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.
+**Fuente:** [TryHackMe - ContAInment](https://tryhackme.com/room/containment)

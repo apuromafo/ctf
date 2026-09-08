@@ -17,11 +17,21 @@
 
 ### Task 1: Introducción
 
+**Explicación:** Presentación de CAPA, el analizador de capacidades de Mandiant (FireEye) para malware: identifica comportamientos ("capabilities") en binarios a partir de reglas. Solo lectura de la introducción.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Lee la introducción de la sala. | `No answer needed` |
 
 ### Task 2: Descripción general de la herramienta
+
+**Explicación:** Uso básico de CAPA: `-h` muestra la ayuda; `-v` (verboso) lista las reglas que coinciden; `-vv` añade la descripción de cada regla. En PowerShell, el ejemplo descarga/lee el archivo de muestra con `Get-Content`.
+
+```bash
+capa -h
+capa -v muestra.exe
+capa -vv muestra.exe
+```
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -31,6 +41,13 @@
 | 4 | ¿Qué comando de PowerShell se usa en el ejemplo para obtener el archivo de muestra? | `Get-Content` |
 
 ### Task 3: Resultados de CAPA - Información general, MITRE y MAEC
+
+**Explicación:** Análisis de la salida de CAPA sobre la muestra. Su SHA256 es `ae7bc6...`; CAPA encuentra ofuscamiento de datos (`T1027`) y de cadenas (`T1027.005`), funciones de lanzamiento (`launcher`) y comportamiento de descarga (MAEC: `Downloader`).
+
+```bash
+Get-FileHash muestra.exe
+capa muestra.exe
+```
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -42,6 +59,8 @@
 
 ### Task 4: Resultados de CAPA - Catálogo de Comportamientos de Malware (MBC)
 
+**Explicación:** CAPA mapea capabilities al MBC (`Malware Behavior Catalogue`, de MITRE): los comportamientos se organizan por `Objective`; `C0017` es el micro-comportamiento "Create Process". La muestra incluye detección de `Virtual Machine Detection`, codificación (`Encode Data`) y comunicaciones (`HTTP Communication`).
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Cómo se llama la base de datos de comportamientos que usa CAPA (MBC)? | `Malware Behavior Catalogue` |
@@ -52,6 +71,8 @@
 | 6 | ¿Qué micro-behavior identifica las comunicaciones HTTP? | `HTTP Communication` |
 
 ### Task 5: Resultados de CAPA - Namespaces
+
+**Explicación:** Cada regla de CAPA pertenece a un namespace: `anti-analysis` y `anti-vm/vm-detection` (detección/evasión de VM), `persistence` (persistencia), `obfuscation` (ofuscamiento). Las reglas aún incompletas se guardan en `Nursery`.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|

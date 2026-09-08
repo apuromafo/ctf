@@ -17,11 +17,15 @@
 
 ### Task 1: Comenzando
 
+**Explicación:** Despliegue de la máquina atacante (AttackBox u otra) para realizar la parte práctica con ping, traceroute y whois.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Despliega el atacante y haz clic en "Start Machine" para comenzar. | `No answer needed` |
 
 ### Task 2: El modelo OSI
+
+**Explicación:** Las 7 capas OSI: la capa 4 (Transport) elige TCP o UDP; la capa 2 (Data Link) comprueba integridad y formatea los datos; la capa 1 (Physical) transmite/recibe bits; la capa 6 (Presentation) cifra/transforma; la capa 5 (Session) mantiene el diálogo; la capa 7 (Application) atiende a las aplicaciones (FTP); y la capa 3 (Network) hace el direccionamiento lógico. Los datos TCP en caja se llaman `Segments`; el streaming usa `UDP`.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -39,6 +43,8 @@
 
 ### Task 3: Encapsulación
 
+**Explicación:** En la encapsulación, los datos en la capa 2 se llaman `Frames`; con UDP se llaman `Datagrams` (con TCP, Segments). El receptor hace `De-encapsulation`. La única capa que añade un trailer es la `Data Link` (FCS), y la encapsulación sí aporta una capa extra de seguridad (`Aye`).
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Cómo te referirías a los datos en la capa 2 del proceso de encapsulación (con el modelo OSI)? | `Frames` |
@@ -48,6 +54,8 @@
 | 5 | ¿La encapsulación aporta una capa extra de seguridad? (Aye/Nay) | `Aye` |
 
 ### Task 4: El modelo TCP/IP
+
+**Explicación:** El modelo `TCP/IP` (4 capas) se introdujo antes que el OSI: su capa `Transport` equivale a la Transport del OSI; la `Application` cubre Session/Presentation/Application; la `Network Interface` cubre Data Link y `Physical`; y la `Internet` cubre la capa Network. TCP es orientado a conexión (`Connection-based`): `SYN` = Synchronise, segundo paso `SYN/ACK` y cierre con `ACK` (Acknowledgement).
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -63,6 +71,13 @@
 
 ### Task 5: Herramientas de red - Ping
 
+**Explicación:** `ping bbc.co.uk` responde con la IPv4 `217.160.0.152`. Opciones de ping: `-i` cambia el intervalo entre peticiones, `-4` fuerza IPv4 y `-v` verbosidad.
+
+```bash
+ping bbc.co.uk
+ping -i 2 -v bbc.co.uk
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Qué comando usarías para hacer ping al sitio web bbc.co.uk? | `ping bbc.co.uk` |
@@ -73,6 +88,12 @@
 
 ### Task 6: Herramientas de red - Traceroute
 
+**Explicación:** `traceroute` traza la ruta hasta un destino. Switches: `-i` especifica la interfaz y `-T` usa peticiones TCP SYN. En Windows, traceroute por defecto usa ICMP (capa `Internet` del TCP/IP).
+
+```bash
+traceroute -T target.com
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Utiliza traceroute para trazar la ruta a un destino. | `No answer needed` |
@@ -81,6 +102,13 @@
 | 4 | [Pensamiento lateral] ¿En qué capa del modelo TCP/IP se ejecuta traceroute por defecto (Windows)? | `Internet` |
 
 ### Task 7: Herramientas de red - WHOIS
+
+**Explicación:** `whois facebook.com` revela que su registrante tiene el código postal `94025` y que el dominio se registró el `29/03/1997`. `whois microsoft.com` muestra que el registrante está en `Redmond`, cerca del `Bellevue Golf Course`, y da el email técnico `msnhst@microsoft.com`.
+
+```bash
+whois facebook.com
+whois microsoft.com
+```
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|

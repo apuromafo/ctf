@@ -45,3 +45,14 @@
 **Learning chain:** entender las tácticas del phishing → aplicar el análisis de links, headers y contexto → afinar el veredicto en los 10 niveles → conseguir la flag.
 **MITRE ATT&CK:** T1566 (Phishing), T1566.002 (Spearphishing Link), T1204.001 (User Execution: Malicious Link), T1204.002 (User Execution: Malicious File), T1036 (Masquerading - Typosquatting)
 **Fuente:** [TryHackMe - The Phishing Pond](https://tryhackme.com/room/phishingpond)
+
+---
+
+## ⚠️ Descargo de Responsabilidad (Disclaimer)
+
+Este contenido se presenta exclusivamente con fines académicos y educativos.
+
+**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
+**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
+**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
+**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.

@@ -62,3 +62,14 @@ Nmap → SMB shares → images$ → PHP webshell upload → Web shell as sign �
 **Learning chain:** shares SMB mal configurados → subida de webshell → credenciales en texto plano (auto-logon, scripts) → ejecución como admin (PsExec) → descifrado del hash VNC.
 **MITRE ATT&CK:** T1049 (System Network Connections)/T1190, T1505.003 (Web Shell), T1083 (File and Directory Discovery), T1552.001 (Credentials In Files), T1552.004 (Unsecured Credentials: Private Keys)/registry, T1021.002 (SMB/Windows Admin Shares), T1555/credenciales VNC.
 **Fuente:** [TryHackMe - AllSignsPoint2Pwnage](https://tryhackme.com/room/allsignspoint2pwnage)
+
+---
+
+## ⚠️ Descargo de Responsabilidad (Disclaimer)
+
+Este contenido se presenta exclusivamente con fines académicos y educativos.
+
+**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
+**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
+**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
+**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.

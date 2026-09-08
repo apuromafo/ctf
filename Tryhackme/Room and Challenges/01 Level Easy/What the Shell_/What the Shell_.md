@@ -150,3 +150,14 @@
 **Learning chain:** tipos de shells → netcat (reverse/bind) → TTY y HTTP transfer → socat simple y cifrado → mkfifo → msfvenom/Metasploit → estabilización y payloads.
 **MITRE ATT&CK:** T1059.004 (Unix Shell), T1059.006 (Python), T1105 (Ingress Tool Transfer), T1071.001 (Application Layer Protocol: Web), T1040 (Network Sniffing)
 **Fuente:** [TryHackMe - What the Shell: An Introduction to Web Shells](https://tryhackme.com/room/introtoshells)
+
+---
+
+## ⚠️ Descargo de Responsabilidad (Disclaimer)
+
+Este contenido se presenta exclusivamente con fines académicos y educativos.
+
+**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
+**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
+**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
+**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.

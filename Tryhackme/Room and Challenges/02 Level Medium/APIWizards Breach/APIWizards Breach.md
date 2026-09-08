@@ -93,3 +93,14 @@ wget 192.168.0.22:8080/cde-backup.csv
 **Learning chain:** Inyección de comandos → escalada a root heredando credenciales (config.py) → persistencias múltiples → análisis del dump exfiltrante → descubrimiento y robo de la CDE.
 **MITRE ATT&CK:** T1190 (Exploit Public-Facing Application), T1059.006/Python, T1098.004 (SSH Authorized Keys), T1053.003 (Cron), T1543.002 (Systemd Service), T1546.004 (.bashrc), T1548.001/SUID, T1070.006 (Timestomping), T1041 (Exfiltration Over C2 Channel), T1484/Discovery.
 **Fuente:** [TryHackMe - APIWizards Breach](https://tryhackme.com/room/apiwizardsbreach)
+
+---
+
+## ⚠️ Descargo de Responsabilidad (Disclaimer)
+
+Este contenido se presenta exclusivamente con fines académicos y educativos.
+
+**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
+**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
+**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
+**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.

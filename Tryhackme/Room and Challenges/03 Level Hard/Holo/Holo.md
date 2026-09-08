@@ -496,3 +496,14 @@ nmap -p445 --script smb2-security-mode 10.200.112.30
 **MITRE ATT&CK:** T1190 (Exploit Public-Facing Application), T1505.003 (Web Shell), T1068 (Exploitation for Privilege Escalation), T1078 (Valid Accounts), T1003.001 (OS Credential Dumping: LSASS Memory), T1557 (Adversary-in-the-Middle), T1105 (Ingress Tool Transfer), T1059 (Command and Scripting Interpreter)
 
 **Fuente:** [TryHackMe - Holo](https://tryhackme.com/room/hololive)
+
+---
+
+## ⚠️ Descargo de Responsabilidad (Disclaimer)
+
+Este contenido se presenta exclusivamente con fines académicos y educativos.
+
+**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
+**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
+**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
+**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.

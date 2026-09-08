@@ -367,3 +367,14 @@ RCE $ wc -c /etc/passwd
 **Learning chain:** inyección de comandos → auth bypass (espacios) → datos sensibles + cracking de hashes → XXE/LFI → IDOR → credenciales por defecto → XSS por niveles → cookies y pickle (deserialización) → RCE en componentes → análisis de logs.
 **MITRE ATT&CK:** T1190 (Exploit Public-Facing Application), T1059.006 (Command and Scripting Interpreter: Python), T1078 (Valid Accounts), T1212 (Exploitation for Credential Access), T1505.003 (Web Shell), T1027 (Obfuscated Files), T1041 (Exfiltration Over C2), T1110.001 (Password Guessing), T1606.001 (Web Session Cookie) — cubre A1-A10 de OWASP.
 **Fuente:** [TryHackMe - OWASP Top 10](https://tryhackme.com/room/owasptop10)
+
+---
+
+## ⚠️ Descargo de Responsabilidad (Disclaimer)
+
+Este contenido se presenta exclusivamente con fines académicos y educativos.
+
+**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
+**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
+**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
+**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.

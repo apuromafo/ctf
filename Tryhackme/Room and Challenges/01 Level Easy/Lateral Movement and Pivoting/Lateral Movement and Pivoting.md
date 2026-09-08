@@ -165,3 +165,14 @@ Luego usar el exploit de Metasploit `rejetto_hfs_exec`.
 **MITRE ATT&CK:** T1021 (Remote Services), T1550.002 (Use Alternate Authentication Material: Pass the Hash), T1563 (Remote Service Session Hijacking), T1543 (Create or Modify System Process), T1090 (Proxy), T1572 (Protocol Tunneling)
 
 **Fuente:** [TryHackMe - Lateral Movement and Pivoting](https://tryhackme.com/room/lateralmovementandpivoting)
+
+---
+
+## ⚠️ Descargo de Responsabilidad (Disclaimer)
+
+Este contenido se presenta exclusivamente con fines académicos y educativos.
+
+**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
+**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
+**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
+**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.

@@ -106,3 +106,14 @@
 **Learning chain:** descargar y abrir el pcap → explorar pestañas de NetworkMiner (Hosts, Services, Credentials, Messages) → correlacionar MAC/IP → extraer credenciales y hashes → identificar hosts, SO, empresas y servicios → responder las preguntas de cada práctica.
 **MITRE ATT&CK:** T1071.001 (Application Layer Protocol: Web), T1046 (Network Service Discovery), T1033 (System Owner/User Discovery), T1555 (Credentials from Password Stores), T1021.002 (Remote Services: SMB/Windows Admin Shares)
 **Fuente:** [TryHackMe - NetworkMiner](https://tryhackme.com/room/networkminer)
+
+---
+
+## ⚠️ Descargo de Responsabilidad (Disclaimer)
+
+Este contenido se presenta exclusivamente con fines académicos y educativos.
+
+**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
+**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
+**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
+**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.

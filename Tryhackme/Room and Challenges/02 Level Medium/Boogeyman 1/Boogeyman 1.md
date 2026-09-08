@@ -73,3 +73,14 @@ tshark -r capture.pcap -Y 'dns.qry.name contains "bpakcaging.xyz"'
 **Learning chain:** Análisis de cabeceras email/DKIM → parsing de LNK (lnkparse) → correlación de logs PowerShell → análisis de tráfico C2 → detección de exfiltración vía DNS → recuperación del archivo exfiltrado (KeePass).
 **MITRE ATT&CK:** T1566 (Phishing), T1059.001 (PowerShell), T1082 (System Information Discovery), T1071.004 (Application Layer Protocol: DNS), T1041 (Exfiltration Over C2 Channel), T1048.003 (Exfiltration Over Alternative Protocol: DNS).
 **Fuente:** [TryHackMe - Boogeyman 1](https://tryhackme.com/room/boogeyman1)
+
+---
+
+## ⚠️ Descargo de Responsabilidad (Disclaimer)
+
+Este contenido se presenta exclusivamente con fines académicos y educativos.
+
+**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
+**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
+**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
+**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.

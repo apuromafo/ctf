@@ -124,3 +124,14 @@ DELETE /rest/products/{id}/reviews  # borrado de reseñas
 **Learning chain:** recon básico → SQLi → fuerza bruta / reset de contraseña → datos expuestos → control de acceso y API tampering → XSS (DOM/almacenado/reflejado) → Score Board.
 **MITRE ATT&CK:** T1190 (Exploit Public-Facing Application), T1213.003 (Data from Information Repositories: Code Repositories), T1005 (Data from Local System), T1110.003 (Password Spraying), T1606.001 (Web Session Cookie), T1189 (Drive-by Compromise)/XSS T1059.007 (JavaScript), T1505.003 (Web Shell no aplica) → retos prácticos de los OWASP Top 10 en una tienda web.
 **Fuente:** [TryHackMe - OWASP Juice Shop](https://tryhackme.com/room/owaspjuiceshop)
+
+---
+
+## ⚠️ Descargo de Responsabilidad (Disclaimer)
+
+Este contenido se presenta exclusivamente con fines académicos y educativos.
+
+**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
+**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
+**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
+**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.

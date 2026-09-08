@@ -122,3 +122,14 @@
 **Learning chain:** qué es Sysmon y cómo se configura → lectura de Event IDs 1/3/5/6/7 → análisis del log de eventos de red → reconstrucción de una intrusión completa (USB → descarga → C2 → persistencia → credenciales → salida).
 **MITRE ATT&CK:** T1200 (Hardware Additions), T1218.011 (Rundll32), T1218.005 (Mshta), T1059.001 (PowerShell), T1053.005 (Scheduled Task), T1003.001 (LSASS Memory), T1071.001 (Application Layer Protocol: Web)
 **Fuente:** [TryHackMe - Sysmon](https://tryhackme.com/room/sysmon)
+
+---
+
+## ⚠️ Descargo de Responsabilidad (Disclaimer)
+
+Este contenido se presenta exclusivamente con fines académicos y educativos.
+
+**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
+**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
+**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
+**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.

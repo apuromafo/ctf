@@ -17,11 +17,15 @@
 
 ### Task 1: Introducción
 
+**Explicación:** Desplegar y conectar a la máquina del room (app vulnerable). Tarea de introducción, sin respuesta.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | No answer needed - deploy and connect to the machine. | `No answer needed` |
 
 ### Task 2: Qué es CSRF
+
+**Explicación:** CSRF abusa de que la app **confía** (trust) en que quien manda la petición es quien la ve (porque lleva la cookie). Tras el login, el navegador adjunta la **cookie** de sesión automáticamente a cada petición (la same-origin policy no impide enviar la cookie en peticiones cross-origin).
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -30,11 +34,15 @@
 
 ### Task 3: Por Qué Funciona CSRF
 
+**Explicación:** La acción debe **cambiar el estado** (state-changing) del recurso (cambiar email, password, rol...), no solo leer datos (safe request). Por eso las peticiones de escritura son las que interesan al atacante.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What type of action is usually required for a CSRF attack to succeed? | `State-changing` |
 
 ### Task 4: Encontrando Vulnerabilidades CSRF
+
+**Explicación:** **POST** es la creencia errónea: un formulario HTML malicioso puede hacer POST igualmente. La defensa estándar son los **tokens anti-CSRF** (anti-CSRF tokens): un valor aleatorio ligado a la sesión que la app valida en las mutaciones (state-changing requests).
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -43,12 +51,26 @@
 
 ### Task 5: Explotación con un Formulario HTML
 
+**Explicación:** La demo de email: una página vulnerable permite cambiar el email por GET/POST sin token. Preparas un HTML en tu máquina que pida cambiar el email:
+
+```html
+<form method="POST" action="http://MACHINE_IP/...">
+    <input name="email" value="attacker@evilmail.thm">
+    <input type="submit" value="Submit">
+</form>
+<script>document.forms[0].submit();</script>
+```
+
+Al abrirlo con la sesión activa (o con auto-submit) el email cambia → los dos flags según el email usado.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What is the flag value after updating the email to `attacker@evilmail.thm`? | `THM{Got_The_Evil_Email001}` |
 | 2 | What is the flag value after updating the email to `special@evilmail.thm`? | `THM{My_Special_Email007}` |
 
 ### Task 6: Explotación sobre Tokens Débiles
+
+**Explicación:** El endpoint de cambio de rol lleva un token CSRF pero **predecible** (en realidad un user-id/base64); se reutiliza/craftea y se demota al admin de admin a staff → flag en el dashboard. La "aleatoriedad" del token era engañosa: estaba codificado en **base64**, por lo que se puede decodificar y forjar. ***Base64 no es seguridad*** — solo encoding.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -57,11 +79,15 @@
 
 ### Task 7: Buenas Prácticas
 
+**Explicación:** Buenas prácticas: tokens anti-CSRF fuertes y aleatorios, cookies `SameSite=Strict/Lax`, comprobar `Origin`/`Referer` en peticiones sensibles, y mínimo privilegio. Sin respuesta requerida.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | No answer needed - best practices understood. | `No answer needed` |
 
 ### Task 8: Conclusión
+
+**Explicación:** Resumen: CSRF explota confianza+cookies; la defensa es tokens robustos y cookies SameSite. *El navegador no es el usuario.* Confiar solo en la cookie = confiar en cualquiera que sepa hacer un GET/POST.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|

@@ -17,6 +17,8 @@
 
 ### Task 1: Dev tunes
 
+**Explicación:** `marvenly.com` no responde. Consultando crt.sh por `%.marvenly.com` se listan subdominios, incluido `uat-testing.marvenly.com`. Al abrir el subdominio dev, el footer del HTML firma con el usuario `notvibecoder23`. En GitHub existe el usuario `notvibecoder23` con el repo `marvenly_site` (4 commits); el `.patch` de un commit revela el email del autor `freelancedevbycoder23@gmail.com`. El historial de commits incluye el mensaje de abandono ("The project was marked as abandoned due to a payment dispute") y un commit "Removed my signature" cuyo diff aún contiene un comentario HTML oculto con la flag. 5 preguntas.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What is the subdomain where the development version of the website is hosted? | `uat-testing.marvenly.com` |
@@ -36,6 +38,8 @@
 6. **Diff:** el diff del commit de la "signature" aún guarda un comentario HTML oculto con la flag `THM{g1t_h1st0ry_n3v3r_f0rg3ts}`.
 
 **Learning chain:** marvenly.com (caído) → crt.sh %.marvenly.com → subdominios → uat-testing.marvenly.com (versión dev) → HTML subdominio → footer → firma notvibecoder23 → GitHub notvibecoder23 / repo marvenly_site (4 commits) → .patch del commit → email freelancedevbycoder23@gmail.com → historial → "abandoned due to a payment dispute" + "Removed my signature" → diff → comentario HTML oculto → flag.
+
+**Lección:** El historial de Git nunca olvida: ni los emails (en los `.patch`) ni las flags escondidas en los diffs de commits "eliminados".
 
 **MITRE ATT&CK:** T1596 (Search Open Technical Databases), T1593.001 (Search Open Websites/Domains: Social Engineering), T1589 (Gather Victim Identity Information).
 

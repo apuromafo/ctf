@@ -21,6 +21,8 @@
 |---|----------|-----------|
 | 1 | What is the flag? | `THM{aquabest_639228721228}` |
 
+**Explicación:** La flag tiene el formato `THM{<Water Station name en lowercase>_<Contact Number>}`, es decir, nombre de 8 caracteres + `_` + ese número (12 dígitos). El número `63922...` se descompone como `63` = código de país de Filipinas + `922` = prefijo de red Globe → queda `63-922-XXX-XXXX`. En Street View histórico de **2014** en Boni Ave (Mandaluyong) se ve "A******t Water Refilling Station" → **Aquabest**. Buscando "Aquabest Mandaluyong Boni" se localiza la página de contacto del negocio con el móvil `+63 922 872 1228` → se arma el formato `aquabest` + `639228721228` → `THM{aquabest_639228721228}`.
+
 ---
 
 **Metodología:**

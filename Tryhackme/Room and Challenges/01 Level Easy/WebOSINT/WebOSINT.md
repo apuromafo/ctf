@@ -21,6 +21,8 @@
 |---|----------|-----------|
 | 1 | (Preguntas de lectura / reading questions) | `No answer needed` |
 
+**Explicación:** Introducción de OSINT. La idea: cuando un sitio ya no existe (como RepublicofKoffee.com), sus huellas quedan en whois, archivos web y registros DNS históricos. Se empieza con una búsqueda con comillas (`"RepublicofKoffee.com"`) para encontrar referencias públicas.
+
 ### Task 2: Whois Registration
 
 | # | Pregunta | Respuesta |
@@ -31,11 +33,15 @@
 | 4 | What is listed for the name of the registrant? | `Redacted for privacy` (WhoisGuard) |
 | 5 | What country is listed for the registrant? | (buscar en el historial whois) |
 
+**Explicación:** Con **whois** (ICANN Lookup o dawhois.com) y el **Raw Registrar RDAP Response** se obtiene la información de registro del dominio RepublicofKoffee.com: registrar = **Namecheap Inc**, teléfono de la empresa registradora en el raw RDAP, primer nameserver en el historial whois (p. ej. whoxy.com). El registrant aparece como **Redacted for privacy** gracias a WhoisGuard, y el país del registrant se busca en el historial whois.
+
 ### Task 3: Ghosts of Websites Past
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What is the first name of the blog's author? | (buscar en el archivo de 2015) |
+
+**Explicación:** Usando la **Wayback Machine** (archive.org) se ven las versiones archivadas del sitio; el archivo de 2015 (el más antiguo/visible) contiene el nombre del autor del blog. Es una técnica clave de OSINT para recuperar contenido eliminado.
 
 ### Task 4: Taking Off The Training Wheels
 
@@ -44,11 +50,15 @@
 | 1 | What is the second nameserver listed for the domain? | (buscar en ICANN Lookup) |
 | 2 | What IP address was the domain listed on as of December 2011? | (buscar en ViewDNS.info) |
 
+**Explicación:** Con **ICANN Lookup** se confirma el segundo nameserver del dominio (además del primero visto en whois). Con **ViewDNS.info** se consulta el historial de IPs: en la entrada de diciembre de 2011 se obtiene la IP en la que estaba publicado el dominio. Estas herramientas reconstruyen la infraestructura histórica del dominio.
+
 ### Task 5: Final Exam: Connect the Dots
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Use the tools in Task 4 to confirm the link between the two sites. | (buscar el propietario de la IP compartida, añadir ", L.L.C") |
+
+**Explicación:** Las herramientas de la Task 4 (ViewDNS.info / ICANN Lookup) sirven para confirmar la conexión entre los dos sitios: ambos comparten la misma IP/historial. Se busca el **propietario de la IP compartida** y se añade ", L.L.C" para componer la respuesta final.
 
 ### Task 6: Debriefing
 
@@ -56,11 +66,15 @@
 |---|----------|-----------|
 | 1 | Click to complete | `No answer needed` |
 
+**Explicación:** Cierre del flujo OSINT; no requiere respuesta.
+
 ### Task 7: Wrap-up
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Update me.. | `No answer needed` |
+
+**Explicación:** Actualización/cierre del room; no requiere respuesta.
 
 ---
 

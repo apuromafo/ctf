@@ -17,11 +17,15 @@
 
 ### Task 1: Introducción
 
+**Explicación:** Inicio de fundamentos criptográficos (Pre Security). Tarea de introducción, sin respuesta.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | No answer needed - start of crypto fundamentals. | `No answer needed` |
 
 ### Task 2: Escondiendo Información: Cifrado Simétrico
+
+**Explicación:** El juego **"Secret Message Rescue"** es un simulador con varios niveles de cifrado de César; al completarlos todos entrega `THM{CAESAR_CIPHER_MASTER_2026}`. Para cifrar **CYBER** con la clave 5 se desplaza cada letra 5 posiciones: C→H, Y→D, B→G, E→J, R→W = `HDGJW`. La cadena `FVZCYR PNRFNE PVCURE` es **ROT13** (clave 13, la mitad del alfabeto la vuelve inversa): F→S, V→I, Z→M... = `SIMPLE CAESAR CIPHER`. El room pide la **clave** = `13` (el mensaje descifrado es "SIMPLE CAESAR CIPHER").
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -31,6 +35,8 @@
 
 ### Task 3: Compartiendo Claves con Seguridad: Cifrado Asimétrico
 
+**Explicación:** La clave **privada** es la que permanece secreta; la pública se comparte abiertamente. "Yay" describe exactamente la propiedad del *public-key encryption*: cifrar con la pública ➜ descifrar solo con la privada. El problema central que resuelve la asimetría es la **distribución de claves** (negociar material de clave sin compartir el secreto por el canal). En **HTTPS** el handshake es asimétrico (autenticación + intercambio de clave de sesión) y a partir de ahí los datos masivos se cifran con **simétrico** por velocidad.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | In asymmetric encryption, which key stays secret? | `Private key` |
@@ -39,6 +45,8 @@
 | 4 | After initial asymmetric exchange in HTTPS, what encryption type handles bulk data? | `Symmetric` |
 
 ### Task 4: Conclusión
+
+**Explicación:** Punto de partida hacia RSA/AES, certificados y PKI. La lección clave: *las claves son el verdadero secreto* — el cifrado resiste ataques; lo que suele fallar es la distribución o el almacenamiento de las claves. Tarea de cierre, sin respuesta.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|

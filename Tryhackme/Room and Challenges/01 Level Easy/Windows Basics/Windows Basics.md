@@ -21,6 +21,8 @@
 |---|----------|-----------|
 | 1 | I understand the learning objectives and am ready to learn about Windows! | `No answer needed` |
 
+**Explicación:** Introducción al room; la máquina del room es una **Windows Server 2019 Datacenter** en su rol de estación de trabajo "TryHatMe". No requiere respuesta.
+
 ### Task 2: Explorando el Espacio de Trabajo de Windows / Exploring the Windows Workspace
 
 | # | Pregunta | Respuesta |
@@ -29,6 +31,8 @@
 | 2 | Continue in Device specifications. How much **RAM** is installed on your new work PC? | `4.00 GB` |
 | 3 | Scroll to Windows specifications. Which **Version of Windows Server 2019 Datacenter** is installed? | `1809` |
 | 4 | Explore the **TryHatMe Onboarding** folder on the Desktop. What is the flag in **Welcome.txt**? | `THM{welcome_to_tryhatme!}` |
+
+**Explicación:** Se abre *About your PC* (Win+I → System → About, o buscando "About your PC"). En Device specifications: **Device name** = `TryHatMe`, **Installed RAM** = `4.00 GB`. En Windows specifications: **Version** = `1809` (build base de Server 2019). En el Desktop, la carpeta `TryHatMe Onboarding` contiene `Welcome.txt` con la first flag `THM{welcome_to_tryhatme!}`.
 
 ### Task 3: Configurando y Protegiendo Windows / Configuring and Securing Windows
 
@@ -39,11 +43,15 @@
 | 3 | Open the **Task Manager** → **Users** tab. Which **account is currently logged in**? | `Administrator` |
 | 4 | After your custom scan, click `Virus:DOS/EICAR_Test_File` and select **See details**. What file name is shown in **Affected items**? | `tryhatmemaldoc.txt` |
 
+**Explicación:** Se ejecuta `TryHatMeWelcome.exe` (botón derecho → Run as administrator si pide permisos) e inicia la app → flag `THM{your_first_day!}`. En Settings → Time & Language → Region → `United States`. En Task Manager → pestaña *Users* → cuenta activa = `Administrator` *(el room usó en versiones anteriores una pregunta distinta; se responde con la cuenta visible en la pestaña)*. En Windows Security → Protection history → detalle de `Virus:DOS/EICAR_Test_File` → *See details* → archivo afectado = `tryhatmemaldoc.txt` (el EICAR es un string estándar inofensivo usado para validar AV).
+
 ### Task 4: Conclusión / Conclusion
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Complete the room and continue on your cyber learning journey! | `No answer needed` |
+
+**Explicación:** Cierre del room; continuar el camino de aprendizaje de Windows.
 
 ---
 

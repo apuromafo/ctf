@@ -13,15 +13,29 @@
 
 **Contexto:** Explora el Cyber Kill Chain de Lockheed Martin, un framework de ciberseguridad que divide un ataque en siete fases para ayudar a las organizaciones a defenderse. Es parte del path SOC Level 1. Las siete fases: **Reconnaissance**, **Weaponization**, **Delivery**, **Exploitation**, **Installation**, **Command & Control (C2)** y **Actions on Objectives**.
 
+Las siete fases del Cyber Kill Chain:
+
+1. **Reconnaissance** — el atacante recopila información sobre el objetivo
+2. **Weaponization** — el atacante crea un payload o modifica uno existente
+3. **Delivery** — el atacante envía el payload al objetivo
+4. **Exploitation** — el payload explota una vulnerabilidad
+5. **Installation** — el atacante instala un backdoor o malware para persistencia
+6. **Command & Control (C2)** — el atacante controla el sistema comprometido
+7. **Actions on Objectives** — el atacante ejecuta sus objetivos (exfiltración, etc.)
+
 ## Solucionario
 
 ### Task 1: Introduction
+
+**Explicación:** Introducción al framework: el Cyber Kill Chain de Lockheed Martin divide un ataque en siete fases para ayudar a las organizaciones a entender y defenderse de las intrusiones. Sin respuesta requerida.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | No answer needed - introduction. | `No answer needed` |
 
 ### Task 2: Reconnaissance
+
+**Explicación:** La primera fase de un ataque: los adversarios recopilan información sobre infraestructura, empleados y tecnologías. Puede ser pasiva (WHOIS, scraping de redes sociales) o activa (ingeniería social, escaneo de puertos). Incluye OSINT y email harvesting. El **OSINT Framework** es una herramienta web que agrega las herramientas y recursos comunes de open-source intelligence; el **email harvesting** es el proceso de recopilar direcciones de correo.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -30,6 +44,8 @@
 
 ### Task 3: Weaponization
 
+**Explicación:** El atacante crea un payload o modifica uno existente basado en las vulnerabilidades del sistema objetivo. Incluye técnicas como la **obfuscación** (dificultar el análisis del código malicioso para evadir la detección) y **macros** maliciosas en documentos de MS Office (la característica integrada que hace posible crear un documento de Office malicioso).
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What technique is mentioned to evade detection by making it challenging to analyse the malicious code? | `Obfuscation` |
@@ -37,11 +53,15 @@
 
 ### Task 4: Delivery
 
+**Explicación:** El método de transmisión del payload al objetivo: emails de phishing, USB infectados o **watering hole attacks**. Un *watering hole attack* se dirige contra un grupo concreto de personas, infectando el sitio web que ese grupo visita habitualmente.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What is the name of the attack when it is performed against a specific group of people, and the attacker seeks to infect the website that the mentioned group of people is constantly visiting? | `Watering hole attack` |
 
 ### Task 5: Exploitation
+
+**Explicación:** El payload explota una vulnerabilidad. Incluye el **timestomping** (modificar los atributos de tiempo de los archivos para ocultar cambios o archivos nuevos) y las **web shells** (script malicioso plantado en el servidor web para mantener el acceso y permitir el acceso remoto al servidor comprometido).
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -50,12 +70,16 @@
 
 ### Task 6: Installation
 
+**Explicación:** El atacante instala un backdoor o malware para asegurar la persistencia. La **web shell** también permite ejecutar comandos del sistema operativo en el objetivo a través de una interfaz de navegador. La defensa clave es el **allowlisting** (permitir solo aplicaciones aprobadas para evitar la ejecución de software no autorizado o malicioso).
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What tactic allows attackers to execute operating system commands on a target via a web browser interface? | `web shell` |
 | 2 | What technique is mentioned to prevent the execution of unauthorised or malicious software by only allowing approved applications to run? | `allowlisting` |
 
 ### Task 7: Command & Control (C2)
+
+**Explicación:** El atacante establece el canal de comunicación con la víctima (C2 beaconing). El **DNS Tunneling** es la comunicación C2 donde la víctima hace solicitudes DNS regulares a un servidor y dominio pertenecientes al atacante. Para ocultar los datos como tráfico web cifrado se usa el protocolo **HTTPS**.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -64,17 +88,23 @@
 
 ### Task 8: Actions on Objectives (Exfiltration)
 
+**Explicación:** El atacante ejecuta sus objetivos finales, desde la exfiltración de datos hasta la interrupción de servicios. En Windows, el **Shadow Copy** es una tecnología que crea copias de seguridad o snapshots de archivos o volúmenes, incluso mientras están en uso, y se usa en ataques de ransomware/backup.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Can you provide a technology included in Microsoft Windows that can create backup copies or snapshots of files or volumes on the computer, even when they are in use? | `Shadow Copy` |
 
 ### Task 9: Practice Analysis
 
+**Explicación:** Práctica donde se identifican escenarios y se asigna cada uno a la fase correcta del Cyber Kill Chain. La flag es aleatoria por intento; el ejemplo mostrado es `THM{7HR347_1N73L_12_4w35om3}`.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Complete the practice analysis. Flag is random per attempt (example). | `THM{7HR347_1N73L_12_4w35om3}` |
 
 ### Task 10: Conclusion
+
+**Explicación:** Conclusión de la sala: repasa las siete fases y la utilidad defensiva del framework. Sin respuesta requerida.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|

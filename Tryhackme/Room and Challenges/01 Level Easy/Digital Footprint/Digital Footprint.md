@@ -17,11 +17,15 @@
 
 ### Task 1: The Leaked Photo
 
+**Explicación:** La foto filtrada tiene EXIF con las coordenadas GPS `26°12'14.76"S 28°2'50.28"E`, que sitúan la ciudad en Johannesburgo (Sudáfrica). 1 pregunta.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | In which city was the photo taken? | `Johannesburg` (`THM{Johannesburg}`) |
 
 ### Task 2: Archived Company Website
+
+**Explicación:** `warc-acme.com` no aparece en Wayback Machine. Se acude a los WARC Grabs de Archive Team (archive.org); el item `acme.com/jef/` contiene el campo `Firstfiledate` con valor `20160210224602`, que indica la primera publicación de la web. 1 pregunta.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -29,11 +33,15 @@
 
 ### Task 3: Mysterious Landmark
 
+**Explicación:** La imagen muestra "The Spire of Dublin". El edificio que lleva el letrero gaélico "ARD OIFIG AN PHOIST" es el General Post Office (GPO) de Dublín. 1 pregunta.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What is the landmark? | `General Post Office` (`THM{General Post Office}`) |
 
 ### Task 4: Internal Documents
+
+**Explicación:** El documento `.odt` contiene `meta.xml` cuyo metadato de autor es `markwilliams7243`. Buscando ese username se halla un perfil de YouTube con un único post que contiene la flag final. 1 pregunta.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -48,6 +56,8 @@
 4. **Task 4 (Documento):** el `.odt` contiene `meta.xml` cuyo metadato de autor es `markwilliams7243`; buscando ese username se halla un perfil de YouTube con un único post que contiene la flag final.
 
 **Learning chain:** Task 1 → exif foto → GPS → Johannesburgo → THM{Johannesburg} → Task 2 → warc-acme.com NO en Wayback → Archive Team WARC Grabs → Firstfiledate=20160210224602 → Task 3 → Spire of Dublin + letrero → General Post Office → Task 4 → .odt → meta.xml → markwilliams7243 → YouTube → flag final.
+
+**Lección:** Wayback no es el único archivo: los WARC Grabs de Archive Team guardan lo que Wayback no vio, y los metadatos ODF (meta.xml) filtran a los autores de documentos.
 
 **MITRE ATT&CK:** T1596 (Search Open Technical Databases), T1593 (Search Open Websites/Domains), T1589 (Gather Victim Identity Information).
 

@@ -21,12 +21,16 @@
 |---|----------|-----------|
 | 1 | (Check sin pregunta / check, no question) | `No answer needed` |
 
+**Explicación:** Introducción al room de fundamentos de seguridad inalámbrica en tres capas: Wi-Fi (WPA2/WPA3), Bluetooth (pairing/bluesnarfing) y RFID/NFC (cloning), más IoT (Zigbee/Z-Wave). No requiere respuesta.
+
 ### Task 2: Fundamentos de Redes Wi-Fi / Wi-Fi Network Fundamentals
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What is the **process** that occurs when a device connects to a wireless network? | `Association` |
 | 2 | What occurs when multiple devices communicate on the same frequency, affecting the wireless signal? | `Interference` |
+
+**Explicación:** **Association** es el handshake/protocolo cuando un cliente conecta a un AP (el proceso de asociación en el que el dispositivo se registra en el punto de acceso). **Interference** ocurre cuando muchos dispositivos hablan en la misma banda y se solapan → ruido de señal.
 
 ### Task 3: Seguridad Wi-Fi / Wi-Fi Security
 
@@ -36,6 +40,8 @@
 | 2 | Wi-Fi feature allowing connection by entering an **8-digit PIN** instead of a password? | `WPS` |
 | 3 | Between WPA2 and WPA3, which protocol resists **offline dictionary attacks**? | `WPA3` |
 
+**Explicación:** **Evil Twin / Rogue AP** es un AP malicioso que imita el SSID legítimo para capturar tráfico o credenciales. **WPS (Wi-Fi Protected Setup)** facilita la conexión con un PIN de 8 dígitos, pero el PIN es vulnerable a fuerza bruta. **WPA3-SAE** usa un handshake que impide ataques offline de diccionario contra el PMKID — ventaja clave sobre WPA2-PSK.
+
 ### Task 4: Seguridad Bluetooth / Bluetooth Security
 
 | # | Pregunta | Respuesta |
@@ -44,12 +50,16 @@
 | 2 | What frequency band does Bluetooth operate on? | `2.4 GHz` |
 | 3 | Attacker downloads contacts and messages without authorisation. What type of attack is this? | `Bluesnarfing` |
 
+**Explicación:** **Pairing** es el proceso de emparejamiento con código PIN/passkey (confirmación del código de 6 dígitos). Bluetooth opera en la banda de **2.4 GHz** (banda ISM compartida con Wi-Fi y otros). **Bluesnarfing** roba datos (contactos, mensajes) por Bluetooth — diferente de **Bluejacking** (solo envío no solicitado de mensajes).
+
 ### Task 5: Seguridad RFID y NFC / RFID and NFC Security
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Attacker reads data from a badge and writes it to a blank card. What technique is this? | `Cloning` |
 | 2 | Badge lost — to prevent unauthorised access, what should be done to the card's access rights? | `Deactivated` |
+
+**Explicación:** **Cloning** copia el contenido RFID/NFC de un badge a una tarjeta nueva (el atacante lee los datos del badge y los escribe en una tarjeta en blanco). Ante un badge perdido se **Deactivated** (dar de baja) en el sistema de control de acceso para prevenir el acceso no autorizado.
 
 ### Task 6: Otras Tecnologías / Other Wireless Technologies
 
@@ -58,17 +68,23 @@
 | 1 | Smart lights + motion sensors communicating via low-power mesh network → which technology? | `Zigbee` |
 | 2 | Between S0 and S2, which Z-Wave security framework is vulnerable to key interception due to its use of an **all-zero encryption key**? | `S0` |
 
+**Explicación:** Entre Zigbee/Z-Wave/EnOcean (candidatos para IoT), el escenario "smart lights + motion sensors via low-power mesh" apunta a **Zigbee** (más común en domótica; usan mesh con low-power). En **Z-Wave**, **S0** usa claves de cifrado iniciales predefinidas (todo-ceros), lo que lo hace vulnerable a interceptación de clave; **S2** corrige esto.
+
 ### Task 7: Knowledge Test *(static-site)*
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What is the **flag**? | `THM{w1r3l3ss_thr34ts_1d3nt1f13d}` |
 
+**Explicación:** El static-site es un simulador: se pulsan los botones de cada escenario dentro del activity del task para ver el flag → `THM{w1r3l3ss_thr34ts_1d3nt1f13d}`.
+
 ### Task 8: Conclusión / Conclusion
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | (Check sin pregunta / check, no question) | `No answer needed` |
+
+**Explicación:** Cierre del room. Lección: la seguridad de un IoT no empieza en el firmware, empieza en el protocolo wireless (WPA3, emparejamiento con código alto y revocación de badges son la primera línea).
 
 ---
 

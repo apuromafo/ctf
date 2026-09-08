@@ -21,12 +21,18 @@
 |---|----------|-----------|
 | 1 | Are you ready? | `No answer needed` |
 
+**Explicación:** El phishing es el camino de acceso inicial más usado en pentest; este room lo cubre desde la perspectiva del pentester.
+
 ### Task 2: Phishing 101
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What is the primary channel used during a **smishing** attack? | `SMS` |
 | 2 | You are a CEO and have just received a phishing email **sent only to you**. What type of phishing is this? | `Whaling` |
+
+**Explicación:**
+- **Smishing:** SMS / mensajes de texto (SMS + phishing = smishing; vishing = voz).
+- **CEO:** spear phishing dirigido a un ejecutivo de alto cargo = **whaling**.
 
 ### Task 3: Psicología del Phishing / Psychology of Phishing
 
@@ -37,12 +43,23 @@
 | 3 | A message promising **exclusive access** to a product **no one else knows about**. Which principle? | `Curiosity` |
 | 4 | An email claiming your credentials were found in a **recent data breach**. Which principle? | `Fear` |
 
+**Explicación:**
+- **Urgency:** countdown → "expira en 24h".
+- **Authority:** el rango/cargo → "soy el ejecutivo".
+- **Curiosity:** promesa de información exclusiva/secreta → "nadie más lo sabe".
+- **Fear:** alarma sobre un incidente personal → "brecha, credenciales filtradas".
+- Los 6 principios: **Scarcity · Urgency · Authority · Fear · Curiosity · Trust** (memotécnica mental: SUAFCT).
+
 ### Task 4: Técnicas de Phishing / Phishing Techniques
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Which technique relies on users making a **typo**? | `Typosquatting` |
 | 2 | Which three security measures help defend against email **spoofing**? *(Alphabetical order, separated by commas)* | `DKIM, DMARC, SPF` |
+
+**Explicación:**
+- **Typosquatting:** registrar dominios similares por error de tecleo (`tryhacme.com` vs `tryhackme.com`).
+- **Orden alfabético:** **DKIM, DMARC, SPF** (DomainKeys Identified Mail; Domain-based Message Authentication, Reporting & Conformance; Sender Policy Framework).
 
 ### Task 5: Anatomía de una Campaña / Anatomy of a Phishing Campaign
 
@@ -52,11 +69,21 @@
 | 2 | Which metric measures the percentage of users who **open an attachment**? | `Attachment Detonation Rate` |
 | 3 | A client has a **click rate of 10%**. Which single recommendation from the table? | `Focused security awareness training` |
 
+**Explicación:**
+- **Benchmarks:** Credential Entry Rate → `<2% low`, `2–5% moderate`, `>5% high` → **6% = High risk**.
+- **Métrica de adjuntos:** Attachment Detonation Rate (% de usuarios que abren/ejecutan un adjunto).
+- **Click rate 10%:** está en el rango "8–14% acceptable" → recomendación única = **Focused security awareness training**. (Por encima de 14% sería el mismo tipo de formación pero "focused" cambia a otra acción según tabla; con 10% aplica directamente la del renglón Click Rate.)
+
 ### Task 6: El Kit de Ingeniería Social / The Social Engineering Toolkit *(vm)*
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What is the **password flag**? | `THM{you_just_got_phished!}` |
+
+**Explicación:**
+- **Contexto del lab:** SSH `attacker:attacker1234` a la VM `MACHINE_IP`. Preparar el sitio (usar `/home/attacker/setoolkit/`).
+- **SET — orden de menús:** `1. Social-Engineering Attacks` → `2. Website Attack Vectors` → `3. Credential Harvester Attack Method` → `3. Custom Import` (usar tu propio HTML; IP POST-back = `MACHINE_IP`; path `/home/attacker/setoolkit/`; opción `1. Copy just the index.html`; URL `http://tryacounting.thm` — nótese el **typo** intencional).
+- **Correo:** Rainloop en `http://MACHINE_IP:8080` con `attacker@phisher.thm : attacker1234`. Elegir la alias **`support@tryaccounting.thm`** en el campo *From* para esquivar el filtro de seguridad y enviar el correo a `bob@tryaccounting.thm` (asunto tipo `Action Required: Password Expiration Notice` con el link `http://tryacounting.thm`).
 
 ### Task 7: Conclusión / Conclusion
 
@@ -64,16 +91,16 @@
 |---|----------|-----------|
 | 1 | Well done on completing this room! | `No answer needed` |
 
----
+**Explicación:** Cierre del room. Siguiente reto sugerido: **You Got Mail**.
 
 **Metodología:**
 1. **Phishing 101:** smishing usa SMS/mensajes de texto (SMS + phishing = smishing; vishing = voz); un spear phishing dirigido a un ejecutivo de alto cargo es **whaling**.
 2. **Psicología:** los 6 principios son Scarcity, Urgency, Authority, Fear, Curiosity, Trust: countdown → "expira en 24h" = **Urgency**; el rango/cargo ("soy el ejecutivo") = **Authority**; promesa de información exclusiva/secreta ("nadie más lo sabe") = **Curiosity**; alarma sobre un incidente personal ("brecha, credenciales filtradas") = **Fear**.
-3. **Técnicas:** **Typosquatting** registra dominios similares por error de tecleo (`tryhacme.com` vs `tryhackme.com`); la defensa contra spoofing en orden alfabético es **DKIM, DMARC, SPF** (DomainKeys Identified Mail; Domain-based Message Authentication, Reporting & Conformance; Sender Policy Framework).
-4. **Anatomía de campaña:** benchmarks → Credential Entry Rate `<2% low`, `2–5% moderate`, `>5% high` → 6% = **High risk**; la métrica de adjuntos es **Attachment Detonation Rate** (% de usuarios que abren/ejecutan un adjunto); con click rate 10% (rango "8–14% acceptable") la recomendación única es **Focused security awareness training**.
-5. **Lab de SET:** responder antes los conceptos (Task 2–5) leyendo las definiciones del room. SSH `attacker:attacker1234` a la VM `MACHINE_IP`, preparar el sitio en `/home/attacker/setoolkit/` y lanzar **SET** → Website Attack Vectors → Credential Harvester (Custom Import) con el HTML propio (IP POST-back = `MACHINE_IP`, opción `1. Copy just the index.html`, URL `http://tryacounting.thm` — nótese el **typo** intencional).
-6. **Verificar el harvester** en `http://MACHINE_IP` ("Time to Get Phishy"). Rainloop en `http://MACHINE_IP:8080` con `attacker@phisher.thm : attacker1234`: elegir la alias **`support@tryaccounting.thm`** en el campo *From* para esquivar el filtro de seguridad y enviar el correo a `bob@tryaccounting.thm` (asunto tipo `Action Required: Password Expiration Notice` con el link `http://tryacounting.thm`).
-7. **Recoger credenciales:** en la terminal de SET aparecen las credenciales de Bob → **password flag = `THM{you_just_got_phished!}`**. Cierra el ciclo: psicología + técnica + herramientas + reporting. Siguiente reto sugerido: **You Got Mail**.
+3. **Técnicas:** **Typosquatting** registra dominios similares por error de tecleo (`tryhacme.com` vs `tryhackme.com`); la defensa contra spoofing en orden alfabético es **DKIM, DMARC, SPF**.
+4. **Anatomía de campaña:** benchmarks → Credential Entry Rate `<2% low`, `2–5% moderate`, `>5% high` → 6% = **High risk**; la métrica de adjuntos es **Attachment Detonation Rate**; con click rate 10% la recomendación única es **Focused security awareness training**.
+5. **Lab de SET:** SSH `attacker:attacker1234` a la VM `MACHINE_IP`, preparar el sitio en `/home/attacker/setoolkit/` y lanzar **SET** → Website Attack Vectors → Credential Harvester (Custom Import) con el HTML propio (IP POST-back = `MACHINE_IP`, opción `1. Copy just the index.html`, URL `http://tryacounting.thm` — el **typo** intencional).
+6. **Verificar el harvester** en `http://MACHINE_IP` ("Time to Get Phishy"). Rainloop en `http://MACHINE_IP:8080` con `attacker@phisher.thm : attacker1234`: alias **`support@tryaccounting.thm`** en el campo *From* y enviar a `bob@tryaccounting.thm` (asunto `Action Required: Password Expiration Notice` con el link `http://tryacounting.thm`).
+7. **Recoger credenciales:** en la terminal de SET aparecen las credenciales de Bob → **password flag = `THM{you_just_got_phished!}`**.
 
 **Learning chain:** OSINT → objetivo Bob (bob@tryaccounting.thm) + política de passwords estricta → typosquatting `http://tryacounting.thm` (una 'c' menos) → SET credential harvester (custom import) → email spoofing con alias `support@tryaccounting.thm` desde Rainloop → pretexto "Action Required: Password Expiration Notice" (urgency + authority) → víctima introduce credenciales → SET las captura → THM{you_just_got_phished!}
 

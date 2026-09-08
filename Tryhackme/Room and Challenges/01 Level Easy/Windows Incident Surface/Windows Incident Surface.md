@@ -21,12 +21,16 @@
 |---|----------|-----------|
 | 1 | (Preguntas de lectura / reading questions) | `No answer needed` |
 
+**Explicación:** En el cambiante panorama de la ciberseguridad, no se puede depender solo de un enfoque reactivo. El objetivo no es un análisis exhaustivo, sino un triage eficiente y un descubrimiento accionable.
+
 ### Task 2: Reliability of the System Tools
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What **tool** did the adversary use to delete the logs? | `wevtutil` |
 | 2 | What was the **registry path** used by the adversary to store and steal the login credentials? | `HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\WDigest` |
+
+**Explicación:** Los atacantes pueden modificar las **variables de entorno** para secuestrar el flujo de ejecución (ATT&CK T1574.007). Un **perfil de PowerShell** es un script que se ejecuta cada vez que se lanza PowerShell, útil para persistir. La tool usada para borrar logs fue **`wevtutil`** (T1070.001 Clear Windows Event Logs); las credenciales se almacenaron/robaron vía la clave **WDigest** `HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\WDigest` (permite guardar credenciales en texto plano en memoria).
 
 ### Task 3: System Information
 
@@ -36,6 +40,8 @@
 | 2 | What is the **OS version** of the compromised host? | `10.0.17763` |
 | 3 | What is the **Time ID** of the compromised host? | `Turkey Standard Time` |
 
+**Explicación:** El reconocimiento inicial del host comprometido (T1082 System Information Discovery) anota: hostname `CCTL-WS-018-b21`, OS version `10.0.17763` (build de Windows 10/Server 2019) y la zona horaria `Turkey Standard Time`.
+
 ### Task 4: User Accounts
 
 | # | Pregunta | Respuesta |
@@ -43,6 +49,8 @@
 | 1 | What is the total number of suspicious accounts? | `3` |
 | 2 | What is the security identifier (SID) of the Guest account? | `S-1-5-21-1966530601-3185510712-10604624-501` |
 | 3 | When was the last time the Admin account (the one with the deliberate typo) was logged in? (Answer format: MM/DD/YY HH:MM:SS XM) | `2/28/2024 10:21:10 AM` |
+
+**Explicación:** Los SIDs terminan en un **RID** (Relative Identifier): 500 = Administrator, 501 = Guest. Se identifican **3** cuentas sospechosas; el SID del Guest es `S-1-5-21-1966530601-3185510712-10604624-501` (RID 501). La cuenta Admin con el typo deliberado se logueó por última vez el `2/28/2024 10:21:10 AM`. Cazar cuentas inesperadas (nombre raro, RID unprivileged) es de alto ROI.
 
 ### Task 5: Processes
 
@@ -54,6 +62,8 @@
 | 4 | What is the **full path** of the suspicious program for AnyDesk? Enter your answer in a **defanged** format. | `D:\AnyDesk[.]exe` |
 | 5 | What **port** is used by the LMV Co. firewall rules? | `5985` |
 
+**Explicación:** El análisis de procesos (T1055 Process Injection, T1059) encuentra el binario malicioso `INITIAL_LANTERN[.]exe` (defanged) en `C:\Users\Administrator\AppData\SpcTmp\` con conexión saliente al puerto remoto `8888`. Se detecta un AnyDesk sospechoso `D:\AnyDesk[.]exe` (RAT legítimo usado como backdoor) y las reglas de firewall de LMV Co. usan el puerto `5985` (WinRM).
+
 ### Task 6: Persistence
 
 | # | Pregunta | Respuesta |
@@ -61,6 +71,8 @@
 | 1 | Which **user account** will be used to run the AnyDesk application? | `Public` |
 | 2 | What is the **value data** stored in the **"Userinit" key**? Enter your answer in a **defanged** format. | `C:\Windows\system32\userinit[.]exe, cmd[.]exe /c "start /min netsh[.]exe -c"` |
 | 3 | What is the **name** of the suspicious **DLL** linked under the **netshell** hive key? | `.\fwshield.dll` |
+
+**Explicación:** La persistencia vía registro: AnyDesk se configura para ejecutarse con la cuenta `Public` (T1078 Valid Accounts / T1547.001). El key **Userinit** (`HKLM\SOFTWARE\...\Winlogon\Userinit`) fue modificado con valor defanged `C:\Windows\system32\userinit[.]exe, cmd[.]exe /c "start /min netsh[.]exe -c"` (T1547.004). El hive **netshell** enlaza la DLL sospechosa `.\fwshield.dll` (T1574.001 hijacking de DLL).
 
 ### Task 7: Services
 
@@ -71,6 +83,8 @@
 | 3 | What is the **name** of the non-running service that caught our attention? | `aurora-agent` |
 | 4 | What is the **SHA256 value** of the non-running service executable? | `D5C8BF2D3B56B21639D8152DB277DD714BA1A61BDAF2350BD0FF7E61D2A99003` |
 | 5 | What is the **original filename** of the non-running service executable? Enter your answer in a **defanged** format. | `x3xv5weg[.]exe` |
+
+**Explicación:** Crear **servicios** es una técnica de persistencia (T1543.003 Create or Modify System Process: Windows Service). El servicio activo sospechoso es `LMVCSS` (SHA256 `E9AA7564B2D1D612479E193A9F8CB70DF9CFBE02A39900EEE22FE266F5320EBF`); el servicio no activo que llama la atención es `aurora-agent` (SHA256 `D5C8BF2D3B56B21639D8152DB277DD714BA1A61BDAF2350BD0FF7E61D2A99003`) cuyo original filename es `x3xv5weg[.]exe` (defanged) — services con nombres no estándar y binarios en ubicaciones inusuales son indicadores claros.
 
 ### Task 8: Network
 
@@ -83,6 +97,8 @@
 | 5 | What is the **name** of the potential proxy script located in the suspicious non-default temp folder? Enter your answer in a **defanged** format. | `Invoke-SocksProxy[.]psm1` |
 | 6 | What is the **SHA256 value** of the potential proxy script located in the suspicious non-default temp folder? | `E7697645F36DE5978C1B640B6B3FC819E55B00EE8D9E9798919C11CC7A6FC88B` |
 | 7 | What is the **label** of the hidden disc volume? | `Setups` |
+
+**Explicación:** El análisis de red (activos espía: T1016, T1049) revela: el proceso padre del ejecutable INITIAL_LANTERN es `services[.]exe` (defanged); los intentos de conexión SSH usan el usuario `James` (T1021.001 Remote Services); el proceso aurora tiene como padre `svchost[.]exe` (defanged). En temp del usuario por defecto hay `jmp[.]exe` (defanged); en la carpeta temp no por defecto sospechosa hay un script proxy **`Invoke-SocksProxy[.]psm1`** (T1090 Proxy) con SHA256 `E7697645F36DE5978C1B640B6B3FC819E55B00EE8D9E9798919C11CC7A6FC88B`. El volumen oculto está etiquetado como `Setups`.
 
 ---
 

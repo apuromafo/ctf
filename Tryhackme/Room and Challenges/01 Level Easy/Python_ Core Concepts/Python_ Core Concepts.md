@@ -21,6 +21,8 @@
 |---|----------|-----------|
 | 1 | Let's master Python's core concepts! | `No answer needed` |
 
+**Explicación:** Serie Python: este room = fundamentos; el compañero = building scripts. (Se accede a la VM del room).
+
 ### Task 2: Review Rápida / Quick Review: Hello World, Variables, and Conditionals
 
 | # | Pregunta | Respuesta |
@@ -28,6 +30,11 @@
 | 1 | What **built-in function** reveals the data type of a value? | `type` |
 | 2 | If a user types `3.14` at an `input()` prompt, what **data type** does Python store it as before any conversion? | `str` (string) |
 | 3 | On the attached VM, open and run `fstrings_demo.py`. What is the **last line** printed to the terminal? | `Scan complete: 192.168.1.1 has 3 open ports` |
+
+**Explicación:**
+- **`type()`:** `type(3.14)` → `<class 'float'>`.
+- **input():** siempre `str`; hay que castear (`float(prompt)` / `int(prompt)`).
+- **fstrings_demo.py:** demo de f-strings estilo mini port-scanner; la última línea imprime el resumen. *Respuesta literal: **`Scan complete: 192.168.1.1 has 3 open ports`**.*
 
 ### Task 3: Trabajando con Strings / Working with Strings
 
@@ -37,6 +44,11 @@
 | 2 | Given `word = "TryHackMe"`, what does `word[3:7]` return? | `HackM` |
 | 3 | What string **method** converts `"ADMIN"` to `"admin"`? | `lower` |
 
+**Explicación:**
+- **`len("TryHackMe")`** = 9.
+- **Indexación / slicing:** `word[3:7]` = caracteres desde el índice 3 al 6 → **`HackM`** (índices: T=0 r=1 y=2 H=3 a=4 c=5 k=6 M=7 e=8).
+- **`.lower()`:** `"ADMIN".lower()` → `"admin"` (también existe `.upper()`).
+
 ### Task 4: Listas y Diccionarios / Lists and Dictionaries
 
 | # | Pregunta | Respuesta |
@@ -44,6 +56,11 @@
 | 1 | What method **adds an element to the end** of a list? | `append` |
 | 2 | Given `services = {22: "SSH", 80: "HTTP"}`, what does `services[80]` return? | `"HTTP"` |
 | 3 | What dictionary method lets you retrieve a value with a **safe fallback** if the key does not exist? | `get` |
+
+**Explicación:**
+- **`.append(x)`:** `ports = [22]; ports.append(80)` → `[22, 80]`.
+- **Dict lookup:** `services[80]` → **`"HTTP"`** (+ KeyError si no existe).
+- **`.get(key, default)`:** `services.get(443, "closed")` → `"closed"`.
 
 ### Task 5: Operadores Aritméticos y de Membresía / Arithmetic and Membership Operators
 
@@ -53,6 +70,10 @@
 | 2 | What does `10 // 3` evaluate to? | `3` |
 | 3 | What does `2 ** 10` evaluate to? | `1024` |
 
+**Explicación:**
+- **`%`** = módulo (resto). **`//`** = floor division (`10 // 3 = 3`). **`**`** = exponente (`2 ** 10 = 1024`).
+- De paso: `in`/`not in` son los operadores de membresía (`"ssh" in service`).
+
 ### Task 6: Bucles: for y while / Loops: for and while
 
 | # | Pregunta | Respuesta |
@@ -61,13 +82,18 @@
 | 2 | What does `range(3)` produce? | `0 1 2` (0, 1, 2) |
 | 3 | What keyword **immediately exits** a loop? | `break` |
 
+**Explicación:**
+- **`for item in lista:`** itera directamente sobre cada elemento (el mejor ajuste).
+- **`range(3)`** genera `0, 1, 2` (secuencia iterable).
+- **`break`** corta el bucle; `continue` salta solo a la siguiente iteración.
+
 ### Task 7: Conclusión / Conclusion
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | I have successfully completed the room! | `No answer needed` |
 
----
+**Explicación:** Continúa con Python: Building Scripts.
 
 **Metodología:**
 1. **Review rápida:** `type(3.14)` → `<class 'float'>`; `input()` siempre devuelve `str`, hay que castear (`float(prompt)` / `int(prompt)`); en la VM, `fstrings_demo.py` es una demo de f-strings estilo mini port-scanner y su última línea imprime el resumen literal **`Scan complete: 192.168.1.1 has 3 open ports`**.
@@ -76,6 +102,14 @@
 4. **Operadores:** `%` = módulo (resto); `//` = floor division (`10 // 3` = 3); `**` = exponente (`2 ** 10` = 1024); además `in`/`not in` son los operadores de membresía (`"ssh" in service`).
 5. **Bucles:** `for item in lista:` itera directamente sobre cada elemento (el mejor ajuste); `range(3)` genera la secuencia iterable `0, 1, 2`; `break` corta el bucle y `continue` salta solo a la siguiente iteración.
 6. **Cierre:** arrancar la VM y ejecutar `fstrings_demo.py` → copiar la última línea → completar el check del final y continuar con **Python: Building Scripts**.
+
+```
+type() + input() (str) -> f-strings (fstrings_demo.py) -> strings (len, slicing, lower)
+  -> listas (append) + dicts (get) -> operadores (%, //, **) -> loops (for, range, break)
+  -> mini-port-scanner en f-strings (puente hacia scripting)
+```
+
+**Lección:** *Python no "adivina": todo lo que entra por `input()` es texto y el slicing cuenta desde 0.* Dominar tipos e índices ahora evita bugs de scripting en los siguientes rooms.
 
 **Learning chain:** type() + input() (str) → f-strings (fstrings_demo.py) → strings (len, slicing, lower) → listas (append) + dicts (get) → operadores (%, //, **) → loops (for, range, break) → mini-port-scanner en f-strings (puente hacia scripting)
 

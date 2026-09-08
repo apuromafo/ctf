@@ -17,6 +17,8 @@
 
 ### Task 1: play
 
+**Explicación:** Se despliega una app web con una VM (http://MACHINE_IP). Es un tablero de ajedrez llamado "EndgameTrainer" que pide resolver un mate en 1 con la posición FEN `6k1/5ppp/8/8/8/8/5PPP/R5K1`: solo hay que mover la torre de a1 a a8 (`Ra8`) para dar mate. Al mover la pieza, un popup bloquea la partida ("I'll shut down your PC..."), pero leyendo `/js/app.js` se descubre que `preMoveCheck()` simplemente clona el tablero y bloquea el movimiento en el cliente mientras que los movimientos legales se envían por `fetch POST /api/move` con `{from, to, promotion}`. Hablando directamente con la API y mandando `{"from":"a1","to":"a8"}` se obtiene `{"ok":true,"move":"a1a8","status":"checkmate","winner":"white","flag":"THM{...}"}` con la flag.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What is the flag? | `THM{cl13nt_s1d3_ch3ckm4t3}` |
@@ -32,6 +34,8 @@
 6. **Flag:** el servidor responde `{"ok":true,"move":"a1a8","status":"checkmate","winner":"white","flag":"THM{cl13nt_s1d3_ch3ckm4t3}"}`.
 
 **Learning chain:** http://MACHINE_IP (EndgameTrainer) → leer /js/app.js → preMoveCheck() valida SOLO en el cliente (bloquea Ra8) → POST /api/move directo con {"from":"a1","to":"a8"} → response: checkmate / winner:white / flag.
+
+**Lección:** La validación que vive solo en el cliente nunca es seguridad: el servidor debe validar por sí mismo cualquier entrada, porque el frontend siempre puede saltarse.
 
 **MITRE ATT&CK:** T1190 (Exploit Public-Facing Application), T1059.007 (Command and Scripting Interpreter: JavaScript), T1071.001 (Application Layer Protocol: Web Protocols).
 

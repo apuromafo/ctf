@@ -21,6 +21,8 @@
 |---|----------|-----------|
 | 1 | What is the flag? | `THM{R3v3rs3_Sh3ll_L0v3_C0nn3ct10ns}` |
 
+**Explicación:** El salón de *speed chatting* permite subir un archivo (avatar/foto) al perfil. La subida no valida ni la extensión ni el contenido MIME: se acepta `shell.php`. Tras la subida, el archivo queda accesible en el directorio público del sitio (`/uploads/`). Se invoca `GET /uploads/shell.php?cmd=id` (webshell) y, con un listener `nc -lvnp`, se manda la reverse shell clásica en PHP para obtener una shell interactiva; con `cat flag.txt` (o `find / -name '*flag*'`) se obtiene la flag `THM{R3v3rs3_Sh3ll_L0v3_C0nn3ct10ns}`.
+
 ---
 
 **Metodología:**

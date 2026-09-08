@@ -17,11 +17,15 @@
 
 ### Task 1: Introduction
 
+**Explicación:** Tarea de introducción sin pregunta; no requiere respuesta.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | No answer needed | `No answer needed` |
 
 ### Task 2: Hadoop Basics
+
+**Explicación:** Preguntas teóricas sobre la arquitectura Hadoop: el **Primary NameNode** mantiene activamente el árbol de directorios del datalake; el **Edge Node** provee aplicaciones a los usuarios; **YARN** se encarga del scheduling de trabajos; **Ranger** da control de acceso granular; un datalake que usa Kerberos se llama **Kerberised**; y el mayor clúster Hadoop del mundo es el de **Facebook**.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -34,6 +38,8 @@
 
 ### Task 3: Initial Access via Apache Zeppelin
 
+**Explicación:** En el edge node corre el servicio **Zeppelin** (notebooks). Su autenticación está configurada en **`shiro.ini`**, que incluye credenciales por defecto: **`user1:password2`**. Una vez dentro, uno de los notebooks esconde la primera flag.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What edge node service is running on this host? | `Zeppelin` |
@@ -43,6 +49,15 @@
 
 ### Task 4: Code Execution via the Interpreters
 
+**Explicación:** El usuario autorizado a usar los interpreters y el notebook (configurado en Zeppelin) tiene la contraseña **`p@ssw0rd12345`**. El interpreter activo capaz de ejecutar código es **`python`**: los notebooks de Zeppelin son una puerta directa a RCE. El proceso corre como el usuario OS **`zp`**, que puede leer `flag2.txt` en su home.
+
+```python
+# desde un notebook con interpreter python
+import subprocess
+print(subprocess.check_output(["id"]).decode())
+print(open("/home/zp/flag2.txt").read())
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What is the password of the user allowed to interface with the interpreters and provided notebook? | `p@ssw0rd12345` |
@@ -51,6 +66,16 @@
 | 4 | What is the value of the flag found in the user's home directory (flag2.txt)? | `THM{It.Was.Hydrogen!}` |
 
 ### Task 5: Kerberos Keytab and HDFS
+
+**Explicación:** En el nodo, los keytabs de los servicios Hadoop viven en **`/etc/security/keytabs/`**; el asociado al usuario comprometido es **`zp.service.keytab`**. Con `klist` se listan los principals almacenados y el primero es **`zp/hadoop.docker.com@EXAMPLE.COM`**. La autenticación completa y verbosa es:
+
+```bash
+kinit zp/hadoop.docker.com@EXAMPLE.COM -k -V -t /etc/security/keytabs/zp.service.keytab
+klist
+hdfs dfs -ls / ; hdfs dfs -cat /user/zp/flag3.txt
+```
+
+Con el ticket válido se accede a HDFS y se lee `flag3.txt` del home de `zp`.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -62,6 +87,13 @@
 
 ### Task 6: YARN Impersonation
 
+**Explicación:** Para escalar se suplanta al servicio **`yarn`**: reutilizando el mecanismo de impersonación de HDFS/YARN, se obtiene acceso como ese usuario. Los flags aparecen en su home de HDFS (`flag4.txt`) y en su home del sistema operativo (`flag5.txt`).
+
+```bash
+# impersonación del servicio yarn (concepto: delegar el token de yarn)
+hdfs dfs -cat /user/yarn/flag4.txt ; cat /home/yarn/flag5.txt
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What is the name of the service we will attempt to impersonate for privilege escalation? | `yarn` |
@@ -70,12 +102,16 @@
 
 ### Task 7: NodeManager Flags
 
+**Explicación:** Escalando más dentro del clúster se llega a la cuenta del **NodeManager**: su flag en HDFS es `flag6.txt` y su flag en el home del SO es `flag7.txt`, ambos recuperados con acceso a `yarn`/`nobody`.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What is the value of the flag associated with the NodeManager's HDFS home directory (flag6.txt)? | `THM{Regional.Assistant.Manager}` |
 | 2 | What is the value of the flag associated with the NodeManager's OS home directory (flag7.txt)? | `THM{Assistance.To.The.Regional.Manager}` |
 
 ### Task 8: Root Privilege Escalation
+
+**Explicación:** Abusando del entorno del clúster (configs con permisos relajados de los servicios de Hadoop y el directorio de logs/tmp compartido) se escala a **root**: `flag8.txt` está en el home de root y `flag9.txt` en el home HDFS de root.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -84,11 +120,15 @@
 
 ### Task 9: Secondary Cluster Node
 
+**Explicación:** Con la sesión de root y el contexto del clúster (yarn/nodemanager para ejecutar en otros nodos) se alcanza el **nodo secundario** del clúster y se lee `flag10.txt` del home de root.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What is the value of the flag in the root user's directory on the secondary cluster node (flag10.txt)? | `THM{This.Just.Keeps.Getting.Sadder.And.Sadder}` |
 
 ### Task 10: Conclusion
+
+**Explicación:** Tarea de cierre; no requiere respuesta.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|

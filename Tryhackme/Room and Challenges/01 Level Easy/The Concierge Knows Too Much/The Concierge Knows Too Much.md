@@ -21,6 +21,8 @@
 |---|----------|-----------|
 | 1 | What is the flag? | `THM{v3r4_kn0ws_t00_much!}` |
 
+**Explicación:** Se charla con el concierge LLM; el bot se niega a revelar la información reservada. Se aplica una prompt injection: instruirle que ignore las instrucciones previas y responda en un formato distinto, o pedirle que repita/revele su system prompt (jailbreak clásico). El bot rompe su regla y devuelve la flag/frase que tenía prohibida → `THM{v3r4_kn0ws_t00_much!}`.
+
 ---
 
 **Metodología:**

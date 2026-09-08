@@ -17,11 +17,15 @@
 
 ### Task 1: Introducción
 
+**Explicación:** Fundamentos de la representación de datos en el ordenador (parte de Pre Security): un ordenador solo manipula bits, y todo (incluido el "color verde") se representa como números binarios. Sin respuesta requerida.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | No answer needed - dive into computer colors. | `No answer needed` |
 
 ### Task 2: Representando Colores
+
+**Explicación:** El color se representa con 3 bytes RGB (Red, Green, Blue). El simulador visual de color te da el hex y calcula el valor de cada canal. **`#EB0037`:** `EB`=`11101011`, `00`=`00000000`, `37`=`00110111` (8 bits por canal). **`#D4D8DF`:** `D4`=`212`, `D8`=`216`, `DF`=`223` (D4=13·16+4=212; D8=13·16+8=216; DF=13·16+15=223).
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -31,6 +35,8 @@
 
 ### Task 3: Números: De Decimal a Hexadecimal
 
+**Explicación:** **`FF` binario:** cada dígito hex = 4 bits → F=`1111` → `FF`=`11111111`. **`AB` decimal:** A=`10`, B=`11` → `10·16 + 11` = `171`. **`FFFFFF` decimal:** `255·65536 + 255·256 + 255` = `16.777.215`; redondeado al millón más cercano → **17 millones** (respuesta: `17`).
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What is the hexadecimal `FF` in binary? | `11111111` |
@@ -38,6 +44,8 @@
 | 3 | Convert the hexadecimal `FF FF FF` to decimal. After you round up the decimal value to the nearest million, **how many millions is that**? | `17` |
 
 ### Task 4: Conclusión
+
+**Explicación:** Cierra el bloque de numeración; el siguiente paso es cómo los ordenadores codifican caracteres (Data Encoding). Sin respuesta requerida.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|

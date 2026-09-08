@@ -7,21 +7,25 @@
 | **Sección** | 01 Level Easy |
 | **Fuente** | Redacción oficial de TryHackMe + ejercicios estáticos interactivos de ASCII y Unicode |
 | **Componentes** | ASCII (7 bits) / Unicode (UTF-16, UTF-32) / puntos de código U+XXXX / encoding vs cifrado |
-| **Impacto** | Fundamentos: saber cómo se asignan números a caracteres es la base del encoding/decoding en CTFs, del malware encoding y del manejo de BOM/UTF en forense. |
+| **Impacto** | Fundamentos: saber cómo se asignan números a caracteres es la base del encoding/decoding en CTFs, del malware encoding (ofuscación en ASCII/Unicode) y del manejo de BOM/UTF en forense. |
 
 ---
 
-**Contexto:** Un carácter no es más que un número asignado por un estándar. **ASCII** reserva 7 bits (0–127): `@` = **64**, `#` = **35**, y el 7 es el carácter de control **BEL ("Bell", la campanilla de los sistemas antiguos)**. **Unicode** amplía el repertorio con *code points* U+XXXX: un carácter como 😌 (relief, U+1F60C) se escribe en UTF-32 con 4 bytes `0001F60C`; un carácter BMP como シ (katakana "shi", U+30B7) cabe en UTF-16 como `30B7`; y a la inversa, `U+2615` = ☕ (hot beverage) y `U+2658` = ♘ (white chess knight). Distinguir **encoding** de **cifrado** es crucial: el encoding es reversible y público, el cifrado requiere clave.
+**Contexto:** Un carácter no es más que un número asignado por un estándar. **ASCII** reserva 7 bits (0–127): `@` = **64**, `#` = **35**, y el 7 es el carácter de control **BEL ("Bell", la campanilla de los sistemas antiguos)**. **Unicode** amplía el repertorio con *code points* U+XXXX: un carácter como 😌 (relief, U+1F60C) se escribe en UTF-32 con 4 bytes `0001F60C`; un carácter BMP como シ (katakana "shi", U+30B7) cabe en UTF-16 como `30B7`; y a la inversa, `U+2615` = ☕ (hot beverage) y `U+2658` = ♘ (white chess knight). Distinguir **encoding** (representación interna de un carácter) de **cifrado** es crucial: el encoding es reversible y público, el cifrado requiere clave.
 
 ## Solucionario
 
 ### Task 1: Introducción
+
+**Explicación:** Segundo bloque de representación de datos (Pre Security); continúa de Data Representation. Introduce que un carácter no es más que un número asignado por un estándar. Sin respuesta requerida.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | No answer needed - dive into encoding. | `No answer needed` |
 
 ### Task 2: ASCII
+
+**Explicación:** El estándar ASCII reserva 7 bits (0–127). **`@` = 64:** primer símbolo del bloque de "signos" tras las mayúsculas. **35 = `#`:** el símbolo hash/number sign. **7 = `Bell`:** carácter de control (los primeros 32 códigos ASCII son control characters; el 7 hacía sonar la campanilla del terminal). Consultar la tabla ASCII o el conversor del room.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -31,6 +35,8 @@
 
 ### Task 3: Unicode
 
+**Explicación:** Unicode amplía el repertorio con *code points* U+XXXX. **UTF-32** fija 4 bytes por code point → `0001F60C` (relleno a 8 dígitos hex) para 😌. **UTF-16** usa 2 bytes por code point BMP → `30B7` para シ (katakana "shi"). A la inversa, **U+2615 → ☕** (hot beverage / taza caliente) y **U+2658 → ♘** (white chess knight / caballo de ajedrez blanco).
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What is the UTF-32 encoding of 😌 (U+1F60C)? | `0001F60C` |
@@ -39,6 +45,8 @@
 | 4 | What is the character that has the following UTF-16 encoding `U+2658`? | `♘` |
 
 ### Task 4: Conclusión
+
+**Explicación:** Cierra el bloque: tras colores y numeración, ahora sabes codificar caracteres. Encolar con el room de Python Demo (si existe) para ver manipulación real de bits. Sin respuesta requerida.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|

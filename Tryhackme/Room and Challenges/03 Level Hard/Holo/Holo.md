@@ -17,11 +17,15 @@
 
 ### Task 1: Flag del contenedor
 
+**Explicación:** Tras conseguir RCE dentro del contenedor Docker del servidor web, la primera flag (web/container) se encuentra en el propio contenedor.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What flag can be found inside of the container? | `HOLO{175d7322f8fc53392a417ccde356c3fe}` |
 
 ### Task 2: Flag de usuario en L-SRV01
+
+**Explicación:** Después del Docker Breakout vía MySQL se obtiene una reverse shell como `www-data` en el host Linux L-SRV01: la flag de usuario está en su home.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -29,11 +33,15 @@
 
 ### Task 3: Flag de root en L-SRV01
 
+**Explicación:** Abusando del binario `/usr/bin/docker` con SUID (`docker run -v /:/mnt ... chroot /mnt sh`) se escala a root y se lee la flag de root en `/root`.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What flag can be found after rooting L-SRV01? | `HOLO{e16581b01d445a05adb2e6d45eb373f7}` |
 
 ### Task 4: Flag de la aplicación web en S-SRV01
+
+**Explicación:** Con pivoting vía sshuttle se llega a S-SRV01; bypaseando el filtro del lado cliente en la subida de imágenes se sube una webshell PHP y se lee la flag de la aplicación web en el escritorio de Admin.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -41,11 +49,15 @@
 
 ### Task 5: Flag de root en S-SRV01
 
+**Explicación:** Desde la webshell, `mimikatz` vuelca credenciales de dominio que reutilizan en S-SRV01; con esas credenciales se alcanza la flag de root/SYSTEM del servidor.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What flag can be found after rooting S-SRV01? | `HOLO{50f9614809096ffe2d246e9dd21a76e1}` |
 
 ### Task 6: Flag de usuario en PC-FILESRV01
+
+**Explicación:** Con las credenciales de `watamet` se accede por RDP a PC-FILESRV01; la flag de usuario está en el escritorio.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -53,11 +65,15 @@
 
 ### Task 7: Flag de root en PC-FILESRV01
 
+**Explicación:** `kavremover` falla para DLL hijacking; se usa PrintNightmare (`CVE-2021-1675`) para crear el usuario `sv` (Administradores) y, con `evil-winrm`, se obtiene la flag de root.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What flag can be found after rooting PC-FILESRV01? | `HOLO{ee7e68a69829e56e1d5b4a73e7ffa5f0}` |
 
 ### Task 8: Flag de root en DC-SRV01
+
+**Explicación:** El ataque final: NTLM Relay contra el DC-SRV01 (SMB signing deshabilitado). Con `smbexec.py -no-pass HOLOLIVE/SRV-ADMIN@10.200.112.30` se obtiene shell en el Domain Controller, se crea un usuario admin y `secretsdump.py` entrega la flag de root del dominio.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -65,11 +81,15 @@
 
 ### Task 9: Último octeto del servidor web
 
+**Explicación:** En el reconocimiento de la subred `10.200.112.0/24` se identifica el servidor web público `10.200.112.33`; su último octeto es `33`.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What is the last octet of the IP address of the public-facing web server? | `33` |
 
 ### Task 10: Puertos abiertos del servidor web
+
+**Explicación:** `nmap -sV -sC -p-` sobre `.33` revela 3 puertos abiertos: `22` (SSH/OpenSSH), `80` (Apache) y `33060` (MySQL X Protocol).
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -77,11 +97,15 @@
 
 ### Task 11: CME en el puerto 80
 
+**Explicación:** El escaneo del servicio HTTP identifica el Content Management Engine del puerto 80: **WordPress**.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What CME is running on port 80 of the web server? | `WordPress` |
 
 ### Task 12: Versión del CME
+
+**Explicación:** La fijación de versión (headers, metadatos de `generator` o fingerprinting de plugins) da WordPress **5.5.3**.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -89,11 +113,15 @@
 
 ### Task 13: Título HTTP del servidor web
 
+**Explicación:** El `<title>` de la página principal del sitio es **`holo.live`**.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What is the HTTP title of the web server? | `holo.live` |
 
 ### Task 14: Dominios que cargan imágenes en la primera página
+
+**Explicación:** Analizando el HTML de la primera página, las imágenes se cargan desde el dominio **`www.holo.live`** (vhost).
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -101,11 +129,20 @@
 
 ### Task 15: Los otros dos dominios del servidor web
 
+**Explicación:** Fuzzing de vhosts (wfuzz/`feroxbuster`) sobre el servidor revela dos dominios más: **`admin.holo.live`** y **`dev.holo.live`**, listados en orden alfabético.
+
+```bash
+wfuzz -c -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt \
+  -H "Host: FUZZ.holo.live" -u http://10.200.112.33 --hc 404
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What are the two other domains present on the web server? Format: Alphabetical Order | `admin.holo.live, dev.holo.live` |
 
 ### Task 16: Archivo que filtra el directorio actual
+
+**Explicación:** El `robots.txt` del sitio filtra el directorio de trabajo actual del servidor web (`/var/www`), una fuente clásica de información.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -113,11 +150,15 @@
 
 ### Task 17: Archivo que carga imágenes en el dominio de desarrollo
 
+**Explicación:** En el dominio de desarrollo, **`img.php`** es el archivo que sirve/redimensiona imágenes (`dev.holo.live/img.php?file=images/korone.jpg`).
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What file loads images for the development domain? | `img.php` |
 
 ### Task 18: Ruta completa del archivo de credenciales
+
+**Explicación:** El leak de `robots.txt` de `admin.holo.live` apunta a un directorio `supersecretdir`; la ruta completa del archivo de credenciales es **`/var/www/admin/supersecretdir/creds.txt`**.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -125,11 +166,15 @@
 
 ### Task 19: Archivo vulnerable a LFI en el dominio de desarrollo
 
+**Explicación:** **`img.php`** del dominio de desarrollo incluye el contenido de la ruta recibida por parámetro sin sanitizarla: es vulnerable a Local File Inclusion.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What file is vulnerable to LFI on the development domain? | `img.php` |
 
 ### Task 20: Parámetro vulnerable a LFI
+
+**Explicación:** El parámetro **`file`** de `img.php` acepta un path y permite traversal de directorios (`?file=../../../../etc/passwd`).
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -137,11 +182,19 @@
 
 ### Task 21: Archivo del leak que devuelve 403
 
+**Explicación:** Pidiendo directamente `/var/www/admin/supersecretdir/creds.txt` en `admin.holo.live` el servidor responde **HTTP 403 Forbidden** (está fuera de la raíz web). El LFI de `dev.holo.live` permite leerlo igualmente.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What file found from the information leak returns an HTTP error code 403 on the administrator domain? | `/var/www/admin/supersecretdir/creds.txt` |
 
 ### Task 22: Credenciales leídas por LFI
+
+**Explicación:** Con el LFI de `dev.holo.live/img.php` se lee `/var/www/admin/supersecretdir/creds.txt` y se obtienen las credenciales **`admin:DBManagerLogin!`**.
+
+```bash
+curl "http://dev.holo.live/img.php?file=../../../../var/www/admin/supersecretdir/creds.txt"
+```
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -149,11 +202,19 @@
 
 ### Task 23: Archivo vulnerable a RCE en el dominio de administrador
 
+**Explicación:** Dentro de `admin.holo.live`, el panel de administración usa **`dashboard.php`**, que pasa el contenido de un parámetro a una shell sin filtrar: es vulnerable a RCE.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What file is vulnerable to RCE on the administrator domain? | `dashboard.php` |
 
 ### Task 24: Parámetro vulnerable a RCE
+
+**Explicación:** El parámetro que inyecta el comando es **`cmd`** (descubierto fuzzando con wfuzz).
+
+```bash
+curl "http://admin.holo.live/dashboard.php?cmd=id"
+```
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -161,11 +222,15 @@
 
 ### Task 25: Usuario del servidor web
 
+**Explicación:** El RCE devuelve la identidad del proceso web: el servidor corre como **`www-data`**.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What user is the web server running as? | `www-data` |
 
 ### Task 26: Gateway por defecto del contenedor Docker
+
+**Explicación:** El RCE revela que estamos dentro de un contenedor Docker (`ifconfig`: `192.168.100.100`); el gateway por defecto del contenedor es **`192.168.100.1`**.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -173,11 +238,15 @@
 
 ### Task 27: Puerto web alto del gateway
 
+**Explicación:** Escaneando el gateway `192.168.100.1` se encuentra un puerto web alto abierto: **`8080`**.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What is the high web port open in the container gateway? | `8080` |
 
 ### Task 28: Puerto de base de datos bajo del gateway
+
+**Explicación:** El puerto de base de datos bajo del gateway es **`3306`** (MySQL).
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -185,11 +254,15 @@
 
 ### Task 29: Dirección del servidor de base de datos remota
 
+**Explicación:** La BD a la que se conecta la aplicación (`db_connect.php`) apunta al host **`192.168.100.1`** (el propio gateway).
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What is the server address of the remote database? | `192.168.100.1` |
 
 ### Task 30: Contraseña de la base de datos remota
+
+**Explicación:** La configuración de conexión de `db_connect.php` expone la contraseña de la BD remota: **`!123SecureAdminDashboard321!`**.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -197,11 +270,19 @@
 
 ### Task 31: Nombre de usuario de la base de datos remota
 
+**Explicación:** El usuario de la BD remota es **`admin`**.
+
+```bash
+mysql -h 192.168.100.1 -u admin -p'!123SecureAdminDashboard321!'
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What is the username of the remote database? | `admin` |
 
 ### Task 32: Nombre de la base de datos remota
+
+**Explicación:** El nombre de la base de datos es **`DashboardDB`**.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -209,11 +290,15 @@
 
 ### Task 33: Usuario encontrado dentro de la base de datos
 
+**Explicación:** Dentro de `DashboardDB` (tabla de usuarios) aparece el usuario **`gurag`** (junto a `admin`), que servirá más adelante para el reset de contraseña en S-SRV01.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What username can be found within the database itself? | `gurag` |
 
 ### Task 34: Usuario con el que corre la base de datos
+
+**Explicación:** El proceso de la base de datos corre como usuario **`www-data`**: eso permite el Docker Breakout escribiendo a archivos servidos por el web server del host.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -221,11 +306,20 @@
 
 ### Task 35: Ruta completa del binario SUID en L-SRV01
 
+**Explicación:** En la escalada de L-SRV01, `linpeas` detecta `/usr/bin/docker` con el bit SUID activo: la ruta completa es **`/usr/bin/docker`**.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What is the full path of the binary with an SUID bit set on L-SRV01? | `/usr/bin/docker` |
 
 ### Task 36: Primera línea del exploit del SUID
+
+**Explicación:** Antes de explotar el SUID hay que restablecer los bits del binario copiándolo (los SUID no se mantienen en copias): la primera línea del exploit es **`sudo install -m =xs $(which docker) .`**.
+
+```bash
+sudo install -m =xs $(which docker) .
+./docker run -v /:/mnt --rm -it ubuntu:18.04 chroot /mnt sh
+```
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -233,11 +327,15 @@
 
 ### Task 37: Usuario no por defecto en el shadow de L-SRV01
 
+**Explicación:** En `/etc/shadow` del equipo aparece un usuario que no es de sistema: **`linux-admin`**, cuyo hash de modo `1800` (SHA-512crypt) puede crackearse.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What non-default user can we find in the shadow file on L-SRV01? | `linux-admin` |
 
 ### Task 38: Contraseña en claro crackeada del hash
+
+**Explicación:** John/johnny crackea el hash de `linux-admin`: la contraseña en claro es **`linuxrulez`**.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -245,11 +343,15 @@
 
 ### Task 39: Usuario controlado para el reset de contraseña en S-SRV01
 
+**Explicación:** En S-SRV01 hay un formulario de reset: el usuario **`gurag`** (el que vimos en `DashboardDB`) es el que podemos controlar y por el que se genera el token de reset.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What user can we control for a password reset on S-SRV01? | `gurag` |
 
 ### Task 40: Cookie interceptada en S-SRV01
+
+**Explicación:** Interceptando el reset con Burp se captura la cookie que contiene el token: **`user_token`**.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -257,11 +359,15 @@
 
 ### Task 41: Tamaño de la cookie interceptada
 
+**Explicación:** El valor del token mide **`110`** caracteres (los 110 chars del `user_token`).
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What is the size of the cookie intercepted on S-SRV01? | `110` |
 
 ### Task 42: Página de redirección tras el reset autenticado
+
+**Explicación:** Con el token en la URL (`?token=...`), el reset redirige a **`reset.php`** cuando la autenticación es correcta. Ahí se pone la nueva contraseña (`gurag:password123`).
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -269,11 +375,15 @@
 
 ### Task 43: Usuario de dominio cuyas credenciales se vuelcan en S-SRV01
 
+**Explicación:** Con RCE en S-SRV01 (webshell en `/images`), `mimikatz` (subido vía `certutil`) vuelca las credenciales en memoria: el usuario de dominio recuperado es **`watamet`**.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What domain user's credentials can we dump on S-SRV01? | `watamet` |
 
 ### Task 44: Contraseña del usuario de dominio
+
+**Explicación:** El volcado de LSASS da la contraseña en claro de `watamet`: **`Nothingtoworry!`**.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -281,11 +391,19 @@
 
 ### Task 45: Hostname del endpoint remoto autenticable
 
+**Explicación:** Con `crackmapexec` se prueban las credenciales de `watamet` contra la red interna: valen (admin local) en el endpoint **`PC-FILESRV01`**.
+
+```bash
+crackmapexec smb 10.200.112.0/24 -u watamet -p 'Nothingtoworry!'
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What is the hostname of the remote endpoint we can authenticate to? | `PC-FILESRV01` |
 
 ### Task 46: Producto anti-malware en PC-FILESRV01
+
+**Explicación:** El situational awareness de PC-FILESRV01 (Seatbelt/PowerView/código offuscado) indica que el anti-malware empleado es **AMSI**.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -293,11 +411,15 @@
 
 ### Task 47: Producto anti-virus en PC-FILESRV01
 
+**Explicación:** El antivirus instalado es **`Windows Defender`**.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What anti-virus product is employed on PC-FILESRV01? | `Windows Defender` |
 
 ### Task 48: Versión de CLR en PC-FILESRV01
+
+**Explicación:** La versión del Common Language Runtime instalada es **`4.0.30319`**.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -305,11 +427,15 @@
 
 ### Task 49: Versión de PowerShell en PC-FILESRV01
 
+**Explicación:** La versión de PowerShell (Windows PowerShell 5.1) es **`5.1.17763.1`**.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What PowerShell version is installed on PC-FILESRV01? | `5.1.17763.1` |
 
 ### Task 50: Build de Windows de PC-FILESRV01
+
+**Explicación:** El build de Windows (Windows Server 2019/1809) es **`17763.1577`**.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -317,17 +443,27 @@
 
 ### Task 51: Aplicación vulnerable encontrada en PC-FILESRV01
 
+**Explicación:** Entre el software instalado destaca una herramienta de Kaspersky vulnerable a DLL hijacking/abuso: **`kavremover`**.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What is the name of the vulnerable application found on PC-FILESRV01? | `kavremover` |
 
 ### Task 52: Primera DLL vulnerable en la carpeta de Windows
 
+**Explicación:** Enumerando las DLLs cargadas por `kavremover` desde `C:\Windows`, la primera listada como vulnerable es **`wow64log.dll`** (el intento de hijacking con `kavremover` falla, así que se pasa a PrintNightmare).
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What is the first listed vulnerable DLL located in the Windows folder from the application? | `wow64log.dll` |
 
 ### Task 53: Host con SMB signing deshabilitado
+
+**Explicación:** El host con SMB signing deshabilitado es **`DC-SRV01`** (confirmado con `nmap --script smb2-security-mode`/`crackmapexec`), lo que permite el NTLM Relay final.
+
+```bash
+nmap -p445 --script smb2-security-mode 10.200.112.30
+```
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|

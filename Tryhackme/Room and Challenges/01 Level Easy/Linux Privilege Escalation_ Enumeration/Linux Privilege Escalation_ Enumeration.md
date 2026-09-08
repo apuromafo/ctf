@@ -21,11 +21,15 @@
 |---|----------|-----------|
 | 1 | Ready for some enumeration! | `No answer needed` |
 
+**Explicación:** Introducción al room. El objetivo es mapear el sistema objetivo en 4 capas antes de escalar privilegios: enumerar correctamente es más del 70% del trabajo; saber qué buscar evita timeouts ciegos.
+
 ### Task 2: What Is Enumeration
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | No answer needed | `No answer needed` |
+
+**Explicación:** Definición de la enumeración como fase de descubrimiento de los datos que luego se usarán en la escalada (check sin pregunta visible).
 
 ### Task 3: OS Enumeration
 
@@ -37,6 +41,13 @@
 | 4 | What is the **full path** of the script run by root every 5 minutes? | `/root/backup.sh` |
 | 5 | What is the **full version of AppArmor**? | `4.0.1really4.0.1-0ubuntu0.24.04.3` |
 
+**Explicación:** Capa de enumeración del sistema operativo con sus comandos:
+- `hostname` → `linux-enumeration`
+- `uname -a` → `6.8.0-1017-aws` (o `cat /etc/os-release`)
+- `cat /etc/os-release` → `Ubuntu 24.04.1 LTS`
+- `cat /etc/crontab` o `crontab -l` o `/etc/cron.d/` → `/root/backup.sh` (la línea indica ejecución de root cada 5 min)
+- `aa-status --version` (AppArmor) → `4.0.1really4.0.1-0ubuntu0.24.04.3`
+
 ### Task 4: User Enumeration
 
 | # | Pregunta | Respuesta |
@@ -46,12 +57,22 @@
 | 3 | What is the **full path** of the command you are allowed to run with elevated privileges? | `/usr/bin/nmap` |
 | 4 | What is the **username** of the Mailing List Manager? | `list` |
 
+**Explicación:** Capa de enumeración de usuarios con sus comandos:
+- `env | grep LANG` (o `printenv LANG`) → `C.UTF-8`
+- `history` (o `cat ~/.bash_history`) → la entrada contiene `THM{history-is-not-safe}`
+- `sudo -l` → `(ALL) NOPASSWD: /usr/bin/nmap` (la regla sudo permite ejecutar nmap como root)
+- `grep -i "mail" /etc/passwd` → el usuario Mailing List Manager es `list` (o consultar la config de mailman)
+
 ### Task 5: Network Enumeration
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What is the name of the **network interface**, other than loopback? | `ens5` |
 | 2 | What **port**, other than 22, is listening on the host? | `53` |
+
+**Explicación:** Capa de red con sus comandos:
+- `ip a` o `ifconfig` → interfaz `ens5` (IP privada)
+- `ss -tlnp` o `netstat -tlnp` → puerto `53` (DNS) escuchando además del 22 (SSH)
 
 ### Task 6: File Enumeration
 
@@ -60,19 +81,34 @@
 | 1 | What are the **contents of the secret file** in your home folder? | `THM{not-so-hidden}` |
 | 2 | Find a **file** that has **TryHackMe** in its name. What is its **content**? | `THM{found-the-flag}` |
 
+**Explicación:** Capa de archivos con sus comandos:
+- `ls -la` en home → archivo secreto (p. ej. `.secret`) → `cat .secret` → `THM{not-so-hidden}`
+- `find / -name "*TryHackMe*"` → archivo con "TryHackMe" en el nombre → `cat` → `THM{found-the-flag}`
+
 ### Task 7: Conclusion
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Enumeration done. | `No answer needed` |
 
----
+**Explicación:** Conclusión. Siguiente room: escalada de privilegios (usando datos como el sudo sobre nmap, el cron y AppArmor detectados en la enumeración).
 
 **Metodología:**
 1. **OS enum:** `hostname` → `linux-enumeration`; `uname -a` (o `cat /etc/os-release`) → kernel `6.8.0-1017-aws` y `Ubuntu 24.04.1 LTS`; `cat /etc/crontab` / `crontab -l` / `/etc/cron.d/` → `/root/backup.sh` (root cada 5 min); `aa-status --version` → AppArmor `4.0.1really4.0.1-0ubuntu0.24.04.3`.
 2. **User enum:** `env | grep LANG` (o `printenv LANG`) → `C.UTF-8`; `history` (o `cat ~/.bash_history`) → `THM{history-is-not-safe}`; `sudo -l` → `(ALL) NOPASSWD: /usr/bin/nmap`; `grep -i "mail" /etc/passwd` → Mailing List Manager `list`.
 3. **Network enum:** `ip a` / `ifconfig` → interfaz `ens5`; `ss -tlnp` / `netstat -tlnp` → puerto `53` (DNS) además del 22 (SSH).
 4. **File enum:** `ls -la` en home → archivo secreto (`cat .secret` → `THM{not-so-hidden}`); `find / -name "*TryHackMe*"` → contenido `THM{found-the-flag}`.
+
+```
+OS: hostname (linux-enumeration) / kernel (6.8.0-1017-aws) / Ubuntu 24.04.1 / AppArmor 4.0.1really4.0.1
+    cron -> /root/backup.sh
+  -> User: LANG=C.UTF-8 / history -> THM{history-is-not-safe} / sudo -> /usr/bin/nmap / mailman=list
+  -> Network: ens5 / port 53 (DNS)
+  -> Files: secret -> THM{not-so-hidden} / TryHackMe -> THM{found-the-flag}
+  -> escalada: nmap (sudo) / AppArmor status / cron exploitable
+```
+
+**Lección:** *Enumerar es mapear el terreno antes de correr: kernel, versiones, cron, sudo, archivos — cada dato es una posible vía de escalada.*
 
 **Learning chain:** OS (hostname linux-enumeration / kernel 6.8.0-1017-aws / Ubuntu 24.04.1 / AppArmor 4.0.1really4.0.1 / cron /root/backup.sh) → Users (LANG=C.UTF-8 / history → THM{history-is-not-safe} / sudo /usr/bin/nmap / mailman=list) → Network (ens5 / port 53) → Files (THM{not-so-hidden} / THM{found-the-flag}) → escalada (nmap sudo, cron, AppArmor)
 

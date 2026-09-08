@@ -21,7 +21,7 @@
 |---|----------|-----------|
 | 1 | What is the flag? | `THM{aab02c6b76bb752456a54c80c2d6fb1e}` |
 
----
+**Explicación:** Room CTF creada por Tib3rius que enseña una lección crítica sobre los ataques de inyección SQL: por qué `OR 1=1` es peligroso en el pentesting del mundo real. La caja simula el comportamiento real de un sistema donde las técnicas de inyección SQL inapropiadas pueden causar daños permanentes.
 
 **Metodología:**
 1. **Reconocimiento:** escanear la máquina con `nmap` (solo puertos 80 y 22 abiertos) y probar `gobuster` para descubrir directorios ocultos.
@@ -29,6 +29,14 @@
 3. **Bypass de autenticación:** inyectar el payload seguro `martin' AND 1=1 --` en el campo de usuario con cualquier contraseña. Evita la autenticación manteniendo la condición original del usuario, sin causar daños.
 4. **Obtener la flag:** la flag se muestra al completar el bypass correctamente.
 5. **La lección:** `OR 1=1` hace la WHERE siempre verdadera y afecta a todas las filas (catastrófico en aplicaciones que reutilizan la entrada en UPDATE/DELETE, borrando la flag y obligando a resetear la caja). Usar `AND 1=1` limita a los registros previstos. Payloads alternativos seguros: `martin'-- -` y `martin' union select null-- -`.
+
+#### La lección
+
+- **`OR 1=1` es peligroso:** hace que la cláusula WHERE sea siempre verdadera, afectando a todas las filas de la base de datos. En aplicaciones que reutilizan la entrada del usuario en operaciones UPDATE o DELETE, esto puede ser catastrófico (borrar todos los datos, incluida la flag, requiriendo reset de la caja).
+- **Usar `AND 1=1` en su lugar:** requiere que la condición original también sea verdadera, limitando los resultados a los registros previstos y demostrando la vulnerabilidad sin causar daños.
+- **Payloads alternativos seguros:** `martin'-- -` (comentar la comprobación de contraseña) y `martin' union select null-- -`.
+
+**Lección:** el pentesting profesional debe demostrar la vulnerabilidad sin causar daños. Siempre considerar qué pasa cuando el payload se ejecuta en diferentes contextos (UPDATE/DELETE) y usar técnicas responsables.
 
 **Learning chain:** Recon (nmap/gobuster) → username enumeration (Hydra → martin) → auth bypass seguro (martin' AND 1=1 --) → flag THM{aab02c6b76bb752456a54c80c2d6fb1e} → lección: OR 1=1 vs AND 1=1
 

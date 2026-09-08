@@ -1,93 +1,84 @@
- 
-# Input Manipulation & Prompt Injection [EASY]
+# Input Manipulation & Prompt Injection
 
-### 📋 Información de la Sala / Room Information
-
-* **Dificultad:** Principiante.
-* **Tipo:** Gratuita (No requiere suscripción).
-* **Creadores:** [tryhackme]  & [l000g1c] 
-* **Objetivo:** Comprender las bases de los ataques de inyección de prompts en LLMs.
-
----
-
-## 🧠 Conceptos Clave / Key Concepts
-
-### ¿Qué es la Manipulación de Entrada? / What is Input Manipulation?
-
-Es el "momento SQL Injection" para los LLM. Ocurre cuando un atacante diseña entradas para anular o confundir las salvaguardas del modelo, forzándolo a ignorar restricciones.
-
-* **System Prompt:** Instrucciones ocultas que definen el rol y límites del modelo.
-* **User Prompt:** Lo que el usuario escribe.
+| **Dificultad** | Easy |
+| **Tipo** | Walkthrough |
+| **Slug** | `inputmanipulationpromptinjection` |
+| **Link** | [TryHackMe](https://tryhackme.com/room/inputmanipulationpromptinjection) |
+| **Sección** | 01 Level Easy |
+| **Creadores** | [tryhackme] & [l000g1c] |
+| **Componentes** | LLM / System Prompt / User Prompt / Leakage / Jailbreaking / Prompt Injection (directa e indirecta) / Obfuscation / flags de desafío |
+| **Impacto** | Comprender las bases de los ataques de inyección de prompts en LLMs: filtración del prompt del sistema, jailbreaking e inyección directa/indirecta, con un desafío práctico de flags. |
 
 ---
 
-## 🚩 Solucionario de Tareas / Task Solutions
+**Contexto:** La **manipulación de entrada** es el "momento SQL Injection" para los LLM: ocurre cuando un atacante diseña entradas para anular o confundir las salvaguardas del modelo, forzándolo a ignorar restricciones. Dos conceptos base: **System Prompt** (instrucciones ocultas que definen el rol y límites del modelo) y **User Prompt** (lo que el usuario escribe).
 
-### Tarea 1: Introducción / Task 1: Introduction
+## Solucionario
 
-Introducción a los peligros de confiar ciegamente en los modelos integrados en flujos de trabajo (HR, IT, etc.).
+### Task 1: Introducción
 
-* **Respuesta:** `No answer needed`.
+**Explicación:** Introducción a los peligros de confiar ciegamente en los modelos integrados en flujos de trabajo (HR, IT, etc.).
 
-### Tarea 2: Filtración de Prompt del Sistema / Task 2: System Prompt Leakage
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | No answer needed - introduction. | `No answer needed` |
 
-El "Leakage" es la exposición de las instrucciones internas del sistema. Si un atacante las obtiene, tiene un mapa de las debilidades del modelo.
+### Task 2: Filtración de Prompt del Sistema (System Prompt Leakage)
 
-* **Pregunta:** What do we call the exposure of hidden system instructions?
-* **Respuesta:** `Leakage`.
+**Explicación:** El **leakage** es la exposición de las instrucciones internas del sistema. Si un atacante las obtiene, tiene un mapa de las debilidades del modelo.
 
-### Tarea 3: Jailbreaking / Task 3: Jailbreaking
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | What do we call the exposure of hidden system instructions? | `Leakage` |
 
-Uso de técnicas para que el modelo adopte una personalidad que no sigue reglas (ej. DAN, modo abuela).
+### Task 3: Jailbreaking
 
-* **Técnica de evasión:** Reemplazar caracteres (ej. `h@ck` en lugar de `hack`) para evadir filtros de palabras clave.
-* **Pregunta:** What evasive technique replaces or alters characters to bypass naive keyword filters?
-* **Respuesta:** `Obfuscation`.
+**Explicación:** Uso de técnicas para que el modelo adopte una personalidad que no sigue reglas (ej. DAN, modo abuela). La técnica de evasión por **obfuscation** reemplaza o altera caracteres (ej. `h@ck` en lugar de `hack`) para evadir filtros de palabras clave naive.
 
-### Tarea 4: Inyección de Prompt / Task 4: Prompt Injection
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | What evasive technique replaces or alters characters to bypass naive keyword filters? | `Obfuscation` |
 
-Existen dos tipos principales:
+### Task 4: Inyección de Prompt (Prompt Injection)
 
-1. **Directa:** Instrucciones maliciosas puestas directamente en el chat.
-2. **Indirecta:** Instrucciones ocultas en documentos cargados, páginas web o plugins que el LLM lee.
+**Explicación:** Existen dos tipos principales: **Directa** (instrucciones maliciosas puestas directamente en el chat / en el user input) e **Indirecta** (instrucciones ocultas en documentos cargados, páginas web o plugins que el LLM lee).
 
-* **Pregunta 1:** Which injection type smuggles instructions via uploaded documents, web pages, or plugins?
-* **Respuesta:** `Indirect`.
-* **Pregunta 2:** Which injection type places malicious instructions directly in the user input?
-* **Respuesta:** `Direct`.
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | Which injection type smuggles instructions via uploaded documents, web pages, or plugins? | `Indirect` |
+| 2 | Which injection type places malicious instructions directly in the user input? | `Direct` |
 
-### Tarea 5: Desafío (Flags) / Task 5: Challenge (Flags)
+### Task 5: Desafío (Flags)
 
-Desafío práctico interactuando con un agente de IA.
+**Explicación:** Desafío práctico interactuando con un agente de IA: aplicar inyección de prompt y filtración del system prompt para obtener ambas flags.
 
-* **Pregunta 1 (Prompt Injection Flag):** `THM{pi_33f7a14a468eba7d3bc2d81a4445134c}`.
-* **Pregunta 2 (System Prompt Flag):** `THM{spl_52f96576b8389be35f9a87d7262cf96f}`.
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | Prompt Injection Flag | `THM{pi_33f7a14a468eba7d3bc2d81a4445134c}` |
+| 2 | System Prompt Flag | `THM{spl_52f96576b8389be35f9a87d7262cf96f}` |
 
-### Tarea 6: Conclusión / Task 6: Conclusion
+### Task 6: Conclusión
 
-* **Respuesta:** `No answer needed`.
+**Explicación:** Cierre de la sala: resumen de las técnicas de manipulación de entrada y su defensa.
 
----
-
-##respuestas
-1. No answer needed
-2. Leakage
-3. Obfuscation
-4. 1. Indirect
-   2. Direct
-5. 1. THM{pi_33f7a14a468eba7d3bc2d81a4445134c}
-   2. THM{spl_52f96576b8389be35f9a87d7262cf96f}
-6. No answer needed
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | No answer needed - conclusion. | `No answer needed` |
 
 ---
 
----
+**Metodología:**
+1. Conceptos: System Prompt vs User Prompt; la manipulación de entrada es el "momento SQLi" para los LLM.
+2. System Prompt Leakage → respuesta `Leakage`.
+3. Jailbreaking → obfuscation de caracteres para evadir filtros (`h@ck`).
+4. Prompt Injection: directa (en el user input) vs indirecta (documentos, web, plugins.
+5. Desafío: inyectar al agente y filtrar el system prompt para obtener `THM{pi_...}` y `THM{spl_...}`.
+6. Conclusión.
 
-## ⚠️ Descargo de Responsabilidad (Disclaimer)
+**Respuestas resumen:** 1) No answer needed · 2) Leakage · 3) Obfuscation · 4) 1. Indirect / 2. Direct · 5) 1. `THM{pi_33f7a14a468eba7d3bc2d81a4445134c}` / 2. `THM{spl_52f96576b8389be35f9a87d7262cf96f}` · 6) No answer needed.
 
-Este contenido se presenta exclusivamente con fines académicos y educativos.
+**Learning chain:** System Prompt (oculto) vs User Prompt (entrada) → Leakage (exposición del system prompt) → Jailbreaking (personalidad sin reglas + obfuscation) → Prompt Injection directa (input) e indirecta (documentos/web/plugins) → desafío → flags.
 
-**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
-**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
-**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
-**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.
+**MITRE ATT&CK:** T1059.007 (Command and Scripting Interpreter: JavaScript) en entornos web con LLM, OWASP LLM01 (Prompt Injection) y OWASP LLM02 (Sensitive Information Disclosure) para la filtración del system prompt.
+
+**Fuente:** [TryHackMe - Input Manipulation & Prompt Injection](https://tryhackme.com/room/inputmanipulationpromptinjection)

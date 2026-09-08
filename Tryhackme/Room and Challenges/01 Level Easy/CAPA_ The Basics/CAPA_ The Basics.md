@@ -85,6 +85,8 @@ capa muestra.exe
 
 ### Task 6: Más información, más diversión (análisis de reglas)
 
+**Explicación:** Se disecciona una regla: `check-http-status-code.yml` valida códigos de estado HTTP; la detección de cadenas anti-VM referenciada es `reference anti-VM strings`; la carga de código en memoria es la capability `load-code`; y la regla inspecciona la API `RegOpenKeyEx` del registro.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Cómo se llama la regla que comprueba el código de estado HTTP? | `check-http-status-code.yml` |
@@ -94,6 +96,12 @@ capa muestra.exe
 
 ### Task 7: Exploración de recursos web
 
+**Explicación:** Pinzón de CAPA: `-j` genera el reporte en JSON; la herramienta web de Mandiant para explorar resultados es `CAPA Web Explorer`; su `Global Search Box` permite buscar reglas por nombre.
+
+```bash
+capa -j muestra.exe -o reporte.json
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Qué bandera genera el reporte en formato JSON? | `-j` |
@@ -101,6 +109,8 @@ capa muestra.exe
 | 3 | ¿Qué elemento de la web permite buscar reglas por nombre? | `Global Search Box` |
 
 ### Task 8: Conclusión
+
+**Explicación:** Fin de la sala; con las bases de CAPA, MITRE y MBC claras, se completa.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|

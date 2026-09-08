@@ -17,6 +17,13 @@
 
 ### Task 1: Inicia sesión y captura la flag
 
+**Explicación:** Tras el escaneo (`nmap -sC -sV`) se revisa `login.html`, cuya función JS `authenticate()` compara el usuario con `h3ck3rBoi` y la contraseña con `54321@terceSrepuS`. Revertiendo esa cadena (Reverse en CyberChef) sale `SuperSecret@12345`. Con esas credenciales la página carga el archivo de flag y la muestra.
+
+```text
+Usuario:      h3ck3rBoi
+Contraseña:   SuperSecret@12345   (54321@terceSrepuS invertida)
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Cuál es la flag del reto? | `flag{edb0be532c540b1a150c3a7e85d2466e}` |

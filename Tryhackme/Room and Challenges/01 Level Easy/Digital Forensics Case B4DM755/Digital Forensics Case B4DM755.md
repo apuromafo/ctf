@@ -17,11 +17,15 @@
 
 ### Task 1: Introducción
 
+**Explicación:** Presentación del laboratorio forense B4DM755: un caso simulado de principio a fin (rol del analista, adquisición, análisis y juicio). Solo lectura.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Lee la introducción del caso forense. | `No answer needed` |
 
 ### Task 2: El rol del analista forense
+
+**Explicación:** Roles en el proceso: el `Forensics Lab Analyst` clasifica y prioriza pruebas/artefactos; el `DFIR First Responder` es el primero en llegar a la escena. Allí los agentes buscan `digital artefacts and evidence`, pero antes necesitan una orden de registro (`search warrant`).
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -32,6 +36,8 @@
 
 ### Task 3: Preservación de evidencias
 
+**Explicación:** Métodos de preservación: `drive encryption` protege la confidencialidad; `Hash and copy` crea una copia perfecta verificable; `Bag, Seal, and Tag` asegura físicamente los artefactos y mantiene la cadena de custodia.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Qué medida de protección garantiza la confidencialidad de los datos de la evidencia? | `drive encryption` |
@@ -40,6 +46,8 @@
 
 ### Task 4: Adquisición de evidencias
 
+**Explicación:** La imagen forense se guarda en un dispositivo auxiliar (`flash drive`); el método correcto es `Taking an image` (copia bit a bit del disco original) y todo el proceso debe quedar documentado (`Ensure proper documentation`) para ser admisible.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Qué tipo de dispositivo de almacenamiento se utiliza para guardar la imagen de la evidencia? | `flash drive` |
@@ -47,6 +55,8 @@
 | 3 | ¿Qué paso garantiza que se registra correctamente todo el proceso de adquisición? | `Ensure proper documentation` |
 
 ### Task 5: Análisis con Autopsy
+
+**Explicación:** El análisis de la imagen se hace sin tocar el original gracias a un `write-blocking device`. En Autopsy, el `Evidence Tree Pane` muestra el árbol de directorios y el `File List Pane` los archivos de la selección. En el sistema analizado NO existe un usuario llamado Bob (`N`).
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -58,6 +68,8 @@
 
 ### Task 6: Vistas de Autopsy
 
+**Explicación:** El `Viewer Pane` muestra el contenido del archivo seleccionado. La imagen analizada tiene el hash `d82f393a67c6fc87a023b50c785a7247ab1ac395`; Autopsy soporta `8` sistemas de archivos, tiene `6` vistas principales y en el caso se añadieron `3` imágenes de disco.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Qué panel de Autopsy muestra el contenido del archivo seleccionado? | `Viewer Pane` |
@@ -67,6 +79,12 @@
 | 5 | ¿Cuántas imágenes de disco añadiste al caso? | `3` |
 
 ### Task 7: Análisis de metadatos con ExifTool
+
+**Explicación:** Con ExifTool (`exiftool-12.47`) se examinan las evidencias: un `.pdf` y una `.jpg` del `ONEPLUS A6013` (también conocido como `Mi 9 Lite`). La foto contiene GPS (`Y`, en `14°26'25.7"N 120°59'00.8"E`), autor `Karl Renato Abelardo` y metadatos que revelan la contraseña `DarkVault$Pandora=DONOTOPEN!K1ngCr1ms0n!`, la cuenta de `SwiftSpend Financial` de `Mr. Giovanni Vittorio DeVentura`. Todo conduce a la flag del caso `THM{sCr0LL_sCr0LL_cL1cK_cL1cK_4TT3NT10N_2_D3T41L5_15_CRUC14L!!}`.
+
+```bash
+exiftool foto.jpg
+```
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -84,6 +102,8 @@
 | 12 | ¿Cuál es la bandera del caso? | `THM{sCr0LL_sCr0LL_cL1cK_cL1cK_4TT3NT10N_2_D3T41L5_15_CRUC14L!!}` |
 
 ### Task 8: El caso en el juzgado
+
+**Explicación:** En el proceso judicial: la búsqueda previa a la recogida es la fase `Pre-search`, la posterior es `Post-search`, y en la fase del `Trial` se presentan y exponen las evidencias al tribunal.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|

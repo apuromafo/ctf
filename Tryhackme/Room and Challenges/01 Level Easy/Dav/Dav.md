@@ -17,6 +17,13 @@
 
 ### Task 2: Flags de usuario y root
 
+**Explicación:** Con la reverse shell como www-data se lee `/home/merlin/user.txt` (`449b40fe93f78a938523b7e4dcd66d2a`). `sudo -l` revela que www-data puede ejecutar `/bin/cat` como root, así que `sudo cat /root/root.txt` da `101101ddc16b0cdf65ba0b8a7af7afa5`.
+
+```bash
+cat /home/merlin/user.txt
+sudo cat /root/root.txt
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Cuál es el valor del user.txt? | `449b40fe93f78a938523b7e4dcd66d2a` |

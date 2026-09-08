@@ -17,11 +17,15 @@
 
 ### Task 1: Introducción a la seguridad defensiva
 
+**Explicación:** Rama de seguridad centrada en defender y proteger los sistemas: análisis de riesgos, detección y respuesta a incidentes. El término correcto es `Blue Teaming` (el red team ataca).
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Cómo se llama la disciplina que se centra en defender los sistemas (blue teaming o red teaming)? | `Blue Teaming` |
 
 ### Task 2: Los perfiles de la defensa
+
+**Explicación:** En el ejemplo de la sala, `Aaliyah` es la encargada de la respuesta a incidentes (mientras otros perfiles tratan forense, comunicación o análisis).
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -29,11 +33,15 @@
 
 ### Task 3: Security Operations Center
 
+**Explicación:** Centro desde el que se monitoriza la seguridad de una organización 24/7; su abreviatura es `SOC`.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Cuál es la abreviatura de Security Operations Center? | `SOC` |
 
 ### Task 4: Ejercicio práctico - Asegurando el banco falso
+
+**Explicación:** Se detecta un "Web Content Scanner" contra FAKEBANK. Las tres medidas: bloquear la IP `32.122.195.63` (72 h), aplicar rate limiting en la API y añadir una regla WAF contra ese patrón. Con ello el banco queda asegurado y se obtiene la flag.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|

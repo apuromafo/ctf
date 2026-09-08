@@ -17,11 +17,15 @@
 
 ### Task 1: Introducción
 
+**Explicación:** Presentación de la sala: riesgos y errores típicos al adoptar la nube y cómo esos problemas llegan al SOC. Solo lectura.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Continúa con la siguiente tarea. | `No answer needed` |
 
 ### Task 2: Qué es la nube
+
+**Explicación:** Modelos de servicio cloud: `IaaS` (Infraestructura como Servicio: VMs, redes; permite migrar infraestructura on-premises "as is"), `PaaS` (plataformas de desarrollo) y `SaaS` (software gestionado por el proveedor). Elastic Cloud y CrowdStrike Falcon son ejemplos de `SaaS`.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -30,12 +34,16 @@
 
 ### Task 3: Seguridad de la nube
 
+**Explicación:** "Seguridad de la nube" = la del proveedor: sí (`Yea`) es responsable de asegurar/monitorizar su propia infraestructura. Pero NO (`Nay`) se debe confiar ciegamente: también hay que vigilar las amenazas de la cadena de suministro.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿El proveedor de nube es responsable de asegurar y monitorizar su propia infraestructura? (Yea/Nay) | `Yea` |
 | 2 | ¿Debes confiar ciegamente en el proveedor sin vigilar las amenazas de la cadena de suministro? (Yea/Nay) | `Nay` |
 
 ### Task 4: Seguridad en la nube
+
+**Explicación:** "Seguridad en la nube" = responsabilidad compartida del cliente: migrar un servidor sin parchear NO (`Nay`) lo vuelve seguro. El primer obstáculo real al integrar productos cloud en un SIEM son los `Paid Logs` (logs de pago).
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -44,6 +52,8 @@
 
 ### Task 5: Monitoreo de seguridad en la nube
 
+**Explicación:** Los recursos de cómputo cloud (VMs, contenedores) se llaman `Workloads`. Herramientas especializadas: `CWPP` (protección de workloads, p. ej. Falco y Tetragon), `CSPM` (visor del plano de control/stack de seguridad) y `CASB` (control de acceso a SaaS).
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Qué término describe los recursos de cómputo cloud como VMs o contenedores? | `Workloads` |
@@ -51,12 +61,16 @@
 
 ### Task 6: Desafío
 
+**Explicación:** Ejercicio práctico de clasificación: identificando el modelo de servicio correcto y quién es responsable en cada escenario se obtienen las dos flags de validación.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Cuál es la flag que obtienes al completar el primer ejercicio? | `THM{flag_as_a_service!}` |
 | 2 | ¿Cuál es la flag que obtienes al completar el segundo ejercicio? | `THM{ready_for_cloud_migration!}` |
 
 ### Task 7: Conclusión
+
+**Explicación:** Repaso de los conceptos clave de la sala y cierre.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|

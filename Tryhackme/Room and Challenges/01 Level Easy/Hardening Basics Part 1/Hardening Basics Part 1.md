@@ -17,11 +17,15 @@
 
 ### Task 1: Introducción
 
+**Explicación:** Presentación de la sala: endurecimiento (hardening) de sistemas, con foco en gestión de privilegios (sudo) y cortafuegos. Solo lectura.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Lee la introducción al endurecimiento de sistemas. | `No answer needed` |
 
 ### Task 2: Conceptos previos
+
+**Explicación:** Apartado de lectura: define qué es el hardening y por qué se aplica de forma constante a los sistemas a lo largo de su ciclo de vida, no como un paso puntual.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -29,11 +33,15 @@
 
 ### Task 3: Conceptos previos
 
+**Explicación:** Apartado de lectura: por qué la gestión de privilegios es el núcleo del hardening y el papel del comando `sudo` para delegar acciones administrativas de forma controlada.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Lee el material de la tarea. | `No answer needed` |
 
 ### Task 4: Conceptos previos
+
+**Explicación:** Apartado de lectura: cómo se organizan usuarios y grupos en Linux y por qué la adición al grupo `sudo` (via `usermod -aG sudo`) es la forma habitual de otorgar privilegios administrativos.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -41,11 +49,15 @@
 
 ### Task 5: Conceptos previos
 
+**Explicación:** Apartado de lectura: consulta de los permisos concedidos con `sudo -l` y la estructura del archivo de configuración `/etc/sudoers`.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Lee el material de la tarea. | `No answer needed` |
 
 ### Task 6: Conceptos previos
+
+**Explicación:** Apartado de lectura: sintaxis de las reglas de sudo con sus palabras clave `group`, `User` y `Command`, y el formato de las líneas de `/etc/sudoers`.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -53,11 +65,15 @@
 
 ### Task 7: Conceptos previos
 
+**Explicación:** Apartado de lectura: cómo sudo almacena las contraseñas en caché durante un tiempo (timestamp) y qué implica en cuanto a reusos del privilegio concedido.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Lee el material de la tarea. | `No answer needed` |
 
 ### Task 8: Conceptos previos
+
+**Explicación:** Apartado de lectura: el archivo `opasswd`, que guarda contraseñas antiguas para impedir su reutilización inmediata.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -65,17 +81,29 @@
 
 ### Task 9: Conceptos previos
 
+**Explicación:** Apartado de lectura: principio de mínimo privilegio aplicado a sudo y al resto de políticas de acceso del sistema.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Lee el material de la tarea. | `No answer needed` |
 
 ### Task 10: Conceptos previos
 
+**Explicación:** Apartado de lectura: cierre del bloque de sudo y transición al bloque de conceptos de cortafuegos.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Lee el material de la tarea. | `No answer needed` |
 
 ### Task 11: Cuestionario de sudo
+
+**Explicación:** Cuestionario del bloque sudo: comandos (`sudo`, `usermod -aG sudo nick`, `sudo -l`), archivos de configuración (`/etc/sudoers`, `opasswd`), palabras clave del sudoers (`group`, `User`, `Command`), el reuso del privilegio (`8` veces) y el principio de mínimo privilegio.
+
+```bash
+usermod -aG sudo nick
+sudo -l
+visudo
+```
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -93,11 +121,15 @@
 
 ### Task 12: Conceptos previos
 
+**Explicación:** Apartado de lectura: tipos de cortafuegos (basados en red y basados en host) y el concepto de zonas de red.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Lee el material de la tarea. | `No answer needed` |
 
 ### Task 13: Conceptos previos
+
+**Explicación:** Apartado de lectura: la zona desmilitarizada (DMZ) donde se colocan los servicios expuestos a Internet.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -105,11 +137,20 @@
 
 ### Task 14: Conceptos previos
 
+**Explicación:** Apartado de lectura: el framework de filtrado de paquetes del kernel Linux (`netfilter`), sus tablas y las cadenas de iptables (Input, Output, Forward, Mangle...).
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Lee el material de la tarea. | `No answer needed` |
 
 ### Task 15: Cuestionario de cortafuegos
+
+**Explicación:** Cuestionario del bloque cortafuegos: tipos (`Network-Based`, `Host-Based`), `Demilitarized Zone`, framework `netfilter`, listas de reglas `ACL`, filtrado por estado con `--ctstate`, cadenas `Forward` y `Mangle`, y la política final de `implicit deny`.
+
+```bash
+iptables -A FORWARD -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+iptables -P FORWARD DROP
+```
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|

@@ -17,11 +17,15 @@
 
 ### Task 1: Introducción
 
+**Explicación:** Presentación del laboratorio: enriquecer archivos y hashes con fuentes de inteligencia (VirusTotal, Hybrid Analysis). Solo lectura.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Lee la introducción a la inteligencia de archivos y hashes. | `No answer needed` |
 
 ### Task 2: Heurística y nombres de archivo
+
+**Explicación:** El archivo detectado es `payroll.pdf`; usa una extensión doble (realmente un ejecutable disfrazado de PDF), técnica de evasión clásica (`Double extensions`) que engaña según la configuración de Windows.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -29,6 +33,8 @@
 | 2 | ¿Qué técnica de evasión utilizaba el archivo? | `Double extensions` |
 
 ### Task 3: Análisis del malware "bl0gger"
+
+**Explicación:** La muestra SHA256 `2672b668...` se clasifica en VirusTotal como `trojan.graftor/blackmoon`; primera detección `2025-05-15 12:03:49`. El vendor `CyberFortress` dio inicialmente un falso negativo. La técnica clave identificada es `DLL Side-Loading`.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -39,6 +45,8 @@
 | 5 | ¿Qué técnica de MITRE ATT&CK se identificó en el archivo? | `DLL Side-Loading` |
 
 ### Task 4: Análisis del malware "Morse-Code-Analyzer"
+
+**Explicación:** Hybrid Analysis le asigna las etiquetas `BlackMoon, Discovery, windows-server-utility`. En el sandbox ejecuta `regsvr32 %WINDIR%\Media\ActiveX.ocx /s` (sigiloso), aparece el proceso secundario `werfault.exe` y usa `svchost.exe` como señuelo legítimo. La infraestructura C2 es `hxxp://121.182.174.27:3000/server.exe` y la muestra expone `454` strings.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -51,6 +59,12 @@
 
 ### Task 5: Ransomware Akira
 
+**Explicación:** La muestra de Akira (SHA256 `43b0ac11...`) se etiqueta como `akira, filecryptor`; primera detección `2024-10-30 17:17:24 UTC`. Deja la nota `akira_readme.txt` y, para impedir la restauración, borra las Shadow Copies con `Get-WmiObject Win32_Shadowcopy | Remove-WmiObject` (MITRE `T1490`).
+
+```powershell
+Get-WmiObject Win32_Shadowcopy | Remove-WmiObject
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Cuál es el hash SHA256 de la muestra de Akira? | `43b0ac119ff957bb209d86ec206ea1ec3c51dd87bebf7b4a649c7e6c7f3756e7` |
@@ -61,6 +75,8 @@
 | 6 | ¿Cuál es el ID de la técnica de MITRE ATT&CK utilizada? | `T1490` |
 
 ### Task 6: Conclusión
+
+**Explicación:** Repaso: heurística de nombres de archivo, enriquecimiento de hashes con VirusTotal, sandboxing con Hybrid Analysis y clasificación de ransomware.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|

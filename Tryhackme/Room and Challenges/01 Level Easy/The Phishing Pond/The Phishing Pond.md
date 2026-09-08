@@ -1,198 +1,47 @@
+# The Phishing Pond
 
-# The Phishing Pond [EASY]
-> **Room URL:** [The Phishing Pond — Catch the phish before the phish catches you.](https://tryhackme.com/room/phishingpond)
-
-## 📝 Descripción del Lab / Lab Description
-
-**Phishing Pond** es una sala diseñada para entrenar la capacidad de identificación de correos maliciosos. El objetivo es analizar diferentes escenarios de comunicación y determinar si se trata de un intento de **Phishing** o una comunicación legítima.
- 
- 
----
-
-## 🚀 Proceso de Resolución / Resolution Process
-
-### Introducción / Introduction
-
-Al iniciar la máquina virtual y acceder a la URL proporcionada, nos encontramos con la interfaz del juego donde debemos clasificar los correos.
-<div align="center">
-<img width="600" alt="Phishing Pond Room" src="./IMG/welcome.png" />
-
-## 📧 Walkthrough de Niveles / Level Walkthrough
- 
----
-
-## <div align="center">[The Phishing Pond — TryHackMe Walkthrough](https://tryhackme.com/room/phishingpond)</div>
-
-<div align="center">
-<img width="600" alt="Phishing Pond Room" src="./IMG/room.png" />
-</div>
-
-## 📝 Introducción al Laboratorio / Laboratory Introduction
-
-El lab **Phishing Pond** es un desafío interactivo donde debemos actuar como analistas de seguridad para identificar correos electrónicos maliciosos. El objetivo es detectar patrones de ataque comunes y obtener la flag final tras superar 10 niveles de dificultad progresiva.
-
- 
-
-## 🎣 Phishing: El Arte del Engaño / Phishing: The Art of Deception
-
-> El **Phishing** es un tipo de estafa en la que los atacantes abusan de tu confianza para engañarte y obtener información personal, contraseñas o dinero. 
-Al dirigirse directamente a las personas en lugar de intentar hackear sistemas complejos, se ha convertido en uno de los métodos más efectivos para el robo de datos.
-
-### 🚩 Estrategias Comunes de los Atacantes / Common Attacker Strategies
-
-Para identificar una campaña de phishing, es fundamental reconocer las tácticas psicológicas y técnicas que utilizan:
-
-* **⚠️ Urgencia y tácticas de miedo:** Asuntos como *"Acción inmediata requerida"* diseñados para presionarte a actuar sin pensar.
-* **🌐 Direcciones de remitente similares (Typosquatting):** Dominios falsos con cambios casi imperceptibles (ej. `rnicrosoft.com` en lugar de `microsoft.com`).
-* **👤 Suplantación de nombre de pantalla:** El nombre del remitente parece familiar, pero la dirección de correo electrónico real no coincide.
-* **📎 Adjuntos maliciosos:** Archivos (`.doc`, `.xls`, `.zip`) que solicitan "habilitar macros" o contienen malware directamente.
-* **🔓 Cuentas reales comprometidas:** Correos enviados desde cuentas hackeadas que parecen legítimas pero realizan solicitudes inusuales.
-* **🎁 Ofertas demasiado buenas para ser verdad:** Premios falsos, reembolsos o vacantes de empleo que requieren tus datos personales de antemano.
-
----
-### Tácticas Identificadas / Identified Tactics:
-
-* **Urgency & Scare Tactics**: Presión mediante límites de tiempo.
-* **Look-alike domains**: Dominios visualmente similares (ej. `rnicrosoft.com`).
-* **Display name impersonation**: Nombres conocidos con direcciones falsas.
-* **Malicious attachments**: Archivos con macros o malware (.doc, .xls, .zip).
-
-## 🚀 Proceso de Resolución / Resolution Process
-
-### Inicio del Challenge / Challenge Start
-
-Al acceder a la máquina, se nos presenta la pantalla de bienvenida que explica la dinámica del juego de clasificación.
+| **Dificultad** | Easy |
+| **Tipo** | Sala práctica (phishing) |
+| **Slug** | `phishingpond` |
+| **Link** | [TryHackMe](https://tryhackme.com/room/phishingpond) |
+| **Sección** | 01 Level Easy |
+| **Fuente** | TryHackMe |
+| **Componentes** | Phishing / clasificación de correos / typosquatting / impersonación / macro / links acortados / análisis de cabeceras |
+| **Impacto** | Desafío interactivo donde se actúa como analista de seguridad clasificando 10 correos como phishing o legítimos. Se repasan las tácticas de los atacantes (urgencia, typosquatting, impersonación de nombre visible, adjuntos con macros, cuentas comprometidas, ofertas demasiado buenas) y al superar los 10 niveles se obtiene la flag final. |
 
 ---
 
-### Análisis de los 10 Niveles / Analysis of the 10 Levels
+**Contexto:** "Catch the phish before the phish catches you". El lab presenta un juego de clasificación: por cada correo hay que decidir si es phishing o legítimo. Los 10 niveles combinan fraude de CEO (transferencia urgente), correos internos legítimos, notificaciones de sistema, servicio al cliente auténtico, archivos adjuntos que piden habilitar macros, enlaces a encuestas de terceros, ofertas de premios que piden datos bancarios, portales falsos de cambio de contraseña, dominios typosquatteados que imitan pasarelas de pago y entrega final de malware vía macros. Tras clasificar correctamente los 10 niveles, la flag es `THM{i_phish_you_not}`.
 
-#### Nivel 1
+## Solucionario
 
-Analizamos el primer correo donde se observa una técnica de impersonación de un ejecutivo.
+### Task 1: Introducción
 
-* **Resultado**: Phishing.
-* **Razón**: Urgencia y solicitud de transferencia bancaria.
-<div align="center">
-<img width="600" alt="Phishing Pond Room" src="./IMG/level1.png" />
-</div>
+**Explicación:** Se despliega la máquina y se accede a la URL del juego. La pantalla explica la dinámica y los conceptos clave de phishing (urgencia, typosquatting, impersonación del display name, adjuntos maliciosos, cuentas comprometidas y ofertas demasiado buenas).
 
-#### Nivel 2
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | Lee la introducción y despliega la máquina. | `No answer needed` |
 
-* **Resultado**: Legítimo.
-<div align="center">
-<img width="600" alt="Phishing Pond Room" src="./IMG/level2.png" />
+### Task 2: Los 10 niveles de clasificación
 
-#### Nivel 3
+**Explicación:** Análisis y clasificación de cada correo: 1) **Phishing** (impersonación de ejecutivo y transferencia urgente); 2) **Legítimo** (comunicación interna); 3) **Legítimo** (notificación de sistema); 4) **Legítimo** (servicio al cliente auténtico); 5) **Phishing** (adjunto que pide habilitar macros); 6) **Phishing** (encuesta externa sospechosa); 7) **Phishing** (premios a cambio de datos bancarios); 8) **Phishing** (redirección a portal falso de credenciales); 9) **Phishing** (dominio typosquatted imitando una pasarela de pago); 10) **Phishing** (macros maliciosas). Técnicas usadas: hovering para ver la URL real, verificación del dominio From y evaluación del contexto.
 
-* **Resultado**: Legítimo.
-<div align="center">
-<img width="600" alt="Phishing Pond Room" src="./IMG/level3.png" />
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | Clasifica los 10 correos como phishing o legítimos. | `No answer needed` |
 
-#### Nivel 4
+### Task 3: Obtención de la flag
 
-* **Resultado**: Legítimo.
-<div align="center">
-<img width="600" alt="Phishing Pond Room" src="./IMG/level4.png" />
+**Explicación:** Al completar correctamente todos los niveles, el sistema valida las respuestas y muestra la flag.
 
-#### Nivel 5
-
-En este nivel detectamos un vector de ataque clásico basado en documentos ofimáticos.
-
-* **Resultado**: Phishing.
-* **Razón**: El correo solicita explícitamente habilitar macros en un archivo adjunto.
-<div align="center">
-<img width="600" alt="Phishing Pond Room" src="./IMG/level5.png" />
-
-#### Nivel 6
-
-* **Resultado**: Phishing.
-* **Razón**: Enlace a una encuesta externa de procedencia dudosa.
-<div align="center">
-<img width="600" alt="Phishing Pond Room" src="./IMG/level6.png" />
-
-#### Nivel 7
-
-* **Resultado**: Phishing.
-* **Razón**: Promesa de recompensas a cambio de información sensible.
-<div align="center">
-<img width="600" alt="Phishing Pond Room" src="./IMG/level7.png" />
-
-#### Nivel 8
-
-* **Resultado**: Phishing.
-* **Razón**: Redirección a un portal falso de cambio de credenciales.
-<div align="center">
-<img width="600" alt="Phishing Pond Room" src="./IMG/level8.png" />
-
-#### Nivel 9
-
-* **Resultado**: Phishing.
-* **Razón**: El enlace utiliza un dominio "typosquatted" que imita una pasarela de pago real.
-<div align="center">
-<img width="600" alt="Phishing Pond Room" src="./IMG/level9.png" />
-
-#### Nivel 10
-
-El reto final consolida lo aprendido con un adjunto malicioso.
-
-* **Resultado**: Phishing.
-* **Razón**: Reitera la técnica de macros maliciosas.
-<div align="center">
-<img width="600" alt="Phishing Pond Room" src="./IMG/level10.png" />
-
- 
-
-### resumen / summary
-
-En esta primera etapa, identificamos desde fraudes de CEO hasta archivos con macros.
-
-| Nivel | Captura de Pantalla | Análisis y Resultado |
-| --- | --- | --- |
-| **01** |  | **🚩 Phishing**: Impersonación de ejecutivo y solicitud de transferencia urgente. |
-| **02** |  | **✅ Legítimo**: Comunicación interna estándar. |
-| **03** |  | **✅ Legítimo**: Notificación de sistema sin adjuntos ni links sospechosos. |
-| **04** |  | **✅ Legítimo**: Correo auténtico de servicio al cliente. |
-| **05** |  | **🚩 Phishing**: Archivo adjunto que solicita habilitar macros. |
-| **06** |  | **🚩 Phishing**: Contiene un link a una encuesta de terceros sospechosa. |
-| **07** |  | **🚩 Phishing**: Oferta de premios que requiere datos bancarios. |
-| **08** |  | **🚩 Phishing**: Link de restablecimiento de contraseña falso. |
-| **09** |  | **🚩 Phishing**: Dominio engañoso imitando un portal de pagos. |
-| **10** |  | **🚩 Phishing**: Intento de entrega de malware vía macros en adjunto. |
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | ¿Cuál es la flag? | `THM{i_phish_you_not}` |
 
 ---
 
-### Captura de la Flag / Flag Capture
-
-Tras completar correctamente todos los niveles, el sistema valida las respuestas y muestra la flag
-
-> **Flag**: `THM{i_phish_you_not}`
-<div align="center">
-<img width="600" alt="Phishing Pond Room" src="./IMG/flag.png" />
-
-## 🏁 Finalización y Flag / Completion and Flag
-
-Tras enviar la flag se termina la sala
-<div align="center">
-<img width="600" alt="Phishing Pond Room" src="./IMG/End.png" />
-
----
-
-## 🛠️ Técnicas de Análisis Utilizadas / Analysis Techniques Used
-
-1. **Inspección de Hyperlinks**: Verificación de la URL real al pasar el mouse sobre botones (hovering).
-2. **Análisis de Headers**: Verificación del dominio del remitente (`From:`) contra el dominio real de la empresa.
-3. **Evaluación de Contexto**: Identificación de solicitudes inusuales de credenciales o transferencias monetarias.
-
----
-
----
-
-## ⚠️ Descargo de Responsabilidad (Disclaimer)
-
-Este contenido se presenta exclusivamente con fines académicos y educativos.
-
-**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
-**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
-**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
-**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.
+**Metodología:** Inspección de hyperlinks (hovering) para detectar la URL real → análisis de cabeceras (dominio From vs dominio corporativo) → evaluación del contexto (peticiones inusuales de credenciales o transferencias) → clasificación phishing/legítimo → captura de la flag.
+**Learning chain:** entender las tácticas del phishing → aplicar el análisis de links, headers y contexto → afinar el veredicto en los 10 niveles → conseguir la flag.
+**MITRE ATT&CK:** T1566 (Phishing), T1566.002 (Spearphishing Link), T1204.001 (User Execution: Malicious Link), T1204.002 (User Execution: Malicious File), T1036 (Masquerading - Typosquatting)
+**Fuente:** [TryHackMe - The Phishing Pond](https://tryhackme.com/room/phishingpond)

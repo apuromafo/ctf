@@ -1,106 +1,74 @@
+# SOC Role in Blue Team
 
-
-# SOC-Role-in-Blueteam [EASY]
-**Room Link:**  https://tryhackme.com/room/socroleinblueteam
-
- <img src="https://tryhackme-images.s3.amazonaws.com/room-icons/678ecc92c80aa206339f0f23-1756302396554" width="250" alt="SOC Role in Blue Team">
-
-#### Learning Objectives
-
-- Understand the concept and purpose of the Blue Team
-- Explore a place of the SOC within the company structure
-- Find out about your career path as a SOC L1 analyst
-
-#### Prerequisites
-
-- Complete the [[Junior Security Analyst]] room
-
-## Security Hierarchy
-
-#### Security Departments
-
-In tiny companies, the IT department takes the role of securing the company. Small to medium-sized companies may have a generic "Information Security" team that does all sorts of tasks. For this room, we will focus on bigger companies with a CISO overseeing multiple security teams, each handling a specific task. For example:
-
-- **Red Team**: Offensive security experts, pentesters, or ethical hackers who look for security issues
-- **GRC Team**: Specialists managing policies and ensuring compliance with regulations like PCI DSS
-- **Blue Team**: Defensive security experts like SOC analysts, engineers, or incident responders
-
-#### Questions
-
-1. Which senior role typically makes key cyber security decisions?
-   **Answer:** CISO
-2. What is the common name for roles like SOC analysts and engineers?
-   **Answer:** Blue Team
-
-## Meet the Blue Team
-
-#### SOC
-
-- **L1 Analysts**: Junior members who triage alerts and pass complex cases to L2
-- **L2 Analysts:** Experienced members who investigate more advanced attacks
-- **Engineers**: Experts in configuring security tools like EDR or SIEM
-- **Manager**: A person who manages the whole SOC team
-
-#### CIRT (Cyber Incident Reponse Team)
-
-If SOC expertise is not enough or the incident goes out of control, you urgently call the "firefighters" - CIRT, also called CSIRT or CERT. The members should have a broad knowledge of cyber threats and handle breaches without depending on tools like EDR or SIEM. A CIRT job is stressful and responsible, but also rewarding. Here are a few CIRT examples:
-
-- [JPCERT](https://www.jpcert.or.jp/english): Japan's CERT handling nation-wide breaches
-- [Mandiant](https://www.mandiant.com/): A private team responding to global cyber incidents
-- [AWS CIRT](https://aws.amazon.com/security-incident-response): Investigates security incidents of AWS customers
-
-#### Specialized Defensive Roles
-
-Large companies, technology-focused startups, and government agencies often require narrow and specialized Blue Team roles - exciting and highly valuable, but requiring deep topic knowledge and broad experience in broader fields like SOC or IT. These narrow roles can include:
-
-- **Digital Forensics Analyst**: Uncover hidden threats in disk and memory
-- **Threat Intelligence Analyst**: Gather data about emerging threat groups
-- **AppSec Engineer**: Maintain a secure software development lifecycle
-- **AI Researcher**: Study AI threats and how to defend against them
-
-#### Questions
-
-1. Does Blue Team focus on defensive or offensive security?
-   **Answer:** Defensive
-2. Which department handles active or urgent cyber incidents
-   **Answer:** CIRT
-
-## Advancing SOC Career
-
-#### Internal SOC vs MSSP
-
-Not every organization has the expertise to operate a SOC on its own and relies on a Managed Security Services Provider (MSSP), a company that delivers outsourced security services, most commonly SOC, to its clients. Working at MSSP is typically high-pressure, but it is also a good option to quickstart your career. While we recommend applying for any open SOC position as your first job, it's also important to understand the differences:
-
-#### Questions
-
-1. How would you call a cyber security company providing SOC services?
-   **Answer:** MSSP
-2. Which role naturally continues your SOC L1 analyst journey?
-   **Answer:** SOC L2 Analyst
-
-## Final Challenge
-
-1. What flag did you claim after completing the final challenge?
-   **Answer:** THM{trysecureme_is_secured!}
-   
-   
-#Module: SOC Role in Blue Team Answers
-| Task | Title | Response |
-| :--- | :--- | :--- |
-| **1** | Introduction | No answer needed |
-| **2** | Security Hierarchy | 1. CISO<br>2. Blue Team |
-| **3** | Meet the Blue Team | 1. Defensive<br>2. CIRT |
-| **4** | Advancing SOC Career | 1. MSSP<br>2. SOC L2 Analyst |
-| **5** | Final Challenge | `THM{trysecureme_is_secured!}` |
-| **6** | Conclusion | No answer needed |
+| **Dificultad** | Easy |
+| **Tipo** | Sala teórica (SOC / Blue Team) |
+| **Slug** | `socroleinblueteam` |
+| **Link** | [TryHackMe](https://tryhackme.com/room/socroleinblueteam) |
+| **Sección** | 01 Level Easy |
+| **Fuente** | TryHackMe |
+| **Componentes** | CISO / Red Blue GRC Teams / CIRT (CSIRT/CERT) / L1 L2 Engineer Manager / MSSP / career path |
+| **Impacto** | Sala introductoria sobre el rol y el propósito del Blue Team: la jerarquía de seguridad corporativa bajo el CISO, los equipos Red y GRC, el papel del SOC (L1, L2, Engineers, Manager), el CIRT para incidentes urgentes, los roles especializados (Digital Forensics, Threat Intel, AppSec, AI Researcher), la diferencia entre un SOC interno y un MSSP, las rutas de carrera y un reto final que entrega una flag. |
 
 ---
 
-## ⚠️ Descargo de Responsabilidad (Disclaimer)
+**Contexto:** El módulo explica la estructura de seguridad en empresas grandes: el **CISO** es el cargo senior que toma las decisiones de ciberseguridad; el **Blue Team** es el nombre común para los defensores (analistas SOC, ingenieros y responders). El SOC está formado por **L1** (triage y pases a L2), **L2** (ataques avanzados), **Engineers** (configuración de EDR/SIEM) y **Manager**. Cuando el incidente se desborda, entra el **CIRT** (CSIRT/CERT). Para empresas sin SOC propio existen los **MSSP** (outsourcing de seguridad), y la ruta natural de un analista SOC L1 sigue con **SOC L2 Analyst**. El reto final entrega `THM{trysecureme_is_secured!}`.
 
-Este contenido se presenta exclusivamente con fines académicos y educativos.
+## Solucionario
 
-**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
-**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
-**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
-**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.
+### Task 1: Introducción
+
+**Explicación:** La sala asume haber completado la sala "Junior Security Analyst".
+
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | He leído la introducción. | `No answer needed` |
+
+### Task 2: Jerarquía de seguridad
+
+**Explicación:** En empresas grandes el CISO supervisa equipos especializados: Red Team (ofensiva), GRC (políticas y compliance) y Blue Team (defensa). Los analistas SOC y los ingenieros encajan en el **Blue Team**.
+
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | ¿Qué cargo senior toma normalmente las decisiones clave de ciberseguridad? | `CISO` |
+| 2 | ¿Cuál es el nombre común para roles como analistas o ingenieros SOC? | `Blue Team` |
+
+### Task 3: Conoce al Blue Team
+
+**Explicación:** El SOC se organiza en L1, L2, Engineers y Manager. Si el SOC no puede manejar el incidente, entra el CIRT (también llamado CSIRT o CERT), el equipo "bombero" que atiende incidentes activos o urgentes (ej.: JPCERT, Mandiant, AWS CIRT). El Blue Team se enfoca en la seguridad defensiva y existen roles especializados (Digital Forensics, Threat Intelligence, AppSec, AI Researcher).
+
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | ¿El Blue Team se enfoca en seguridad defensiva u ofensiva? | `Defensive` |
+| 2 | ¿Qué departamento maneja los incidentes cibernéticos activos o urgentes? | `CIRT` |
+
+### Task 4: Avanzando en la carrera SOC
+
+**Explicación:** Las organizaciones sin capacidad para operar un SOC propio contratan un MSSP (Managed Security Services Provider) que presta servicios de seguridad externalizados. Para un analista SOC L1, la ruta natural de crecimiento es convertirse en **SOC L2 Analyst**.
+
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | ¿Cómo llamarías a una empresa de ciberseguridad que provee servicios SOC? | `MSSP` |
+| 2 | ¿Qué rol continúa naturalmente tu trayectoria como analista SOC L1? | `SOC L2 Analyst` |
+
+### Task 5: Reto final
+
+**Explicación:** Pequeño reto de verificación (en la variante de la sala se usa una máquina desplegada) que cierra el módulo.
+
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | ¿Qué flag obtuviste al completar el reto final? | `THM{trysecureme_is_secured!}` |
+
+### Task 6: Conclusión
+
+**Explicación:** Cierre del módulo con el resumen del lugar del SOC en la estructura corporativa.
+
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | He leído la conclusión. | `No answer needed` |
+
+---
+
+**Metodología:** Lectura de la jerarquía corporativa (Red/GRC/Blue) → repaso de la estructura del SOC y del CIRT → identificación de los roles especializados → comparación SOC interno vs MSSP → revisión de la ruta de carrera → reto final de verificación.
+**Learning chain:** CISO y departamentos de seguridad → Blue Team como rol defensor → SOC (L1/L2/Engineers/Manager) → CIRT ante incidentes → MSSP y carrera SOC L1→L2 → flag final.
+**MITRE ATT&CK:** T1566 (Phishing - defensa), T1078 (Valid Accounts - defensa), T1059.003 (Windows Command Shell - defensa)
+**Fuente:** [TryHackMe - SOC Role in Blue Team](https://tryhackme.com/room/socroleinblueteam)

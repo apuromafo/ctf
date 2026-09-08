@@ -1,82 +1,69 @@
-# Sweettooth Inc [MEDIUM]
+# Sweettooth Inc
 
-### Información de la Sala / Room Information
-
-* **Dificultad / Difficulty:** MEDIUM
-* **Tipo / Type:** CTF (Free)
-* **Slug:** `sweettoothinc`
-* **Link:** https://tryhackme.com/room/sweettoothinc
-* **Sección / Section:** Web / CTF
-* **Fuente / Source:** (thmrevenant)
-
----
-
-## Solucionario de Tareas / Task Solutions
-
-> **ES:** CTF orientado a la explotación de una infraestructura de automatización industrial (ICS). Incluye escaneo de puertos, acceso a una base de datos InfluxDB sin autenticación, consultas de datos de sensores (temperatura, RPM) y obtención de flags de usuario y root a través de credenciales y bases de datos internas.
-> **EN:** CTF oriented to exploiting an industrial automation (ICS) infrastructure. It includes port scanning, unauthenticated access to an InfluxDB database, sensor data queries (temperature, RPM) and obtaining user and root flags through credentials and internal databases.
+| **Dificultad** | Medium |
+| **Tipo** | CTF |
+| **Slug** | `sweettoothinc` |
+| **Link** | [TryHackMe](https://tryhackme.com/room/sweettoothinc) |
+| **Sección** | 02 Level Medium |
+| **Fuente** | texto oficial THM + anotaciones propias |
+| **Componentes** | InfluxDB / ICS / time series / sensor data / credential exposure / privesc |
+| **Impacto** | Explotar una base de datos InfluxDB sin autenticación en un entorno ICS para leer datos de sensores, extraer credenciales y obtener flags |
 
 ---
 
-### Task 1 — Enumeración y Base de Datos / Enumeration and Database
+**Contexto:** CTF orientado a la explotación de una infraestructura de automatización industrial (ICS). Incluye escaneo de puertos, acceso a una base de datos InfluxDB sin autenticación, consultas de datos de sensores (temperatura, RPM) y obtención de flags de usuario y root a través de credenciales y bases de datos internas.
 
-| Pregunta / Question | Respuesta / Answer |
-|----------|--------|
-| Do a TCP portscan. What is the name of the database software running on one of these ports? | `influxdb` |
-| What is the database user you find? | `o5yY6yya` |
+## Solucionario
 
----
+### Task 1: Enumeración y Base de Datos / Enumeration and Database
 
-### Task 2 — Datos de Sensores ICS / ICS Sensor Data
+**Explicación:**
 
-| Pregunta / Question | Respuesta / Answer |
-|----------|--------|
-| What was the temperature of the water tank at 1621346400 (UTC Unix Timestamp)? | `22.5` |
-| What is the highest rpm the motor of the mixer reached? | `4875` |
-| What username do you find in one of the databases? | `uzJk6Ry98d8C` |
+Un escaneo TCP de puertos revela el software de base de datos que corre en uno de los puertos abiertos: **influxdb**. Al enumerar la base de datos (sin credenciales o con las descubiertas) se obtiene el usuario de base de datos **o5yY6yya**.
 
----
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | Do a TCP portscan. What is the name of the database software running on one of these ports? | `influxdb` |
+| 2 | What is the database user you find? | `o5yY6yya` |
 
-### Task 3 — Flags / Flags
+### Task 2: Datos de Sensores ICS / ICS Sensor Data
 
-| Pregunta / Question | Respuesta / Answer |
-|----------|--------|
-| user.txt | `THM{V4w4FhBmtp4RFDti}` |
-| /root/root.txt | `THM{5qsDivHdCi2oabwp}` |
-| The second /root/root.txt | `THM{nY2ZahyFABAmjrnx}` |
+**Explicación:**
 
----
+Consultando las series temporales de las bases de datos ICS (InfluxDB, lenguaje Flux) se obtienen los valores operativos: la temperatura del tanque de agua en el timestamp Unix 1621346400 era **22.5**; las RPM máximas alcanzadas por el motor del mezclador fueron **4875**. En una de las bases de datos aparece además el usuario **uzJk6Ry98d8C**.
 
-## Metodología / Methodology
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | What was the temperature of the water tank at 1621346400 (UTC Unix Timestamp)? | `22.5` |
+| 2 | What is the highest rpm the motor of the mixer reached? | `4875` |
+| 3 | What username do you find in one of the databases? | `uzJk6Ry98d8C` |
 
-1. **Paso / Step:** Realizar un escaneo TCP de puertos para descubrir los servicios expuestos; entre los puertos abiertos se identifica una base de datos InfluxDB desplegada en la máquina. / Perform a TCP port scan to discover the exposed services; among the open ports an InfluxDB database deployed on the machine is identified.
-2. **Paso / Step:** Conectarse a InfluxDB sin credenciales (o con las descubiertas) y enumerar sus bases de datos y usuarios, obteniendo el usuario de base de datos `o5yY6yya`. / Connect to InfluxDB without credentials (or with the discovered ones) and enumerate its databases and users, obtaining the database user `o5yY6yya`.
-3. **Paso / Step:** Consultar las series temporales almacenadas en las bases de datos ICS: obtener la temperatura del tanque de agua en el timestamp 1621346400 (22.5) y las RPM máximas alcanzadas por el motor del mezclador (4875). / Query the time series stored in the ICS databases: obtain the water tank temperature at timestamp 1621346400 (22.5) and the maximum RPM reached by the mixer motor (4875).
-4. **Paso / Step:** Extraer credenciales o usuarios almacenados en las bases de datos (usuario `uzJk6Ry98d8C`) para acceder a la máquina y leer `user.txt`. / Extract credentials or users stored in the databases (user `uzJk6Ry98d8C`) to access the machine and read `user.txt`.
-5. **Paso / Step:** Escalar privilegios localmente y localizar las dos variantes de `/root/root.txt`, capturando ambas flags de root. / Escalate privileges locally and locate the two variants of `/root/root.txt`, capturing both root flags.
+### Task 3: Flags / Flags
 
-### Cadena de ataque / Attack Chain
+**Explicación:**
 
-```
-nmap (TCP ports) -> InfluxDB expuesta (sin auth)
-  -> enum DBs/users: o5yY6yya, uzJk6Ry98d8C
-  -> consultas Flux: water tank temp @1621346400 = 22.5
-  -> mixer max rpm = 4875
-  -> credenciales/usuario en DB -> acceso al host
-  -> user.txt  = THM{V4w4FhBmtp4RFDti}
-  -> privesc  -> /root/root.txt = THM{5qsDivHdCi2oabwp}
-  -> flag root secundaria  = THM{nY2ZahyFABAmjrnx}
-```
+Con las credenciales/usuarios extraídos de las bases de datos se accede por SSH y se lee `user.txt`. Tras escalar privilegios localmente se localizan dos variantes de `/root/root.txt`, capturando ambas flags de root: `THM{V4w4FhBmtp4RFDti}` (user.txt), `THM{5qsDivHdCi2oabwp}` (primera /root/root.txt) y `THM{nY2ZahyFABAmjrnx}` (segunda /root/root.txt).
 
-**Lección:** Las bases de datos de series temporales (InfluxDB) en entornos ICS suelen quedar expuestas sin autenticación; los datos operacionales y credenciales embebidas son una vía directa para comprometer el host y escalar a root.
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | user.txt | `THM{V4w4FhBmtp4RFDti}` |
+| 2 | /root/root.txt | `THM{5qsDivHdCi2oabwp}` |
+| 3 | The second /root/root.txt | `THM{nY2ZahyFABAmjrnx}` |
 
 ---
 
-## ⚠️ Descargo de Responsabilidad (Disclaimer)
+**Metodología:**
 
-Este contenido se presenta exclusivamente con fines académicos y educativos.
+1. Realizar un escaneo TCP de puertos para descubrir los servicios expuestos; entre los puertos abiertos se identifica una base de datos InfluxDB desplegada en la máquina.
+2. Conectarse a InfluxDB sin credenciales (o con las descubiertas) y enumerar sus bases de datos y usuarios, obteniendo el usuario de base de datos `o5yY6yya`.
+3. Consultar las series temporales almacenadas en las bases de datos ICS: obtener la temperatura del tanque de agua en el timestamp 1621346400 (22.5) y las RPM máximas alcanzadas por el motor del mezclador (4875).
+4. Extraer credenciales o usuarios almacenados en las bases de datos (usuario `uzJk6Ry98d8C`) para acceder a la máquina y leer `user.txt`.
+5. Escalar privilegios localmente y localizar las dos variantes de `/root/root.txt`, capturando ambas flags de root.
 
-**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
-**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
-**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
-**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.
+**Learning chain:** nmap -> InfluxDB expuesto -> enumerar DBs/usuarios -> consultas Flux (temp/RPM) -> credenciales -> user.txt -> privesc -> dos root.txt
+
+**Lección:** *Las bases de datos de series temporales (InfluxDB) en entornos ICS suelen quedar expuestas sin autenticación; los datos operacionales y credenciales embebidas son una vía directa para comprometer el host y escalar a root.*
+
+**MITRE ATT&CK:** T1005 (Data from Local System) · T1078 (Valid Accounts) · T0812 (Remote System Information Discovery, ICS) · CWE-287 (Improper Authentication)
+
+**Fuente:** [TryHackMe - Sweettooth Inc](https://tryhackme.com/room/sweettoothinc)

@@ -1,82 +1,67 @@
-# Supplemental Memory [MEDIUM]
+# Supplemental Memory
 
-### Información de la Sala / Room Information
-
-* **Dificultad / Difficulty:** MEDIUM
-* **Tipo / Type:** CTF (Premium)
-* **Slug:** `supplementalmemory`
-* **Link:** https://tryhackme.com/room/supplementalmemory
-* **Sección / Section:** Forensics / Memory
-* **Fuente / Source:** Web (jalilayed/Medium, VALKYRI3/Medium, Francesco Pastore/Medium, Iram Jack/Medium, simontaplin.net)
-
----
-
-## Solucionario de Tareas / Task Solutions
-
-> **ES:** Sala de análisis forense de memoria. Como miembro de un equipo DFIR debes analizar un volcado de memoria de la estación WIN-015, cuyo usuario Cain Omoore guarda claves de acceso al sistema de control de la fábrica TryHatMe. Investigarás movimiento lateral, exfiltración, escalada de privilegios y robo de credenciales usando Volatility 3.
-> **EN:** Memory forensics room. As a DFIR team member you must analyze a memory dump of the WIN-015 workstation, whose user Cain Omoore stores access keys to the TryHatMe factory control system. You will investigate lateral movement, exfiltration, privilege escalation and credential theft using Volatility 3.
+| **Dificultad** | Medium |
+| **Tipo** | CTF |
+| **Slug** | `supplementalmemory` |
+| **Link** | [TryHackMe](https://tryhackme.com/room/supplementalmemory) |
+| **Sección** | 02 Level Medium |
+| **Fuente** | texto oficial THM + anotaciones propias |
+| **Componentes** | memory forensics / Volatility 3 / lateral movement / credential dumping / Mimikatz / WinRM / T1021.006 |
+| **Impacto** | Reconstruir una cadena completa de ataque (movimiento lateral, escalada y robo de credenciales) desde un volcado de memoria |
 
 ---
 
-### Task 1 — Movimiento Lateral y Descubrimiento / Lateral Movement and Discovery
+**Contexto:** Sala de análisis forense de memoria. Como miembro de un equipo DFIR debes analizar un volcado de memoria de la estación WIN-015, cuyo usuario Cain Omoore guarda claves de acceso al sistema de control de la fábrica TryHatMe. Investigarás movimiento lateral, exfiltración, escalada de privilegios y robo de credenciales usando Volatility 3.
 
-| Pregunta / Question | Respuesta / Answer |
-|----------|--------|
-| Which executed process provides evidence of lateral movement to this host? | `WmiPrvSE.exe` |
-| What is the MITRE technique ID associated with the lateral movement method used by the threat actor? | `T1021.006` |
-| Which other process was executed as part of the lateral movement activity on this host? | `TeamsView.exe` |
-| What is the Security Identifier (SID) of the user account under which the process was executed on this host? | `S-1-5-21-3147497877-3647478928-1701467185-1008` |
-| What is the name of the domain-related security group the user account was a member of? | `Domain Users` |
-| Which processes linked to discovery activity were executed by the threat actor? (Alphabetical order) | `ipconfig.exe, systeminfo.exe, whoami.exe` |
-| What is the Command and Control IP address that the threat actor connected to from this host? (Format: IP:Port) | `34.244.169.133:1995` |
+## Solucionario
 
----
+### Task 1: Movimiento Lateral y Descubrimiento / Lateral Movement and Discovery
 
-### Task 2 — Escalada de Privilegios y Robo de Credenciales / Privilege Escalation and Credential Dumping
+**Explicación:**
 
-| Pregunta / Question | Respuesta / Answer |
-|----------|--------|
-| Identify another suspicious process on the host. Provide the full path to the process. | `C:\Windows\Temp\pan.exe` |
-| Which account was used to execute this malicious process? | `Local System` |
-| What was the malicious command line executed by this process? | `privilege::debug sekurlsa::logonpasswords` |
-| Given the command line from the previous question, which well-known hacking tool was likely used? | `Mimikatz` |
-| What is the MITRE ATT&CK technique ID for the attacker's evasion method? | `T1036` |
+Análisis con Volatility 3 sobre el volcado `WIN-015-20250522-111717.dmp`. El plugin `windows.pstree` reconstruye el árbol de procesos. El proceso que evidencia el movimiento lateral a este host es `WmiPrvSE.exe`; la técnica MITRE asociada es `T1021.006` (Windows Remote Management/WinRM). Otro proceso ejecutado como parte del movimiento lateral es `TeamsView.exe`. El SID del usuario bajo el que se ejecutó es `S-1-5-21-3147497877-3647478928-1701467185-1008`, y su grupo de seguridad de dominio era `Domain Users`. Los procesos de descubrimiento ejecutados (en orden alfabético) son `ipconfig.exe, systeminfo.exe, whoami.exe`. La dirección de C2 a la que se conectó el atacante es `34.244.169.133:1995`.
 
----
+**Detalle del árbol de procesos:** `svchost.exe (748)` lanzó `WmiPrvSE.exe (2376)`, que a su vez ejecutó `TeamsView.exe (1672)`, seguido de los comandos de reconocimiento. La técnica usada es Windows Remote Management (WinRM/WMI), catalogada como T1021.006.
 
-## Metodología / Methodology
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | Which executed process provides evidence of lateral movement to this host? | `WmiPrvSE.exe` |
+| 2 | What is the MITRE technique ID associated with the lateral movement method used by the threat actor? | `T1021.006` |
+| 3 | Which other process was executed as part of the lateral movement activity on this host? | `TeamsView.exe` |
+| 4 | What is the Security Identifier (SID) of the user account under which the process was executed on this host? | `S-1-5-21-3147497877-3647478928-1701467185-1008` |
+| 5 | What is the name of the domain-related security group the user account was a member of? | `Domain Users` |
+| 6 | Which processes linked to discovery activity were executed by the threat actor? (Alphabetical order) | `ipconfig.exe, systeminfo.exe, whoami.exe` |
+| 7 | What is the Command and Control IP address that the threat actor connected to from this host? (Format: IP:Port) | `34.244.169.133:1995` |
 
-1. **Paso / Step:** Correr Volatility 3 sobre el volcado `WIN-015-20250522-111717.dmp` y usar el plugin `windows.pstree` (o los resultados precocinados) para reconstruir el árbol de procesos. / Run Volatility 3 on the `WIN-015-20250522-111717.dmp` dump and use the `windows.pstree` plugin (or the precooked results) to rebuild the process tree.
-2. **Paso / Step:** Detectar el movimiento lateral: `svchost.exe (748)` lanzó `WmiPrvSE.exe (2376)`, que a su vez ejecutó `TeamsView.exe (1672)`, seguido de comandos de reconocimiento `systeminfo.exe`, `ipconfig.exe` y `whoami.exe`. La técnica empleada es Windows Remote Management (WinRM/WMI), catalogada como T1021.006. / Detect lateral movement: `svchost.exe (748)` spawned `WmiPrvSE.exe (2376)`, which in turn executed `TeamsView.exe (1672)`, followed by the recon commands `systeminfo.exe`, `ipconfig.exe` and `whoami.exe`. The technique used is Windows Remote Management (WinRM/WMI), catalogued as T1021.006.
-3. **Paso / Step:** Obtener el contexto del usuario con `windows.getsids` (PID 1672): el proceso corrió como `cain.omoore` (SID S-1-5-21-3147497877-3647478928-1701467185-1008), miembro del grupo `Domain Users`. / Obtain the user context with `windows.getsids` (PID 1672): the process ran as `cain.omoore` (SID S-1-5-21-3147497877-3647478928-1701467185-1008), a member of the `Domain Users` group.
-4. **Paso / Step:** Inspeccionar `windows.netscan` filtrando por `TeamsView.exe` para identificar la conexión de mando y control establecida (34.244.169.133:1995) como resultado de las acciones previas. / Inspect `windows.netscan` filtering by `TeamsView.exe` to identify the established command-and-control connection (34.244.169.133:1995) as a result of the previous actions.
-5. **Paso / Step:** Profundizar en el análisis: localizar el proceso malicioso adicional (`pan.exe` en `C:\Windows\Temp`) mediante `cmdline.txt` y confirmar con `getsids --pid 4840` que se ejecutó como `Local System` (escalada de privilegios). / Dig deeper: locate the additional malicious process (`pan.exe` in `C:\Windows\Temp`) using `cmdline.txt` and confirm with `getsids --pid 4840` that it ran as `Local System` (privilege escalation).
-6. **Paso / Step:** Identificar la línea de comandos maliciosa `privilege::debug sekurlsa::logonpasswords`, propia de Mimikatz, ejecutada bajo el nombre falso `pan.exe` (masquerading, T1036), lo que confirma el dumping de credenciales. / Identify the malicious command line `privilege::debug sekurlsa::logonpasswords`, typical of Mimikatz, executed under the fake name `pan.exe` (masquerading, T1036), which confirms credential dumping.
+### Task 2: Escalada de Privilegios y Robo de Credenciales / Privilege Escalation and Credential Dumping
 
-### Cadena de ataque / Attack Chain
+**Explicación:**
 
-```
-Cain Omoore (credenciales cacheadas en WIN-001)
-  -> Robo de credenciales (cached credentials)
-  -> Movimiento lateral a WIN-015 (WinRM/WMI - T1021.006)
-  -> svchost.exe (748) -> WmiPrvSE.exe (2376) -> TeamsView.exe (1672)
-  -> Descubrimiento: systeminfo.exe, ipconfig.exe, whoami.exe
-  -> C2 establecida: 34.244.169.133:1995
-  -> Escalada a Local System (servicio/ejecución privilegiada)
-  -> pan.exe (mimikatz renombrado, T1036):
-      privilege::debug sekurlsa::logonpasswords
-  -> Dumping de credenciales (T1003)
-```
+Profundizamos: con `cmdline.txt` se localiza el proceso malicioso adicional `C:\Windows\Temp\pan.exe`, confirmado con `getsids --pid 4840` que se ejecutó como **Local System** (escalada de privilegios). La línea de comandos maliciosa es `privilege::debug sekurlsa::logonpasswords`, propia de **Mimikatz**, ejecutada bajo el nombre falso `pan.exe` (masquerading, técnica T1036). Esto confirma el dumping de credenciales.
 
-**Lección:** Un dump de memoria permite reconstruir la cadena completa de un ataque: desde el movimiento lateral (WMI/WinRM) hasta el robo de credenciales con Mimikatz, incluso cuando la herramienta está renombrada o "masqueradeada"; el análisis cruzado de procesos, SIDs y conexiones con Volatility 3 es clave.
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | Identify another suspicious process on the host. Provide the full path to the process. | `C:\Windows\Temp\pan.exe` |
+| 2 | Which account was used to execute this malicious process? | `Local System` |
+| 3 | What was the malicious command line executed by this process? | `privilege::debug sekurlsa::logonpasswords` |
+| 4 | Given the command line from the previous question, which well-known hacking tool was likely used? | `Mimikatz` |
+| 5 | What is the MITRE ATT&CK technique ID for the attacker's evasion method? | `T1036` |
 
 ---
 
-## ⚠️ Descargo de Responsabilidad (Disclaimer)
+**Metodología:**
 
-Este contenido se presenta exclusivamente con fines académicos y educativos.
+1. Correr Volatility 3 sobre el volcado `WIN-015-20250522-111717.dmp` y usar el plugin `windows.pstree` (o los resultados precocinados) para reconstruir el árbol de procesos.
+2. Detectar el movimiento lateral: `svchost.exe (748)` lanzó `WmiPrvSE.exe (2376)`, que a su vez ejecutó `TeamsView.exe (1672)`, seguido de comandos de reconocimiento `systeminfo.exe`, `ipconfig.exe` y `whoami.exe`. La técnica empleada es Windows Remote Management (WinRM/WMI), catalogada como T1021.006.
+3. Obtener el contexto del usuario con `windows.getsids` (PID 1672): el proceso corrió como `cain.omoore` (SID S-1-5-21-3147497877-3647478928-1701467185-1008), miembro del grupo `Domain Users`.
+4. Inspeccionar `windows.netscan` filtrando por `TeamsView.exe` para identificar la conexión de mando y control establecida (34.244.169.133:1995) como resultado de las acciones previas.
+5. Profundizar: localizar el proceso malicioso adicional (`pan.exe` en `C:\Windows\Temp`) mediante `cmdline.txt` y confirmar con `getsids --pid 4840` que se ejecutó como `Local System` (escalada de privilegios).
+6. Identificar la línea de comandos maliciosa `privilege::debug sekurlsa::logonpasswords`, propia de Mimikatz, ejecutada bajo el nombre falso `pan.exe` (masquerading, T1036), lo que confirma el dumping de credenciales.
 
-**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
-**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
-**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
-**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.
+**Learning chain:** Cain Omoore credenciales cacheadas -> robo de credenciales -> movimiento lateral a WIN-015 (WinRM/WMI T1021.006) -> svchost -> WmiPrvSE -> TeamsView -> discovery -> C2 34.244.169.133:1995 -> escalada a Local System -> pan.exe (mimikatz renombrado, T1036) -> dumping (T1003)
+
+**Lección:** *Un dump de memoria permite reconstruir la cadena completa de un ataque: desde el movimiento lateral (WMI/WinRM) hasta el robo de credenciales con Mimikatz, incluso cuando la herramienta está renombrada o "masqueradeada"; el análisis cruzado de procesos, SIDs y conexiones con Volatility 3 es clave.*
+
+**MITRE ATT&CK:** T1021.006 (Remote Services: Windows Remote Management) · T1003 (OS Credential Dumping) · T1036 (Masquerading) · T1071 (C2) · T1087 (Account Discovery)
+
+**Fuente:** [TryHackMe - Supplemental Memory](https://tryhackme.com/room/supplementalmemory)

@@ -17,6 +17,8 @@
 
 ### Task 1: Diferencias entre HTTP/1.1 y HTTP/2
 
+**Explicación:** Pregunta teórica de protocolo. HTTP/1.1 es textual y delimita cada cabecera con `\r\n`; HTTP/2 usa un **formato binario** con tramas (frames) y límites claramente definidos para cada elemento, por lo que no necesita secuencias de texto para separar cabeceras.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Which version of the HTTP protocol uses \r\n to separate headers in a request? | `HTTP/1.1` |
@@ -24,11 +26,28 @@
 
 ### Task 2: Contrabando de peticiones (H2.CL / H2.TE)
 
+**Explicación:** El frontend habla HTTP/2 y reescribe (o confunde) las cabeceras hacia un backend HTTP/1.1. Con técnicas **H2.CL** (Content-Length ambiguo) y **H2.TE** (Transfer-Encoding), se deja una petición "colgada" en el socket del backend; la siguiente petición de un usuario real se verá prefijada por la nuestra. Repitiendo el ejemplo práctico contra la app y esperando que una víctima caiga en la trampa, el usuario que dio "like" a nuestro post es el bot `THM{my_name_is_a_flag}`.
+
+```http
+# ejemplo de payload H2.TE: petición con x:keep-alive y transfer-encoding
+POST / HTTP/2
+content-length: 4
+transfer-encoding: chunked
+
+0
+
+GET /messages HTTP/1.1
+host: <app>
+...
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Repeat the request shown in the practical example against the app and wait for a user to fall for our trap. What is the username of the victim user who liked our post? | `THM{my_name_is_a_flag}` |
 
 ### Task 3: Fuga de cabeceras internas
+
+**Explicación:** Con el smuggling activo se hace que el backend incluya cabeceras internas (las que la infraestructura añade, como `X-Internal-*` o la autenticación del proxy) dentro de nuestra respuesta. El valor de la cabecera interna filtrada es **`THM{not_secret_anymore}`**.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -36,17 +55,23 @@
 
 ### Task 4: Ruta protegida /admin
 
+**Explicación:** El contrabando también sirve para alcanzar rutas que rechazan peticiones directas: dentro del flujo smuggled se pide `/admin` y el backend responde con el flag **`THM{staff_only}`**.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What is the value of the flag in /admin? | `THM{staff_only}` |
 
 ### Task 5: Envenenamiento de caché web
 
+**Explicación:** Combinando el smuggled request con **Web Cache Poisoning**, se hace que la caché guarde una respuesta controlada (con un redirect/reflect) y la sirva a las siguientes víctimas: su cookie de sesión llega al atacante. El valor de la cookie robada es **`THM{nom_nom_cookies}`**.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What is the value of the cookie stolen using web cache poisoning? | `THM{nom_nom_cookies}` |
 
 ### Task 6: Ruta protegida /private
+
+**Explicación:** Con la sesión/cookie robada o mediante una petición smuggled dirigida, se alcanza la ruta `/private`, que devuelve el flag **`THM{walls_are_a_suggestion}`**.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|

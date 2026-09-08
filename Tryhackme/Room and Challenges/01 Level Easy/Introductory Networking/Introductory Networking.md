@@ -122,6 +122,12 @@ whois microsoft.com
 
 ### Task 8: Herramientas de red - DNS
 
+**Explicación:** DNS = `Domain Name System`. La resolución empieza por el `Hosts File` local; el primer servidor que se consulta es el `Recursive`, y los servidores `Top-Level Domain` gestionan extensiones (.com, .co.uk). Los DNS públicos de Google son `8.8.8.8` y `8.8.4.4`; un TTL de 24 horas = `86400` segundos en `dig`.
+
+```bash
+dig bbc.co.uk +noall +answer
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Qué significa DNS? | `Domain Name System` |
@@ -132,6 +138,8 @@ whois microsoft.com
 | 6 | Si una consulta DNS tiene un TTL de 24 horas, ¿qué número mostraría la consulta "dig"? | `86400` |
 
 ### Task 9: Poniéndolo en práctica
+
+**Explicación:** Actividad final que combina ping, traceroute y consultas DNS/whois sobre el objetivo desplegado en la Task 1.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|

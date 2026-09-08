@@ -47,3 +47,14 @@ Search: winlog.event_id:11                     -> archivos creados (mimikatz, ra
 **Learning chain:** HTA/phishing → implantación de payload → persistencia (scheduled task) → C2 → UAC bypass → dumps de credenciales/mimikatz → lateral movement (Pass-the-Hash/WinRM) → DCSync → ransomware.
 **MITRE ATT&CK:** T1566.001 (Spearphishing Attachment), T1204.002 (User Execution: Malicious File), T1053.005 (Scheduled Task), T1071.001 (Web Protocols C2), T1548.002 (Bypass User Account Control), T1003.001 (LSASS Memory) / T1003.006 (DCSync), T1550.002 (Pass-the-Hash), T1021.006 (Windows Remote Management), T1486 (Data Encrypted for Impact).
 **Fuente:** [TryHackMe - Boogeyman 3](https://tryhackme.com/room/boogeyman3)
+
+---
+
+## ⚠️ Descargo de Responsabilidad (Disclaimer)
+
+Este contenido se presenta exclusivamente con fines académicos y educativos.
+
+**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
+**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
+**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
+**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.

@@ -99,3 +99,14 @@ Invoke-AtomicTest T1529 -TestGuids <guid> -ShowDetails
 **Learning chain:** Estructura de YAML Atomic → ejecución de tests (PowerShell/GUI) → comprobación de prerequisitos y cleanup → cartografiado con ATT&CK Navigator → emulación de APT37 → correlación con eventos Sysmon y reglas EDR.
 **MITRE ATT&CK:** T1110.001 (Password Guessing), T1218.005 (Mshta), T1003 (Credential Dumping), T1053.005 (Scheduled Task), T1547.001 (Registry Run Keys), T1082 (System Information Discovery), T1087.001 (Local Account), T1059.003 (Windows Command Shell), T1055 (Process Injection), T1529 (System Shutdown/Reboot), T1106 (Native API), T1566.001 (Spearphishing Attachment).
 **Fuente:** [TryHackMe - Atomic Red Team](https://tryhackme.com/room/atomicredteam)
+
+---
+
+## ⚠️ Descargo de Responsabilidad (Disclaimer)
+
+Este contenido se presenta exclusivamente con fines académicos y educativos.
+
+**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
+**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
+**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
+**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.

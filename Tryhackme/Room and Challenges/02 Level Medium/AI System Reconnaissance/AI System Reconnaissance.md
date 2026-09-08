@@ -85,3 +85,14 @@ Herramientas/fases: Shodan/Censys/FOFA (1), GitHub Dorks (1), Nmap (2), grpcurl 
 **Learning chain:** infraestructura de IA y puertos → fingerprinting de servicios → enumeración (MLflow/vector DBs/inferencia) → mapeo de superficie y ATLAS → metodología repetible y detección → hardening rápido.
 **MITRE ATT&CK / ATLAS:** AML.T0000/AML.T0006 (Active Scanning, ATT&CK T1595), AML.T0007/AML.T0048 (Discover ML Artifacts), AML.T0010/AML.T0040 (ML Supply Chain Compromise), AML.T0014/AML.T0069 (Discover LLM System Information), AML.TA0002 (Reconnaissance), T1046, T1592, T1595.002.
 **Fuente:** [TryHackMe - AI System Reconnaissance](https://tryhackme.com/room/ai-system-reconnaissance)
+
+---
+
+## ⚠️ Descargo de Responsabilidad (Disclaimer)
+
+Este contenido se presenta exclusivamente con fines académicos y educativos.
+
+**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
+**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
+**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
+**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.

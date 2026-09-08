@@ -48,3 +48,14 @@
 **Learning chain:** entender el phishing → conocer HiddenEye como herramienta de creación de páginas/emails → detectar páginas clonadas pese al HTTPS → concluir que el ser humano es el eslabón más débil.
 **MITRE ATT&CK:** T1566 (Phishing), T1566.002 (Spearphishing Link), T1204.001 (User Execution: Malicious Link), T1036 (Masquerading), T1598 (Phishing for Information)
 **Fuente:** [TryHackMe - Phishing: HiddenEye](https://tryhackme.com/room/phishinghiddeneye)
+
+---
+
+## ⚠️ Descargo de Responsabilidad (Disclaimer)
+
+Este contenido se presenta exclusivamente con fines académicos y educativos.
+
+**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
+**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
+**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
+**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.

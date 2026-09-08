@@ -139,3 +139,14 @@ Cierre de la investigación.
 **MITRE ATT&CK:** T1078 (Valid Accounts) · T1110 (Brute Force) · T1041 (Exfiltration Over C2) · T1018 (Remote System Discovery) · T1021 (Remote Services)
 
 **Fuente:** [TryHackMe - Splunk 3](https://tryhackme.com/room/splunk3zs)
+
+---
+
+## ⚠️ Descargo de Responsabilidad (Disclaimer)
+
+Este contenido se presenta exclusivamente con fines académicos y educativos.
+
+**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
+**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
+**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
+**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.

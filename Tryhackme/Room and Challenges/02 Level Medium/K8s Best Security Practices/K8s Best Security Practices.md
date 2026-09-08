@@ -156,3 +156,14 @@ Identity (ServiceAccount + secrets) → permissions (Role/ClusterRole + verbs/re
 T1078 (Valid Accounts), T1548 (Abuse Elevation Control Mechanism), T1552.001 (Unsecured Credentials: Files - secrets en etcd), T1204 (User Execution), T1195 (Supply Chain Compromise - imágenes), T1505 (Server Software Component), T1046 (Network Service Discovery).
 
 **Fuente:** [TryHackMe - K8s Best Security Practices](https://tryhackme.com/room/k8sbestsecuritypractices)
+
+---
+
+## ⚠️ Descargo de Responsabilidad (Disclaimer)
+
+Este contenido se presenta exclusivamente con fines académicos y educativos.
+
+**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
+**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
+**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
+**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.

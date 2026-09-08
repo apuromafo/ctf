@@ -151,3 +151,14 @@ golden_ticket_create -u X ...
 **MITRE ATT&CK:** T1190 (Exploit Public-Facing Application), T1068 (Exploitation for Privilege Escalation), T1548.002 (Abuse Elevation Control Mechanism: Bypass User Account Control), T1003.001 (OS Credential Dumping: LSASS Memory), T1070.006 (Indicator Removal: Timestomp), T1558.001 (Steal or Forge Kerberos Tickets: Golden Ticket)
 
 **Fuente:** [TryHackMe - Ice](https://tryhackme.com/room/ice)
+
+---
+
+## ⚠️ Descargo de Responsabilidad (Disclaimer)
+
+Este contenido se presenta exclusivamente con fines académicos y educativos.
+
+**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
+**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
+**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
+**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.

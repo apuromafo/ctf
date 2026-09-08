@@ -72,3 +72,14 @@
 **Learning chain:** entender el modelo IAAA → probar control de acceso por objeto (IDOR, escalada horizontal) → explotar fallos lógicos de login/registro (canonicalización de usuarios) → revisar logs y alertas ante un ataque activo → recopilar flags.
 **MITRE ATT&CK:** T1530 (Data from Cloud Storage Object), T1078 (Valid Accounts), T1110.001 (Brute Force: Password Guessing), T1087 (Account Discovery), T1021.001 (Remote Services: Remote Desktop Protocol)
 **Fuente:** [TryHackMe - OWASP Top 10 2025: IAAA Failures](https://tryhackme.com/room/owasptopten2025one)
+
+---
+
+## ⚠️ Descargo de Responsabilidad (Disclaimer)
+
+Este contenido se presenta exclusivamente con fines académicos y educativos.
+
+**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
+**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
+**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
+**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.

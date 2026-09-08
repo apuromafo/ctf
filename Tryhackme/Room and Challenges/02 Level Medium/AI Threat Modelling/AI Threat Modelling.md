@@ -67,3 +67,14 @@ Lo que STRIDE no cubre: **Adversarial Examples** (abarcan varias categorías), *
 **Learning chain:** activos específicos de IA → cadena de suministro de datos → adaptación de STRIDE → catálogo ATLAS → mapeo OWASP a componentes → ejercicio práctico de evaluación de amenazas.
 **MITRE ATT&CK / ATLAS:** AML.TA0012 (ML Attack Staging), AML.T0020 (Data Poisoning), AML.T0024 (Model Extraction), AML.T0015 (Evade ML Model), AML.T0051 (LLM Prompt Injection), AML.T0018 (Backdoor ML Model), AML.CS0023 (ShadowRay), AML.CS0024 (Morris II); OWASP LLM01-LLM10.
 **Fuente:** [TryHackMe - AI Threat Modelling](https://tryhackme.com/room/ai-threat-modelling)
+
+---
+
+## ⚠️ Descargo de Responsabilidad (Disclaimer)
+
+Este contenido se presenta exclusivamente con fines académicos y educativos.
+
+**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
+**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
+**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
+**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.

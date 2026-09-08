@@ -98,3 +98,14 @@ volatility -f dump.raw --profile=Win7SP1x64 netscan
 **MITRE ATT&CK:** T1110 (Brute Force), T1505.003 (Web Shell), T1552.004 (Unsecured Credentials: Private Keys), T1046 (Network Service Discovery), T1021 (Remote Services), T1486 (Data Encrypted for Impact)
 
 **Fuente:** [TryHackMe - Honeynet Collapse](https://tryhackme.com/room/honeynet-collapse)
+
+---
+
+## ⚠️ Descargo de Responsabilidad (Disclaimer)
+
+Este contenido se presenta exclusivamente con fines académicos y educativos.
+
+**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
+**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
+**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
+**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.

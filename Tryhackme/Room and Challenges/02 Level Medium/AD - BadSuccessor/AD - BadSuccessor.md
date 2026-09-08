@@ -92,3 +92,14 @@ Add-ADGroupMember "Domain Admins"  →  flag.txt
 **Learning chain:** dMSA → delegación insegura (CreateChild/GenericAll con GUIDs 0 sobre una OU) → suplantación de cuenta privilegiada → tickets Kerberos → acceso al DC → Domain Admins.
 **MITRE ATT&CK:** T1078 (Valid Accounts), T1558 (Steal or Forge Kerberos Tickets), T1098.007 (Additional Cloud Delegated Admin) / manipulación de atributos de cuenta, T1136.001 (Create Account), T1021.006 (Windows Remote Management) / PsExec, T1482/Discovery de dominio.
 **Fuente:** [TryHackMe - AD: BadSuccessor](https://tryhackme.com/room/adbadsuccessor)
+
+---
+
+## ⚠️ Descargo de Responsabilidad (Disclaimer)
+
+Este contenido se presenta exclusivamente con fines académicos y educativos.
+
+**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
+**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
+**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
+**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.

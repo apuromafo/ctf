@@ -210,26 +210,41 @@ password in keepass adm_8XX8N5VBFprFfmFSdQ4soUM4
 rdp server 3 to 4
 TBFC-SQLServer1\AGI P@ssword123!
 
-`
+`
+
 **Historia / Story:**
 
 `	ext
 Hopper couldn't shake the memory of how he, only he, made the King's dream a reality. And after all of that, how did the King repay him? Humiliation. Incarceration. Hopper had always been overjoyed to lead the Red Team Battalion - too overjoyed, some thought. Multiple anonymous sources reported Hopper for showing 'delusions of grandeur' and early signs of going 'mad with power.' Surely the King would defend him? After everything Hopper had done? What the King did was the furthest thing from that. King Malhare stripped Hopper of his title and 'crowned' him the new Court Jester. With no choice but to obey, Hopper was forced to entertain the royal court day after day, month after month - until one day he failed to contain his anger and snapped back at the King. He was immediately sent to the HopSec Asylum, where he now sits. But as rumours spread that King Malhare finally intends to launch Operation EAST-mas, Hopper's rage ignites anew. He must find a way out. The story continues in this year's Advent of Cyber & SideQuest event!
-`
----
-**Metodologia:**
+`
+
+---
+
+**Metodologia:**
+
 1. Egg decode de Sidequest 1 para obtener el Invite Code THM{There.is.no.EASTmas.without.Hopper}`r
 2. Acceso via CORS leak al archivo hopper-origins.txt`r
 3. Decrypt con PBKDF2 (Salt 865440ab0df31719eb814c35199bac93, IV c218501c4d05fa0ed88d68e, Tag 826fa594520a80f37a18d7b045f5c10e, longitud ciphertext 46 bytes) para obtener el link /jr/`r
-4. Compromiso de los hosts: DB, AI.VANCHAT.LOC, TBFC.LOC, VANCHAT.LOC, SERVER1-4, Web
-5. Lectura de user.txt y root.txt en cada host
-6. Total 17 flags
-**Learning chain:** Sidequest 1 -> Invite Code -> CORS leak -> hopper-origins.txt -> PBKDF2 decrypt -> /jr/ invite -> DB -> AI.VANCHAT.LOC -> TBFC.LOC -> VANCHAT.LOC -> SERVER1-4 -> Web -> 17 flags
-**Leccion:** *El CORS misconfiguration en aplicaciones web puede filtrar informacion sensible; la criptografia con PBKDF2 bien implementada es la unica barrera entre los datos cifrados y el compromiso total.*
-**MITRE ATT&CK:**
-- T1190 - Exploit Public-Facing Application
-- T1027 - Obfuscated Files or Information
-- T1078 - Valid Accounts
-- T1068 - Exploitation for Privilege Escalation
-- T1555 - Credentials from Password Stores
+4. Compromiso de los hosts: DB, AI.VANCHAT.LOC, TBFC.LOC, VANCHAT.LOC, SERVER1-4, Web
+
+5. Lectura de user.txt y root.txt en cada host
+
+6. Total 17 flags
+
+**Learning chain:** Sidequest 1 -> Invite Code -> CORS leak -> hopper-origins.txt -> PBKDF2 decrypt -> /jr/ invite -> DB -> AI.VANCHAT.LOC -> TBFC.LOC -> VANCHAT.LOC -> SERVER1-4 -> Web -> 17 flags
+
+**Leccion:** *El CORS misconfiguration en aplicaciones web puede filtrar informacion sensible; la criptografia con PBKDF2 bien implementada es la unica barrera entre los datos cifrados y el compromiso total.*
+
+**MITRE ATT&CK:**
+
+- T1190 - Exploit Public-Facing Application
+
+- T1027 - Obfuscated Files or Information
+
+- T1078 - Valid Accounts
+
+- T1068 - Exploitation for Privilege Escalation
+
+- T1555 - Credentials from Password Stores
+
 **Fuente:** [TryHackMe - Hopper's Origins](https://tryhackme.com/room/ho-aoc2025-yboMoPbnEX)

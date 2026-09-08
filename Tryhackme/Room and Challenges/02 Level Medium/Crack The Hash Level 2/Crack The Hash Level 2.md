@@ -125,3 +125,14 @@ john --format=sha512crypt hash9.txt --wordlist=/usr/share/wordlists/rockyou.txt
 **Learning chain:** Identificación de hash (Haiti) → módulos Hashcat/John → gestión de wordlists (wordlistctl/SecLists) → generación de diccionarios (CeWL, TTPassGen, Lyricpass, pnwgen, reglas) → cracking final.
 **MITRE ATT&CK:** T1110.002 (Brute Force: Password Cracking), T1003 (OS Credential Dumping, hash catching).
 **Fuente:** [TryHackMe - Crack The Hash Level 2](https://tryhackme.com/room/crackthehashlevel2)
+
+---
+
+## ⚠️ Descargo de Responsabilidad (Disclaimer)
+
+Este contenido se presenta exclusivamente con fines académicos y educativos.
+
+**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
+**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
+**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
+**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.

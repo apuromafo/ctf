@@ -59,3 +59,14 @@ hashcat -m 18200 asrep_hash.txt rockyou.txt
 **Learning chain:** cuenta autenticada → AS-REP Roasting (bajo ruido) → enumeración silenciosa con herramientas nativas → PowerShell/PowerView → gráfica de privilegios con BloodHound.
 **MITRE ATT&CK:** T1558.004 (AS-REP Roasting), T1087.002 (Domain Account), T1069.002 (Permission Groups Discovery: Domain), T1482 (Domain Trust Discovery), T1201 (Password Policy Discovery).
 **Fuente:** [TryHackMe - AD: Authenticated Enumeration](https://tryhackme.com/room/adauthenticatedenumeration)
+
+---
+
+## ⚠️ Descargo de Responsabilidad (Disclaimer)
+
+Este contenido se presenta exclusivamente con fines académicos y educativos.
+
+**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
+**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
+**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
+**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.

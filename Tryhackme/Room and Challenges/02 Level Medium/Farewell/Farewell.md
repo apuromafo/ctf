@@ -74,3 +74,14 @@ El bot admin revisa el mensaje y ejecuta el JS; el atacante captura la cookie `P
 **CWE:** CWE-209 (Generation of Error Message Containing Sensitive Information), CWE-79 (Improper Neutralization of Input During Web Page Generation / XSS), CWE-1004 (Sensitive Cookie Without HttpOnly)
 
 **Fuente:** [TryHackMe - Farewell](https://tryhackme.com/room/farewell)
+
+---
+
+## ⚠️ Descargo de Responsabilidad (Disclaimer)
+
+Este contenido se presenta exclusivamente con fines académicos y educativos.
+
+**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
+**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
+**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
+**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.

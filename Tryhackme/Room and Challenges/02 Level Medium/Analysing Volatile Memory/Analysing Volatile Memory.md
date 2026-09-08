@@ -54,3 +54,14 @@ Lab (EZ tools) → hiberfil.sys / pagefile.sys / MEMORY.DMP → domain-histogram
 **Learning chain:** artefactos volátiles en disco → descubrimiento de C2/malware → correlación de procesos → análisis de crash dumps → extracción de la flag (WinDbg/PEB).
 **MITRE ATT&CK:** T1070.004 (File Deletion) / diskwipe (T1485 Data Destruction), T1046 (Network Service Scanning) / Wireshark, T1059.003 (Windows Command Shell), T1071.001 (Web Protocols / 3z.nu C2).
 **Fuente:** [TryHackMe - Analysing Volatile Memory](https://tryhackme.com/room/analysingvolatilememory)
+
+---
+
+## ⚠️ Descargo de Responsabilidad (Disclaimer)
+
+Este contenido se presenta exclusivamente con fines académicos y educativos.
+
+**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
+**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
+**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
+**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.

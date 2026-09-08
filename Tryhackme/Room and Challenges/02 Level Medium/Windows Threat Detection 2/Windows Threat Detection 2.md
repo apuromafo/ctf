@@ -1,89 +1,98 @@
-# Windows Threat Detection 2 [MEDIUM]
+# Windows Threat Detection 2
 
-### Información de la Sala / Room Information
-
-* **Dificultad:** MEDIUM.
-* **Tipo:** Premium (requiere suscripción).
-* **Slug:** `windowsthreatdetection2`
-* **Link:** https://tryhackme.com/room/windowsthreatdetection2
-* **Objeto:** Detectar y analizar la actividad de un atacante tras el acceso inicial en una máquina Windows usando Sysmon, Event Viewer y herramientas de credenciales/datos (stealer).
+| **Dificultad** | Medium |
+| **Tipo** | Walkthrough |
+| **Slug** | `windowsthreatdetection2` |
+| **Link** | [TryHackMe](https://tryhackme.com/room/windowsthreatdetection2) |
+| **Sección** | 02 Level Medium |
+| **Fuente** | texto oficial THM + anotaciones propias |
+| **Componentes** | Sysmon / Event Viewer / discovery / credential harvesting / staging / exfiltration / stealer |
+| **Impacto** | Detectar y analizar el post-exploit de un atacante en Windows (descubrimiento, robo de credenciales y exfiltración) |
 
 ---
 
-## Solucionario de Tareas / Task Solutions
+**Contexto:** Segunda sala de la serie de detección de amenazas en Windows. Se analiza el post-exploit: descubrimiento, recolección de credenciales, staging y exfiltración usando Sysmon, Event Viewer y herramientas de datos/credenciales.
 
-> Segunda sala de la serie de detección de amenazas en Windows. Se analiza el post-exploit: descubrimiento, recolección de credenciales, staging y exfiltración.
-> Second room of the Windows threat-detection series. Post-exploit analysis: discovery, credential harvesting, staging and exfiltration.
+## Solucionario
 
-### Tarea 1 / Task 1 — Initial Checks
+### Task 1: Initial Checks
 
-**Abre CMD y teclea `net user Administrator`. ¿A qué grupo privilegiado pertenece el usuario? / Open CMD and type "net user Administrator". Which privileged group does the user belong to?**
-`Administrators`
+**Explicación:**
 
-**Abre Event Viewer y busca tu comando en los logs de Sysmon. ¿Cuál es el campo "Image" del comando net que acabas de ejecutar? / Open Event Viewer and try to find your command in Sysmon logs. What is the "Image" field of the net command you just run?**
-`C:\Windows\System32\net.exe`
+Abre CMD y teclea `net user Administrator`. El grupo privilegiado al que pertenece el usuario es `Administrators`. Abre Event Viewer y busca tu comando en los logs de Sysmon: el campo "Image" del comando net que acabas de ejecutar es `C:\Windows\System32\net.exe`.
 
-Fuente / Source: https://simontaplin.net/2025/07/16/answers-for-the-tryhackme-windows-threat-detection-2-room/
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | Which privileged group does the user belong to? | `Administrators` |
+| 2 | What is the "Image" field of the net command you just run? | `C:\Windows\System32\net.exe` |
 
-### Tarea 2 / Task 2 — Invoice Malware (Discovery)
+### Task 2: Invoice Malware (Discovery)
 
-**Mirando los logs de Sysmon, ¿cuál es el primer comando que ejecuta invoice.pdf.exe? / Looking at Sysmon logs, what is the first command the invoice.pdf.exe executes?**
-`whoami`
+**Explicación:**
 
-**¿Qué comando usó el malware para comprobar la presencia de MS Defender EDR? / Which command did the malware use to check the presence of MS Defender EDR?**
-`cmd /c "tasklist /v | findstr MsSense.exe || echo No MS Defender EDR"`
+Mirando los logs de Sysmon, el primer comando que ejecuta `invoice.pdf.exe` es `whoami`. El comando usado por el malware para comprobar la presencia de MS Defender EDR es `cmd /c "tasklist /v | findstr MsSense.exe || echo No MS Defender EDR"`. El dominio al que el malware envió los datos descubiertos es `exfil.beecz.cafe`.
 
-**¿A qué dominio envió el malware los datos descubiertos? / To which domain did the malware send the discovered data?**
-`exfil.beecz.cafe`
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | What is the first command the invoice.pdf.exe executes? | `whoami` |
+| 2 | Which command did the malware use to check the presence of MS Defender EDR? | `cmd /c "tasklist /v \| findstr MsSense.exe \|\| echo No MS Defender EDR"` |
+| 3 | To which domain did the malware send the discovered data? | `exfil.beecz.cafe` |
 
-Fuente / Source: https://simontaplin.net/2025/07/16/answers-for-the-tryhackme-windows-threat-detection-2-room/
+### Task 3: Sensitive Data
 
-### Tarea 3 / Task 3 — Sensitive Data
+**Explicación:**
 
-**¿Cuál es la contraseña de Facebook que el usuario guardó en Chrome? (Chrome menu > Passwords and autofill > Password Manager) / What is the Facebook password that the user saved in Chrome?**
-`nsAghv51BBav90!`
+La contraseña de Facebook que el usuario guardó en Chrome (Chrome menu > Passwords and autofill > Password Manager) es `nsAghv51BBav90!`. La clave SSH interesante que guarda el usuario en disco (empezando desde `C:\Users\Administrator`) es `thm-access-database.key`. El archivo PDF secreto que explica la red interna de TryHackMe (Desktop, Downloads y Documents) es `thm-network-diagram-2025.pdf`.
 
-**¿Qué clave SSH interesante guarda el usuario en disco? (Empieza a buscar desde C:\Users\Administrator) / Which interesting SSH key does the user store on disk? (Start your search from C:\Users\Administrator)**
-`thm-access-database.key`
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | What is the Facebook password that the user saved in Chrome? | `nsAghv51BBav90!` |
+| 2 | Which interesting SSH key does the user store on disk? (Start your search from C:\Users\Administrator) | `thm-access-database.key` |
+| 3 | What is the secret PDF file explaining TryHackMe's internal network? (Desktop, Downloads, Documents) | `thm-network-diagram-2025.pdf` |
 
-**¿Cuál es el archivo PDF secreto que explica la red interna de TryHackMe? (Escritorio, Downloads y Documents) / What is the secret PDF file explaining TryHackMe's internal network? (Desktop, Downloads, Documents)**
-`thm-network-diagram-2025.pdf`
+### Task 4: Stealer (Staging & Exfiltration)
 
-Fuente / Source: https://simontaplin.net/2025/07/16/answers-for-the-tryhackme-windows-threat-detection-2-room/
+**Explicación:**
 
-### Tarea 4 / Task 4 — Stealer (Staging & Exfiltration)
+Mirando los logs de Sysmon, el directorio que crea el stealer es `staging_58f1`. Las tres extensiones de archivo que busca el malware (formato: separadas por coma en orden alfabético) son `docx, pdf, xlsx`. El cmdlet de PowerShell que usa el malware para obtener el contenido del portapapeles es `Get-ClipBoard`. El dominio al que exfiltra el malware los datos es `collecteddata-storage-2025.s3.amazonaws.com`.
 
-**Mirando los logs de Sysmon, ¿qué directorio crea el stealer? / Looking at Sysmon logs, what directory does the stealer create?**
-`staging_58f1`
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | What directory does the stealer create? | `staging_58f1` |
+| 2 | Which three file extensions does the malware search for? | `docx, pdf, xlsx` |
+| 3 | Which PowerShell cmdlet does the malware use to get clipboard content? | `Get-ClipBoard` |
+| 4 | Which domain does the malware exfiltrate the data to? | `collecteddata-storage-2025.s3.amazonaws.com` |
 
-**¿Qué tres extensiones de archivo busca el malware? (formato: separadas por coma en orden alfabético) / Which three file extensions does the malware search for?**
-`docx, pdf, xlsx`
+### Task 5: Tool Transfer / Internet
 
-**¿Qué cmdlet de PowerShell usa el malware para obtener el contenido del portapapeles? / Which PowerShell cmdlet does the malware use to get clipboard content?**
-`Get-ClipBoard`
+**Explicación:**
 
-**¿A qué dominio exfiltra el malware los datos? / Which domain does the malware exfiltrate the data to?**
-`collecteddata-storage-2025.s3.amazonaws.com`
+Abre Chrome en la VM y navega a la URL. La flag en la respuesta es `THM{just_use_web_browser}`. Ahora abre CMD y descarga el archivo de la misma URL usando `curl.exe`: la flag es `THM{curl_is_cool}`. Continúa con el mismo CMD y URL, pero ahora usando `certutil.exe`: la flag es `THM{abusing_certutil}`. Finalmente, descarga el mismo archivo usando PowerShell IWR: la flag es `THM{power_of_powershell}`.
 
-Fuente / Source: https://simontaplin.net/2025/07/16/answers-for-the-tryhackme-windows-threat-detection-2-room/
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | What is the flag in the response (Chrome)? | `THM{just_use_web_browser}` |
+| 2 | What is the flag (curl.exe)? | `THM{curl_is_cool}` |
+| 3 | What is the flag (certutil.exe)? | `THM{abusing_certutil}` |
+| 4 | What is the flag (PowerShell IWR)? | `THM{power_of_powershell}` |
 
-### Tarea 5 / Task 5 — Tool Transfer / Internet
+---
 
-**Abre Chrome en la VM y navega a la URL. ¿Cuál es la flag en la respuesta? / Open the Chrome browser on the VM and navigate to the URL. What is the flag in the response?**
-`THM{just_use_web_browser}`
+**Metodología:**
 
-**Ahora abre CMD y descarga el archivo de la misma URL usando curl.exe. ¿Cuál es la flag? / Next, open CMD and download the file from the same URL using curl.exe. What is the flag in the response?**
-`THM{curl_is_cool}`
+1. Verificar el usuario y el grupo privilegiado (`Administrators`) con `net user Administrator`, y localizar el "Image" del proceso en Sysmon.
+2. Analizar el malware `invoice.pdf.exe`: primer comando (`whoami`), comprobación del EDR (`tasklist | findstr MsSense.exe`) y exfiltración a `exfil.beecz.cafe`.
+3. Buscar datos sensibles en Chrome (Facebook password), disco (`thm-access-database.key`) y PDFs (`thm-network-diagram-2025.pdf`).
+4. Rastrear el stealer: directorio `staging_58f1`, extensiones `docx,pdf,xlsx`, `Get-ClipBoard` y exfiltración a S3.
+5. Probar distintas herramientas de descarga (Chrome, curl, certutil, IWR) y capturar las flags.
 
-**Continúa con el mismo CMD y URL, pero ahora usando certutil.exe. ¿Cuál es la flag? / Continue with the same CMD and URL, but now using certutil.exe. What is the flag in the response?**
-`THM{abusing_certutil}`
+**Learning chain:** net user Administrator -> Administrators -> invoice.pdf.exe -> whoami -> tasklist/findstr (EDR check) -> exfil.beecz.cafe -> Chrome saved password -> thm-access-database.key -> thm-network-diagram-2025.pdf -> stealer staging_58f1 -> docx,pdf,xlsx -> Get-ClipBoard -> S3 exfil -> curl/certutil/IWR flags
 
-**Finalmente, descarga el mismo archivo usando PowerShell IWR. ¿Cuál es la flag? / Finally, download the same file using PowerShell IWR. What is the flag in the response?**
-`THM{power_of_powershell}`
+**Lección:** *El post-exploit de un stealer en Windows se reconstruye cruzando Sysmon (procesos, comandos, creación de directorios) y datos de usuario (navegador, disco); herramientas legítimas como certutil o curl.exe son reutilizadas por los atacantes para transferir archivos.*
 
-Fuente / Source: https://simontaplin.net/2025/07/16/answers-for-the-tryhackme-windows-threat-detection-2-room/
+**MITRE ATT&CK:** T1059.001 (PowerShell) · T1555.003 (Web Session Cookies / Password Manager) · T1005 (Data from Local System) · T1567.002 (Exfiltration to Cloud Storage) · CWE-200 (Exposure of Sensitive Information)
 
-*Fuente de respuestas / Answer source: https://simontaplin.net/2025/07/16/answers-for-the-tryhackme-windows-threat-detection-2-room/*
+**Fuente:** [TryHackMe - Windows Threat Detection 2](https://tryhackme.com/room/windowsthreatdetection2)
 
 ---
 

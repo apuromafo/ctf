@@ -7,8 +7,7 @@
 | **Sección** | 03 Level Hard |
 | **Fuente** | TryHackMe (Advent of Cyber 2024, serie Side Quest) |
 | **Componentes** | Wireshark / Python / Binary Ninja / XXE / ROS / SSH / IDOR / zip2john / John the Ripper / frida-trace / RustScan / dig / netcat |
-
-**Impacto** | Serie de Side Quests de "The Frosty Five": recuperar las contraseñas robadas por Frostbite Fox, decodificar los flags YIN/YANG y comprometer tres máquinas hasta root para completar el ciclo del Advent of Cyber 2024. |
+| **Impacto** | Serie de Side Quests de "The Frosty Five": recuperar las contraseñas robadas por Frostbite Fox, decodificar los flags YIN/YANG y comprometer tres máquinas hasta root para completar el ciclo del Advent of Cyber 2024. |
 
 ---
 
@@ -18,11 +17,15 @@
 
 ### Task 1: Introducción
 
+**Explicación:** La serie Side Quest es una historia paralela al Advent of Cyber 2024. En las tareas 1-3 no hay retos propios: solo se explican las mecánicas (las keycards L1-L5 ocultas en los días del room principal) y las condiciones de desbloqueo de cada mini-juego.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | No answer needed | `No answer needed` |
 
 ### Task 2: Keycard L1
+
+**Explicación:** La keycard L1 se utiliza para el primer reto (T1: Operation Tiny Frostbite) y aparece apuntada en una de las tareas del AoC 2024 principal. Tarea informativa: no hay respuesta que enviar, solo disponer de la keycard en el entorno del Side Quest.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -30,11 +33,22 @@
 
 ### Task 3: Keycard L2
 
+**Explicación:** La keycard L2 desbloquea el segundo reto (T2: Yin and Yang). Se encuentra igualmente oculta en el ciclo principal; tarea informativa.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | No answer needed | `No answer needed` |
 
 ### Task 4: T1: Operation Tiny Frostbite
+
+**Explicación:** En este reto el atacante Frostbite Fox intenta robar credenciales desde una máquina comprometida. Se analiza el tráfico de red con Wireshark (PCAP) y el binario `ff` con Binary Ninja/Python para reconstruir el ataque y extraer las cuatro respuestas, que son fragmentos base64 de una misma cadena: `QU9DMjAyNHtUaW55X1R` + `pbnlfVGlueV9TaDNsbF` + `9jYW5fRW5jcnlwVF9iVXR` + `faXRfSXNfTjB0X0YwMGxwcm8wZn0=` decodifica, concatenada, a `AoC2024{Tiny_T...}` (la password de McSkidy en la base de datos robada). Cada pregunta corresponde a: la password con la que el atacante se registró en el sitio, la password capturada del tráfico, la password del ZIP transferido y la password de la BD.
+
+```bash
+# análisis del tráfico
+tshark -r capture.pcap
+# descifrar fragmentos base64 del tráfico
+echo 'QU9DMjAyNHtUaW55X1R...' | base64 -d
+```
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -45,12 +59,26 @@
 
 ### Task 5: T2: Yin and Yang
 
+**Explicación:** Two máquinas (yin y yang) conectadas por robots ROS. El XXE de una de las aplicaciones web revela los endpoints internos y servicios ROS; usando `rosservice call` se ejecutan comandos en los robots para leer los flags de `/root` de cada uno. Los flags juegan con la filosofía del yin-yang: ninguno puede existir sin el otro.
+
+```text
+rosservice list
+rosservice call <service> 'cmd: ls /root'
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What is the flag for YIN? | `THM{Yin.cannot.exist.without.a.little.bit.of.Yang}` |
 | 2 | What is the flag for YANG? | `THM{Yang.also.needs.Yin.to.survive}` |
 
 ### Task 6: T3: Escaping the Blizzard
+
+**Explicación:** Se abusa de un IDOR para obtener la keycard L3, se explota el servicio de permisos del puerto 1337, y mediante un heap overflow clásico contra una versión reciente de glibc se consigue primero foothold, luego user y finalmente root. El ZIP protegido se rompe con zip2john + John the Ripper.
+
+```bash
+zip2john secret.zip > hash.txt
+john --wordlist=/usr/share/wordlists/rockyou.txt hash.txt
+```
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -60,6 +88,15 @@
 
 ### Task 7: T4: Krampus Festival
 
+**Explicación:** El evento Krampus Festival combina una app CCTV con bypass de login y SQLi (sqlmap) para bajar el firewall, la explotación de un share SMB (`ChristmasShare`) donde está la primera flag, phishing por SMTP con macros de Office (swaks a Snowflakes) y, para culminar, la escalada a NT AUTHORITY\SYSTEM vía Shadow Credentials (pywhisker + PKINIT), webshell ASP.NET y EfsPotato (impersonación de tokens, SeImpersonate).
+
+```bash
+# phishing con swaks
+swaks --to snowflakes@elves --from elf@krampus --header "Subject: ..." --body @evil.doc
+# SQLi
+sqlmap -u "http://<ip>/cctv/?id=1" --batch --dbs
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What is the value of the first flag found in the SMB share ChristmasShare? | `THM{unlock_the_door_to_darkness_0nly_f0r_the_brave}` |
@@ -67,6 +104,13 @@
 | 3 | What is the value of the flag obtained after the privilege escalation to SYSTEM? | `THM{krampu5_&_p0tat0_5alad}` |
 
 ### Task 8: T5: An Avalanche of Web Apps
+
+**Explicación:** El reto de aplicaciones web: se hackea el juego de Tron con frida-trace (hookeando funciones para obtener la keycard L5), se hace un DNS zone transfer, se aprovecha un npm-registry squatting con un paquete malicioso y se explota una RCE en una de las apps. Cuatro apps comprometidas = cuatro flags.
+
+```bash
+frida-trace -U -i "*open*" com.example.game
+dig axfr @<dns-server> example.thm
+```
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -76,6 +120,8 @@
 | 4 | What is the value of flag 4? | `THM{05a830d2f52649c96318cce20c562b63}` |
 
 ### Task 9: The End?
+
+**Explicación:** Tras completar los cinco retos, el conjunto de flags revela el flag final de cierre, que juega con el "bigger and meaner 2025" del anuncio del siguiente Advent of Cyber.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|

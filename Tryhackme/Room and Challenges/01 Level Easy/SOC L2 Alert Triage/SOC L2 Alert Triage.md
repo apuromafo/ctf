@@ -21,11 +21,15 @@
 |---|----------|-----------|
 | 1 | Continue to the next task. | `No answer needed` |
 
+**Explicación:** Introducción al room; no requiere respuesta.
+
 ### Task 2: SOC L2 Workflow
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What is the **most common trigger** for L2 to start the triage? | `Escalated Alert` |
+
+**Explicación:** En un SOC típico, L1 escanea y escala; L2 tria. El escalado automático o manual de una alerta (**Escalated Alert**) es el punto de entrada del workflow de L2: la mayoría de los triages de un analista L2 arrancan con una alerta ya escalada desde L1 o desde el propio SIEM.
 
 ### Task 3: Log Analysis as L2
 
@@ -34,6 +38,8 @@
 | 1 | Should you **understand the rule purpose** before triaging the alert? (Yea/Nay) | `Yea` |
 | 2 | What term is used for a **chronological list of events** (related to the attack)? | `Timeline` |
 
+**Explicación:** Una regla sin contexto genera falsos positivos; entender *qué* intenta detectar es el primer paso antes de triar (**Yea**). La cadena temporal de eventos (timestamp → event → timestamp → event) se llama **Timeline** y es fundamental en cualquier investigación (DFIR, reportes).
+
 ### Task 4: Threat Response
 
 | # | Pregunta | Respuesta |
@@ -41,17 +47,23 @@
 | 1 | What is the term for a **temporary response** that stops the threat from spreading? | `Containment` |
 | 2 | You see clearly malicious activity on one of the corporate devices during an ongoing pentest, but red teamers do not respond. Would you **isolate the device** before receiving a confirmation? (Yea/Nay) | `Yea` |
 
+**Explicación:** **Containment** es la acción temporal (bloqueo de IP, aislamiento de host, cortafuegos) que frena la propagación sin borrar evidencia. Ante actividad claramente maliciosa en un dispositivo corporativo durante un pentest sin respuesta del red team, **Yea** se aísla el dispositivo antes de confirmar: la seguridad del entorno real prevalece frente a la confirmación pendiente (puede ser un ataque real o un escenario de testing que el red team no monitora).
+
 ### Task 5: Learning Lessons *(static-site)*
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What is the **flag** you get at the end of the challenge? | `THM{triage_done_right!}` |
 
+**Explicación:** El static-site "Learning Lessons" es un exercise interactivo de lecciones aprendidas tras un incidente; completarlo entrega el flag `THM{triage_done_right!}` como verificación.
+
 ### Task 6: Conclusión / Conclusion
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Complete the room! | `No answer needed` |
+
+**Explicación:** Cierre del room.
 
 ---
 

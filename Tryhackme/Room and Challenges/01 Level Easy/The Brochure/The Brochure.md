@@ -21,6 +21,8 @@
 |---|----------|-----------|
 | 1 | What is the flag? | `THM{V3r@s_aCC0unt_h4s_b33n_f0und!}` |
 
+**Explicación:** A partir del folleto se extraen pistas de marca (nombre comercial, hashtag, jugador/empleado). Con esas pistas se hace OSINT: búsqueda del nombre en redes sociales (Instagram/Twitter) y localización de la cuenta pública. La flag aparece en la bio o en un post (comentario o texto alternativo / alt-text); alternativamente se combina con *search-engine dorking* sobre el texto del folleto → `THM{V3r@s_aCC0unt_h4s_b33n_f0und!}`.
+
 ---
 
 **Metodología:**

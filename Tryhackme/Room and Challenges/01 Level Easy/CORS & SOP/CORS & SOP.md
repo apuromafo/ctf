@@ -17,11 +17,15 @@
 
 ### Task 1: Introducción
 
+**Explicación:** Vista general de la sala: se aprende qué son SOP y CORS y cómo abusar de configuraciones incorrectas para robar datos sensibles en el navegador. Tarea de introducción, no requiere respuesta.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | No answer needed - introductory task. | `No answer needed` |
 
 ### Task 2: Same-Origin Policy y CORS
+
+**Explicación:** La SOP restringe que una página acceda a recursos de otro origen (esquema + host + puerto). CORS relaja esa política mediante cabeceras HTTP enviadas por el servidor: `Access-Control-Allow-Origin` (ACAO) indica qué dominios pueden acceder. Configuraciones peligrosas: el comodín `*` (Wildcard Origin) y aceptar el origen `null`. El navegador, y no solo el servidor, es quien ejecuta la política.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -32,11 +36,15 @@
 
 ### Task 3: Configuración del laboratorio
 
+**Explicación:** Se añaden dominios al `/etc/hosts` apuntando a la IP de la máquina: `corssop.thm` (sitio vulnerable), `exploit.evilcors.thm` (servidor del atacante que aloja el código) y `corssop.thm.evilcors.thm` (página que visita la víctima). Se prepara un `receiver.php` para capturar los datos exfiltrados y guardarlos en `data.txt`. Tarea práctica, sin respuesta.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | No answer needed - practical setup. | `No answer needed` |
 
 ### Task 4: Explotando Arbitrary Origin
+
+**Explicación:** `arbitrary.php` refleja el valor de `HTTP_ORIGIN` en `Access-Control-Allow-Origin` y además activa `Access-Control-Allow-Credentials: true`, validando cualquier dominio. Un script en el navegador de la víctima envía peticiones cross-origin con cookies y el servidor receptor captura la respuesta sensible. Flag: `THM{4rB1tr4rY}`.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -44,17 +52,23 @@
 
 ### Task 5: Explotando Bad Regex
 
+**Explicación:** `badregex.php` valida el origen con `preg_match('#corssop.thm#')`, es decir, comprueba solo que la cadena `corssop.thm` aparezca en cualquier parte. Un dominio como `corssop.thm.evilcors.thm` cumple el patrón y consigue una respuesta legítima con `Access-Control-Allow-Credentials: true`. Flag: `THM{B4D_r363X}`.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What is the flag from badregex.php? | `THM{B4D_r363X}` |
 
 ### Task 6: Explotando Null Origin
 
+**Explicación:** `null.php` responde `Access-Control-Allow-Origin: null` con credenciales. Un `iframe` con sandbox (o documentos del tipo `file://`/data) genera un origen `null` desde el navegador de la víctima, permitiendo leer la respuesta del endpoint protegido. Flag: `THM{nULL_0r1G1N}`.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What is the flag from null.php? | `THM{nULL_0r1G1N}` |
 
 ### Task 7: Conclusión
+
+**Explicación:** La sala concluye recordando que CORS mal implementado convierte al navegador en una herramienta de exfiltración: siempre validar contra una lista blanca de orígenes y nunca reflejar `Origin` ni confiar en `null` o en comodines junto a credenciales. Tarea de cierre, sin respuesta.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|

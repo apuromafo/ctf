@@ -21,11 +21,15 @@
 |---|----------|-----------|
 | 1 | (Preguntas de lectura / reading questions) | `No answer needed` |
 
+**Explicación:** Cuando automatizas el navegador, ya no tienes que romper manualmente las capas de cifrado. Dejas que el navegador haga el trabajo pesado, tal como lo haría un usuario legítimo. El JavaScript que se ejecuta en la aplicación realiza toda su lógica del lado del cliente, incluyendo cifrado personalizado y manipulaciones del DOM. La automatización del navegador es útil para: **bypass de CAPTCHAs y restricciones del lado del cliente** (al simular interacciones reales, muchos mecanismos de detección de bots se vuelven menos efectivos), disparar flujos de trabajo multi-paso (algunos exploits requieren interactuar con la aplicación a través de varias pantallas o acciones de usuario) y extraer valores renderizados o generados dinámicamente (a menudo los datos o tokens solo aparecen después de que el JavaScript se ejecuta). Se usa **Selenium** por su facilidad de uso, soporte de Python y amplia compatibilidad con navegadores.
+
 ### Task 2: Essential Concepts
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | (Preguntas de lectura / reading questions) | `No answer needed` |
+
+**Explicación:** Conceptos esenciales de Selenium: **WebDriver** controla el navegador y permite navegar a páginas, interactuar con elementos y extraer datos; **Element Identification** son métodos para localizar e interactuar con elementos usando atributos como ID, Name o XPath; **Headless Mode** ejecuta navegadores sin interfaz gráfica (más rápido y eficiente); **CSRF Protection** — con Selenium, al usar un navegador, el token CSRF siempre se genera dinámicamente y se envía con cada petición; y **Stealth Techniques** — Selenium Stealth previene la detección imitando el comportamiento humano y enmascarando huellas automatizadas.
 
 ### Task 3: Performing the Brute-Force Attack
 
@@ -33,11 +37,15 @@
 |---|----------|-----------|
 | 1 | (Preguntas de lectura / reading questions) | `No answer needed` |
 
+**Explicación:** La aplicación web en `http://SECOND_VM_IP/labs/lab1/` valida cada petición de login usando un token CSRF. El objetivo es realizar un ataque de fuerza bruta usando un script basado en Selenium para determinar la contraseña correcta. El script importa `By`, `webdriver`, `Options`, `Service` de Selenium, `selenium_stealth` (**stealth**) y `fake_useragent` (**UserAgent**). La configuración del navegador usa `--no-sandbox` (previene que Chrome use el modo sandbox; necesario en Docker o como root), `--headless` (Chrome sin interfaz gráfica), `start-maximized` (asegura que el navegador esté maximizado), `user-agent={userAgent}` (user agent aleatorio para evadir la detección), `--disable-dev-shm-usage` (previene limitaciones de memoria en contenedores Docker) y `--disable-cache` (asegura que el navegador obtenga datos frescos en cada intento).
+
 ### Task 4: Executing the Script
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | (Preguntas de lectura / reading questions) | `No answer needed` |
+
+**Explicación:** Se ejecuta el script de fuerza bruta contra el lab. El script usa Selenium para intentar logins con una wordlist de contraseñas, manejando automáticamente los tokens CSRF. El navegador genera y envía los tokens CSRF automáticamente en cada petición, y se itera sobre la wordlist hasta encontrar la credencial correcta.
 
 ---
 

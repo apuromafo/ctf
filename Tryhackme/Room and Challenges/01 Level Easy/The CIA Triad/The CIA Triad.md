@@ -21,6 +21,8 @@
 |---|----------|-----------|
 | 1 | I am ready to start! | `No answer needed` |
 
+**Explicación:** Introducción al room; apto para empezar desde cero; parte de la ruta *Pre Security*. No requiere respuesta.
+
 ### Task 2: Entendiendo la Tríada CIA / Understanding the CIA Triad
 
 | # | Pregunta | Respuesta |
@@ -31,6 +33,8 @@
 | 4 | Which CIA pillar gets impacted if the data becomes **untrustworthy**? | `Integrity` |
 | 5 | What is the term used **collectively** for all these pillars? | `CIA Triad` |
 
+**Explicación:** **Confidencialidad** = solo quien debe puede leer los datos (cifrado, controles de acceso, mínimo privilegio); **Integridad** = los datos no cambian sin autorización y, si un dato deja de ser fiable (modificado, corrupto, no verificable), quien sufre es la integridad; **Disponibilidad** = acceso en el momento en que se necesita (redundancia, backups, mitigación de DDoS). Truco: "se previene la modificación" → Integrity; "se previene el acceso" → Confidentiality; "cuando se necesite" → Availability. El término colectivo para los tres pilares es la **CIA Triad**.
+
 ### Task 3: La Mentalidad de Seguridad / The Security Mindset
 
 | # | Pregunta | Respuesta |
@@ -38,11 +42,15 @@
 | 1 | What is the flag received after solving the exercise? | `THM{CIA_IS_ABOUT_BALANCE}` |
 | 2 | CIA Triad is not just a set of definitions; it's a mindset. What type of mindset is it? | `Security mindset` |
 
+**Explicación:** El room carga un pequeño simulador (laboratorio estático, sin máquina) con escenarios donde debes elegir qué pilar priorizar; al resolverlo entrega `THM{CIA_IS_ABOUT_BALANCE}`. El takeaway no es memorizar las tres letras, sino usarlas como **Security mindset**: ante cada decisión (acceso, cifrado, copia de seguridad, parche) preguntarte qué pilar proteges y qué sacrificas.
+
 ### Task 4: Conclusión / Conclusion
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Complete this room. | `No answer needed` |
+
+**Explicación:** Cierre del room; la tríada es la base de control de acceso, cifrado, backups y, en general, de toda arquitectura de seguridad.
 
 ---
 

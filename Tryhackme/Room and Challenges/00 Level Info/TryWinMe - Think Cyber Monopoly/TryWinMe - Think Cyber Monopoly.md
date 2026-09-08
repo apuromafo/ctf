@@ -4,7 +4,7 @@
 | **Tipo** | CTF |
 | **Slug** | `trywinme` |
 | **Link** | [TryHackMe](https://tryhackme.com/room/trywinme) |
-| **Seccion** | 00 Level Info |
+| **Sección** | 00 Level Info |
 | **Fuente** | Medium (suschillxettri021), Hashnode (jebitok), LinkedIn (mkfih3r), CourseHive |
 | **Componentes** | Google dorking / Shodan / VirusTotal / OSINT / CVE lookup |
 | **Impacto** | Evalua habilidades de busqueda, OSINT y uso de motores especializados en ciberseguridad |
@@ -17,6 +17,13 @@
 
 ### Task 1: Search Skills
 
+**Explicación:** La tarea ejercita las búsquedas clásicas de ciberseguridad: terminología ("snake oil" = método o producto criptográfico falso/fraudulento), conocimiento de comandos Linux y operadores de Google. `ss` es el sucesor moderno de `netstat` en Linux y significa "socket statistics". Para filtrar por tipo de archivo se usa `filetype:pdf` (o `filetype` funciona con otros tipos de documento), así `filetype:pdf cyber warfare report` devuelve solo PDFs que contengan esos términos. La búsqueda de servidores lighttpd se hace en Shodan (buscando por servidor web) y el top país según ese moldeo de búsqueda es United States; el hash de malware se vuelca en VirusTotal y BitDefenderFalx lo clasifica como `Android.Riskware.Agent.LHH`.
+
+```text
+filetype:pdf cyber warfare report
+ss -ltnp            # reemplazo moderno de netstat -tulpn
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What do you call a cryptographic method or product considered bogus or fraudulent? | `snake oil` |
@@ -28,6 +35,8 @@
 
 ### Task 2: Specialized Search Engines
 
+**Explicación:** Los motores especializados (Shodan para dispositivos/IoT, Censys para infraestructura, VirusTotal para hashes y muestras) no sustituyen al shell. `cat` viene de "concatenate": concatena y muestra el contenido de archivos. En Windows, `netstat -b` muestra el ejecutable (binary) asociado a cada conexión activa o puerto en escucha, cosa que el `ss` de Linux hace por defecto; de ahí que la respuesta sea el parámetro `-b`.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What does the Linux command `cat` stand for? | `concatenate` |
@@ -35,17 +44,23 @@
 
 ### Task 3: Vulnerabilities and Exploitation
 
+**Explicación:** Tarea conceptual: aprender dónde buscar vulnerabilidades y recursos de explotación. Las fuentes canónicas son las bases de datos de CVE (NVD, CVE.org), los exploits públicos de Metasploit/Exploit-DB y los repositorios de la comunidad. No hay respuestas que introducir: es una tarea de lectura.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Read the above. | No answer needed |
 
 ### Task 4: Technical Documentation
 
+**Explicación:** Tarea de lectura y comprensión sobre la importancia de la documentación técnica: man pages, doc de herramientas, descripciones de CVEs y advisories. Saber leer documentación es parte del reconocimiento pasivo. Sin preguntas que responder.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Read the above. | No answer needed |
 
 ### Task 5: Social Media
+
+**Explicación:** Se practica OSINT en redes sociales para reconocimiento. Para conocer la formación técnica de un empleado, la plataforma profesional de referencia es LinkedIn. Para encontrar respuestas a preguntas de seguridad personales ("¿a qué colegio fuiste de niño?"), la habitual es Facebook, donde el contenido personal y de historial suele revelar esos datos sin darse cuenta.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|

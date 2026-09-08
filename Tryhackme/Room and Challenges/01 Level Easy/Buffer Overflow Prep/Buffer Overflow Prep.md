@@ -17,11 +17,60 @@
 
 ### Task 1: Deploy VM
 
+**Explicación:** Máquina Windows 7 de 32 bits con Immunity Debugger y Putty preinstalados. Firewall y Defender deshabilitados. Acceso por RDP:
+
+```
+xfreerdp /u:admin /p:password /cert:ignore /v:MACHINE_IP
+```
+
+Credenciales: `admin` / `password`. En el escritorio está la carpeta `vulnerable-apps` con varios binarios vulnerables, incluido el binario personalizado `oscp` con 10 buffer overflows (cada uno con distinto offset de EIP y set de badchars).
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | No answer needed - deploy the VM. | `No answer needed` |
 
 ### Task 2: oscp.exe OVERFLOW1
+
+**Explicación:** Abrir `oscp.exe` en Immunity Debugger como administrador y ejecutarlo (F9). Escucha en el puerto 1337. Conectar con netcat:
+
+```
+nc MACHINE_IP 1337
+```
+
+Escribir `HELP` muestra los 10 comandos OVERFLOW1-10. Configurar la carpeta de trabajo de mona:
+
+```
+!mona config -set workingfolder c:\mona\%p
+```
+
+**Fuzzing:** script `fuzzer.py` que envía cadenas de "A" crecientes (100→3000 bytes). El servidor crashea a los 2000 bytes.
+
+**Crash Replication & Controlling EIP:** generar un patrón cíclico 400 bytes mayor que el crash:
+
+```
+/usr/share/metasploit-framework/tools/exploit/pattern_create.rb -l 2400
+```
+
+Enviarlo con `exploit.py` y usar mona para hallar el offset:
+
+```
+!mona findmsp -distance 2400
+```
+
+**Finding Bad Characters:** generar bytearray y comparar:
+
+```
+!mona bytearray -b "\x00"
+!mona compare -f C:\mona\oscp\bytearray.bin -a <address>
+```
+
+**Finding a Jump Point:**
+
+```
+!mona jmp -r esp -cpb "\x00\x07\x2e\xa0"
+```
+
+**Generate Payload** con msfvenom (excluyendo badchars) y **prepend NOPs** (`padding = "\x90" * 16`). Explotar para obtener reverse shell.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -30,12 +79,16 @@
 
 ### Task 3: oscp.exe OVERFLOW2
 
+**Explicación:** Repetir el proceso para el comando OVERFLOW2. El fuzzer crashea a los 700 bytes; patrón de 1300 bytes.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What is the EIP offset for OVERFLOW2? | `634` |
 | 2 | In byte order and including the null byte \x00, what were the badchars for OVERFLOW2? | `\x00\x23\x3c\x83\xba` |
 
 ### Task 4: oscp.exe OVERFLOW3
+
+**Explicación:** Repetir el proceso para el comando OVERFLOW3 (fuzzing → patrón → findmsp → bytearray/compare → jmp esp → payload).
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -44,12 +97,16 @@
 
 ### Task 5: oscp.exe OVERFLOW4
 
+**Explicación:** Repetir el proceso para el comando OVERFLOW4.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What is the EIP offset for OVERFLOW4? | `2026` |
 | 2 | In byte order and including the null byte \x00, what were the badchars for OVERFLOW4? | `\x00\xa9\xcd\xd4` |
 
 ### Task 6: oscp.exe OVERFLOW5
+
+**Explicación:** Repetir el proceso para el comando OVERFLOW5.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -58,12 +115,16 @@
 
 ### Task 7: oscp.exe OVERFLOW6
 
+**Explicación:** Repetir el proceso para el comando OVERFLOW6.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What is the EIP offset for OVERFLOW6? | `1034` |
 | 2 | In byte order and including the null byte \x00, what were the badchars for OVERFLOW6? | `\x00\x08\x2c\xad` |
 
 ### Task 8: oscp.exe OVERFLOW7
+
+**Explicación:** Repetir el proceso para el comando OVERFLOW7.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -72,6 +133,8 @@
 
 ### Task 9: oscp.exe OVERFLOW8
 
+**Explicación:** Repetir el proceso para el comando OVERFLOW8.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What is the EIP offset for OVERFLOW8? | `1786` |
@@ -79,12 +142,16 @@
 
 ### Task 10: oscp.exe OVERFLOW9
 
+**Explicación:** Repetir el proceso para el comando OVERFLOW9.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What is the EIP offset for OVERFLOW9? | `1514` |
 | 2 | In byte order and including the null byte \x00, what were the badchars for OVERFLOW9? | `\x00\x04\x3e\x3f\xe1` |
 
 ### Task 11: oscp.exe OVERFLOW10
+
+**Explicación:** Repetir el proceso para el comando OVERFLOW10.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|

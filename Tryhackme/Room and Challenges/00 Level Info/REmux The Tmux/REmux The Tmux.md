@@ -4,7 +4,7 @@
 | **Tipo** | Walkthrough |
 | **Slug** | `tmuxremux` |
 | **Link** | [TryHackMe](https://tryhackme.com/room/tmuxremux) |
-| **Seccion** | 00 Level Info |
+| **Sección** | 00 Level Info |
 | **Fuente** | TryHackMe |
 | **Componentes** | tmux / terminal multiplexer / shell |
 | **Impacto** | Guia completa de uso de tmux: sesiones, paneles, ventanas, copy mode y personalizacion |
@@ -17,11 +17,31 @@
 
 ### Task 1: Tmux practice machine
 
+**Explicación:** La sala despliega una máquina de prácticas. Para hacer los ejercicios basta con conectarse por SSH a la máquina y abrir una sesión de tmux; el resto de tareas se resuelven dentro de tmux, de modo que conviene tener una segunda terminal o un panel aparte para emitir los comandos de control sin perder la vista de la sesión que se está manejando.
+
+```bash
+ssh thm@<IP>
+tmux
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Start the VM if you need it and ssh in. | No answer needed |
 
 ### Task 2: Starting tmux "Sessions" and default tmux "prefix"
+
+**Explicación:** tmux gestiona **sesiones** (sesión), cada una con su propio estado. El prefijo por defecto es `ctrl b`: se pulsa y se suelta, y después se teclea el comando (no hace falta mantenerlo pulsado; por eso la primera respuesta es `nay`). Comandos esenciales para el control de sesiones:
+
+```bash
+tmux new -s thm          # nueva sesión llamada "thm"
+tmux ls                  # listar sesiones
+tmux a -t thm            # reattacher a la sesión "thm" (detach previo con ctrl b d)
+tmux new -s kali -d      # crear sesión "kali" en segundo plano (-d)
+tmux kill-session -t thm # matar forzosamente la sesión "thm"
+tmux kill-session -t notes -a   # matar todas menos la actual ("notes")
+```
+
+Dentro de la sesión: `ctrl b shift $` renombra la sesión, `ctrl b d` la desprende (detach, la deja corriendo), `ctrl b s` permite cambiar de sesión sin desacoplarse y `ctrl b shift :` abre el prompt de comandos de tmux (donde escribes sobre la línea de comandos, con tabulación, comandos como `attach -c /opt` para que las nuevas ventanas arranquen en `/opt`). En sesiones anidadas (una tmux dentro de otra) hay que pulsar el prefijo dos veces: `ctrl b ctrl b`. tmux es sensible a mayúsculas (caps lock sí rompe los atajos), el prompt se puede salir de varias formas y existen varias vías de salida, así que las respuestas relevantes son `yea`/`yea`.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -43,6 +63,14 @@
 
 ### Task 3: Manage tmux "Panes"
 
+**Explicación:** Los **paneles** dividen la ventana en áreas. Se crean con `ctrl b shift "` (división horizontal) y `ctrl b shift %` (vertical). Para cerrarlos: `exit` (como una sesión ssh) o `ctrl b x` y confirmar con `y` si el panel se ha congelado. Para moverse, se puede usar `ctrl b q` (ver el número de cada panel) y luego las flechas (`yea`, se pueden usar), y atajos como `ctrl b ;` para saltar entre los dos últimos paneles más usados. La disposición se cambia con `ctrl b esc` + número de layout (del 1 en adelante), o de una en una con `ctrl b spacebar`. Reordenar paneles: `ctrl b shift {` mueve el panel actual en sentido horario y `ctrl b shift }` en sentido antihorario. Intercambiar posiciones se hace desde el prompt de tmux con `swap-pane`:
+
+```bash
+# dentro del prompt de tmux (ctrl b shift :)
+swap-pane -s 3 -t 1   # mover el panel 3 a la posición 1 (y viajar con él)
+swap-pane -t 4 -s 1   # intercambiar 1 <-> 4 sin cambiar tu posición actual
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | How to create a new pane split horizontally? | `ctrl b shift "` |
@@ -61,6 +89,8 @@
 
 ### Task 4: Manage tmux "Windows"
 
+**Explicación:** Las **ventanas** son pestañas dentro de la sesión. `ctrl b c` crea una ventana nueva; `ctrl b ,` la renombra. `ctrl b shift !` lleva el panel seleccionado a su propia ventana. Desde el prompt de tmux, `join-pane` fusiona ventanas/paneles: `join-pane -s bash` trae el contenido de la ventana "bash", `join-pane -t sudo` lo envía hacia la ventana "sudo"; con `-v` la fusión es vertical y con `-h` horizontal (y se puede usar el número de ventana en vez del nombre, `yea`). `ctrl b shift &` mata la ventana entera (avisando con confirmación), `ctrl b w` escoge entre ventanas sin desacoplarte y `ctrl b p` / `ctrl b n` saltan a la ventana anterior/siguiente.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | How to create a new empty tmux window? | `ctrl b c` |
@@ -78,6 +108,8 @@
 
 ### Task 5: Tmux "copy" mode
 
+**Explicación:** El modo de copia permite navegar y seleccionar texto del historial de la pantalla como si fuera un paginador. Se entra con `ctrl b [`. Dentro: `ctrl r` busca hacia atrás, `ctrl s` hacia delante, `esc` sale de la búsqueda, `q` sale del modo de copia, `ctrl spacebar` inicia la selección y `alt w` copia la selección. Para pegar: `ctrl b ]`. `ctrl b shift #` alterna el pane marcado (marked pane), útil para operaciones que implican dos paneles.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | How to enter copy mode in tmux? | `ctrl b [` |
@@ -91,6 +123,16 @@
 | 9 | How to toggle the marked pane? | `ctrl b shift #` |
 
 ### Task 6: Oh My Tmux and beyond
+
+**Explicación:** Más allá del uso básico, tmux se puede configurar y ampliar. No viene preinstalado en Kali (`nay`); la documentación está en `/usr/share/doc/tmux`; tmux es un comando POSIX (`yea`) y `home` te lleva al inicio de la línea. Para configurarlo: `source-file ~/.tmux.conf` recarga la configuración, `tmux kill-server` mata todo el servidor tmux, `bind` asigna teclas, `set -g prefix C-a` cambia el prefijo a `ctrl a`, los plugins se cargan con `set -g @plugin` (sí es posible escribir plugins: `yea`) y `run-shell` ejecuta un comando de shell desde la configuración.
+
+```bash
+tmux kill-server
+source-file ~/.tmux.conf
+set -g prefix C-a
+set -g @plugin 'tmux-plugins/tpm'
+run-shell 'cmd'
+```
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -107,6 +149,8 @@
 | 11 | What is the tmux command to run a shell command from the tmux configuration? | `run-shell` |
 
 ### Task 7: Oreo's open-source .tmux.conf file
+
+**Explicación:** La sala cierra mostrando un `.tmux.conf` de código abierto (el de Oreo) como referencia real de configuración: recoge en un solo archivo todas las ideas vistas (prefijo, bindings, layouts, plugins de oh-my-tmux). Oír/ver el archivo sirve como hoja de ruta práctica para personalizar tu propio entorno.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|

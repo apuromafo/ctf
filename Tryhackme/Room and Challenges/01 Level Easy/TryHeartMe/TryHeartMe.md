@@ -21,6 +21,8 @@
 |---|----------|-----------|
 | 1 | What is the flag? | `THM{v4l3nt1n3_jwt_c00k13_t4mp3r_4dm1n_sh0p}` |
 
+**Explicación:** La tienda de perfiles de citas emite una cookie de sesión JWT al hacer login (`token` en cookie o header `Authorization`). Se decodifica (base64url): el header dice `{"alg":"HS256","typ":"JWT"}`. El secreto es débil y se crackea con `hashcat`/`john` sobre `jwt2john` (diccionario en segundos), o el servidor acepta `alg=none`. Se reescribe el `payload` cambiando el `role`/`username` a `admin` y se re-firma con el secreto encontrado (o con firma vacía en `alg=none`). Al enviar el token manipulado, el panel `admin`/`shop_admin` se desbloquea y muestra la flag `THM{v4l3nt1n3_jwt_c00k13_t4mp3r_4dm1n_sh0p}`.
+
 ---
 
 **Metodología:**

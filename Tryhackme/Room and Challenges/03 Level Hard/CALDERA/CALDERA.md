@@ -17,11 +17,15 @@
 
 ### Task 1: Introduction
 
+**Explicación:** Introducción al marco CALDERA del MITRE: una plataforma que ejecuta operaciones ofensivas autónomas (basadas en MITRE ATT&CK) y telemetría defensiva. No hay respuesta que introducir.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | No answer needed | `No answer needed` |
 
 ### Task 2: CALDERA Overview
+
+**Explicación:** CALDERA despliega **agentes** (implant que conecta con el servidor), organiza tactic-abilities y usa un **planner** (que determina el orden de ejecución de las abilities) y perfiles de operación. El agente que soporta comunicación por HTTP, GitHub GIST o DNS tunnelling es **Sandcat**; la simulación de actividad humana corre a cargo del plugin **Human**. La respuesta correcta para el orden de abilities es `planner`.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -31,6 +35,8 @@
 
 ### Task 3: Running Operations with CALDERA
 
+**Explicación:** Al configurar un agente Sandcat, la IP del servidor se rellena con `0.0.0.0` por defecto (hay que cambiarla por la del host para que el agente conecte). El perfil **Enumeration** incluye 5 abilities; la de enumeración de procesos ejecuta `tasklist /m >> $env:APPDATA\vmtool.log;cat $env:APPDATA\vmtool.log`. Durante la operación, la ability "SysInternals PSTool Process Discovery" no produjo salida (no devolvió output), lo que se observa en el panel de la operación.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What IP address is set by default during the configuration of an agent? | `0.0.0.0` |
@@ -39,6 +45,8 @@
 | 4 | What is the name of the ability that did not produce an output during the operation? | `SysInternals PSTool Process Discovery` |
 
 ### Task 4: In-Through-Out
+
+**Explicación:** El perfil **In-Through-Out** encadena una simulación completa de ataque: la primera ability descarga un adjunto de phishing (`PhishingAttachment.xlsm`); la segunda abre ese documento y lanza `notepad.exe` (proceso hijo); la tercera/cuarta enumeran y reconocen cuentas (4 cuentas encontradas); la quinta archiva el directorio `Downloads`; la sexta exfiltra generando 23 peticiones HTTP hacia el servidor C2. Las respuestas salen directamente del detalle de la operación en CALDERA.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -50,6 +58,8 @@
 
 ### Task 5: Emulation to Detection
 
+**Explicación:** La operación deja telemetría que se correlaciona con reglas **Sigma** (en ELK). El primer log generado tiene como ParentImage `C:\Users\Public\chrome.exe` (proceso padre del atacante simulado). La creación de un valor HKLM Shell de Winlogon se atribuye a la ability "Winlogon HKLM Shell Key Persistence - PowerShell". El uso de `Invoke-WebRequest` lo detecta la regla "PowerShell Web Download". Para detectar el archivado ZIP con `Compress-Archive` hacen falta las Match Strings `'Compress-Archive ' in CommandLine`, `' -Path ' in CommandLine`, `' -DestinationPath ' in CommandLine` y `$env:TEMP\ in CommandLine`. La ejecución PowerShell ofuscada se marca con la regla "Hacktool - CrackMapExec PowerShell Obfuscation".
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What is the value of the ParentImage of the process that triggered the first generated log? | `C:\Users\Public\chrome.exe` |
@@ -60,6 +70,8 @@
 
 ### Task 6: Autonomous Incident Response
 
+**Explicación:** En el plugin de respuesta autónoma, la ability "Find unauthorized processes" falló 3 veces durante el primer lote (cuando no había procesos sospechosos). Junto al fact `remote.port.unauthorized` se genera el fact `host.pid.unauthorized` (PID del proceso no autorizado). La regla de firewall creada por "Enable Outbound TCP/UDP firewall rule" usa el grupo `Caldira`. Cuando se detecta un proceso rogue, la ability de respuesta que se dispara es "Kill rogue process", que usa el cmdlet `Stop-Process`.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | How many times did the Find unauthorized processes ability fail during the first batch? | `3` |
@@ -69,6 +81,8 @@
 | 5 | What PowerShell cmdlet is used by that ability to stop the process? | `Stop-Process` |
 
 ### Task 7: Case Study: Emulating APT41
+
+**Explicación:** En el caso APT41 se correlacionan abilities con su telemetría: "Download Macro-Enabled Phishing Attachment" crea `C:\Users\Administrator\AppData\Local\Temp\2\PhishingAttachment.xlsm`; la ejecución WMI ofuscada se marca con el Match String `\WmiPrvSE.exe in ParentImage`; "Execute a Command as a Service" crea el servicio `ARTService`; la tarea programada de PowerShell deja `C:\Windows\System32\Tasks\AtomicTask`. La creación de usuario se detecta con la regla "New User Created Via Net.EXE", el borrado de logs con "Suspicious Eventlog Clear or Configuration Change", y la ability de descubrimiento de archivos/directorios ejecuta `ls -recurse; get-childitem -recurse; gci -recurse` (la ability "Find files" se ejecutó 3 veces en la emulación).
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -82,6 +96,8 @@
 | 8 | How many times did the Find files ability execute during the emulation? | `3` |
 
 ### Task 8: Conclusion
+
+**Explicación:** Cierre del room: recapitulación de todo el ciclo emulación → detección → respuesta. Sin respuesta que introducir.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|

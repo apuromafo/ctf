@@ -21,11 +21,15 @@
 |---|----------|-----------|
 | 1 | Let's get started! | `No answer needed` |
 
+**Explicación:** Introducción al camino hacia el rol de L2 dentro del SOC.
+
 ### Task 2: New Role, New Duties
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Should you improve **tech**, **soft**, or **both** skills to become L2? | `Both` |
+
+**Explicación:** El salto a L2 no es solo técnico: requiere mejorar **both** (ambas) habilidades, las técnicas y las soft skills (comunicación, reportes, colaboración).
 
 ### Task 3: Fun of Being SOC L2
 
@@ -33,11 +37,15 @@
 |---|----------|-----------|
 | 1 | Does **exploring new security areas** help you grow? (Yea/Nay) | `Yea` |
 
+**Explicación:** Explorar nuevas áreas de seguridad (threat hunting, DFIR, CTI, etc.) ayuda a crecer profesionalmente → **Yea**.
+
 ### Task 4: L1 vs L2 Mindset Shift
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What **mindset** helps you see and predict how incidents unfold? | `Attacker Mindset` |
+
+**Explicación:** La mentalidad del **attacker mindset** permite ver y predecir cómo se desarrollan los incidentes: pensar cómo escalaría y lateralizaría un atacante real para detectar patrones que el L1 no ve.
 
 ### Task 5: Your Day as Level 2 *(static-site)*
 
@@ -45,17 +53,27 @@
 |---|----------|-----------|
 | 1 | What **flag** did you get after completing the challenge? | `THM{much_more_than_alert_triage}` |
 
+**Explicación:** El static-site simula un día de L2 (triage, reporte, hunting, colaboración con DFIR/CTI). Completar el desafío en la actividad entrega el flag `THM{much_more_than_alert_triage}`.
+
 ### Task 6: Next Steps
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Complete the room! | `No answer needed` |
 
----
+**Explicación:** Cierre del room; siguientes pasos del path de formación de SOC Senior.
 
 **Metodología:**
 1. **Conceptos (T2–T4):** para pasar a L2 hay que mejorar **both** skills (tech + soft); explorar nuevas áreas de seguridad ayuda a crecer (**Yea**); la mentalidad que permite ver y predecir cómo se desarrollan los incidentes es el **Attacker Mindset** (pensar cómo escalaría/lateralizaría un atacante real). Áreas nuevas de L2: threat hunting, escalation, reportes a stakeholders y trabajar con DFIR.
 2. **Static-site (T5):** abrir el desafío "Your Day as Level 2" que simula un día de L2 (triage, reporte, hunting, colaboración con DFIR/CTI); completar la actividad en el static-site entrega el flag `THM{much_more_than_alert_triage}`.
+
+```
+L1 -> L2: both skills (tech + soft)
+  -> explorar nuevas áreas (Yea) -> attacker mindset
+  -> static-site: un día como L2 -> flag THM{much_more_than_alert_triage}
+```
+
+**Lección:** *El L2 no solo cierra tickets: piensa como atacante, explica como comunicador, caza como analyst.*
 
 **Learning chain:** L1 → L2: both skills (tech + soft) → explorar nuevas áreas (Yea) → attacker mindset → static-site: un día como L2 → flag THM{much_more_than_alert_triage}
 

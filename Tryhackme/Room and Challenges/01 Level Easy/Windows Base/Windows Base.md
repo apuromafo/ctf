@@ -21,11 +21,15 @@
 |---|----------|-----------|
 | 1 | I understand the learning objectives and am ready to learn about Windows! | `No Answer Needed` |
 
+**Explicación:** Introducción al room de fundamentos de Windows; no requiere respuesta.
+
 ### Task 2: Exploring the Windows Workspace
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | (Preguntas de lectura / reading questions) | `No answer needed` |
+
+**Explicación:** Antes de Windows, los ordenadores ejecutaban MS-DOS con una pantalla negra donde se escribían comandos; en 1985 Microsoft lanzó **Windows 1.0**, una GUI básica construida sobre DOS. Se explora la interfaz gráfica moderna y el **Explorador de archivos**.
 
 ### Task 3: Native Windows Security
 
@@ -36,11 +40,15 @@
 | 3 | Open the **Task Manager** on your workstation's Desktop and navigate to the **Performance** tab. What is the speed of your computer's CPU? | `2.20 GHz` |
 | 4 | After performing your custom scan, click `Virus:DOS/EICAR_Test_File` and select **See details**. What is the file name shown in the **Affected items** section? | `tryhatmemaldoc.txt` |
 
+**Explicación:** **Windows Security** es el panel central para gestionar las medidas de protección integradas, dividido en cuatro secciones: **Virus & threat protection** (detecta/elimina malware con protección en tiempo real y escaneos personalizables), **Firewall & network protection** (controla tráfico de red entrante y saliente), **App & browser control** (protege de apps, archivos y sitios inseguros) y **Device security** (protecciones basadas en hardware). El instalador `TryHatMeWelcome` de la carpeta `TryHatMe Onboarding` da `THM{your_first_day!}`; la sección **Time & Language** de **Windows Settings** muestra `United States`; el **Task Manager** en la pestaña **Performance** da la velocidad de CPU `2.20 GHz`; y tras el escaneo, `Virus:DOS/EICAR_Test_File` → **See details** muestra el archivo `tryhatmemaldoc.txt` en **Affected items**.
+
 ### Task 4: Conclusion
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Complete the room and continue on your cyber learning journey! | `No Answer Needed` |
+
+**Explicación:** Cierre del room; continuar el camino de aprendizaje de Windows.
 
 ---
 

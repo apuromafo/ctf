@@ -17,11 +17,30 @@
 
 ### Task 1: Case Briefing
 
+**Explicación:** El briefing (sitio estático del TSS Operations Hub) presenta al cliente **Meridian Defense Research Institute** y al adversario **APT21**, cuya cadena de ataque es spearphishing de macro `.docm` → payload loaders (NetTraveler) → credenciales en memoria → movimiento lateral con hashes → staging/exfiltración con ZIP cifrado. Indica que el entorno de validación es Splunk (`index="dac_lab"`, All time) y que el portal DaC del laboratorio vive en `LAB_WEB_URL.p.thmlabs.com/dac-site`. La única pregunta es de confirmación y se responde con el propio enunciado.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | I have reviewed the case briefing and am ready to begin the investigation. | `I have reviewed the case briefing and am ready to begin the investigation.` |
 
 ### Task 2: Tuning Detections
+
+**Explicación:** La tarea tiene 10 preguntas (5 flags + 5 respuestas de investigación). Para cada Pull Request el pipeline es: **Sigma Syntax → Converter (a SPL) → Environment Validation → Automated Red Team Test**, y el gate exige TP > 0 y FP = 0 para poder mergear/aprobar la PR.
+
+- **PR#1 (spearphishing):** regla anclada al proceso WINWORD de Word abriendo el documento `Hypersonic_Test_Schedule_2025.docm` (responde la Q1).
+- **PR#2 (proxy execution):** ejecución vía `rundll32` con contexto SOLIDWORKS; la herramienta interna `researchdeploy.exe` genera falsos positivos si no se filtra con `and not`.
+- **PR#3 (LSASS dump):** correlación de `comsvcs.dll` (o `WerFault`/`vaultagent`) con el usuario `m.okafor` que lanzó el volcado (Q5).
+- **PR#4 (pass-the-hash):** evento 4624 con LogonType 3 (red) + NTLM, correlacionado con el 7045 (creación de servicio); la autenticación PtH ocurrió el `3/11/2025 10:40:00.000 AM` (Q7).
+- **PR#5 (staging/backup):** compresión de archivos (`7z`/`Compress-Archive`, `researchbackup`, `autobackup`); la carpeta donde un atacante escondería el binario para aparentar un backup legítimo es `D:\Backups\nightly` (Q9).
+
+```bash
+# búsquedas clave en Splunk
+index="dac_lab" user=m.okafor        # LSASS dump / Q5
+index="dac_lab" EventID=4624 LogonType=3 NTLM   # pass-the-hash / Q7
+index="dac_lab" WINWORD "Hypersonic_Test_Schedule_2025.docm"  # Q1
+```
+
+Los flags de las PRs solo aparecen publicados en screenshots (los autores no los transcriben); su formato esperado es: PR#1 `THM{OfFicE_…}`, PR#2 `THM{sIgNeD…}`, PR#3 `THM{D…}`, PR#4 `THM{P…}`, PR#5 `THM{A…}`. Se documenta el método para reclamar cada PR, no el flag exacto.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|

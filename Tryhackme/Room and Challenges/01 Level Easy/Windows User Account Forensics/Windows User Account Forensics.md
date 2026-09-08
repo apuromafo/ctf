@@ -21,6 +21,8 @@
 |---|----------|-----------|
 | 1 | What type of accounts are used by the Windows operating system and various apps? | `System and Service Accounts` |
 
+**Explicación:** Windows usa (además de las cuentas de usuario humanas) cuentas **System and Service Accounts** para que el propio SO y las aplicaciones se ejecuten con identidades dedicadas. La room enseña dónde buscar artefactos asociados con usuarios y cuentas en una investigación de seguridad.
+
 ### Task 2: User Accounts
 
 | # | Pregunta | Respuesta |
@@ -28,6 +30,8 @@
 | 1 | How many users were found using the DSInternals command? | `5` |
 | 2 | What is the value of the "bootKey" variable? | `36c8d26ec0df8b23ce63bcefa6e2d821` |
 | 3 | What is the SID of the domain user, m.ascot? | `S-1-5-21-1966530601-3185510712-10604624-1111` |
+
+**Explicación:** **DSInternals** es un módulo de PowerShell/CLI para interactuar con el AD y el SAM; en este caso se enumeran las cuentas del sistema → **5** usuarios. El comando devuelve también la variable **bootKey** (`36c8d26ec0df8b23ce63bcefa6e2d821`, la clave usada para cifrar los hashes en el registro) y los SIDs de cada usuario, como el del usuario de dominio `m.ascot` → `S-1-5-21-1966530601-3185510712-10604624-1111`.
 
 ### Task 3: Authentication
 
@@ -37,6 +41,8 @@
 | 2 | What was the Server Challenge sent to the client during the Challenge stage of the NTLM handshake? | `212ba239356b3d82` |
 | 3 | What is the Dns Name of the other result from the DsGetDomainControllerInfo response? | `dcfr.lab.lan` |
 
+**Explicación:** En el análisis del handshake **NTLM** (captura de tráfico/investigación de autenticación): el usuario autenticado es `admin`; el **Server Challenge** que el servidor envía al cliente en la fase Challenge es `212ba239356b3d82` (valor crucial para crackear/validar el hash NT). En la respuesta de **DsGetDomainControllerInfo**, el otro DC del dominio devuelve el Dns Name `dcfr.lab.lan`.
+
 ### Task 4: Policies
 
 | # | Pregunta | Respuesta |
@@ -45,6 +51,8 @@
 | 2 | Under Computer Configuration > Policies > Administrative Templates > Windows Components > Windows Defender Antivirus > Real-time Protection, what is the setting that was enabled? | `Turn off real-time protection` |
 | 3 | There is an updated malicious startup PowerShell script. What is the filename of this script? (Without file extension) | `superimportant-updated` |
 | 4 | What is the IP address of the C2 server the script would exfiltrate to? | `192.0.2.123` |
+
+**Explicación:** Revisando las **GPO** se encuentra una policy cuyo **apply target** es el usuario `Michael Ascot`. Bajo Computer Configuration > ... > Windows Defender Antivirus > Real-time Protection se habilitó el ajuste **Turn off real-time protection** (T1562.001 Impair Defenses: Disable or Modify Tools), que desactiva la protección en tiempo real de Defender. Existe además un script de arranque PowerShell malicioso actualizado llamado `superimportant-updated` (sin extensión) que exfiltraría información al C2 `192.0.2.123` (T1041 Exfiltration Over C2 Channel).
 
 ---
 

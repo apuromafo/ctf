@@ -21,11 +21,15 @@
 |---|----------|-----------|
 | 1 | (Preguntas de lectura / reading questions) | `No answer needed` |
 
+**Explicación:** Splunk es una de las soluciones SIEM líderes. Permite recopilar, analizar y correlacionar logs de red y de máquina en tiempo real. Task de lectura; no requiere respuesta.
+
 ### Task 2: Splunk Components
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Which component is used to collect and send data over the Splunk instance? | `Forwarder` |
+
+**Explicación:** Splunk tiene tres componentes principales: el **Forwarder** recopila y envía datos a la instancia de Splunk; el **Indexer** indexa y almacena los logs; el **Search Head** es el lugar donde los usuarios buscan los logs indexados usando SPL (Splunk Search Processing Language). El componente que envía datos es el Forwarder.
 
 ### Task 3: Navigating Splunk
 
@@ -36,6 +40,8 @@
 | 3 | What is the name associated with IP 107.14.182.38? | `Smith` |
 | 4 | What is the number of events that originated from all countries except France? | `2814` |
 | 5 | How many VPN Events were observed by the IP 107.3.206.58? | `14` |
+
+**Explicación:** Para subir datos: **Add Data** → **Upload** → seleccionar el archivo → **Select Source Type** → **Input Settings** (seleccionar el índice) → **Review** → **Done**. Se sube el archivo `VPN_logs` y se crea el índice `VPN_Logs`. Luego, con búsquedas SPL (field-value pairs) sobre los logs indexados se obtienen los valores: `2862` eventos totales; la usuaria `Maleena` aparece en `60` eventos; el IP `107.14.182.38` se asocia al nombre `Smith`; los eventos de todos los países excepto Francia (condición `!=France`) son `2814`; y el IP `107.3.206.58` observa `14` eventos VPN.
 
 ---
 

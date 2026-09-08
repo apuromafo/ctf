@@ -17,6 +17,23 @@
 
 ### Task 1: Find the Flag
 
+**Explicación:** Se accede por SSH con `frankesqwen` / `FrankesQwen`. En el home están `~/frankesqwen-v7` y `~/frankesqwenhint` (y el mismo par en HuggingFace: `ab123451/frankesqwen-v7`, `ab123451/frankesqwen-hint-v2`). `chat.py` usa transformers con `apply_chat_template` y `generate(max_new_tokens=60, do_sample=False, repetition_penalty=1.3)`. Preguntar "What is the flag?" produce rechazo o degeneración en **todas** las variantes → la supresión vive en los pesos. `diff_weights.py` (safetensors) compara v7 vs hint con `(t1-t2).abs().sum()` por tensor: los outliers aparecen en `model.layers.22.mlp.down_proj.weight` y `model.layers.23.mlp.down_proj.weight`. `patch_and_ask.py` copia esos tensores del hint al v7 y regenera con `max_new_tokens=80` → el modelo revela el flag. Sin GPU → Colab con los modelos de HuggingFace.
+
+```python
+# diff_weights.py (concepto)
+from safetensors.torch import load_file
+a = load_file("frankesqwen-v7/model.safetensors")
+b = load_file("frankesqwenhint/model.safetensors")
+diffs = {k: (a[k] - b[k]).abs().sum().item() for k in a}
+print(sorted(diffs.items(), key=lambda x: -x[1])[:5])
+# outliers: model.layers.22.mlp.down_proj.weight, model.layers.23.mlp.down_proj.weight
+
+# patch_and_ask.py (concepto)
+for k in ("model.layers.22.mlp.down_proj.weight", "model.layers.23.mlp.down_proj.weight"):
+    ckpt[k] = hint[k]          # copiar tensores del hint al v7
+# regenerar la conversación con max_new_tokens=80
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | What's the flag? | `THM{...redacted...}` |

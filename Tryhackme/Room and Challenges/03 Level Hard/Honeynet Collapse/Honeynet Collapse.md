@@ -17,6 +17,15 @@
 
 ### Task 1: Initial Access Pot
 
+**Explicación:** Se analiza el tráfico del honeypot comprometido: los logs de Apache muestran una fuerza bruta contra **`wp-login.php`** y, tras la intrusión, el tema `blocksy` de WordPress tiene su `404.php` backdooreado (**`/var/www/html/wordpress/wp-content/themes/blocksy/404.php`**). La escalada a root se hizo reutilizando la copia de seguridad de la clave SSH del host (**`/etc/ssh/id_ed25519.bak`**) vía SSH local. Ya como root, el atacante escaneó la IP interna **`172.16.8.216`**, y el binario de persistencia en `/sbin/` tiene el hash MD5 **`d6f2d80e78f264aff8c7aea21acb6ca6`**. El "DeceptiPot" puede abrirse en modo recovery con `deceptipot -r` y la contraseña `Em1lyR0ss_DeCePti!`.
+
+```bash
+# exclusión de logs a revisar
+grep wp-login /var/log/apache2/access.log | tail -n 20
+# persistencia
+find /sbin -newer /etc/hostname 2>/dev/null ; md5sum /sbin/<malware>
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Which web page did the attacker attempt to brute force? | `wp-login.php` |
@@ -28,11 +37,22 @@
 
 ### Task 2: Elevating Movement
 
+**Explicación:** Task sin respuestas transcritas en las fuentes públicas (solo se remite al walkthrough oficial). Temáticamente cubre el movimiento lateral y la elevación de privilegios dentro de la red de DeceptiTech tras la compromisión inicial: mirado desde credenciales encontradas, rutas de pivoteo y configuraciones débiles.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | (Respuestas verificadas en fuentes públicas / Verified answers in public sources) | `Consultar walkthrough oficial / Refer to official walkthrough` |
 
 ### Task 3: Lost in RAMSlation
+
+**Explicación:** Forense de memoria con **Volatility** sobre un volcado de RAM: procesos maliciosos con `psxview`/`pslist`, inyecciones con `malfind` y conexiones de red sospechosas con `netscan`, además de artefactos de persistencia. Las respuestas concretas solo están en el walkthrough oficial.
+
+```bash
+volatility -f dump.raw imageinfo
+volatility -f dump.raw --profile=Win7SP1x64 psxview
+volatility -f dump.raw --profile=Win7SP1x64 malfind --dump-dir=out
+volatility -f dump.raw --profile=Win7SP1x64 netscan
+```
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -40,17 +60,23 @@
 
 ### Task 4: CRM Snatch
 
+**Explicación:** Investigar la compromisión de un sistema CRM dentro de DeceptiTech: análisis de tráfico web, explotaciones aplicables y los movimientos del atacante sobre el servicio. Las respuestas específicas no están transcritas en las fuentes públicas.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | (Respuestas verificadas en fuentes públicas / Verified answers in public sources) | `Consultar walkthrough oficial / Refer to official walkthrough` |
 
 ### Task 5: Shock and Silence
 
+**Explicación:** Análisis forense de un host comprometido: logs del sistema, artefactos de archivos y evidencia de exfiltración de datos. Al igual que en los retos 2-4 y 6, los literales exactos se remiten al walkthrough oficial.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | (Respuestas verificadas en fuentes públicas / Verified answers in public sources) | `Consultar walkthrough oficial / Refer to official walkthrough` |
 
 ### Task 6: The Last Trial
+
+**Explicación:** Investigación forense completa de un compromiso macOS: el desarrollador principal **Lucas** fue comprometido. Se examinan el sistema de archivos macOS (apps, launch agents/daemons), los logs del sistema (`/Library/Logs`, `~/.zsh_history`) y se reconstruye la cadena de ataque completa hasta la exfiltración/ransomware.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|

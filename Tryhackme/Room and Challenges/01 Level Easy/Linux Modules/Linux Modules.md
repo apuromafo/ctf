@@ -17,17 +17,27 @@
 
 ### Task 1: Introducción
 
+**Explicación:** Presentación del taller de herramientas de terminal Linux que se practican en los módulos. Solo lectura.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Lee la introducción de la sala. | `No answer needed` |
 
 ### Task 2: Preparación
 
+**Explicación:** Instalación/configuración del entorno (máquina o terminal) donde se ejecutarán los ejercicios de la sala.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Instala y prepara el entorno de trabajo. | `No answer needed` |
 
 ### Task 3: El intérprete de comandos
+
+**Explicación:** Se comprueba el shell: la flag `-v` muestra la versión del intérprete. El texto desplegado contiene la palabra `bobthebuilder`, la credencial `LinuxIsGawd` y el usuario `fs0ciety`.
+
+```bash
+bash -v
+```
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -41,11 +51,21 @@
 
 ### Task 4: Resumen del módulo
 
+**Explicación:** Vista general de los módulos que se verán: filtros, awk, sed, xargs, curl, wget, xxd, GPG y ss.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Revisa el resumen de los módulos a trabajar. | `No answer needed` |
 
 ### Task 5: Filtros y búsquedas
+
+**Explicación:** grep con clases de caracteres POSIX: `[:digit:]` (solo dígitos), `[:alpha:]` (solo letras) y `[:xdigit:]` (dígitos hexadecimales).
+
+```bash
+grep '[[:digit:]]' archivo.txt
+grep '[[:alpha:]]' archivo.txt
+grep '[[:xdigit:]]' archivo.txt
+```
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -56,6 +76,13 @@
 
 ### Task 6: awk
 
+**Explicación:** awk procesa campos por línea. Para imprimir campo 1 y 4 separados por ":" sobre awk.txt: `awk 'BEGIN{OFS=":"} {print $1, $4}' awk.txt`; para imprimir el campo 1 seguido de ", ": `awk 'BEGIN{ORS=", "} {print $1}' awk.txt`.
+
+```bash
+awk 'BEGIN{OFS=":"} {print $1, $4}' awk.txt
+awk 'BEGIN{ORS=", "} {print $1}' awk.txt
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Practica la lectura del archivo de ejemplo con awk. | `No answer needed` |
@@ -63,6 +90,13 @@
 | 3 | ¿Qué comando awk imprime el campo 1 de cada línea seguido de una coma y un espacio? | `awk 'BEGIN{ORS=", "} {print $1}' awk.txt` |
 
 ### Task 7: sed
+
+**Explicación:** sed sustituye patrones: `'s/hack/back/3g'` (todas las apariciones a partir de la 3ª), `'3,4 s/.../'` (líneas 3 y 4), `'s/  */:/g'` (espacios múltiples → ":") y `'s/[[:digit:]]//g'` (eliminar dígitos). Retos resueltos devuelven `CONGRATULATIONS YOU MADE IT THROUGH THIS SMALL LITTLE CHALLENGE` y la frase final `"That's What"`.
+
+```bash
+sed 's/  */:/g' sed1.txt
+sed 's/[[:digit:]]//g' texto.txt
+```
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -76,6 +110,13 @@
 
 ### Task 8: xargs
 
+**Explicación:** xargs ejecuta comandos sobre listas: crea un archivo por elemento con chmod 400 (`cat file | xargs -I files -t sh -c "touch files; chmod 400 files"`), o añade nombres a shortrockyou y elimina (`ls | xargs -I word -n 1 -t sh -c 'echo word >> shortrockyou; rm word'`). Flags: `-n` limita argumentos por invocación y `--` define un delimitador explícito.
+
+```bash
+cat file | xargs -I files -t sh -c "touch files; chmod 400 files"
+ls | xargs -I word -n 1 -t sh -c 'echo word >> shortrockyou; rm word'
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Practica el uso de xargs sobre listas de archivos. | `No answer needed` |
@@ -86,6 +127,8 @@
 
 ### Task 9: Reto de xargs
 
+**Explicación:** Reto encadenado con xargs: aparecen la palabra clave `lollol` y el número `2550` como datos del ejercicio.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Resuelve el reto final de xargs. | `No answer needed` |
@@ -93,6 +136,13 @@
 | 3 | ¿Cuál es el número que aparece como parte del reto? | `2550` |
 
 ### Task 10: curl
+
+**Explicación:** `curl --limit-rate` limita la velocidad; enviar un user agent personalizado: `curl -A 'juzztesting' https://tryhackme.com/`. Al completar la interacción con la web, la respuesta marca `Yea`.
+
+```bash
+curl --limit-rate 1m https://example.com
+curl -A 'juzztesting' https://tryhackme.com/
+```
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -103,6 +153,14 @@
 
 ### Task 11: wget
 
+**Explicación:** `wget -N` retoma descargas interrumpidas; `wget -a package-logs.txt https://xyz.com/mypackage.zip` descarga registrando el log; `wget -i file.txt --limit-rate=1m` descarga una lista con límite de velocidad.
+
+```bash
+wget -N https://example.com/archivo.zip
+wget -a package-logs.txt https://xyz.com/mypackage.zip
+wget -i file.txt --limit-rate=1m
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Practica la descarga de archivos con wget. | `No answer needed` |
@@ -111,6 +169,13 @@
 | 4 | ¿Qué comando descarga los archivos de file.txt con un límite de velocidad de 1m? | `wget -i file.txt --limit-rate=1m` |
 
 ### Task 12: xxd
+
+**Explicación:** xxd vuelca archivos en hexadecimal/binario: `xxd -s 0xa -l 50 -b file.txt` (50 bytes desde offset 0xa en binario), `xxd -c 9 -g 3 file.txt` (9 columnas, grupos de 3 bytes). La flag `-c` fija el número de columnas. El volcado esconde la bandera `flag{wh3sdw0lw1gl9oqasad2fs48as}`.
+
+```bash
+xxd -s 0xa -l 50 -b file.txt
+xxd -c 9 -g 3 file.txt
+```
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -122,6 +187,14 @@
 
 ### Task 13: Cifrado con GPG
 
+**Explicación:** La clave de la sala es `Wrong`; se importa la clave pública con `gpg --import key.gpg`. Además: `ss` significa `Socket Statistics` y `reset` restablece la terminal si queda bloqueada.
+
+```bash
+gpg --import key.gpg
+ss -tulpn
+reset
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Preparación del entorno de GPG. | `No answer needed` |
@@ -131,6 +204,8 @@
 | 5 | ¿Qué comando restablece la terminal si el terminal queda bloqueado? | `reset` |
 
 ### Task 14: Resumen
+
+**Explicación:** La actividad final marca `F`: el módulo se considera cerrado cuando todos los ejercicios anteriores están completados.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|

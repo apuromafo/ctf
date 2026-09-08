@@ -17,11 +17,21 @@
 
 ### Task 1: Desplegando el laboratorio
 
+**Explicación:** Se despliega la máquina objetivo (la web que luego se escaneará) y se arranca Nessus en la máquina atacante.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Despliega la máquina objetivo y arranca Nessus. | `No answer needed` |
 
 ### Task 2: Primeros pasos con Nessus
+
+**Explicación:** Instalación y activación de Nessus (código de activación), espera de la descarga de plugins, acceso a la interfaz web `https://localhost:8834`, creación de la cuenta admin y ejecución del primer escaneo con la plantilla adecuada.
+
+```bash
+sudo dpkg -i Nessus-*.deb
+sudo /etc/init.d/nessusd start
+# https://localhost:8834
+```
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -38,6 +48,8 @@
 
 ### Task 3: Navegando por Nessus
 
+**Explicación:** Elementos de la interfaz: `New Scan` crea escaneos; `Policies` gestiona plantillas personalizadas; `Plugin Rules` define reglas sobre plugins. Plantillas: `Host Discovery` (hosts activos), `Basic Network Scan` (puertos/servicios), `Credentialed Patch Audit` (con credenciales) y `Web Application Tests` (aplicaciones web).
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Qué botón se utiliza para crear un nuevo escaneo? | `New Scan` |
@@ -50,6 +62,8 @@
 
 ### Task 4: Configurando el escaneo
 
+**Explicación:** Configuración del escaneo: pestaña `Schedule` para programarlo, `Port scan (all ports)` para todos los puertos, `Scan low bandwidth links` para redes lentas. Sin root, Nessus usa el `Nessus SYN scanner`. La versión instalada en el laboratorio fue `2.4.41`.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Qué pestaña permite programar la realización del escaneo? | `Schedule` |
@@ -60,6 +74,8 @@
 | 6 | ¿Cuál era la versión de Nessus que se instaló? | `2.4.41` |
 
 ### Task 5: Analizando los resultados del escaneo
+
+**Explicación:** Del informe web: el plugin `10107` identifica la versión del servidor HTTP; el escaneo descubrió `login.php`, el archivo `.bak`, el directorio expuesto `/external/phpids/0.6/docs/examples/` y la vulnerabilidad `Clickjacking` en el servidor.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|

@@ -17,11 +17,20 @@
 
 ### Task 1: Introducción
 
+**Explicación:** Presentación de la sala de ejercicios Linux: find, gestión de archivos, hashes, base64/john, GPG y retos finales. Solo lectura.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Lee la introducción de la sala. | `No answer needed` |
 
 ### Task 2: Encontrando archivos
+
+**Explicación:** find localiza archivos: `-group` busca por grupo; `find /home/francis -type f -user francis -size 52k` encuentra el archivo de francis (última modificación `2019-10-11`, propietario `ttitor`). La bandera de la tarea es `Flag{81726350827fe53g}`.
+
+```bash
+find /home/francis -type f -user francis -size 52k
+ls -l /path/archivo
+```
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -35,6 +44,15 @@
 
 ### Task 3: ¿Dónde? ¿Qué? ¿Dónde?
 
+**Explicación:** Gestión de archivos: `mv * /home/francis/logs` mueve todo; `scp` copia a un host remoto (`scp /home/james/Desktop/script.py john@192.168.10.5:/home/john/scripts`); `--` evita que un guion inicial se lea como opción (`mv -- -logs -newlogs`); y las rutas con espacios/letras se operan entre comillas (`cp "encryption keys" /home/john/logs`). Bandera: `Flag{234@i4s87u5hbn$3}`.
+
+```bash
+mv * /home/francis/logs
+scp /home/james/Desktop/script.py john@192.168.10.5:/home/john/scripts
+mv -- -logs -newlogs
+cp "encryption keys" /home/john/logs
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Qué comando mueve todos los archivos de /home/francis/Downloads al directorio /home/francis/logs? | `mv * /home/francis/logs` |
@@ -44,6 +62,13 @@
 | 5 | ¿Cuál es la bandera de la tarea? | `Flag{234@i4s87u5hbn$3}` |
 
 ### Task 4: Entiende los hashes
+
+**Explicación:** Identificación de hashes por tamaño: `MD4` genera 128 bits; los ejemplos se crackean a `secret123`, `admin`, `unacvaolipatnuggi` y `letmein`; el segundo algoritmo es `SHA-1`.
+
+```bash
+echo -n "secret123" | md4sum
+echo -n "admin" | sha1sum
+```
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -56,12 +81,26 @@
 
 ### Task 5: Craqueo de contraseñas
 
+**Explicación:** El contenido base64 de la actividad se decodifica con la utilidad `base64` y el hash resultante se crackea con `john`.
+
+```bash
+base64 -d contenido.b64 > hash.txt
+john --wordlist=/usr/share/wordlists/rockyou.txt hash.txt
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Con qué utilidad se decodifica el contenido base64 de la actividad? | `base64` |
 | 2 | ¿Qué herramienta se utiliza para craquear el hash de la actividad? | `john` |
 
 ### Task 6: Cifrado y descifrado digital
+
+**Explicación:** GPG simétrico: `gpg --cipher-algo AES-128 --symmetric history_logs.txt` cifra con AES-128 y `gpg history_logs.txt.gpg` descifra pidiendo la frase. Bandera: `Flag{B07$f854f5ghg4s37}`.
+
+```bash
+gpg --cipher-algo AES-128 --symmetric history_logs.txt
+gpg history_logs.txt.gpg
+```
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
@@ -72,6 +111,13 @@
 
 ### Task 7: Reto de cifrado
 
+**Explicación:** El reto de cifrado se desbloquea con la contraseña `valamanezivonia` (obtenida craqueando el hash) y el mensaje final descifrado es `getting stronger in linux`.
+
+```bash
+hashcat/john hash.txt
+gpg archivo.gpg
+```
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Resuelve el reto completo de cifrado. | `No answer needed` |
@@ -80,11 +126,21 @@
 
 ### Task 8: Bandera
 
+**Explicación:** Tras completar los ejercicios del laboratorio se obtiene la bandera de la tarea.
+
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | ¿Cuál es la bandera de la tarea? | `Flag{13490AB8}` |
 
 ### Task 9: Reto final
+
+**Explicación:** Reto final en fases con contraseñas craqueadas/cifradas: `thegreatestpasswordever000` (fase 1), `ebqattle` (fase 2) y `vuimaxcullings` (fase 3); completando los pasos finales se obtiene la bandera `Flag{6$8$hyJSJ3KDJ3881}`.
+
+```bash
+gpg -d fase1.gpg   # pass: thegreatestpasswordever000
+gpg -d fase2.gpg   # pass: ebqattle
+gpg -d fase3.gpg   # pass: vuimaxcullings
+```
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|

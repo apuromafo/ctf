@@ -1,88 +1,32 @@
-# CyberHeroes [EASY]
+# CyberHeroes
 
-Want to be a part of the elite club of CyberHeroes? Prove your merit by finding a way to log in!
-
-┌──(kali㉿kali)-[~]
-└─$ sudo nmap -sC -sV -T4 -A machine_IP     
-Starting Nmap 7.92 ( https://nmap.org ) at 2022-09-25 13:48 EDT
-Nmap scan report for 10.10.144.202
-Host is up (0.20s latency).
-Not shown: 998 closed tcp ports (reset)
-PORT   STATE SERVICE VERSION
-22/tcp open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.4 (Ubuntu Linux; protocol 2.0)
-| ssh-hostkey: 
-|   3072 38:66:7e:8f:62:41:e9:5c:8e:00:81:91:9f:3d:9a:32 (RSA)
-|   256 eb:03:8d:bf:8b:73:39:90:70:0c:71:7f:ca:0b:4a:27 (ECDSA)
-|_  256 96:df:2a:20:7b:36:f6:be:43:6f:c8:dc:9d:52:3a:15 (ED25519)
-80/tcp open  http    Apache httpd 2.4.48 ((Ubuntu))
-|_http-server-header: Apache/2.4.48 (Ubuntu)
-|_http-title: CyberHeros : Index
-No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
-TCP/IP fingerprint:
-OS:SCAN(V=7.92%E=4%D=9/25%OT=22%CT=1%CU=41503%PV=Y%DS=2%DC=T%G=Y%TM=6330948
-OS:9%P=x86_64-pc-linux-gnu)SEQ(SP=105%GCD=1%ISR=108%TI=Z%CI=Z%II=I%TS=A)OPS
-OS:(O1=M506ST11NW7%O2=M506ST11NW7%O3=M506NNT11NW7%O4=M506ST11NW7%O5=M506ST1
-OS:1NW7%O6=M506ST11)WIN(W1=F4B3%W2=F4B3%W3=F4B3%W4=F4B3%W5=F4B3%W6=F4B3)ECN
-OS:(R=Y%DF=Y%T=40%W=F507%O=M506NNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=A
-OS:S%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R
-OS:=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F
-OS:=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%
-OS:T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD
-OS:=S)
-
-Network Distance: 2 hops
-Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
-
-TRACEROUTE (using port 1723/tcp)
-HOP RTT       ADDRESS
-1   197.26 ms 10.18.0.1
-2   198.06 ms 10.10.144.202
-
-OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-Nmap done: 1 IP address (1 host up) scanned in 42.02 seconds
- 
-
-view-source:http://10.10.144.202/login.html
-```
- <script>
-    function authenticate() {
-      a = document.getElementById('uname')
-      b = document.getElementById('pass')
-      const RevereString = str => [...str].reverse().join('');
-      if (a.value=="h3ck3rBoi" & b.value==RevereString("54321@terceSrepuS")) { 
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("flag").innerHTML = this.responseText ;
-            document.getElementById("todel").innerHTML = "";
-            document.getElementById("rm").remove() ;
-          }
-        };
-        xhttp.open("GET", "RandomLo0o0o0o0o0o0o0o0o0o0gpath12345_Flag_"+a.value+"_"+b.value+".txt", true);
-        xhttp.send();
-      }
-      else {
-        alert("Incorrect Password, try again.. you got this hacker !")
-      }
-    }
-  </script>
-```
-reverse it cyberchef ```(54321@terceSrepuS)``` -> ```SuperSecret@12345```
-
-login
-so ```h3ck3rBoi:SuperSecret@12345```
-
-Congrats Hacker, you made it !! Go ahead and nail other challenges as well :D flag{edb0be532c540b1a150c3a7e85d2466e} 
-
-1. flag{edb0be532c540b1a150c3a7e85d2466e}
+| **Dificultad** | Easy |
+| **Tipo** | CTF (web) |
+| **Slug** | `cyberheroes` |
+| **Link** | [TryHackMe](https://tryhackme.com/room/cyberheroes) |
+| **Sección** | 01 Level Easy |
+| **Fuente** | TryHackMe |
+| **Componentes** | Nmap / Análisis de código fuente / JavaScript / CyberChef |
+| **Impacto** | Reto web introductorio: encuentra una forma de iniciar sesión en el "CyberHeroes club" examinando el JavaScript del login y revirtiendo una cadena ofuscada. |
 
 ---
 
-## ⚠️ Descargo de Responsabilidad (Disclaimer)
+**Contexto:** "¿Quieres pertenecer al club exclusivo de los CyberHeroes? Demuestra tu valía encontrando la forma de iniciar sesión." El único puerto relevante es un Apache en el 80. El fichero `login.html` contiene una función JavaScript `authenticate()` que compara el usuario con `h3ck3rBoi` y la contraseña con la cadena invertida `54321@terceSrepuS`. Al revertirla con CyberChef se obtiene `SuperSecret@12345`, y al autenticarse se revela la flag directamente en la página.
 
-Este contenido se presenta exclusivamente con fines académicos y educativos.
+## Solucionario
 
-**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
-**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
-**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
-**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.
+### Task 1: Inicia sesión y captura la flag
+
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | ¿Cuál es la flag del reto? | `flag{edb0be532c540b1a150c3a7e85d2466e}` |
+
+---
+
+**Metodología:** Escaneo de puertos con `nmap -sC -sV` que deja ver Apache en el 80. Se visualiza el código fuente de `login.html`, donde la función `authenticate` revela tanto el usuario (`h3ck3rBoi`) como la contraseña ofuscada. Revertir la cadena `54321@terceSrepuS` con CyberChef (Reverse) produce `SuperSecret@12345`. Al hacer login se carga `RandomLo0o0o0o0o0o0o0o0o0o0gpath12345_Flag_...txt` y se muestra la flag.
+
+**Learning chain:** escaneo de puertos → revisión de código fuente → ingeniería inversa de credenciales en JavaScript → login y captura de flag.
+
+**MITRE ATT&CK:** T1190 (Exploit Public-Facing Application), T1595 (Active Scanning), T1059.007 (Rust/Javascript)
+
+**Fuente:** [TryHackMe - CyberHeroes](https://tryhackme.com/room/cyberheroes)

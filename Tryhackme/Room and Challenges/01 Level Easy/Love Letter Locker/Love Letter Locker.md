@@ -21,13 +21,23 @@
 |---|----------|-----------|
 | 1 | What is the flag? | `THM{1_c4n_r3ad_4ll_l3tters_w1th_th1s_1d0r}` |
 
----
+**Explicación:** La app lista y abre cartas mediante `GET /letter?id=<N>`. El renglón `/letter?id=1` (o similar) muestra una carta legítima del usuario actual. Probando `?id=N-1` y `?id=N+1` se obtienen cartas de otros usuarios: el servidor consulta la base de datos por `id` directamente, sin verificar a qué usuario pertenece la carta (ausencia de ACL a nivel de objeto = **BOLA/IDOR**, OWASP API4:2023). Entre las cartas ajenas se encuentra la que contiene la flag. 1 pregunta.
 
 **Metodología:**
 1. **Reconocimiento:** web de cartas de amor con el listado de los mensajes del usuario autenticado; cada carta se abre con `GET /letter?id=<N>`.
 2. **Detección del patrón:** el `id` es secuencial y la respuesta incluye el contenido completo de la carta sin indicar el propietario.
 3. **BOLA/IDOR:** con `curl` / Burp Repeater se pide `?id=N±1`; el servidor devuelve cartas de otros usuarios, ya que consulta por `id` directamente sin verificar a qué usuario pertenece (ausencia de ACL a nivel de objeto, OWASP API4:2023).
 4. **Flag:** enumerando unos pocos ids se alcanza la carta con la flag: `THM{1_c4n_r3ad_4ll_l3tters_w1th_th1s_1d0r}`.
+
+```
+web de cartas de amor -> sesión autenticada
+  -> GET /letter?id=1    -> carta propia (baseline)
+  -> GET /letter?id=2..N -> sin ACL por objeto
+  -> BOLA/IDOR -> carta de otro usuario leída
+  -> THM{1_c4n_r3ad_4ll_l3tters_w1th_th1s_1d0r}
+```
+
+**Lección:** Un `id` enumerable sin control de autorización por objeto es BOLA/IDOR (OWASP API4): toda consulta a un recurso debe verificar la pertenencia antes de devolver datos.
 
 **Learning chain:** web de cartas de amor → sesión autenticada → GET /letter?id=1 (baseline) → GET /letter?id=N±1 sin ACL por objeto → BOLA/IDOR → THM{1_c4n_r3ad_4ll_l3tters_w1th_th1s_1d0r}
 

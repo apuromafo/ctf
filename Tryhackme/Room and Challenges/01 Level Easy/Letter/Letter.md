@@ -22,7 +22,7 @@
 | 1 | What is the postal code of the delivery address on the envelope? | `29760` |
 | 2 | What is the flag? | `THM{Yves-Marie_Gourlaouen_15}` |
 
----
+**Explicación:** El `.zip` contiene: un sobre dañado (código de barras postal PLANET/French, marca "Lettre Verte" y logotipo SNSM), un recorte de periódico y una nota escrita en francés. Decodificando el código de barras postal con dcode se obtiene `29760` (Penmarc'h, Finistère). El recorte de L'Ouest-Éclair trata de la expedición de Amundsen (21-may-1925) y de Painlevé (presidente del Consejo desde abril de 1925), lo que fecha la escena ≈ 23 de mayo de 1925 (Gallica). La nota dice que el abuelo era "le benjamin de l'équipe" y sin carnet de conducir. Revisando el historial local de Penmarc'h, la tripulación del bote salvavidas Arche-d'Alliance incluye a Yves-Marie Gourlaouen, mousse, 15 años, medalla de plata. 2 preguntas.
 
 **Metodología:**
 1. **Descargar y extraer:** se abre el `.zip` con el sobre dañado (código de barras postal PLANET/French, marca "Lettre Verte" y logotipo SNSM), un recorte de periódico y una nota en francés.
@@ -31,6 +31,20 @@
 4. **La nota:** el abuelo era "le benjamin de l'équipe" y no tenía carnet de conducir (demasiado joven).
 5. **Historial local:** en el archivo de Penmarc'h, la tripulación del bote salvavidas Arche-d'Alliance incluye a Yves-Marie Gourlaouen, mousse de 15 años con medalla de plata.
 6. **Flag:** la identidad triangulada compone `THM{Yves-Marie_Gourlaouen_15}`.
+
+```
+.zip
+  -> sobre dañado (código de barras + Lettre Verte + SNSM)
+  -> decodificar código de barras postal PLANET/French (dcode)
+  -> 29760 (Penmarc'h, Finistère)
+  -> recorte L'Ouest-Éclair (Amundsen 21-may-1925 + Painlevé) -> fecha ≈ 23-may-1925
+  -> nota en francés ("le benjamin de l'équipe", sin carnet de conducir)
+  -> historial local Penmarc'h -> tripulación Arche-d'Alliance
+  -> Yves-Marie Gourlaouen, mousse, 15 años, medalla de plata
+  -> THM{Yves-Marie_Gourlaouen_15}
+```
+
+**Lección:** El OSINT con fuentes históricas (hemerotecas y archivos locales) triangula identidades del pasado, y los códigos de barras postales son datos que no se deben ignorar.
 
 **Learning chain:** .zip → sobre + recorte + nota → barcode PLANET (dcode) → 29760 Penmarc'h → recorte Amundsen/Painlevé → fecha 23-may-1925 → nota ("le benjamin de l'équipe", sin carnet) → archivo local Arche-d'Alliance → Yves-Marie Gourlaouen, 15 años → THM{Yves-Marie_Gourlaouen_15}
 

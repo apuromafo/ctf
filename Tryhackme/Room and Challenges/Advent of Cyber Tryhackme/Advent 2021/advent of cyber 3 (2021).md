@@ -1,6 +1,6 @@
 # Advent of Cyber 3 (2021)
 
-| **Dificultad** | N/A | **Tipo** | CTF (Free Room) | **Slug** | `adventofcyber3` | | **Link** | [TryHackMe](https://tryhackme.com/room/adventofcyber3) | | **Seccion** | Advent of Cyber Tryhackme / Advent 2021 | | **Fuente** | texto oficial THM + anotaciones propias | | **Componentes** | idor / cookie / dashboards / lfi / rce / php filter / nosql / mongo / dfir / santa rat / network http dns ftp / nmap / mssql / nfs / windows / dirb / osint / cloud aws s3 / docker / phishing / eicar / yara / oledump / powershell | | **Impacto** | Tercer Advent of Cyber, 24 dias con IDOR, LFI/RCE, NoSQL, DFIR de SantaRat, analisis de red, AWS Cloud, Docker, phishing y malware analysis |
+| **Dificultad** | N/A | **Tipo** | CTF (Free Room) | **Slug** | `adventofcyber3` | | **Link** | [TryHackMe](https://tryhackme.com/room/adventofcyber3) | | **Sección** | Advent of Cyber Tryhackme | | **Fuente** | texto oficial THM + anotaciones propias | | **Componentes** | idor / cookie / dashboards / lfi / rce / php filter / nosql / mongo / dfir / santa rat / network http dns ftp / nmap / mssql / nfs / windows / dirb / osint / cloud aws s3 / docker / phishing / eicar / yara / oledump / powershell | | **Impacto** | Tercer Advent of Cyber, 24 dias con IDOR, LFI/RCE, NoSQL, DFIR de SantaRat, analisis de red, AWS Cloud, Docker, phishing y malware analysis |
 
 ---
 
@@ -12,7 +12,7 @@
 
 ### Task 1: Web Exploitation - IDOR (Mischief Managed)
 
-**Explicacion:** Encontrar cuentas y sus posiciones en la company mediante IDOR. Santa = The Boss!, McStocker = Build Manager, el responsable de tampering = Mischief Manager. Al arreglar el Inventory Management System: `THM{AOC_IDOR_2B34BHI3}`. Cookie nueva: `user-auth`; encoding hexadecimal; data en JSON; cookie admin (username=admin) hex: `7b636f6d70616e793a2022546865204265737420466573746976616c20436f6d70616e79222c206973726567697374657265643a2254727565222c20757365726e616d653a2261646d696e227d`.
+**Explicación:** Encontrar cuentas y sus posiciones en la company mediante IDOR. Santa = The Boss!, McStocker = Build Manager, el responsable de tampering = Mischief Manager. Al arreglar el Inventory Management System: `THM{AOC_IDOR_2B34BHI3}`. Cookie nueva: `user-auth`; encoding hexadecimal; data en JSON; cookie admin (username=admin) hex: `7b636f6d70616e793a2022546865204265737420466573746976616c20436f6d70616e79222c206973726567697374657265643a2254727565222c20757365726e616d653a2261646d696e227d`.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -27,7 +27,7 @@
 
 ### Task 2: Web Exploitation - Admin Dashboard
 
-**Explicacion:** Team environment que no responde: HR; con network warning: Application. Enumerar con wordlist la dashboard admin: folder `admin`; default credentials `administrator`; admin panel flag `THM{ADM1N_AC3SS}`.
+**Explicación:** Team environment que no responde: HR; con network warning: Application. Enumerar con wordlist la dashboard admin: folder `admin`; default credentials `administrator`; admin panel flag `THM{ADM1N_AC3SS}`.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -39,7 +39,7 @@
 
 ### Task 3: Web Exploitation - Santa's Gadget Shop (LFI) Part 1
 
-**Explicacion:** Santa se conecta al shop. Password para account "santa": `cookie`. Flag itinerary: `THM{SANTA_DELIVERS}`. Al deshabilitar el plugin: `THM{NO_MORE_BUTTMAS}`.
+**Explicación:** Santa se conecta al shop. Password para account "santa": `cookie`. Flag itinerary: `THM{SANTA_DELIVERS}`. Al deshabilitar el plugin: `THM{NO_MORE_BUTTMAS}`.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -49,7 +49,7 @@
 
 ### Task 4: Web Exploitation - LFI / RCE
 
-**Explicacion:** Entry point de la web app: `err`. LFI para leer /etc/flag: `THM{d29e08941cf7fe41df55f1a7da6c4c06}`. PHP filter de index.php: `$flag` = `THM{791d43d46018a0d89361dbf60d5d9eb8}`. Credenciales del login `McSkidy:A0C315Aw3s0m`. Password flag.thm.aoc server: `THM{552f313b52e3c3dbf5257d8c6db7f6f1}`. LFI a RCE via log page (./includes/logs/app_access.log): hostname `lfi-aoc-awesome-59aedca683fff9261263bb084880c965`.
+**Explicación:** Entry point de la web app: `err`. LFI para leer /etc/flag: `THM{d29e08941cf7fe41df55f1a7da6c4c06}`. PHP filter de index.php: `$flag` = `THM{791d43d46018a0d89361dbf60d5d9eb8}`. Credenciales del login `McSkidy:A0C315Aw3s0m`. Password flag.thm.aoc server: `THM{552f313b52e3c3dbf5257d8c6db7f6f1}`. LFI a RCE via log page (./includes/logs/app_access.log): hostname `lfi-aoc-awesome-59aedca683fff9261263bb084880c965`.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -62,7 +62,7 @@
 
 ### Task 5: Web Exploitation - NoSQL (MongoDB)
 
-**Explicacion:** Interactuar con MongoDB: flag `THM{8814a5e6662a9763f7df23ee59d944f9}`. Bypass login admin en Grinch Enterprise: `THM{b6b304f5d5834a4d089b570840b467a8}`. Gift search page list guest usernames: `THM{2ec099f2d602cc4968c5267970be1326}`. NoSQLi para mcskidy record: `ID:6184f516ef6da50433f100f4:mcskidy:admin`.
+**Explicación:** Interactuar con MongoDB: flag `THM{8814a5e6662a9763f7df23ee59d944f9}`. Bypass login admin en Grinch Enterprise: `THM{b6b304f5d5834a4d089b570840b467a8}`. Gift search page list guest usernames: `THM{2ec099f2d602cc4968c5267970be1326}`. NoSQLi para mcskidy record: `ID:6184f516ef6da50433f100f4:mcskidy:admin`.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -73,7 +73,7 @@
 
 ### Task 6: DFIR - SantaRat (Part 1)
 
-**Explicacion:** OS Name laptop de Santa: `Microsoft Windows 11 Pro`. Password backdoor: `grinchstolechristmas`. Ruta original del archivo copiado al Desktop: `C:\Users\santa\AppData\Local\Microsoft\Windows\UsrClass.dat`. LOLbin usado para encode: `certutil.exe`.
+**Explicación:** OS Name laptop de Santa: `Microsoft Windows 11 Pro`. Password backdoor: `grinchstolechristmas`. Ruta original del archivo copiado al Desktop: `C:\Users\santa\AppData\Local\Microsoft\Windows\UsrClass.dat`. LOLbin usado para encode: `certutil.exe`.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -84,7 +84,7 @@
 
 ### Task 7: DFIR - SantaRat (Part 2)
 
-**Explicacion:** Folder que sugiere software publico en plataforma de codigo: `.github`. Folder "Bag of Toys": `bag_of_toys.zip`. Owner del repo SantaRat: `Grinchiest`. Repo pertinente: `operation-bag-of-toys`. Exe que instalo utilidad para exfiltrar la bolsa: `uharc-cmd-install.exe`. Contenido de los archivos maliciosos (coal, mold, etc.): `GRINCHMAS`. Password del archivo original uha: `TheGrinchiestGrinchmasOfAll` (sin crackear). Archivos originales en la bolsa: 228.
+**Explicación:** Folder que sugiere software publico en plataforma de codigo: `.github`. Folder "Bag of Toys": `bag_of_toys.zip`. Owner del repo SantaRat: `Grinchiest`. Repo pertinente: `operation-bag-of-toys`. Exe que instalo utilidad para exfiltrar la bolsa: `uharc-cmd-install.exe`. Contenido de los archivos maliciosos (coal, mold, etc.): `GRINCHMAS`. Password del archivo original uha: `TheGrinchiestGrinchmasOfAll` (sin crackear). Archivos originales en la bolsa: 228.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -99,7 +99,7 @@
 
 ### Task 8: Network Analysis - HTTP / DNS / FTP
 
-**Explicacion:** HTTP1 GET: directorio `login`. HTTP2 POST creds: `McSkidy:Christmas2021!`. User-Agent: `TryHackMe-UserAgent-THM{d8ab1be969825f2c5c937aec23d55bc9}`. DNS TXT message flag: `THM{dd63a80bf9fdd21aabbf70af7438c257}`. FTP login password: `TryH@ckM3!`. Comando FTP para subir secret.txt (placeholder en original): `STOR` para upload. Contenido de secret.txt: `123^-^321`.
+**Explicación:** HTTP1 GET: directorio `login`. HTTP2 POST creds: `McSkidy:Christmas2021!`. User-Agent: `TryHackMe-UserAgent-THM{d8ab1be969825f2c5c937aec23d55bc9}`. DNS TXT message flag: `THM{dd63a80bf9fdd21aabbf70af7438c257}`. FTP login password: `TryH@ckM3!`. Comando FTP para subir secret.txt (placeholder en original): `STOR` para upload. Contenido de secret.txt: `123^-^321`.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -113,7 +113,7 @@
 
 ### Task 9: Network Analysis - Nmap
 
-**Explicacion:** `nmap -sT MACHINE_IP`: puertos abiertos 1-100 = 2; puerto mas pequeno = 22; servicio del puerto mas alto = HTTP; `nmap -sS` mismos resultados = Y; version web server = Apache httpd 2.4.49; CVE resuelto en 2.4.51 = CVE-2021-42013.
+**Explicación:** `nmap -sT MACHINE_IP`: puertos abiertos 1-100 = 2; puerto mas pequeno = 22; servicio del puerto mas alto = HTTP; `nmap -sS` mismos resultados = Y; version web server = Apache httpd 2.4.49; CVE resuelto en 2.4.51 = CVE-2021-42013.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -126,7 +126,7 @@
 
 ### Task 10: Network Analysis - MSSQL
 
-**Explicacion:** Puerto nuevo en resultados: 20212. Programa escuchando: `telnetd`. Puerto MS SQL Server: `1433`. Prompt de conexion: `1>`. Tabla reindeer id 9 primero nombre: `Rudolph`. Tabla schedule destino Dec 7: `Prague`. Tabla presents cantidad Power Bank: `25000`.
+**Explicación:** Puerto nuevo en resultados: 20212. Programa escuchando: `telnetd`. Puerto MS SQL Server: `1433`. Prompt de conexion: `1>`. Tabla reindeer id 9 primero nombre: `Rudolph`. Tabla schedule destino Dec 7: `Prague`. Tabla presents cantidad Power Bank: `25000`.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -140,7 +140,7 @@
 
 ### Task 11: Network Analysis - Linux NFS
 
-**Explicacion:** En el home de grinch hay flag: `THM{YjtKeUy2qT3v5dDH}`. Scan `nmap -Pn` (Windows bloquea ping): 7 TCP ports open. Puerto NFS/mountd: `2049`. Shares encontrados: 4. Shares "everyone": 3. Titulo file 2680-0.txt: `Meditations`. Share con id_rsa: `confidential`. MD5 de id_rsa: `3e2d315a38f377f304f5598dc2f044de`. Username p.....: `pepper`.
+**Explicación:** En el home de grinch hay flag: `THM{YjtKeUy2qT3v5dDH}`. Scan `nmap -Pn` (Windows bloquea ping): 7 TCP ports open. Puerto NFS/mountd: `2049`. Shares encontrados: 4. Shares "everyone": 3. Titulo file 2680-0.txt: `Meditations`. Share con id_rsa: `confidential`. MD5 de id_rsa: `3e2d315a38f377f304f5598dc2f044de`. Username p.....: `pepper`.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -156,7 +156,7 @@
 
 ### Task 12: DFIR Windows - Escalada
 
-**Explicacion:** OS version: `10.0.17763 N/A Build 17763`. Backup service: `IperiusSvc`. Path del exe: `C:\Program Files (x86)\Iperius Backup\IperiusService.exe`. whoami: `the-grinch-hack\thegrinch`. flag.txt: `THM-736635221`. Donde encontrarlo a las 5:30: `jazzercize`.
+**Explicación:** OS version: `10.0.17763 N/A Build 17763`. Backup service: `IperiusSvc`. Path del exe: `C:\Program Files (x86)\Iperius Backup\IperiusService.exe`. whoami: `the-grinch-hack\thegrinch`. flag.txt: `THM-736635221`. Donde encontrarlo a las 5:30: `jazzercize`.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -169,7 +169,7 @@
 
 ### Task 13: Web Exploitation - Dirb y Scripts
 
-**Explicacion:** Paginas que encuentra dirb con su wordlist default: 4. Scripts en /home/thegrinch/scripts: 4. Cinco caracteres tras $6$G en el hash de pepper: `ZUP42`. Flag.txt desktop de Grinch: `DI3H4rdIsTheBestX-masMovie!`.
+**Explicación:** Paginas que encuentra dirb con su wordlist default: 4. Scripts en /home/thegrinch/scripts: 4. Cinco caracteres tras $6$G en el hash de pepper: `ZUP42`. Flag.txt desktop de Grinch: `DI3H4rdIsTheBestX-masMovie!`.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -180,7 +180,7 @@
 
 ### Task 14: OSINT - El Operador
 
-**Explicacion:** Username operador: `GrinchWho31`; plataforma: Twitter; identificador criptografico: `1GW8QR7CWW3cpvVPGMCF5tZz4j96ncEgrVaR`; plataforma del identificador: keybase.io; bitcoin address: `bc1q5q2w2x6yka5gchr89988p2c8w8nquem6tndw2f`; plataforma donde lo leak: GitHub; email personal: `DonteHeath21@gmail.com`; nombre real: `Donte Heath`.
+**Explicación:** Username operador: `GrinchWho31`; plataforma: Twitter; identificador criptografico: `1GW8QR7CWW3cpvVPGMCF5tZz4j96ncEgrVaR`; plataforma del identificador: keybase.io; bitcoin address: `bc1q5q2w2x6yka5gchr89988p2c8w8nquem6tndw2f`; plataforma donde lo leak: GitHub; email personal: `DonteHeath21@gmail.com`; nombre real: `Donte Heath`.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -195,7 +195,7 @@
 
 ### Task 15: Cloud - AWS S3
 
-**Explicacion:** S3 bucket del comunicado HR: `images.bestfestivalcompany.com`. Mensaje flag.txt del bucket: `It's easy to get your elves data when you leave it so easy to find!`. Otro archivo interesante: `wp-backup.zip`. AWS Access Key ID: `AKIAQI52OJVCPZXFYAOI`. AWS Account ID: `019181489476`. Username del access-key: `ElfMcHR@bfc.com`. EC2 instance TAG Name: `HR-Portal`. Database password en Secrets Manager: `Winter2021!`.
+**Explicación:** S3 bucket del comunicado HR: `images.bestfestivalcompany.com`. Mensaje flag.txt del bucket: `It's easy to get your elves data when you leave it so easy to find!`. Otro archivo interesante: `wp-backup.zip`. AWS Access Key ID: `AKIAQI52OJVCPZXFYAOI`. AWS Account ID: `019181489476`. Username del access-key: `ElfMcHR@bfc.com`. EC2 instance TAG Name: `HR-Portal`. Database password en Secrets Manager: `Winter2021!`.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -210,7 +210,7 @@
 
 ### Task 16: Container - Docker
 
-**Explicacion:** Listar imagenes locales: `docker images`. Guardar imagen como tar: `docker save`. Archivo con config, tags y layer hashes: `manifest.json`. Token del bonus challenge: `7095b3e9300542edadbc2dd558ac11fa`.
+**Explicación:** Listar imagenes locales: `docker images`. Guardar imagen como tar: `docker save`. Archivo con config, tags y layer hashes: `manifest.json`. Token del bonus challenge: `7095b3e9300542edadbc2dd558ac11fa`.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -221,7 +221,7 @@
 
 ### Task 17: Phishing
 
-**Explicacion:** Email enviado a: `elfmcphearson@tbfc.com`. De (dominio similar): `customerservice@t8fc.info`. Reply-to: `fisher@tempmailz.grinch`. Palabra mal escrita: `stright`. Link a credential harvesting: `https://89xgwsnmo5.grinch/out/fishing/`. Header inusual: `X-GrinchPhish: >;^)`. Attachment: `password-reset-instructions.pdf`. Flag del PDF: `THM{A0C_Thr33_Ph1sh1ng_An4lys!s}`.
+**Explicación:** Email enviado a: `elfmcphearson@tbfc.com`. De (dominio similar): `customerservice@t8fc.info`. Reply-to: `fisher@tempmailz.grinch`. Palabra mal escrita: `stright`. Link a credential harvesting: `https://89xgwsnmo5.grinch/out/fishing/`. Header inusual: `X-GrinchPhish: >;^)`. Attachment: `password-reset-instructions.pdf`. Flag del PDF: `THM{A0C_Thr33_Ph1sh1ng_An4lys!s}`.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -236,7 +236,7 @@
 
 ### Task 18: Malware Analysis - EICAR y YARA
 
-**Explicacion:** `strings` de testfile: `X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*`. File type: `EICAR virus test files`. Primer visto en la web: `2005-10-17 22:03:48`. Clasificacion de Microsoft: `Virus:DOS/EICAR_Test_File`. Primeros dos nombres del file: `ducklin.htm or ducklin-html.htm`. Maximo caracteres: `128`. Operador booleano para que la regla siga hitting: `or`. Opcion para metadata: `-m`. Seccion con autor: `metadata`. Opcion para reglas sin hit: `-n`. Rerun con -c: `0`.
+**Explicación:** `strings` de testfile: `X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*`. File type: `EICAR virus test files`. Primer visto en la web: `2005-10-17 22:03:48`. Clasificacion de Microsoft: `Virus:DOS/EICAR_Test_File`. Primeros dos nombres del file: `ducklin.htm or ducklin-html.htm`. Maximo caracteres: `128`. Operador booleano para que la regla siga hitting: `or`. Opcion para metadata: `-m`. Seccion con autor: `metadata`. Opcion para reglas sin hit: `-n`. Rerun con -c: `0`.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -254,7 +254,7 @@
 
 ### Task 19: Malware Analysis - Exfiltracion Email
 
-**Explicacion:** Username del script decodificado: `Grinch.Enterprises.2021@gmail.com`; mailbox password: `S@ntai$comingt0t0wn`; subject: `Christmas Wishlist`; puerto de exfiltracion: `587`.
+**Explicación:** Username del script decodificado: `Grinch.Enterprises.2021@gmail.com`; mailbox password: `S@ntai$comingt0t0wn`; subject: `Christmas Wishlist`; puerto de exfiltracion: `587`.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -265,7 +265,7 @@
 
 ### Task 20: Malware Analysis - OLE/VBA (oledump)
 
-**Explicacion:** Flag en documento de Grinch (usando `oledump.py -s {stream number} -d`): `YouFoundGrinchCookie`. Segunda flag en la maquina: `S@nt@c1Au$IsrEAl`.
+**Explicación:** Flag en documento de Grinch (usando `oledump.py -s {stream number} -d`): `YouFoundGrinchCookie`. Segunda flag en la maquina: `S@nt@c1Au$IsrEAl`.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -274,7 +274,7 @@
 
 ### Task 21: DFIR - PowerShell Logs
 
-**Explicacion:** Comando ejecutado como Elf McNealy para agregar user: `Invoke-Nightmare`. Usuario que ejecuto el PS para enviar password.txt: `adm1n`. IP y puerto remoto: `10.10.148.96,4321`. Encryption key: `j3pn50vkw21hhurbqmxjlpmo9doiukyb`. App de borrado: `sdelete.exe`. Fecha/timestamp de borrado: `11/11/2021 7:29:27 PM`. Contenido de password.txt: `Mission Control: letitsnowletitsnowletitsnow`. Otro user: `emily`; NTLM hash: `8af326aa4850225b75c592d4ce19ccf5`; password: `1234567890`.
+**Explicación:** Comando ejecutado como Elf McNealy para agregar user: `Invoke-Nightmare`. Usuario que ejecuto el PS para enviar password.txt: `adm1n`. IP y puerto remoto: `10.10.148.96,4321`. Encryption key: `j3pn50vkw21hhurbqmxjlpmo9doiukyb`. App de borrado: `sdelete.exe`. Fecha/timestamp de borrado: `11/11/2021 7:29:27 PM`. Contenido de password.txt: `Mission Control: letitsnowletitsnowletitsnow`. Otro user: `emily`; NTLM hash: `8af326aa4850225b75c592d4ce19ccf5`; password: `1234567890`.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -291,7 +291,7 @@
 
 ### Task 22: Encuesta Final
 
-**Explicacion:** Encuesta 5 min: https://forms.gle/ET6KY5dwcBumsqNv8. Flag de agradecimiento `thm{thank_you_2021}`.
+**Explicación:** Encuesta 5 min: https://forms.gle/ET6KY5dwcBumsqNv8. Flag de agradecimiento `thm{thank_you_2021}`.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -299,7 +299,7 @@
 
 ---
 
-**Metodologia:**
+**Metodología:**
 
 1. IDOR enumeration de IDs de usuario
 
@@ -325,7 +325,7 @@
 
 **Learning chain:** IDOR -> Cookies -> LFI -> RCE -> NoSQL -> DFIR SantaRat -> Network (HTTP/DNS/FTP) -> Nmap -> MSSQL -> NFS -> Windows Escalation -> OSINT -> AWS -> Docker -> Phishing -> Malware/YARA -> oledump -> PowerShell logs
 
-**Leccion:** *El AoC 2021 levanto el nivel con DFIR profundo y cadenas de ataque multicapa, demostrando que un mismo reto puede combinar analisis defensivo (logs, malware) con ofensivo (LFI a RCE, NoSQLi, credenciales en la nube).*
+**Lección:** *El AoC 2021 levanto el nivel con DFIR profundo y cadenas de ataque multicapa, demostrando que un mismo reto puede combinar analisis defensivo (logs, malware) con ofensivo (LFI a RCE, NoSQLi, credenciales en la nube).*
 
 **MITRE ATT&CK:**
 
@@ -346,3 +346,15 @@
 - T1548 - Abuse Elevation Control Mechanism
 
 **Fuente:** [TryHackMe - Advent of Cyber 3 (2021)](https://tryhackme.com/room/adventofcyber3)
+
+
+---
+
+## ⚠️ Descargo de Responsabilidad (Disclaimer)
+
+Este contenido se presenta exclusivamente con fines acad" + [char]0xE9 + "micos y educativos.
+
+**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
+**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
+**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
+**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.

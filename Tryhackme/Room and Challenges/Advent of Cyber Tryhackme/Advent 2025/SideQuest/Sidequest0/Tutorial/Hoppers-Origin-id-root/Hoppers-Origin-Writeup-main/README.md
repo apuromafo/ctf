@@ -1,44 +1,19 @@
 # Advent 2025\SideQuest\Sidequest\Sidequest0\Tutorial\Hoppers-Origin-id-root\Hoppers-Origin-Writeup-main [N/A]
 
-Network Layout:
+| **Dificultad** | N/A | **Tipo** | Tutorial / Writeup (Hoppers-Origin-Writeup-main) | **Slug** | `readme` | | **Link** | [TryHackMe](https://tryhackme.com/room/readme) | | **Sección** | Advent of Cyber Tryhackme / Advent 2025 Side Quest 0 / Tutorial id-root | | **Fuente** | walkthrough de id-root (Hoppers-Origin-Writeup-main) + anotaciones propias | | **Componentes** | web / prompt injection / SUID / symlink / SSH key / LDAP / Kerberos AS-REP / evil-winrm / AlwaysInstallElevated / mimikatz / BloodHound / Golden Ticket / SID History / SQL linked server / AD CS ESC1 | | **Impacto** | Walkthrough completo del compromiso de la infraestructura de Hopper's Origins (Web, DB, SERVER1-4, AI.VANCHAT.LOC, VANCHAT.LOC, TBFC.LOC) obteniendo las 17 flags (user.txt/root.txt) |
 
-![](layout.png)
+---
 
-WEB -> DMZ -> DB -> AI.VANCHAT.LOC -> SERVER1 -> SERVER2
-VANCHAT.LOC -> SERVER3 -> SERVER4 -> TBFC.LOC
+**Contexto:** Writeup detallado (id-root) del Side Quest 0 (Hopper's Origins). Cubre desde el escaneo de red (10.200.171.0/24, exclude .250) hasta la toma total de los bosques vanchat.loc, ai.vanchat.loc y tbfc.loc: prompt injection en la web (SOC_ADMIN_EXECUTE_COMMAND), SUID patch_note, crackeo de la key SSH (socbot3000, password), rogue LDAP, AS-REP roasting (john), AlwaysInstallElevated, mimikatz vault, bloodyAD (GenericAll), Golden Ticket con SID History, SQL linked server (TBFC_LS) y AD CS ESC1 (TBFCWebServer + Rubeus).
 
-## Reconocimiento de Red / Network Recon
+---
 
-```bash
-❯ nmap -Pn -n --open \
--p 80,443,8080,8443,22,445,3389 \
---exclude 10.200.171.250 \
-10.200.171.0/24
-Starting Nmap 7.98 ( https://nmap.org ) at 2026-01-03 03:13 +0100
-Nmap scan report for 10.200.171.10
-Host is up (0.36s latency).
-Not shown: 5 filtered tcp ports (no-response)
-Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
-PORT   STATE SERVICE
-22/tcp open  ssh
-80/tcp open  http
+## Solucionario
 
-Nmap scan report for 10.200.171.11
-Host is up (0.31s latency).
-Not shown: 6 filtered tcp ports (no-response)
-Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
-PORT   STATE SERVICE
-22/tcp open  ssh
+### Task 1: Reconocimiento de Red / Network Recon
 
-Nmap done: 255 IP addresses (255 hosts up) scanned in 410.34 seconds
+**Explicación:**
 
-```
-
-As we can see on `10.200.171.10` is hosting a webapp at port 80...
-
-lets visit there :
-
-## 1-Web
 
 ![](web.png)
 
@@ -420,9 +395,13 @@ scaramouche@db:~$
 
 Now we have successfully logged in .
 
-## 2-DB
 
-###### Now lets do enumeration on database
+### Task 2: Web
+
+**Explicación:**
+
+
+#### Now lets do enumeration on database
 
 ok so lets try to enumerate network cause we have to escape this db and find a way to `server 1`
 
@@ -795,7 +774,7 @@ Username: anne.clark@ai.vanchat.loc
 Password: Wbqs8193
 
 ---
-###### LDAP enumeration
+#### LDAP enumeration
 
 So lets try to do ldap enumeration using those credentials
 
@@ -856,9 +835,18 @@ Session aborted
 
 So we got the password `password1!` for user qw2.amy.young@AI.VANCHAT.LOC
 
-## 3-Server 1
 
-###### Lateral Movement Maping LDAP, Kerberos, SMB, and WinRM to localhost
+| # | Pregunta | Respuesta |
+| --- | --- | --- |
+| 1 | Web: user.txt | `THM{82f9d06e-9a52-44d5-98c2-aef647805216}` |
+| 2 | Web: root.txt | `THM{583d5e19-4e61-47f1-b98e-5ece3b2d41db}` |
+
+### Task 3: DB
+
+**Explicación:**
+
+
+#### Lateral Movement Maping LDAP, Kerberos, SMB, and WinRM to localhost
 
 Lets expand out ssh tunnel...
 
@@ -1030,7 +1018,17 @@ So we got the credentials for brian which are...
 	Username: qw1.brian.singh
 	Password: _4v41yVd$!DW  
 
-## 4-Server 2
+
+| # | Pregunta | Respuesta |
+| --- | --- | --- |
+| 3 |  | `` |
+| D | B | `:` |
+| T | H | `M` |
+
+### Task 4: Server 1
+
+**Explicación:**
+
 
 Now we have the credentials lets login via evil-winrm
 
@@ -1130,7 +1128,16 @@ Hopper got giddy remembering where the siege on Wareville first began: VanChat. 
 
 **Root flag found: ** `THM{d93ffd47-5629-4590-8eb3-743404547e04}`
 
-## 5-AI.VANCHAT.LOC 
+
+| # | Pregunta | Respuesta |
+| --- | --- | --- |
+| 4 | SERVER1: user.txt | `THM{20f7d7ac-5768-4883-a33f-09e4a738bff1}` |
+| 5 | SERVER1: root.txt | `THM{d93ffd47-5629-4590-8eb3-743404547e04}` |
+
+### Task 5: Server 2
+
+**Explicación:**
+
 
 So Brian is now Domain Admin, We can use his credentials to execute code on the Domain Controller - 10.200.171.122
 
@@ -1164,7 +1171,16 @@ What was it then? Oh, that’s right. Hopper really put the AD in MAD. Active Di
 **User flag found:** `THM{1dac8c6b-908e-4100-9deb-f53e68df840d}`
 **Root flag found:** `THM{c4baffdf-7a8d-44e0-8405-3cb6a2bb91cc}`
 
-## 6-VANCHAT.LOC
+
+| # | Pregunta | Respuesta |
+| --- | --- | --- |
+| 6 | SERVER2: user.txt | `THM{d626aea9-d1ab-4f77-b668-90f221e3dbb6}` |
+| 7 | SERVER2: root.txt | `THM{d93ffd47-5629-4590-8eb3-743404547e04}` |
+
+### Task 6: AI.VANCHAT.LOC
+
+**Explicación:**
+
 
 lets list the domain trusts `nltest /domain_trusts`
 
@@ -1178,7 +1194,7 @@ The command completed successfully
 
 The presence of a **Forest Trust** (Child-to-Parent) allows you to use your Child Domain Admin privileges to forge credentials valid in the Parent Domain via SID History.
 
-##### SID HISTORY
+#### SID HISTORY
 
 lets copy our tools there.
 
@@ -1499,9 +1515,18 @@ Invoke-Command -ComputerName DC1.ai.vanchat.loc -Credential $cred -ScriptBlock {
 }
 ```
 
-## Server 3 
 
-###### Enumeration
+| # | Pregunta | Respuesta |
+| --- | --- | --- |
+| 8 | AI.VANCHAT.LOC: user.txt | `THM{1dac8c6b-908e-4100-9deb-f53e68df840d}` |
+| 9 | AI.VANCHAT.LOC: root.txt | `THM{c4baffdf-7a8d-44e0-8405-3cb6a2bb91cc}` |
+
+### Task 7: VANCHAT.LOC
+
+**Explicación:**
+
+
+#### Enumeration
 
 lets Dump NTLM Hash of All users
 
@@ -1643,9 +1668,18 @@ NULL
 PS C:\>
 ```
 
-## 7-Server 4
 
-###### Enumeration
+| # | Pregunta | Respuesta |
+| --- | --- | --- |
+| 10 | VANCHAT.LOC: user.txt | `THM{e36efac9-555b-424a-b44d-8bfd9bc5f660}` |
+| 11 | VANCHAT.LOC: root.txt | `THM{cf66a7ad-6b5f-4e48-be3a-a39881f537c1}` |
+
+### Task 8: Server 3
+
+**Explicación:**
+
+
+#### Enumeration
 
 ```powershell
 PS C:\> cd Users
@@ -1788,7 +1822,7 @@ Drag to Copy the mimikatz.exe to Local Disk (C:)
 
 **Remember to Disable Virus & Threat Protection!
 
-##### Active Directory Certificate Authorities Reconnaissance
+#### Active Directory Certificate Authorities Reconnaissance
 
 ```powershell
 
@@ -1821,7 +1855,7 @@ Domain Admins: Allow Full Control
 TBFC-DC1$ (DC machine account): Allow Full Control
 ```
 
-##### **Check Intermediate Certificate Store
+#### **Check Intermediate Certificate Store
 
 `sqlcmd -S . -E -Q "EXEC('xp_cmdshell ''certutil -store CA''') AT [TBFC_LS]"`
 
@@ -1839,7 +1873,7 @@ VeriSign Commercial Software Publishers CA CRL
 All certificates have no private keys (as expected for intermediate CA store)
 Several certificates are expired (expected for old trust chains)
 
-##### Check Personal Certificate Store
+#### Check Personal Certificate Store
 
 `sqlcmd -S . -E -Q "EXEC('xp_cmdshell ''certutil -store My''') AT [TBFC_LS]"`
 
@@ -1857,7 +1891,7 @@ VeriSign Commercial Software Publishers CA CRL
 All certificates have no private keys (as expected for intermediate CA store)
 Several certificates are expired (expected for old trust chains)
 
-##### Check Personal Certificate Store
+#### Check Personal Certificate Store
 
 `sqlcmd -S . -E -Q "EXEC('xp_cmdshell ''certutil -store My''') AT [TBFC_LS]"`
 
@@ -1876,7 +1910,7 @@ Encryption test: Passed
 
 This confirms the linked server has a valid machine certificate for authentication
 
-##### Administrator Template
+#### Administrator Template
 
 ```bash
 sqlcmd -S . -E -Q "EXEC('xp_cmdshell ''certutil -v -Template Administrator''') AT [TBFC_LS]"
@@ -1928,7 +1962,7 @@ Minimum key size: 2048 bits
 Vulnerability Assessment: NOT VULNERABLE - Properly secured, only admins can 
 enroll.
 
-##### TBFCWebServer Template
+#### TBFCWebServer Template
 
 ```
 sqlcmd -S . -E -Q "EXEC('xp_cmdshell ''certutil -v -Template TBFCWebServer''') AT [TBFC_LS]"
@@ -2003,7 +2037,16 @@ Understood. Below is your original write-up with **no headings added**, **no con
 I have only **separated explanations from actions**, clearly and minimally.
 
 ---
-##### ESC1 Exploitation - Get Domain Admin Flags
+
+| # | Pregunta | Respuesta |
+| --- | --- | --- |
+| 12 | SERVER3: user.txt | `THM{a89e2667-f920-4c10-99ec-3ed33a7cf1b9}` |
+| 13 | SERVER3: root.txt | `THM{4fc264ab-8449-4039-a22d-25ee7d15626e}` |
+
+### Task 9: Server 4
+
+**Explicación:**
+
 
 Get System Shell
  
@@ -2075,7 +2118,7 @@ Open Powershell as Administrator then run:
 
 With SYSTEM-level access, the Certificate Signing Request can now be submitted to the Certificate Authority to complete ESC1 exploitation.
 
-##### Certificate Creation and Export to Authenticate
+#### Certificate Creation and Export to Authenticate
 
 ```powershell
 $inf = @"
@@ -2251,11 +2294,68 @@ He must find a way out.
  
 The room is now ended we got all the flags...
 
-## Mind Map
+
+| # | Pregunta | Respuesta |
+| --- | --- | --- |
+| 14 | SERVER4: user.txt | `THM{b792725b-604a-416d-9cbb-fe70d4def322}` |
+| 15 | SERVER4: root.txt | `THM{c58b7654-321a-4872-9645-d28097dcc9da}` |
+
+### Task 10: TBFC.LOC (ESC1 Exploitation)
+
+**Explicación:**
+
 
 **Note:** _This mind map is AI generated so content may be inaccurate_
 
 ![](map.png)
+
+
+| # | Pregunta | Respuesta |
+| --- | --- | --- |
+| 16 | TBFC.LOC: user.txt | `THM{f3336b39-5601-40ea-a4d9-8b87cb4535a6}` |
+| 17 | TBFC.LOC: root.txt | `THM{449d70b5-a212-45ca-a49b-037678f49569}` |
+
+---
+
+**Metodología:**
+
+1. Enumeración del /24 con nmap (excluir 10.200.171.250): 10.200.171.10 (web, 22/80) y 10.200.171.11 (22)
+2. Web: prompt injection SOC_ADMIN_EXECUTE_COMMAND -> reverse shell -> SUID /usr/local/bin/patch_note -> sudo su -> root.txt
+3. Key SSH id_ed25519 (root@socbot3000) -> crackssh.py (password) -> socbot3000@10.200.171.11 -> crear usuario + DB flag
+4. Rogue LDAP (nc 4444) -> anne.clark / Wbqs8193 -> ldapsearch AS-REP -> john -> qw2.amy.young / password1!
+5. Server 1: evil-winrm amy -> AlwaysInstallElevated (MSI msfvenom) -> SYSTEM -> root + mimikatz vault -> AI\qw1.brian.singh:_4v41yVd$!DW
+6. Server 2: evil-winrm brian -> mimikatz NTLM SERVER2$ -> bloodyAD add groupMember Domain Admins
+7. AI.VANCHAT.LOC (DC1 10.200.171.122): PSCredential + Invoke-Command -> user/root flags
+8. VANCHAT.LOC (RDC1 10.200.171.121): Golden Ticket con SID History (krbtgt d816e3b7..., parent SID -519) -> user/root flags
+9. Server 3: Enterprise Admin -> force reset qw1.martyn.jones Password123! -> RDP -> flags
+10. Server 4: SQL linked server TBFC_LS (xp_cmdshell) en Server 3 -> flags + crear usuario AGI
+11. TBFC.LOC: AD CS ESC1 (template TBFCWebServer) -> certreq + Rubeus asktgt -> flags TBFC-DC1 (user/root)
+
+**Learning chain:** Web -> DB -> SERVER1 -> SERVER2 -> AI.VANCHAT.LOC -> VANCHAT.LOC -> SERVER3 -> SERVER4 -> TBFC.LOC -> 17 flags
+
+Cadena de ataque / Attack Chain:
+```text
+nmap 10.200.171.0/24 (excl. .250) -> Web 10.200.171.10 (prompt injection SOC_ADMIN_EXECUTE_COMMAND) -> SUID patch_note -> root
+-> id_ed25519 (crackssh password) -> socbot3000@DB -> rogue LDAP (anne.clark:Wbqs8193) -> AS-REP roast -> qw2.amy.young
+-> SERVER1 (AlwaysInstallElevated MSI) -> SYSTEM -> mimikatz vault (qw1.brian.singh) -> SERVER2 (SERVER2$ NTLM) -> bloodyAD Domain Admins
+-> DC1 ai.vanchat.loc (flags) -> Golden Ticket SID History -> RDC1 vanchat.loc (flags) -> SERVER3 (Enterprise Admin reset) -> SQL TBFC_LS -> SERVER4 (flags)
+-> AD CS ESC1 (TBFCWebServer) -> Rubeus ASK-TGT Administrator@tbfc.loc -> TBFC-DC1 flags -> 17 flags
+```
+
+**Lección:** *Concatenar prompt injection, SUID misconfiguration, rogue LDAP, AS-REP roasting, AlwaysInstallElevated, Golden Tickets con SID History, linked SQL servers y AD CS ESC1 permite pasar de un foothold web a la toma completa de tres dominios interconectados.*
+
+**MITRE ATT&CK:**
+
+- T1190 - Exploit Public-Facing Application
+- T1059 - Command and Scripting Interpreter
+- T1548 - Abuse Elevation Control Mechanism
+- T1068 - Exploitation for Privilege Escalation
+- T1555 - Credentials from Password Stores
+- T1558 - Steal or Forge Kerberos Tickets
+- T1649 - Steal or Forge Authentication Certificates
+- T1021 - Remote Services
+
+**Fuente:** [TryHackMe - Advent 2025 Side Quest 0 Tutorial (Hoppers-Origin-Writeup-main)](https://tryhackme.com/room/readme)
 
 ---
 

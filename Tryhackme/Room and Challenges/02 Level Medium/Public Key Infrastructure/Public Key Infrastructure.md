@@ -1,20 +1,22 @@
-# Public Key Infrastructure [MEDIUM]
+# Public Key Infrastructure
 
-### Información de la Sala / Room Information
+| Dificultad | Tipo | Slug | Link | Sección | Fuente | Componentes | Impacto |
+|-----------|------|------|------|--------|--------|-------------|---------|
+| Medium | Walkthrough | publickeyinfrastructure | https://tryhackme.com/room/publickeyinfrastructure | 02 Level Medium | sornphut (Medium), sehgalrudra07 (Medium), RosanaFSS (Medium), tryhackme.com/room/publickeyinfrastructure | PKI, Certificados digitales, CA, OCSP/CRL, Cadena de confianza | Confianza e integridad de las comunicaciones cifradas |
 
-* **Dificultad / Difficulty:** MEDIUM
-* **Tipo / Type:** Walkthrough
-* **Slug:** `publickeyinfrastructure`
-* **Link:** https://tryhackme.com/room/publickeyinfrastructure
-* **Sección / Section:** 02 Level Medium
-* **Fuente / Source:** sornphut (Medium), sehgalrudra07 (Medium), RosanaFSS (Medium), tryhackme.com/room/publickeyinfrastructure
+---
 
-## Solucionario de Tareas / Task Solutions
+**Contexto:** La sala **Public Key Infrastructure** es una sala teórica (Premium) sobre la infraestructura de clave pública: qué es un certificado digital, los componentes de una PKI (autoridad certificadora, certificados, cadenas de confianza), el ciclo de vida de los certificados y las mejores prácticas (revocación, OCSP/CRL, gestión de claves).
 
 > **ES:** Sala teórica (Premium) sobre Public Key Infrastructure: qué es un certificado digital, los componentes de un PKI (autoridad certificadora, certificados, cadenas de confianza), el ciclo de vida de los certificados y las mejores prácticas (revocación, OCSP/CRL, gestión de claves).
 > **EN:** A theoretical Premium room about Public Key Infrastructure: what a digital certificate is, the components of a PKI (Certificate Authority, certificates, trust chains), the certificate lifecycle, and best practices (revocation, OCSP/CRL, key management).
 
-### Task 1 - Introduction to Public Key Infrastructure
+## Solucionario
+
+### Task 1: Introducción a la PKI / Introduction to Public Key Infrastructure
+**Explicación:**
+
+Introducción al framework de PKI para la gestión segura y eficiente de certificados digitales, componentes críticos al desplegar servicios y proteger comunicaciones.
 
 > **ES:** Introducción al framework de PKI para la gestión segura y eficiente de certificados digitales, componentes críticos al desplegar servicios y proteger comunicaciones.
 > **EN:** Introduction to the PKI framework for the secure and efficient management of digital certificates, critical components when deploying services and securing communications.
@@ -23,7 +25,10 @@
 |----------|--------|
 | Continue to the next task | No answer needed |
 
-### Task 2 - Certificates
+### Task 2: Certificados / Certificates
+**Explicación:**
+
+Un certificado digital liga una identidad a una clave pública; contiene la clave pública del titular, la información del emisor (CA), la validez y la firma digital, y la confianza se establece mediante la cadena root → intermediate → end-entity.
 
 > **ES:** Un certificado digital actúa como una tarjeta de identidad digital que prueba la identidad de una persona, dispositivo o servicio. Contiene la clave pública del titular, la información del emisor (CA), la validez y la firma digital. La confianza se establece a través de una cadena de certificados: root → intermediate → end-entity.
 > **EN:** A digital certificate acts as a digital ID card proving the identity of a person, device, or service. It contains the subject's public key, the issuer (CA) information, validity, and a digital signature. Trust is established through a certificate chain: root → intermediate → end-entity.
@@ -32,7 +37,10 @@
 |----------|--------|
 | Complete the task based on the reading | `THM{...redacted...}` |
 
-### Task 3 - Certificate Authorities and trust
+### Task 3: Autoridades certificadoras y confianza / Certificate Authorities and trust
+**Explicación:**
+
+La CA es la entidad de confianza que emite y firma certificados: existe una raíz autofirmada y, normalmente, CA intermedias que emiten certificados de usuario/máquina. El certificado instalado en los eslabones intermedios de la cadena es el certificado intermedio.
 
 > **ES:** La Autoridad Certificadora (CA) es la entidad de confianza que emite y firma certificados. Existe una CA raíz (root) autofirmada y, normalmente, CAs intermedias que emiten los certificados de usuario/máquina. Los clientes validan la cadena de confianza hasta la CA raíz que tienen en su almacén de confianza. El certificado que se instala en los dispositivos intermedios de la cadena se conoce como certificado intermedio.
 > **EN:** A Certificate Authority (CA) is the trusted entity that issues and signs certificates. There is a self-signed root CA and, usually, intermediate CAs that issue end-user/machine certificates. Clients validate the trust chain up to the root CA stored in their trust store. The certificate installed on intermediate chain links is known as the intermediate certificate.
@@ -41,7 +49,10 @@
 |----------|--------|
 | Which type of certificate is used to bridge the root CA and end-entity certificates in the trust chain? | `intermediate certificate` |
 
-### Task 4 - Certificate lifecycle
+### Task 4: Ciclo de vida del certificado / Certificate lifecycle
+**Explicación:**
+
+El ciclo de vida abarca generación de claves y CSR, solicitud a la CA, emisión y publicación, uso, renovación y, finalmente, revocación o expiración; la revocación retira un certificado antes de su expiración.
 
 > **ES:** El ciclo de vida de un certificado abarca: generación de claves y CSR (Certificate Signing Request), solicitud a la CA, emisión y publicación, uso, renovación y, finalmente, revocación o expiración. La revocación retira un certificado antes de su expiración (por ejemplo, por compromiso de la clave privada).
 > **EN:** The certificate lifecycle covers: key generation and CSR (Certificate Signing Request), request to the CA, issuance and publication, use, renewal, and finally revocation or expiration. Revocation retires a certificate before it expires (e.g., due to private key compromise).
@@ -50,7 +61,10 @@
 |----------|--------|
 | Complete the task based on the reading | `THM{...redacted...}` |
 
-### Task 5 - PKI best practices and challenges
+### Task 5: Mejores prácticas y retos de PKI / PKI best practices and challenges
+**Explicación:**
+
+Las mejores prácticas pasan por proteger la clave privada (HSM), separar la CA raíz offline de las CA intermedias, revisar los certificados emitidos y comprobar el estado de revocación mediante OCSP o CRL antes de confiar en un certificado.
 
 > **ES:** Las mejores prácticas incluyen proteger la clave privada (HSM), separar CA raíz offline de CAs intermedias, revisar los certificados emitidos y comprobar el estado de revocación antes de confiar en un certificado. El estado de revocación se consulta de forma estándar mediante **OCSP** (Online Certificate Status Protocol) o listas de revocación (CRL).
 > **EN:** Best practices include protecting the private key (HSM), keeping the root CA offline separate from intermediate CAs, reviewing issued certificates, and checking the revocation status before trusting a certificate. Revocation status is queried in a standard way using **OCSP** (Online Certificate Status Protocol) or CRLs.
@@ -59,7 +73,10 @@
 |----------|--------|
 | What is the best way to check a certificate's revocation status? | `OCSP` |
 
-### Task 6 - Conclusion
+### Task 6: Conclusión / Conclusion
+**Explicación:**
+
+Resumen de la sala: importancia de PKI para asegurar el ciclo de vida de los certificados y las comunicaciones.
 
 > **ES:** Resumen de la sala: importancia de PKI para asegurar el ciclo de vida de los certificados y las comunicaciones.
 > **EN:** Room summary: importance of PKI to secure certificate lifecycles and communications.
@@ -68,7 +85,20 @@
 |----------|--------|
 | Complete the room | No answer needed |
 
-## Metodología / Methodology
+### Tabla de preguntas y respuestas
+
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | Continue to the next task | `No answer needed` |
+| 2 | Complete the task based on the reading | `THM{...redacted...}` |
+| 3 | Which type of certificate is used to bridge the root CA and end-entity certificates in the trust chain? | `intermediate certificate` |
+| 4 | Complete the task based on the reading | `THM{...redacted...}` |
+| 5 | What is the best way to check a certificate's revocation status? | `OCSP` |
+| 6 | Complete the room | `No answer needed` |
+
+---
+
+**Metodología:**
 
 1. **Paso / Step - Comprender los certificados:** Un certificado liga una identidad a una clave pública y es firmado por una CA.
 2. **Paso / Step - Modelar la confianza:** Se construye una cadena jerárquica root → intermediate → end-entity; los clientes confían en la root de su almacén.
@@ -94,7 +124,15 @@ Certificado end-entity (clave pública + identidad)
 Cliente valida: firma + validez + OCSP/CRL
 ```
 
-**Lección:** La confianza en PKI depende de proteger agresivamente la clave privada de las CA raíz y de comprobar siempre el estado de revocación (OCSP) antes de confiar en cualquier certificado; un certificado comprometido no confirma identidad.
+**Learning chain:** Certificados → cadena de confianza → ciclo de vida → validación → mejores prácticas.
+
+**Lección:** *La confianza en PKI depende de proteger agresivamente la clave privada de las CA raíz y de comprobar siempre el estado de revocación (OCSP) antes de confiar en cualquier certificado; un certificado comprometido no confirma identidad.*
+
+**MITRE ATT&CK:** T1587.001 Develop Capabilities (Code Signing Certificates) · T1573 Encrypted Channel · T1557 Adversary-in-the-Middle (contexto de validación).
+
+**Fuente:** [TryHackMe - Public Key Infrastructure](https://tryhackme.com/room/publickeyinfrastructure)
+
+---
 
 ## ⚠️ Descargo de Responsabilidad (Disclaimer)
 

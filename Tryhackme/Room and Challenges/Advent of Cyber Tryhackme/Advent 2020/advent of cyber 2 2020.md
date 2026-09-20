@@ -1,6 +1,6 @@
 # Advent of Cyber 2 [2020]
 
-| **Dificultad** | N/A | **Tipo** | CTF (Free Room) | **Slug** | `adventofcyber2` | | **Link** | [TryHackMe](https://tryhackme.com/room/adventofcyber2) | | **Seccion** | Advent of Cyber Tryhackme / Advent 2020 | | **Fuente** | texto oficial THM + anotaciones propias | | **Componentes** | cookies / wfuzz / gobuster / xss / zap / wireshark / sniffing / smbclient / enum4linux / escalation / telnet / dirtycow / osint / python / sql / rev / ransomware / lxd | | **Impacto** | Segundo Advent of Cyber con 24 dias cubriendo desde cookies hex/JSON y fuzzing hasta escalada de privilegios, OSINT, reversing, ransomware y lxd |
+| **Dificultad** | N/A | **Tipo** | CTF (Free Room) | **Slug** | `adventofcyber2` | | **Link** | [TryHackMe](https://tryhackme.com/room/adventofcyber2) | | **Sección** | Advent of Cyber Tryhackme | | **Fuente** | texto oficial THM + anotaciones propias | | **Componentes** | cookies / wfuzz / gobuster / xss / zap / wireshark / sniffing / smbclient / enum4linux / escalation / telnet / dirtycow / osint / python / sql / rev / ransomware / lxd | | **Impacto** | Segundo Advent of Cyber con 24 dias cubriendo desde cookies hex/JSON y fuzzing hasta escalada de privilegios, OSINT, reversing, ransomware y lxd |
 
 ---
 
@@ -30,9 +30,9 @@ Se remueve el cookie value y se remplaza con el de Santa -> F5 (refresh) -> BOOM
 
 ## Solucionario
 
-### Dia 1: Cookies y Control de la Navidad
+### Día 1: Cookies y Control de la Navidad
 
-**Explicacion:** Cookie decode: nombre de cookie `auth`, formato hex, dato en JSON. Santa cookie value dada. Al activar cada control se obtiene la flag. Notas: linux server (por ping TTL), password length > 5, running php (index.php -> 200, index.html -> 440). Se creo una cuenta `kurohat:12345`. El valor del cookie de kurohat es `auth:7b22636f6d70616e79223a22546865204265737420466573746976616c20436f6d70616e79222c2022757365726e616d65223a226b75726f686174227d`. Decodificado (hex->utf-8): `{"company":"The Best Festival Company", "username":"kurohat"}`. Se cambia username a santa: `{"company":"The Best Festival Company", "username":"santa"}` -> hex `7b22636f6d70616e79223a22546865204265737420466573746976616c20436f6d70616e79222c2022757365726e616d65223a2273616e7461227d`. Reemplazar cookie y F5 -> acceso como Santa. Activar cada control para flags.
+**Explicación:** Cookie decode: nombre de cookie `auth`, formato hex, dato en JSON. Santa cookie value dada. Al activar cada control se obtiene la flag. Notas: linux server (por ping TTL), password length > 5, running php (index.php -> 200, index.html -> 440). Se creo una cuenta `kurohat:12345`. El valor del cookie de kurohat es `auth:7b22636f6d70616e79223a22546865204265737420466573746976616c20436f6d70616e79222c2022757365726e616d65223a226b75726f686174227d`. Decodificado (hex->utf-8): `{"company":"The Best Festival Company", "username":"kurohat"}`. Se cambia username a santa: `{"company":"The Best Festival Company", "username":"santa"}` -> hex `7b22636f6d70616e79223a22546865204265737420466573746976616c20436f6d70616e79222c2022757365726e616d65223a2273616e7461227d`. Reemplazar cookie y F5 -> acceso como Santa. Activar cada control para flags.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -42,9 +42,9 @@ Se remueve el cookie value y se remplaza con el de Santa -> F5 (refresh) -> BOOM
 | 4 | What is the value of Santa's cookie? | `7b22636f6d70616e79223a22546865204265737420466573746976616c20436f6d70616e79222c2022757365726e616d65223a2273616e7461227d` |
 | 5 | What is the flag you're given when the line is fully active? | `THM{MjY0Yzg5NTJmY2Q1NzM1NjBmZWFhYmQy}` |
 
-### Dia 2: File Upload
+### Día 2: File Upload
 
-**Explicacion:** Parametro para acceder a la page de upload `?id=ODIzODI5MTNiYmYw`; tipo de archivo aceptado Image; directorio `/uploads/`; flag en /var/www/flag.txt `THM{MGU3Y2UyMGUwNjExYTY4NTAxOWJhMzhh}`.
+**Explicación:** Parametro para acceder a la page de upload `?id=ODIzODI5MTNiYmYw`; tipo de archivo aceptado Image; directorio `/uploads/`; flag en /var/www/flag.txt `THM{MGU3Y2UyMGUwNjExYTY4NTAxOWJhMzhh}`.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -53,17 +53,17 @@ Se remueve el cookie value y se remplaza con el de Santa -> F5 (refresh) -> BOOM
 | 3 | In which directory are the uploaded files stored? | `/uploads/` |
 | 4 | What is the flag in /var/www/flag.txt? | `THM{MGU3Y2UyMGUwNjExYTY4NTAxOWJhMzhh}` |
 
-### Dia 3: Scripting y Fuzzing (wfuzz)
+### Día 3: Scripting y Fuzzing (wfuzz)
 
-**Explicacion:** Flag general `THM{885ffab980e049847516f9d8fe99ad1a}`.
+**Explicación:** Flag general `THM{885ffab980e049847516f9d8fe99ad1a}`.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
 | 1 | What is the flag? | `THM{885ffab980e049847516f9d8fe99ad1a}` |
 
-### Dia 4: APIs / wfuzz
+### Día 4: APIs / wfuzz
 
-**Explicacion:** Usando wfuzz para el parametro "breed" de `http://shibes.xyz/api.php` con la wordlist "big.txt": `wfuzz -c -z file,big.txt http://shibes.xyz/api.php?breed=FUZZ`. GoBuster contra la maquina desplegada (no shibes.xyz) encuentra `site-log.php`. Fuzz del parametro date en ese archivo -> flag `THM{D4t3_AP1}`.
+**Explicación:** Usando wfuzz para el parametro "breed" de `http://shibes.xyz/api.php` con la wordlist "big.txt": `wfuzz -c -z file,big.txt http://shibes.xyz/api.php?breed=FUZZ`. GoBuster contra la maquina desplegada (no shibes.xyz) encuentra `site-log.php`. Fuzz del parametro date en ese archivo -> flag `THM{D4t3_AP1}`.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -71,9 +71,9 @@ Se remueve el cookie value y se remplaza con el de Santa -> F5 (refresh) -> BOOM
 | 2 | Use GoBuster (against the target you deployed -- not the shibes.xyz domain) to find the API directory. What file is there? | `site-log.php` |
 | 3 | Fuzz the date parameter on the file you found in the API directory. What is the flag displayed in the correct post? | `THM{D4t3_AP1}` |
 
-### Dia 5: Web Hacking (Brute Force)
+### Día 5: Web Hacking (Brute Force)
 
-**Explicacion:** Santa's secret login panel sin directory brute forcing: `/santapanel`. Entries en la gift database: 22. Paul pidio Github Ownership. Flag `thmfox{All_I_Want_for_Christmas_Is_You}`.
+**Explicación:** Santa's secret login panel sin directory brute forcing: `/santapanel`. Entries en la gift database: 22. Paul pidio Github Ownership. Flag `thmfox{All_I_Want_for_Christmas_Is_You}`.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -82,9 +82,9 @@ Se remueve el cookie value y se remplaza con el de Santa -> F5 (refresh) -> BOOM
 | 3 | What did Paul ask for? | `Github Ownership` |
 | 4 | What is the flag? | `thmfox{All_I_Want_for_Christmas_Is_You}` |
 
-### Dia 6: XSS
+### Día 6: XSS
 
-**Explicacion:** Password de admin `EhCNSWzzFP6sc7gB`; tipo de vuln usada Stored cross-site scripting; query string abusable para reflected XSS `q`; ZAP scan: 2 XSS alerts.
+**Explicación:** Password de admin `EhCNSWzzFP6sc7gB`; tipo de vuln usada Stored cross-site scripting; query string abusable para reflected XSS `q`; ZAP scan: 2 XSS alerts.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -93,9 +93,9 @@ Se remueve el cookie value y se remplaza con el de Santa -> F5 (refresh) -> BOOM
 | 3 | What query string can be abused to craft a reflected XSS? | `q` |
 | 4 | Run a ZAP (zaproxy) automated scan on the target. How many XSS alerts are in the scan? | `2` |
 
-### Dia 7: Sniffing (Wireshark)
+### Día 7: Sniffing (Wireshark)
 
-**Explicacion:** Pcap1: IP que inicia ICMP/ping `10.11.3.2`; filtro HTTP GET `http.request.method == GET`; articulo que visito 10.10.67.199 `reindeer-of-the-week`. Pcap2: FTP leaked password `plaintext_password_fiasco`; protocolo encriptado SSH.
+**Explicación:** Pcap1: IP que inicia ICMP/ping `10.11.3.2`; filtro HTTP GET `http.request.method == GET`; articulo que visito 10.10.67.199 `reindeer-of-the-week`. Pcap2: FTP leaked password `plaintext_password_fiasco`; protocolo encriptado SSH.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -105,18 +105,18 @@ Se remueve el cookie value y se remplaza con el de Santa -> F5 (refresh) -> BOOM
 | 4 | Let's begin analysing "pcap2.pcap". Look at the captured FTP traffic; what password was leaked during the login process? | `plaintext_password_fiasco` |
 | 5 | Continuing with our analysis of "pcap2.pcap", what is the name of the protocol that is encrypted? | `SSH` |
 
-### Dia 8: Fuzzing / Yara
+### Día 8: Fuzzing / Yara
 
-**Explicacion:** Whislist de Elf McSkidy que reemplazara a Elf McEager: Rubber ducky. Snort fue creado en 1998.
+**Explicación:** Whislist de Elf McSkidy que reemplazara a Elf McEager: Rubber ducky. Snort fue creado en 1998.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
 | 1 | What is on Elf McSkidy's wishlist that will be used to replace Elf McEager? | `Rubber ducky` |
 | 2 | When was Snort created? | `1998` |
 
-### Dia 9: Nmap / FTP
+### Día 9: Nmap / FTP
 
-**Explicacion:** Nmap en MACHINE_IP: puertos 80,2222,3389 (ascending). Distro Linux: Ubuntu. NSE HTTP-TITLE: Blog. FTP anonymous: directorio `public`; script `backup.sh`; peli Polar Express; re-upload script malicioso -> root flag `THM{even_you_can_be_santa}`.
+**Explicación:** Nmap en MACHINE_IP: puertos 80,2222,3389 (ascending). Distro Linux: Ubuntu. NSE HTTP-TITLE: Blog. FTP anonymous: directorio `public`; script `backup.sh`; peli Polar Express; re-upload script malicioso -> root flag `THM{even_you_can_be_santa}`.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -128,9 +128,9 @@ Se remueve el cookie value y se remplaza con el de Santa -> F5 (refresh) -> BOOM
 | 6 | Question 3: What movie did Santa have on his Christmas shopping list? | `The Polar Express` |
 | 7 | Question 4: Re-upload this script to contain malicious data (just like we did in section 9.6). Output the contents of /root/flag.txt! | `THM{even_you_can_be_santa}` |
 
-### Dia 10: Samba / SMB
+### Día 10: Samba / SMB
 
-**Explicacion:** enum4linux: 3 users en Samba; 4 shares; share sin password `tbfc-santa`; directorio que dejo ElfMcSkidy `jingle-tunes`. Tipo de escalada con user account como admin: Vertical. Archivo con usuarios sudo: sudoers. Contenido /root/flag.txt: `thm{2fb10afe933296592}`.
+**Explicación:** enum4linux: 3 users en Samba; 4 shares; share sin password `tbfc-santa`; directorio que dejo ElfMcSkidy `jingle-tunes`. Tipo de escalada con user account como admin: Vertical. Archivo con usuarios sudo: sudoers. Contenido /root/flag.txt: `thm{2fb10afe933296592}`.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -142,9 +142,9 @@ Se remueve el cookie value y se remplaza con el de Santa -> F5 (refresh) -> BOOM
 | 6 | What is the name of the file that contains a list of users who are a part of the sudo group? | `sudoers` |
 | 7 | What are the contents of the file located at /root/flag.txt? | `thm{2fb10afe933296592}` |
 
-### Dia 11: Metasploit / Escalada
+### Día 11: Metasploit / Escalada
 
-**Explicacion:** Version web server `9.0.17`; CVE Meterpreter `CVE-2019-0232`; flag1 `thm{whacking_all_the_elves}`. Protocolo legacy telnet; credencial `clauschristmas`; distro Ubuntu 12.04; "quien llego primero": grinch; dirtycow: `gcc -pthread dirty.c -o dirty -lcrypt`; nuevo user `firefart`; MD5 output `8b16f00dd3b51efadb02c1df7f8427cc`.
+**Explicación:** Version web server `9.0.17`; CVE Meterpreter `CVE-2019-0232`; flag1 `thm{whacking_all_the_elves}`. Protocolo legacy telnet; credencial `clauschristmas`; distro Ubuntu 12.04; "quien llego primero": grinch; dirtycow: `gcc -pthread dirty.c -o dirty -lcrypt`; nuevo user `firefart`; MD5 output `8b16f00dd3b51efadb02c1df7f8427cc`.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -159,9 +159,9 @@ Se remueve el cookie value y se remplaza con el de Santa -> F5 (refresh) -> BOOM
 | 9 | What "new" username was created, with the default operations of the real C source code? | `firefart` |
 | 10 | What is the MD5 hash output? | `8b16f00dd3b51efadb02c1df7f8427cc` |
 
-### Dia 12: OSINT
+### Día 12: OSINT
 
-**Explicacion:** OSINT de Rudolph. URL comentarios Reddit: `https://www.reddit.com/user/IGuidetheClaus2020/comments`; nacio en Chicago; Robert -> last name May; otra plataforma Twitter; username `IGuideClaus2020`; show favorito Bachelorette; parade en Chicago; foto en 41.891815, -87.624277; flag `{FLAG}ALWAYSCHECKTHEEXIFD4T4`; password pwned `spygame`; street numbers del hotel 540.
+**Explicación:** OSINT de Rudolph. URL comentarios Reddit: `https://www.reddit.com/user/IGuidetheClaus2020/comments`; nacio en Chicago; Robert -> last name May; otra plataforma Twitter; username `IGuideClaus2020`; show favorito Bachelorette; parade en Chicago; foto en 41.891815, -87.624277; flag `{FLAG}ALWAYSCHECKTHEEXIFD4T4`; password pwned `spygame`; street numbers del hotel 540.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -177,9 +177,9 @@ Se remueve el cookie value y se remplaza con el de Santa -> F5 (refresh) -> BOOM
 | 10 | Has Rudolph been pwned? What password of his appeared in a breach? | `spygame` |
 | 11 | Based on all the information gathered. It's likely that Rudolph is in the Windy City and is staying in a hotel on Magnificent Mile. What are the street numbers of the hotel address? | `540` |
 
-### Dia 13: Python Basics
+### Día 13: Python Basics
 
-**Explicacion:** `True + True` = 2; db para instalar librerias de otros = PyPi; `bool("False")` = True; libreria para descargar HTML de una web = Requests; output del codigo Question 5 = [1, 2, 3, 6]; la causa = Pass by reference.
+**Explicación:** `True + True` = 2; db para instalar librerias de otros = PyPi; `bool("False")` = True; libreria para descargar HTML de una web = Requests; output del codigo Question 5 = [1, 2, 3, 6]; la causa = Pass by reference.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -190,9 +190,9 @@ Se remueve el cookie value y se remplaza con el de Santa -> F5 (refresh) -> BOOM
 | 5 | What is the output of the program provided in "Code to analyse for Question 5" in today's material? | `[1, 2, 3, 6]` |
 | 6 | What causes the previous task to output that? | `Pass by reference` |
 
-### Dia 14: Web APIs y Keys
+### Día 14: Web APIs y Keys
 
-**Explicacion:** Puerto web server 80; directorio API sin tools `/api/`; Santa now Winter Wonderland, Hyde Park, London; API key correcta (odd 0-100) `57`.
+**Explicación:** Puerto web server 80; directorio API sin tools `/api/`; Santa now Winter Wonderland, Hyde Park, London; API key correcta (odd 0-100) `57`.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -201,9 +201,9 @@ Se remueve el cookie value y se remplaza con el de Santa -> F5 (refresh) -> BOOM
 | 3 | Where is Santa right now? | `Winter Wonderland, Hyde Park, London` |
 | 4 | Find out the correct API key. Remember, this is an odd number between 0-100. After too many attempts, Santa's Sled will block you. | `57` |
 
-### Dia 15: Reversing (Ghidra)
+### Día 15: Reversing (Ghidra)
 
-**Explicacion:** Reversing de binario: local_ch = 1; eax imull = 6; local_4h antes de eax=0 = 6.
+**Explicación:** Reversing de binario: local_ch = 1; eax imull = 6; local_4h antes de eax=0 = 6.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -211,27 +211,27 @@ Se remueve el cookie value y se remplaza con el de Santa -> F5 (refresh) -> BOOM
 | 2 | What is the value of eax when the imull instruction is called? | `6` |
 | 3 | What is the value of local_4h before eax is set to 0? | `6` |
 
-### Dia 16: SQL Injection 2
+### Día 16: SQL Injection 2
 
-**Explicacion:** Password de Santa `santapassword321`; flag al loguear `thm{046af}`.
+**Explicación:** Password de Santa `santapassword321`; flag al loguear `thm{046af}`.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
 | 1 | What is Santa's password? | `santapassword321` |
 | 2 | Now that you've retrieved this password, try to login...What is the flag? | `thm{046af}` |
 
-### Dia 17: Passwords
+### Día 17: Passwords
 
-**Explicacion:** Password de Santa `Be good for goodness sake!`; challenge flag `THM{EVERYONE_GETS_PRESENTS}`.
+**Explicación:** Password de Santa `Be good for goodness sake!`; challenge flag `THM{EVERYONE_GETS_PRESENTS}`.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
 | 1 | What is Santa's password? | `Be good for goodness sake!` |
 | 2 | What is the challenge flag? | `THM{EVERYONE_GETS_PRESENTS}` |
 
-### Dia 18: Forensics de Sistema
+### Día 18: Forensics de Sistema
 
-**Explicacion:** Elf 1 quiere 2 front teeth (archivo oculto en Documents). Elf 2: pelicula Scrooged (folder oculto desktop). Elf 3: folder oculto 3lfthr3e; primer file tiene 9999 words; palabras en index 551 y 6991: Red Ryder; Elf 3 quiere Red Ryder BB Gun.
+**Explicación:** Elf 1 quiere 2 front teeth (archivo oculto en Documents). Elf 2: pelicula Scrooged (folder oculto desktop). Elf 3: folder oculto 3lfthr3e; primer file tiene 9999 words; palabras en index 551 y 6991: Red Ryder; Elf 3 quiere Red Ryder BB Gun.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -242,9 +242,9 @@ Se remueve el cookie value y se remplaza con el de Santa -> F5 (refresh) -> BOOM
 | 5 | What 2 words are at index 551 and 6991 in the first file? | `Red Ryder` |
 | 6 | This is only half the answer. Search in the 2nd file for the phrase from the previous question to get the full answer. What does Elf 3 want? (use spaces when submitting the answer) | `Red Ryder BB Gun` |
 
-### Dia 19: Hash / Malware Analysis
+### Día 19: Hash / Malware Analysis
 
-**Explicacion:** Hash de db.exe `596690FFC54AB6101932856E6A78E3A1`; hash del misterioso executable `5F037501FB542AD2D9B06EB12AED09F0`; flag oculta con Strings `THM{f6187e6cbeb1214139ef313e108cb6f9}`; flag del connector `THM{3088731ddc7b9fdeccaed982b07c297c}`.
+**Explicación:** Hash de db.exe `596690FFC54AB6101932856E6A78E3A1`; hash del misterioso executable `5F037501FB542AD2D9B06EB12AED09F0`; flag oculta con Strings `THM{f6187e6cbeb1214139ef313e108cb6f9}`; flag del connector `THM{3088731ddc7b9fdeccaed982b07c297c}`.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -253,9 +253,9 @@ Se remueve el cookie value y se remplaza con el de Santa -> F5 (refresh) -> BOOM
 | 3 | Using Strings find the hidden flag within the executable? | `THM{f6187e6cbeb1214139ef313e108cb6f9}` |
 | 4 | What is the flag that is displayed when you run the database connector file? | `THM{3088731ddc7b9fdeccaed982b07c297c}` |
 
-### Dia 20: KeePass / CyberChef
+### Día 20: KeePass / CyberChef
 
-**Explicacion:** Password KeePass `thegrinchwashere`; encoding Base64; decoded Elf Server `sn0wM4n!`; decoded ElfMail `ic3Skating!`.
+**Explicación:** Password KeePass `thegrinchwashere`; encoding Base64; decoded Elf Server `sn0wM4n!`; decoded ElfMail `ic3Skating!`.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -264,9 +264,9 @@ Se remueve el cookie value y se remplaza con el de Santa -> F5 (refresh) -> BOOM
 | 3 | What is the decoded password value of the Elf Server? | `sn0wM4n!` |
 | 4 | What is the decoded password value for ElfMail? | `ic3Skating!` |
 
-### Dia 21: Ransomware
+### Día 21: Ransomware
 
-**Explicacion:** Ransomware: decrypted bitcoin plain text `nomorebestfestivalcompany`; file extension `.grinch`; scheduled task `opidsfsdf`; exe en `C:\users\administrator\desktop\opidsfsdf.exe`; VSS task ShadowCopyVolumeID `7a9eea15-0000-0000-0000-010000000000`; hidden folder Confidential; restored password `m33pa55w0rdIZseecure!`.
+**Explicación:** Ransomware: decrypted bitcoin plain text `nomorebestfestivalcompany`; file extension `.grinch`; scheduled task `opidsfsdf`; exe en `C:\users\administrator\desktop\opidsfsdf.exe`; VSS task ShadowCopyVolumeID `7a9eea15-0000-0000-0000-010000000000`; hidden folder Confidential; restored password `m33pa55w0rdIZseecure!`.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -278,9 +278,9 @@ Se remueve el cookie value y se remplaza con el de Santa -> F5 (refresh) -> BOOM
 | 6 | Assign the hidden partition a letter. What is the name of the hidden folder? | `Confidential` |
 | 7 | Right-click and inspect the properties for the hidden folder. Use the 'Previous Versions' tab to restore the encrypted file that is within this hidden folder to the previous version. What is the password within the file? | `m33pa55w0rdIZseecure!` |
 
-### Dia 22: Web Exploitation (TRON)
+### Día 22: Web Exploitation (TRON)
 
-**Explicacion:** Scan machine: puertos 80, 65000; hidden website title Light Cycle; hidden php `uploads.php`; hidden dir `grid`; web.txt flag `THM{ENTER_THE_GRID}`; credenciales `tron:IFightForTheUsers`; database name tron; cracked password `@computer@`; user.txt `THM{IDENTITY_DISC_RECOGNISED}`; grupo lxd; root.txt `THM{FLYNN_LIVES}`.
+**Explicación:** Scan machine: puertos 80, 65000; hidden website title Light Cycle; hidden php `uploads.php`; hidden dir `grid`; web.txt flag `THM{ENTER_THE_GRID}`; credenciales `tron:IFightForTheUsers`; database name tron; cracked password `@computer@`; user.txt `THM{IDENTITY_DISC_RECOGNISED}`; grupo lxd; root.txt `THM{FLYNN_LIVES}`.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -296,9 +296,9 @@ Se remueve el cookie value y se remplaza con el de Santa -> F5 (refresh) -> BOOM
 | 10 | Check the user's groups. Which group can be leveraged to escalate privileges? | `lxd` |
 | 11 | What is the value of the root.txt flag? | `THM{FLYNN_LIVES}` |
 
-### Dia 23: Encuesta Final
+### Día 23: Encuesta Final
 
-**Explicacion:** Encuesta 5 min: https://forms.gle/iixyNWzyZupumsPN7. Flag de agradecimiento `thm{thank_you_2020}`.
+**Explicación:** Encuesta 5 min: https://forms.gle/iixyNWzyZupumsPN7. Flag de agradecimiento `thm{thank_you_2020}`.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -306,7 +306,7 @@ Se remueve el cookie value y se remplaza con el de Santa -> F5 (refresh) -> BOOM
 
 ---
 
-**Metodologia:**
+**Metodología:**
 
 1. Recon basico (TTL, servicios, PHP)
 
@@ -334,7 +334,7 @@ Se remueve el cookie value y se remplaza con el de Santa -> F5 (refresh) -> BOOM
 
 **Learning chain:** Recon -> Cookies -> Fuzzing -> XSS -> Sniffing -> SMB -> Escalada -> Metasploit -> OSINT -> Python -> Reversing -> SQLi -> Ransomware -> lxd
 
-**Leccion:** *El AoC 2020 profundizo en los conceptos web y de red del anio anterior, agregando OSINT, reversing y analisis de ransomware, pero manteniendo el espiritu de aprender haciendo.*
+**Lección:** *El AoC 2020 profundizo en los conceptos web y de red del anio anterior, agregando OSINT, reversing y analisis de ransomware, pero manteniendo el espiritu de aprender haciendo.*
 
 **MITRE ATT&CK:**
 
@@ -355,3 +355,15 @@ Se remueve el cookie value y se remplaza con el de Santa -> F5 (refresh) -> BOOM
 - T1486 - Data Encrypted for Impact
 
 **Fuente:** [TryHackMe - Advent of Cyber 2 [2020]](https://tryhackme.com/room/adventofcyber2)
+
+
+---
+
+## ⚠️ Descargo de Responsabilidad (Disclaimer)
+
+Este contenido se presenta exclusivamente con fines acad" + [char]0xE9 + "micos y educativos.
+
+**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
+**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
+**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
+**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.

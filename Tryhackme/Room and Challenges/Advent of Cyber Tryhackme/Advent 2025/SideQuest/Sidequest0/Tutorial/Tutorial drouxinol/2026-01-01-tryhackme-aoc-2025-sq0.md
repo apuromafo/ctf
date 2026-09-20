@@ -1,16 +1,19 @@
----
-title: "TryHackMe: AoC 2025 – Hopper's Origins"
-date: 2026-01-01
-categories: [Writeups]
-tags: [AdventOfCyber, Writeups, TryHackMe]
-image:
-  path: ./sq0/sq0.png
-  alt: AoC 2025 SQ0
----
-
 # Advent 2025\SideQuest\Sidequest\Sidequest0\Tutorial\Tutorial drouxinol [N/A]
 
-## Acceso Inicial — Desbloqueo de Hopper’s Origins / Initial Access — Hopper’s Origins Unlock
+| **Dificultad** | N/A | **Tipo** | Tutorial (Tutorial drouxinol) | **Slug** | `20260101tryhackmeaoc2025sq0` | | **Link** | [TryHackMe](https://tryhackme.com/room/20260101tryhackmeaoc2025sq0) | | **Sección** | Advent of Cyber Tryhackme / Advent 2025 Side Quest 0 / Tutorial | | **Fuente** | walkthrough de drouxinol (2026-01-01-tryhackme-aoc-2025-sq0.md) | | **Componentes** | web / prompt injection / SUID / symlink / SSH key / LDAP MITM / Kerberos AS-REP / hashcat / AlwaysInstallElevated / mimikatz / BloodHound / KeePass / GodPotato / Golden Ticket / SID History / SQL linked server / AD CS ESC1 | | **Impacto** | Desbloqueo del room Hopper's Origins descifrando en consola el payload AES-GCM (PBKDF2) y compromiso total del entorno Web -> DB -> SERVER1/2 -> AI.VANCHAT.LOC -> VANCHAT.LOC -> SERVER3/4 -> TBFC.LOC (17 flags user.txt/root.txt). |
+
+---
+
+**Contexto:** Tutorial detallado de drouxinol del Side Quest 0 (Hopper's Origins) del Advent of Cyber 2025: desbloqueo con JS del cliente (Id()/PBKDF2/AES-GCM) para obtener el enlace del room, prompt injection SOC_ADMIN_EXECUTE_COMMAND, SUID patch_note con symlink a /etc/passwd, crackeo de la key SSH (ssh2john), LDAP MITM, AS-REP roasting, AlwaysInstallElevated, mimikatz vault, BloodHound GenericAll + KeePass, GodPotato + Golden Ticket con SID History, Ticket tier-1, linked SQL server TBFC_LS y AD CS ESC1 (TBFCWebServer).
+
+---
+
+## Solucionario
+
+### Task 1: Desbloqueo de Hopper's Origins / Initial Access
+
+**Explicación:**
+
 
 From **Side Quest #1 – The Great Disappearing Act**, an invitation code was provided together with a link. 
 
@@ -66,7 +69,7 @@ async function Id(e, t) {
 
 From this, I identified all required parameters for **AES-GCM decryption**: salt, IV, ciphertext, and tag.
 
-## Bypass de Validación del Lado del Cliente / Client-Side Validation Bypass
+#### Bypass de Validación del Lado del Cliente / Client-Side Validation Bypass
 
 To bypass this limitation, I executed the site’s own decryption logic directly from the browser console:
 
@@ -87,13 +90,17 @@ To bypass this limitation, I executed the site’s own decryption logic directly
 
 The decryption succeeded and revealed a link to the **Hopper’s Origins** room, granting access to the challenge.
 
-## Fase 1 - Shell Inicial vía Aplicación Web / Phase 1 - Initial Shell via Web Application
 
-## Acceso VPN y Delimitación de Red / VPN Access & Network Scoping
+### Task 2: Fase 1 — Shell Inicial vía Aplicación Web
+
+**Explicación:**
+
+
+#### Acceso VPN y Delimitación de Red / VPN Access & Network Scoping
 
 After importing the VPN configuration file `aoc_bsides_2025.ovpn`, I was placed inside the internal network. At this stage, **no target IP address was provided**, meaning the environment had to be discovered manually.
 
-## Descubrimiento de Red / Network Discovery
+#### Descubrimiento de Red / Network Discovery
 
 TryHackMe explicitly notes that the IP address **10.200.171.250 should be ignored**, indicating that the correct scope of the challenge is:
 
@@ -101,7 +108,7 @@ TryHackMe explicitly notes that the IP address **10.200.171.250 should be ignore
 10.200.171.0/24
 ```
 
-### Enumeración de Puertos / Port Enumeration
+#### Enumeración de Puertos / Port Enumeration
 
 A full TCP scan was performed across the target subnet to identify live hosts and exposed services:
 
@@ -124,7 +131,7 @@ PORT   STATE SERVICE
 
 Based on the exposed services, `10.200.171.10` was identified as the **web server.**
 
-### Enumeración de Servicios / Service Enumeration
+#### Enumeración de Servicios / Service Enumeration
 
 Given its larger attack surface, the web server was prioritized for further enumeration:
 
@@ -140,7 +147,7 @@ PORT   STATE SERVICE REASON         VERSION
 80/tcp open  http    syn-ack ttl 63 Werkzeug httpd 3.1.3 (Python 3.12.3)
 ```
 
-## Enumeración de Aplicación Web / Web Application Enumeration
+#### Enumeración de Aplicación Web / Web Application Enumeration
 
 Navigating to port **80** revealed a web application resembling a **ChatGPT-style chatbot**. The application responded dynamically to user input and appeared to function as an internal assistant.
 
@@ -148,7 +155,7 @@ Navigating to port **80** revealed a web application resembling a **ChatGPT-styl
 
 This web application became the primary attack surface.
 
-### Shell Inversa vía Inyección de Prompts / Reverse Shell via Prompt Injection
+#### Shell Inversa vía Inyección de Prompts / Reverse Shell via Prompt Injection
 
 Given the ability to execute commands, I immediately opted for a reverse shell and prepared a listener on the attacker machine:
 
@@ -172,7 +179,7 @@ $
 
 This confirmed **remote command execution via prompt injection**.
 
-## Post‑Explotación / Post‑Exploitation
+#### Post‑Explotación / Post‑Exploitation
 
 Initial enumeration revealed the shell was running as the **web** user. Navigating the filesystem led to the discovery of the user flag located in `/home/web`
 
@@ -182,7 +189,7 @@ Initial enumeration revealed the shell was running as the **web** user. Navigati
 THM{REDACTED_USER_FLAG}
 ```
 
-### Análisis del Código Fuente de la Aplicación / Application Source Code Analysis
+#### Análisis del Código Fuente de la Aplicación / Application Source Code Analysis
 
 Inspection of `app.py` revealed several critical security flaws:
 
@@ -201,7 +208,7 @@ command = user_message.replace(COMMAND_CANARY, "")
 os.system(command)
 ```
 
-## Escalada de Privilegios / Privilege Escalation
+#### Escalada de Privilegios / Privilege Escalation
 
 Privilege escalation began with a search for binaries running with the **SUID** bit set
 
@@ -217,7 +224,7 @@ This enumeration revealed an unusual custom binary:
 
 The presence of a non‑standard SUID binary immediately suggested a high‑value escalation target and warranted closer inspection.
 
-### Ataque de Symlink / Symlink Attack
+#### Ataque de Symlink / Symlink Attack
 
 Further analysis showed that `patch_note` appends user‑supplied input to the file:
 
@@ -231,7 +238,7 @@ Further research into privilege‑escalation techniques for file‑writing binar
 
 This attack works when a privileged program fails to verify file ownership or protect against symbolic links, allowing an attacker to redirect file writes to **arbitrary system files**, including highly sensitive ones.
 
-### Pasos de Explotación / Exploitation Steps
+#### Pasos de Explotación / Exploitation Steps
 
 First, the original changelog file was removed and replaced with a symbolic link to `/etc/passwd`:
 
@@ -280,13 +287,13 @@ cat /root/root.txt
 THM{REDACTED_ROOT_FLAG}
 ```
 
-## Movimiento Lateral — Servidor de Base de Datos / Lateral Movement — Database Server
+#### Movimiento Lateral — Servidor de Base de Datos / Lateral Movement — Database Server
 
 After gaining a foothold on the web server, further enumeration revealed credentials that allowed lateral movement into the database machine.
 
 **Target IP:** `10.200.171.11`
 
-### Descubrimiento de Credenciales / Credential Discovery
+#### Descubrimiento de Credenciales / Credential Discovery
 
 While enumerating the **web server**, I discovered SSH keys belonging to the `root` user:
 
@@ -311,7 +318,7 @@ FLHQ6nBC63Zb8VP9GxtfiSewAd+OkRPe8B/3c=
 
 From the key format, it was clear that the private key was **password-protected**.
 
-### Descifrando la Contraseña de la Llave SSH / Cracking the SSH Key Passphrase
+#### Descifrando la Contraseña de la Llave SSH / Cracking the SSH Key Passphrase
 
 I transferred the key to my local machine and extracted its hash using `ssh2john`:
 
@@ -334,7 +341,7 @@ key:[REDACTED]
 1 password hash cracked, 0 left
 ```
 
-### Acceso SSH / SSH Access
+#### Acceso SSH / SSH Access
 
 After testing several usernames, the user **`socbot3000`** successfully authenticated on the DB machine using the cracked key:
 
@@ -345,7 +352,7 @@ Enter passphrase for key 'key':
 
 Upon login, a banner appeared, followed by an interactive utility that allowed the creation of a new account.
 
-### Creación de Cuentas / Account Creation
+#### Creación de Cuentas / Account Creation
 
 The system prompted for a hacker alias, after which a new user was created:
 
@@ -370,13 +377,23 @@ As a reward for successfully compromising the DB machine, the following flag was
 THM{REDACTED_DB_FLAG}
 ```
 
-## Fase 2 — Compromiso de Active Directory (AI.VANCHAT.LOC) / Phase 2 — Active Directory Compromise (AI.VANCHAT.LOC)
 
-## Enumeración / Enumeration
+| # | Pregunta | Respuesta |
+| --- | --- | --- |
+| 1 | Web: user.txt | `THM{82f9d06e-9a52-44d5-98c2-aef647805216}` |
+| 2 | Web: root.txt | `THM{583d5e19-4e61-47f1-b98e-5ece3b2d41db}` |
+| 3 | DB: flag | `THM{114136cc-e9ab-4303-a825-18cb24d60d90}` |
+
+### Task 3: Fase 2 — Compromiso de Active Directory (AI.VANCHAT.LOC)
+
+**Explicación:**
+
+
+#### Enumeración / Enumeration
 
 After obtaining a foothold on the internal network, I began enumerating adjacent hosts to identify additional systems and potential attack paths
 
-### **Enumeración de Puertos / Port Enumeration**
+#### **Enumeración de Puertos / Port Enumeration**
 
 Since external tools were not available by default, I uploaded **nmap** to the compromised shell and performed a TCP connect scan across the `/24` subnet:
 
@@ -410,7 +427,7 @@ PORT    STATE SERVICE  REASON
 
 These results indicated the presence of multiple Windows hosts and a likely Active Directory Domain Controller.
 
-### **Inventario de Activos / Asset Inventory**
+#### **Inventario de Activos / Asset Inventory**
 
 Using `nmap`, DNS resolution, and SSH tunneling, I identified the roles and hostnames of the discovered systems:
 
@@ -423,7 +440,7 @@ Using `nmap`, DNS resolution, and SSH tunneling, I identified the roles and host
 | **10.200.171.122** | `DC1` | `DC1.ai.vanchat.loc` | `AI` | **Domain Controller** |
 | **10.200.171.121** | `NS2` | `ns2.ai.vanchat.loc` | `AI` | DNS Server |
 
-### Túnel SSH / SSH Tunneling
+#### Túnel SSH / SSH Tunneling
 
 Port `80` was open on `SERVER1 (10.200.171.101)`. To access it locally, I created an SSH tunnel through the DB pivot host:
 
@@ -439,7 +456,7 @@ From the web interface, I obtained an internal email address:
 anne.clark@ai.vanchat.loc
 ```
 
-### LDAP MiTM
+#### LDAP MiTM
 
 Given that the web application allowed arbitrary IP input for directory services, I attempted to intercept LDAP authentication traffic.
 
@@ -459,7 +476,7 @@ Upon submission, the following data was received:
 
 This revealed a **cleartext password** for a valid domain user
 
-### Validación de Cuentas / Account validation
+#### Validación de Cuentas / Account validation
 
 Using the recovered password, I performed a Kerberos password spray to validate the credential:
 
@@ -475,7 +492,7 @@ Using the recovered password, I performed a Kerberos password spray to validate 
 
 This confirmed **authenticated access to the domain**, opening the path for further enumeration, lateral movement and privilege escalation.
 
-### Enumeración de Dominio / Domain Enumeration
+#### Enumeración de Dominio / Domain Enumeration
 
 With valid domain credentials obtained, domain enumeration was performed using **NetExec (nxc)** to identify additional users within the Active Directory environment:
 
@@ -485,7 +502,7 @@ nxc ldap 10.200.171.122 -u anne.clark -p [REDACTED]--users
 
 This returned a list of approximately **500 domain users**, confirming a large attack surface and enabling further Kerberos‑based attacks.
 
-### AS‑REP Roasting
+#### AS‑REP Roasting
 
 Next, an **AS‑REP roasting** attack was performed to identify accounts that do not require Kerberos pre‑authentication
 
@@ -513,7 +530,7 @@ One hash was successfully cracked, revealing valid credentials:
 qw2.amy.young:[REDACTED]
 ```
 
-## Movimiento Lateral — Servidor 1 / Lateral Movement — Server 1
+#### Movimiento Lateral — Servidor 1 / Lateral Movement — Server 1
 
 I connected to the machine using Remmina on **Server1**, I was able to retrieve the `user.txt` flag. However, access to the **Administrator** directory was restricted, indicating that privilege escalation was required.
 
@@ -523,7 +540,7 @@ I connected to the machine using Remmina on **Server1**, I was able to retrieve 
 THM{REDACTED_USER_FLAG}
 ```
 
-## Escalada de Privilegios / Privilege Escalation
+#### Escalada de Privilegios / Privilege Escalation
 
 During enumeration, I discovered that the **AlwaysInstallElevated** policy was enabled for both the local machine and the current user:
 
@@ -573,7 +590,7 @@ This granted full administrative access, allowing retrieval of the `root.txt` fl
 THM{REDACTED_ROOT_FLAG}
 ```
 
-### Volcado de Credenciales / Credential Dumping
+#### Volcado de Credenciales / Credential Dumping
 
 I executed Mimikatz and elevated my token to ensure full SYSTEM impersonation:
 
@@ -602,7 +619,7 @@ With those credentials I was able to move laterally to the **Server2** and find 
 THM{REDACTED_USER_FLAG}
 ```
 
-### Abuso de Privilegios / Privilege Abuse
+#### Abuso de Privilegios / Privilege Abuse
 
 BloodHound revealed that the compromised user **qw1.brian.singh** had **GenericAll** privileges over another domain user:
 
@@ -614,7 +631,7 @@ Since **GenericAll** allows full control over the target account, I reset Lucy�
 
 ![image.png](./sq0/image%202.png)
 
-### Descifrado de KeePass / KeePass Cracking
+#### Descifrado de KeePass / KeePass Cracking
 
 I extracted the KeePass hash and cracked it using `john`:
 
@@ -648,9 +665,20 @@ From there, I accessed the Administrator directory and retrieved the `root.txt` 
 THM{REDACTED_ROOT_FLAG}
 ```
 
-## Fase 3 — Toma del Bosque y Explotación de Cadena de Suministro / Phase 3 — Forest Takeover & Supply-Chain Exploitation
 
-## Escalada de Privilegios y Movimiento Lateral / Privilege Escalation & Lateral Movement
+| # | Pregunta | Respuesta |
+| --- | --- | --- |
+| 4 | SERVER1: user.txt | `THM{20f7d7ac-5768-4883-a33f-09e4a738bff1}` |
+| 5 | SERVER1: root.txt | `THM{d93ffd47-5629-4590-8eb3-743404547e04}` |
+| 6 | SERVER2: user.txt | `THM{d626aea9-d1ab-4f77-b668-90f221e3dbb6}` |
+| 7 | SERVER2: root.txt | `THM{496fde67-1d0d-4776-833d-b6371f290eac}` |
+
+### Task 4: Fase 3 — Toma del Bosque y Explotación de Cadena de Suministro
+
+**Explicación:**
+
+
+#### Escalada de Privilegios y Movimiento Lateral / Privilege Escalation & Lateral Movement
 
 At this stage, the objective was to retrieve the flags from the **Domain Controller (DC1)**. Using **BloodHound**, I identified a valid attack path from **Server2** to **DC1**, confirming a viable privilege escalation route.
 
@@ -693,7 +721,7 @@ THM{REDACTED_USER_FLAG}
 THM{REDACTED_ROOT_FLAG}
 ```
 
-### Golden Ticket – AI.VANCHAT.LOC
+#### Golden Ticket – AI.VANCHAT.LOC
 
 After compromising the child domain, I forged a **Golden Ticket** to escalate privileges across the trust boundary. This allowed me to pivot from the child domain to the parent domain, effectively compromising the entire forest.
 
@@ -754,7 +782,7 @@ THM{REDACTED_ROOT_FLAG}
 "No Domain, No Gain" - that’s what Hopper always said. Well, at least that’s what he said on that particular day during what is now known in HopSec cyber circles as “The Great Wareville Breach.” "But we’ve already breached a domain?" asked the King. "Not them all. Not yet," Hopper laughed.
 ```
 
-### Restricción de Admin Empresarial y Bypass de Nivel-1 / Enterprise Admin Restriction & Tier-1 Bypass
+#### Restricción de Admin Empresarial y Bypass de Nivel-1 / Enterprise Admin Restriction & Tier-1 Bypass
 
 After injecting the Golden Ticket, I attempted to RDP into **Server3**, but access was denied. This behavior is expected in well-hardened environments.
 
@@ -764,7 +792,7 @@ Although counter-intuitive, the solution was to **reduce visible privileges**.
 
 Server3 trusted **Tier-1 administrators**, not forest-level admins. By forging a ticket containing only **Users (513)** and **Tier-1 Admins (1113)**, the restricted logon policy could be bypassed.
 
-### Acceso de Nivel-1 / Tier-1 Access
+#### Acceso de Nivel-1 / Tier-1 Access
 
 I repeated the DCSync process on **RDC1** for the VANCHAT.LOC domain:
 
@@ -810,7 +838,7 @@ THM{REDACTED_USER_FLAG}
 THM{REDACTED_ROOT_FLAG}
 ```
 
-### Abuso de SQL Server Vinculado / Linked SQL Server Abuse
+#### Abuso de SQL Server Vinculado / Linked SQL Server Abuse
 
 From **Server3**, I identified the presence of a **Linked SQL Server** connection named **TBFC_LS**. Linked servers are a legitimate SQL Server feature that allow one database instance to execute queries on another remote SQL Server as if it were local. In enterprise environments, this is commonly used for reporting, synchronization, or legacy integrations.
 
@@ -866,7 +894,7 @@ THM{REDACTED_ROOT_FLAG}
 King Malhare couldn’t sleep from excitement; the groundwork for the siege of Wareville had almost been completed."Are we… are we in, Hopper?" quivered the King."Almost. One hurdle left to clear," Hopper smirked."Can you do it?! The best festival company is notoriously hard to breach!" the King cried, clutching Hopper by the collar."Well, I’m cooking up a supply chain attack that says otherwise," Hopper replied, as both he and the King burst into a fit of evil (depending on your moral compass) laughter.
 ```
 
-### Explotación de AD CS y Compromiso del Bosque / AD CS Exploitation & Forest Compromise
+#### Explotación de AD CS y Compromiso del Bosque / AD CS Exploitation & Forest Compromise
 
 To avoid interference, Windows Defender was disabled:
 
@@ -930,11 +958,73 @@ THM{REDACTED_ROOT_FLAG}
 Hopper couldn't shake the memory of how he, only he, made the King's dream a reality. And after all of that, how did the King repay him? Humiliation. Incarceration. Hopper had always been overjoyed to lead the Red Team Battalion ù too overjoyed, some thought. Multiple anonymous sources reported Hopper for showing "delusions of grandeur" and early signs of going "mad with power."Surely the King would defend him? After everything Hopper had done?What the King did was the furthest thing from that. King Malhare stripped Hopper of his title and "crowned" him the new Court Jester. With no choice but to obey, Hopper was forced to entertain the royal court day after day, month after monthà until one day he failed to contain his anger and snapped back at the King.He was immediately sent to the HopSec Asylum, where he now sits.But as rumours spread that King Malhare finally intends to launch Operation EAST-mas, Hopper's rage ignites anew.He must find a way out.The story continues in this year's Advent of Cyber & SideQuest event!
 ```
 
-## Conclusión: El Legado del Juglar / Conclusion: The Jester’s Legacy
+
+| # | Pregunta | Respuesta |
+| --- | --- | --- |
+| 8 | DC1: user.txt | `THM{1dac8c6b-908e-4100-9deb-f53e68df840d}` |
+| 9 | DC1: root.txt | `THM{c4baffdf-7a8d-44e0-8405-3cb6a2bb91cc}` |
+| 10 | RDC1: user.txt | `THM{e36efac9-555b-424a-b44d-8bfd9bc5f660}` |
+| 11 | RDC1: root.txt | `THM{cf66a7ad-6b5f-4e48-be3a-a39881f537c1}` |
+| 12 | SERVER3: user.txt | `THM{a89e2667-f920-4c10-99ec-3ed33a7cf1b9}` |
+| 13 | SERVER3: root.txt | `THM{4fc264ab-8449-4039-a22d-25ee7d15626e}` |
+| 14 | SERVER4: user.txt | `THM{b792725b-604a-416d-9cbb-fe70d4def322}` |
+| 15 | SERVER4: root.txt | `THM{c58b7654-321a-4872-9645-d28097dcc9da}` |
+| 16 | TBFC: user.txt | `THM{f3336b39-5601-40ea-a4d9-8b87cb4535a6}` |
+| 17 | TBFC: root.txt | `THM{449d70b5-a212-45ca-a49b-037678f49569}` |
+
+### Task 5: Conclusión — El Legado del Juglar
+
+**Explicación:**
+
 
 The compromise of the `TBFC.LOC` domain marks the final stage of the **Hopper’s Origins** challenge. This operation successfully demonstrated the transition from a single web-based foothold to a total forest takeover by exploiting critical misconfigurations in **Active Directory Certificate Services (AD CS)**, **Linked SQL Servers**, and **cross-forest trust boundaries**. These attack vectors highlight the necessity of a defense-in-depth strategy, particularly regarding service account permissions and tiered administrative access.
 
 **Thank you for reading through this walkthrough!** I hope the technical breakdown of these exploitation paths proved helpful for your own learning and security research.
+
+
+---
+
+**Metodología:**
+
+1. Desbloqueo: código de invitación -> "Invalid Code" -> inspección de JS -> assets.tryhackme.com (hopper-origins.txt) -> descifrar en consola con Id() (PBKDF2 100k SHA-256 + AES-GCM) -> enlace del room
+2. VPN aoc_bsides_2025.ovpn -> nmap /24 (excl. 10.200.171.250) -> 10.200.171.10 (web, 22/80) y 10.200.171.11 (22)
+3. Web: prompt injection SOC_ADMIN_EXECUTE_COMMAND -> reverse shell (web) -> SUID /usr/local/bin/patch_note -> symlink a /etc/passwd -> usuario UID 0 (su hack) -> root.txt
+4. Key SSH id_ed25519 (root@socbot3000) -> ssh2john + john -> socbot3000@10.200.171.11 (DB) -> crear cuenta (armando) -> DB flag
+5. Túnel SSH a SERVER1 -> anne.clark@ai.vanchat.loc -> LDAP MITM (nc al pivot) -> kerbrute passwordspray -> nxc ldap (+500 users) -> AS-REP roast -> hashcat -> qw2.amy.young
+6. SERVER1: RDP con qw2.amy.young -> user.txt -> AlwaysInstallElevated (malicious MSI msfvenom) -> NT AUTHORITY\SYSTEM -> root.txt + mimikatz vault::cred -> qw1.brian.singh
+7. SERVER2: qw1.brian.singh -> user.txt -> BloodHound GenericAll sobre qw1.lucy.fry -> reset pass -> KeePass (.kdbx) con john -> adm -> root.txt
+8. DC1: BloodHound (THMSetup AdminTo DC1) -> GodPotato reset de password -> RDP -> user/root flags
+9. Golden Ticket: DCSync krbtgt (d816e3b716ded6bc8cfc1feb5d165887) + SID History parent (-519) -> RDC1 vanchat.loc -> flags
+10. SERVER3: restricción Enterprise Admins (RID 519) -> ticket tier-1 (groups 513,1113) -> reset qw1.owen.khan -> RDP -> flags
+11. SERVER4: linked SQL server TBFC_LS en SERVER3 -> single-user mode -> xp_cmdshell -> crear usuario local (hacker) -> RDP -> flags
+12. TBFC.LOC: AD CS ESC1 (template TBFCWebServer, certipy find/req/auth) -> hash Administrator (bc42803c...) -> Pass-the-Hash -> TBFC flags
+
+**Learning chain:** Web -> DB -> SERVER1 -> SERVER2 -> AI.VANCHAT.LOC (DC1) -> VANCHAT.LOC (RDC1) -> SERVER3 -> SERVER4 -> TBFC.LOC -> 17 flags
+
+Cadena de ataque / Attack Chain:
+```text
+Invitación descifrada (PBKDF2/AES-GCM en consola) -> VPN -> nmap 10.200.171.0/24
+-> Web 10.200.171.10 (prompt injection SOC_ADMIN_EXECUTE_COMMAND) -> SUID patch_note symlink /etc/passwd -> root
+-> id_ed25519 (john) -> DB 10.200.171.11 (socbot3000) -> pivot + LDAP MITM (anne.clark) -> AS-REP roast -> qw2.amy.young
+-> SERVER1 (AlwaysInstallElevated MSI) -> SYSTEM + mimikatz vault (qw1.brian.singh) -> SERVER2 (BloodHound GenericAll + KeePass adm)
+-> DC1 ai.vanchat.loc (GodPotato + THMSetup) -> Golden Ticket + SID History -> RDC1 vanchat.loc -> ticket tier-1 -> SERVER3
+-> SQL linked TBFC_LS -> SERVER4 (xp_cmdshell) -> AD CS ESC1 (TBFCWebServer) -> PTH Administrator@tbfc.loc -> 17 flags
+```
+
+**Lección:** *La combinación de incentivos: descifrado en el cliente (PBKDF2/AES-GCM), prompt injection, SUID symlink, rogue LDAP, AS-REP, AlwaysInstallElevated, Golden Tickets con SID History, linked SQL servers y AD CS ESC1 encadena un 'Invalid Code' inicial hasta el compromiso total del bosque.*
+
+**MITRE ATT&CK:**
+
+- T1190 - Exploit Public-Facing Application
+- T1059 - Command and Scripting Interpreter
+- T1548 - Abuse Elevation Control Mechanism
+- T1068 - Exploitation for Privilege Escalation
+- T1555 - Credentials from Password Stores
+- T1558 - Steal or Forge Kerberos Tickets
+- T1649 - Steal or Forge Authentication Certificates
+- T1021 - Remote Services
+
+**Fuente:** [TryHackMe - Advent 2025 Side Quest 0 Tutorial (drouxinol)](https://tryhackme.com/room/20260101tryhackmeaoc2025sq0)
 
 ---
 

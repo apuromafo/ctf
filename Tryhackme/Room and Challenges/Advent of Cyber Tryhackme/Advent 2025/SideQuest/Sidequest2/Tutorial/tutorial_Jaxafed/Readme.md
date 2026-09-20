@@ -1,3 +1,10 @@
+# SideQuest 2 - Tutorial (tutorial_Jaxafed)
+
+| Dificultad | Tipo | Slug | Link | Sección | Fuente | Componentes | Impacto |
+|---|---|---|---|---|---|---|---|
+| N/A | Tutorial SideQuest | `advent2025` | [TryHackMe](https://tryhackme.com/room/sq2-aoc2025-JxiOKUSD9R) | Advent of Cyber Tryhackme | https://jaxafed.github.io/posts/tryhackme-aoc2025_sidequest_two/ | tutorial de la sidequest 2 (scheme catcher) basado en el writeup de jaxafed | guia para obtener la llave, las 4 banderas (heap, ssh, kernel kagent) y el escape de contenedor privilegiado |
+
+**Contexto:** Tutorial auxiliar de la SideQuest 2 (Scheme Catcher) del Advent of Cyber 2025 basado en el writeup público de jaxafed. Resume el proceso completo: obtención de la llave en el room del día 9, fuzzing web, las cuatro banderas (heap exploit, SSH, módulo kernel `kagent`) y el escape de contenedor privilegiado.
 
 Tutorial from jaxafed TryHackMe: AoC 2025 Side Quest TWO
 
@@ -673,7 +680,6 @@ Lastly, calling `ioctl` with the correct operation code to run `ctx.current_op` 
 >>> ioctl(fd, IOCTL_EXEC_OP)
 0
 >>> pty.spawn("/bin/sh")
-# Advent 2025\SideQuest\Sidequest\Sidequest2\Tutorial\tutorial_Jaxafed [N/A]
 uid=0(root) gid=0(root) groups=0(root)
 ## wc -c /root/root.txt
 29 /root/root.txt

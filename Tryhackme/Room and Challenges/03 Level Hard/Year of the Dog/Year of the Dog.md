@@ -1,7 +1,49 @@
-# Year of the Dog [HARD]
+# Year of the Dog
 
-1. 1. THM{OTE3MTQyNTM5NzRiN2VjNTQyYWM2M2Ji}
-   2. THM{MzlhNGY5YWM0ZTU5ZGQ0OGI0YTc0OWRh}
+| Dificultad | Tipo | Slug | Link | Sección | Fuente | Componentes | Impacto |
+|---|---|---|---|---|---|---|---|
+| Hard | Reto • CTF | yearofthedog | https://tryhackme.com/room/yearofthedog | 03 Level Hard | TryHackMe | CTF, Codificación, Criptografía | Medio |
+
+---
+
+**Contexto:**
+> **ES:** Reto de la serie Year of the ... : resolviendo el enigma se obtiene la pieza del año, un fragmento en Base64 que codifica la flag correspondiente al Perro.
+> **EN:** Challenge from the Year of the ... series: solving the riddle yields the piece of the year, a Base64 fragment encoding the flag corresponding to the Dog.
+
+## Solucionario
+
+### Task 1: La pieza del año / The piece of the year
+**Explicación:**
+1. THM{OTE3MTQyNTM5NzRiN2VjNTQyYWM2M2Ji}
+2. THM{MzlhNGY5YWM0ZTU5ZGQ0OGI0YTc0OWRh}
+
+### Preguntas y Respuestas / Questions and Answers
+
+| Task | Respuesta / Answer |
+|---|---|
+| 1.1 | `THM{OTE3MTQyNTM5NzRiN2VjNTQyYWM2M2Ji}` |
+| 1.2 | `THM{MzlhNGY5YWM0ZTU5ZGQ0OGI0YTc0OWRh}` |
+
+---
+
+**Metodología:**
+Resolución del enigma del reto, identificación del esquema de codificación (Base64) y decodificación del fragmento para componer la flag completa del año.
+
+### Cadena de ataque / Attack Chain
+1. Lectura del enigma planteado en el reto.
+2. Identificación del esquema de codificación (Base64).
+3. Decodificación del fragmento.
+4. Composición de la flag completa.
+
+**Learning chain:**
+Enigma → Pieza del año → Flag completa del Perro.
+
+**Lección:** *Cada desafío de la serie 'Year of the ...' entrega una pieza codificada que debe descifrarse para llegar a la flag del año.*
+
+**MITRE ATT&CK:**
+- No aplica (reto CTF de codificación).
+
+**Fuente:** [TryHackMe - Year of the Dog](https://tryhackme.com/room/yearofthedog)
 
 ---
 

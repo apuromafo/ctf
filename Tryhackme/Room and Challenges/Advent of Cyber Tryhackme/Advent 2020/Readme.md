@@ -1,8 +1,29 @@
-# Advent 2020 [N/A]
+# Advent 2020
 
-<h1 align="center">
-🎄 TryHackMe – Advent of Cyber 2020
-</h1>
+| Dificultad | Tipo | Slug | Link | Sección | Fuente | Componentes | Impacto |
+|---|---|---|---|---|---|---|---|
+| N/A | Índice (Readme) | `readme` | [TryHackMe](https://tryhackme.com/room/readme) | Advent of Cyber Tryhackme | texto oficial THM + anotaciones propias | índice / portada del evento | Página índice/README del segundo Advent of Cyber (2020), con 24 días de retos navideños |
+
+---
+
+**Contexto:** Este README es la página índice de la carpeta **Advent 2020**. El evento "Advent of Cyber 2 (2020)" fue el segundo calendario de adviento de seguridad de TryHackMe: un reto nuevo cada día con temática navideña, con premios y certificados para los participantes. El solucionario del room completo está en `advent of cyber 2 2020.md` (room `adventofcyber2`).
+
+> 🎄 TryHackMe – Advent of Cyber 2020
+
+**Metodología:**
+
+1. Navegación del catálogo: portada del evento y enlace al room principal adventofcyber2
+
+**Learning chain:** Advent of Cyber 2020 -> adventofcyber2
+
+**Lección:** *El README del segundo Advent of Cyber sirve de acceso directo al room y a su solucionario de 24 días.*
+
+**MITRE ATT&CK:**
+
+- N/A (índice del evento)
+
+**Fuente:** [TryHackMe - Advent 2020 [N/A]](https://tryhackme.com/room/readme)
+
 
 ---
 

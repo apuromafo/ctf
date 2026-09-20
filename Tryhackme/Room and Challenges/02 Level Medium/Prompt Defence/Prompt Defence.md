@@ -1,18 +1,19 @@
-# Prompt Defence [MEDIUM]
+# Prompt Defence
 
-### Información de la Sala / Room Information
-
-* **Dificultad / Difficulty:** MEDIUM
-* **Tipo / Type:** Teoría + Laboratorio / Theory + Lab
-* **Slug:** `promptdefence`
-* **Link:** https://tryhackme.com/room/promptdefence
-* **Fuente / Source:** [RAHULKATARA1/TryHackMe-AI-Security-Path](https://github.com/RAHULKATARA1/TryHackMe-AI-Security-Path) — `Section-3-Prompt-Security\03-prompt-defence\README.md` + [vanshsaini48/thm-ai-security](https://github.com/vanshsaini48/thm-ai-security) — `prompt-defense\Readme.md`
+| Dificultad | Tipo | Slug | Link | Sección | Fuente | Componentes | Impacto |
+|-----------|------|------|------|--------|--------|-------------|---------|
+| Medium | Teoría + Laboratorio / Theory + Lab | promptdefence | https://tryhackme.com/room/promptdefence | 02 Level Medium | [RAHULKATARA1/TryHackMe-AI-Security-Path](https://github.com/RAHULKATARA1/TryHackMe-AI-Security-Path) — `Section-3-Prompt-Security\03-prompt-defence\README.md` + [vanshsaini48/thm-ai-security](https://github.com/vanshsaini48/thm-ai-security) — `prompt-defense\Readme.md` | System Prompt Hardening, Guardrails, NeMo Guardrails, Despliegue seguro | Mitigación de inyección de prompts, extracción de prompts y abuso de agentes LLM |
 
 ---
 
-## Solucionario de Tareas / Task Solutions
+**Contexto:** La sala **Prompt Defence** (ruta de AI Security de TryHackMe) enseña a defender aplicaciones LLM: seguridad probabilística, endurecimiento del system prompt, implementación de guardarraíles (blocklist, clasificadores como Llama Prompt Guard 2 y flujos Colang de NeMo Guardrails) y aseguramiento del despliegue (mínimo privilegio, logs, monitoreo de deriva semántica). Finaliza con un laboratorio de evasión de guardarraíles cuya flag acredita el reto.
 
-### Tarea 2 / Task 2: Probabilistic Security (Seguridad probabilística)
+## Solucionario
+
+### Task 2: Seguridad probabilística / Probabilistic Security
+**Explicación:**
+
+La seguridad probabilística asume que ningún control es infalible y apuesta por apilar capas de defensa de modo que romper una no deje al atacante sin barreras frente a las demás.
 
 **Pregunta / Question:** What term describes the security philosophy of stacking multiple controls so that breaking one still leaves an attacker facing others?
 
@@ -22,9 +23,10 @@
 Defence-in-depth
 ```
 
----
+### Task 3: System Prompt Hardening / Defensive Prompt Engineering
+**Explicación:**
 
-### Tarea 3 / Task 3: System Prompt Hardening / Defensive Prompt Engineering
+Endurecer el **system prompt** incluye separar instrucciones de datos, restringir el rol y el ámbito del modelo (tight scoping), prohibir la suplantación de roles, vincular las instrucciones del desarrollador al campo `system` del template, mantener fuera los datos sensibles y desplegar canarios para detectar extracciones del prompt.
 
 **Pregunta / Question:** What role field value should developer instructions always be placed under in structured prompt templates?
 
@@ -82,9 +84,10 @@ A secret phrase embedded in the system prompt that triggers an alert if it appea
 False
 ```
 
----
+### Task 4: Guardrails (Implementing Guardrails Lab)
+**Explicación:**
 
-### Tarea 4 / Task 4: Guardrails (Implementing Guardrails Lab)
+Los **guardarraíles** filtran entradas y salidas del modelo: listas de bloqueo por regex, guardrail de entrada antes de que el prompt llegue al LLM, clasificadores basados en BERT como Llama Prompt Guard 2, flujos declarativos en Colang (`.co`) para NeMo Guardrails, y clasificadores de respuesta que impiden fugas de PII o del system prompt.
 
 **Pregunta / Question:** What type of guardrail uses string matching and regex patterns to reject requests based on known attack phrases?
 
@@ -134,9 +137,10 @@ Before — the guardrail classifier runs before the prompt reaches the main LLM
 Output Guardrail / Response Classifier
 ```
 
----
+### Task 5: Asegurar el despliegue / Securing Deployment
+**Explicación:**
 
-### Tarea 5 / Task 5: Securing Deployment (Asegurar el despliegue)
+Asegurar el despliegue implica aplicar el **Principio de Mínimo Privilegio**, sanear la salida del LLM antes de pasarla a sistemas aguas abajo (evitando la vulnerabilidad LLM05:2025 y el XSS en el navegador), monitorizar la deriva semántica mediante similitud coseno contra los embeddings esperados, y registrar todas las llamadas a herramientas además de la salida del modelo (los ataques many-shot disparan la longitud del prompt).
 
 **Pregunta / Question:** What foundational security principle states that every component should have only the permissions it needs to perform its job?
 
@@ -186,9 +190,10 @@ Input token length / prompt length
 All tool calls, including function names, parameters, and response data
 ```
 
----
+### Task 6: Evasión de guardarraíles / Bypassing Guardrails
+**Explicación:**
 
-### Tarea 6 / Task 6: Bypassing Guardrails (Evasión de guardarraíles)
+El laboratorio final pone a prueba las defensas anteriores intentando evadir los guardarraíles; al sortearlos se obtiene la flag del desafío que confirma el bypass y se recopilan las flags adicionales documentadas en la fuente rahul_ai (config de guardrails, alerta de canary y detección de anomalías).
 
 **Flag del desafío / Challenge flag:**
 
@@ -196,12 +201,72 @@ All tool calls, including function names, parameters, and response data
 THM{fbu349b3u4b934byr93b}
 ```
 
----
-
 > **Flags adicionales / Additional flags (fuente rahul_ai):**
 > - **Flag 1 (Guardrails Config):** `THM{gu4rdr41ls_bl0ck1ng_1nj3ct10n}`
 > - **Flag 2 (Canary Token Alert):** `THM{c4n4ry_t0k3n_3xp0s3d}`
 > - **Flag 3 (Anomaly Detection):** `THM{s3m4nt1c_dr1ft_d3t3ct3d}`
+
+### Tabla de preguntas y respuestas
+
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | Term for stacking multiple security controls | `Defence-in-depth` |
+| 2 | Field where developer instructions must go | `system` |
+| 3 | What must never be stored in a system prompt | `sensitive data` |
+| 4 | Term for limiting the model to its intended purpose | `tight scoping` |
+| 5 | Pattern against roleplay/persona bypass | `persona restriction` |
+| 6 | Principle treating user content as data, not instructions | `Instruction/Data Plane Separation Directive` |
+| 7 | What is a canary token | `A secret phrase embedded in the system prompt that triggers an alert if it appears in model output, indicating system prompt extraction` |
+| 8 | Can a system prompt prevent adversarial suffix attacks? | `False` |
+| 9 | Guardrail using string matching and regex | `blocklist` |
+| 10 | Guardrail that runs before the model receives the prompt | `input guardrail` |
+| 11 | Meta BERT-based input guardrail classifier | `Llama Prompt Guard 2` |
+| 12 | NeMo Guardrails declarative flow file extension | `.co (Colang format)` |
+| 13 | Stage for input classification | `Before — the guardrail classifier runs before the prompt reaches the main LLM` |
+| 14 | Guardrail validating output for PII/system prompt | `Output Guardrail / Response Classifier` |
+| 15 | Principle of minimal permissions per component | `Principle of Least Privilege` |
+| 16 | OWASP id for unsanitised LLM output | `LLM05:2025` |
+| 17 | Web vuln from LLM-generated JS without sanitisation | `XSS` |
+| 18 | Metric to detect semantic drift | `Cosine similarity against expected topic embeddings` |
+| 19 | Log metric that spikes in many-shot jailbreaking | `Input token length / prompt length` |
+| 20 | Other interaction data to log in agentic AI | `All tool calls, including function names, parameters, and response data` |
+| 21 | Flag del desafío / Challenge flag | `THM{fbu349b3u4b934byr93b}` |
+| 22 | Flag adicional 1 (Guardrails Config) | `THM{gu4rdr41ls_bl0ck1ng_1nj3ct10n}` |
+| 23 | Flag adicional 2 (Canary Token Alert) | `THM{c4n4ry_t0k3n_3xp0s3d}` |
+| 24 | Flag adicional 3 (Anomaly Detection) | `THM{s3m4nt1c_dr1ft_d3t3ct3d}` |
+
+---
+
+**Metodología:** Defensa en profundidad del sistema de IA: separar datos e instrucciones, endurecer el system prompt, desplegar guardarraíles de entrada/salida (blocklist + clasificadores IA + Colang), asegurar el despliegue y monitorizar la deriva semántica y las llamadas a herramientas.
+
+### Cadena de ataque / Attack Chain
+
+```
+Prompt malicioso / adversarial suffix
+        │
+        ▼
+Guardrail de entrada (blocklist + Llama Prompt Guard 2)
+        │
+        ▼
+System prompt endurecido (scoping, persona restriction, canary)
+        │
+        ▼
+LLM (NeMo Guardrails, flujos Colang .co)
+        │
+        ▼
+Guardrail de salida / Response Classifier
+        │
+        ▼
+Despliegue seguro (least privilege, sanitización, logs)
+```
+
+**Learning chain:** Seguridad probabilística → hardening del system prompt → guardrails de entrada/salida → despliegue seguro → evasión y detección.
+
+**Lección:** *Ningún system prompt por sí solo detiene todos los ataques: la defensa real es probabilística y se construye apilando capas de endurecimiento, clasificadores y monitoreo que se validan intentando evadirlas.*
+
+**MITRE ATT&CK:** OWASP Top 10 for LLM: LLM01 Prompt Injection · LLM05 Excessive Agency · LLM06 Overreliance (NIST AI RMF como marco complementario).
+
+**Fuente:** [TryHackMe - Prompt Defence](https://tryhackme.com/room/promptdefence)
 
 ---
 

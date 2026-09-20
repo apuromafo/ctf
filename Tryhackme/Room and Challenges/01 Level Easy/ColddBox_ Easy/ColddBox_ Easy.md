@@ -1,24 +1,62 @@
-# ColddBox_ Easy [EASY]
+# ColddBox_ Easy
 
-https://tryhackme.com/room/colddboxeasy
-ColddBox: Easy
-An easy level machine with multiple ways to escalate privileges. By Hixec.
+| Dificultad | Tipo | Slug | Link | Sección | Fuente | Componentes | Impacto |
+|-----------|------|------|------|---------|--------|--------------|---------|
+| Easy | boot2root (máquina CTF) | `colddboxeasy` | https://tryhackme.com/room/colddboxeasy | 01 Level Easy | TryHackMe | WordPress / wpscan / fuerza bruta / escalada de privilegios (sudo) / flags en base64 | Obtener acceso a la máquina ColddBox: Easy y capturar ambas flags (usuario y root) tras escalar privilegios. |
 
-#Task 1 : boot2Root
+---
 
-Start Machine
-﻿﻿Can you get access and get both flags?
+**Contexto:** Máquina Linux de nivel Easy del catálogo TryHackMe, creada por Hixec, con múltiples vías para escalar privilegios. El flujo clásico pasa por enumerar la máquina y el sitio WordPress, obtener credenciales válidas, conseguir una shell inicial y escalar privilegios (por ejemplo abusando de permisos de `sudo` sobre binarios como `chmod`) para leer ambas flags. Las respuestas del lab se presentan ofuscadas en base64.
 
-Good Luck!.﻿
+> **ES:** "ColddBox: Easy": una máquina de nivel fácil con múltiples vías para escalar privilegios. ¿Puedes conseguir acceso y obtener ambas flags?
+> **EN:** "ColddBox: Easy": an easy level machine with multiple ways to escalate privileges. Can you get access and get both flags?
 
-By Marti from Hixec.
+## Solucionario
 
-Doubts and / or help in Hixec Community.
+### Task 1: boot2Root / Acceso y doble flag (boot2Root)
 
-Thumbnail box image credits, designed by Freepik from www.flaticon.es
+**Explicación:** La máquina se resuelve con un flujo clásico de boot2root: escaneo de puertos, enumeración del servicio web y de WordPress (versión, plugins y usuarios con `wpscan`), fuerza bruta de credenciales para acceder al panel de WordPress, abuso del panel para ejecutar comandos y conseguir una shell, y escalada de privilegios abusando de un binario ejecutable con `sudo` (p. ej. `chmod`) para alcanzar root y leer las dos flags. El lab pide "conseguir acceso y obtener ambas flags"; las dos respuestas se entregan codificadas en base64.
 
-1. 1. RmVsaWNpZGFkZXMsIHByaW1lciBuaXZlbCBjb25zZWd1aWRvIQ==
-   2. wqFGZWxpY2lkYWRlcywgbcOhcXVpbmEgY29tcGxldGFkYSE=
+> **Texto original del lab / Original lab text:** Start Machine. Can you get access and get both flags? Good Luck!. By Marti from Hixec. Doubts and / or help in Hixec Community. Thumbnail box image credits, designed by Freepik from www.flaticon.es
+
+```text
+nmap <IP>
+wpscan --url http://<IP> --enumerate u
+<fuerza bruta del usuario de WordPress>
+<acceso al panel -> shell>
+sudo -l                       # binario con permisos sudo (ej.: chmod)
+<escalada a root y lectura de flags>
+```
+
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | Primera flag del lab (flag de usuario) en base64. / First lab flag (user flag), base64. | `RmVsaWNpZGFkZXMsIHByaW1lciBuaXZlbCBjb25zZWd1aWRvIQ==` |
+| 2 | Segunda flag del lab (flag de root) en base64. / Second lab flag (root flag), base64. | `wqFGZWxpY2lkYWRlcywgbcOhcXVpbmEgY29tcGxldGFkYSE=` |
+
+---
+
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | Primera flag del lab (flag de usuario) en base64. / First lab flag (user flag), base64. | `RmVsaWNpZGFkZXMsIHByaW1lciBuaXZlbCBjb25zZWd1aWRvIQ==` |
+| 2 | Segunda flag del lab (flag de root) en base64. / Second lab flag (root flag), base64. | `wqFGZWxpY2lkYWRlcywgbcOhcXVpbmEgY29tcGxldGFkYSE=` |
+
+---
+
+**Metodología:** Se comienza con un escaneo de puertos y la enumeración del sitio (WordPress). Se emplea `wpscan` para enumerar usuarios y versiones y se realiza fuerza bruta de la contraseña del usuario de WordPress. Se logra ejecutar código en el host (shell) y se escala privilegios explotando un binario ejecutable con `sudo` (como `chmod`) hasta llegar a root y leer las dos flags, que el lab devuelve codificadas en base64.
+
+### Cadena de ataque / Attack Chain
+
+```text
+nmap -> enumeración web/WordPress -> wpscan (usuarios y plugins) -> fuerza bruta -> shell inicial -> escalada de privilegios (sudo/chmod) -> lectura de flags (user y root)
+```
+
+**Learning chain:** Enumeración -> WordPress/wpscan -> fuerza bruta -> acceso inicial -> escalada de privilegios -> flags en base64.
+
+**Lección:** *En las máquinas "fáciles" casi siempre queda abierta una vía clásica (WordPress + fuerza bruta + sudo); enumerar primero y revisar `sudo -l` es la forma más rápida de resolverlas.*
+
+**MITRE ATT&CK:** T1078 - Valid Accounts; T1548 - Abuse Elevation Control Mechanism
+
+**Fuente:** [TryHackMe - ColddBox_ Easy](https://tryhackme.com/room/colddboxeasy)
 
 ---
 

@@ -1,4 +1,10 @@
-# Advent 2025\Winners [N/A]
+# Advent of Cyber 2025 - Winners
+
+| Dificultad | Tipo | Slug | Link | Sección | Fuente | Componentes | Impacto |
+|---|---|---|---|---|---|---|---|
+| N/A | Resultados | `advent2025` | N/A | Advent of Cyber Tryhackme | texto oficial THM + anotaciones propias | tabla con 2033 ganadores y sus premios del sorteo | registra los ganadores y premios del cierre del advent of cyber 2025 |
+
+**Contexto:** Archivo auxiliar con los resultados del sorteo de premios del Advent of Cyber 2025 de TryHackMe. Lista los **2033** ganadores con sus avatares y el premio asignado (certificaciones, hardware y suscripciones).
 Total de registros: **2033**
 
 | Foto | Usuario | Premio(s) |

@@ -1,16 +1,35 @@
-# Advent 2024 [N/A]
+# Advent 2024
 
-<h1 align="center">
-🎄 TryHackMe – Advent of Cyber 2024
+| Dificultad | Tipo | Slug | Link | Sección | Fuente | Componentes | Impacto |
+|---|---|---|---|---|---|---|---|
+| N/A | Índice (Readme) | `readme` | [TryHackMe](https://tryhackme.com/room/adventofcyber2024?auto-join=true) | Advent of Cyber Tryhackme | texto oficial THM + anotaciones propias | índice / portada del evento | Página índice/README del Advent of Cyber 2024, con 24 días de retos navideños |
 
-Video:
-https://www.youtube.com/watch?v=_LaJcxtNCM8
+---
+
+**Contexto:** Este README es la página índice de la carpeta **Advent 2024**. El evento "Advent of Cyber 2024" es el sexto calendario de adviento de seguridad de TryHackMe, con un reto nuevo cada día hasta Navidad accesible desde el room `adventofcyber2024`. El README recoge los enlaces de referencia del evento (página oficial y video).
+
+> 🎄 TryHackMe – Advent of Cyber 2024
+
+Video: https://www.youtube.com/watch?v=_LaJcxtNCM8
 
 Link principal: https://tryhackme.com/christmas-2024
 
 Link event: https://tryhackme.com/room/adventofcyber2024?auto-join=true
 
-</h1>
+**Metodología:**
+
+1. Navegación del catálogo: portada del evento, video oficial y enlace al room adventofcyber2024
+
+**Learning chain:** Advent of Cyber 2024 -> adventofcyber2024
+
+**Lección:** *El README del Advent of Cyber 2024 da acceso centralizado al evento: video, página principal y room de retos diarios.*
+
+**MITRE ATT&CK:**
+
+- N/A (índice del evento)
+
+**Fuente:** [TryHackMe - Advent 2024 [N/A]](https://tryhackme.com/room/adventofcyber2024?auto-join=true)
+
 
 ---
 

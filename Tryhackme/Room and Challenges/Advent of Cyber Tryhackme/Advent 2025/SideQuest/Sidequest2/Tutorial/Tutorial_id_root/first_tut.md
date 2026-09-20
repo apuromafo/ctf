@@ -1,6 +1,10 @@
-#source https://github.com/id-root/Scheme-Catcher
+# SideQuest 2 - Tutorial (Tutorial_id_root) [first_tut]
 
-# Advent 2025\SideQuest\Sidequest\Sidequest2\Tutorial\Tutorial_id_root [N/A]
+| Dificultad | Tipo | Slug | Link | Sección | Fuente | Componentes | Impacto |
+|---|---|---|---|---|---|---|---|
+| N/A | Tutorial SideQuest | `advent2025` | N/A | Advent of Cyber Tryhackme | texto oficial THM + anotaciones propias | tutorial (primera parte) sobre el binario beacon.bin con xor, gdb y writeup de heap | resuelve la primera etapa de scheme catcher y documenta el exploit de heap (uaf/tcache/fsop) |
+
+**Contexto:** Tutorial auxiliar de la primera parte de la SideQuest 2 (Scheme Catcher) del Advent of Cyber 2025, centrado en el análisis del binario `beacon.bin`. Documenta la cadena de explotación de heap (UAF + tcache poisoning + FSOP) con la que se completa el reto.
 
 - **Challenge:** beacon.bin (First Stage)  
 - **Category:** Binary Exploitation / Reverse Engineering  

@@ -1,6 +1,10 @@
-#source https://github.com/id-root/BreachBlocker-Unlocker
+# SideQuest 4 - Tutorial (Tutorial_id_root)
 
-# Advent 2025\SideQuest\Sidequest\Sidequest4\Tutorial\Tutorial_id_root [N/A]
+| Dificultad | Tipo | Slug | Link | Sección | Fuente | Componentes | Impacto |
+|---|---|---|---|---|---|---|---|
+| N/A | Tutorial SideQuest | `advent2025` | [TryHackMe](https://tryhackme.com/room/sq4-aoc2025-32LoZ4zePK) | Advent of Cyber Tryhackme | texto oficial THM + anotaciones propias | tutorial de la sidequest 4 con recuperacion de la contrasena de hopflix y brute force del otp | guia con las 3 banderas (codigo fuente, hopflix y hopsec bank) de breachblocker unlocker |
+
+**Contexto:** Tutorial auxiliar de la SideQuest 4 (BreachBlocker Unlocker) del Advent of Cyber 2025. Documenta la recuperación de la contraseña de Hopflix a partir del hash por bloques SHA-1 y la obtención de las tres banderas del reto (código fuente, Hopflix y Hopsec Bank con brute force del OTP).
 
 ##### Check out Advent Of Cyber 2025 Side quest 4 by TryHackMe: https://tryhackme.com/room/sq4-aoc2025-32LoZ4zePK
 

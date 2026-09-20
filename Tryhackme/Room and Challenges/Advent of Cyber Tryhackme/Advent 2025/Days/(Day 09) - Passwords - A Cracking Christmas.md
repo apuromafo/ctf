@@ -1,17 +1,21 @@
-# Passwords - A Cracking Christmas [EASY]
+# Passwords - A Cracking Christmas
 
-### Información de la Sala / Room Information
-
-| Propiedad / Property | Valor / Value |
-| --- | --- |
-| **Nombre / Name** | Passwords - A Cracking Christmas |
-| **Evento / Event** | Advent of Cyber 2025 — Día 09 |
-| **Sala / Room URL** | https://tryhackme.com/room/adventofcyber25 |
-| **Dificultad / Difficulty** | Easy |
-| **Descripción / Description** | Día 09 del calendario AoC 2025 (Passwords - A Cracking Christmas). Solución/respuestas del reto diario. |
+| **Dificultad** | Easy | **Tipo** | walkthrough | **Slug** | `day09passwordsacrackingchristmas` |
+| **Link** | [TryHackMe](https://tryhackme.com/room/adventofcyber25) |
+| **Sección** | Advent of Cyber Tryhackme |
+| **Fuente** | texto oficial THM + anotaciones propias |
+| **Componentes** | password cracking / dictionary attacks / mask attacks / brute-force attacks / rockyou.txt / common-passwords.txt / pdfcrack / fcrackzip / john / hashcat / zip2john / pdf2john / GPU-accelerated cracking |
+| **Impacto** | Detectar y responder ante intentos de cracking de contraseñas sobre archivos protegidos (PDF/ZIP) |
 
 ---
 
+**Contexto:** Día 09 del Advent of Cyber 2025. Se presentan las formas de adivinar la contraseña que protege un archivo (ataques de diccionario, mask attacks y fuerza bruta), las wordlists más comunes (rockyou.txt y common-passwords.txt), las herramientas según el tipo de archivo (pdfcrack/john para PDF, fcrackzip/john para ZIP) y los indicadores para detectar password cracking en una máquina comprometida, cerrando con los flags del PDF y del ZIP cifrados.
+
+## Solucionario
+
+### Día 09: Passwords - A Cracking Christmas
+
+**Explicación:**
 
 - Ways of guessing the password that protects a file
      1. Dictionary Attacks: Use a predefined list of potential passwords (AKA wordlist); useful in case of weak or common passwords
@@ -32,7 +36,7 @@
     1. Binaries and aliases: john, hashcat, fcrackzip, pdfcrack, zip2john, pdf2john.pl, 7z, qpdf, unzip, 7za, perl invoking pdf2john.pl.
     2. Command‑line traits: --wordlist, -w, --rules, --mask, -a 3, -m in Hashcat, references to rockyou.txt, SecLists, zip2john, pdf2john.
     3. Potfiles and state: ~/.john/john.pot, .hashcat/hashcat.potfile, john.rec.
- 
+
 - Steps to take when suspicious activity or a possible password-cracking on a machine is detected:
     1. Isolate the system if real malicious activity is suspected; ignore or suppress alerts if it’s just a lab or training machine.
     2. Collect evidence early (running processes, memory, GPU usage, open files, and the protected file involved).
@@ -41,9 +45,27 @@
     5. Decide intent by identifying who ran the activity and whether it was authorised; escalate if it wasn’t.
     6. Fix and prevent by changing compromised passwords/keys, enforcing MFA, and educating users to keep such tools only in approved lab environments.
 
-## Respuestas / Answers
-- What is the flag inside the encrypted PDF? : `THM{Cr4ck1ng_PDFs_1s_34$y}`
-- What is the flag inside the encrypted zip file? : `THM{Cr4ck1n6_z1p$_1s_34$yyyy}`
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | What is the flag inside the encrypted PDF? | `THM{Cr4ck1ng_PDFs_1s_34$y}` |
+| 2 | What is the flag inside the encrypted zip file? | `THM{Cr4ck1n6_z1p$_1s_34$yyyy}` |
+
+---
+
+**Metodología:** Se identificó el tipo de archivo protegido (PDF y ZIP) y se seleccionó la herramienta de cracking adecuada: para el PDF se extrajo el hash con pdf2john y se crackeó con john/hashcat, mientras que para el ZIP se usó zip2john o fcrackzip. Con las contraseñas recuperadas se abrieron ambos archivos y se obtuvieron los flags.
+**Learning chain:** Dictionary Attacks -> Mask Attacks -> Brute-force Attacks -> Wordlists (rockyou.txt / common-passwords.txt) -> pdf2john/zip2john (extracción de hash) -> john/hashcat/fcrackzip/pdfcrack -> descifrado de PDF y ZIP -> Flags
+
+Cadena de ataque / Attack Chain:
+```
+pdf2john.pl archivo.pdf -> hash -> john --wordlist=rockyou.txt -> contraseña PDF -> flag THM{Cr4ck1ng_PDFs_1s_34$y}
+zip2john archivo.zip -> hash -> john/hashcat (--mask o --wordlist) -> contraseña ZIP -> flag THM{Cr4ck1n6_z1p$_1s_34$yyyy}
+```
+
+**Lección:** *El cracking de contraseñas no es solo fuerza bruta: elegir el ataque correcto (diccionario, mask o fuerza bruta) y la herramienta adecuada al tipo de archivo (pdfcrack vs fcrackzip vs john/hashcat) es clave; además, cualquier máquina con john/hashcat, wordlists y potfiles debe considerarse sospechosa.*
+
+**MITRE ATT&CK:** T1110.002 - Password Cracking
+
+**Fuente:** [TryHackMe - Passwords - A Cracking Christmas](https://tryhackme.com/room/adventofcyber25)
 
 ---
 

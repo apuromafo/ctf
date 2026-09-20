@@ -14,7 +14,7 @@
 
 ### Task 1: Flag hidden in the file
 
-**Explicacion:** Egg decode con password `tit_for_tat`. Luego `sudo nmap -sV -p22,80,9004,21337 -sS -T4 --min-rate 2000 -n -Pn 10.66.147.238`. Puertos abiertos: 22 (ssh OpenSSH 9.6p1 Ubuntu), 80 (http Apache 2.4.58 Ubuntu), 9004 (unknown - "Payload Storage Malhare's"), 21337 (http Werkzeug 3.0.1 Python). El puerto 9004 muestra el banner "Payload Storage Malhare's Version 4.2.0" con menu `[1] C: [2] U: [3] D: [4] E:`. Hay un folder `/dev` en el puerto 80. Se ejecuta `./beacon.bin`, Enter key: `EastMass` -> "Hello EastMass! Access granted! Starting socket server... Socket server listening on port 4444...". Leyendo los strings se obtiene la flag 1.
+**Explicación:** Egg decode con password `tit_for_tat`. Luego `sudo nmap -sV -p22,80,9004,21337 -sS -T4 --min-rate 2000 -n -Pn 10.66.147.238`. Puertos abiertos: 22 (ssh OpenSSH 9.6p1 Ubuntu), 80 (http Apache 2.4.58 Ubuntu), 9004 (unknown - "Payload Storage Malhare's"), 21337 (http Werkzeug 3.0.1 Python). El puerto 9004 muestra el banner "Payload Storage Malhare's Version 4.2.0" con menu `[1] C: [2] U: [3] D: [4] E:`. Hay un folder `/dev` en el puerto 80. Se ejecuta `./beacon.bin`, Enter key: `EastMass` -> "Hello EastMass! Access granted! Starting socket server... Socket server listening on port 4444...". Leyendo los strings se obtiene la flag 1.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -22,7 +22,7 @@
 
 ### Task 2: Content of foothold.txt
 
-**Explicacion:** Sobre `tmp` en strings se puede usar como patron para entrar a un folder. El folder tiene otro binario `/7ln6Z1X***` y un file para la flag 2. El siguiente paso es pwn en local y despues en remoto.
+**Explicación:** Sobre `tmp` en strings se puede usar como patron para entrar a un folder. El folder tiene otro binario `/7ln6Z1X***` y un file para la flag 2. El siguiente paso es pwn en local y despues en remoto.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -30,7 +30,7 @@
 
 ### Task 3: Content of user.txt
 
-**Explicacion:** Analisis del binario (decompilacion del menu): las funciones son `create()` (malloc), `update()` (read offset), `delete()` (free), `menu()`. El programa permite `[1] C:` create, `[2] U:` update, `[3] D:` delete, `[4] E:` exit. Heap exploitation: el `update()` escribe `chunks[opt] + v2` (offset) con `sizes[opt] - v2` bytes (vulnerabilidad de heap overflow/corruption) y el `delete()` hace `free()` sin UAF check robusto. Condiciones: `opt <= 0xF8 && chunks[opt]`. Referencias de heap exploitation (leakless): `https://corgi.rip/posts/leakless_heap_1/` y `https://github.com/corgeman/leakless_research/`.
+**Explicación:** Analisis del binario (decompilacion del menu): las funciones son `create()` (malloc), `update()` (read offset), `delete()` (free), `menu()`. El programa permite `[1] C:` create, `[2] U:` update, `[3] D:` delete, `[4] E:` exit. Heap exploitation: el `update()` escribe `chunks[opt] + v2` (offset) con `sizes[opt] - v2` bytes (vulnerabilidad de heap overflow/corruption) y el `delete()` hace `free()` sin UAF check robusto. Condiciones: `opt <= 0xF8 && chunks[opt]`. Referencias de heap exploitation (leakless): `https://corgi.rip/posts/leakless_heap_1/` y `https://github.com/corgeman/leakless_research/`.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -38,7 +38,7 @@
 
 ### Task 4: Content of root.txt
 
-**Explicacion:** Escalada final tras el heap exploitation completo.
+**Explicación:** Escalada final tras el heap exploitation completo.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -79,3 +79,15 @@
 - T1190 - Exploit Public-Facing Application
 
 **Fuente:** [TryHackMe - Scheme Catcher](https://tryhackme.com/room/sq2-aoc2025-JxiOKUSD9R)
+---
+
+## ⚠️ Descargo de Responsabilidad (Disclaimer)
+
+
+Este contenido se presenta exclusivamente con fines académicos y educativos.
+
+
+**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
+**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
+**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
+**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.

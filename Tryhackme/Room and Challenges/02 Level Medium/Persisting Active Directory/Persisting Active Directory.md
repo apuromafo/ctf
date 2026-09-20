@@ -1,24 +1,21 @@
-# Persisting Active Directory [MEDIUM]
+# Persisting Active Directory
 
-### Información de la Sala / Room Information
-
-* **Dificultad / Difficulty:** MEDIUM
-* **Tipo / Type:** Walkthrough (Premium)
-* **Slug:** `persistingad`
-* **Link:** https://tryhackme.com/room/persistingad
-* **Sección / Section:** Windows / Active Directory
-* **Fuente / Source:** Writeup de thmrevenant (GitHub)
+| **Dificultad** | MEDIUM | **Tipo** | Walkthrough (Premium) | **Slug** | `persistingad` |
+| **Link** | [TryHackMe](https://tryhackme.com/room/persistingad) | **Sección** | Windows / Active Directory | **Fuente** | Writeup de thmrevenant (GitHub) |
+| **Componentes** | Credential Hunting, DCSync, Mimikatz, Golden/Silver Tickets, ForgeCert.exe, SID History, ntds.dit, Group Nesting, AdminSDHolder, SDProp, GPOs | **Impacto** | Persistencia prolongada en un dominio Active Directory mediante robo de credenciales, falsificación de tickets Kerberos, inyección de SID History y abuso de ACLs y GPOs |
 
 ---
 
-## Solucionario de Tareas / Task Solutions
+**Contexto:** Esta sala introduce las técnicas de persistencia en entornos Active Directory. Se cubren el robo y uso de credenciales con DCSync y Mimikatz, la falsificación de golden y silver tickets, el forjado de certificados con ForgeCert.exe, la inyección de SID History y el group nesting, y el abuso de ACLs mediante AdminSDHolder/SDProp y de GPOs con Restricted Groups y Delegation. El objetivo es mantener acceso al dominio za.tryhackme.loc a lo largo del tiempo.
 
 > **ES:** Introducción a las técnicas de persistencia en entornos Active Directory, cubriendo golden/silver tickets, credenciales, SID History, grupo anidado y ACLs con AdminSDHolder.
 > **EN:** Introduction to persistence techniques in Active Directory environments, covering golden/silver tickets, credentials, SID History, group nesting, and ACLs with AdminSDHolder.
 
----
+## Solucionario
 
-### Task 1 — Credential Hunting y Golden/Silver Tickets
+### Task 1: Credential Hunting y Golden/Silver Tickets / Credential Hunting and Golden/Silver Tickets
+
+**Explicación:** Se obtienen credenciales y hashes mediante DCSync con Mimikatz: el comando para el usuario `test` del dominio `za.tryhackme.loc` es `lsadump::dcsync /domain:za.tryhackme.loc /user:test`. El hash NTLM asociado a krbtgt (cuya cuenta firma los tickets Kerberos) es `16f9af38fca3ada405386b3b57366082`. Un golden ticket impersona un TGT legítimo, un silver ticket impersona un TGS, y la vida útil por defecto de un golden ticket generado por Mimikatz es de 10 años. Los certificados se firman con la `private key` y, teniendo el certificado y la clave privada de la CA, se puede forjar uno con ForgeCert.exe. Para pasar un ticket desde el archivo ticket.kirbi se usa `kerberos::ptt ticket.kirbi`.
 
 | Pregunta / Question | Respuesta / Answer |
 |----------|--------|
@@ -32,9 +29,9 @@
 | What application can we use to forge a certificate if we have the CA certificate and private key? | `ForgeCert.exe` |
 | What is the Mimikatz command to pass a ticket from a file with the name of ticket.kirbi? | `kerberos::ptt ticket.kirbi` |
 
----
+### Task 2: SID History y Group Nesting / SID History and Group Nesting
 
-### Task 2 — SID History y Group Nesting
+**Explicación:** El atributo de objeto AD usado para especificar SIDs del dominio anterior de un objeto y permitir una migración sin fricción a un nuevo dominio es `SIDHistory`. El archivo de base de datos del controlador de dominio que almacena toda la información de AD es `ntds.dit`. Tras inyectar los valores de SID History, el servicio ntds se reinicia con `Start-Service -Name ntds`. El término para describir grupos AD que son miembros de otros grupos AD es Group Nesting, y el comando para añadir el miembro `thmtest` al grupo `thmgroup` es `Add-ADGroupMember -Identity "thmgroup" -Members "thmtest"`.
 
 | Pregunta / Question | Respuesta / Answer |
 |----------|--------|
@@ -44,9 +41,9 @@
 | What is the term used to describe AD groups that are members of other AD groups? | `Group Nesting` |
 | What is the command to add a new member, thmtest, to the AD group, thmgroup? | `Add-ADGroupMember -Identity "thmgroup" -Members "thmtest"` |
 
----
+### Task 3: ACLs y AdminSDHolder / ACLs and AdminSDHolder
 
-### Task 3 — ACLs y AdminSDHolder
+**Explicación:** Las ACL del grupo `AdminSDHolder` se usan como plantilla para las ACL de todos los grupos protegidos, y el servicio `SDProp` (SD Propagation) actualiza periódicamente las ACL de esos grupos para que coincidan con la plantilla. El permiso de ACL que permite al usuario realizar cualquier acción sobre el objeto AD es `Full Control`. Para gestionar GPOs se usa el snap-in de MMC `Group Policy Management`, y el sub-GPO que concede a usuarios y grupos acceso a grupos locales de los hosts es `Restricted Groups`. La pestaña usada para modificar los permisos de seguridad sobre el GPO es `Delegation`.
 
 | Pregunta / Question | Respuesta / Answer |
 |----------|--------|
@@ -57,9 +54,32 @@
 | What sub-GPO is used to grant users and groups access to local groups on the hosts that the GPO applies to? | `Restricted Groups` |
 | What tab is used to modify the security permissions that users and groups have on the GPO? | `Delegation` |
 
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1.1 | What is the Mimikatz command to perform a DCSync for the username of test on the za.tryhackme.loc domain? | `lsadump::dcsync /domain:za.tryhackme.loc /user:test` |
+| 1.2 | What is the NTLM hash associated with the krbtgt user? | `16f9af38fca3ada405386b3b57366082` |
+| 1.3 | Which AD account's NTLM hash is used to sign Kerberos tickets? | `krbtgt` |
+| 1.4 | What is the name of a ticket that impersonates a legitimate TGT? | `Golden ticket` |
+| 1.5 | What is the name of a ticket that impersonates a legitimate TGS? | `Silver ticket` |
+| 1.6 | What is the default lifetime (in years) of a golden ticket generated by Mimikatz? | `10` |
+| 1.7 | What key is used to sign certificates to prove their authenticity? | `private key` |
+| 1.8 | What application can we use to forge a certificate if we have the CA certificate and private key? | `ForgeCert.exe` |
+| 1.9 | What is the Mimikatz command to pass a ticket from a file with the name of ticket.kirbi? | `kerberos::ptt ticket.kirbi` |
+| 2.1 | What AD object attribute is normally used to specify SIDs from the object's previous domain to allow seamless migration to a new domain? | `SIDHistory` |
+| 2.2 | What is the database file on the domain controller that stores all AD information? | `ntds.dit` |
+| 2.3 | What is the PowerShell command to restart the ntds service after we injected our SID history values? | `Start-Service -Name ntds` |
+| 2.4 | What is the term used to describe AD groups that are members of other AD groups? | `Group Nesting` |
+| 2.5 | What is the command to add a new member, thmtest, to the AD group, thmgroup? | `Add-ADGroupMember -Identity "thmgroup" -Members "thmtest"` |
+| 3.1 | What AD group's ACLs are used as a template for the ACLs of all Protected Groups? | `AdminSDHolder` |
+| 3.2 | What AD service updates the ACLs of all Protected Groups to match that of the template? | `SDProp` |
+| 3.3 | What ACL permission allows the user to perform any action on the AD object? | `Full Control` |
+| 3.4 | What MMC snap-in can be used to manage GPOs? | `Group Policy Management` |
+| 3.5 | What sub-GPO is used to grant users and groups access to local groups on the hosts that the GPO applies to? | `Restricted Groups` |
+| 3.6 | What tab is used to modify the security permissions that users and groups have on the GPO? | `Delegation` |
+
 ---
 
-## Metodología / Methodology
+**Metodología:**
 
 1. **Paso / Step:** Obtener credenciales y hashes mediante DCSync con Mimikatz / Obtain credentials and hashes via DCSync with Mimikatz.
 2. **Paso / Step:** Identificar el hash NTLM de krbtgt para forjar golden/silver tickets / Identify the krbtgt NTLM hash to forge golden/silver tickets.
@@ -82,7 +102,13 @@ Credential Hunting: lsadump::dcsync /domain:za.tryhackme.loc /user:test
               -> Modificar GPOs: Restricted Groups y Delegation para persistencia
 ```
 
-**Lección:** La persistencia en Active Directory se puede lograr mediante múltiples vectores: robo de credenciales y tickets (golden/silver), inyección de SID History, abuso de group nesting y manipulación de ACLs a través de AdminSDHolder y GPOs. Cada técnica explota componentes centrales de la autenticación y autorización de AD.
+**Learning chain:** Credential Hunting (DCSync/lsadump) → Hash NTLM de krbtgt → Golden ticket (TGT, 10 años) / Silver ticket (TGS) → ForgeCert.exe (CA private key) → Passe-the-ticket (kerberos::ptt) → Inyección de SIDHistory (ntds.dit) y reinicio del servicio → Group Nesting → ACLs de AdminSDHolder/SDProp → Persistencia vía GPOs (Restricted Groups y Delegation).
+
+**Lección:** *La persistencia en Active Directory se puede lograr mediante múltiples vectores: robo de credenciales y tickets (golden/silver), inyección de SID History, abuso de group nesting y manipulación de ACLs a través de AdminSDHolder y GPOs. Cada técnica explota componentes centrales de la autenticación y autorización de AD.*
+
+**MITRE ATT&CK:** T1558.001 (Steal or Forge Kerberos Tickets: Golden Ticket), T1558.002 (Silver Ticket), T1003.006 (OS Credential Dumping: DCSync), T1098 (Account Manipulation), T1484.002 (Domain Policy Modification: GPO Manipulation)
+
+**Fuente:** [TryHackMe - Persisting Active Directory](https://tryhackme.com/room/persistingad)
 
 ---
 

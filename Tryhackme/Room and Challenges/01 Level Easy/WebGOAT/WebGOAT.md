@@ -1,6 +1,47 @@
-# WebGOAT [EASY]
+# WebGOAT
 
+| Dificultad | Tipo | Slug | Link | Sección | Fuente | Componentes | Impacto |
+|-----------|------|------|------|---------|--------|--------------|---------|
+| Easy | walkthrough | `webgoat` | https://tryhackme.com/room/webgoat | 01 Level Easy | TryHackMe | Aplicación web vulnerable, reto de hacking web guiado | Resolución del reto WebGOAT sobre una aplicación web deliberadamente vulnerable |
+
+---
+
+**Contexto:** Reto corto de TryHackMe sobre una aplicación web vulnerable llamada WebGOAT: se interactúa con el servicio en el entorno del lab para resolver el reto planteado. El resumen original conserva únicamente las respuestas posicionales, sin los enunciados de las preguntas.
+
+> **ES:** Interactúa con la aplicación web vulnerable WebGOAT para resolver el reto de la sala.
+> **EN:** Interact with the deliberately vulnerable WebGOAT web app to solve the room challenge.
+
+## Solucionario
+
+### Task 1: Introducción / Introduction
+
+**Explicación:** Se despliega el entorno y se accede a la aplicación web vulnerable para completar el reto. No requiere respuesta en el enunciado original.
+
+```
 1. No answer needed
+```
+
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | *(Pregunta 1 no especificada en el original)* | `No answer needed` |
+
+---
+
+**Metodología:** Despliegue del entorno → acceso a la aplicación WebGOAT → interacción con el reto → validación del resultado.
+
+### Cadena de ataque / Attack Chain
+
+```text
+Deploy -> acceder a la app vulnerable WebGOAT -> resolver el reto web guiado -> completar la sala
+```
+
+**Learning chain:** Despliegue → acceso a la aplicación vulnerable → resolución del reto → finalización de la sala
+
+**Lección:** *Las aplicaciones deliberadamente vulnerables permiten practicar técnicas de hacking web en un entorno controlado y seguro.*
+
+**MITRE ATT&CK:** T1190 (Exploit Public-Facing Application)
+
+**Fuente:** [TryHackMe - WebGOAT](https://tryhackme.com/room/webgoat)
 
 ---
 

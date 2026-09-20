@@ -14,7 +14,7 @@
 
 ### Task 1: CODE_FLAG
 
-**Explicacion:** Reverse engineering del codigo fuente del BreachBlocker para encontrar la flag oculta en el codigo. Se accedio al source code y se exploto la logica del bloqueador.
+**Explicación:** Reverse engineering del codigo fuente del BreachBlocker para encontrar la flag oculta en el codigo. Se accedio al source code y se exploto la logica del bloqueador.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -22,7 +22,7 @@
 
 ### Task 2: HOPFLIX_FLAG
 
-**Explicacion:** Analisis de la plataforma Hopflix dentro del reto, involucrando timing-attack y side-channel para obtener la contrasena de la temporada 4.
+**Explicación:** Analisis de la plataforma Hopflix dentro del reto, involucrando timing-attack y side-channel para obtener la contrasena de la temporada 4.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -30,7 +30,7 @@
 
 ### Task 3: BANK_FLAG
 
-**Explicacion:** Explotacion de vulnerabilidades en el sistema bancario del trono para obtener la balance negativa (neggative).
+**Explicación:** Explotacion de vulnerabilidades en el sistema bancario del trono para obtener la balance negativa (neggative).
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -65,3 +65,15 @@
 - T1592 - Gather Victim Host Information
 
 **Fuente:** [TryHackMe - BreachBlocker Unlocker](https://tryhackme.com/room/sq4-aoc2025-32LoZ4zePK)
+---
+
+## ⚠️ Descargo de Responsabilidad (Disclaimer)
+
+
+Este contenido se presenta exclusivamente con fines académicos y educativos.
+
+
+**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
+**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
+**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
+**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.

@@ -1,17 +1,21 @@
-# Modbus - Claus for Concern [EASY]
+# Modbus - Claus for Concern
 
-### Información de la Sala / Room Information
-
-| Propiedad / Property | Valor / Value |
-| --- | --- |
-| **Nombre / Name** | Modbus - Claus for Concern |
-| **Evento / Event** | Advent of Cyber 2025 — Día 19 |
-| **Sala / Room URL** | https://tryhackme.com/room/adventofcyber25 |
-| **Dificultad / Difficulty** | Easy |
-| **Descripción / Description** | Día 19 del calendario AoC 2025 (Modbus - Claus for Concern). Solución/respuestas del reto diario. |
+| **Dificultad** | Easy | **Tipo** | walkthrough | **Slug** | `day19modbusclausforconcern` |
+| **Link** | [TryHackMe](https://tryhackme.com/room/adventofcyber25) |
+| **Sección** | Advent of Cyber Tryhackme |
+| **Fuente** | texto oficial THM + anotaciones propias |
+| **Componentes** | SCADA / PLCs / Modbus TCP / port 502 / registers / coils / ICS / industrial protocols |
+| **Impacto** | Entender por qué los sistemas SCADA/PLC con Modbus son objetivos atractivos y manipular sus registros/coils |
 
 ---
 
+**Contexto:** Día 19 del Advent of Cyber 2025. Se introducen los sistemas industriales: **SCADA** (centro de mando de operaciones industriales que conecta operadores humanos con máquinas físicas) y los **PLC** (cerebros de la automatización que leen sensores, ejecutan lógica y mandan comandos a actuadores). Se explica por qué SCADA es un objetivo atractivo (software legado, credenciales por defecto, diseño orientado a fiabilidad más que a seguridad, procesos físicos, conexión a redes corporativas y protocolos inseguros como Modbus) y se detalla **Modbus**, el antiguo protocolo industrial de comunicación que corre por defecto en el puerto **502**, donde los **registers** equivalen a configuración y las **coils** a interruptores.
+
+## Solucionario
+
+### Día 19: Modbus - Claus for Concern
+
+**Explicación:**
 
 - SCADA (Supervisory Control and Data Acquisition) -> Command centre for industrial operations; bridge human operators and physical machines
 - PLCs (Programmable Logic Controllers) -> brains of automation; read sensor input, execute logic rules, and send commands to actuators
@@ -24,14 +28,31 @@
      6. Use insecure protocols like Modbus
 
 - Modbus -> old industrial communication protocol
-  <img width="974" height="323" alt="Screenshot 2025-12-23 at 7 30 35 PM" src="https://github.com/user-attachments/assets/2c5c5755-382c-47c3-92d0-d243d5809096" />
+  ![Modbus protocol](img/task19-1.png)
 - Default Modbus TCP port : 502
 - Registers = configuration
 - Coils = switches
 
-## Respuestas / Answers
-- What port is commonly used by Modbus TCP? : `502`
-- What's the flag? : `THM{eGgMas0V3r}`
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | What port is commonly used by Modbus TCP? | `502` |
+| 2 | What's the flag? | `THM{eGgMas0V3r}` |
+
+---
+
+**Metodología:** Se conectó al servicio Modbus (puerto 502) de la máquina industrial y se interactuó con los registros/coils del SCADA, entendiendo la diferencia entre registers (configuración) y coils (interruptores). Mediante escritura y lectura de esas unidades se completó el reto y se capturó el flag.
+**Learning chain:** SCADA (command centre) -> PLCs (automatización) -> protocolo Modbus (puerto 502) -> registers (config) / coils (switches) -> manipulación -> flag
+
+Cadena de ataque / Attack Chain:
+```
+escaneo de puertos -> Modbus TCP en 502 -> leer/escribir registers y coils -> control del proceso SCADA/PLC -> flag THM{eGgMas0V3r}
+```
+
+**Lección:** *Los sistemas industriales priorizan la fiabilidad sobre la seguridad: software legado, credenciales por defecto y protocolos en claro como Modbus convierten a SCADA/PLC en un blanco con impacto físico real; conocer que registers y coils son la superficie de configuración es el primer paso.*
+
+**MITRE ATT&CK:** T0869 - Standard Application Layer Protocol: Modbus, T0855 - Unauthorized Command Message, T0836 - Modify Control Logic
+
+**Fuente:** [TryHackMe - Modbus - Claus for Concern](https://tryhackme.com/room/adventofcyber25)
 
 ---
 

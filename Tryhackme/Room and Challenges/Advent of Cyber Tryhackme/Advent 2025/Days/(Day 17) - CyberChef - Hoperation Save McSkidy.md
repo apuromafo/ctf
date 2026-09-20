@@ -1,19 +1,23 @@
-# CyberChef - Hoperation Save McSkidy [EASY]
+# CyberChef - Hoperation Save McSkidy
 
-### Información de la Sala / Room Information
-
-| Propiedad / Property | Valor / Value |
-| --- | --- |
-| **Nombre / Name** | CyberChef - Hoperation Save McSkidy |
-| **Evento / Event** | Advent of Cyber 2025 — Día 17 |
-| **Sala / Room URL** | https://tryhackme.com/room/adventofcyber25 |
-| **Dificultad / Difficulty** | Easy |
-| **Descripción / Description** | Día 17 del calendario AoC 2025 (CyberChef - Hoperation Save McSkidy). Solución/respuestas del reto diario. |
+| **Dificultad** | Easy | **Tipo** | walkthrough | **Slug** | `day17cyberchefhoperationsavemcskidy` |
+| **Link** | [TryHackMe](https://tryhackme.com/room/adventofcyber25) |
+| **Sección** | Advent of Cyber Tryhackme |
+| **Fuente** | texto oficial THM + anotaciones propias |
+| **Componentes** | CyberChef / data transformation / encode/decode / XOR (self-reversible) / MD5 / CrackStation / hash cracking / locks |
+| **Impacto** | Recuperar una cadena de contraseñas y el flag final usando operaciones de CyberChef |
 
 ---
 
+**Contexto:** Día 17 del Advent of Cyber 2025. Se usa **CyberChef**, la herramienta de transformación de datos que permite codificar/decodificar, transformar formatos y encadenar múltiples operaciones. Se aplica que el **XOR es auto-reversible** y que el **MD5** produce un hash de longitud fija, es una función de un solo sentido (no reversible matemáticamente) pero las bases de datos de hashes precomputados (como CrackStation) pueden revelar la entrada original. Con eso se abren cinco candillos que protegen el flag recuperado.
 
-<img width="733" height="404" alt="Screenshot 2025-12-23 at 6 46 44 PM" src="https://github.com/user-attachments/assets/91b5c4f8-9fad-409e-b41a-6959c94c7eeb" />
+## Solucionario
+
+### Día 17: CyberChef - Hoperation Save McSkidy
+
+**Explicación:**
+
+![CyberChef XOR decode](img/task17-1.png)
 
 - **CyberChef** -> data transformation tool; encode/decode data, transform formats, chain multiple operations
 - XOR is self-reversible
@@ -23,13 +27,30 @@
     3. can't reverse it mathematically
     4. Precomputed hash databases can reveal the original input
 
-## Respuestas / Answers
-- What is the password for the first lock? : `Iamsofluffy`
-- What is the password for the second lock? : `Itoldyoutochangeit!`
-- What is the password for the third lock? : `BugsBunny`
-- What is the password for the fourth lock? : `passw0rd1`
-- What is the password for the fifth lock? : `51rBr34chBl0ck3r`
-- What is the retrieved flag? : `THM{M3D13V4L_D3C0D3R_4D3P7}`
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | What is the password for the first lock? | `Iamsofluffy` |
+| 2 | What is the password for the second lock? | `Itoldyoutochangeit!` |
+| 3 | What is the password for the third lock? | `BugsBunny` |
+| 4 | What is the password for the fourth lock? | `passw0rd1` |
+| 5 | What is the password for the fifth lock? | `51rBr34chBl0ck3r` |
+| 6 | What is the retrieved flag? | `THM{M3D13V4L_D3C0D3R_4D3P7}` |
+
+---
+
+**Metodología:** Se encadenaron operaciones de CyberChef (decodificación y transforms) sobre cada candillo: donde aparecía XOR se aplicó de nuevo XOR (auto-reversible), y donde aparecían hashes MD5 se consultó CrackStation para recuperar la entrada original. Con las cinco contraseñas obtenidas se desbloqueó la cadena y se recuperó el flag final.
+**Learning chain:** CyberChef -> encode/decode -> XOR (self-reversible) -> MD5 -> CrackStation (precomputed hash databases) -> 5 locks -> flag
+
+Cadena de ataque / Attack Chain:
+```
+lock 1 (Iamsofluffy) -> lock 2 (Itoldyoutochangeit!) -> lock 3 (BugsBunny) -> lock 4 (passw0rd1) -> lock 5 (51rBr34chBl0ck3r) -> THM{M3D13V4L_D3C0D3R_4D3P7}
+```
+
+**Lección:** *CyberChef convierte cualquier transformación de datos en un pipeline reproducible; el XOR se revierte aplicándose a sí mismo y un hash MD5 no se "descifra", simplemente se busca en bases precomputadas como CrackStation.*
+
+**MITRE ATT&CK:** T1140 - Deobfuscate/Decode Files or Information
+
+**Fuente:** [TryHackMe - CyberChef - Hoperation Save McSkidy](https://tryhackme.com/room/adventofcyber25)
 
 ---
 

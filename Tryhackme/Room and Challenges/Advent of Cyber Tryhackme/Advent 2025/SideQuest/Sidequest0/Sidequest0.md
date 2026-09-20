@@ -44,7 +44,7 @@ https://tryhackme.com/jr/ho-aoc2025-yboMoPbnEX
 
 ### Task 1: Flag Submissions - DB (user.txt)
 
-**Explicacion:** En Linux las flags estan en /user.txt (user.txt) y /root/root.txt (root.txt). En Windows: C:\user.txt y C:\Users\Administrator\root.txt. Los flags de DB.
+**Explicación:** En Linux las flags estan en /user.txt (user.txt) y /root/root.txt (root.txt). En Windows: C:\user.txt y C:\Users\Administrator\root.txt. Los flags de DB.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -52,7 +52,7 @@ https://tryhackme.com/jr/ho-aoc2025-yboMoPbnEX
 
 ### Task 2: AI.VANCHAT.LOC (user.txt)
 
-**Explicacion:** Primera flag del host AI.VANCHAT.LOC.
+**Explicación:** Primera flag del host AI.VANCHAT.LOC.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -60,7 +60,7 @@ https://tryhackme.com/jr/ho-aoc2025-yboMoPbnEX
 
 ### Task 3: AI.VANCHAT.LOC (root.txt)
 
-**Explicacion:** Flag root del host AI.VANCHAT.LOC, tras escalada de privilegios.
+**Explicación:** Flag root del host AI.VANCHAT.LOC, tras escalada de privilegios.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -68,7 +68,7 @@ https://tryhackme.com/jr/ho-aoc2025-yboMoPbnEX
 
 ### Task 4: TBFC.LOC (user.txt)
 
-**Explicacion:** Flag user del host TBFC.LOC.
+**Explicación:** Flag user del host TBFC.LOC.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -76,7 +76,7 @@ https://tryhackme.com/jr/ho-aoc2025-yboMoPbnEX
 
 ### Task 5: TBFC.LOC (root.txt)
 
-**Explicacion:** Flag root del host TBFC.LOC tras escalada de privilegios.
+**Explicación:** Flag root del host TBFC.LOC tras escalada de privilegios.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -84,7 +84,7 @@ https://tryhackme.com/jr/ho-aoc2025-yboMoPbnEX
 
 ### Task 6: VANCHAT.LOC (user.txt)
 
-**Explicacion:** Flag user del host VANCHAT.LOC.
+**Explicación:** Flag user del host VANCHAT.LOC.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -92,7 +92,7 @@ https://tryhackme.com/jr/ho-aoc2025-yboMoPbnEX
 
 ### Task 7: VANCHAT.LOC (root.txt)
 
-**Explicacion:** Flag root del host VANCHAT.LOC tras escalada de privilegios.
+**Explicación:** Flag root del host VANCHAT.LOC tras escalada de privilegios.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -100,7 +100,7 @@ https://tryhackme.com/jr/ho-aoc2025-yboMoPbnEX
 
 ### Task 8: SERVER1 (user.txt)
 
-**Explicacion:** Flag user del host SERVER1.
+**Explicación:** Flag user del host SERVER1.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -108,7 +108,7 @@ https://tryhackme.com/jr/ho-aoc2025-yboMoPbnEX
 
 ### Task 9: SERVER1 (root.txt)
 
-**Explicacion:** Flag root del host SERVER1 tras escalada de privilegios.
+**Explicación:** Flag root del host SERVER1 tras escalada de privilegios.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -116,7 +116,7 @@ https://tryhackme.com/jr/ho-aoc2025-yboMoPbnEX
 
 ### Task 10: SERVER2 (user.txt)
 
-**Explicacion:** Flag user del host SERVER2.
+**Explicación:** Flag user del host SERVER2.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -124,7 +124,7 @@ https://tryhackme.com/jr/ho-aoc2025-yboMoPbnEX
 
 ### Task 11: SERVER2 (root.txt)
 
-**Explicacion:** Flag root del host SERVER2 tras escalada de privilegios.
+**Explicación:** Flag root del host SERVER2 tras escalada de privilegios.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -132,7 +132,7 @@ https://tryhackme.com/jr/ho-aoc2025-yboMoPbnEX
 
 ### Task 12: SERVER3 (user.txt)
 
-**Explicacion:** Flag user del host SERVER3.
+**Explicación:** Flag user del host SERVER3.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -140,7 +140,7 @@ https://tryhackme.com/jr/ho-aoc2025-yboMoPbnEX
 
 ### Task 13: SERVER3 (root.txt)
 
-**Explicacion:** Flag root del host SERVER3 tras escalada de privilegios.
+**Explicación:** Flag root del host SERVER3 tras escalada de privilegios.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -148,7 +148,7 @@ https://tryhackme.com/jr/ho-aoc2025-yboMoPbnEX
 
 ### Task 14: SERVER4 (user.txt)
 
-**Explicacion:** Flag user del host SERVER4.
+**Explicación:** Flag user del host SERVER4.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -156,7 +156,7 @@ https://tryhackme.com/jr/ho-aoc2025-yboMoPbnEX
 
 ### Task 15: SERVER4 (root.txt)
 
-**Explicacion:** Flag root del host SERVER4 tras escalada de privilegios.
+**Explicación:** Flag root del host SERVER4 tras escalada de privilegios.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -164,7 +164,7 @@ https://tryhackme.com/jr/ho-aoc2025-yboMoPbnEX
 
 ### Task 16: Web (user.txt)
 
-**Explicacion:** Flag user del host Web.
+**Explicación:** Flag user del host Web.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -172,7 +172,7 @@ https://tryhackme.com/jr/ho-aoc2025-yboMoPbnEX
 
 ### Task 17: Web (root.txt)
 
-**Explicacion:** Flag root del host Web tras escalada de privilegios.
+**Explicación:** Flag root del host Web tras escalada de privilegios.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -248,3 +248,15 @@ Hopper couldn't shake the memory of how he, only he, made the King's dream a rea
 - T1555 - Credentials from Password Stores
 
 **Fuente:** [TryHackMe - Hopper's Origins](https://tryhackme.com/room/ho-aoc2025-yboMoPbnEX)
+---
+
+## ⚠️ Descargo de Responsabilidad (Disclaimer)
+
+
+Este contenido se presenta exclusivamente con fines académicos y educativos.
+
+
+**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
+**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
+**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
+**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.

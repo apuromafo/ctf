@@ -1,4 +1,10 @@
-#source https://github.com/id-root/Carrotbane-of-My-Existence
+# SideQuest 3 - Tutorial (Tutorial_id_root)
+
+| Dificultad | Tipo | Slug | Link | Sección | Fuente | Componentes | Impacto |
+|---|---|---|---|---|---|---|---|
+| N/A | Tutorial SideQuest | `advent2025` | N/A | Advent of Cyber Tryhackme | texto oficial THM + anotaciones propias | tutorial de la sidequest 3 (carrotbane of my existence) con inversion del algoritmo de la imagen y cadena ssrf/dns/ia | guia completa con las 4 banderas desde ssrf hasta pivoting interno y ollama |
+
+**Contexto:** Tutorial auxiliar de la SideQuest 3 (Carrotbane of My Existence) del Advent of Cyber 2025. Documenta cómo invertir el algoritmo de cifrado de la imagen (extracción de píxeles del PNG y recetas CyberChef) y la cadena completa de explotación, desde SSRF y envenenamiento DNS hasta el pivoting interno y la API de Ollama.
 
 ## Resumen / Overview
 
@@ -566,7 +572,6 @@ When internal users reply to emails sent from `AGI@hacker.thm`, the mail server 
 ## 2.3 SMTP Server Setup & Email Interception
 
 ```python
-# Advent 2025\SideQuest\Sidequest\Sidequest3\Tutorial\Tutorial_id_root [N/A]
 pip install aiosmtpd
 
 Start listening on port 25

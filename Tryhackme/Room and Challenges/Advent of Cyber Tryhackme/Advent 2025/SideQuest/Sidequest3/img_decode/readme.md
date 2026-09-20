@@ -1,4 +1,10 @@
-# Advent 2025\SideQuest\Sidequest\Sidequest3\img_decode [N/A]
+# SideQuest 3 - img_decode
+
+| Dificultad | Tipo | Slug | Link | Sección | Fuente | Componentes | Impacto |
+|---|---|---|---|---|---|---|---|
+| N/A | Tutorial / decode | `advent2025` | N/A | Advent of Cyber Tryhackme | texto oficial THM + anotaciones propias | recetas cyberchef de decodificado y del codificado original de la imagen | proporciona la clave de acceso de la sidequest 3 (carrotbane of my existence) |
+
+**Contexto:** Archivo auxiliar de la SideQuest 3 (Carrotbane of My Existence) del Advent of Cyber 2025. Reúne las recetas CyberChef de decodificado y las del codificado original de la imagen, necesarias para obtener la clave de acceso de la misión.
 
 ## Clave de acceso a la misión secundaria Carrotbane of My Existence / Carrotbane of My Existence Side Quest Access key
 

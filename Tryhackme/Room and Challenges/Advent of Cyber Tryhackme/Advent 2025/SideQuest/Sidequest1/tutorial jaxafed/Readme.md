@@ -1,25 +1,23 @@
 # Advent 2025\SideQuest\Sidequest\Sidequest1\tutorial jaxafed [N/A]
 
- Tutorial from jaxafed TryHackMe: AoC 2025 Side Quest One
- 
- `tags: [web, osint, api, http parameter pollution, camera, m3u8, hls, rtsp, suid, docker]`
- 
+| **Dificultad** | N/A | **Tipo** | Tutorial (tutorial jaxafed) | **Slug** | `readme` | | **Link** | [TryHackMe](https://tryhackme.com/room/sq1-aoc2025-FzPnrt2SAu) | | **Sección** | Advent of Cyber Tryhackme / Advent 2025 Side Quest 1 / Tutorial | | **Fuente** | walkthrough de jaxafed (Readme.md) | | **Componentes** | web / osint / api / http parameter pollution / camera / m3u8 / hls / rtsp / suid / docker | | **Impacto** | Resolucion completa del Side Quest 1 (The Great Disappearing Act): descubrimiento de la key (fragmentos + GPG) en el Day 1, OSINT de credenciales, HTTP Parameter Pollution sobre el video portal, shell via token de diagnostico, escalada por SUID a docker y obtencion de las 3 flags (THM{h0pp1ing_m4d}, THM{Y0u_h4ve_b3en_j3stered_739138}, THM{p0p_go3s_THe_W3as3l}). |
 
-**First Side Quest (The Great Disappearing Act)** started with discovering the key in the **Advent of Cyber Day 1** room and using it to remove the firewall on the target machine.
+---
 
-Afterward, by creating an account and logging into a social media application, we used **OSINT** to discover the email and password of a user. We then used these credentials to access the security console and open a door, obtaining the first flag.
+**Contexto:** Tutorial de jaxafed del Side Quest 1 del Advent of Cyber 2025 con imagenes locales (./img): key en Day 1 (PASSFRAG1-3 -> 3ast3r-1s-c0M1nG -> wishlist.txt -> ciphertext -> THM{w3lcome_2_A0c_2025} -> sq1.png con la key), luego OSINT en Fakebook (guard.hopkins + Johnnyboy1982!), Security Console (Cells/Storage door, keycode 115879 via HPP), manifest m3u8 + /v1/ingest/diagnostics -> token -> shell svc_vidops, SUID diag_shell -> dockermgr (grupo docker) -> unlock code 739184627 -> tercera flag.
 
-Next, using the same credentials on the video portal application, we exploited an **HTTP Parameter Pollution** vulnerability to access a restricted video feed and captured a keycode, which allowed us to unlock another door and retrieve the first part of the second flag. By examining how the video feeds worked, we identified an endpoint that provided a token, which we used to obtain a shell on the target and capture the second part of the second flag.
+---
 
-Finally, with our shell, we escalated privileges using a **SUID** binary and gained access as a user in the **docker** group. We leveraged this to escalate to the **root** user and discover the unlock code for the final door. Using this code, we unlocked the last door, obtained the third flag, and completed the room.
+## Solucionario
 
-[![Tryhackme Room Link](./img/room_card.webp) (https://tryhackme.com/room/sq1-aoc2025-FzPnrt2SAu) 
+### Task 1: Encontrando la Llave / Finding the Key
 
-## Encontrando la Llave / Finding the Key
+**Explicación:**
+
 
 We start the side quest by trying to find the key in the [Advent of Cyber Day 1 room](https://tryhackme.com/room/linuxcli-aoc2025-o1fpqkvxti).
 
-### Encontrando los Fragmentos / Finding the Fragments
+#### Encontrando los Fragmentos / Finding the Fragments
 
 After getting a shell on the room with the given credentials, we find an interesting note in `/home/mcskidy/Documents/read-me-please.txt`, which provides credentials for the **eddi_knapp** user and instructs us to find **three fragments** and combine them to decrypt a message located in the `/home/eddi_knapp/Documents/` directory.
 
@@ -122,7 +120,7 @@ eddi_knapp@tbfc-web01:~$ tail -n 1 /home/eddi_knapp/Pictures/.easter_egg
 PASSFRAG3: c0M1nG
 ```
 
-### Obteniendo el Texto Cifrado / Getting the Ciphertext
+#### Obteniendo el Texto Cifrado / Getting the Ciphertext
 
 Now we can combine the fragments to create a passphrase and decrypt the `/home/eddi_knapp/Documents/mcskidy_note.txt.gpg` message mentioned earlier.
 
@@ -184,7 +182,7 @@ Afterwards, checking the web application on port `8080`, we can see that it disp
 
 ![Key Web 8080 Ciphertext](./img/key_web_8080_ciphertext.webp) 
 
-### Encontrando la Llave / Finding the Key
+#### Encontrando la Llave / Finding the Key
 
 We can decrypt this ciphertext exactly as shown in the note:
 
@@ -236,13 +234,17 @@ Looking at the image, we can find the key on it and move on to the actual side q
 
 ![Key Image](./img/key_image.webp) 
 
-## Misión Lateral / Side Quest
+
+### Task 2: Misión Lateral — Primera Bandera / First Flag
+
+**Explicación:**
+
 
 We start the side quest by visiting the web server on port `21337` and entering the key we discovered to remove the firewall as per the room instructions.
 
 ![Web 21337 Unlock](./img/web_21337_unlock.webp) 
 
-### Enumeración Inicial / Initial Enumeration
+#### Enumeración Inicial / Initial Enumeration
 
 Afterwards, we run an `nmap` scan to discover all the services running on the target.
 
@@ -319,7 +321,7 @@ test
 unauthorized
 ```
 
-### Primera Bandera / First Flag
+#### Primera Bandera / First Flag
 
 Since we don't have any credentials, an authorization token, or any clues about the service on port `13404`, we start by creating an account for the social media application on port `8000`.
 
@@ -352,7 +354,17 @@ After logging in, we simply click **Cells / Storage door** and unlock the cell d
 
 ![Web 8080 Flag](./img/web_8080_flag.webp) 
 
-### Segunda Bandera / Second Flag
+
+| # | Pregunta | Respuesta |
+| --- | --- | --- |
+| 1 |  | `` |
+| P | r | `i` |
+| T | H | `M` |
+
+### Task 3: Segunda Bandera / Second Flag
+
+**Explicación:**
+
 
 Now if we try to unlock the next door, it asks for a keycode that we don't have, so instead let's focus on the video portal application on port `13400`, where we can log in using the same credentials and access several camera feeds with one camera feed being only available to the **admin** role.
 
@@ -426,7 +438,17 @@ svc_vidops@tryhackme-2404:~$ wc -c /home/svc_vidops/user_part2.txt
 17 /home/svc_vidops/user_part2.txt
 ```
 
-### Tercera Bandera / Third Flag
+
+| # | Pregunta | Respuesta |
+| --- | --- | --- |
+| 2 |  | `` |
+| S | e | `g` |
+| T | H | `M` |
+
+### Task 4: Tercera Bandera / Third Flag
+
+**Explicación:**
+
 
 Now that we have a shell, we can start looking for privilege-escalation opportunities. Checking for **SUID** binaries, we discover `/usr/local/bin/diag_shell`, which is owned by the `dockermgr` user:
 
@@ -494,6 +516,50 @@ scada_operator@1cbf40c715f4:/opt/scada$ cat scada_terminal.py | grep UNLOCK_CODE
 Finally, returning to the security console on port `8080` and submitting the unlock code for the exit gate allows us to obtain the third and final flag, completing the room.
 
 ![Web 8080 Flag Three](./img/web_8080_flag3.webp)
+
+
+| # | Pregunta | Respuesta |
+| --- | --- | --- |
+| 3 | Tercera flag | `THM{p0p_go3s_THe_W3as3l}` |
+| - | Unlock code (SCADA / exit gate) | `739184627` |
+
+---
+
+**Metodología:**
+
+1. Day 1: shell con credenciales dadas -> read-me-please.txt (eddi_knapp / S0mething1Sc0ming) -> fragmentos PASSFRAG1 (.bashrc), PASSFRAG2 (git log .secret_git), PASSFRAG3 (.easter_egg) -> passphrase 3ast3r-1s-c0M1nG -> gpg mcskidy_note.txt.gpg
+2. Reemplazar wishlist.txt -> web 8080 muestra ciphertext -> openssl aes-256-cbc (UNLOCK_KEY 91J6X7R4FQ9TQPM9JX2Q9X2Z) -> THM{w3lcome_2_A0c_2025}
+3. Usar esa flag como passphrase de dir.tar.gz.gpg -> sq1.png -> key -> entrar a Side Quest real (port 21337)
+4. nmap -> Fakebook (8000) -> OSINT guard.hopkins / Johnnyboy1982! -> Security Console (8080) -> Cells/Storage door -> primera flag
+5. Video portal (13400) + API (13401): HTTP Parameter Pollution tier=admin (query param) -> cam-admin -> keycode 115879 -> segunda flag (parte 1)
+6. manifest m3u8 -> /v1/ingest/diagnostics (POST rtsp://vendor-cam.test/cam-admin) -> job_id -> token -> nc 13404 -> shell svc_vidops -> user_part2.txt (segunda flag, parte 2)
+7. SUID /usr/local/bin/diag_shell (dockermgr) -> SSH key para dockermgr -> grupo docker -> contenedor SCADA (9001) -> UNLOCK_CODE -> tercera flag
+
+**Learning chain:** Day 1 (key) -> OSINT -> Security Console -> HTTP Parameter Pollution -> shell via diagnostics token -> SUID/docker -> tercera flag
+
+Cadena de ataque / Attack Chain:
+```text
+Day 1: fragmentos -> gpg -> wishlist.txt -> openssl -> flag Day1 -> sq1.png (key)
+-> Side Quest: Fakebook -> guard.hopkins password -> Security Console 8080 -> primera flag THM{h0pp1ing_m4d}
+-> Video portal 13400/13401: HPP tier=admin -> cam-admin -> keycode 115879 -> parte 1 segunda flag
+-> manifest m3u8 -> /v1/ingest/diagnostics -> token -> nc 13404 -> shell svc_vidops -> parte 2 segunda flag
+-> SUID diag_shell -> dockermgr (docker) -> container SCADA -> unlock 739184627 -> tercera flag THM{p0p_go3s_THe_W3as3l}
+```
+
+**Lección:** *Combinar OSINT, HTTP Parameter Pollution de query vs body params, endpoints ocultos descubiertos via HLS manifest y abusar de SUID + grupo docker demuestra como cadenas de micro-vulnerabilidades web llegan a RCE y escalada total.*
+
+**MITRE ATT&CK:**
+
+- T1190 - Exploit Public-Facing Application
+- T1110 - Brute Force
+- T1133 - External Remote Services
+- T1068 - Exploitation for Privilege Escalation
+- T1609 - Container Administration Command
+- T1610 - Deploy Container
+- T1059 - Command and Scripting Interpreter
+- T1071 - Application Layer Protocol
+
+**Fuente:** [TryHackMe - Advent 2025 Side Quest 1 Tutorial (jaxafed)](https://tryhackme.com/room/sq1-aoc2025-FzPnrt2SAu)
 
 ---
 

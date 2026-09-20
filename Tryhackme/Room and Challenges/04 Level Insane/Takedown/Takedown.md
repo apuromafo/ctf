@@ -1,30 +1,31 @@
 # Takedown
 
-| **Dificultad** | Insane |
-| **Tipo** | CTF |
-| **Slug** | `takedown` |
-| **Link** | [TryHackMe](https://tryhackme.com/room/takedown) |
-| **Sección** | 04 Level Insane |
-| **Fuente** | TryHackMe official room, GitHub (jesusgavancho/TryHackMe_and_HackTheBox), Medium writeup by Firat Demir, YouTube walkthrough by Jacob Taylor, Medium writeup by Hassan Mughal |
-| **Componentes** | nmap/gobuster/nim/malware/c2-api/privilege-escalation/docker |
-| **Impacto** | Desmontaje del teamserver de RISOTTO GROUP combinando análisis estático de malware Nim con el abuso de una C2 API mal asegurada hasta obtener root en el contenedor Docker. |
+| Dificultad | Tipo | Slug | Link | Sección | Fuente | Componentes | Impacto |
+|---|---|------|------|---------|--------|-------------|---------|
+| Insane | CTF | `takedown` | [TryHackMe](https://tryhackme.com/room/takedown) | 04 Level Insane | TryHackMe official room, GitHub (jesusgavancho/TryHackMe_and_HackTheBox), Medium writeup by Firat Demir, YouTube walkthrough by Jacob Taylor, Medium writeup by Hassan Mughal | nmap/gobuster/nim/malware/c2-api/privilege-escalation/docker | Desmontaje del teamserver de RISOTTO GROUP combinando análisis estático de malware Nim con el abuso de una C2 API mal asegurada hasta obtener root en el contenedor Docker. |
 
 ---
 
 **Contexto:** Takedown es un CTF de nivel Insane donde un servidor web corporativo ha sido comprometido por el grupo RISOTTO. La misión es encontrar su teamserver y tomarlo control. Involucra análisis estático de malware Nim, interpretación de C2 API, y explotación de un endpoint de ejecución remota para obtener root.
 
+> **ES:** Takedown es un CTF de nivel Insane donde un servidor web corporativo ha sido comprometido por el grupo RISOTTO. La misión es encontrar su teamserver y tomarlo control. Involucra análisis estático de malware Nim, interpretación de C2 API, y explotación de un endpoint de ejecución remota para obtener root.
+
+> **EN:** Takedown is an Insane-difficulty CTF where a corporate web server has been compromised by the RISOTTO group. The mission is to find their teamserver and take it over. It involves static analysis of Nim malware, C2 API interpretation, and exploitation of a remote-execution endpoint to gain root.
+
 ## Solucionario
 
-### Task 1: Mission Brief (OPERATION: OVERCOOKED RISOTTO)
+### Task 1: Brief de la Misión (OPERACIÓN: OVERCOOKED RISOTTO) / Mission Brief (OPERATION: OVERCOOKED RISOTTO)
 
+**Explicación:**
 Leer el documento de inteligencia adjunto (OPORDOVERCOOKEDRISOTTO.pdf). El brief contiene información crítica sobre el grupo RISOTTO, incluyendo su uso de keying ambiental, agentes Nim, y un User-Agent predefinido para autenticación.
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
 | 1 | Ready! | `Completed` |
 
-### Task 2: Start VM
+### Task 2: Iniciar VM / Start VM
 
+**Explicación:**
 Iniciar la máquina virtual y agregar la IP a `/etc/hosts` como `takedown.thm.local`. Ejecutar un escaneo Nmap básico para confirmar puertos 22 (SSH) y 80 (HTTP/nginx 1.23.1) abiertos.
 
 | # | Pregunta | Respuesta |
@@ -33,6 +34,7 @@ Iniciar la máquina virtual y agregar la IP a `/etc/hosts` como `takedown.thm.lo
 
 ### Task 3: User.txt
 
+**Explicación:**
 Obtener la bandera user.txt. La cadena de explotación completa requiere: enumeración web con Gobuster, análisis estático de `favicon.ico` (PE64 compilado con Nim que contiene un agente C2), descubrimiento del User-Agent key (`z.5.x.2.l.8.y.5`), uso de la API del C2 para leer archivos del servidor, y obtención de reverse shell a través de `/api/server/exec`.
 
 | # | Pregunta | Respuesta |
@@ -41,6 +43,7 @@ Obtener la bandera user.txt. La cadena de explotación completa requiere: enumer
 
 ### Task 4: Root.txt
 
+**Explicación:**
 Obtener la bandera root.txt. Tras obtener shell como `webadmin-lowpriv` a través del agente C2, se puede explotar el endpoint `/api/server/exec` que ejecuta comandos como root en el container Docker `c2-shrike-1`. Usar bash reverse shell codificado en base64 para obtener root.
 
 | # | Pregunta | Respuesta |
@@ -58,8 +61,29 @@ Obtener la bandera root.txt. Tras obtener shell como `webadmin-lowpriv` a travé
 6. **Escalada a root:** Usar `/api/server/exec` que ejecuta comandos como root dentro del container Docker. Enviar un bash reverse shell codificado en base64 para obtener root en `c2-shrike-1`.
 7. **Captura de flags:** Recolectar las banderas `user.txt` y `root.txt` desde las ubicaciones correspondientes del sistema de ficheros; `root.txt` → `THM{th3_r00t_of_the_pr0blem}`.
 
+### Cadena de ataque / Attack Chain
+
+1. `favicon.ico` (PE64) → strings → C2 URL, endpoints API, username `c.oberst`, User-Agent key.
+2. `shutterbug.jpg.bak` (ELF Nim) → agente C2 → usuario local `c.oberst` (keying ambiental).
+3. `/api/agents` → listado de agentes → `app.py` (fuente Flask).
+4. `/api/agents/<uid>/download` + `/exec` → reverse shell → `webadmin-lowpriv` → `user.txt`.
+5. `/api/server/exec` (root en Docker) → reverse shell base64 → root en `c2-shrike-1` → `root.txt`.
+
 **Learning chain:** gobuster → `favicon.ico` (PE64 Nim C2 agent) → strings (C2 URL, endpoints API, username `c.oberst`, User-Agent key) → `shutterbug.jpg.bak` (ELF Nim C2 agent) → usuario `c.oberst` (keying ambiental) → `/api/agents` (lista de agentes) → `app.py` (fuente Flask del C2) → `/api/agents/<uid>/download` y `/exec` → reverse shell → `webadmin-lowpriv` → `user.txt` → `/api/server/exec` (root en Docker) → reverse shell base64 → `root.txt`.
+
+**Lección:** *El análisis estático de malware "camuflado" (favicon PE64, imagen ELF) es a menudo el punto de entrada real: los strings de un agente C2 filtran la clave de autenticación, el layout de la API y la ruta hacia un endpoint de ejecución remota mal asegurado.*
 
 **MITRE ATT&CK:** T1046 (Network Service Discovery), T1036 (Masquerading), T1203 (Execution via Client Software), T1071 (Application Layer Protocol), T1105 (Ingress Tool Transfer), T1219 (Remote Access Software), T1068 (Privilege Escalation)
 
 **Fuente:** [TryHackMe - Takedown](https://tryhackme.com/room/takedown)
+
+---
+
+## Descargo de Responsabilidad (Disclaimer)
+
+Este contenido se presenta exclusivamente con fines académicos y educativos.
+
+**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
+**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
+**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
+**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.

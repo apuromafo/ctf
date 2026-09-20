@@ -14,7 +14,7 @@
 
 ### Task 1: Flag 1
 
-**Explicacion:** Primera flag obtenida tras el egg decode con password one_hopper_army y analisis inicial del entorno.
+**Explicación:** Primera flag obtenida tras el egg decode con password one_hopper_army y analisis inicial del entorno.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -22,7 +22,7 @@
 
 ### Task 2: Flag 2
 
-**Explicacion:** Segunda flag tras enumeracion y explotacion de vulnerabilidades en el entorno del asilo.
+**Explicación:** Segunda flag tras enumeracion y explotacion de vulnerabilidades en el entorno del asilo.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -30,7 +30,7 @@
 
 ### Task 3: Flag 3
 
-**Explicacion:** Tercera flag tras escalada de privilegios en el entorno comprometido.
+**Explicación:** Tercera flag tras escalada de privilegios en el entorno comprometido.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -38,7 +38,7 @@
 
 ### Task 4: Flag 4
 
-**Explicacion:** Cuarta flag como resultado final de la investigacion completa del levantamiento de Hopper.
+**Explicación:** Cuarta flag como resultado final de la investigacion completa del levantamiento de Hopper.
 
 | # | Pregunta | Respuesta |
 | --- | --- | --- |
@@ -73,3 +73,15 @@
 - T1068 - Exploitation for Privilege Escalation
 
 **Fuente:** [TryHackMe - Carrotbane of My Existence](https://tryhackme.com/room/sq3-aoc2025-bk3vvbcgiT)
+---
+
+## ⚠️ Descargo de Responsabilidad (Disclaimer)
+
+
+Este contenido se presenta exclusivamente con fines académicos y educativos.
+
+
+**Sin Afiliación:** Este espacio no posee ninguna alianza, asociación, patrocinio ni vinculación oficial con TryHackMe.
+**Veracidad de los Datos:** La información aquí contenida tiene un propósito ilustrativo y formativo. Los datos, políticas, precios o características de los servicios mencionados pueden variar y no son decididos por TryHackMe en este contexto.
+**Referencia Oficial:** Para obtener información precisa, oficial y actualizada, se recomienda encarecidamente visitar el sitio web oficial de TryHackMe (https://tryhackme.com).
+**Uso Ético:** No fomentamos ni nos responsabilizamos por el uso indebido de esta información fuera de fines educativos o profesionales legítimos.

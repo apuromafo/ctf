@@ -1,4 +1,10 @@
-# Advent 2025\SideQuest\Sidequest\Sidequest2\Tutorial\Tutorial_id_root [N/A]
+# SideQuest 2 - Tutorial (Tutorial_id_root) [second_tut]
+
+| Dificultad | Tipo | Slug | Link | Sección | Fuente | Componentes | Impacto |
+|---|---|---|---|---|---|---|---|
+| N/A | Tutorial SideQuest | `advent2025` | [TryHackMe](https://tryhackme.com/room/sq2-aoc2025-JxiOKUSD9R) | Advent of Cyber Tryhackme | texto oficial THM + anotaciones propias | tutorial (segunda parte) con beacon.bin y server.bin y el exploit de heap house of apple 2 | documenta ambas partes de scheme catcher hasta obtener root con uaf, tcache poisoning y fsop |
+
+**Contexto:** Tutorial auxiliar de la SideQuest 2 (Scheme Catcher) del Advent of Cyber 2025, que cubre ambas partes del reto: análisis del binario `beacon.bin` y explotación de heap (UAF + tcache poisoning + House of Apple 2/FSOP) sobre `server.bin` para obtener una shell root.
 
 - **Challenge:** beacon.bin (First Stage)  
 - **Category:** Binary Exploitation / Reverse Engineering  

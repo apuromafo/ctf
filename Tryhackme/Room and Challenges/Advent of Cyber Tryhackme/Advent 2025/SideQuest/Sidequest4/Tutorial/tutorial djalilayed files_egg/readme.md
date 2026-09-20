@@ -1,4 +1,10 @@
-# Advent 2025\SideQuest\Sidequest\Sidequest4\Tutorial\tutorial djalilayed files_egg [N/A]
+# SideQuest 4 - Tutorial (djalilayed files_egg)
+
+| Dificultad | Tipo | Slug | Link | Sección | Fuente | Componentes | Impacto |
+|---|---|---|---|---|---|---|---|
+| N/A | Tutorial SideQuest | `advent2025` | N/A | Advent of Cyber Tryhackme | https://github.com/djalilayed/tryhackme/ | receta cyberchef del decodificado del script y clave de acceso al zip | proporciona la clave de la sidequest 4 (breachblocker unlocker) y enlace al walkthrough oficial |
+
+**Contexto:** Archivo auxiliar de la SideQuest 4 (BreachBlocker Unlocker) del Advent of Cyber 2025. Incluye la receta CyberChef para decodificar el script y la clave del ZIP, basado en el repositorio fuente de djalilayed.
 
 #ource https://github.com/djalilayed/tryhackme/
 

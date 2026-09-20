@@ -1,24 +1,21 @@
-# ORM Injection [MEDIUM]
+# ORM Injection
 
-### Información de la Sala / Room Information
-
-* **Dificultad / Difficulty:** MEDIUM
-* **Tipo / Type:** Walkthrough (Premium)
-* **Slug:** `orminjection`
-* **Link:** https://tryhackme.com/room/orminjection
-* **Sección / Section:** Web / Injection
-* **Fuente / Source:** Writeup de thmrevenant (GitHub)
+| **Dificultad** | MEDIUM | **Tipo** | Walkthrough (Premium) | **Slug** | `orminjection` |
+| **Link** | [TryHackMe](https://tryhackme.com/room/orminjection) | **Sección** | Web / Injection | **Fuente** | Writeup de thmrevenant (GitHub) |
+| **Componentes** | ORM, SQL Injection, Active Record (Rails), Eloquent (Laravel), Hibernate (Spring) | **Impacto** | Compromiso de la base de datos a través de métodos ORM vulnerables como `whereRaw()`, permitiendo extraer credenciales, datos de usuarios y flags |
 
 ---
 
-## Solucionario de Tareas / Task Solutions
+**Contexto:** Esta sala enseña a identificar y explotar vulnerabilidades de inyección en Object-Relational Mapping (ORM). Cubre los tres ORM principales (Active Record en Ruby on Rails, Eloquent en Laravel y Hibernate en el framework Spring), cómo localizar el ORM usado mediante las cookies de sesión y cómo explotar métodos vulnerables como `whereRaw()` con payloads de SQL injection a través del propio ORM. Finaliza con las buenas prácticas de prevención, validación de entrada en el servidor y uso de consultas parametrizadas.
 
 > **ES:** Aprendizaje y explotación de vulnerabilidades de inyección en ORM (Object-Relational Mapping), cubriendo Active Record, Eloquent y Hibernate, con prácticas de SQL injection a través de métodos ORM.
 > **EN:** Learning and exploiting ORM (Object-Relational Mapping) injection vulnerabilities, covering Active Record, Eloquent, and Hibernate, with SQL injection practices through ORM methods.
 
----
+## Solucionario
 
-### Task 1 — Fundamentos de ORM
+### Task 1: Fundamentos de ORM / ORM Fundamentals
+
+**Explicación:** Se estudian los fundamentos de los ORM: el ORM por defecto de las aplicaciones Ruby on Rails es Active Record. En el framework Laravel (Eloquent), la estructura de la tabla de usuarios se define mediante el método `up()`, y las credenciales de la base de datos se almacenan habitualmente en el archivo `.env`. También se obtiene el valor de la variable `DOCUMENT_ROOT` y se identifica a Hibernate como la librería ORM del framework Spring. La opción que NO es una característica de los ORM es la `c`.
 
 | Pregunta / Question | Respuesta / Answer |
 |----------|--------|
@@ -29,9 +26,9 @@
 | What is the path in the DOCUMENT_ROOT variable? | `C:\Users\Administrator\Downloads\orminjection\public` |
 | What is the ORM library for the Spring framework? (The one mentioned in this task) | `Hibernate` |
 
----
+### Task 2: Explotación de ORM Injection / ORM Injection Exploitation
 
-### Task 2 — Explotación de ORM Injection
+**Explicación:** Se examinan las cookies de la aplicación adjunta para identificar el ORM: la cookie responsable de mantener la sesión es `laravel_session`, propia de Laravel/Eloquent. Se explota el método vulnerable `whereRaw()` inyectando SQL a través del ORM. Se asocia el email `jane@thm.com` a la usuaria Jane Doe, se obtiene la flag `THM{SECURED_001}` al entregar el payload en el campo de entrada seguro, se determina que la tabla `users` tiene 5 filas y se recupera la contraseña `THM{101}` del usuario `john@thm.com`.
 
 | Pregunta / Question | Respuesta / Answer |
 |----------|--------|
@@ -42,18 +39,35 @@
 | What is the total number of rows in the users table? | `5` |
 | What is the password for the email john@thm.com? | `THM{101}` |
 
----
+### Task 3: Prevención y Buenas Prácticas / Prevention and Best Practices
 
-### Task 3 — Prevención y Buenas Prácticas
+**Explicación:** Se concluye que no es una buena práctica escribir consultas SQL crudas dentro de los ORM (`nay`), ya que introducen riesgo de inyección. La validación de entrada debe realizarse en el lado del servidor (opción `c`), nunca confiando únicamente en filtros del cliente.
 
 | Pregunta / Question | Respuesta / Answer |
 |----------|--------|
 | Is it a good practice to write raw SQL queries in ORM? (yea/nay) | `nay` |
 | Which side should input validation be carried out? Write the correct option only. | `c` |
 
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1.1 | What is the default ORM for Ruby on Rails applications? | `Active Record` |
+| 1.2 | Which of the following is NOT a feature of ORM? | `c` |
+| 1.3 | What is the method used in our Laravel code snippet to define the structure of the users table? | `up()` |
+| 1.4 | What is the file name usually used to store database credentials in Laravel? | `.env` |
+| 1.5 | What is the path in the DOCUMENT_ROOT variable? | `C:\Users\Administrator\Downloads\orminjection\public` |
+| 1.6 | What is the ORM library for the Spring framework? (The one mentioned in this task) | `Hibernate` |
+| 2.1 | Once you have reviewed the cookies to identify the ORM, what is the cookie's name that is responsible for maintaining the session in the attached application? | `laravel_session` |
+| 2.2 | What email is associated with the name Jane Doe? | `jane@thm.com` |
+| 2.3 | What is the name of the vulnerable Eloquent method that is used in this task? | `whereRaw()` |
+| 2.4 | What is the flag value after submitting the payload in the secure input field? | `THM{SECURED_001}` |
+| 2.5 | What is the total number of rows in the users table? | `5` |
+| 2.6 | What is the password for the email john@thm.com? | `THM{101}` |
+| 3.1 | Is it a good practice to write raw SQL queries in ORM? (yea/nay) | `nay` |
+| 3.2 | Which side should input validation be carried out? Write the correct option only. | `c` |
+
 ---
 
-## Metodología / Methodology
+**Metodología:**
 
 1. **Paso / Step:** Comprender los ORM principales (Active Record para Rails, Eloquent para Laravel, Hibernate para Spring) y sus funcionalidades / Understand the main ORMs (Active Record for Rails, Eloquent for Laravel, Hibernate for Spring) and their features.
 2. **Paso / Step:** Identificar el ORM utilizado en la aplicación examinando las cookies de sesión (laravel_session) / Identify the ORM used in the application by examining session cookies (laravel_session).
@@ -74,7 +88,13 @@ Reconocimiento: identificar ORM (laravel_session cookie)
             -> Conclusión: evitar whereRaw() y usar consultas parametrizadas
 ```
 
-**Lección:** Los ORM no son inmunes a inyección SQL. Métodos como `whereRaw()` en Laravel permiten consultas directas que pueden ser explotadas. La validación de entrada debe realizarse en el lado del servidor y las consultas deben usar bindings parametrizados en lugar de concatenación directa.
+**Learning chain:** Identificación del ORM (cookie `laravel_session`) → Localización de DOCUMENT_ROOT y configuración (`.env`) → Detección del método vulnerable (`whereRaw()`) → Inyección SQL a través del ORM → Extracción de datos de la tabla users (emails, contraseñas, flags) → Validación en el servidor y consultas parametrizadas como prevención.
+
+**Lección:** *Los ORM no son inmunes a la inyección SQL. Métodos como `whereRaw()` en Laravel permiten consultas directas que pueden ser explotadas. La validación de entrada debe realizarse en el lado del servidor y las consultas deben usar bindings parametrizados en lugar de concatenación directa.*
+
+**MITRE ATT&CK:** T1190 (Exploit Public-Facing Application), T1059 (Command and Scripting Interpreter), T1005 (Data from Local System)
+
+**Fuente:** [TryHackMe - ORM Injection](https://tryhackme.com/room/orminjection)
 
 ---
 

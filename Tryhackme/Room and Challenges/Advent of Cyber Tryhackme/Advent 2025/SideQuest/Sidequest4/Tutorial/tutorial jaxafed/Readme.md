@@ -1,3 +1,11 @@
+# SideQuest 4 - Tutorial (jaxafed)
+
+| Dificultad | Tipo | Slug | Link | Sección | Fuente | Componentes | Impacto |
+|---|---|---|---|---|---|---|---|
+| N/A | Tutorial SideQuest | `advent2025` | [TryHackMe](https://tryhackme.com/room/sq4-aoc2025-32LoZ4zePK) | Advent of Cyber Tryhackme | texto oficial THM + anotaciones propias | tutorial de la sidequest 4 (breachblocker unlocker) basado en el writeup de jaxafed | guia para obtener la llave hta, las banderas por timing attack y la confusion de dominio smtp |
+
+**Contexto:** Tutorial auxiliar de la SideQuest 4 (BreachBlocker Unlocker) del Advent of Cyber 2025 basado en el writeup de jaxafed. Resume el proceso de obtención de la llave desde el HTA del día 21, la primera bandera vía `nginx.conf`, el ataque de timing para la segunda y la confusión de dominio SMTP para la tercera.
+
 >Basado en el tutorial de jaxafed (TryHackMe: AoC 2025 Side Quest Four). 
 
 **Fourth Side Quest (BreachBlocker Unlocker)** 
@@ -106,7 +114,6 @@ Opening the resulting PNG image reveals the **key**, allowing us to move on to t
 key_image
 ![key_image](./img/key_image.webp)
 
-# Advent 2025\SideQuest\Sidequest\Sidequest4\Tutorial\tutorial jaxafed [N/A]
 `throne123*`
 
 ## Misión Lateral / Side Quest

@@ -1,17 +1,21 @@
-# Phishing - Phishmas Greetings [EASY]
+# Phishing - Phishmas Greetings
 
-### Información de la Sala / Room Information
-
-| Propiedad / Property | Valor / Value |
-| --- | --- |
-| **Nombre / Name** | Phishing - Phishmas Greetings |
-| **Evento / Event** | Advent of Cyber 2025 — Día 12 |
-| **Sala / Room URL** | https://tryhackme.com/room/adventofcyber25 |
-| **Dificultad / Difficulty** | Easy |
-| **Descripción / Description** | Día 12 del calendario AoC 2025 (Phishing - Phishmas Greetings). Solución/respuestas del reto diario. |
+| **Dificultad** | Easy | **Tipo** | walkthrough | **Slug** | `day12phishingphishmasgreetings` |
+| **Link** | [TryHackMe](https://tryhackme.com/room/adventofcyber25) |
+| **Sección** | Advent of Cyber Tryhackme |
+| **Fuente** | texto oficial THM + anotaciones propias |
+| **Componentes** | phishing / impersonation / social engineering / typosquatting / punycode / spoofing / SPF / DKIM / DMARC |
+| **Impacto** | Clasificar correos de phishing reales distinguiendo impersonación, spoofing, typosquatting y spam |
 
 ---
 
+**Contexto:** Día 12 del Advent of Cyber 2025. Se aprenden las técnicas para detectar correos de phishing: comprobar si el remitente coincide con el dominio interno o la estructura de email de la empresa (impersonation), reconocer el **typosquatting** (dominios con erratas comunes), el **punycode** (Unicode convertido a ASCII que permite dominios falsos) y el **spoofing** (hacerse pasar por un dominio legítimo). También se revisan los mecanismos de autenticación de email: SPF (servidores autorizados), DKIM (firma digital del mensaje) y DMARC (política sobre qué hacer con correos sospechosos).
+
+## Solucionario
+
+### Día 12: Phishing - Phishmas Greetings
+
+**Explicación:**
 
 - You can spot impersonation attempts by looking to see if the sender's email matches the internal domain or the standard email structure of the company
 - Social engineering in phishing
@@ -24,13 +28,30 @@
     2.  DKIM: Adds a digital signature to prove the message wasn’t changed and really came from that domain.
     3.  DMARC: Uses SPF and DKIM to decide what to do if something looks fake (for example, send it to spam or block it).
 
-## Respuestas / Answers
-- Classify the 1st email, what's the flag? : `THM{yougotnumber1-keep-it-going}`
-- Classify the 2nd email. What's the flag? : `THM{nmumber2-was-not-tha-thard!}`
-- Classify the 3rd email. What's the flag? : `THM{Impersonation-is-areal-thing-keepIt}`
-- Classify the 4th email. What's the flag? : `THM{Get-back-SOC-mas!!}`
-- Classify the 5th email. What's the flag? : `THM{It-was-just-a-sp4m!!}`
-- Classify the 6th email. What's the flag? : `THM{number6-is-the-last-one!-DX!}`
+| # | Pregunta | Respuesta |
+|---|----------|-----------|
+| 1 | Classify the 1st email, what's the flag? | `THM{yougotnumber1-keep-it-going}` |
+| 2 | Classify the 2nd email. What's the flag? | `THM{nmumber2-was-not-tha-thard!}` |
+| 3 | Classify the 3rd email. What's the flag? | `THM{Impersonation-is-areal-thing-keepIt}` |
+| 4 | Classify the 4th email. What's the flag? | `THM{Get-back-SOC-mas!!}` |
+| 5 | Classify the 5th email. What's the flag? | `THM{It-was-just-a-sp4m!!}` |
+| 6 | Classify the 6th email. What's the flag? | `THM{number6-is-the-last-one!-DX!}` |
+
+---
+
+**Metodología:** Se analizó cada uno de los seis correos aplicando los conceptos del día: comparación del remitente con el dominio interno, búsqueda de typosquatting/punycode/spoofing y comprobación de SPF, DKIM y DMARC. Según la técnica detectada se clasificó cada email y se obtuvo su flag.
+**Learning chain:** clasificación de emails -> impersonation (*typosquatting*/punycode/spoofing) -> autenticación SPF/DKIM/DMARC -> 6 flags
+
+Cadena de ataque / Attack Chain:
+```
+correo sospechoso -> remitente no coincide con dominio interno -> typosquatting/punycode/spoofing -> SPF/DKIM/DMARC fallidos o ausentes -> clasificación (impersonation/spam/etc.) -> flag THM{...}
+```
+
+**Lección:** *Un correo que "parece" legítimo se puede desmontar en segundos comparando el dominio del remitente y comprobando SPF/DKIM/DMARC; el typosquatting y el punycode explotan justamente la falta de atención a los detalles del dominio.*
+
+**MITRE ATT&CK:** T1566.002 - Phishing: Spearphishing Link, T1566.001 - Phishing: Spearphishing Attachment
+
+**Fuente:** [TryHackMe - Phishing - Phishmas Greetings](https://tryhackme.com/room/adventofcyber25)
 
 ---
 

@@ -22,7 +22,10 @@ El examen cuesta **$399** e incluye **1 retoma/retake gratuita** en caso de no a
 Ideal para profesionales de seguridad que ya trabajan en ciberseguridad y quieren especializarse en IA, así como para desarrolladores de IA que quieren seguridad. No es una certificación de nivel principiante.
 
 **¿Cuánto dura el examen? / How long is the exam?**
-El examen tiene una ventana de **48 horas** para completarlo, de forma 100% práctica y sin preguntas de opción múltiple.
+El examen tiene una ventana de **48 horas** para completarlo, de forma 100% práctica y sin preguntas de opción múltiple. Consta de **4 secciones y 13 escenarios hands-on** sobre sistemas IA reales.
+
+**¿Cuál es el puntaje de aprobación? / What is the passing score?**
+La nota de aprobación es **70%**, con calificación asistida por IA en 24-48 horas.
 
 **¿Cuánto dura la validez? / How long is it valid?**
 Al igual que el resto de certificaciones de TryHackMe, la certificación AI1 es válida por **3 años** desde la fecha en que apruebas el examen.
@@ -47,6 +50,6 @@ No se requiere una suscripción para comprar el examen, aunque se recomienda com
 
 ---
 
-**Fuente / Source:** [TryHackMe AI Security (AI1)](https://tryhackme.com/certification/ai-security)
+**Fuente / Source:** [TryHackMe AI Security (AI1)](https://tryhackme.com/certification/ai-security) · [AI1 Exam Guide](https://help.tryhackme.com/en/articles/15301082-ai1-exam-guide)
 **Autor del documento / Document author:** Apuromafo
 **Fecha de acceso / Access date:** 2026-09-21

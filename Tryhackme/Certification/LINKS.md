@@ -5,12 +5,18 @@
 
 ## Certificaciones (examen)
 
-- SEC1 — Cyber Security 101: https://tryhackme.com/certification/cyber-security-101
+- SEC0 — Pre Security ($69): https://tryhackme.com/certification/pre-security
+- SEC1 — Cyber Security 101 ($152): https://tryhackme.com/certification/cyber-security-101
 - SEC1 (detalles): https://tryhackme.com/certification/cyber-security-101/details
-- SAL1 — Security Analyst Level 1: https://tryhackme.com/certification/security-analyst-level-1
-- PT1 — Junior Penetration Tester: https://tryhackme.com/certification/junior-penetration-tester
-- PT2 — Penetration Tester Level 2: https://tryhackme.com/certification/penetration-tester-level-2
-- SAL2 — Security Analyst Level 2 (página existe, detalles sin verificar): https://tryhackme.com/certification/security-analyst-level-2
+- SAL1 — Security Analyst Level 1 ($299): https://tryhackme.com/certification/security-analyst-level-1
+- SAL2 — Security Analyst Level 2 ($749): https://tryhackme.com/certification/security-analyst-level-2
+- PT1 — Junior Penetration Tester ($297): https://tryhackme.com/certification/junior-penetration-tester
+- PT1 (detalles): https://tryhackme.com/certification/junior-penetration-tester/details
+- PT2 — Penetration Tester Level 2 ($749): https://tryhackme.com/certification/penetration-tester-level-2
+- AI1 — AI Security ($399): https://tryhackme.com/certification/ai-security
+- WEB1 — Web App Pentester Level 1 ($299): https://tryhackme.com/certification/web-application-pentester-level-1
+
+Precios referenciales con información al **21.09.2026**.
 
 ## Learning Paths 2026 (nuevos) / New 2026 learning paths
 
@@ -33,6 +39,13 @@
 - SAL2 Training Content (2026-05-29): https://help.tryhackme.com/en/articles/14193956-sal2-training-content
 - SAL2 Information (colección): https://help.tryhackme.com/en/collections/19159100-sal2-information
 
+## Exam guides oficiales (Help Center) — puntajes y validez verificados
+
+- WEB1 Exam Guide (700/1000 = 70%, $299 + 15% Premium, 1 retake): https://help.tryhackme.com/en/articles/16012250-web1-exam-guide
+- AI1 Exam Guide (pass 70%, validez 3 años, 48h, 4 secciones, 13 escenarios): https://help.tryhackme.com/en/articles/15301082-ai1-exam-guide
+- PT2 Exam Guide (740/1000 = 74%, validez 3 años, tiers T1/T2 $749 · T3 $449 · T4 $262, bundle PT1+PT2 −20%): https://help.tryhackme.com/en/articles/16945685-pt2-exam-guide
+- Nota: SEC1, SAL1, PT1 y SAL2 **no tienen exam guide publicado** (solo training content); sus pass marks siguen pendientes salvo PT1/SAL1 ya documentados.
+
 ## Documentación general de exámenes (Help Center)
 
 - Retakes (2026-07-20, 1 retake gratis, reintento tras 48 h): https://help.tryhackme.com/en/articles/10625053-retakes
@@ -53,7 +66,7 @@
 ## Notas
 
 - **No existe "JSCA" en TryHackMe** (confusión con HTB CJCA).
-- Precios 2026 aprox: SEC1 ~$149 · PT1 $297 · SAL1 $349 · PT2 geo-tiered. Verificar vigente antes de publicar.
+- Precios 2026 verificados (info al 21.09.2026): SEC0 $69 · SEC1 $152 · SAL1 $299 · SAL2 $749 · PT1 $297 · PT2 $749 · AI1 $399 · WEB1 $299. Bundle Foundational (SEC0+SEC1) $177 (orig. $221).
 
 ---
 **Autor / Author:** Apuromafo — **Verificado / Verified:** 2026-09-21

@@ -45,6 +45,6 @@ WEB1 es una especialización web que corre en paralelo a PT1 (Junior Penetration
 
 ---
 
-**Fuente / Source:** [TryHackMe Web App Pentester Level 1 (WEB1)](https://tryhackme.com/certification/web-application-pentester-level-1)
+**Fuente / Source:** [TryHackMe Web App Pentester Level 1 (WEB1)](https://tryhackme.com/certification/web-application-pentester-level-1) · [WEB1 Exam Guide](https://help.tryhackme.com/en/articles/16012250-web1-exam-guide)
 **Autor del documento / Document author:** Apuromafo
 **Fecha de acceso / Access date:** 2026-09-21

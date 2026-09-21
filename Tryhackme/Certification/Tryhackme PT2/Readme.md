@@ -36,7 +36,9 @@ Sí, la credencial es válida por **tres años**. Incluye certificado digital ve
 
 ### Precios / Pricing
 
-Precio de referencia **$749** (verificado en la página oficial de certificaciones), **por zona geográfica (geo-tiered)**, con **15% de descuento para suscriptores Premium activos y 25% para MAX**. A diferencia de otras certs, **PT2 no incluye Premium**: el contenido de preparación requiere suscripción Premium o MAX. Tienes 12 meses tras la compra para rendir (verificar vigencia de cupones en tu caso). Precio referencial con información al **21.09.2026**.
+Precio de referencia **$749** (verificado en la página oficial de certificaciones), **por zona geográfica (geo-tiered)** — T1/T2: $749 · T3: $449 · T4: $262 — con **15% de descuento para suscriptores Premium activos y 25% para MAX**. Existe además bundle **PT1 + PT2 con 20% de descuento**. A diferencia de otras certs, **PT2 no incluye Premium**: el contenido de preparación requiere suscripción Premium o MAX. Tienes 12 meses tras la compra para rendir (verificar vigencia de cupones en tu caso). Precio referencial con información al **21.09.2026**.
+
+**Puntaje y validez (verificado en el exam guide oficial):** total **1.000 puntos en 11 flags**, se aprueba con **740 puntos (74%)**; credencial válida por **3 años**; examen de **72 horas** con 1 free retake incluido.
 
 ### ¿A quién está dirigida? / Who is it for?
 

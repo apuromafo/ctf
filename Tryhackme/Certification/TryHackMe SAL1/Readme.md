@@ -152,6 +152,8 @@ The **SAL1 exam** consists of three sections, with a maximum score of **1000 poi
 - **400 points** – **Scenario I** (hands-on investigation, **2 hours**).
 - **400 points** – **Scenario II** (hands-on investigation, **2 hours**).
 
+**Pass mark: 750/1000** (verificado en [Exam Scoring](https://help.tryhackme.com/en/articles/10625043-exam-scoring), Help Center oficial).
+
 ### Tools Provided: / Herramientas proporcionadas:
 - **Alerts Dashboard**
 - **Splunk** (primary tool for analysis)

@@ -67,6 +67,7 @@ Precios referenciales con información al **21.09.2026**.
 
 - **No existe "JSCA" en TryHackMe** (confusión con HTB CJCA).
 - Precios 2026 verificados (info al 21.09.2026): SEC0 $69 · SEC1 $152 · SAL1 $299 · SAL2 $749 · PT1 $297 · PT2 $749 · AI1 $399 · WEB1 $299. Bundle Foundational (SEC0+SEC1) $177 (orig. $221).
+- Descuentos: 15% Premium en exámenes (PT2: 15% Premium / 25% MAX) · MAX Anual: voucher 40% off en 1 cert/año · Estudiante: solo Premium Anual. Detalle en `Resources/Subscription Plans/Readme.md`.
 
 ---
 **Autor / Author:** Apuromafo — **Verificado / Verified:** 2026-09-21

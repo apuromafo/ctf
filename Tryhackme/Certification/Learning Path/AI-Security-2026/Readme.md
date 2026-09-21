@@ -33,7 +33,7 @@ Prompt injection (directa/indirecta), jailbreaking (DAN, sufijos adversariales G
 - **100 % hands-on**, 13 escenarios sobre sistemas IA reales.
 - **Ventana de 48 h** según la página oficial de la certificación (se completa a ritmo propio).
 - Examen **$399** con **1 retake gratis** incluido. Precio referencial con información al **21.09.2026**. Insignia digital (Credly) + certificado.
-- **Puntaje de aprobación: PENDIENTE DE VERIFICAR** (no publicado oficialmente en las fuentes consultadas).
+- **Puntaje de aprobación: 70%** (verificado en el [AI1 Exam Guide](https://help.tryhackme.com/en/articles/15301082-ai1-exam-guide)).
 - **Validez: 3 años** (política estándar de certificaciones TryHackMe).
 
 **Nota sobre puntaje/validez:** la página de examen de tryhackme.com está tras Vercel/Cloudflare y su contenido no indexa. NO se documentan cifras sin verificar.

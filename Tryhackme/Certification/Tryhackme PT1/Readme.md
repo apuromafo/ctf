@@ -5,6 +5,8 @@
 
 Referencia oficial / Official reference: https://tryhackme.com/certification/junior-penetration-tester
 
+![PT1](./pt1-badge.svg)
+
 ### ¿Cómo es el proceso de examen? / How is the exam process?
 
 El examen consta de 3 secciones en el Simulador de Pentest que desafía tus habilidades prácticas sumergiéndote en escenarios de pruebas de penetración de la vida real: **Web Application, Network Security y Active Directory**.
@@ -37,11 +39,13 @@ Nuestro personal también realiza controles aleatorios para detectar y disuadir 
 
 ### Precios y Descuentos / Prices and Discounts
 
-Por **£299**, obtienes el examen más tres meses de TryHackMe premium, lo que te brinda acceso total a toda la capacitación que necesitas para tener éxito. Si necesitas más tiempo, puedes extender tu capacitación por tan solo **£14.99**.
+Por **$297**, obtienes el examen más tres meses de TryHackMe premium, lo que te brinda acceso total a toda la capacitación que necesitas para tener éxito. Si necesitas más tiempo, puedes extender tu capacitación por tan solo **$14.99**.
 
-Los usuarios premium actuales de TryHackMe pueden comprar el examen por **£255 (15% de descuento)**. También hay descuentos por volumen disponibles según la cantidad de licencias compradas. Muchos profesionales pasan el costo de la certificación a través de su empleador; verifica si tu empresa ofrece reembolsos por aprendizaje y desarrollo.
+Los usuarios premium actuales de TryHackMe pueden comprar el examen con **15% de descuento**. También hay descuentos por volumen disponibles según la cantidad de licencias compradas. Muchos profesionales pasan el costo de la certificación a través de su empleador; verifica si tu empresa ofrece reembolsos por aprendizaje y desarrollo.
 
 Si eres un cliente comercial de TryHackMe, ponte en contacto con tu gerente de éxito del cliente. Si estás interesado en nuestra oferta comercial, puedes obtener más información aquí.
+
+Precios referenciales con información al **21.09.2026**.
 
 ### ¿Hay una fecha de vencimiento para tomar el examen después de la compra? / Is there an expiration date to take the exam after purchase?
 

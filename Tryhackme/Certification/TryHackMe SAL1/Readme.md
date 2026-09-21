@@ -10,6 +10,8 @@ https://tryhackme.com/resources/blog/creating-sal1
 
 ![Sal1](./demo/sal1.png)
 
+![Badge SAL1](./sal1-badge.svg)
+
 ## Preguntas Frecuentes (FAQ)
 
 ### ¿Cuál es el proceso del examen? / What is the exam process?
@@ -83,12 +85,14 @@ Cualquier persona sorprendida haciendo trampa verá su certificación revocada y
 
 | Opción | Precio | Incluye |
 | --- | --- | --- |
-| **Paquete Estándar** | **£299** | Examen + 3 meses de TryHackMe Premium |
-| **Usuarios Premium actuales** | **£255** | 15% de descuento sobre el precio del examen |
-| **Extensión de entrenamiento** | **Desde £14.99** | Tiempo adicional de preparación |
+| **Paquete Estándar** | **$299** | Examen + 3 meses de TryHackMe Premium |
+| **Usuarios Premium actuales** | **$255** | 15% de descuento sobre el precio del examen |
+| **Extensión de entrenamiento** | **Desde $14.99** | Tiempo adicional de preparación |
 
 * **Descuentos por volumen:** Disponibles según la cantidad de licencias.
 * **Empresas:** Si eres cliente de TryHackMe Business, contacta a tu gerente de éxito de cliente.
+
+Precios referenciales con información al **21.09.2026**.
 
 ---
  

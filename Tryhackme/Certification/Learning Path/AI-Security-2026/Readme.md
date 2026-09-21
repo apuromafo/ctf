@@ -29,11 +29,12 @@ Prompt injection (directa/indirecta), jailbreaking (DAN, sufijos adversariales G
 ### Certificación asociada / Associated certification: AI1
 
 - **AI Security (AI1)** — https://tryhackme.com/certification/ai-security
+- Ficha local: [AI Security (AI1)](../Tryhackme%20AI1/Readme.md)
 - **100 % hands-on**, 13 escenarios sobre sistemas IA reales.
-- **Ventana de 72 h**, se completa a ritmo propio (~6–8 h de trabajo efectivo).
-- **1 retake gratis** incluido. Insignia digital (Credly) + certificado.
+- **Ventana de 48 h** según la página oficial de la certificación (se completa a ritmo propio).
+- Examen **$399** con **1 retake gratis** incluido. Precio referencial con información al **21.09.2026**. Insignia digital (Credly) + certificado.
 - **Puntaje de aprobación: PENDIENTE DE VERIFICAR** (no publicado oficialmente en las fuentes consultadas).
-- **Validez: PENDIENTE DE VERIFICAR** (era un dato pendiente; no se encontró cifra oficial en fuentes indexadas).
+- **Validez: 3 años** (política estándar de certificaciones TryHackMe).
 
 **Nota sobre puntaje/validez:** la página de examen de tryhackme.com está tras Vercel/Cloudflare y su contenido no indexa. NO se documentan cifras sin verificar.
 

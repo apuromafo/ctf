@@ -20,6 +20,8 @@ El **nuevo path de entrada** de TryHackMe que reemplaza a los antiguos "Complete
 
 **¡Sí!** Es la preparación oficial para la certificación **Cyber Security 101 (SEC1)**: https://tryhackme.com/certification/cyber-security-101
 
+> Ficha local: [Cyber Security 101 (SEC1)](../Tryhackme%20SEC1/Readme.md)
+
 ### Datos de examen SEC1 / SEC1 exam facts (verificado / verified)
 
 - **100 % práctico, sin preguntas tipo test** (fully hands-on, "no multiple-choice questions").
@@ -36,7 +38,7 @@ El **nuevo path de entrada** de TryHackMe que reemplaza a los antiguos "Complete
 
 ### Precio / Pricing
 
-PENDIENTE DE VERIFICAR en la página oficial (se reporta **$149 USD** / €131 de referencia, con descuento para suscriptores Premium/Max — cruzar en tryhackme.com/certification/cyber-security-101). Premium se requiere para completar el path.
+Examen **$152** con 1 retake gratis; bundle Foundational (SEC0 + SEC1) **$177** (original $221). Precio verificado en la página oficial y referencial con información al **21.09.2026**. Premium se requiere para completar el path.
 
 ---
 

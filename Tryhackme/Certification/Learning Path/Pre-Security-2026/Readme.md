@@ -30,6 +30,8 @@ Path inicial de TryHackMe que cubre los fundamentos para empezar en cibersegurid
 
 **¡Sí!** Preparación oficial para la certificación **Pre Security (SEC0)**: https://tryhackme.com/certification/pre-security
 
+> Ficha local: [Pre Security (SEC0)](../Tryhackme%20SEC0/Readme.md) — examen **$69** con 1 retake gratis. Precio referencial con información al **21.09.2026**.
+
 ### Datos de examen SEC0 / SEC0 exam facts (verificado / verified)
 
 - **6 secciones** mapeadas a los 6 dominios del path; **10 preguntas por sección**.

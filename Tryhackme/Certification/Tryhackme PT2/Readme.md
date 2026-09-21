@@ -5,6 +5,8 @@
 
 Referencia oficial / Official reference: https://tryhackme.com/certification/penetration-tester-level-2
 
+![PT2](./pt2-badge.svg)
+
 ### ¿Cómo es el proceso de examen? / How is the exam process?
 
 El examen es una evaluación práctica **de 72 horas, no supervisada (non-proctored)**, que combina explotación hands-on y reporte. Consta de **2 secciones en 10 máquinas** dentro de una única instancia de red, accesible por VPN 24/7 una vez iniciado. Ambas superficies de ataque están activas desde el primer minuto — el candidato elige su punto de entrada y cambia libremente entre secciones:
@@ -34,7 +36,7 @@ Sí, la credencial es válida por **tres años**. Incluye certificado digital ve
 
 ### Precios / Pricing
 
-Precio **por zona geográfica (geo-tiered)**, con **15% de descuento para suscriptores Premium activos y 25% para MAX**. A diferencia de otras certs, **PT2 no incluye Premium**: el contenido de preparación requiere suscripción Premium o MAX. Tienes 12 meses tras la compra para rendir (verificar vigencia de cupones en tu caso).
+Precio de referencia **$749** (verificado en la página oficial de certificaciones), **por zona geográfica (geo-tiered)**, con **15% de descuento para suscriptores Premium activos y 25% para MAX**. A diferencia de otras certs, **PT2 no incluye Premium**: el contenido de preparación requiere suscripción Premium o MAX. Tienes 12 meses tras la compra para rendir (verificar vigencia de cupones en tu caso). Precio referencial con información al **21.09.2026**.
 
 ### ¿A quién está dirigida? / Who is it for?
 

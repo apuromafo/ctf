@@ -5,6 +5,10 @@
 
 Referencia oficial / Official reference: https://tryhackme.com/certification/security-analyst-level-2
 
+![SAL2](./sal2-badge.svg)
+
+![Certificado SAL2](./sal2-cert.png)
+
 ### ¿Qué es? / What is it?
 
 SAL2 es una certificación avanzada y práctica para analistas listos para operar al siguiente nivel. Valida la profundidad técnica, el juicio y la comunicación que exigen las operaciones de seguridad modernas. Los roles SOC de nivel medio-senior demandan más que triage de alertas: SAL2 demuestra que puedes investigar amenazas complejas y rendir al nivel del que dependen los equipos modernos.
@@ -38,7 +42,7 @@ Analistas SOC Nivel 1 y 2 listos para rendir a nivel medio. **SAL1 antes de SAL2
 
 ### Precios / Pricing
 
-**$749** (USD de referencia; puede aplicar precio localizado). Suscriptores Premium o Max aplican su código de descuento al pagar. Comparativa oficial de la página: Security+ $425+, CySA+ $599, BTL1 $2.500, SANS $5.999+.
+**$749** (USD de referencia; puede aplicar precio localizado). Suscriptores Premium o Max aplican su código de descuento al pagar. Comparativa oficial de la página: Security+ $425+, CySA+ $599, BTL1 $2.500, SANS $5.999+. Precio referencial con información al **21.09.2026**.
 
 ### Founding Operators Club (cohorte inaugural)
 

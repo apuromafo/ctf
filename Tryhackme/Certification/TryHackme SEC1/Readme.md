@@ -6,7 +6,9 @@
 Información oficial / Official information:
 https://tryhackme.com/certification/cyber-security-101/details
 
-![Sal1](https://tryhackme.com/static/image/banner.e617ea5c.png) 
+![SEC1](./sec1-badge.svg)
+
+![Certificado SEC1](./sec1-cert.png) 
 
 Video https://www.youtube.com/watch?v=nVETMpalQS8
 Info https://tryhackme.com/certification/cyber-security-101
@@ -59,6 +61,9 @@ El examen es:
 
 **¿Cuánto dura el examen y hay retomas?**
 24 horas y sí, hay una retoma disponible después de un período de enfriamiento (cool down).
+
+**¿Cuánto cuesta el examen? / How much does the exam cost?**
+El examen cuesta **$152** e incluye **1 retoma/retake gratuita**. El bundle Foundational (SEC0 + SEC1) tiene un precio de **$177** (precio original $221). Precio referencial con información al **21.09.2026**.
 
 **¿En qué se diferencia esta certificación de otras certificaciones de ciberseguridad para principiantes?**
 Diferenciadores clave:

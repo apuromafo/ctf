@@ -1,5 +1,7 @@
 # Initialization
 
+> **ES:** Crypto · VERY EASY - cifrado AES-CTR custom (AdvancedEncryption): analizar y descifrar.
+> **EN:** Crypto - VERY EASY - custom AES-CTR cipher (AdvancedEncryption): analyze and decrypt.
 :::note CHALLENGE DESCRIPTION
 
 Difficulty: VERY EASY
@@ -79,3 +81,12 @@ print(res)
 ```plaintext title="Flag"
 HTB{d4mn_th3s3_ins3cur3_bl0ckch41n_p4r4m3t3rs!!!!}
 ```
+
+---
+
+## Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. No publicar flags de contenido activo.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox. Do not publish active content flags.
+
+_Fecha de edición: 2026-09-24_

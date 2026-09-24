@@ -1,5 +1,7 @@
 # CubeMadness1
 
+> **ES:** GamePwn · VERY EASY — Cheat Engine: score a 19 en memoria y recoger 1 punto.
+> **EN:** GamePwn · VERY EASY — Cheat Engine: set score to 19 in memory, collect 1 point.
 >note DESCRIPCIÓN DEL DESAFÍO
 
 **Dificultad:** MUY FÁCIL
@@ -43,3 +45,12 @@ Nota:
 Español: Además, si solo vas a copiarlos en HTB , no los pegues de inmediato, ya que HTB los baneará, chicos intenten resolverlo y aqui lo dejo a modo de respaldo solamente .
 
 English: Also, if you're just going to copy them, don't instant paste it as HTB will ban you, guys.
+
+---
+
+## Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. No publicar flags de contenido activo.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox. Do not publish active content flags.
+
+_Fecha de edición: 2026-09-24_

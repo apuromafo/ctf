@@ -1,5 +1,7 @@
 # Red Miners
 
+> **ES:** Forensics · VERY EASY - miner_installer.sh con partes en base64 que arman el flag.
+> **EN:** Forensics - VERY EASY - miner_installer.sh with base64 parts building the flag.
 :::note  CHALLENGE DESCRIPTION
 
 Difficulty: VERY EASY
@@ -80,3 +82,12 @@ ZXhwb3J0IHBhcnQ0PSJfdGgzX3IzZF9wbDRuM3R9Ig== --> export part4="_th3_r3d_pl4n3t}"
 ```plaintext title="Flag"
 HTB{m1n1ng_th31r_w4y_t0_m4rs_th3_r3d_pl4n3t}
 ```
+
+---
+
+## Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. No publicar flags de contenido activo.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox. Do not publish active content flags.
+
+_Fecha de edición: 2026-09-24_

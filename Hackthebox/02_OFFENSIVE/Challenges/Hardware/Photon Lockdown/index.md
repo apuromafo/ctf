@@ -1,5 +1,7 @@
 # Photon Lockdown
 
+> **ES:** Hardware · VERY EASY — extracción de firmware ONT (rootfs) hacia credenciales hardcodeadas.
+> **EN:** Hardware · VERY EASY — ONT firmware extraction (rootfs) to hardcoded credentials.
 :::note CHALLENGE DESCRIPTION
 
 Difficulty: VERY EASY
@@ -53,3 +55,12 @@ d----           2022/8/10    10:50                var
 ```plaintext title="Flag"
 HTB{N0w_Y0u_C4n_L0g1n}
 ```
+
+---
+
+## Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. No publicar flags de contenido activo.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox. Do not publish active content flags.
+
+_Fecha de edición: 2026-09-24_

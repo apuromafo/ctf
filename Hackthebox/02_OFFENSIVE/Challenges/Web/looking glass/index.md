@@ -1,5 +1,7 @@
 # looking glass
 
+> **ES:** Web · EASY — command injection en el ping.
+> **EN:** Web · EASY — command injection in ping.
 :::note CHALLENGE DESCRIPTION
 
 Difficulty: EASY
@@ -29,3 +31,12 @@ We've built the most secure networking tool in the market, come and check it out
 ```flag
 HTB{I_f1n4lly_l00k3d_thr0ugh_th3_rc3}
 ```
+
+---
+
+## Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. No publicar flags de contenido activo.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox. Do not publish active content flags.
+
+_Fecha de edición: 2026-09-24_

@@ -1,5 +1,7 @@
 # Extraterrestrial Persistence
 
+> **ES:** Forensics · VERY EASY — persistencia systemd en Linux con unit en base64 que contiene el flag.
+> **EN:** Forensics · VERY EASY — Linux systemd persistence with a base64 unit containing the flag.
 :::note CHALLENGE DESCRIPTION
 
 Difficulty: VERY EASY
@@ -50,3 +52,12 @@ WantedBy=multi-user.target
 ```plaintext title="Flag"
 HTB{th3s3_4l13nS_4r3_s00000_b4s1c}
 ```
+
+---
+
+## Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. No publicar flags de contenido activo.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox. Do not publish active content flags.
+
+_Fecha de edición: 2026-09-24_

@@ -1,5 +1,7 @@
 # Simple Encryptor
 
+> **ES:** Reversing · VERY EASY - reversing del cifrador (IDA) para descifrar el flag.
+> **EN:** Reversing - VERY EASY - encryptor reversing (IDA) to decrypt the flag.
 :::note CHALLENGE DESCRIPTION
 
 Difficulty: VERY EASY
@@ -127,3 +129,12 @@ HTB{vRy_s1MplE_F1LE3nCryp0r}
 ```flag
 HTB{vRy_s1MplE_F1LE3nCryp0r}
 ```
+
+---
+
+## Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. No publicar flags de contenido activo.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox. Do not publish active content flags.
+
+_Fecha de edición: 2026-09-24_

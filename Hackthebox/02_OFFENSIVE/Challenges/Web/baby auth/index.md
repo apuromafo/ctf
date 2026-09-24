@@ -1,5 +1,7 @@
 # baby auth
 
+> **ES:** Web · EASY — forja de cookie de sesión base64 {"username":"admin"}.
+> **EN:** Web · EASY — forged base64 session cookie {"username":"admin"}.
 :::note CHALLENGE DESCRIPTION
 
 Difficulty: EASY
@@ -53,3 +55,12 @@ eyJ1c2VybmFtZSI6ImFkbWluIn0=
 ```flag
 HTB{s3ss10n_1nt3grity_1s_0v3r4tt3d_4nyw4ys}
 ```
+
+---
+
+## Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. No publicar flags de contenido activo.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox. Do not publish active content flags.
+
+_Fecha de edición: 2026-09-24_

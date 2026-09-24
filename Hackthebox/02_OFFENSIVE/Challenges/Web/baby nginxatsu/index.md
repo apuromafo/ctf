@@ -1,5 +1,7 @@
 # baby nginxatsu
 
+> **ES:** Web · EASY - login y config de nginx para liberar nginxatsu.
+> **EN:** Web - EASY - login and nginx config to free nginxatsu.
 :::note CHALLENGE DESCRIPTION
 
 Difficulty: EASY
@@ -107,3 +109,12 @@ http {
 ```flag
 HTB{ng1ngx_r34lly_b3_sp1ll1ng_my_w3ll_h1dd3n_s3cr3ts??}
 ```
+
+---
+
+## Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. No publicar flags de contenido activo.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox. Do not publish active content flags.
+
+_Fecha de edición: 2026-09-24_

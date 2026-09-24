@@ -1,5 +1,7 @@
 # CubeMadness2
 
+> **ES:** GamePwn · EASY — Cheat Engine + reversing Unity IL2CPP (Cpp2IL/IDA).
+> **EN:** GamePwn · EASY — Cheat Engine + Unity IL2CPP reversing (Cpp2IL/IDA).
 :::note CHALLENGE DESCRIPTION
 
 Difficulty: EASY
@@ -51,3 +53,12 @@ Alea iacta est or the die is cast. Whatever, collect the cubes and rise victorio
 ```plaintext title="Flag"
 HTB{08FU5C473D_4ND_UNKN0WN}
 ```
+
+---
+
+## Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. No publicar flags de contenido activo.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox. Do not publish active content flags.
+
+_Fecha de edición: 2026-09-24_

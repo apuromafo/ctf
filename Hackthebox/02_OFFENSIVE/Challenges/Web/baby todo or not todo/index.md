@@ -1,5 +1,7 @@
 # baby todo or not todo
 
+> **ES:** Web · EASY — endpoint /list/all/ expone datos de todos.
+> **EN:** Web · EASY — /list/all/ endpoint exposes everyone data.
 :::note CHALLENGE DESCRIPTION
 
 Difficulty: EASY
@@ -31,3 +33,12 @@ I'm so done with these bloody HR solutions coming from those bloody HR specialis
 ```flag
 HTB{l3ss_ch0r3s_m0r3_h4ck1ng...right?!!1}
 ```
+
+---
+
+## Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. No publicar flags de contenido activo.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox. Do not publish active content flags.
+
+_Fecha de edición: 2026-09-24_

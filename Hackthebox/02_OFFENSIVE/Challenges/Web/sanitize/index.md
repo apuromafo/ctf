@@ -1,5 +1,7 @@
 # sanitize
 
+> **ES:** Web · EASY — SQLi en el login (OR 1=1 / UNION).
+> **EN:** Web · EASY — SQLi at login (OR 1=1 / UNION).
 :::note CHALLENGE DESCRIPTION
 
 Difficulty: EASY
@@ -62,3 +64,12 @@ payload = select * from users where username = ''UNION SELECT * FROM users --''A
 ![img](img/image_20250317-221756.png)
 
 不做深究，环境特性
+
+---
+
+## Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. No publicar flags de contenido activo.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox. Do not publish active content flags.
+
+_Fecha de edición: 2026-09-24_

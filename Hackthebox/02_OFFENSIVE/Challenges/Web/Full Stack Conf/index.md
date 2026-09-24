@@ -1,5 +1,7 @@
 # Full Stack Conf
 
+> **ES:** Web · EASY — XSS que revisa el admin hacia alert() = flag.
+> **EN:** Web · EASY — XSS checked by the admin to alert() = flag.
 :::note CHALLENGE DESCRIPTION
 
 Difficulty: EASY
@@ -39,3 +41,12 @@ Stay up-to-date on Full Stack Conf or pop an alert() to get the flag 😅
 ```flag
 HTB{p0p..p0p..p0p...alert(1337)}
 ```
+
+---
+
+## Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. No publicar flags de contenido activo.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox. Do not publish active content flags.
+
+_Fecha de edición: 2026-09-24_

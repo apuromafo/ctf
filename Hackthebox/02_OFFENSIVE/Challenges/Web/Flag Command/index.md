@@ -1,5 +1,7 @@
 # Flag Command
 
+> **ES:** Web · VERY EASY — laberinto Dimensional Escape Quest hacia el secreto con flag.
+> **EN:** Web · VERY EASY — Dimensional Escape Quest maze to the secret with the flag.
 :::note CHALLENGE DESCRIPTION
 
 Difficulty: VERY EASY
@@ -27,3 +29,12 @@ Embark on the "Dimensional Escape Quest" where you wake up in a mysterious fores
 ```flag
 HTB{D3v3l0p3r_t00l5_4r3_b35t__t0015_wh4t_d0_y0u_Th1nk??}
 ```
+
+---
+
+## Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. No publicar flags de contenido activo.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox. Do not publish active content flags.
+
+_Fecha de edición: 2026-09-24_

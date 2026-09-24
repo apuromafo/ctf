@@ -1,5 +1,7 @@
 # Quantum Artifact
 
+> **ES:** Misc · EASY — circuito qiskit tipo Bernstein-Vazirani: medir los bits del flag.
+> **EN:** Misc · EASY — Bernstein-Vazirani-like qiskit circuit: measure the flag bits.
 :::note CHALLENGE DESCRIPTION
 
 Difficulty: EASY
@@ -44,3 +46,12 @@ with open('challenge_circuit.qasm', 'w') as file:
 ```
 
 并提供了 `challenge_circuit.qasm` 文件
+
+---
+
+## Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. No publicar flags de contenido activo.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox. Do not publish active content flags.
+
+_Fecha de edición: 2026-09-24_

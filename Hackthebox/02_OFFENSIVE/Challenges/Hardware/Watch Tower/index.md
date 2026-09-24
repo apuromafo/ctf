@@ -1,5 +1,7 @@
 # Watch Tower
 
+> **ES:** Hardware · VERY EASY — pcapng Modbus + tshark: flag en function code 16.
+> **EN:** Hardware · VERY EASY — Modbus pcapng + tshark: flag in function code 16.
 :::note CHALLENGE DESCRIPTION
 
 Difficulty: VERY EASY
@@ -33,3 +35,12 @@ Our infrastructure monitoring system detected some abnormal behavior and initiat
 ```flag
 HTB{3nc2yp710n?_n3v32_h342d_0f_7h47!@^}
 ```
+
+---
+
+## Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. No publicar flags de contenido activo.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox. Do not publish active content flags.
+
+_Fecha de edición: 2026-09-24_

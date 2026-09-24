@@ -1,5 +1,7 @@
 # Wrong Spooky Season
 
+> **ES:** Forensics · VERY EASY - pcap: stream TCP 13 con webshell JSP y socat.
+> **EN:** Forensics - VERY EASY - pcap: TCP stream 13 with JSP webshell and socat.
 :::note CHALLENGE DESCRIPTION
 
 Difficulty: VERY EASY
@@ -99,3 +101,12 @@ HTB{j4v4_5pr1ng_just_b3c4m3_j4v4_sp00ky!!}
 ```plaintext title="Flag"
 HTB{j4v4_5pr1ng_just_b3c4m3_j4v4_sp00ky!!}
 ```
+
+---
+
+## Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. No publicar flags de contenido activo.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox. Do not publish active content flags.
+
+_Fecha de edición: 2026-09-24_

@@ -1,5 +1,7 @@
 # RAuth
 
+> **ES:** Reversing · EASY — reversing del binario Rust (salsa20) hacia el password de auth.
+> **EN:** Reversing · EASY — Rust binary reversing (salsa20) to the auth password.
 :::note CHALLENGE DESCRIPTION
 
 Difficulty: EASY
@@ -37,3 +39,12 @@ Flag: "HTB{I_Kn0w_h0w_t0_5al54}"
 ```flag
 HTB{I_Kn0w_h0w_t0_5al54}
 ```
+
+---
+
+## Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. No publicar flags de contenido activo.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox. Do not publish active content flags.
+
+_Fecha de edición: 2026-09-24_

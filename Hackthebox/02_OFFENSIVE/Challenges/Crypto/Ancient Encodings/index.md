@@ -1,5 +1,7 @@
 # Ancient Encodings
 
+> **ES:** Crypto · VERY EASY — reversión del encoding (hex de bytes_to_long + base64) para recuperar el flag.
+> **EN:** Crypto · VERY EASY — encoding reversal (bytes_to_long hex + base64) to recover the flag.
 :::note CHALLENGE DESCRIPTION
 
 Difficulty: VERY EASY
@@ -49,3 +51,12 @@ print(data)
 ```plaintext title="Flag"
 HTB{411_7h3_3nc0d1n9_423_h323_70_574y}
 ```
+
+---
+
+## Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. No publicar flags de contenido activo.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox. Do not publish active content flags.
+
+_Fecha de edición: 2026-09-24_

@@ -1,5 +1,7 @@
 # Gunship
 
+> **ES:** Web · VERY EASY - revision del codigo Express (routes/views) hacia el flag.
+> **EN:** Web - VERY EASY - Express code review (routes/views) to the flag.
 :::note CHALLENGE DESCRIPTION
 
 Difficulty: VERY EASY
@@ -120,3 +122,12 @@ HTB{wh3n_lif3_g1v3s_y0u_p6_st4rT_p0llut1ng_w1th_styl3!!}
 ```plaintext title="Flag"
 HTB{wh3n_lif3_g1v3s_y0u_p6_st4rT_p0llut1ng_w1th_styl3!!}
 ```
+
+---
+
+## Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. No publicar flags de contenido activo.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox. Do not publish active content flags.
+
+_Fecha de edición: 2026-09-24_

@@ -1,5 +1,7 @@
 # baby BoneChewerCon
 
+> **ES:** Web · EASY — debugger expuesto en producción hacia la secret key.
+> **EN:** Web · EASY — debugger exposed in production to the secret key.
 :::note CHALLENGE DESCRIPTION
 
 Difficulty: EASY
@@ -27,3 +29,12 @@ Due to heavy workload for the upcoming baby BoneChewerCon event, the website is 
 ```flag
 HTB{wh3n_th3_d3bugg3r_turns_4g41nst_th3_d3bugg33}
 ```
+
+---
+
+## Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. No publicar flags de contenido activo.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox. Do not publish active content flags.
+
+_Fecha de edición: 2026-09-24_

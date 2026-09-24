@@ -1,5 +1,7 @@
 # Alien Cradle
 
+> **ES:** Forensics · VERY EASY — PowerShell cradle ofuscado: el flag va concatenado en strings.
+> **EN:** Forensics · VERY EASY — obfuscated PowerShell cradle: the flag is string-concatenated.
 :::note CHALLENGE DESCRIPTION
 
 Difficulty: VERY EASY
@@ -32,3 +34,12 @@ HTB{p0w3rsh3ll_Cr4dl3s_c4n_g3t_th3_j0b_d0n3}
 ```plaintext title="Flag"
 HTB{p0w3rsh3ll_Cr4dl3s_c4n_g3t_th3_j0b_d0n3}
 ```
+
+---
+
+## Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. No publicar flags de contenido activo.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox. Do not publish active content flags.
+
+_Fecha de edición: 2026-09-24_

@@ -24,7 +24,9 @@ It seems our precious technology has been leaked to the threat actor. Our head E
 
 ## Task 1
 
-> 威胁参与者在 S3 存储桶位置找到的二进制文件的 MD5 和是多少？
+> [ZH] 威胁参与者在 S3 存储桶位置找到的二进制文件的 MD5 和是多少？
+> **ES:** ¿Cuál es el MD5 del binario hallado en la ubicación del bucket S3? (bucket `papa-noel`, CloudTrail eu-west-2, muestra en VirusTotal)
+> **EN:** What is the MD5 of the binary found at the S3 bucket location? (`papa-noel` bucket, eu-west-2 CloudTrail, VirusTotal sample)
 
 在日志文件中，关注到 `\optinseltrace2-cloudtrail\eu-west-2\2023\11\27\949622803460_CloudTrail_eu-west-2_20231127T0650Z_Ztna6Dl7FYVZ1LTR.json`
 
@@ -105,9 +107,9 @@ It seems our precious technology has been leaked to the threat actor. Our head E
 
 ## Task 2
 
-> 威胁参与者开始自动检索我们公开的 S3 存储桶内容的时间是几点？
-
-TODO 不做了，一大坨的屎
+> [ZH] 威胁参与者开始自动检索我们公开的 S3 存储桶内容的时间是几点？
+> **ES:** ¿A qué hora empezó el TA la recolección automatizada del bucket S3 público? (pendiente de documentar)
+> **EN:** At what time did the TA start automated collection of the public S3 bucket? (pending documentation)
 
 ```plaintext title="Answer"
 

@@ -24,9 +24,11 @@ Forela 的域控制器受到攻击。据信，该域控制器的域管理员账�
 
 ## Task 1
 
-> 攻击者可滥用 vssadmin 实用程序创建卷影快照，然后提取 NTDS.dit 等敏感文件，绕过安全机制。确定卷影复制服务进入运行状态的时间。
+> [ZH] 攻击者可滥用 vssadmin 实用程序创建卷影快照，然后提取 NTDS.dit 等敏感文件，绕过安全机制。确定卷影复制服务进入运行状态的时间。
+> **ES:** El atacante abusaría de vssadmin (LOLBin) para crear shadow copies y extraer NTDS.dit: determinar cuándo entró en ejecución el servicio Volume Shadow Copy. (TODO sin completar)
+> **EN:** The attacker would abuse vssadmin (LOLBin) to snapshot and extract NTDS.dit: determine when the Volume Shadow Copy service entered running state. (TODO, incomplete)
 
-TODO 未完成
+TODO 未完成 / pendiente / pending
 
 ```plaintext title="Answer"
 

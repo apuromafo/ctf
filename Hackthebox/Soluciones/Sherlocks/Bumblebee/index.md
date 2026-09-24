@@ -8,6 +8,7 @@
 | **Tipo** | DFIR |
 | **URL** | https://app.hackthebox.com/sherlocks/bumblebee |
 | **Evidencia** | bumblebee.zip |
+| **Soluciones en carpeta** | `index.md` (ficha con tasks) + `Bumblebee_writeup.pdf` + `bumblebee.md` |
 
 
 :::info Sherlock Scenario

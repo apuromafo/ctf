@@ -1,5 +1,8 @@
 # OWASP Top 10
 
+> **ES:** Ruta de aprendizaje / Track de HackTheBox. Las soluciones viven dentro de cada challenge enlazado.
+> **EN:** HackTheBox learning track. Solutions live inside each linked challenge.
+
 ## looking glass - EASY
 
 [looking glass](../Challenges/Web/looking%20glass/)
@@ -39,3 +42,12 @@
 ## Web - baby breaking grad - EASY
 
 [baby breaking grad](../Challenges/Web/baby%20breaking%20grad/)
+
+---
+
+## ⚠️ Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox.
+
+_Fecha de edición: 2026-09-24_

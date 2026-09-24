@@ -1,4 +1,14 @@
-# Litter
+# Litter [verificar]
+
+> **ES:** Ficha mínima — ver plantilla completa en `../../_PLANIFICACION/PLANTILLA_SHERLOCK.md`.
+> **EN:** Minimal header — see full template at `../../_PLANIFICACION/PLANTILLA_SHERLOCK.md`.
+
+| Campo | Valor |
+|-------|-------|
+| **Tipo** | SOC |
+| **URL** | https://app.hackthebox.com/sherlocks/litter |
+| **Evidencia** | litter.zip |
+
 
 :::info Sherlock Scenario
 
@@ -12,7 +22,7 @@ Khalid has just logged onto a host that he and his team use as a testing host fo
 
 [litter.zip](./litter.zip)
 
-## Task 1
+## Task 1 — Protocolo sospechoso / Suspicious protocol
 
 > 一眼看去，在这次攻击中，哪种协议似乎是可疑的？
 
@@ -24,7 +34,7 @@ Khalid has just logged onto a host that he and his team use as a testing host fo
 DNS
 ```
 
-## Task 2
+## Task 2 — IP del host sospechoso / Suspicious host IP
 
 > 我们的主机和另一个主机之间有大量的流量，可疑主机的 IP 地址是什么？
 
@@ -36,7 +46,7 @@ DNS
 192.168.157.145
 ```
 
-## Task 3
+## Task 3 — Primer comando al cliente / First command to client
 
 > 攻击者发送给客户端的第一个命令是什么？
 
@@ -60,7 +70,7 @@ hex 解码后即可得到答案
 whoami
 ```
 
-## Task 4
+## Task 4 — Versión de la herramienta DNS tunneling / DNS tunneling tool version
 
 > 攻击者使用的 DNS 隧道工具版本是多少？
 
@@ -80,7 +90,7 @@ whoami
 0.07
 ```
 
-## Task 5
+## Task 5 — Renombre de la herramienta / Tool rename
 
 > 攻击者试图重命名他们意外留在客户主机上的工具。他们将其命名为什么？
 
@@ -102,7 +112,7 @@ ren ren 'dnscat2-v0.07-client-win32.exe' 'win_install.exe
 win_install.exe
 ```
 
-## Task 6
+## Task 6 — Archivos en almacenamiento en la nube / Files in cloud storage
 
 > 攻击者试图枚举用户的云存储。他们在云存储目录中定位到多少个文件？
 
@@ -118,7 +128,7 @@ win_install.exe
 0
 ```
 
-## Task 7
+## Task 7 — Ruta del archivo PII robado / Stolen PII file path
 
 > 被窃取的个人身份信息（PII）文件的完整位置是什么？
 
@@ -138,7 +148,7 @@ type "C:\Users\test\Documents\client data optimisation\user details.csv"
 C:\users\test\documents\client data optimization\user details.csv
 ```
 
-## Task 8
+## Task 8 — Nº de registros exfiltrados / Number of exfiltrated records
 
 > 究竟被窃取了多少个客户的个人身份信息记录？
 
@@ -220,3 +230,12 @@ print(res)
 ```plaintext title="Answer"
 721
 ```
+
+---
+
+## ⚠️ Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. Evidencia y respuestas con contexto, no solo la respuesta suelta.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox. Evidence and contextual answers, not bare answers.
+
+_Fecha de edición: 2026-09-24_

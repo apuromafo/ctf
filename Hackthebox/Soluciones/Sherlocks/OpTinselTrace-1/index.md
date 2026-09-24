@@ -1,4 +1,14 @@
-# OpTinselTrace-1
+# OpTinselTrace-1 [verificar]
+
+> **ES:** Ficha mínima — ver plantilla completa en `../../_PLANIFICACION/PLANTILLA_SHERLOCK.md`.
+> **EN:** Minimal header — see full template at `../../_PLANIFICACION/PLANTILLA_SHERLOCK.md`.
+
+| Campo | Valor |
+|-------|-------|
+| **Tipo** | Por verificar / To verify |
+| **URL** | https://app.hackthebox.com/sherlocks/optinseltrace-1 |
+| **Evidencia** | Por verificar / To verify |
+
 
 :::info Sherlock Scenario
 
@@ -200,3 +210,12 @@ Santaknowskungfu
 
 - [Hack The Box Sherlocks - OpTinselTrace-1 Writeup - はまやんはまやんはまやん](https://blog.hamayanhamayan.com/entry/2023/12/27/201532)
 - [DFIR/WalkThroughs/OpTinselTrace-1-5.md at main · dbissell6/DFIR](https://github.com/dbissell6/DFIR/blob/main/WalkThroughs/OpTinselTrace-1-5.md)
+
+---
+
+## ⚠️ Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. Evidencia y respuestas con contexto, no solo la respuesta suelta.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox. Evidence and contextual answers, not bare answers.
+
+_Fecha de edición: 2026-09-24_

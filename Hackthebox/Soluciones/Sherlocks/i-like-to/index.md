@@ -1,4 +1,14 @@
-# i-like-to
+# i-like-to [verificar]
+
+> **ES:** Ficha mínima — ver plantilla completa en `../../_PLANIFICACION/PLANTILLA_SHERLOCK.md`.
+> **EN:** Minimal header — see full template at `../../_PLANIFICACION/PLANTILLA_SHERLOCK.md`.
+
+| Campo | Valor |
+|-------|-------|
+| **Tipo** | Por verificar / To verify |
+| **URL** | https://app.hackthebox.com/sherlocks/i-like-to |
+| **Evidencia** | Triage.zip |
+
 
 :::info Sherlock Scenario
 
@@ -741,3 +751,12 @@ Task 7 中有
 ```plaintext title="Answer"
 5trongP4ssw0rd
 ```
+
+---
+
+## ⚠️ Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. Evidencia y respuestas con contexto, no solo la respuesta suelta.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox. Evidence and contextual answers, not bare answers.
+
+_Fecha de edición: 2026-09-24_

@@ -1,4 +1,14 @@
-# Noted
+# Noted [verificar]
+
+> **ES:** Ficha mínima — ver plantilla completa en `../../_PLANIFICACION/PLANTILLA_SHERLOCK.md`.
+> **EN:** Minimal header — see full template at `../../_PLANIFICACION/PLANTILLA_SHERLOCK.md`.
+
+| Campo | Valor |
+|-------|-------|
+| **Tipo** | DFIR |
+| **URL** | https://app.hackthebox.com/sherlocks/noted |
+| **Evidencia** | Noted.zip |
+
 
 :::info Sherlock Scenario
 
@@ -258,3 +268,12 @@ Person of contact : CyberJunkie@mail2torjgmxgexntbrmhvgluavhj7ouul5yar6ylbvjkxwq
 ```plaintext title="Answer"
 CyberJunkie@mail2torjgmxgexntbrmhvgluavhj7ouul5yar6ylbvjkxwqf6ixkwyd.onion
 ```
+
+---
+
+## ⚠️ Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. Evidencia y respuestas con contexto, no solo la respuesta suelta.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox. Evidence and contextual answers, not bare answers.
+
+_Fecha de edición: 2026-09-24_

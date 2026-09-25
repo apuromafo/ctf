@@ -1,7 +1,7 @@
 # RogueOne [Medium]
 
-> **ES:** Ficha mínima — ver plantilla completa en `../../_PLANIFICACION/PLANTILLA_SHERLOCK.md`.
-> **EN:** Minimal header — see full template at `../../_PLANIFICACION/PLANTILLA_SHERLOCK.md`.
+> **ES:** Sherlock Network Forensics: C2 en workstation de Simon Stark — memory forensics con Volatility 3 (svchost malicioso, C2, hash, timeline, VirusTotal).
+> **EN:** Network Forensics sherlock: C2 on Simon Stark's workstation — memory forensics with Volatility 3 (rogue svchost, C2, hash, timeline, VirusTotal).
 
 | Campo | Valor |
 |-------|-------|
@@ -14,22 +14,29 @@
 
 Your SIEM system generated multiple alerts in less than a minute, indicating potential C2 communication from Simon Stark's workstation. Despite Simon not noticing anything unusual, the IT team had him share screenshots of his task manager to check for any unusual processes. No suspicious processes were found, yet alerts about C2 communications persisted. The SOC manager then directed the immediate containment of the workstation and a memory dump for analysis. As a memory forensics expert, you are tasked with assisting the SOC team at Forela to investigate and resolve this urgent incident.
 
-您的 SIEM 系统在一分钟内生成了多个警报，表明西蒙 · 斯塔克的工作站存在潜在的 C2 通信。尽管西蒙没有注意到任何异常情况，但 IT 团队还是让他分享了任务管理器的屏幕截图，以检查是否有任何异常进程。没有发现可疑进程，但有关 C2 通信的警报仍然存在。然后，SOC 经理指示立即封存工作站并转储内存以进行分析。作为内存取证专家，您的任务是协助 Forela 的 SOC 团队调查并解决这一紧急事件。
+> [ZH] 您的 SIEM 系统在一分钟内生成了多个警报……协助 Forela 的 SOC 团队调查并解决这一紧急事件。
+> **ES:** SIEM con múltiples alertas de posible C2 en < 1 min: aislar el host, volcar memoria y analizar como experto forense.
+> **EN:** SIEM with multiple possible-C2 alerts in < 1 min: contain the host, dump memory and analyze as forensics expert.
 :::
 
-## 题目数据
+## 题目数据 / Datos / Data / Datos / Data
 
 :::note
 
-由于附件过大，故在此不提供下载链接
+> [ZH] 由于附件过大，故在此不提供下载链接。
+> **ES:** Evidencia no incluida por tamaño (ver ZIP oficial del sherlock).
+> **EN:** Evidence not included due to size (see the sherlock's official ZIP).
 
 :::
 
-## Task 1
+## Task 1 — Proceso malicioso (PID) / Malicious process (PID)
 
-> 请识别恶意进程并确认恶意进程的进程 ID。
+> [ZH] 请识别恶意进程并确认恶意进程的进程 ID。
+> **ES:** Identificar el proceso malicioso y su PID.
+> **EN:** Identify the malicious process and its PID.
 
-首先，先识别出来镜像的基本信息
+> **ES:** Primero, info base de la imagen; luego `cmdline`: `svchost.exe` en `Downloads` es anómalo (un componente del sistema jamás vive ahí).
+> **EN:** First image basics; then `cmdline`: `svchost.exe` under `Downloads` is anomalous (a system component never lives there).
 
 ```bash title='vol -f 20230810.mem windows.info'
 Volatility 3 Framework 2.5.0
@@ -58,7 +65,8 @@ PE Machine      34404
 PE TimeDateStamp        Mon Nov 24 23:45:00 2070
 ```
 
-分析 `cmdline` 记录
+> **ES:** Analizar el `cmdline`.
+> **EN:** Analyze the `cmdline`.
 
 ```bash title="vol -f 20230810.mem windows.cmdline"
 ......
@@ -70,17 +78,21 @@ PE TimeDateStamp        Mon Nov 24 23:45:00 2070
 9816    conhost.exe     \??\C:\WINDOWS\system32\conhost.exe 0x4
 ```
 
-根据常识，文件 `C:\Users\simon.stark\Downloads\svchost.exe` 绝对有问题，系统组件不可能存在于下载目录
+> **ES:** Por sentido común, `C:\Users\simon.stark\Downloads\svchost.exe` es malicioso.
+> **EN:** Common sense: `C:\Users\simon.stark\Downloads\svchost.exe` is malicious.
 
 ```plaintext title="Answer"
 6812
 ```
 
-## Task 2
+## Task 2 — Proceso hijo para comandos / Child process for commands
 
-> SOC 团队认为恶意进程可能生成了另一个进程，使威胁参与者能够执行命令。该子进程的进程 ID 是多少？
+> [ZH] SOC 团队认为恶意进程可能生成了另一个进程，使威胁参与者能够执行命令。该子进程的进程 ID 是多少？
+> **ES:** El SOC cree que el proceso malicioso engendró un hijo para ejecutar comandos: ¿PID del hijo?
+> **EN:** SOC believes the rogue process spawned a child to run commands: child PID?
 
-查看进程树
+> **ES:** Ver el árbol de procesos.
+> **EN:** Check the process tree.
 
 ```bash title="vol -f 20230810.mem windows.pstree"
 Volatility 3 Framework 2.5.0
@@ -234,7 +246,8 @@ PID     PPID    ImageFileName   Offset(V)       Threads Handles SessionId       
 10044   9952    OneDrive.exe    0x9e8b90507080  0       -       1       True    2023-08-10 11:15:31.000000      2023-08-10 11:15:37.000000
 ```
 
-从中可以定位到
+> **ES:** Ahí se localiza el hijo `cmd.exe` (4364) de `svchost.exe` (6812).
+> **EN:** There sits the `cmd.exe` child (4364) of `svchost.exe` (6812).
 
 ```plaintext
 *** 6812        7436    svchost.exe     0x9e8b87762080  3       -       1       False   2023-08-10 11:30:03.000000      N/A
@@ -245,17 +258,21 @@ PID     PPID    ImageFileName   Offset(V)       Threads Handles SessionId       
 4364
 ```
 
-## Task 3
+## Task 3 — Hash MD5 del sample / Sample MD5
 
-> 逆向工程团队需要恶意文件样本进行分析。您的 SOC 经理指示您查找文件的哈希，然后将样本转发给逆向工程团队。恶意文件的 md5 哈希是什么？
+> [ZH] 逆向工程团队需要恶意文件样本进行分析。您的 SOC 经理指示您查找文件的哈希，然后将样本转发给逆向工程团队。恶意文件的 md5 哈希是什么？
+> **ES:** El equipo de reversing pide el hash del sample: ¿MD5 del binario malicioso?
+> **EN:** The reversing team asks for the sample hash: MD5 of the rogue binary?
 
-在上文中，我们已经找到了恶意文件的绝对路径
+> **ES:** Ya se tiene la ruta absoluta; localizar su dirección de memoria, extraer con `dumpfiles` y hashear.
+> **EN:** Absolute path known; locate its memory address, carve with `dumpfiles` and hash.
 
 ```plaintext
 C:\Users\simon.stark\Downloads\svchost.exe
 ```
 
-对文件的内存地址进行定位
+> **ES:** Localizar la dirección en memoria.
+> **EN:** Locate the in-memory address.
 
 ```bash title='python2 volatility-master/vol.py -f 20230810.mem --profile=Win10x64_19041 filescan | grep"Downloads"| grep"svchost.exe"'
 Volatility Foundation Volatility Framework 2.6.1
@@ -268,7 +285,8 @@ Volatility Foundation Volatility Framework 2.6.1
 0x9e8b91ec0140  \Users\simon.stark\Downloads\svchost.exe        216
 ```
 
-将文件提取出来
+> **ES:** Extraer el fichero.
+> **EN:** Carve the file out.
 
 ```bash title='vol -f 20230810.mem windows.dumpfiles --virtaddr 0x9e8b91ec0140'
 Volatility 3 Framework 2.5.0
@@ -279,7 +297,8 @@ DataSectionObject       0x9e8b91ec0140  svchost.exe     Error dumping file
 ImageSectionObject      0x9e8b91ec0140  svchost.exe     file.0x9e8b91ec0140.0x9e8b957f24c0.ImageSectionObject.svchost.exe.img
 ```
 
-计算提取出来文件的哈希
+> **ES:** Hashear lo extraído.
+> **EN:** Hash the carved file.
 
 ```bash
 $ md5sum file.0x9e8b91ec0140.0x9e8b957f24c0.ImageSectionObject.svchost.exe.img
@@ -290,9 +309,14 @@ $ md5sum file.0x9e8b91ec0140.0x9e8b957f24c0.ImageSectionObject.svchost.exe.img
 5bd547c6f5bfc4858fe62c8867acfbb5
 ```
 
-## Task 4
+## Task 4 — IP y puerto del C2 / C2 IP and port
 
-> 为了找出事件的范围，SOC 经理已部署了一个威胁搜寻团队，在整个环境中搜寻任何妥协指标。如果您能够确认 C2 IP 地址和端口，将对该团队大有帮助，以便我们的团队能够在搜寻中利用这些信息。
+> [ZH] 为了找出事件的范围，SOC 经理已部署了一个威胁搜寻团队，在整个环境中搜寻任何妥协指标。如果您能够确认 C2 IP 地址和端口，将对该团队大有帮助，以便我们的团队能够在搜寻中利用这些信息。
+> **ES:** Para acotar el incidente, confirmar IP y puerto del C2 para el threat hunting.
+> **EN:** To scope the incident, confirm the C2 IP and port for threat hunting.
+
+> **ES:** En el `netstat`, la conexión ESTABLISHED del PID 6812 delata el C2.
+> **EN:** In `netstat`, the ESTABLISHED connection of PID 6812 gives away the C2.
 
 ```bash title='vol -f 20230810.mem windows.netstat'
 Volatility 3 Framework 2.5.0
@@ -380,7 +404,8 @@ Offset  Proto   LocalAddr       LocalPort       ForeignAddr     ForeignPort     
 0x9e8b8a232050  UDPv4   127.0.0.1       60799   *       0               2476    svchost.exe     2023-08-10 11:13:44.000000
 ```
 
-在其中定位到 `PID` 为 6812 的记录
+> **ES:** Filtrar el registro del PID 6812.
+> **EN:** Filter the PID 6812 record.
 
 ```plaintext
 0x9e8b8cb58010  TCPv4   172.17.79.131   64254   13.127.155.166  8888    ESTABLISHED     6812    svchost.exe     2023-08-10 11:30:03.000000
@@ -390,19 +415,24 @@ Offset  Proto   LocalAddr       LocalPort       ForeignAddr     ForeignPort     
 13.127.155.166:8888
 ```
 
-## Task 5
+## Task 5 — Timeline: ejecución y C2 / Execution and C2 timeline
 
-> 我们需要一条时间线来帮助我们界定事件范围，并帮助更广泛的 DFIR 团队执行根本原因分析。您能确认进程执行和 C2 通道建立的时间吗？
+> [ZH] 我们需要一条时间线来帮助我们界定事件范围，并帮助更广泛的 DFIR 团队执行根本原因分析。您能确认进程执行和 C2 通道建立的时间吗？
+> **ES:** Hace falta un timeline (scoping + root-cause): ¿cuándo se ejecutó el proceso y se estableció el C2?
+> **EN:** A timeline is needed (scoping + root-cause): when did the process run and the C2 establish?
 
-上一题就有
+> **ES:** Dato del task anterior.
+> **EN:** From the previous task.
 
 ```plaintext title="Answer"
 10/08/2023 11:30:03
 ```
 
-## Task 6
+## Task 6 — Offset de memoria / Memory offset
 
-> 恶意进程的内存偏移量是多少？
+> [ZH] 恶意进程的内存偏移量是什么？
+> **ES:** ¿Cuál es el offset de memoria del proceso malicioso?
+> **EN:** What is the rogue process memory offset?
 
 ```bash titlke='vol -f 20230810.mem windows.psscan'
 ......
@@ -413,13 +443,14 @@ Offset  Proto   LocalAddr       LocalPort       ForeignAddr     ForeignPort     
 0x9e8b87762080
 ```
 
-## Task 7
+## Task 7 — Primera subida a VirusTotal / First VirusTotal submission
 
-> 您成功分析了一个内存转储，并得到了经理的表扬。第二天，您的经理要求您更新恶意文件的情况。您查看了 VirusTotal，发现该文件已被上传，可能是由逆向工程团队上传的。您的任务是确定样本首次提交到 VirusTotal 的时间。
+> [ZH] 您成功分析了一个内存转储，并得到了经理的表扬。第二天，您的经理要求您更新恶意文件的情况。您查看了 VirusTotal，发现该文件已被上传，可能是由逆向工程团队上传的。您的任务是确定样本首次提交到 VirusTotal 的时间。
+> **ES:** El sample ya está en VirusTotal (quizá lo subió reversing): ¿cuándo fue su primera subida?
+> **EN:** The sample is already on VirusTotal (maybe uploaded by reversing): when was it first submitted?
 
-定位到 `VirusTotal` 的这条提交记录 [VirusTotal - File - eaf09578d6eca82501aa2b3fcef473c3795ea365a9b33a252e5dc712c62981ea](https://www.virustotal.com/gui/file/eaf09578d6eca82501aa2b3fcef473c3795ea365a9b33a252e5dc712c62981ea)
-
-得到以下时间戳信息
+> **ES:** Registro de subida en VirusTotal + tabla de tiempos.
+> **EN:** VirusTotal submission record + timestamps table.
 
 |      Title       |          Time           |
 | :--------------: | :---------------------: |

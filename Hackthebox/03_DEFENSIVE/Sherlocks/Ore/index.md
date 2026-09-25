@@ -14,22 +14,28 @@
 
 One of our technical partners are currently managing our AWS infrastructure. We requested the deployment of some technology into the cloud. The solution proposed was an EC2 instance hosting the Grafana application. Not too long after the EC2 was deployed the CPU usage ended up sitting at a continuous 98%+ for a process named "xmrig". Important Information Our organisation's office public facing IP is 86.5.206.121, upon the deployment of the application we carried out some basic vulnerability testing and maintenance.
 
-我们的技术合作伙伴目前正在管理我们的 AWS 基础设施。我们请求将某些技术部署到云中。所提出的解决方案是托管 Grafana 应用的一个 EC2 实例。在 EC2 部署后不久，CPU 使用率就持续达到了 98% 以上，一个名为 "xmrig" 的进程导致。重要信息：我们组织办公室的公网 IP 是 86.5.206.121，在部署应用后，我们进行了一些基本的漏洞测试和维护。
+> [ZH] "我们的技术合作伙伴目前正在管理我们的 AWS 基础设施。我们请求将某些技术部署到云中。所提出的解决方案是托管 Grafana 应用的一个 EC2 实例。在 EC2 部署后不久，CPU 使用率就持续达到了 98% 以上，一个名为 "xmrig" 的进程导致。重要信息：我们组织办公室的公网 IP 是 86.5.206.121，在部署应用后，我们进行了一些基本的漏洞测试和维护。"
+> **ES:** EC2 con Grafana en AWS con CPU al 98%+ por `xmrig`: investigar el compromiso; la IP pública de la oficina (86.5.206.121) y el testing propio deben excluirse del IoC.
+> **EN:** Grafana EC2 in AWS with 98%+ CPU from `xmrig`: investigate the compromise; the office public IP (86.5.206.121) and own testing must be excluded from IoCs.
 
 :::
 
-## 题目数据
+## 题目数据 / Datos / Data
 
 [ore.zip](./ore.zip)
 
-## 题目附件讲解
+## 附件讲解 / Contenido del adjunto / Attachment overview
 
-经过分析，本附件主要提供了两个开源项目的文件
+> [ZH] "经过分析，本附件主要提供了两个开源项目的文件"
+> **ES:** El adjunto combina dos fuentes: ficheros de `grafana` y la recolección `Linux-CatScale`.
+> **EN:** The bundle combines two sources: `grafana` files and the `Linux-CatScale` collection.
 
 - [grafana](https://github.com/grafana/grafana)
 - [Linux-CatScale](https://github.com/WithSecureLabs/LinuxCatScale)
 
-`grafana` 的文件位于 `.\usr\share\grafana` 文件夹内，有以下文件
+> [ZH] "`grafana` 的文件位于 `.\usr\share\grafana` 文件夹内，有以下文件"
+> **ES:** Los ficheros de Grafana están en `.\usr\share\grafana` (listado inferior).
+> **EN:** Grafana files live under `.\usr\share\grafana` (listing below).
 
 ```plaintext
 Mode                 LastWriteTime         Length Name
@@ -81,7 +87,9 @@ D:.
 └─scripts - grafana 启动脚本
 ```
 
-`Linux-CatScale` 的文件位于 `catscale_ip-172-31-13-147-20221124-1501.tar.gz` 压缩包内，解压后得到
+> [ZH] "`Linux-CatScale` 的文件位于 `catscale_ip-172-31-13-147-20221124-1501.tar.gz` 压缩包内，解压后得到"
+> **ES:** Lo de `Linux-CatScale` va en el tarball `catscale_ip-172-31-13-147-20221124-1501.tar.gz` (contenido inferior).
+> **EN:** The `Linux-CatScale` part is in tarball `catscale_ip-172-31-13-147-20221124-1501.tar.gz` (contents below).
 
 ```plaintext
 Mode                 LastWriteTime         Length Name
@@ -111,29 +119,35 @@ D:.
 └─Virsh - Virsh kvm 相关信息
 ```
 
-由于 `Linux-CatScale` 会对一些目录下的文件进行压缩处理，所以开始处理之前先对每个文件夹下的压缩文件进行解压缩处理
+> [ZH] "由于 `Linux-CatScale` 会对一些目录下的文件进行压缩处理，所以开始处理之前先对每个文件夹下的压缩文件进行解压缩处理"
+> **ES:** CatScale comprime ficheros por carpeta: descomprimir todo antes de analizar.
+> **EN:** CatScale compresses files per folder: decompress everything before analysis.
 
-## Task 1
+## Task 1 — CVE inicial / Initial CVE
 
-> 哪个 CVE 导致了 EC2 的初始妥协？
+> [ZH] "哪个 CVE 导致了 EC2 的初始妥协？"
+> **ES:** ¿Qué CVE provocó el compromiso inicial del EC2?
+> **EN:** Which CVE caused the initial EC2 compromise?
 
-在 `.\grafana\data\log\grafana.log.2022-11-18.001` 文件中，发现以下记录
+En `.\grafana\data\log\grafana.log.2022-11-18.001` hay peticiones de path traversal contra plugins que apuntan a Grafana:
 
 ```plaintext title=".\grafana\data\log\grafana.log.2022-11-18.001"
 t=2022-11-17T14:40:55+0000 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=89.247.167.247 time_ms=1 size=0 referer=
 ```
 
-借由关键词搜索，可以确定是 grafana 的漏洞，漏洞编号
+Búsqueda por keywords confirma que es la vulnerabilidad de path traversal de Grafana:
 
 ```plaintext title="Answer"
 CVE-2021-43798
 ```
 
-## Task 2
+## Task 2 — IPs maliciosas / Malicious IPs
 
-> 请详细说明威胁行为者（TA）用于针对我们组织的所有恶意 IP 地址。
+> [ZH] "请详细说明威胁行为者（TA）用于针对我们组织的所有恶意 IP 地址。"
+> **ES:** Detallar todas las IP maliciosas del TA contra la organización (excluyendo la oficina).
+> **EN:** List all malicious TA IPs targeting the org (excluding the office).
 
-这里聚焦于 `grafana` 的日志文件进行分析
+Análisis centrado en los logs de `grafana`.
 
 :::note 注意办公室的公网 ip 地址
 

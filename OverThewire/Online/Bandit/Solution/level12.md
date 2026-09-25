@@ -1,3 +1,12 @@
+# Bandit Nivel 12 - 13
+
+| Campo | Valor |
+|-------|-------|
+| **Juego / Game** | Bandit |
+| **Nivel / Level** | 12 - 13 |
+| **URL** | https://overthewire.org/wargames/bandit/ |
+| **Conexión** | `ssh bandit12@bandit.labs.overthewire.org -p2220` |
+
 # username
 bandit12
 # password
@@ -37,3 +46,19 @@ gunzip data8.gz
 file data8
 cat data8
 ```
+
+---
+
+## Fuentes / Sources
+
+- OTW: https://overthewire.org/wargames/bandit/ - fecha de acceso: 2026-09-25.
+- Autor notas: Apuromafo.
+
+---
+
+## Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a OverTheWire.
+> **EN:** Educational and personal use only. Not affiliated with OverTheWire.
+
+_Fecha de edición: 2026-09-25_

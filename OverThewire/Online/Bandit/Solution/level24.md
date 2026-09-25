@@ -1,3 +1,12 @@
+# Bandit Nivel 24 - 25
+
+| Campo | Valor |
+|-------|-------|
+| **Juego / Game** | Bandit |
+| **Nivel / Level** | 24 - 25 |
+| **URL** | https://overthewire.org/wargames/bandit/ |
+| **Conexión** | `ssh bandit24@bandit.labs.overthewire.org -p2220` |
+
 # username
 bandit24
 # password
@@ -55,3 +64,19 @@ if __name__ == "__main__":
         sys.exit(1)
 
 ```
+
+---
+
+## Fuentes / Sources
+
+- OTW: https://overthewire.org/wargames/bandit/ - fecha de acceso: 2026-09-25.
+- Autor notas: Apuromafo.
+
+---
+
+## Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a OverTheWire.
+> **EN:** Educational and personal use only. Not affiliated with OverTheWire.
+
+_Fecha de edición: 2026-09-25_

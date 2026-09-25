@@ -1,3 +1,12 @@
+# Bandit Nivel 30 - 31
+
+| Campo | Valor |
+|-------|-------|
+| **Juego / Game** | Bandit |
+| **Nivel / Level** | 30 - 31 |
+| **URL** | https://overthewire.org/wargames/bandit/ |
+| **Conexión** | `ssh bandit30@bandit.labs.overthewire.org -p2220` |
+
 # username
 bandit30
 # password
@@ -18,3 +27,19 @@ git show-ref --tags
 ```
 git show secret
 ```
+
+---
+
+## Fuentes / Sources
+
+- OTW: https://overthewire.org/wargames/bandit/ - fecha de acceso: 2026-09-25.
+- Autor notas: Apuromafo.
+
+---
+
+## Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a OverTheWire.
+> **EN:** Educational and personal use only. Not affiliated with OverTheWire.
+
+_Fecha de edición: 2026-09-25_

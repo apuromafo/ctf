@@ -1,3 +1,12 @@
+# Bandit Nivel 18 - 19
+
+| Campo | Valor |
+|-------|-------|
+| **Juego / Game** | Bandit |
+| **Nivel / Level** | 18 - 19 |
+| **URL** | https://overthewire.org/wargames/bandit/ |
+| **Conexión** | `ssh bandit18@bandit.labs.overthewire.org -p2220` |
+
 # username
 bandit18
 # password
@@ -9,3 +18,19 @@ The system logs you out as soon as you login, so we can run SSH with an argument
 ```
 ssh bandit18@bandit.labs.overthewire.org -p 2220 "cat readme"
 ```
+
+---
+
+## Fuentes / Sources
+
+- OTW: https://overthewire.org/wargames/bandit/ - fecha de acceso: 2026-09-25.
+- Autor notas: Apuromafo.
+
+---
+
+## Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a OverTheWire.
+> **EN:** Educational and personal use only. Not affiliated with OverTheWire.
+
+_Fecha de edición: 2026-09-25_

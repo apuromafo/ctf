@@ -14,16 +14,21 @@
 
 Leading telecoms provider Forela uses AWS S3 as an essential part of their infrastructure. They can deploy applications quickly and do effective analytics on their sizable dataset thanks to it acting as both an application storage and a data lake storage. Recently, a user reported an urgent issue to the helpdesk: an inability to access files within a designated S3 directory. This disruption has not only impeded critical operations but has also raised immediate security concerns. The urgency of this situation demands a security-focused approach. Reports of a misconfigured S3 Bucket policy for the forela-fileshare bucket, resulting in unintended public access, highlight a potential security vulnerability that calls for immediate corrective measures. Consequently, a thorough investigation is paramount.
 
-领先的电信提供商 Forela 将 AWS S3 用作其基础设施的重要组成部分。由于它既可用作应用程序存储，又可用作数据湖存储，因此他们可以快速部署应用程序，并对其庞大的数据集执行有效的分析。最近，一位用户向帮助台报告了一个紧急问题：无法访问指定 S3 目录中的文件。这种中断不仅妨碍了关键操作，而且还引发了直接的安全问题。这种情况的紧急性要求采取以安全为重点的方法。有报告称 forela-fileshare 存储桶的 S3 存储桶策略配置不当，导致意外的公共访问，这突显了一个潜在的安全漏洞，需要立即采取纠正措施。因此，彻底调查至关重要。
+> [ZH] "领先的电信提供商 Forela 将 AWS S3 用作其基础设施的重要组成部分。由于它既可用作应用程序存储，又可用作数据湖存储，因此他们可以快速部署应用程序，并对其庞大的数据集执行有效的分析。最近，一位用户向帮助台报告了一个紧急问题：无法访问指定 S3 目录中的文件。这种中断不仅妨碍了关键操作，而且还引发了直接的安全问题。这种情况的紧急性要求采取以安全为重点的方法。有报告称 forela-fileshare 存储桶的 S3 存储桶策略配置不当，导致意外的公共访问，这突显了一个潜在的安全漏洞，需要立即采取纠正措施。因此，彻底调查至关重要。"
+> **ES:** Forela usa S3 como almacenamiento de apps y data lake; un usuario no puede acceder a un directorio S3 y se reporta policy pública por error en `forela-fileshare`: investigar el posible compromiso.
+> **EN:** Forela uses S3 for app + data-lake storage; a user cannot access an S3 directory and a misconfigured public policy on `forela-fileshare` is reported: investigate the possible compromise.
+
 :::
 
-## 题目数据
+## 题目数据 / Datos / Data
 
 [nubilum_2.zip](./nubilum_2.zip)
 
-## Task 1
+## Task 1 — IP inicial del atacante / Attacker initial IP
 
-> 攻击者 (TA) 用于渗透 Forela 的 AWS 账户的初始 IP 地址是什么？
+> [ZH] "攻击者 (TA) 用于渗透 Forela 的 AWS 账户的初始 IP 地址是什么？"
+> **ES:** ¿Cuál fue la IP inicial usada por el atacante (TA) para infiltrarse en la cuenta AWS de Forela?
+> **EN:** What was the initial IP address used by the threat actor (TA) to penetrate Forela's AWS account?
 
 解压后，日志文件存放在 `nubilum_2\949622803460\CloudTrail` 目录下，按照不同的节点存放有 json 格式的日志文件
 
@@ -100,9 +105,11 @@ aws-cli/2.0.30 Python/3.7.7 Windows/10 botocore/2.0.0dev34
 54.242.59.197
 ```
 
-## Task 2
+## Task 2 — Primer objeto S3 accedido / First accessed S3 object
 
->TA 访问的第一个记录的 s3 对象的时间、文件名和账户 ID 是什么？
+> [ZH] "TA 访问的第一个记录的 s3 对象的时间、文件名和账户 ID 是什么？"
+> **ES:** ¿Cuáles son la hora, el nombre de archivo y el ID de cuenta del primer objeto S3 registrado al que accedió el TA?
+> **EN:** What are the time, filename, and account ID of the first recorded S3 object accessed by the TA?
 
 使用脚本定位 `res["sourceIPAddress"] == "54.242.59.197"` 的记录时间
 
@@ -248,85 +255,138 @@ print("\n".join(records))
 
 TODO 做不出来
 
-```plaintext title="Answer"
-
-```
-
-## Task 3
-
-> 最少有多少个访问密钥遭到破坏？
+> **ES:** (pendiente de documentar — el primer objeto/hora/cuenta aún no está resuelto).
+> **EN:** (pending documentation — the first object/time/account is still unresolved).
 
 ```plaintext title="Answer"
 
 ```
 
-## Task 4
+## Task 3 — Claves de acceso comprometidas / Compromised access keys
 
->TA 执行了一条命令来筛选 EC2 实例。用于筛选的名称和值是什么？
+> [ZH] "最少有多少个访问密钥遭到破坏？"
+> **ES:** ¿Cuál es el número mínimo de claves de acceso comprometidas?
+> **EN:** What is the minimum number of access keys compromised?
 
-```plaintext title="Answer"
-
-```
-
-## Task 5
-
-> 在使用受损密钥获得提升访问权限之前，TA 进行的失败的发现和权限提升尝试的次数是多少？
+> **ES:** (pendiente de documentar / pending).
+> **EN:** (pending documentation / pending).
 
 ```plaintext title="Answer"
 
 ```
 
-## Task 6
+## Task 4 — Filtro de instancias EC2 / EC2 instance filter
 
-> 在这次事件中，哪个 IAM 用户成功获得了提升的权限？
+> [ZH] "TA 执行了一条命令来筛选 EC2 实例。用于筛选的名称和值是什么？"
+> **ES:** El TA ejecutó un comando para filtrar instancias EC2: ¿qué nombre y valor se usaron en el filtro?
+> **EN:** The TA ran a command to filter EC2 instances: what name and value were used for filtering?
 
-```plaintext title="Answer"
-
-```
-
-## Task 7
-
-> 哪个事件名称允许攻击者生成管理员级别的策略？
+> **ES:** (pendiente de documentar / pending).
+> **EN:** (pending documentation / pending).
 
 ```plaintext title="Answer"
 
 ```
 
-## Task 8
+## Task 5 — Intentos fallidos previos / Prior failed attempts
 
-> 创建了哪个策略的名称和声明，该策略授予标准用户帐户提升的权限？
+> [ZH] "在使用受损密钥获得提升访问权限之前，TA 进行的失败的发现和权限提升尝试的次数是多少？"
+> **ES:** Antes de lograr acceso elevado con la clave comprometida, ¿cuántos intentos fallidos de discovery y escalado hizo el TA?
+> **EN:** Before gaining elevated access with the compromised key, how many failed discovery and privilege-escalation attempts did the TA make?
 
-```plaintext title="Answer"
-
-```
-
-## Task 9
-
-> 用于加密文件的 ARN（亚马逊资源名称）是什么？
+> **ES:** (pendiente de documentar / pending).
+> **EN:** (pending documentation / pending).
 
 ```plaintext title="Answer"
 
 ```
 
-## Task 10
+## Task 6 — Usuario IAM con escalado / IAM user elevated
 
->TA 上传到 S3 存储桶的文件名称是什么？
+> [ZH] "在这次事件中，哪个 IAM 用户成功获得了提升的权限？"
+> **ES:** En este incidente, ¿qué usuario IAM obtuvo con éxito permisos elevados?
+> **EN:** In this incident, which IAM user successfully gained elevated privileges?
 
-```plaintext title="Answer"
-
-```
-
-## Task 11
-
->TA 修改了哪个 IAM 用户帐户以获取额外的持续访问权限？
+> **ES:** (pendiente de documentar / pending).
+> **EN:** (pending documentation / pending).
 
 ```plaintext title="Answer"
 
 ```
 
-## Task 12
+## Task 7 — Evento que genera policy admin / Admin-policy event
 
-> 用户未被授权执行什么操作才能查看或下载 S3 存储桶中的文件？
+> [ZH] "哪个事件名称允许攻击者生成管理员级别的策略？"
+> **ES:** ¿Qué nombre de evento permitió al atacante generar una política de nivel administrador?
+> **EN:** Which event name allowed the attacker to generate an admin-level policy?
+
+> **ES:** (pendiente de documentar / pending).
+> **EN:** (pending documentation / pending).
+
+```plaintext title="Answer"
+
+```
+
+## Task 8 — Policy creada para escalar / Created escalation policy
+
+> [ZH] "创建了哪个策略的名称和声明，该策略授予标准用户帐户提升的权限？"
+> **ES:** ¿Qué política (nombre y statement) se creó para dar permisos elevados a una cuenta de usuario estándar?
+> **EN:** Which policy (name and statement) was created granting elevated permissions to a standard user account?
+
+> **ES:** (pendiente de documentar / pending).
+> **EN:** (pending documentation / pending).
+
+```plaintext title="Answer"
+
+```
+
+## Task 9 — ARN de cifrado / Encryption ARN
+
+> [ZH] "用于加密文件的 ARN（亚马逊资源名称）是什么？"
+> **ES:** ¿Cuál es el ARN (Amazon Resource Name) usado para cifrar los archivos?
+> **EN:** What is the ARN (Amazon Resource Name) used to encrypt the files?
+
+> **ES:** (pendiente de documentar / pending).
+> **EN:** (pending documentation / pending).
+
+```plaintext title="Answer"
+
+```
+
+## Task 10 — Archivo subido a S3 / File uploaded to S3
+
+> [ZH] "TA 上传到 S3 存储桶的文件名称是什么？"
+> **ES:** ¿Qué nombre de archivo subió el TA al bucket S3?
+> **EN:** What filename did the TA upload to the S3 bucket?
+
+> **ES:** (pendiente de documentar / pending).
+> **EN:** (pending documentation / pending).
+
+```plaintext title="Answer"
+
+```
+
+## Task 11 — Usuario IAM modificado / Modified IAM user
+
+> [ZH] "TA 修改了哪个 IAM 用户帐户以获取额外的持续访问权限？"
+> **ES:** ¿Qué cuenta de usuario IAM modificó el TA para obtener acceso persistente adicional?
+> **EN:** Which IAM user account did the TA modify to gain additional persistent access?
+
+> **ES:** (pendiente de documentar / pending).
+> **EN:** (pending documentation / pending).
+
+```plaintext title="Answer"
+
+```
+
+## Task 12 — Acción no autorizada en S3 / Unauthorized S3 action
+
+> [ZH] "用户未被授权执行什么操作才能查看或下载 S3 存储桶中的文件？"
+> **ES:** ¿Qué acción no estaba autorizado a ejecutar el usuario para ver o descargar archivos del bucket S3?
+> **EN:** Which action was the user not authorized to perform to view or download files in the S3 bucket?
+
+> **ES:** (pendiente de documentar / pending).
+> **EN:** (pending documentation / pending).
 
 ```plaintext title="Answer"
 

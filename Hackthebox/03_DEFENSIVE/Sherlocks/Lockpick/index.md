@@ -14,11 +14,13 @@
 
 Forela needs your help! A whole portion of our UNIX servers have been hit with what we think is ransomware. We are refusing to pay the attackers and need you to find a way to recover the files provided. Warning This is a warning that this Sherlock includes software that is going to interact with your computer and files. This software has been intentionally included for educational purposes and is NOT intended to be executed or used otherwise. Always handle such files in isolated, controlled, and secure environments. One the Sherlock zip has been unzipped, you will find a DANGER.txt file. Please read this to proceed.
 
-Forela 需要你的帮助！我们的一大部分 UNIX 服务器遭受了我们认为是勒索软件的攻击。我们拒绝向攻击者支付赎金，并需要你找到一种恢复提供的文件的方法。警告：这是一份警告，本次 Sherlock 包含将与您的计算机和文件进行交互的软件。此软件已经故意包含用于教育目的，不打算被执行或以其他方式使用。请始终在隔离、受控和安全的环境中处理此类文件。解压缩 Sherlock 压缩包后，你会找到一个 DANGER.txt 文件，请阅读此文件以继续。
+> [ZH] "Forela 需要你的帮助！我们的一大部分 UNIX 服务器遭受了我们认为是勒索软件的攻击。我们拒绝向攻击者支付赎金，并需要你找到一种恢复提供的文件的方法。警告：这是一份警告，本次 Sherlock 包含将与您的计算机和文件进行交互的软件。此软件已经故意包含用于教育目的，不打算被执行或以其他方式使用。请始终在隔离、受控和安全的环境中处理此类文件。解压缩 Sherlock 压缩包后，你会找到一个 DANGER.txt 文件，请阅读此文件以继续。"
+> **ES:** Forela habría sufrido ransomware en parte de sus servidores UNIX y no quiere pagar: hay que recuperar los archivos. El zip incluye software peligroso solo con fin educativo (leer `DANGER.txt`, entorno aislado).
+> **EN:** Forela allegedly suffered ransomware on part of its UNIX servers and refuses to pay: recover the files. The zip includes dangerous software for educational purposes only (read `DANGER.txt`, isolated environment).
 
 :::
 
-## 题目数据
+## 题目数据 / Datos / Data
 
 [lockpick1.zip](./lockpick1.zip)
 
@@ -41,15 +43,23 @@ Forela 需要你的帮助！我们的一大部分 UNIX 服务器遭受了我们�
 
 :::
 
+> **ES:** Aviso de `DANGER.txt`: el ZIP contiene software que interactúa con el equipo (solo educativo, entorno aislado/Pwnbox/VM, contraseña `E@iwyzXK7HK&`).
+> **EN:** `DANGER.txt` warning: the ZIP holds software that interacts with the machine (educational only, isolated Pwnbox/VM, password `E@iwyzXK7HK&`).
+
 :::note
 
 本文章的逆向工作基于 IDA，请注意相关反编译后结果的不同
 
 :::
 
-## Task 1
+> **ES:** Nota: el reversing se hizo con IDA; el resultado descompilado puede variar según la herramienta.
+> **EN:** Note: reversing was done with IDA; decompiled output may differ by tool.
 
-> 请确认用于加密所提供文件的加密密钥字符串？
+## Task 1 — Clave de cifrado / Encryption key
+
+> [ZH] "请确认用于加密所提供文件的加密密钥字符串？"
+> **ES:** Confirmar la cadena de la clave de cifrado usada para cifrar los archivos proporcionados.
+> **EN:** Confirm the encryption key string used to encrypt the provided files.
 
 以下为反编译出来的几个主要函数
 
@@ -108,9 +118,11 @@ int __fastcall process_directory(const char *a1, __int64 a2)
 bhUlIshutrea98liOp
 ```
 
-## Task 2
+## Task 2 — Solicitante por email / Applicant by email
 
-> 我们最近收到了来自 `wbevansn1@cocolog-nifty.com` 的一封电子邮件，要求知道我们将他注册为的名字和姓氏。他们认为在申请过程中犯了错误。请确认这个申请人的名字和姓氏。
+> [ZH] "我们最近收到了来自 `wbevansn1@cocolog-nifty.com` 的一封电子邮件，要求知道我们将他注册为的名字和姓氏。他们认为在申请过程中犯了错误。请确认这个申请人的名字和姓氏。"
+> **ES:** Se recibió un correo de `wbevansn1@cocolog-nifty.com` que pide el nombre y apellido con que se le registró (cree que hubo un error en la solicitud): confirmar nombre y apellido del solicitante.
+> **EN:** An email from `wbevansn1@cocolog-nifty.com` asks for the first and last name under which they were registered (they think there was an application mistake): confirm the applicant's first and last name.
 
 使用以下脚本，对文件进行恢复
 
@@ -151,9 +163,11 @@ with open(filename.replace(".24bes",""),'wb+') as file:
 Walden Bevans
 ```
 
-## Task 3
+## Task 3 — MAC y serie del portátil / Laptop MAC and serial
 
-> Hart Manifould 分配的笔记本电脑的 MAC 地址和序列号是什么？
+> [ZH] "Hart Manifould 分配的笔记本电脑的 MAC 地址和序列号是什么？"
+> **ES:** ¿Cuál son la dirección MAC y el número de serie del portátil asignado a Hart Manifould?
+> **EN:** What are the MAC address and serial number of the laptop assigned to Hart Manifould?
 
 在 `it_assets.xml` 这个文件中，根据关键词找到以下记录
 
@@ -175,9 +189,11 @@ Walden Bevans
 E8-16-DF-E7-52-48, 1316262
 ```
 
-## Task 4
+## Task 4 — Email del atacante / Attacker email
 
-> 攻击者的电子邮件地址是什么？
+> [ZH] "攻击者的电子邮件地址是什么？"
+> **ES:** ¿Cuál es la dirección de correo del atacante?
+> **EN:** What is the attacker's email address?
 
 最简单的一题，邮箱地址就在攻击者留下的联系方式里面
 
@@ -185,9 +201,11 @@ E8-16-DF-E7-52-48, 1316262
 bes24@protonmail.com
 ```
 
-## Task 5
+## Task 5 — Insider trading: mayor beneficio / Highest profit trade
 
-> 伦敦市警方对我们交易组织内部可能存在某些内幕交易的行为产生了怀疑。请确认单笔交易中利润百分比最高的人的电子邮件地址以及其利润百分比。
+> [ZH] "伦敦市警方对我们交易组织内部可能存在某些内幕交易的行为产生了怀疑。请确认单笔交易中利润百分比最高的人的电子邮件地址以及其利润百分比。"
+> **ES:** La policía londinense sospecha insider trading interno: confirmar el email y el porcentaje de beneficio de la persona con mayor porcentaje de beneficio en una sola operación.
+> **EN:** London police suspect internal insider trading: confirm the email address and profit percentage of the person with the highest profit percentage on a single trade.
 
 使用 python 脚本进行数据处理
 
@@ -237,9 +255,11 @@ print(email, profit_percentage)
 fmosedale17a@bizjournals.com, 142303.1996053929628411706675436
 ```
 
-## Task 6
+## Task 6 — IP de cuenta compartida / Shared account IP
 
-> 我们的电子发现团队希望确认销售预测日志中所述的 IP 地址，该 IP 地址涉嫌与同事共享其帐户。请确认 Karylin O'Hederscoll 的 IP 地址。
+> [ZH] "我们的电子发现团队希望确认销售预测日志中所述的 IP 地址，该 IP 地址涉嫌与同事共享其帐户。请确认 Karylin O'Hederscoll 的 IP 地址。"
+> **ES:** El equipo de e-discovery quiere la IP del log de previsión de ventas presuntamente ligada a una cuenta compartida con un colega: confirmar la dirección IP de Karylin O'Hederscoll.
+> **EN:** The e-discovery team wants the IP from the sales forecast log allegedly tied to account sharing with a colleague: confirm Karylin O'Hederscoll's IP address.
 
 根据关键词，可以在 `sales_forecast.xlsx` 文件中找到记录
 
@@ -251,9 +271,11 @@ fmosedale17a@bizjournals.com, 142303.1996053929628411706675436
 8.254.104.208
 ```
 
-## Task 7
+## Task 7 — Extensión no objetivo / Non-targeted extension
 
-> 以下哪种文件扩展名不是恶意软件的目标？.txt，.sql，.ppt，.pdf，.docx，.xlsx，.csv，.json，.xml
+> [ZH] "以下哪种文件扩展名不是恶意软件的目标？.txt，.sql，.ppt，.pdf，.docx，.xlsx，.csv，.json，.xml"
+> **ES:** ¿Cuál de estas extensiones NO es objetivo del malware? .txt, .sql, .ppt, .pdf, .docx, .xlsx, .csv, .json, .xml.
+> **EN:** Which of these extensions is NOT targeted by the malware? .txt, .sql, .ppt, .pdf, .docx, .xlsx, .csv, .json, .xml.
 
 查看反编译得到的源码即可知道
 
@@ -261,25 +283,31 @@ fmosedale17a@bizjournals.com, 142303.1996053929628411706675436
 .ppt
 ```
 
-## Task 8
+## Task 8 — MD5 base de solicitantes / Applicants DB MD5
 
-> 我们需要确认解密后文件的完整性。请确认申请者数据库的 MD5 哈希值。
+> [ZH] "我们需要确认解密后文件的完整性。请确认申请者数据库的 MD5 哈希值。"
+> **ES:** Hay que verificar la integridad tras el descifrado: confirmar el hash MD5 de la base de datos de solicitantes.
+> **EN:** File integrity after decryption must be verified: confirm the MD5 hash of the applicants database.
 
 ```plaintext
 f3894af4f1ffa42b3a379dddba384405
 ```
 
-## Task 9
+## Task 9 — MD5 respaldo de trading / Trading backup MD5
 
-> 我们需要确认解密后文件的完整性。请确认交易备份的 MD5 哈希值。
+> [ZH] "我们需要确认解密后文件的完整性。请确认交易备份的 MD5 哈希值。"
+> **ES:** Hay que verificar la integridad tras el descifrado: confirmar el hash MD5 del respaldo de trading.
+> **EN:** File integrity after decryption must be verified: confirm the MD5 hash of the trading backup.
 
 ```plaintext
 87baa3a12068c471c3320b7f41235669
 ```
 
-## Task 10
+## Task 10 — MD5 archivo de quejas / Complaints file MD5
 
-> 我们需要确认解密后文件的完整性。请确认投诉文件的 MD5 哈希值。
+> [ZH] "我们需要确认解密后文件的完整性。请确认投诉文件的 MD5 哈希值。"
+> **ES:** Hay que verificar la integridad tras el descifrado: confirmar el hash MD5 del archivo de quejas.
+> **EN:** File integrity after decryption must be verified: confirm the MD5 hash of the complaints file.
 
 ```plaintext
 c3f05980d9bd945446f8a21bafdbf4e7

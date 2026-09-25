@@ -26,9 +26,6 @@
 
 ---
 
-## Fuentes / Sources
-
-
 ## 🛠️ Herramientas usadas / Tools used
 
 - [ ] nmap
@@ -39,9 +36,6 @@
 - [ ] exploit ISPConfig CVE-2023-46818 (bipbopbup)
 
 ---
-
-## Fuentes / Sources
-
 
 ## 📋 Pasos / Steps
 
@@ -130,9 +124,6 @@ cat /root/root.txt  # formato parcial ofuscado
 
 ---
 
-## Fuentes / Sources
-
-
 ## 🧠 Lo aprendido / Learned
 
 > **ES:** IDOR en visores de ficheros (`username` manipulable); backups descargables = código + hashes; reuse de clave de sistema (`tobias` → admin ISPConfig); servicios solo-loopback (8080) vía port-forward; privesc vía app de hosting.
@@ -144,9 +135,6 @@ cat /root/root.txt  # formato parcial ofuscado
 
 ---
 
-## Fuentes / Sources
-
-
 ## 📚 Fuentes y Referencias / Sources
 
 - **Fuente:** Nota local `index.md` (nota parcial/TODO con capturas en `img/`) — randark/nota migrada
@@ -157,9 +145,6 @@ cat /root/root.txt  # formato parcial ofuscado
 - **Autor de este walkthrough:** Apuromafo (contenido propio salvo cita)
 
 ---
-
-## Fuentes / Sources
-
 
 ## ⚠️ Aviso Legal / Disclaimer
 

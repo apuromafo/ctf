@@ -26,9 +26,6 @@
 
 ---
 
-## Fuentes / Sources
-
-
 ## 🛠️ Herramientas usadas / Tools used
 
 - [ ] nmap
@@ -39,9 +36,6 @@
 - [ ] Portainer (build de imagen) + PoC CVE-2024-21626
 
 ---
-
-## Fuentes / Sources
-
 
 ## 📋 Pasos / Steps
 
@@ -124,9 +118,6 @@ cat /root/root.txt  # formato parcial ofuscado
 
 ---
 
-## Fuentes / Sources
-
-
 ## 🧠 Lo aprendido / Learned
 
 > **ES:** Cadena TeamCity → backup → SSH y escapes de contenedor vía plataforma de orquestación.
@@ -137,9 +128,6 @@ cat /root/root.txt  # formato parcial ofuscado
 
 ---
 
-## Fuentes / Sources
-
-
 ## 📚 Fuentes y Referencias / Sources
 
 - **Fuente:** Nota local `Soluciones/Machines/unclasified/Runner/index.md` (nota breve: nmap 22/80/8000) — randark/nota migrada
@@ -149,9 +137,6 @@ cat /root/root.txt  # formato parcial ofuscado
 - **Autor de este walkthrough:** Apuromafo (contenido propio salvo cita; migración y normalización de la nota local, paráfrasis sin copiar literal ni publicar flags completas)
 
 ---
-
-## Fuentes / Sources
-
 
 ## ⚠️ Aviso Legal / Disclaimer
 

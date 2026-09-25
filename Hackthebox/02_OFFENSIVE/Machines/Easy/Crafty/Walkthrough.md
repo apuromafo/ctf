@@ -26,9 +26,6 @@
 
 ---
 
-## Fuentes / Sources
-
-
 ## 🛠️ Herramientas usadas / Tools used
 
 - [ ] nmap
@@ -40,9 +37,6 @@
 - [ ] RunasCs
 
 ---
-
-## Fuentes / Sources
-
 
 ## 📋 Pasos / Steps
 
@@ -130,9 +124,6 @@ cat C:\users\administrator\desktop\root.txt  # formato: f513... (ofuscado)
 
 ---
 
-## Fuentes / Sources
-
-
 ## 🧠 Lo aprendido / Learned
 
 > **ES:** Servicios no-HTTP (Minecraft) también son superficie Log4Shell; estabilizar con meterpreter ayuda a exfiltrar; los plugins custom esconden secretos; RunasCs permite reutilizar credenciales sin RDP.
@@ -145,9 +136,6 @@ cat C:\users\administrator\desktop\root.txt  # formato: f513... (ofuscado)
 
 ---
 
-## Fuentes / Sources
-
-
 ## 📚 Fuentes y Referencias / Sources
 
 - **Fuente:** Nota local `index.md` (notas propias en chino/inglés, con capturas en `img/`) — randark/nota migrada. Nota: la nota china indica OS Windows, coincidente con la fuente oficial; sin contradicción.
@@ -157,9 +145,6 @@ cat C:\users\administrator\desktop\root.txt  # formato: f513... (ofuscado)
 - **Autor de este walkthrough:** Apuromafo (contenido propio salvo cita)
 
 ---
-
-## Fuentes / Sources
-
 
 ## ⚠️ Aviso Legal / Disclaimer
 

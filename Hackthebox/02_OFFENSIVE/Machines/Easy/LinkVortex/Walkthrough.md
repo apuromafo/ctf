@@ -26,9 +26,6 @@
 
 ---
 
-## Fuentes / Sources
-
-
 ## 🛠️ Herramientas usadas / Tools used
 
 - [ ] nmap
@@ -38,9 +35,6 @@
 - [ ] ssh / sudo -l / getcap
 
 ---
-
-## Fuentes / Sources
-
 
 ## 📋 Pasos / Steps
 
@@ -139,9 +133,6 @@ cat /root/root.txt  # formato: 6605... (ofuscado)
 
 ---
 
-## Fuentes / Sources
-
-
 ## 🧠 Lo aprendido / Learned
 
 > **ES:** Riesgo de exponer `.git` en dev; credenciales en tests/Docker; LFI autenticado en Ghost; privesc con scripts sudo que siguen symlinks y variables de entorno heredadas.
@@ -153,9 +144,6 @@ cat /root/root.txt  # formato: 6605... (ofuscado)
 
 ---
 
-## Fuentes / Sources
-
-
 ## 📚 Fuentes y Referencias / Sources
 
 - **Fuente:** Nota local `index.md` (notas propias en chino/inglés, con capturas en `img/`) — randark/nota migrada
@@ -165,9 +153,6 @@ cat /root/root.txt  # formato: 6605... (ofuscado)
 - **Autor de este walkthrough:** Apuromafo (contenido propio salvo cita)
 
 ---
-
-## Fuentes / Sources
-
 
 ## ⚠️ Aviso Legal / Disclaimer
 

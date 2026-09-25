@@ -26,9 +26,6 @@
 
 ---
 
-## Fuentes / Sources
-
-
 ## 🛠️ Herramientas usadas / Tools used
 
 - [ ] nmap
@@ -38,9 +35,6 @@
 - [ ] python (privesc)
 
 ---
-
-## Fuentes / Sources
-
 
 ## 📋 Pasos / Steps
 
@@ -120,9 +114,6 @@ cat /root/root.txt
 
 ---
 
-## Fuentes / Sources
-
-
 ## 🧠 Lo aprendido / Learned
 
 > **ES:** Endurecer Spring Boot Actuator; riesgo de concatenar input en comandos SSH; reutilización de secretos del JAR; sudo python = root.
@@ -134,9 +125,6 @@ cat /root/root.txt
 
 ---
 
-## Fuentes / Sources
-
-
 ## 📚 Fuentes y Referencias / Sources
 
 - **Fuente:** HTB CozyHosting — 0xdf (https://0xdf.gitlab.io/2024/03/02/htb-cozyhosting.html) — 0xdf
@@ -146,9 +134,6 @@ cat /root/root.txt
 - **Nota de migración:** Contenido normalizado desde el suelto `Soluciones/Machines/unclasified/cozyhosting.md` (solo cabecera `Machine: CozyHosting / Pwned`); procedimiento reconstruido por técnica conocida (Spring Boot actuator/session) y fuentes citadas; el archivo suelto se deja intacto.
 
 ---
-
-## Fuentes / Sources
-
 
 ## ⚠️ Aviso Legal / Disclaimer
 

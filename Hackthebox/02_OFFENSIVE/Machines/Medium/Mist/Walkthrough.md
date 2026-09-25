@@ -26,9 +26,6 @@
 
 ---
 
-## Fuentes / Sources
-
-
 ## 🛠️ Herramientas usadas / Tools used
 
 - [ ] nmap
@@ -38,9 +35,6 @@
 - [ ] PowerShell (crear `.lnk` en `C:\Common Applications`)
 
 ---
-
-## Fuentes / Sources
-
 
 ## 📋 Pasos / Steps
 
@@ -120,9 +114,6 @@ cat 'C:\Users\Administrator\Desktop\root.txt'  # solo en lab retirado
 
 ---
 
-## Fuentes / Sources
-
-
 ## 🧠 Lo aprendido / Learned
 
 > **ES:** LFI en Pluck 4.7 para robo de credenciales; upload de módulos como webshell; uploads efímeros (race contra limpiador); lateral vía `.lnk` en carpetas compartidas en AD.
@@ -134,9 +125,6 @@ cat 'C:\Users\Administrator\Desktop\root.txt'  # solo en lab retirado
 
 ---
 
-## Fuentes / Sources
-
-
 ## 📚 Fuentes y Referencias / Sources
 
 - **Fuente:** Notas locales `index.md` + capturas en `img/` (contenido propio previo, sin normalizar; cadena marcada TODO)
@@ -146,9 +134,6 @@ cat 'C:\Users\Administrator\Desktop\root.txt'  # solo en lab retirado
 - **Nota de migración:** Nota original en chino/inglés migrada al molde bilingüe ES/EN; flags ofuscadas, pasos parafraseados; privesc final pendiente de documentar.
 
 ---
-
-## Fuentes / Sources
-
 
 ## ⚠️ Aviso Legal / Disclaimer
 

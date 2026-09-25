@@ -26,9 +26,6 @@
 
 ---
 
-## Fuentes / Sources
-
-
 ## 🛠️ Herramientas usadas / Tools used
 
 - [ ] nmap (TCP + UDP/SNMP 161)
@@ -41,9 +38,6 @@
 - [ ] sudo -l + análisis de `manage_services.sh` / `/usr/local/nagios/bin/nagios`
 
 ---
-
-## Fuentes / Sources
-
 
 ## 📋 Pasos / Steps
 
@@ -148,9 +142,6 @@ cat /root/root.txt  # formato parcial ofuscado
 
 ---
 
-## Fuentes / Sources
-
-
 ## 🧠 Lo aprendido / Learned
 
 > **ES:** SNMP como fuente de credenciales (líneas de proceso), SQLi autenticada en Nagios XI (dump de `xi_users` → `api_key` → crear admin), RCE vía Commands/Services y privesc por sudo laxo + binario escribible.
@@ -162,9 +153,6 @@ cat /root/root.txt  # formato parcial ofuscado
 
 ---
 
-## Fuentes / Sources
-
-
 ## 📚 Fuentes y Referencias / Sources
 
 - **Fuente:** Nota local `index.md` (notas propias en chino/inglés, con capturas en `img/`) — randark/nota migrada
@@ -175,9 +163,6 @@ cat /root/root.txt  # formato parcial ofuscado
 - **Autor de este walkthrough:** Apuromafo (contenido propio salvo cita)
 
 ---
-
-## Fuentes / Sources
-
 
 ## ⚠️ Aviso Legal / Disclaimer
 

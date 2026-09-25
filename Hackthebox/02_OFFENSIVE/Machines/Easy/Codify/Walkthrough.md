@@ -26,9 +26,6 @@
 
 ---
 
-## Fuentes / Sources
-
-
 ## 🛠️ Herramientas usadas / Tools used
 
 - [ ] nmap
@@ -39,9 +36,6 @@
 - [ ] pspy (captura de `mysqldump -p...` en `ps`)
 
 ---
-
-## Fuentes / Sources
-
 
 ## 📋 Pasos / Steps
 
@@ -153,9 +147,6 @@ cat /root/root.txt
 
 ---
 
-## Fuentes / Sources
-
-
 ## 🧠 Lo aprendido / Learned
 
 - [ ] vm2 <=3.9.19 no es frontera de seguridad: 4 CVEs encadenables a RCE (30547, 32314, 37466, 37903).
@@ -165,9 +156,6 @@ cat /root/root.txt
 - [ ] Password en argv (`-p...`) se fuga vía `/proc`/pspy.
 
 ---
-
-## Fuentes / Sources
-
 
 ## 📚 Fuentes y Referencias / Sources
 
@@ -179,9 +167,6 @@ cat /root/root.txt
 - **Nota de migración:** este archivo normaliza `unclasified/Codify/index.md`. Pendiente mover carpeta a `Machines/Easy/Codify/` con `img/`.
 
 ---
-
-## Fuentes / Sources
-
 
 ## ⚠️ Aviso Legal / Disclaimer
 

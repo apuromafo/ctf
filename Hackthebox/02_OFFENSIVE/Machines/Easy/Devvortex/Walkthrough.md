@@ -26,9 +26,6 @@
 
 ---
 
-## Fuentes / Sources
-
-
 ## 🛠️ Herramientas usadas / Tools used
 
 - [ ] nmap
@@ -38,9 +35,6 @@
 - [ ] ssh
 
 ---
-
-## Fuentes / Sources
-
 
 ## 📋 Pasos / Steps
 
@@ -122,9 +116,6 @@ cat /root/root.txt
 
 ---
 
-## Fuentes / Sources
-
-
 ## 🧠 Lo aprendido / Learned
 
 > **ES:** Enumerar vhosts/subdominios abre la superficie real; los CVE de divulgación en CMS regalan el config; el acceso admin al CMS equivale a RCE (plantillas); `sudo -l` + versión del binario decide el privesc.
@@ -137,9 +128,6 @@ cat /root/root.txt
 
 ---
 
-## Fuentes / Sources
-
-
 ## 📚 Fuentes y Referencias / Sources
 
 - **Fuente:** Notas locales `Soluciones/Machines/unclasified/Devvortex/index.md` (parcial, TODO) y `Soluciones/Machines/unclasified/Devvortex/devvortex.md` (flujo completo de tareas) — autor original de las notas locales
@@ -150,9 +138,6 @@ cat /root/root.txt
 - **Nota de migración:** Contenido migrado y normalizado desde `index.md`/`devvortex.md` al molde `_PLANIFICACION/PLANTILLA_MACHINE.md`; paráfrasis propia, sin flags completas.
 
 ---
-
-## Fuentes / Sources
-
 
 ## ⚠️ Aviso Legal / Disclaimer
 

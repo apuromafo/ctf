@@ -26,9 +26,6 @@
 
 ---
 
-## Fuentes / Sources
-
-
 ## 🛠️ Herramientas usadas / Tools used
 
 - [ ] nmap / fscan
@@ -38,9 +35,6 @@
 - [ ] linpeas (`linpeas.sh`)
 
 ---
-
-## Fuentes / Sources
-
 
 ## 📋 Pasos / Steps
 
@@ -121,9 +115,6 @@ cat /root/root.txt  # formato: e7cc... (ofuscado)
 
 ---
 
-## Fuentes / Sources
-
-
 ## 🧠 Lo aprendido / Learned
 
 > **ES:** Los IDs predecibles en descargas (IDOR) exponen datos de otros usuarios; el FTP en claro en PCAPs regala credenciales; revisar `getcap` es tan importante como `sudo -l`.
@@ -136,9 +127,6 @@ cat /root/root.txt  # formato: e7cc... (ofuscado)
 
 ---
 
-## Fuentes / Sources
-
-
 ## 📚 Fuentes y Referencias / Sources
 
 - **Fuente:** Nota local `index.md` (notas propias en chino/inglés, con capturas en `img/`) — randark/nota migrada
@@ -148,9 +136,6 @@ cat /root/root.txt  # formato: e7cc... (ofuscado)
 - **Autor de este walkthrough:** Apuromafo (contenido propio salvo cita)
 
 ---
-
-## Fuentes / Sources
-
 
 ## ⚠️ Aviso Legal / Disclaimer
 

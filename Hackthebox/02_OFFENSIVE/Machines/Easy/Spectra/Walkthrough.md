@@ -26,9 +26,6 @@
 
 ---
 
-## Fuentes / Sources
-
-
 ## 🛠️ Herramientas usadas / Tools used
 
 - [ ] nmap
@@ -40,9 +37,6 @@
 - [ ] ssh / sudo -l (initctl)
 
 ---
-
-## Fuentes / Sources
-
 
 ## 📋 Pasos / Steps
 
@@ -139,9 +133,6 @@ cat /root/root.txt  # formato parcial ofuscado
 
 ---
 
-## Fuentes / Sources
-
-
 ## 🧠 Lo aprendido / Learned
 
 > **ES:** Backups con extensión `.save` servidos en claro; reutilización DB→admin; webshell vía plugins WP (temas bloqueados); Chromium OS/autologin como fuente de creds; privesc con jobs Upstart escribibles + `SETENV` NOPASSWD.
@@ -153,9 +144,6 @@ cat /root/root.txt  # formato parcial ofuscado
 
 ---
 
-## Fuentes / Sources
-
-
 ## 📚 Fuentes y Referencias / Sources
 
 - **Fuente:** Nota local `index.md` (notas propias en chino/inglés, con capturas en `img/`) — randark/nota migrada
@@ -165,9 +153,6 @@ cat /root/root.txt  # formato parcial ofuscado
 - **Autor de este walkthrough:** Apuromafo (contenido propio salvo cita)
 
 ---
-
-## Fuentes / Sources
-
 
 ## ⚠️ Aviso Legal / Disclaimer
 

@@ -26,9 +26,6 @@
 
 ---
 
-## Fuentes / Sources
-
-
 ## 🛠️ Herramientas usadas / Tools used
 
 - [ ] nmap
@@ -39,9 +36,6 @@
 - [ ] exploit OverlayFS (`unshare` + `setcap`, GameOverlay)
 
 ---
-
-## Fuentes / Sources
-
 
 ## 📋 Pasos / Steps
 
@@ -123,9 +117,6 @@ cat /root/root.txt  # formato: 0f7d... (ofuscado)
 
 ---
 
-## Fuentes / Sources
-
-
 ## 🧠 Lo aprendido / Learned
 
 > **ES:** Abuso del setup-token de Metabase para RCE y detección de fugas de secretos en contenedores; privesc de kernel Ubuntu.
@@ -136,9 +127,6 @@ cat /root/root.txt  # formato: 0f7d... (ofuscado)
 
 ---
 
-## Fuentes / Sources
-
-
 ## 📚 Fuentes y Referencias / Sources
 
 - **Fuente:** Nota local `Soluciones/Machines/unclasified/Analytics/index.md` (notas propias en chino/inglés, con capturas en `img/`) — randark/nota migrada
@@ -148,9 +136,6 @@ cat /root/root.txt  # formato: 0f7d... (ofuscado)
 - **Autor de este walkthrough:** Apuromafo (contenido propio salvo cita; migración y normalización de la nota local, paráfrasis sin copiar literal ni publicar flags completas)
 
 ---
-
-## Fuentes / Sources
-
 
 ## ⚠️ Aviso Legal / Disclaimer
 

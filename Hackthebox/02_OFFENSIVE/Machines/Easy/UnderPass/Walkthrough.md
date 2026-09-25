@@ -26,9 +26,6 @@
 
 ---
 
-## Fuentes / Sources
-
-
 ## 🛠️ Herramientas usadas / Tools used
 
 - [ ] nmap (TCP + UDP)
@@ -39,9 +36,6 @@
 - [ ] mosh (GTFOBins)
 
 ---
-
-## Fuentes / Sources
-
 
 ## 📋 Pasos / Steps
 
@@ -125,9 +119,6 @@ cat /root/root.txt  # formato parcial ofuscado
 
 ---
 
-## Fuentes / Sources
-
-
 ## 🧠 Lo aprendido / Learned
 
 > **ES:** SNMP con comunidad pública como vector de info; daloRADIUS con credenciales por defecto; hashes MD5 débiles; privesc con `mosh-server`.
@@ -139,9 +130,6 @@ cat /root/root.txt  # formato parcial ofuscado
 
 ---
 
-## Fuentes / Sources
-
-
 ## 📚 Fuentes y Referencias / Sources
 
 - **Fuente:** Nota local `index.md` (notas propias en chino/inglés, con capturas en `img/`) — randark/nota migrada
@@ -151,9 +139,6 @@ cat /root/root.txt  # formato parcial ofuscado
 - **Autor de este walkthrough:** Apuromafo (contenido propio salvo cita)
 
 ---
-
-## Fuentes / Sources
-
 
 ## ⚠️ Aviso Legal / Disclaimer
 

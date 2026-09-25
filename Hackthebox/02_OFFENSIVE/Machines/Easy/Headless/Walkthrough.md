@@ -26,9 +26,6 @@
 
 ---
 
-## Fuentes / Sources
-
-
 ## 🛠️ Herramientas usadas / Tools used
 
 - [ ] nmap
@@ -38,9 +35,6 @@
 - [ ] sudo -l / análisis de scripts bash
 
 ---
-
-## Fuentes / Sources
-
 
 ## 📋 Pasos / Steps
 
@@ -119,9 +113,6 @@ cat /root/root.txt  # solo en lab retirado
 
 ---
 
-## Fuentes / Sources
-
-
 ## 🧠 Lo aprendido / Learned
 
 > **ES:** XSS para robo de sesión cuando un bot/admin revisa el input; RCE por concatenación en parámetros de fecha; peligro de invocar sub-scripts por ruta relativa con sudo NOPASSWD.
@@ -133,9 +124,6 @@ cat /root/root.txt  # solo en lab retirado
 
 ---
 
-## Fuentes / Sources
-
-
 ## 📚 Fuentes y Referencias / Sources
 
 - **Fuente:** Notas locales `index.md` + capturas en `img/` (contenido propio previo, sin normalizar)
@@ -145,9 +133,6 @@ cat /root/root.txt  # solo en lab retirado
 - **Nota de migración:** Nota original en chino/inglés migrada al molde bilingüe ES/EN; flags ofuscadas, payloads parafraseados.
 
 ---
-
-## Fuentes / Sources
-
 
 ## ⚠️ Aviso Legal / Disclaimer
 

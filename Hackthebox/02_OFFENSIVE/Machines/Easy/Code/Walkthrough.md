@@ -26,9 +26,6 @@
 
 ---
 
-## Fuentes / Sources
-
-
 ## 🛠️ Herramientas usadas / Tools used
 
 - [ ] nmap
@@ -38,9 +35,6 @@
 - [ ] ssh
 
 ---
-
-## Fuentes / Sources
-
 
 ## 📋 Pasos / Steps
 
@@ -148,9 +142,6 @@ cat /root/root.txt  # formato: 892e... (ofuscado)
 
 ---
 
-## Fuentes / Sources
-
-
 ## 🧠 Lo aprendido / Learned
 
 > **ES:** Las denylist en pyjails se evaden con introspección (`__class__`, `__globals__`); los hashes débiles (MD5) + reutilización dan salto lateral; validar paths con un solo `gsub` y reescribir el JSON antes de usarlo abre carreras.
@@ -162,9 +153,6 @@ cat /root/root.txt  # formato: 892e... (ofuscado)
 
 ---
 
-## Fuentes / Sources
-
-
 ## 📚 Fuentes y Referencias / Sources
 
 - **Fuente:** Nota local `index.md` (notas propias en chino/inglés, con capturas en `img/`) — randark/nota migrada
@@ -174,9 +162,6 @@ cat /root/root.txt  # formato: 892e... (ofuscado)
 - **Autor de este walkthrough:** Apuromafo (contenido propio salvo cita)
 
 ---
-
-## Fuentes / Sources
-
 
 ## ⚠️ Aviso Legal / Disclaimer
 

@@ -26,9 +26,6 @@
 
 ---
 
-## Fuentes / Sources
-
-
 ## 🛠️ Herramientas usadas / Tools used
 
 - [ ] nmap
@@ -38,9 +35,6 @@
 - [ ] hashcat `-m 1400` (SHA256) con máscara deducida
 
 ---
-
-## Fuentes / Sources
-
 
 ## 📋 Pasos / Steps
 
@@ -118,9 +112,6 @@ cat /root/root.txt  # solo en lab retirado
 
 ---
 
-## Fuentes / Sources
-
-
 ## 🧠 Lo aprendido / Learned
 
 > **ES:** SSTI en ERB/Ruby; shells vía `system()`; reutilizar correos internos para inferir políticas de password; máscaras hashcat con sufijo numérico.
@@ -132,9 +123,6 @@ cat /root/root.txt  # solo en lab retirado
 
 ---
 
-## Fuentes / Sources
-
-
 ## 📚 Fuentes y Referencias / Sources
 
 - **Fuente:** Notas locales `index.md` + capturas en `img/` (contenido propio previo, sin normalizar)
@@ -144,9 +132,6 @@ cat /root/root.txt  # solo en lab retirado
 - **Nota de migración:** Nota original en chino/inglés migrada al molde bilingüe ES/EN; flags y password ofuscados, payloads parafraseados.
 
 ---
-
-## Fuentes / Sources
-
 
 ## ⚠️ Aviso Legal / Disclaimer
 

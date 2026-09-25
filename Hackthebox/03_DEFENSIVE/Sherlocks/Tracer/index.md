@@ -14,25 +14,30 @@
 
 A junior SOC analyst on duty has reported multiple alerts indicating the presence of PsExec on a workstation. They verified the alerts and escalated the alerts to tier II. As an Incident responder you triaged the endpoint for artefacts of interest. Now please answer the questions regarding this security event so you can report it to your incident manager.
 
-一名值班的初级 SOC 分析师报告了多个警报，表明工作站上存在 PsExec。他们验证了这些警报并将其升级给二级支持团队。作为事件响应人员，您对端点进行了初步调查，以查找感兴趣的证据。现在，请回答以下关于这一安全事件的问题，以便向您的事件经理报告。
+> [ZH] "一名值班的初级 SOC 分析师报告了多个警报，表明工作站上存在 PsExec。他们验证了这些警报并将其升级给二级支持团队。作为事件响应人员，您对端点进行了初步调查，以查找感兴趣的证据。现在，请回答以下关于这一安全事件的问题，以便向您的事件经理报告。"
+> **ES:** Un analista SOC junior reportó alertas de PsExec en un workstation, verificadas y escaladas a Tier II: triar el endpoint y responder para informar al incident manager.
+> **EN:** A junior SOC analyst reported PsExec alerts on a workstation, verified and escalated to Tier II: triage the endpoint and answer to report to the incident manager.
 
 :::
 
-## 题目数据
+## 题目数据 / Datos / Data
 
 [tracer.zip](./tracer.zip)
 
 :::note
 
-本文章使用了 [FullEventLogView](https://www.nirsoft.net/utils/full_event_log_view.html) 工具辅助进行日志分析
+Herramienta usada para el análisis de logs: [FullEventLogView](https://www.nirsoft.net/utils/full_event_log_view.html).
+Log analysis assisted with: [FullEventLogView](https://www.nirsoft.net/utils/full_event_log_view.html).
 
 :::
 
-## Task 1
+## Task 1 — Veces que se ejecutó PsExec / PsExec execution count
 
-> SOC 团队怀疑有一个对手潜伏在他们的环境中，并且正在使用 PsExec 进行横向移动。一名初级 SOC 分析师特别报告了在一台工作站上使用了 PsExec。攻击者在系统上执行了多少次 PsExec？
+> [ZH] "SOC 团队怀疑有一个对手潜伏在他们的环境中，并且正在使用 PsExec 进行横向移动。一名初级 SOC 分析师特别报告了在一台工作站上使用了 PsExec。攻击者在系统上执行了多少次 PsExec？"
+> **ES:** El SOC sospecha movimiento lateral con PsExec reportado en un workstation: ¿cuántas veces se ejecutó PsExec en el sistema?
+> **EN:** The SOC suspects lateral movement with PsExec reported on a workstation: how many times was PsExec executed on the system?
 
-在 `Security.evtx` 中，日志第一条就是我们要追踪的 PsExec 对象
+En `Security.evtx`, el primer registro a seguir es el objeto PsExec:
 
 ```xml
 <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
@@ -78,9 +83,10 @@ A junior SOC analyst on duty has reported multiple alerts indicating the presenc
 </Event>
 ```
 
-可以得到 PsExec 的具体服务的名称：`PSEXESVC`
+Se obtiene el nombre concreto del servicio PsExec: `PSEXESVC`.
 
-使用 `FullEventLogView` 使用关键字 `psexesvc security`，共筛选出来 9 条记录
+> **ES:** Con `FullEventLogView` y la palabra clave `psexesvc security` se filtran 9 registros.
+> **EN:** With `FullEventLogView` and the keyword `psexesvc security`, 9 records are filtered.
 
 ![FullEventLogView](img/image_20240131-113152.png)
 
@@ -88,39 +94,41 @@ A junior SOC analyst on duty has reported multiple alerts indicating the presenc
 9
 ```
 
-## Task 2
+## Task 2 — Binario del servicio PsExec / PsExec service binary name
 
-> PsExec 工具释放的服务二进制文件的名称是什么，使得攻击者能够执行远程命令？
+> [ZH] "PsExec 工具释放的服务二进制文件的名称是什么，使得攻击者能够执行远程命令？"
+> **ES:** ¿Qué binario de servicio despliega PsExec para permitir ejecución remota de comandos?
+> **EN:** What service binary does PsExec drop to allow remote command execution?
 
-上一题中就有
+> **ES:** Visto en la tarea anterior.
+> **EN:** Seen in the previous task.
 
 ```plaintext title="Answer"
 PSEXESVC.exe
 ```
 
-## Task 3
+## Task 3 — Timestamp de la 5.ª ejecución / 5th execution timestamp
 
-> 现在我们确认了 PsExec 运行了多次，我们特别关注第 5 次运行的 PsExec 实例。PsExec 服务二进制文件运行的时间戳是什么？
+> [ZH] "现在我们确认了 PsExec 运行了多次，我们特别关注第 5 次运行的 PsExec 实例。PsExec 服务二进制文件运行的时间戳是什么？"
+> **ES:** Confirmadas múltiples ejecuciones, foco en la 5.ª instancia: ¿cuál es el timestamp de ejecución del binario de servicio PsExec?
+> **EN:** Multiple runs confirmed, focus on the 5th instance: what is the service binary run timestamp?
 
 :::warning
 
-问题需要认真审题，需要注意的是，这里提问的是 `psexec` 的执行时间，而系统日志中所记录的是 `psexec` 执行用户登录的事件
+> **ES:** Leer con cuidado: se pregunta por el tiempo de ejecución de `psexec`, mientras que el log de sistema registra el evento de logon del usuario que ejecuta `psexec`.
+> **EN:** Read carefully: the question asks for the `psexec` execution time, while the System log records the user logon event of the `psexec` execution.
 
 :::
 
-如果需要对程序的执行数据进行分析，结合题目中所给的附件，就只能对 `prefetch` 文件进行分析
-
-接下来要对 `prefetch` 文件进行分析，因为 `prefetch` 文件中储存了程序在运行时的缓存数据，可能其中含有有价值的信息
-
-为了对 `prefetch` 文件进行分析，将使用 [PECmd](https://github.com/EricZimmerman/PECmd) 这个工具
-
-针对 `psexec`，定位到 `PSEXESVC.EXE-AD70946C.pf` 文件，进行分析
+> **ES:** Para analizar ejecuciones con los adjuntos, solo queda analizar `prefetch` (caché de ejecución con datos valiosos) con [PECmd](https://github.com/EricZimmerman/PECmd), sobre `PSEXESVC.EXE-AD70946C.pf`.
+> **EN:** To analyse executions with the given attachments, only `prefetch` analysis remains (runtime cache with valuable data) with [PECmd](https://github.com/EricZimmerman/PECmd), on `PSEXESVC.EXE-AD70946C.pf`.
 
 ```bash
 PS D:\_Tool\_ForensicAnalyzer\PECmd> .\PECmd.exe -f D:\Downloads\tracer\Tracer\C\Windows\prefetch\PSEXESVC.EXE-AD70946C.pf --csv D:\Downloads\res
 ```
 
-分析报告将会保存在 `D:\Downloads\res` 目录下，对 `20240102035233_PECmd_Output_Timeline.csv` 这个报告文件进行查看
+> **ES:** El informe se guarda en `D:\Downloads\res`; revisar `20240102035233_PECmd_Output_Timeline.csv`.
+> **EN:** The report is saved under `D:\Downloads\res`; review `20240102035233_PECmd_Output_Timeline.csv`.
 
 |    RunTime     |                     ExecutableName                      |
 | :------------: | :-----------------------------------------------------: |
@@ -133,17 +141,21 @@ PS D:\_Tool\_ForensicAnalyzer\PECmd> .\PECmd.exe -f D:\Downloads\tracer\Tracer\C
 | 2023/9/7 11:57 | `\VOLUME{01d951602330db46-52233816}\WINDOWS\PSEXESVC.EXE` |
 | 2023/9/7 11:55 | `\VOLUME{01d951602330db46-52233816}\WINDOWS\PSEXESVC.EXE` |
 
-即可定位时间
+> **ES:** Con esto se fija el tiempo.
+> **EN:** This pins the time.
 
 ```plaintext title="Answer"
 07/09/2023 12:06:54
 ```
 
-## Task 4
+## Task 4 — Hostname origen del movimiento lateral / Lateral-movement source hostname
 
-> 您能确认攻击者进行横向移动的工作站的主机名吗？
+> [ZH] "您能确认攻击者进行横向移动的工作站的主机名吗？"
+> **ES:** ¿Cuál es el hostname del workstation desde el que el atacante realizó el movimiento lateral?
+> **EN:** What is the hostname of the workstation the attacker moved laterally from?
 
-在 `PECmd` 工具的命令行输出结果中，研判 `Files referenced` 部分的记录
+> **ES:** En la salida de `PECmd`, examinar la sección `Files referenced`.
+> **EN:** In the `PECmd` output, examine the `Files referenced` section.
 
 ```plaintext
 00: \VOLUME{01d951602330db46-52233816}\WINDOWS\SYSTEM32\NTDLL.DLL
@@ -189,17 +201,21 @@ PS D:\_Tool\_ForensicAnalyzer\PECmd> .\PECmd.exe -f D:\Downloads\tracer\Tracer\C
 40: \VOLUME{01d951602330db46-52233816}\WINDOWS\PSEXEC-FORELA-WKSTN001-EDCC783C.KEY
 ```
 
-即可从 key 文件的文件名中，得到主机名
+> **ES:** El hostname se obtiene del nombre de los ficheros `.key`.
+> **EN:** The hostname comes from the `.key` filenames.
 
 ```plaintext title="Answer"
 FORELA-WKSTN001
 ```
 
-## Task 5
+## Task 5 — Nombre del fichero .key / Key filename
 
-> Psexec 的倒数第 5 个实例释放的密钥文件的全名是什么？
+> [ZH] "Psexec 的倒数第 5 个实例释放的密钥文件的全名是什么？"
+> **ES:** ¿Cuál es el nombre completo del fichero de clave liberado por la 5.ª instancia de PsExec?
+> **EN:** What is the full name of the key file dropped by the 5th PsExec instance?
 
-对上一题中 `Files referenced` 部分的记录进行筛选，保留下 key 文件的记录
+> **ES:** Filtrar `Files referenced` quedándose con los registros `.key`.
+> **EN:** Filter `Files referenced` down to the `.key` records.
 
 ```plaintext
 20: \VOLUME{01d951602330db46-52233816}\WINDOWS\PSEXEC-FORELA-WKSTN001-CAD5E7EF.KEY
@@ -212,19 +228,21 @@ FORELA-WKSTN001
 40: \VOLUME{01d951602330db46-52233816}\WINDOWS\PSEXEC-FORELA-WKSTN001-EDCC783C.KEY
 ```
 
-按照顺序定位第五个即可
+> **ES:** Localizar la quinta por orden.
+> **EN:** Locate the fifth one in order.
 
 ```plaintext title="Answer"
 PSEXEC-FORELA-WKSTN001-95F03CFE.key
 ```
 
-## Task 6
+## Task 6 — Timestamp de creación del .key / Key creation timestamp
 
-> 您能确认该密钥文件在磁盘上创建的时间戳吗？
+> [ZH] "您能确认该密钥文件在磁盘上创建的时间戳吗？"
+> **ES:** ¿Cuál es el timestamp de creación en disco de ese fichero de clave?
+> **EN:** What is the on-disk creation timestamp of that key file?
 
-为了确定文件的时间戳，需要对 Windows 磁盘默认的 NTFS 储存结构协议的 `$Extend` 相关记录进行解析
-
-这里使用到 [MFTECmd](https://github.com/EricZimmerman/MFTECmd) 这款工具
+> **ES:** Para el timestamp hay que parsear NTFS `$Extend` (usn journal) con [MFTECmd](https://github.com/EricZimmerman/MFTECmd).
+> **EN:** For the timestamp, parse NTFS `$Extend` (USN journal) with [MFTECmd](https://github.com/EricZimmerman/MFTECmd).
 
 ```bash
 PS D:\_Tool\_ForensicAnalyzer\MFTECmd> .\MFTECmd.exe -f 'D:\Downloads\tracer\Tracer\C\$Extend\$J' --json 'D:\Downloads\tracer\Tracer\C\$Extend'
@@ -233,7 +251,8 @@ Usn entries found in D:\Downloads\tracer\Tracer\C\$Extend\$J: 145,944
         CSV output will be saved to D:\Downloads\tracer\Tracer\C\$Extend\20240102044257_MFTECmd_$J_Output.csv
 ```
 
-对提取得到的数据进行筛选，可以得到三条记录
+> **ES:** Filtrar los datos extraídos: tres registros.
+> **EN:** Filter the extracted data: three records.
 
 | Name                                | Extension | EntryNumber | SequenceNumber | ParentEntryNumber | ParentSequenceNumber | ParentPath | UpdateSequenceNumber | UpdateTimestamp | UpdateReasons                       | FileAttributes | OffsetToData | SourceFile                              |
 | :---------------------------------- | :-------- | :---------- | :------------- | :---------------- | :------------------- | :--------- | :------------------- | :-------------- | :---------------------------------- | :------------- | :----------- | :-------------------------------------- |
@@ -245,11 +264,14 @@ Usn entries found in D:\Downloads\tracer\Tracer\C\$Extend\$J: 145,944
 07/09/2023 12:06:55
 ```
 
-## Task 7
+## Task 7 — Named pipe stderr / Named pipe ending in stderr
 
-> 第 5 个 PsExec 实例的以 "stderr" 关键字结尾的命名管道的全名是什么？
+> [ZH] "第 5 个 PsExec 实例的以 "stderr" 关键字结尾的命名管道的全名是什么？"
+> **ES:** ¿Cuál es el nombre completo del named pipe de la 5.ª instancia que termina en "stderr"?
+> **EN:** What is the full name of the 5th instance named pipe ending in "stderr"?
 
-对 `Microsoft-Windows-Sysmon%4Operational.evtx` 这个日志文件进行分析，针对上文得到的时间戳 `07/09/2023 12:06:54` 进行筛选，即可得到以下数据
+> **ES:** Analizar `Microsoft-Windows-Sysmon%4Operational.evtx` filtrando por el timestamp `07/09/2023 12:06:54`.
+> **EN:** Analyse `Microsoft-Windows-Sysmon%4Operational.evtx` filtering by timestamp `07/09/2023 12:06:54`.
 
 ```xml
 <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">

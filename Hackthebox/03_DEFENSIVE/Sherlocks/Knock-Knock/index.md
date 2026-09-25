@@ -14,30 +14,30 @@
 
 A critical Forela Dev server was targeted by a threat group. The Dev server was accidentally left open to the internet which it was not supposed to be. The senior dev Abdullah told the IT team that the server was fully hardened and it's still difficult to comprehend how the attack took place and how the attacker got access in the first place. Forela recently started its business expansion in Pakistan and Abdullah was the one IN charge of all infrastructure deployment and management. The Security Team need to contain and remediate the threat as soon as possible as any more damage can be devastating for the company, especially at the crucial stage of expanding in other region. Thankfully a packet capture tool was running in the subnet which was set up a few months ago. A packet capture is provided to you around the time of the incident (1-2) days margin because we don't know exactly when the attacker gained access. As our forensics analyst, you have been provided the packet capture to assess how the attacker gained access. Warning : This Sherlock will require an element of OSINT to complete fully.
 
-一家关键的 Forela Dev 服务器受到了威胁组的攻击。Dev 服务器被意外地暴露在互联网上，而这并不是它应该存在的位置。高级开发者 Abdullah 告诉 IT 团队服务器已经完全强化，很难理解攻击是如何发生以及攻击者是如何首次获取访问权限的。Forela 最近开始在巴基斯坦进行业务扩展，而 Abdullah 正是负责所有基础架构的部署和管理。安全团队需要尽快控制和消除威胁，因为任何进一步的损害对公司都可能是毁灭性的，特别是在扩展到其他地区的关键阶段。幸运的是，几个月前在子网中设置了一个数据包捕获工具。提供给您的数据包捕获文件大致是在事件发生时（提供了 1-2 天的时间余地），因为我们不确定攻击者确切获取访问权限的时间。作为我们的取证分析师，您已被提供数据包捕获文件，以评估攻击者是如何获取访问权限的。警告：此次调查需要一定的开源情报搜集才能完全完成。
+> [ZH] "一家关键的 Forela Dev 服务器受到了威胁组的攻击。……作为我们的取证分析师，您已被提供数据包捕获文件，以评估攻击者是如何获取访问权限的。警告：此次调查需要一定的开源情报搜集才能完全完成。"
+> **ES:** Servidor Dev de Forela expuesto a internet y atacado; Abdullah (dev senior, responsable infra Pakistán) lo creía hardenizado; hay PCAP de ±1-2 días del incidente para determinar el acceso inicial. Requiere OSINT.
+> **EN:** Forela Dev server exposed to the internet and attacked; senior dev Abdullah (infra lead, Pakistan) thought it hardened; ±1-2 day PCAP provided to determine initial access. OSINT required.
 
 :::
 
-## 题目数据
+## 题目数据 / Datos / Data
 
 :::note
 
-由于附件过大，故在此不提供下载链接
+> **ES:** Anexo demasiado grande, sin enlace aquí. / **EN:** Attachment too large, no link here.
 
 :::
 
-## 数据预处理
+## 数据预处理 / Preprocesamiento / Preprocessing
 
-由于流量包较大，所以我们先对流量包的数据进行初步提取和研判
+> **ES:** PCAP grande: extracción y triaje inicial; vía Archivo → Exportar objetos, en `FTP` aparecen estos ficheros. / **EN:** Large PCAP: initial extraction and triage; via File → Export Objects, these files appear over `FTP`.
 
-通过 文件 -> 导出对象 功能，我们可以先对流量中传输过的文件进行初步分析，在 `FTP` 协议中找到以下文件
-
-|    主机名    |  文件名  |
+| 主机名 / Host | 文件名 / Filename |
 | :----------: | :------: |
 | 172.31.39.46 | .backup  |
 | 172.31.39.46 | fetch.sh |
 
-然后查看文件内容
+> **ES:** Contenido de los ficheros: / **EN:** File contents:
 
 ```bash title="fetch.sh"
 #!/bin/bash
@@ -71,15 +71,17 @@ echo "$RESULT"
 # Creds for the other backup server abdullah.yasin:XhlhGame_90HJLDASxfd&hoooad
 ```
 
-通过上面得到的信息，可以初步判断数据库主机的 ip 地址是 `3.13.65.234`，并且请求的主机为 `3.109.209.43`，这个请求的主机可以确定为攻击者的 ip 地址
+> **ES:** Hipótesis inicial: DB en `3.13.65.234`, solicitante `3.109.209.43` = IP atacante. / **EN:** Initial hypothesis: DB at `3.13.65.234`, requester `3.109.209.43` = attacker IP.
 
-## Task 1
+## Task 1 — Puertos abiertos en enum / Open ports in enum
 
-> 攻击者在枚举阶段发现了哪些端口是开放的？
+> [ZH] "攻击者在枚举阶段发现了哪些端口是开放的？"
+> **ES:** ¿Qué puertos halló abiertos el atacante en enumeración?
+> **EN:** Which ports did the attacker find open during enumeration?
 
-根据 tcp 协议所规定的端口相应的策略，可以通过检查 `SYN` 和 `ACK` 的响应值，来判断端口是否开放
+> **ES:** Puertos según SYN+ACK (`tcp.flags.syn==1 and tcp.flags.ack==1`). / **EN:** Ports per SYN+ACK (`tcp.flags.syn==1 and tcp.flags.ack==1`).
 
-对应的筛选器表达式为
+> **ES:** Filtro: / **EN:** Filter:
 
 ```plaintext
 tcp.flags.syn==1 and tcp.flags.ack==1
@@ -87,21 +89,21 @@ tcp.flags.syn==1 and tcp.flags.ack==1
 
 ![wireshark](img/image_20240112-121222.png)
 
-但是发现数据量过大，于是可以检查上面发现的数据库主机的 ip
+> **ES:** Mucho volumen: acotar a la IP DB y al rango del escaneo. / **EN:** Too much volume: scope to the DB IP and the scan window.
 
-对应的筛选器表达式为
+> **ES:** Filtro: / **EN:** Filter:
 
 ```plaintext
 tcp.flags.syn==1 and tcp.flags.ack==1 and ip.addr==3.109.209.43
 ```
 
-同时由于后期进行了其他会话，所以在 wireshark 中确认一下端口扫描发生的大致时间点，然后做进一步细分
+> **ES:** Hubo sesiones posteriores: confirmar el momento del scan en Wireshark y segmentar (`frame.number<=207500`). / **EN:** Later sessions exist: confirm the scan window in Wireshark and slice it (`frame.number<=207500`).
 
 ```plaintext
 tcp.flags.syn==1 and tcp.flags.ack==1 and ip.addr==3.109.209.43 && frame.number<=207500
 ```
 
-由于存在大量重复数据，所以直接使用 tshark + sort + uniq + sed 进行处理
+> **ES:** Muchos duplicados: deduplicar con tshark + sort + uniq + sed. / **EN:** Many duplicates: dedupe with tshark + sort + uniq + sed.
 
 ```bash
 $tshark -r Capture.pcap -T fields -Y "tcp.flags.syn==1 and tcp.flags.ack==1 and ip.addr==3.109.209.43 && frame.number<=207500" -e tcp.srcport | sort -n | uniq | sed ':a;N;$!ba;s/\n/,/g'
@@ -112,149 +114,165 @@ $tshark -r Capture.pcap -T fields -Y "tcp.flags.syn==1 and tcp.flags.ack==1 and 
 21,22,3306,6379,8086
 ```
 
-## Task 2
+## Task 2 — Inicio del ataque UTC / Attack start UTC
 
-> 攻击者开始对服务器进行攻击的世界协调时间是多少？
+> [ZH] "攻击者开始对服务器进行攻击的世界协调时间是多少？"
+> **ES:** ¿A qué hora UTC empezó el ataque al servidor?
+> **EN:** At what UTC time did the attack on the server start?
 
-根据上文的问题，将目标聚集在 `3.13.65.234` 这台服务器上，使用
+> **ES:** Fijar objetivo en `3.13.65.234` y filtrar `ip.addr==3.109.209.43`: el primer registro es el inicio del port-scan. / **EN:** Scope to `3.13.65.234` and filter `ip.addr==3.109.209.43`: the first record is the port-scan start.
 
 `ip.addr==3.109.209.43`
-
-进行筛选，第一条记录经过确认，就是攻击者开始扫描端口的记录，此记录的时间就是攻击者开始攻击的时间
 
 ```plaintext title="Answer"
 21/03/2023 10:42:23
 ```
 
-## Task 3
+## Task 3 — MITRE de acceso inicial / Initial-access MITRE
 
-> 攻击者用于获取初始访问权限的 MITRE 技术 ID 是什么？
+> [ZH] "攻击者用于获取初始访问权限的 MITRE 技术 ID 是什么？"
+> **ES:** ¿Qué ID MITRE corresponde al acceso inicial?
+> **EN:** Which MITRE technique ID covers the initial access?
 
-由于原始数据包大小较大，所以使用以下筛选器进行导出特定分组数据，保存为 `1.pcap`
+> **ES:** PCAP grande: exportar `ip.addr==3.109.209.43 && ip.addr==172.31.39.46` como `1.pcap`. / **EN:** Large PCAP: export `ip.addr==3.109.209.43 && ip.addr==172.31.39.46` as `1.pcap`.
 
 ```plaintext
 ip.addr==3.109.209.43 && ip.addr==172.31.39.46
 ```
 
-通过分析单独导出分组后的数据，可以发现前面部分的流量，都是攻击者在执行全端口扫描，所以通过定位相关包，可以进一步将端口扫描部分的数据进行剔除
+> **ES:** El inicio es full port-scan: recortar con el filtro y exportar como `2.pcap`; luego se ven intentos FTP masivos con un diccionario fijo por usuario = password spraying. / **EN:** The start is a full port-scan: trim with the filter and export as `2.pcap`; then massive FTP logins with a fixed per-user dictionary appear = password spraying.
 
 ```plaintext
 frame.number > 131092
 ```
 
-使用筛选器，导出特定分组为 `2.pcap`
-
-通过对导出的 `2.pcap` 其中的流量进一步做分析，可以发现攻击者后续发起了大量的 ftp 登陆尝试，针对每个用户都在尝试固定的一份密码字典，可以判断为密码喷洒攻击
-
 ```plaintext title="Answer"
 T1110.003
 ```
 
-## Task 4
+## Task 4 — Credenciales del foothold / Foothold credentials
 
-> 用于获取初始立足点的有效凭据集是什么？
+> [ZH] "用于获取初始立足点的有效凭据集是什么？"
+> **ES:** ¿Qué credenciales válidas dieron el foothold inicial?
+> **EN:** Which valid credential set gave the initial foothold?
 
-使用以下筛选器进行筛选
-
-往后面翻即可得到
+> **ES:** Filtrar el spray FTP y avanzar hasta el login exitoso. / **EN:** Filter the FTP spray and scroll to the successful login.
 
 ```plaintext title="Answer"
 tony.shephard:Summer2023!
 ```
 
-## Task 5
+## Task 5 — IP maliciosa inicial / Initial malicious IP
 
-> 攻击者用于初始访问的恶意 IP 地址是多少？
+> [ZH] "攻击者用于初始访问的恶意 IP 地址是多少？"
+> **ES:** ¿Cuál es la IP maliciosa del acceso inicial?
+> **EN:** What is the malicious IP used for initial access?
 
 ```plaintext title="Answer"
 3.109.209.43
 ```
 
-## Task 6
+## Task 6 — Fichero con config y creds / Config-and-creds file
 
-> 包含一些配置数据和凭据的文件名称是什么？
+> [ZH] "包含一些配置数据和凭据的文件名称是什么？"
+> **ES:** ¿Qué fichero contiene datos de config y credenciales?
+> **EN:** Which file holds config data and credentials?
 
-数据预处理阶段已经得到
+> **ES:** Ya recuperado en preprocesamiento (FTP). / **EN:** Already recovered in preprocessing (FTP).
 
 ```plaintext title="Answer"
 .backup
 ```
 
-## Task 7
+## Task 7 — Puerto del servicio crítico / Critical service port
 
-> 关键服务运行在哪个端口上？
+> [ZH] "关键服务运行在哪个端口上？"
+> **ES:** ¿En qué puerto corre el servicio crítico?
+> **EN:** On which port does the critical service run?
 
-看 `.backup` 文件中的配置项，即可得到
+> **ES:** Ver la directiva `command` en `.backup`. / **EN:** See the `command` directive in `.backup`.
 
 ```plaintext title="Answer"
 24456
 ```
 
-## Task 8
+## Task 8 — Técnica del servicio crítico / Critical service technique
 
-> 用于访问该关键服务的技术名称是什么？
+> [ZH] "用于访问该关键服务的技术名称是什么？"
+> **ES:** ¿Cómo se llama la técnica para alcanzar ese servicio?
+> **EN:** What is the name of the technique to reach that service?
 
-通过对 `.backup` 这个配置文件进行分析，可以看出这个是 `knockd` 服务的配置文件
+> **ES:** `.backup` es config de `knockd` (port knocking). / **EN:** `.backup` is a `knockd` config (port knocking).
 
-可以参考：[MITRE ATT&CK: Port knocking](https://resources.infosecinstitute.com/topics/mitre-attck/mitre-attck-port-knocking/)
+> **ES:** Referencia: / **EN:** Reference:
+
+[MITRE ATT&CK: Port knocking](https://resources.infosecinstitute.com/topics/mitre-attck/mitre-attck-port-knocking/)
 
 ```plaintext title="Answer"
 Port knocking
 ```
 
-## Task 9
+## Task 9 — Puertos del knock / Knock ports
 
-> 需要与之交互以达到关键服务的哪些端口？
+> [ZH] "需要与之交互以达到关键服务的哪些端口？"
+> **ES:** ¿Con qué puertos hay que interactuar para llegar al servicio?
+> **EN:** Which ports must be knocked to reach the service?
 
-看 `.backup` 配置文件内容即可
+> **ES:** Ver `sequence` en `.backup`. / **EN:** See `sequence` in `.backup`.
 
 ```plaintext title="Answer"
 29999,45087,50234
 ```
 
-## Task 10
+## Task 10 — Fin del knock UTC / Knock end UTC
 
-> 与上一个问题端口交互结束的世界协调时间是多少？
+> [ZH] "与上一个问题端口交互结束的世界协调时间是多少？"
+> **ES:** ¿A qué hora UTC terminó la secuencia knock?
+> **EN:** At what UTC time did the knock sequence end?
 
-使用筛选器定位这三个端口
+> **ES:** Filtrar los tres puertos y tomar el registro más tardío. / **EN:** Filter the three ports and take the latest record.
 
 ```plaintext
 tcp.port==29999 || tcp.port==45087 || tcp.port==50234
 ```
 
-定位时间最晚的那一条记录即可
+> **ES:** Tomar el registro más tardío. / **EN:** Take the latest record.
 
 ```plaintext title="Answer"
 21/03/2023 10:58:50
 ```
 
-## Task 11
+## Task 11 — Creds del servicio crítico / Critical service creds
 
-> 用于关键服务的一组有效凭据是什么？
+> [ZH] "用于关键服务的一组有效凭据是什么？"
+> **ES:** ¿Qué credenciales válidas abren el servicio crítico?
+> **EN:** Which valid credentials open the critical service?
 
-看 `.backup` 文件中的配置项，即可得到
+> **ES:** Ver el comentario con creds en `.backup`. / **EN:** See the creds comment in `.backup`.
 
 ```plaintext title="Answer"
 abdullah.yasin:XhlhGame_90HJLDASxfd&hoooad
 ```
 
-## Task 12
+## Task 12 — Acceso al servidor crítico UTC / Critical server access UTC
 
-> 攻击者何时以世界协调时间获得了对关键服务器的访问权限？
+> [ZH] "攻击者何时以世界协调时间获得了对关键服务器的访问权限？"
+> **ES:** ¿Cuándo (UTC) logró el atacante acceso al servidor crítico?
+> **EN:** When (UTC) did the attacker gain access to the critical server?
 
-通过继续追踪流量，可以发现攻击者使用了 `Task 11` 中的凭据再次登陆了服务器
-
-这里提交的时间，指服务器返回给攻击者 `230 Login successful.` 的时间
+> **ES:** Re-login con las creds de la Task 11; hora del `230 Login successful.` del servidor. / **EN:** Re-login with Task 11 creds; time of the server's `230 Login successful.`.
 
 ```plaintext title="Answer"
 21/03/2023 11:00:01
 ```
 
-## Task 13
+## Task 13 — AWS de Abdullah / Abdullah's AWS
 
-> 开发者 “Abdullah” 的 AWS 账户 ID 和密码是什么？
+> [ZH] "开发者 “Abdullah” 的 AWS 账户 ID 和密码是什么？"
+> **ES:** ¿Cuáles son el ID y password AWS del dev Abdullah?
+> **EN:** What are dev Abdullah's AWS account ID and password?
 
-在攻击者登录 ftp 服务之后，可以发现攻击者获取了 `.archived.sql` 这个文件，其中含有以下数据
+> **ES:** Tras el login FTP, extraer `.archived.sql` (tabla `AWS_EC2_DEV`). / **EN:** After FTP login, carve `.archived.sql` (`AWS_EC2_DEV` table).
 
 ```sql
 DROP TABLE IF EXISTS `AWS_EC2_DEV`;
@@ -282,11 +300,13 @@ UNLOCK TABLES;
 391629733297:yiobkod0986Y[adij@IKBDS
 ```
 
-## Task 14
+## Task 14 — Cierre de contratación / Hiring deadline
 
-> Forela 公司招聘开发人员的截止日期是什么时候？
+> [ZH] "Forela 公司招聘开发人员的截止日期是什么时候？"
+> **ES:** ¿Cuál es la fecha límite para contratar devs en Forela?
+> **EN:** What is Forela's developer hiring deadline?
 
-在 ftp 传输的文件中，发现有一个 `Done.docx` 文件，提取之后可以看到这个图表
+> **ES:** Extraer `Done.docx` del FTP y leer el gráfico. / **EN:** Carve `Done.docx` from FTP and read the chart.
 
 ![Done.docx 图表](img/image_20240132-153228.png)
 
@@ -294,11 +314,13 @@ UNLOCK TABLES;
 30/08/2023
 ```
 
-## Task 15
+## Task 15 — Llegada del CEO a Pakistán / CEO arrival in Pakistan
 
-> Forela 公司的 CEO 计划何时抵达巴基斯坦？
+> [ZH] "Forela 公司的 CEO 计划何时抵达巴基斯坦？"
+> **ES:** ¿Cuándo planea llegar el CEO de Forela a Pakistán?
+> **EN:** When does Forela's CEO plan to arrive in Pakistan?
 
-在 ftp 传输的文件中，发现有一个 `reminder.txt` 文件，提取之后可以得到
+> **ES:** Extraer `reminder.txt` del FTP. / **EN:** Carve `reminder.txt` from FTP.
 
 ```plaintext
 I am so stupid and dump, i keep forgetting about Forela CEO Happy grunwald visiting Pakistan to start the buisness operations
@@ -315,11 +337,13 @@ i am finally so happy that we are getting a physical office opening here.
 08/03/2023
 ```
 
-## Task 16
+## Task 16 — Cuenta con /bin/bash / Account with /bin/bash
 
-> 攻击者能够执行目录遍历并逃离 chroot 监狱。这导致攻击者可以像普通用户一样在文件系统中漫游。除了 root 之外，具有 `/bin/bash` 作为默认 Shell 的帐户的用户名是什么？
+> [ZH] "攻击者能够执行目录遍历并逃离 chroot 监狱。这导致攻击者可以像普通用户一样在文件系统中漫游。除了 root 之外，具有 `/bin/bash` 作为默认 Shell 的帐户的用户名是什么？"
+> **ES:** Con directory traversal escapó del chroot y navega como usuario normal: además de root, ¿qué cuenta usa `/bin/bash` por defecto?
+> **EN:** Via directory traversal he escaped chroot and roams as a normal user: besides root, which account defaults to `/bin/bash`?
 
-根据尝试，要获得以上信息，需要攻击者去访问 `/etc/passwd` 文件，在 ftp 的流量中进行检索
+> **ES:** Buscar `/etc/passwd` en el tráfico FTP. / **EN:** Hunt for `/etc/passwd` in FTP traffic.
 
 ```plaintext
 root:x:0:0:root:/root:/bin/bash
@@ -371,11 +395,13 @@ cyberjunkie:x:1003:1003:,,,:/home/cyberjunkie:/bin/bash
 cyberjunkie
 ```
 
-## Task 17
+## Task 17 — Ruta del fichero SSH / SSH file path
 
-> 导致攻击者获得对服务器的 ssh 访问权限的文件的完整路径是什么？
+> [ZH] "导致攻击者获得对服务器的 ssh 访问权限的文件的完整路径是什么？"
+> **ES:** ¿Qué ruta completa dio al atacante el acceso SSH?
+> **EN:** Which full path gave the attacker SSH access?
 
-对攻击者与 ftp 进行交互的操作指令进行追踪整理，可以发现攻击者执行了以下指令
+> **ES:** Trazar los comandos FTP del atacante. / **EN:** Trace the attacker's FTP commands.
 
 ```plaintext
 CWD ../
@@ -406,25 +432,31 @@ MDTM .reminder
 /opt/reminders/.reminder
 ```
 
-## Task 18
+## Task 18 — Password SSH total / Full SSH password
 
-> 攻击者用于访问服务器并获取完全访问权限的 SSH 密码是什么？
+> [ZH] "攻击者用于访问服务器并获取完全访问权限的 SSH 密码是什么？"
+> **ES:** ¿Qué password SSH dio acceso total al servidor?
+> **EN:** Which SSH password gave full server access?
 
-查看 ftp 流量中 `reminder` 文件中的说明信息
+> **ES:** Leer el `reminder`/`.reminder` del FTP. / **EN:** Read the FTP `reminder`/`.reminder`.
 
 ```plaintext
 A reminder to clean up the github repo. Some sensitive data could have been leaked from there
 ```
 
-使用以下关键词，在 Google 进行搜索
+> **ES:** Buscar en Google con: / **EN:** Google with:
 
 ```plaintext
 site:github.com ​​forela
 ```
 
-找到这个 Github repo：[forela-finance / forela-dev](https://github.com/forela-finance/forela-dev/)
+> **ES:** Repo hallado: / **EN:** Repo found:
 
-在储存库的历史提交中，找到 [commit 182da42](https://github.com/forela-finance/forela-dev/commit/182da42155d49211abc628c01afe8bda5ab8fcae) 中包含以下敏感信息
+[forela-finance / forela-dev](https://github.com/forela-finance/forela-dev/)
+
+> **ES:** En el historial, el commit filtra el secreto: / **EN:** In history, the commit leaks the secret:
+
+[commit 182da42](https://github.com/forela-finance/forela-dev/commit/182da42155d49211abc628c01afe8bda5ab8fcae)
 
 ```xml
 tasks:
@@ -441,17 +473,19 @@ tasks:
 YHUIhnollouhdnoamjndlyvbl398782bapd
 ```
 
-## Task 19
+## Task 19 — URL del ransomware / Ransomware URL
 
-> 攻击者下载勒索软件的完整 URL 是什么？
+> [ZH] "攻击者下载勒索软件的完整 URL 是什么？"
+> **ES:** ¿Cuál es la URL completa del ransomware descargado?
+> **EN:** What is the full URL the ransomware was downloaded from?
 
-回到原始的流量包文件中，使用以下筛选器导出特定分组，将受害主机的流量提取出来，保存为 `3.pcap`
+> **ES:** Volver al PCAP original y aislar la víctima como `3.pcap`. / **EN:** Go back to the original PCAP and isolate the victim as `3.pcap`.
 
 ```plaintext
 ip.addr == 172.31.39.46
 ```
 
-可以猜测，攻击者用来投放勒索软件的方式，是通过 http 协议进行投放，于是可以使用 tshark 直接进行提取
+> **ES:** Hipótesis: entrega por HTTP; listar URIs con tshark. / **EN:** Hypothesis: HTTP delivery; list URIs with tshark.
 
 ```bash
 $tshark -r Capture.pcap -T fields -Y "ip.addr == 172.31.39.46 && http" -e http.request.full_uri | sed '/^\s*$/d' | sort | uniq
@@ -476,23 +510,25 @@ http://security.ubuntu.com/ubuntu/dists/jammy-security/main/cnf/by-hash/SHA256/4
 http://security.ubuntu.com/ubuntu/dists/jammy-security/main/i18n/by-hash/SHA256/84b120f9c8d1c1e9223cfc65ceddd5d19568c6bd8aa0d637375af27004fb896f,http://security.ubuntu.com/ubuntu/dists/jammy-security/universe/binary-amd64/by-hash/SHA256/6bdf67e1c6b56dc78ff85924da2ece8e8b2d764dae10351fedd36ae60137e587,http://security.ubuntu.com/ubuntu/dists/jammy-security/universe/i18n/by-hash/SHA256/8482930a283e7c0ecaf92fea95a917a62528ff8177a3ae35d71df0c3d486cf9d,http://security.ubuntu.com/ubuntu/dists/jammy-security/universe/cnf/by-hash/SHA256/2edba9e0d56d87e074af1b0b769b8d7ecf905ecfa9435d1e1da5c18be38da66b
 ```
 
-在其中就可以看到一个可疑的压缩包文件
+> **ES:** Ahí aparece un zip sospechoso. / **EN:** A suspicious zip shows up there.
 
 ```plaintext title="Answer"
 http://13.233.179.35/PKCampaign/Targets/Forela/Ransomware2_server.zip
 ```
 
-## Task 20
+## Task 20 — Downloader + versión / Downloader tool + version
 
-> 攻击者用于下载勒索软件的工具 / 实用程序名称和版本是什么？
+> [ZH] "攻击者用于下载勒索软件的工具 / 实用程序名称和版本是什么？"
+> **ES:** ¿Qué herramienta/versión descargó el ransomware?
+> **EN:** Which tool/version downloaded the ransomware?
 
-使用以下筛选器进行查询
+> **ES:** Consultar con este filtro. / **EN:** Query with this filter.
 
 ```plaintext
 ip.addr == 172.31.39.46 && http && ip.addr==13.233.179.35
 ```
 
-查看 http 请求头的 `user-agent` 参数即可
+> **ES:** Mirar el `user-agent` del request HTTP. / **EN:** Check the HTTP request `user-agent`.
 
 ```plaintext
 GET /PKCampaign/Targets/Forela/Ransomware2_server.zip HTTP/1.1
@@ -507,11 +543,13 @@ Connection: Keep-Alive
 Wget/1.21.2
 ```
 
-## Task 21
+## Task 21 — Nombre del ransomware / Ransomware name
 
-> 勒索软件的名称是什么？
+> [ZH] "勒索软件的名称是什么？"
+> **ES:** ¿Cómo se llama el ransomware?
+> **EN:** What is the ransomware called?
 
-将传输的压缩包数据提取出来，使用 `binwalk` 进行分析，发现 `README.md` 文件
+> **ES:** Extraer el zip y analizar con `binwalk` hasta `README.md`. / **EN:** Extract the zip and analyze with `binwalk` down to `README.md`.
 
 ```plaintext title="Answer"
 GonnaCry

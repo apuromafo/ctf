@@ -14,24 +14,32 @@
 
 Simon, a developer working at Forela, notified the CERT team about a note that appeared on his desktop. The note claimed that his system had been compromised and that sensitive data from Simon's workstation had been collected. The perpetrators performed data extortion on his workstation and are now threatening to release the data on the dark web unless their demands are met. Simon's workstation contained multiple sensitive files, including planned software projects, internal development plans, and application codebases. The threat intelligence team believes that the threat actor made some mistakes, but they have not found any way to contact the threat actors. The company's stakeholders are insisting that this incident be resolved and all sensitive data be recovered. They demand that under no circumstances should the data be leaked. As our junior security analyst, you have been assigned a specific type of DFIR (Digital Forensics and Incident Response) investigation in this case. The CERT lead, after triaging the workstation, has provided you with only the Notepad++ artifacts, suspecting that the attacker created the extortion note and conducted other activities with hands-on keyboard access. Your duty is to determine how the attack occurred and find a way to contact the threat actors, as they accidentally locked out their own contact information. Warning : This sherlock requires an element of OSINT and players will need to interact with 3rd party services on internet.
 
-西蒙，Forela 的一名开发人员，向 CERT 团队报告了他的桌面上出现的一条笔记。该笔记声称他的系统已被入侵，并且西蒙工作站中的敏感数据已被收集。犯罪分子在他的工作站上实施了数据勒索，现在威胁要将数据发布在暗网上，除非他们的要求得到满足。西蒙的工作站包含多个敏感文件，包括计划中的软件项目、内部开发计划和应用程序代码库。威胁情报团队认为威胁参与者犯了一些错误，但他们没有找到任何联系威胁参与者的方法。该公司的利益相关者坚持要求解决此事件并恢复所有敏感数据。他们要求在任何情况下都不应泄露数据。作为我们的初级安全分析师，您已在此案例中被分配了一项特定类型的 DFIR（数字取证和事件响应）调查。CERT 负责人对工作站进行分类后，仅向您提供了 Notepad++ 工件，怀疑攻击者创建了勒索信并通过键盘访问进行了其他活动。您的职责是确定攻击是如何发生的，并找到联系威胁参与者的方法，因为他们意外地锁定了自己的联系信息。警告：此 sherlock 需要 OSINT 的元素，玩家需要与互联网上的第三方服务进行交互。
+> [ZH] "西蒙，Forela 的一名开发人员，向 CERT 团队报告了他的桌面上出现的一条笔记。……怀疑攻击者创建了勒索信并通过键盘访问进行了其他活动。……此 sherlock 需要 OSINT 的元素……"
+> **ES:** Simon (dev de Forela) reporta nota de extorsión en el escritorio: robo de datos sensibles y amenaza de filtración en la dark web; solo se entregan artefactos Notepad++ (nota creada con acceso hands-on-keyboard); hay que reconstruir el ataque y recuperar el contacto bloqueado. Requiere OSINT.
+> **EN:** Simon (Forela dev) reports an extortion note on his desktop: sensitive-data theft plus dark-web leak threat; only Notepad++ artifacts provided (note created via hands-on-keyboard); reconstruct the attack and recover the locked contact. OSINT required.
+
 :::
 
-## 题目数据
+## 题目数据 / Datos / Data
 
 [Noted.zip](./Noted.zip)
 
-## Task 1
+## Task 1 — Script AWS de Simon / Simon's AWS script
 
-> 西蒙用于 AWS 操作的脚本的完整路径是什么？
+> [ZH] "西蒙用于 AWS 操作的脚本的完整路径是什么？"
+> **ES:** ¿Cuál es la ruta completa del script que Simon usaba para operaciones AWS?
+> **EN:** What is the full path of the script Simon used for AWS operations?
 
-首先先将样本进行解压，压缩包内的目录为
+> **ES:** Descomprimir la muestra (`\Noted\C\Users\Simon.stark\AppData\Roaming\Notepad++`) y revisar `config.xml` → historial de archivos recientes.
+> **EN:** Extract the sample (`\Noted\C\Users\Simon.stark\AppData\Roaming\Notepad++`) and check `config.xml` → recent file history.
+
+> **ES:** Estructura del zip: / **EN:** Zip layout:
 
 ```plaintext
 \Noted\C\Users\Simon.stark\AppData\Roaming\Notepad++
 ```
 
-得到以下文件
+> **ES:** Archivos obtenidos: / **EN:** Files obtained:
 
 ```plaintext
 D:.
@@ -43,7 +51,7 @@ D:.
         YOU HAVE BEEN HACKED.txt@2023-07-24_150548
 ```
 
-在 `config.xml` 中得到以下记录
+> **ES:** Registro en `config.xml`: / **EN:** Record in `config.xml`:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -61,11 +69,16 @@ D:.
 C:\Users\Simon.stark\Documents\Dev_Ops\AWS_objects migration.pl
 ```
 
-## Task 2
+## Task 2 — Fuente del recolector Java / Java collector source
 
-> 攻击者复制了一些程序代码并在系统上对其进行了编译，因为他们知道受害者是一名软件工程师，并且拥有所有必需的实用程序。他们这样做是为了融入环境，并且没有携带任何工具。该代码收集了敏感数据并为其外泄做好了准备。该程序源文件的完整路径是什么？
+> [ZH] "攻击者复制了一些程序代码并在系统上对其进行了编译……该代码收集了敏感数据并为其外泄做好了准备。该程序源文件的完整路径是什么？"
+> **ES:** El atacante compiló código en el sistema (living-off-the-land, víctima ingeniera) para recolectar y preparar datos: ¿ruta completa del fuente?
+> **EN:** The attacker compiled code on-box (living-off-the-land, victim is an engineer) to collect and stage data: what is the full source path?
 
-在 `session.xml` 中得到
+> **ES:** Revisar `session.xml` → pestañas abiertas y sus `backupFilePath`.
+> **EN:** Check `session.xml` → open tabs and their `backupFilePath`.
+
+> **ES:** Contenido de `session.xml`: / **EN:** `session.xml` contents:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -84,11 +97,16 @@ C:\Users\Simon.stark\Documents\Dev_Ops\AWS_objects migration.pl
 C:\Users\Simon.stark\Desktop\LootAndPurge.java
 ```
 
-## Task 3
+## Task 3 — Archivo final a exfiltrar / Final staged archive
 
-> 包含所有要外泄的数据的最终存档文件的文件名是什么？
+> [ZH] "包含所有要外泄的数据的最终存档文件的文件名是什么？"
+> **ES:** ¿Cómo se llama el archivo final con todos los datos a exfiltrar?
+> **EN:** What is the filename of the final archive holding all data to exfiltrate?
 
-在 `backup\LootAndPurge.java@2023-07-24_145332` 中得到源码数据
+> **ES:** Leer el backup `LootAndPurge.java@2023-07-24_145332` → variables `zipFilePath` y `password`.
+> **EN:** Read the backup `LootAndPurge.java@2023-07-24_145332` → `zipFilePath` and `password` variables.
+
+> **ES:** Código fuente en el backup: / **EN:** Source code in the backup:
 
 ```java
 import java.io.File;
@@ -174,11 +192,16 @@ public class Sensitive_data_extort {
 Forela-Dev-Data.zip
 ```
 
-## Task 4
+## Task 4 — Última modificación UTC / Last modification UTC
 
-> 攻击者最后修改程序源文件时的 UTC 时间戳是什么？
+> [ZH] "攻击者最后修改程序源文件时的 UTC 时间戳是什么？"
+> **ES:** ¿Cuál es el timestamp UTC de la última modificación del fuente?
+> **EN:** What is the UTC timestamp of the last modification to the source file?
 
-在 `Task 2` 中得到以下信息
+> **ES:** Tomar `originalFileLastModifTimestamp` + `...High` de `session.xml` (FILETIME) y convertir desde 1601-01-01 (ver enlace comunidad Notepad++).
+> **EN:** Take `originalFileLastModifTimestamp` + `...High` from `session.xml` (FILETIME) and convert from 1601-01-01 (see Notepad++ community link).
+
+> **ES:** Datos de la Task 2: / **EN:** Data from Task 2:
 
 ```plaintext
 backupFilePath="C:\Users\Simon.stark\AppData\Roaming\Notepad++\backup\LootAndPurge.java@2023-07-24_145332"
@@ -186,9 +209,11 @@ originalFileLastModifTimestamp="-1354503710"
 originalFileLastModifTimestampHigh="31047188"
 ```
 
-根据 `Notepad++` 社区提供给的信息 [Need Explanation of a few Session.xml Parameters & Values | Notepad++ Community](https://community.notepad-plus-plus.org/topic/22662/need-explanation-of-a-few-session-xml-parameters-values)
+> **ES:** Según la comunidad Notepad++: / **EN:** Per the Notepad++ community:
 
-使用脚本进行计算
+[Need Explanation of a few Session.xml Parameters & Values | Notepad++ Community](https://community.notepad-plus-plus.org/topic/22662/need-explanation-of-a-few-session-xml-parameters-values)
+
+> **ES:** Cálculo con script: / **EN:** Compute with script:
 
 ```python
 import datetime
@@ -209,11 +234,16 @@ print(timestamp)
 2023-07-24 09:53:23
 ```
 
-## Task 5
+## Task 5 — Wallet del rescate / Ransom wallet
 
-> 攻击者在窃取数据后写了一份数据勒索信。攻击者要求付款的加密钱包地址是什么？
+> [ZH] "攻击者在窃取数据后写了一份数据勒索信。攻击者要求付款的加密钱包地址是什么？"
+> **ES:** Tras robar datos dejó nota de extorsión: ¿qué wallet exige para el pago?
+> **EN:** After stealing data he left an extortion note: which wallet does he demand payment to?
 
-在 `backup\YOU HAVE BEEN HACKED.txt@2023-07-24_150548` 中，得到
+> **ES:** Leer el backup `YOU HAVE BEEN HACKED.txt@2023-07-24_150548` → enlaces paste protegidos; reutilizar el `password` del fuente como clave.
+> **EN:** Read the backup `YOU HAVE BEEN HACKED.txt@2023-07-24_150548` → password-gated paste links; reuse the source `password` as the key.
+
+> **ES:** Contenido del backup de la nota: / **EN:** Note backup contents:
 
 ```plaintext
 HEllo
@@ -237,13 +267,13 @@ OR
 https://pastes.io/mvc6sue6cf
 ```
 
-在上面的链接中，查看具体的信息都需要密码，然后在源码中注意到
+> **ES:** Los enlaces exigen contraseña; el fuente trae una (`password`): / **EN:** The links require a password; the source carries one (`password`):
 
 ```java
 String password = "sdklY57BLghvyh5FJ#fion_7";
 ```
 
-使用 `sdklY57BLghvyh5FJ#fion_7` 作为密码成功得到进一步的付款信息
+> **ES:** Esa clave desbloquea el pago: / **EN:** That key unlocks the payment details:
 
 ```plaintext
 If you are here then you know that you have no other choice than to pay us.Your Sensitive DATA is in our hands and we WILL release it to PUBLIC By midnight if you don't pay us a ransom.
@@ -259,11 +289,16 @@ Person of contact : CyberJunkie@mail2torjgmxgexntbrmhvgluavhj7ouul5yar6ylbvjkxwq
 0xca8fa8f0b631ecdb18cda619c4fc9d197c8affca
 ```
 
-## Task 6
+## Task 6 — Email de contacto / Contact email
 
-> 联系支持人员的电子邮件地址是什么？
+> [ZH] "联系支持人员的电子邮件地址是什么？"
+> **ES:** ¿Cuál es la dirección de contacto/soporte?
+> **EN:** What is the contact/support email address?
 
-上一题中就有
+> **ES:** Mismo contenido desbloqueado de la Task 5 (persona de contacto).
+> **EN:** Same unlocked content as Task 5 (person of contact).
+
+> **ES:** Ya aparece en la Task anterior. / **EN:** Already shown in the previous task.
 
 ```plaintext title="Answer"
 CyberJunkie@mail2torjgmxgexntbrmhvgluavhj7ouul5yar6ylbvjkxwqf6ixkwyd.onion

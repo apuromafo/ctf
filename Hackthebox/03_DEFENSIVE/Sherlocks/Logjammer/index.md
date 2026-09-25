@@ -14,19 +14,24 @@
 
 You have been presented the opportunity to work as a junior DFIR consultant for a big consultancy, however they have provided a technical assessment for you to complete. The consultancy Forela-Security would like to gauge your knowledge on Windows Event Log Analysis. Please analyse and report back on the questions they have asked.
 
-你被提供了一份技术评估，这是为了成为一家大型咨询公司的初级数字取证和应急响应（DFIR）顾问。咨询公司 Forela-Security 希望评估你在 Windows 事件日志分析方面的知识。请分析并报告他们提出的问题。
+> [ZH] "你被提供了一份技术评估，这是为了成为一家大型咨询公司的初级数字取证和应急响应（DFIR）顾问。咨询公司 Forela-Security 希望评估你在 Windows 事件日志分析方面的知识。请分析并报告他们提出的问题。"
+> **ES:** Evaluación técnica para junior DFIR en Forela-Security: analizar Windows Event Logs y responder las preguntas.
+> **EN:** Technical assessment for a junior DFIR role at Forela-Security: analyse Windows Event Logs and answer the questions.
 
 :::
 
-## 题目数据
+## 题目数据 / Datos / Data
 
 [logjammer.zip](./logjammer.zip)
 
-## Task 1
+## Task 1 — Logon de cyberjunkie (UTC) / cyberjunkie logon time (UTC)
 
-> 用户 cyberjunkie 何时成功登录了他的计算机？（UTC 时间）
+> [ZH] "用户 cyberjunkie 何时成功登录了他的计算机？（UTC 时间）"
+> **ES:** ¿Cuándo logró cyberjunkie iniciar sesión en su equipo? (hora UTC)
+> **EN:** When did user cyberjunkie successfully log on to his computer? (UTC)
 
-登录的事件 ID 为 `4648`，借此可以定位到以下记录
+> **ES:** El logon usa el Event ID `4648`.
+> **EN:** Logons use Event ID `4648`.
 
 ```xml
 <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
@@ -65,21 +70,21 @@ You have been presented the opportunity to work as a junior DFIR consultant for 
 </Event>
 ```
 
-记得转换为 UTC 标准时间
+> **ES:** Recordar convertir a hora UTC estándar.
+> **EN:** Remember to convert to standard UTC.
 
 ```plaintext title="Answer"
 27/03/2023 14:37:09
 ```
 
-## Task 2
+## Task 2 — Nombre de la regla de firewall / Firewall rule name
 
-> 用户篡改了系统的防火墙设置。分析防火墙事件日志以找出添加的防火墙规则的名称是什么？
+> [ZH] "用户篡改了系统的防火墙设置。分析防火墙事件日志以找出添加的防火墙规则的名称是什么？"
+> **ES:** El usuario manipuló el firewall: ¿qué nombre tiene la regla añadida?
+> **EN:** The user tampered with firewall settings: what is the added rule name?
 
-添加防火墙规则的事件 ID 为 `2004`
-
-通过对日志文件的筛查，可以得到用户的用户 ID 为 `S-1-5-21-3393683511-3463148672-371912004-1001`
-
-借此得到了以下记录
+> **ES:** Añadir regla = Event ID `2004`. El SID del usuario filtrado es `S-1-5-21-3393683511-3463148672-371912004-1001`.
+> **EN:** Rule addition = Event ID `2004`. The filtered user SID is `S-1-5-21-3393683511-3463148672-371912004-1001`.
 
 ```xml
 <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
@@ -139,21 +144,27 @@ You have been presented the opportunity to work as a junior DFIR consultant for 
 Metasploit C2 Bypass
 ```
 
-## Task 3
+## Task 3 — Dirección de la regla / Rule direction
 
-> 防火墙规则的方向是什么？
+> [ZH] "防火墙规则的方向是什么？"
+> **ES:** ¿Cuál es la dirección de la regla de firewall?
+> **EN:** What is the firewall rule direction?
 
-上一题的日志数据中就有
+> **ES:** Dato en el log de la tarea anterior.
+> **EN:** Present in the previous task log.
 
 ```plaintext title="Answer"
 Outbound
 ```
 
-## Task 4
+## Task 4 — Subcategoría de auditoría / Audit subcategory
 
-> 用户更改了计算机的审计策略。这个更改策略的子类是什么？
+> [ZH] "用户更改了计算机的审计策略。这个更改策略的子类是什么？"
+> **ES:** El usuario cambió la audit policy: ¿cuál es la subcategoría modificada?
+> **EN:** The user changed the audit policy: what is the changed subcategory?
 
-审计策略更改的日志 ID 为 `4719` 借此定位到以下记录
+> **ES:** Cambio de audit policy = Event ID `4719`.
+> **EN:** Audit-policy change = Event ID `4719`.
 
 ```xml
 <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
@@ -192,11 +203,17 @@ Other Object Access Events
 
 ```
 
-## Task 5
+> **ES:** Respuesta vacía en la nota original (pendiente de documentar).
+> **EN:** Empty answer in the original note (pending documentation).
 
-> 用户 "cyberjunkie" 创建了一个计划任务。这个任务的名称是什么？
+## Task 5 — Nombre de la tarea programada / Scheduled task name
 
-创建计划任务的事件 ID 为 `4698`，借此定位到以下记录
+> [ZH] "用户 "cyberjunkie" 创建了一个计划任务。这个任务的名称是什么？"
+> **ES:** cyberjunkie creó una scheduled task: ¿cómo se llama?
+> **EN:** cyberjunkie created a scheduled task: what is its name?
+
+> **ES:** Crear tarea = Event ID `4698`.
+> **EN:** Task creation = Event ID `4698`.
 
 ```xml
 <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
@@ -236,11 +253,14 @@ Other Object Access Events
 HTB-AUTOMATION
 ```
 
-## Task 6
+## Task 6 — Ruta del fichero programado / Scheduled file full path
 
-> 被安排执行任务的文件的完整路径是什么？
+> [ZH] "被安排执行任务的文件的完整路径是什么？"
+> **ES:** ¿Cuál es la ruta completa del fichero que ejecuta la tarea?
+> **EN:** What is the full path of the file the task executes?
 
-在上文记录的 `TaskContent` 条目中就有
+> **ES:** Dato en la entrada `TaskContent` del registro anterior.
+> **EN:** Present in the `TaskContent` field of the previous record.
 
 ```xml
 <?xml version="1.0" encoding="UTF-16"?>
@@ -302,21 +322,27 @@ HTB-AUTOMATION
 C:\Users\CyberJunkie\Desktop\Automation-HTB.ps1
 ```
 
-## Task 7
+## Task 7 — Argumentos del comando / Command arguments
 
-> 该命令的参数是什么？
+> [ZH] "该命令的参数是什么？"
+> **ES:** ¿Cuáles son los argumentos de ese comando?
+> **EN:** What are that command's arguments?
 
-上一题中就有
+> **ES:** Dato en la tarea anterior.
+> **EN:** Present in the previous task.
 
 ```plaintext title="Answer"
 -A cyberjunkie@hackthebox.eu
 ```
 
-## Task 8
+## Task 8 — Herramienta detectada por el AV / AV-detected tool
 
-> 系统上运行的防病毒软件识别出一个威胁并对其执行了操作。防病毒软件识别出的恶意软件是哪个工具？
+> [ZH] "系统上运行的防病毒软件识别出一个威胁并对其执行了操作。防病毒软件识别出的恶意软件是哪个工具？"
+> **ES:** El antivirus detectó una amenaza y actuó: ¿qué herramienta identificó?
+> **EN:** The AV flagged a threat and acted: which tool did it identify?
 
-`Microsoft Defender` 检测到恶意软件的事件 ID 为 `1117`，借此定位到以下记录
+> **ES:** Detección de `Microsoft Defender` = Event ID `1117`.
+> **EN:** `Microsoft Defender` detection = Event ID `1117`.
 
 ```xml
 <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
@@ -394,31 +420,40 @@ C:\Users\CyberJunkie\Desktop\Automation-HTB.ps1
 SharpHound
 ```
 
-## Task 9
+## Task 9 — Ruta completa del malware / Full malware path
 
-> 引发警报的恶意软件的完整路径是什么？
+> [ZH] "引发警报的恶意软件的完整路径是什么？"
+> **ES:** ¿Cuál es la ruta completa del malware que disparó la alerta?
+> **EN:** What is the full path of the alerting malware?
 
-上文就有
+> **ES:** Dato en el registro anterior.
+> **EN:** Present in the previous record.
 
 ```plaintext title="Answer"
 C:\Users\CyberJunkie\Downloads\SharpHound-v1.1.0.zip
 ```
 
-## Task 10
+## Task 10 — Acción del antivirus / AV action
 
-> 防病毒软件采取了什么行动？
+> [ZH] "防病毒软件采取了什么行动？"
+> **ES:** ¿Qué acción tomó el antivirus?
+> **EN:** What action did the AV take?
 
-上文就有
+> **ES:** Dato en el registro anterior.
+> **EN:** Present in the previous record.
 
 ```plaintext title="Answer"
 Quarantine
 ```
 
-## Task 11
+## Task 11 — Comando PowerShell / PowerShell command
 
-> 用户使用 PowerShell 执行了哪个命令？
+> [ZH] "用户使用 PowerShell 执行了哪个命令？"
+> **ES:** ¿Qué comando ejecutó el usuario con PowerShell?
+> **EN:** Which command did the user run via PowerShell?
 
-执行命令的事件ID为`4104`，定位到以下记录
+> **ES:** Ejecución de comando = Event ID `4104`.
+> **EN:** Command execution = Event ID `4104`.
 
 ```xml
 <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
@@ -453,11 +488,14 @@ Quarantine
 Get-FileHash -Algorithm md5 .\Desktop\Automation-HTB.ps1
 ```
 
-## Task 12
+## Task 12 — Log borrado / Cleared log
 
-> 我们怀疑用户删除了一些事件日志。被清除的事件日志文件是哪个？
+> [ZH] "我们怀疑用户删除了一些事件日志。被清除的事件日志文件是哪个？"
+> **ES:** Se sospecha borrado de event logs: ¿qué log fue vaciado?
+> **EN:** Log clearing suspected: which event log was cleared?
 
-日志清空的事件 ID 为 `104`，就可以定位到以下日志记录
+> **ES:** Vaciar log = Event ID `104`.
+> **EN:** Log clear = Event ID `104`.
 
 ```xml
 <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">

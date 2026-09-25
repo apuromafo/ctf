@@ -1,11 +1,11 @@
-# Brutus [verificar]
+# Brutus [Easy]
 
 > **ES:** Sherlock de HackTheBox. La solución vive en esta misma carpeta en varias opciones (ver abajo).
 > **EN:** HackTheBox Sherlock. The solution lives in this same folder in several options (see below).
 
 | Campo | Valor |
 |-------|-------|
-| **Tipo / Type** | DFIR (verificar en `app.hackthebox.com/sherlocks/brutus`) |
+| **Tipo / Type** | DFIR |
 | **URL** | https://app.hackthebox.com/sherlocks/brutus |
 | **Evidencia / Evidence** | Ver `.zip` oficial de HTB |
 
@@ -26,6 +26,11 @@
 - Write-up local: `Brutus_.pdf` — esta carpeta
 - HTB oficial: https://app.hackthebox.com/sherlocks/brutus — fecha de acceso: 2026-09-24
 - Autor notas: Apuromafo
+
+## Fuentes / Sources
+
+- Dificultad y categoria: [momenbasel/htb-writeups - Sherlocks index](https://github.com/momenbasel/htb-writeups/blob/main/sherlocks/README.md) - fecha de acceso: 2026-09-24.
+- Autor notas: Apuromafo.
 
 ---
 

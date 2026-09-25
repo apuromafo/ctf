@@ -1,4 +1,4 @@
-# Lockpick [verificar]
+# Lockpick [Easy]
 
 > **ES:** Ficha mínima — ver plantilla completa en `../../_PLANIFICACION/PLANTILLA_SHERLOCK.md`.
 > **EN:** Minimal header — see full template at `../../_PLANIFICACION/PLANTILLA_SHERLOCK.md`.
@@ -284,6 +284,11 @@ f3894af4f1ffa42b3a379dddba384405
 ```plaintext
 c3f05980d9bd945446f8a21bafdbf4e7
 ```
+
+## Fuentes / Sources
+
+- Dificultad y categoria: [momenbasel/htb-writeups - Sherlocks index](https://github.com/momenbasel/htb-writeups/blob/main/sherlocks/README.md) - fecha de acceso: 2026-09-24.
+- Autor notas: Apuromafo.
 
 ---
 

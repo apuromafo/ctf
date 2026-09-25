@@ -1,4 +1,4 @@
-# Bumblebee [verificar]
+# Bumblebee [Easy]
 
 > **ES:** Sherlock DFIR: contratista externo roba credenciales de admin del foro Forela (phpBB) vía WiFi de invitados — logs + dump sqlite3.
 > **EN:** DFIR sherlock: external contractor steals Forela forum (phpBB) admin credentials over Guest WiFi — logs + sqlite3 dump.
@@ -204,6 +204,11 @@ Del registro anterior:
 ```plaintext title="Answer"
 34707
 ```
+
+## Fuentes / Sources
+
+- Dificultad y categoria: [momenbasel/htb-writeups - Sherlocks index](https://github.com/momenbasel/htb-writeups/blob/main/sherlocks/README.md) - fecha de acceso: 2026-09-24.
+- Autor notas: Apuromafo.
 
 ---
 

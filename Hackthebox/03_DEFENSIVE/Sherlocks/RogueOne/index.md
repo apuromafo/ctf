@@ -1,11 +1,11 @@
-# RogueOne [verificar]
+# RogueOne [Medium]
 
 > **ES:** Ficha mínima — ver plantilla completa en `../../_PLANIFICACION/PLANTILLA_SHERLOCK.md`.
 > **EN:** Minimal header — see full template at `../../_PLANIFICACION/PLANTILLA_SHERLOCK.md`.
 
 | Campo | Valor |
 |-------|-------|
-| **Tipo** | DFIR |
+| **Tipo** | Network Forensics |
 | **URL** | https://app.hackthebox.com/sherlocks/rogueone |
 | **Evidencia** | Por verificar / To verify |
 
@@ -431,6 +431,11 @@ Offset  Proto   LocalAddr       LocalPort       ForeignAddr     ForeignPort     
 ```plaintext title="Answer"
 10/08/2023 11:58:10
 ```
+
+## Fuentes / Sources
+
+- Dificultad y categoria: [momenbasel/htb-writeups - Sherlocks index](https://github.com/momenbasel/htb-writeups/blob/main/sherlocks/README.md) - fecha de acceso: 2026-09-24.
+- Autor notas: Apuromafo.
 
 ---
 

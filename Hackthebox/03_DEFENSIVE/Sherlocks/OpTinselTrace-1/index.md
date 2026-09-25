@@ -1,11 +1,11 @@
-# OpTinselTrace-1 [verificar]
+# OpTinselTrace-1 [Hard]
 
 > **ES:** Ficha mínima — ver plantilla completa en `../../_PLANIFICACION/PLANTILLA_SHERLOCK.md`.
 > **EN:** Minimal header — see full template at `../../_PLANIFICACION/PLANTILLA_SHERLOCK.md`.
 
 | Campo | Valor |
 |-------|-------|
-| **Tipo** | Por verificar / To verify |
+| **Tipo** | APT Investigation |
 | **URL** | https://app.hackthebox.com/sherlocks/optinseltrace-1 |
 | **Evidencia** | Por verificar / To verify |
 
@@ -210,6 +210,11 @@ Santaknowskungfu
 
 - [Hack The Box Sherlocks - OpTinselTrace-1 Writeup - はまやんはまやんはまやん](https://blog.hamayanhamayan.com/entry/2023/12/27/201532)
 - [DFIR/WalkThroughs/OpTinselTrace-1-5.md at main · dbissell6/DFIR](https://github.com/dbissell6/DFIR/blob/main/WalkThroughs/OpTinselTrace-1-5.md)
+
+## Fuentes / Sources
+
+- Dificultad y categoria: [momenbasel/htb-writeups - Sherlocks index](https://github.com/momenbasel/htb-writeups/blob/main/sherlocks/README.md) - fecha de acceso: 2026-09-24.
+- Autor notas: Apuromafo.
 
 ---
 

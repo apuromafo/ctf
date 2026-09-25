@@ -1,11 +1,11 @@
-# Meerkat [verificar]
+# Meerkat [Easy]
 
 > **ES:** Sherlock DFIR: PCAP + logs de la plataforma de gestión de Forela para confirmar si hubo intrusión (BonitaSoft, credential stuffing, CVE-2022-25237, persistencia SSH).
 > **EN:** DFIR sherlock: PCAP + logs from Forela's management platform to confirm intrusion (BonitaSoft, credential stuffing, CVE-2022-25237, SSH persistence).
 
 | Campo | Valor |
 |-------|-------|
-| **Tipo** | DFIR |
+| **Tipo** | SOC |
 | **URL** | https://app.hackthebox.com/sherlocks/meerkat |
 | **Evidencia** | meerkat.zip |
 
@@ -235,6 +235,11 @@ Búsqueda: `MITRE technique authorized_keys` → manipulación de cuentas vía c
 ```plaintext title="Answer"
 T1098.004
 ```
+
+## Fuentes / Sources
+
+- Dificultad y categoria: [momenbasel/htb-writeups - Sherlocks index](https://github.com/momenbasel/htb-writeups/blob/main/sherlocks/README.md) - fecha de acceso: 2026-09-24.
+- Autor notas: Apuromafo.
 
 ---
 

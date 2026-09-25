@@ -1,11 +1,11 @@
-# Tracer [verificar]
+# Tracer [Medium]
 
 > **ES:** Ficha mínima — ver plantilla completa en `../../_PLANIFICACION/PLANTILLA_SHERLOCK.md`.
 > **EN:** Minimal header — see full template at `../../_PLANIFICACION/PLANTILLA_SHERLOCK.md`.
 
 | Campo | Valor |
 |-------|-------|
-| **Tipo** | DFIR |
+| **Tipo** | Threat Hunting |
 | **URL** | https://app.hackthebox.com/sherlocks/tracer |
 | **Evidencia** | tracer.zip |
 
@@ -285,6 +285,11 @@ Usn entries found in D:\Downloads\tracer\Tracer\C\$Extend\$J: 145,944
 ```plaintext title="Answer"
 \PSEXESVC-FORELA-WKSTN001-3056-stderr
 ```
+
+## Fuentes / Sources
+
+- Dificultad y categoria: [momenbasel/htb-writeups - Sherlocks index](https://github.com/momenbasel/htb-writeups/blob/main/sherlocks/README.md) - fecha de acceso: 2026-09-24.
+- Autor notas: Apuromafo.
 
 ---
 

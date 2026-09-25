@@ -1,11 +1,11 @@
-# CrownJewel-1 [verificar]
+# CrownJewel-1 [Medium]
 
 > **ES:** Ficha mínima — ver plantilla completa en `../../_PLANIFICACION/PLANTILLA_SHERLOCK.md`.
 > **EN:** Minimal header — see full template at `../../_PLANIFICACION/PLANTILLA_SHERLOCK.md`.
 
 | Campo | Valor |
 |-------|-------|
-| **Tipo** | Por verificar / To verify |
+| **Tipo** | Active Directory |
 | **URL** | https://app.hackthebox.com/sherlocks/crownjewel-1 |
 | **Evidencia** | CrownJewel1.zip |
 
@@ -145,6 +145,11 @@ TODO 未完成 / pendiente / pending
 ```plaintext title="Answer"
 
 ```
+
+## Fuentes / Sources
+
+- Dificultad y categoria: [momenbasel/htb-writeups - Sherlocks index](https://github.com/momenbasel/htb-writeups/blob/main/sherlocks/README.md) - fecha de acceso: 2026-09-24.
+- Autor notas: Apuromafo.
 
 ---
 

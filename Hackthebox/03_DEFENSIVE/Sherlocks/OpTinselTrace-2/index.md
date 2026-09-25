@@ -1,11 +1,11 @@
-# OpTinselTrace-2 [verificar]
+# OpTinselTrace-2 [Hard]
 
 > **ES:** Ficha mínima — ver plantilla completa en `../../_PLANIFICACION/PLANTILLA_SHERLOCK.md`.
 > **EN:** Minimal header — see full template at `../../_PLANIFICACION/PLANTILLA_SHERLOCK.md`.
 
 | Campo | Valor |
 |-------|-------|
-| **Tipo** | Por verificar / To verify |
+| **Tipo** | APT Investigation |
 | **URL** | https://app.hackthebox.com/sherlocks/optinseltrace-2 |
 | **Evidencia** | Por verificar / To verify |
 
@@ -170,6 +170,11 @@ It seems our precious technology has been leaked to the threat actor. Our head E
 ```plaintext title="Answer"
 
 ```
+
+## Fuentes / Sources
+
+- Dificultad y categoria: [momenbasel/htb-writeups - Sherlocks index](https://github.com/momenbasel/htb-writeups/blob/main/sherlocks/README.md) - fecha de acceso: 2026-09-24.
+- Autor notas: Apuromafo.
 
 ---
 

@@ -1,4 +1,4 @@
-# Litter [verificar]
+# Litter [Easy]
 
 > **ES:** Sherlock SOC: host de pruebas comprometido con túnel DNS (dnscat2 v0.07) — robo de PII vía exfiltración DNS, 8 tasks.
 > **EN:** SOC sherlock: testing host compromised with DNS tunneling (dnscat2 v0.07) — PII theft via DNS exfiltration, 8 tasks.
@@ -249,6 +249,11 @@ Como cada fila lleva número de serie, se cuenta cuántas se filtraron:
 ```plaintext title="Answer"
 721
 ```
+
+## Fuentes / Sources
+
+- Dificultad y categoria: [momenbasel/htb-writeups - Sherlocks index](https://github.com/momenbasel/htb-writeups/blob/main/sherlocks/README.md) - fecha de acceso: 2026-09-24.
+- Autor notas: Apuromafo.
 
 ---
 

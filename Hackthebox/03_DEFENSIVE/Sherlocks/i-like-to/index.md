@@ -1,11 +1,11 @@
-# i-like-to [verificar]
+# i-like-to [Easy]
 
 > **ES:** Ficha mínima — ver plantilla completa en `../../_PLANIFICACION/PLANTILLA_SHERLOCK.md`.
 > **EN:** Minimal header — see full template at `../../_PLANIFICACION/PLANTILLA_SHERLOCK.md`.
 
 | Campo | Valor |
 |-------|-------|
-| **Tipo** | Por verificar / To verify |
+| **Tipo** | DFIR |
 | **URL** | https://app.hackthebox.com/sherlocks/i-like-to |
 | **Evidencia** | Triage.zip |
 
@@ -751,6 +751,11 @@ Task 7 中有
 ```plaintext title="Answer"
 5trongP4ssw0rd
 ```
+
+## Fuentes / Sources
+
+- Dificultad y categoria: [momenbasel/htb-writeups - Sherlocks index](https://github.com/momenbasel/htb-writeups/blob/main/sherlocks/README.md) - fecha de acceso: 2026-09-24.
+- Autor notas: Apuromafo.
 
 ---
 

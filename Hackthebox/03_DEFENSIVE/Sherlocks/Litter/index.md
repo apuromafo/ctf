@@ -1,7 +1,7 @@
 # Litter [verificar]
 
-> **ES:** Ficha mínima — ver plantilla completa en `../../_PLANIFICACION/PLANTILLA_SHERLOCK.md`.
-> **EN:** Minimal header — see full template at `../../_PLANIFICACION/PLANTILLA_SHERLOCK.md`.
+> **ES:** Sherlock SOC: host de pruebas comprometido con túnel DNS (dnscat2 v0.07) — robo de PII vía exfiltración DNS, 8 tasks.
+> **EN:** SOC sherlock: testing host compromised with DNS tunneling (dnscat2 v0.07) — PII theft via DNS exfiltration, 8 tasks.
 
 | Campo | Valor |
 |-------|-------|
@@ -9,24 +9,27 @@
 | **URL** | https://app.hackthebox.com/sherlocks/litter |
 | **Evidencia** | litter.zip |
 
-
 :::info Sherlock Scenario
 
 Khalid has just logged onto a host that he and his team use as a testing host for many different purposes, it’s off their corporate network but has access to lots of resources in network. The host is used as a dumping ground for a lot of people at the company but it’s very useful, so no one has raised any issues. Little does Khalid know; the machine has been compromised and company information that should not have been on there has now been stolen – it’s up to you to figure out what has happened and what data has been taken.
 
-哈立德刚刚登录了一个主机，他和他的团队用作多种测试目的的测试主机，它不在公司网络中，但可以访问网络中的许多资源。这台主机被公司很多人当作垃圾场使用，但它非常有用，所以没有人提出任何问题。哈立德并不知道，这台机器已经被入侵了，并且公司不应该存在的信息已经被窃取了 - 现在轮到你来弄清楚发生了什么，并且哪些数据已经被取走了。
+> [ZH] 哈立德刚刚登录了一个主机……这台机器已经被入侵了，并且公司不应该存在的信息已经被窃取了。
+> **ES:** Host de pruebas multiuso fuera de la red corporativa, comprometido con robo de información: determinar qué pasó y qué datos salieron.
+> **EN:** Multi-purpose testing host off the corporate network, compromised with data theft: determine what happened and what data left.
 
 :::
 
-## 题目数据
+## 题目数据 / Datos / Data
 
 [litter.zip](./litter.zip)
 
 ## Task 1 — Protocolo sospechoso / Suspicious protocol
 
-> 一眼看去，在这次攻击中，哪种协议似乎是可疑的？
+> [ZH] 一眼看去，在这次攻击中，哪种协议似乎是可疑的？
+> **ES:** ¿Qué protocolo se ve sospechoso en este ataque?
+> **EN:** Which protocol looks suspicious in this attack?
 
-在流量的后半段，发生了大量的 DNS 请求，这个与正常环境的 DNS 请求相比，存在很大的问题
+En la segunda mitad de la captura hay un volumen anómalo de peticiones DNS frente a un entorno normal:
 
 ![wireshark dns](img/image_20231207-190712.png)
 
@@ -36,11 +39,13 @@ DNS
 
 ## Task 2 — IP del host sospechoso / Suspicious host IP
 
-> 我们的主机和另一个主机之间有大量的流量，可疑主机的 IP 地址是什么？
+> [ZH] 我们的主机和另一个主机之间有大量的流量，可疑主机的 IP 地址是什么？
+> **ES:** Hay gran volumen de tráfico con otro host: ¿IP del host sospechoso?
+> **EN:** Heavy traffic with another host: what is the suspicious host's IP?
 
-使用 ` 统计 ` - ` 会话 `，在 ipv4，使用分组大小进行筛选，数量最大的即为目标对象
+En Wireshark: `Estadísticas` → `Conversaciones`, IPv4, ordenar por bytes — el mayor es el objetivo:
 
-![wireshark 统计 会话 ipv4 分组](img/image_20231209-190959.png)
+![wireshark 统计 会话 ipv4 分组 / statistics conversations](img/image_20231209-190959.png)
 
 ```plaintext title="Answer"
 192.168.157.145
@@ -48,15 +53,18 @@ DNS
 
 ## Task 3 — Primer comando al cliente / First command to client
 
-> 攻击者发送给客户端的第一个命令是什么？
+> [ZH] 攻击者发送给客户端的第一个命令是什么？
+> **ES:** ¿Cuál fue el primer comando del atacante al cliente?
+> **EN:** What was the attacker's first command to the client?
 
 :::note
 
-接下来使用筛选器 `ip.src==192.168.157.145 || ip.dst==192.168.157.145` 导出特定分组为新的 pcap 文件进行分析
+> **ES:** Exportar a un pcap nuevo con `ip.src==192.168.157.145 || ip.dst==192.168.157.145` para analizar.
+> **EN:** Export to a new pcap with `ip.src==192.168.157.145 || ip.dst==192.168.157.145` for analysis.
 
 :::
 
-对 DNS 请求的数据进行提取
+Extraer los datos de las queries DNS:
 
 ![wireshark dns udp track](img/image_20231228-192833.png)
 
@@ -64,7 +72,7 @@ DNS
 1eca012ec7305cb1f877686f616d690a6465736b746f702d756d6e636265<375c746573740d0a0d0a433a5c55736572735c746573745c446f776e6c6f.6164733e
 ```
 
-hex 解码后即可得到答案
+Decodificando el hex se obtiene la respuesta:
 
 ```plaintext title="Answer"
 whoami
@@ -72,15 +80,17 @@ whoami
 
 ## Task 4 — Versión de la herramienta DNS tunneling / DNS tunneling tool version
 
-> 攻击者使用的 DNS 隧道工具版本是多少？
+> [ZH] 攻击者使用的 DNS 隧道工具版本是多少？
+> **ES:** ¿Qué versión de la herramienta de túnel DNS usó el atacante?
+> **EN:** Which version of the DNS tunneling tool did the attacker use?
 
-继续对受害者的返回数据进行解码研判，发现以下 DNS 请求数据
+Decodificando más respuestas DNS de la víctima:
 
 ```plaintext
 02cb012ec7332cb1fd422e42726f777365722e666f722e53514c6974652d<332e31322e322d77696e36342e6d73690d0a32382f30352f323031362020<32313a333820202020202020202020203134322c33333620646e73636174.322d76302e30372d636c69656e74
 ```
 
-解码得到
+se obtiene:
 
 ```plaintext
 28/05/2016  21:38           142,336 dnscat2-v0.07-client
@@ -92,9 +102,11 @@ whoami
 
 ## Task 5 — Renombre de la herramienta / Tool rename
 
-> 攻击者试图重命名他们意外留在客户主机上的工具。他们将其命名为什么？
+> [ZH] 攻击者试图重命名他们意外留在客户主机上的工具。他们将其命名为什么？
+> **ES:** El atacante renombró la herramienta olvidada en el host: ¿a qué nombre?
+> **EN:** The attacker renamed the tool left behind on the host: to what?
 
-在后续的 DNS 流量中进行解码研判，发现以下数据
+En el tráfico DNS posterior:
 
 ![wireshark DNS](img/image_20231247-194709.png)
 
@@ -102,7 +114,7 @@ whoami
 2c43011ccd48f6758d72656e2072656e2027646e73636174322d76302e30<372d636c69656e742d77696e33322e65786527202777696e5f696e737461<6c6c2e6578650a5468652073796e746178206f662074686520636f6d6d61.6e6420697320696e636f72726563
 ```
 
-解码后得到
+decodificado:
 
 ```plaintext
 ren ren 'dnscat2-v0.07-client-win32.exe' 'win_install.exe
@@ -114,15 +126,17 @@ win_install.exe
 
 ## Task 6 — Archivos en almacenamiento en la nube / Files in cloud storage
 
-> 攻击者试图枚举用户的云存储。他们在云存储目录中定位到多少个文件？
+> [ZH] 攻击者试图枚举用户的云存储。他们在云存储目录中定位到多少个文件？
+> **ES:** El atacante enumeró el OneDrive del usuario: ¿cuántos archivos halló?
+> **EN:** The attacker enumerated the user's OneDrive: how many files did they find?
 
-用户的云储存位于 `Onedrive`，相关 DNS 流量如下
+Tráfico DNS del OneDrive:
 
 ```plaintext
 2be5011ccd61f875ee20204d757369630d0a30342f30362f323032312020<30383a3532202020203c4449523e202020202020202020204f6e65447269<76650d0a31312f30362f32303231202031333a3430202020203c4449523e.2020202020202020202050696374
 ```
 
-继续往下追踪的话，会发现其中没有任何文件
+Siguiendo el rastro no hay ningún archivo:
 
 ```plaintext title="Answer"
 0
@@ -130,15 +144,17 @@ win_install.exe
 
 ## Task 7 — Ruta del archivo PII robado / Stolen PII file path
 
-> 被窃取的个人身份信息（PII）文件的完整位置是什么？
+> [ZH] 被窃取的个人身份信息（PII）文件的完整位置是什么？
+> **ES:** ¿Ruta completa del archivo con PII robado?
+> **EN:** Full path of the stolen PII file?
 
-在 DNS 数据中，发现
+En los datos DNS:
 
 ```plaintext
 7170011ccd863877ab747970652022433a5c55736572735c746573745c44<6f63756d656e74735c636c69656e742064617461206f7074696d69736174<696f6e5c757365722064657461696c732e637376220a2c6a6f622c636f6d.70616e792c73736e2c7265736964
 ```
 
-解码后得到
+decodificado:
 
 ```plaintext
 type "C:\Users\test\Documents\client data optimisation\user details.csv"
@@ -150,23 +166,26 @@ C:\users\test\documents\client data optimization\user details.csv
 
 ## Task 8 — Nº de registros exfiltrados / Number of exfiltrated records
 
-> 究竟被窃取了多少个客户的个人身份信息记录？
+> [ZH] 究竟被窃取了多少个客户的个人身份信息记录？
+> **ES:** ¿Cuántos registros PII de clientes se exfiltraron en total?
+> **EN:** How many customer PII records were exfiltrated in total?
 
-这题相对比较复杂，可以用以下方式进行自动化处理
+Es la task más laboriosa; proceso automatizado:
 
-首先，使用 wireshark+tshark 进行原始数据提取
+1. Con Wireshark filtrar el tráfico DNS a un pcap nuevo `1.pcap`:
 
 ```bash
-# wireshark 使用以下筛选器提取 dns 数据为新的 pcap 文件，命名为 1.pcap
-
+# filtro wireshark para extraer a 1.pcap
 ip.src==192.168.157.145 || ip.dst==192.168.157.145
+```
 
-# 使用 tshark 提取 dns 流量
+2. Extraer payloads UDP con tshark:
 
+```bash
 tshark -r 1.pcap -T fields -Y "ip.src==192.168.157.144" -e udp.payload | sed '/^\s*$/d' > dnsdata.txt
 ```
 
-然后使用 python 进行分析，首先分析 dns 传输量大小的统计
+3. Estadística de tamaños para aislar la sesión del shell (longitud 494):
 
 ```python
 with open("./dnsdata.txt", "r") as f:
@@ -189,7 +208,7 @@ for i in headers:
     print(i, res.get(i))
 ```
 
-看出来目标应该是长度为 494 的会话流量，继续尝试分析，在进行一定尝试之后，分析出来 dns 会话的具体结构，将额外信息进行剪切，只保留会话的 shell 数据
+4. Recortar el framing dnscat2 y quedarse con los datos del shell:
 
 ```python
 with open("./dnsdata.txt", "r") as f:
@@ -215,17 +234,17 @@ for i in dnsdata:
 print(res)
 ```
 
-对还原出来的DNS会话中的shell数据进行分析，提取出来 `C:\users\test\documents\client data optimization\user details.csv` 的文件数据
+5. De la sesión reconstruida se extraen los datos de `C:\users\test\documents\client data optimization\user details.csv`:
 
 <details>
 
-<summary> 文件的完整数据 </summary>
+<summary> 文件的完整数据 / Datos completos / Full data </summary>
 
 [data.txt](./data.txt)
 
 </details>
 
-对数据进行分析，由于数据前面带有序号，所以就可以统计出来具体有多少条数据被泄露
+Como cada fila lleva número de serie, se cuenta cuántas se filtraron:
 
 ```plaintext title="Answer"
 721

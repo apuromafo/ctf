@@ -1,7 +1,7 @@
 # Username
 bandit6
 # Password
-[omitida - ver Rules.md]
+HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
 # Method of solve
 Use the Find command again to locate the file
 ```

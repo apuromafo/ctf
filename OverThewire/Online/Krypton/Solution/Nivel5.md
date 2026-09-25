@@ -1,6 +1,6 @@
 Usuario: krypton5
 
-Contraseña: [omitida - ver Rules.md]
+Contraseña: CLEARTEXT
 
 
 ssh krypton5@krypton.labs.overthewire.org -p 2231

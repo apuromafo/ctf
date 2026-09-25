@@ -3,7 +3,7 @@ ssh bandit5@bandit.labs.overthewire.org -p 2220
 # Username
 bandit5
 # Password
-[omitida - ver Rules.md]
+4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw
 # Method of Solve
 Use the Find command to locate the file, then read it
 ```

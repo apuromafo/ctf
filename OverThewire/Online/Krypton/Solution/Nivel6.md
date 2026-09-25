@@ -1,7 +1,7 @@
 
 Usuario: krypton6
 
-Contraseña: [omitida - ver Rules.md]
+Contraseña: RANDOM
 
 
 ssh krypton6@krypton.labs.overthewire.org -p 2231

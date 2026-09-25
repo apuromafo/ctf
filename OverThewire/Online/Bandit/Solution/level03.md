@@ -1,7 +1,7 @@
 # Username
 bandit3
 # Password
-[omitida - ver Rules.md]
+MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
 # Method of solve
 read the file named hidden file in the "inhere directory"
 ```

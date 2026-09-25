@@ -1,7 +1,7 @@
 # username
 bandit21
 # password
-[omitida - ver Rules.md]
+EeoULMCra2q0dSkYj561DX7s1CpBuOBt
 # objective
 A program is running automatically at regular intervals from cron, the time-based job scheduler. Look in /etc/cron.d/ for the configuration and see what command is being executed.
 # method of solve

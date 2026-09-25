@@ -1,7 +1,7 @@
 # username
 bandit15
 # password
-[omitida - ver Rules.md]
+8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo
 # objective
 The password for the next level can be retrieved by submitting the password of the current level to port 30001 on localhost using SSL/TLS encryption.
 # method of solve

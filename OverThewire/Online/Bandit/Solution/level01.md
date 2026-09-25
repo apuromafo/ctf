@@ -1,7 +1,7 @@
 # Username
 bandit1
 # Password
-[omitida - ver Rules.md]
+ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If
 # Method of solve
 read the file named -
 ```

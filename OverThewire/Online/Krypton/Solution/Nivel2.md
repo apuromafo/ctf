@@ -1,7 +1,7 @@
 
 Usuario: krypton2
 
-Contraseña: [omitida - ver Rules.md]
+Contraseña: ROTTEN
 
 
 ssh krypton2@krypton.labs.overthewire.org -p 2231

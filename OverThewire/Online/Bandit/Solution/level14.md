@@ -1,7 +1,7 @@
 # username
 bandit14
 # password
-[omitida - ver Rules.md]
+MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS
 # method of solve
 The instructions tell us we need to send the password for the current level to localhost port 30000. We can do so with the netcat program
 ```

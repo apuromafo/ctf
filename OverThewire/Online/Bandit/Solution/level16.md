@@ -1,7 +1,7 @@
 # username
 bandit16
 # password
-[omitida - ver Rules.md]
+kSkvUpMQ7lBYyCM4GBPvCvT1BfWRy0Dx
 # objective
 The credentials for the next level can be retrieved by submitting the password of the current level to a port on localhost in the range 31000 to 32000
 # method of solve

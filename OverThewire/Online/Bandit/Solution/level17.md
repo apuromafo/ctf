@@ -1,7 +1,7 @@
 # username
 bandit17
 # password
-[omitida - ver Rules.md]
+Use the SSH private key from the previous level
 ```
 -----BEGIN RSA PRIVATE KEY-----
 MIIEogIBAAKCAQEAvmOkuifmMg6HL2YPIOjon6iWfbp7c3jx34YkYWqUH57SUdyJ

@@ -1,7 +1,7 @@
 # username
 bandit12
 # password
-[omitida - ver Rules.md]
+7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4
 # method of solve
 Reverse the hex dump file with the XXD program
 ```

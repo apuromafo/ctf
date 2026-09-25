@@ -2,7 +2,7 @@ password
 # Username
 bandit4
 # Password
-[omitida - ver Rules.md]
+2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ
 # Method of solve
 locate the file with readable text and read it
 ```

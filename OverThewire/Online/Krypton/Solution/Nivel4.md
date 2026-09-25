@@ -1,7 +1,7 @@
 
 Usuario: krypton4
 
-Contraseña: [omitida - ver Rules.md]
+Contraseña: BRUTE
 
 
 ssh krypton4@krypton.labs.overthewire.org -p 2231

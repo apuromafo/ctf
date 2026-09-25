@@ -77,8 +77,22 @@ Converted from PDF to Markdown using PyMuPDF. Source: `HackTheBox-All-Cheatsheet
 | `Detection_Opsec_Cyber_Range_Module_Cheat_Sheet.md` | Detection & OPSEC |
 | `Security_Monitoring_Siem_Fundamentals_Module_Cheat_Sheet.md` | SIEM fundamentals |
 
+## Añadidos vía m4riio21 (7, set junior)
+
+| File | Topic |
+|------|-------|
+| `File_Transfers_Module_Cheat_Sheet.md` | File transfer techniques |
+| `Using_Metasploit_Framework_Module_Cheat_Sheet.md` | Metasploit framework |
+| `Pivoting_Tunneling_Port_Forwarding_Module_Cheat_Sheet.md` | Pivoting & tunneling |
+| `Information_Gathering_Web_Module_Cheat_Sheet.md` | Web recon & info gathering |
+| `Attacking_Web_Applications_With_Ffuf_Module_Cheat_Sheet.md` | ffuf web fuzzing |
+| `Attacking_Common_Applications_Module_Cheat_Sheet.md` | Common apps (WP/Joomla/Tomcat/Jenkins) |
+| `AD_Tools_Module_Cheat_Sheet.md` | AD tools of the trade |
+
+Fuente: [m4riio21/HTB-Academy-Cheatsheets](https://github.com/m4riio21/HTB-Academy-Cheatsheets) — fecha de acceso: 2026-09-24.
+
 ---
-**Total: 38 cheatsheets** converted from PDF to Markdown.
+**Total: 45 cheatsheets** (38 base + 7 vía m4riio21).
 
 ## ✅ Verificación vs Academy 2026 / Verification vs Academy 2026 (2026-09-24)
 

@@ -80,6 +80,11 @@ Converted from PDF to Markdown using PyMuPDF. Source: `HackTheBox-All-Cheatsheet
 ---
 **Total: 38 cheatsheets** converted from PDF to Markdown.
 
+## ✅ Verificación vs Academy 2026 / Verification vs Academy 2026 (2026-09-24)
+
+> **ES:** Verificado contra el catálogo público (`academy.hackthebox.com/course/preview/<slug>`): los 38 módulos locales siguen vigentes con el mismo nombre. Ejemplo: `Using CrackMapExec` → Medium, 27 secciones, con nota oficial de que el tool continuó como fork `NetExec` (Pennyw0rth/NetExec). Cobertura parcial: Academy tiene 350+ módulos; faltan locales más nuevos (ej. `ADCS Attacks`, `Active Directory Trust Attacks`, `Intro to C2 Operations with Sliver`). El campo `cheatsheet` existe por módulo en la API v2 (requiere sesión; API pública solo enterprise).
+> **EN:** Checked against the public catalogue: all 38 local modules still exist under the same name. E.g. `Using CrackMapExec` → Medium, 27 sections, with official note that the tool continued as the `NetExec` fork. Partial coverage: Academy has 350+ modules; newer ones have no local cheatsheet (e.g. `ADCS Attacks`, `Trust Attacks`, `C2 Sliver`). Per-module `cheatsheet` field exists in API v2 (session required; public API is enterprise-only).
+
 ---
 
 ## ⚠️ Aviso Legal / Disclaimer

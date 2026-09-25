@@ -1,3 +1,12 @@
+# Narnia Nivel 1
+
+| Campo | Valor |
+|-------|-------|
+| **Juego / Game** | Narnia |
+| **Nivel / Level** | 1 → 2 |
+| **URL** | https://overthewire.org/wargames/narnia/ |
+| **Conexión** | `ssh narnia1@narnia.labs.overthewire.org -p2226` |
+
 # username / password
 narnia1 / WDcYUTG5ul
 # concept
@@ -40,3 +49,19 @@ nuevo año:
 
 ssh narnia1@narnia.labs.overthewire.org
 pwd: efeidiedae
+
+---
+
+## Fuentes / Sources
+
+- OTW: https://overthewire.org/wargames/narnia/ - fecha de acceso: 2026-09-25.
+- Autor notas: Apuromafo.
+
+---
+
+## ⚠️ Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a OverTheWire.
+> **EN:** Educational and personal use only. Not affiliated with OverTheWire.
+
+_Fecha de edición: 2026-09-25_

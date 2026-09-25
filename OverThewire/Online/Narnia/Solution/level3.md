@@ -1,3 +1,12 @@
+# Narnia Nivel 3
+
+| Campo | Valor |
+|-------|-------|
+| **Juego / Game** | Narnia |
+| **Nivel / Level** | 3 → 4 |
+| **URL** | https://overthewire.org/wargames/narnia/ |
+| **Conexión** | `ssh narnia3@narnia.labs.overthewire.org -p2226` |
+
 # username / password
 narnia3 / 2xszzNl6uG
 # concept
@@ -80,3 +89,19 @@ nuevo año
 ssh narnia3@narnia.labs.overthewire.org
 pwd: vaequeezee
 
+
+---
+
+## Fuentes / Sources
+
+- OTW: https://overthewire.org/wargames/narnia/ - fecha de acceso: 2026-09-25.
+- Autor notas: Apuromafo.
+
+---
+
+## ⚠️ Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a OverTheWire.
+> **EN:** Educational and personal use only. Not affiliated with OverTheWire.
+
+_Fecha de edición: 2026-09-25_

@@ -1,3 +1,12 @@
+# Narnia Nivel 0
+
+| Campo | Valor |
+|-------|-------|
+| **Juego / Game** | Narnia |
+| **Nivel / Level** | 0 → 1 |
+| **URL** | https://overthewire.org/wargames/narnia/ |
+| **Conexión** | `ssh narnia0@narnia.labs.overthewire.org -p2226` |
+
 # username / password
 ssh narnia0@narnia.labs.overthewire.org -p2226
 
@@ -47,3 +56,19 @@ int main(){
 * the reason we are sending the bytes into reverse order is because the binary uses little endian byte order
 * the reason why we need to send the `cat` command in a wrapper with the `perl` command is because we need to keep the stdin of the shell open so that we can send commands to the shell
 
+
+---
+
+## Fuentes / Sources
+
+- OTW: https://overthewire.org/wargames/narnia/ - fecha de acceso: 2026-09-25.
+- Autor notas: Apuromafo.
+
+---
+
+## ⚠️ Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a OverTheWire.
+> **EN:** Educational and personal use only. Not affiliated with OverTheWire.
+
+_Fecha de edición: 2026-09-25_

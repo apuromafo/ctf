@@ -18,6 +18,7 @@
 ## Fuentes / Sources
 
 - [IppSec: Analytics (video)](https://youtube.com/watch?v=p1NsQSGeDv0) - IppSec - fecha de acceso: 2026-09-24.
+- PoC local `HTB_Analytics_poc.py` ([saoGITo/HTB_Analytics](https://github.com/saoGITo/HTB_Analytics)) - RCE Metabase setup-token (CVE-2023-38646) - fecha de acceso: 2026-09-24.
 
 ## 🎯 Objetivo / Goal
 

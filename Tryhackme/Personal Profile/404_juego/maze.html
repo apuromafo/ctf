@@ -77,7 +77,16 @@
 
 <script>
     let currentMaze = [], pPos = {x:1, y:1}, ePos = {x:-1, y:-1}, sPos = {x:-1, y:-1}, exitPos = {x:13, y:13};
-    let currentLvl = 1, isImmune = false, startTime = Date.now(), isSubmitting = false;
+    let currentLvl = 1, isImmune = false, startTime = Date.now(), isSubmitting = false, enemyTick = 0;
+
+    // B64 seguro UTF-8 (btoa/atob nativos rompen con tildes/ñ/emoji)
+    function b64encodeUtf8(str) {
+        return btoa(String.fromCharCode(...new TextEncoder().encode(str)));
+    }
+    function b64decodeUtf8(b64) {
+        const bytes = Uint8Array.from(atob(b64), c => c.charCodeAt(0));
+        return new TextDecoder().decode(bytes);
+    }
 
     // MATRIX EFFECT: Los ceros y unos cambian de color y valor
     setInterval(() => {
@@ -107,6 +116,8 @@
             exitPos = {x: data.exit[0], y: data.exit[1]};
             
             document.getElementById('lvl-ui').textContent = num.toString().padStart(2, '0');
+            enemyTick = 0;
+            sanitizeLevel();
             renderGrid();
             updatePos();
             updateRankingUI(); 
@@ -114,12 +125,44 @@
         } catch(e) { addLog("ERROR: No se pudo cargar el JSON."); }
     }
 
+    // FAILSAFE: corrige mapas viejos con spawn/enemigo dentro del muro
+    function sanitizeLevel() {
+        const carve = (pos) => {
+            if (pos && pos.x >= 0 && pos.y >= 0 && currentMaze[pos.y] && currentMaze[pos.y][pos.x] === 1) {
+                currentMaze[pos.y][pos.x] = 0;
+            }
+        };
+        carve(pPos); carve(sPos); carve(exitPos);
+        // Si el enemigo spawnea en muro o fuera de alcance, reubicarlo al path libre más cercano
+        if (ePos.x === -1) return;
+        const blocked = !currentMaze[ePos.y] || currentMaze[ePos.y][ePos.x] !== 0;
+        if (blocked) {
+            const seen = new Set([ePos.x + ',' + ePos.y]);
+            const q = [{x: ePos.x, y: ePos.y}];
+            let found = null;
+            while (q.length && !found) {
+                const c = q.shift();
+                if (c.x >= 0 && c.y >= 0 && c.x < 15 && c.y < 15 && currentMaze[c.y] && currentMaze[c.y][c.x] === 0) {
+                    // exigir que tenga al menos un vecino libre (no celda aislada)
+                    found = c; break;
+                }
+                [[1,0],[-1,0],[0,1],[0,-1]].forEach(([dx,dy]) => {
+                    const nx = c.x + dx, ny = c.y + dy, k = nx + ',' + ny;
+                    if (nx >= 0 && ny >= 0 && nx < 15 && ny < 15 && !seen.has(k)) { seen.add(k); q.push({x: nx, y: ny}); }
+                });
+            }
+            if (found) { ePos = found; addLog("Firewall reubicado a ruta válida."); }
+            else { ePos = {x:-1, y:-1}; addLog("Firewall sin ruta: desactivado."); }
+        }
+    }
+
     function renderGrid() {
         const g = document.getElementById('grid'); g.innerHTML = '';
         currentMaze.forEach(row => row.forEach(v => {
             const c = document.createElement('div');
-            c.className = `cell ${v === 1 ? 'wall' : 'path'}`;
-            c.textContent = v;
+            const isWall = v === 1;
+            c.className = `cell ${isWall ? 'wall' : 'path'}`;
+            c.textContent = isWall ? v : '';
             g.appendChild(c);
         }));
     }
@@ -134,23 +177,36 @@
     }
 
     function handleInput(dx, dy) {
+        if (!currentMaze.length) return;
         let nx = pPos.x + dx, ny = pPos.y + dy;
         if(ny >= 0 && ny < 15 && nx >= 0 && nx < 15) {
-            let onWall = currentMaze[pPos.y][pPos.x] === 1;
-            if(currentMaze[ny][nx] === 0 || isImmune || onWall) {
+            if(currentMaze[ny][nx] === 0 || isImmune) {
                 pPos.x = nx; pPos.y = ny;
                 checkCollisions();
-                if(ePos.x !== -1) moveEnemy();
+                // El firewall avanza 1 celda cada 2 pasos del jugador:
+                // a igual velocidad en pasillos de 1 celda era imposible esquivarlo.
+                if(ePos.x !== -1) { enemyTick++; if(enemyTick % 2 === 0) moveEnemy(); }
                 updatePos();
             } else { addLog("Bloqueo físico detectado."); }
         }
     }
 
     function moveEnemy() {
-        let dx = pPos.x > ePos.x ? 1 : pPos.x < ePos.x ? -1 : 0;
-        let dy = pPos.y > ePos.y ? 1 : pPos.y < ePos.y ? -1 : 0;
-        if(currentMaze[ePos.y + dy] && currentMaze[ePos.y + dy][ePos.x + dx] === 0) {
-            ePos.x += dx; ePos.y += dy;
+        // Persecución en 4 direcciones, sin atravesar muros en diagonal
+        const options = [[1,0],[-1,0],[0,1],[0,-1]];
+        const dist = (x, y) => Math.abs(pPos.x - x) + Math.abs(pPos.y - y);
+        let best = null, bestD = dist(ePos.x, ePos.y);
+        for (const [dx, dy] of options) {
+            const nx = ePos.x + dx, ny = ePos.y + dy;
+            if (nx < 0 || ny < 0 || nx >= 15 || ny >= 15) continue;
+            if (!currentMaze[ny] || currentMaze[ny][nx] !== 0) continue;
+            const d = dist(nx, ny);
+            if (d < bestD) { bestD = d; best = {x: nx, y: ny}; }
+        }
+        if (best) { ePos = best; }
+        if (pPos.x === ePos.x && pPos.y === ePos.y && !isImmune) {
+            addLog("FIREWALL: Reiniciando nodo.");
+            loadLevel(currentLvl);
         }
     }
 
@@ -186,43 +242,71 @@
 
     // PERSISTENCIA LOCAL (Simula scores.db usando LocalStorage)
     function saveScoreLocal(user) {
-        let scores = JSON.parse(localStorage.getItem('pwn_scores') || "[]");
-        let entry = `USER: ${user} | LVL: ${currentLvl} | TIME: ${document.getElementById('timer-ui').textContent}`;
-        // Lo guardamos codificado en B64 como pediste
-        scores.push(btoa(entry));
-        localStorage.setItem('pwn_scores', JSON.stringify(scores));
+        try {
+            let scores = JSON.parse(localStorage.getItem('pwn_scores') || "[]");
+            let entry = `USER: ${user} | LVL: ${currentLvl} | TIME: ${document.getElementById('timer-ui').textContent}`;
+            // Lo guardamos codificado en B64 como pediste (UTF-8 safe)
+            scores.push(b64encodeUtf8(entry));
+            localStorage.setItem('pwn_scores', JSON.stringify(scores));
+        } catch(e) { addLog("ERROR: no se pudo guardar local."); }
         updateRankingUI();
     }
 
-    function updateRankingUI() {
+    async function updateRankingUI() {
         const list = document.getElementById('ranking-list');
         list.innerHTML = '';
-        let scores = JSON.parse(localStorage.getItem('pwn_scores') || "[]");
-        scores.reverse().forEach(b64 => {
+        let scores = [];
+        // 1) Ranking del servidor (scores.db) si estamos bajo Juego.py
+        try {
+            const res = await fetch('/api/ranking');
+            if (res.ok) {
+                const data = await res.json();
+                if (Array.isArray(data.scores)) scores = scores.concat(data.scores);
+            }
+        } catch(e) { /* modo standalone: solo local */ }
+        // 2) Ranking local
+        try {
+            scores = scores.concat(JSON.parse(localStorage.getItem('pwn_scores') || "[]"));
+        } catch(e) { /* localStorage corrupto: ignorar */ }
+        [...scores].reverse().forEach(b64 => {
             let div = document.createElement('div');
             div.className = 'rank-item';
-            div.textContent = atob(b64);
+            try { div.textContent = b64decodeUtf8(b64); }
+            catch(e) { div.textContent = "[score corrupto]"; }
             list.appendChild(div);
         });
     }
 
-    function winGame() {
+    async function winGame() {
         if(isSubmitting) return;
         isSubmitting = true;
         let alias = prompt("SISTEMA COMPROMETIDO. Alias para el ranking:");
-        if(alias) {
-            saveScoreLocal(alias);
-            addLog("Datos inyectados localmente.");
-            setTimeout(() => location.reload(), 1500);
-        } else { isSubmitting = false; }
+        if(!alias) { isSubmitting = false; return; }
+        alias = alias.trim().slice(0, 32) || "anon";
+        // Intento servidor (CSRF de un solo uso) + fallback local
+        try {
+            const tRes = await fetch('/get_token');
+            if (tRes.ok) {
+                const {csrf_token} = await tRes.json();
+                const sRes = await fetch('/save_ranking', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({user: alias, lvl: currentLvl, csrf_token})
+                });
+                if (sRes.ok) addLog("Ranking guardado en servidor.");
+                else { addLog("Servidor rechazó score, guardo local."); saveScoreLocal(alias); }
+            } else { saveScoreLocal(alias); addLog("Datos inyectados localmente."); }
+        } catch(e) { saveScoreLocal(alias); addLog("Sin servidor: datos locales."); }
+        updateRankingUI();
+        setTimeout(() => location.reload(), 1500);
     }
 
     window.onkeydown = (e) => {
-        if(["ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].includes(e.key)) e.preventDefault();
-        if(e.key === 'ArrowUp') handleInput(0,-1);
-        if(e.key === 'ArrowDown') handleInput(0,1);
-        if(e.key === 'ArrowLeft') handleInput(-1,0);
-        if(e.key === 'ArrowRight') handleInput(1,0);
+        if(["ArrowUp","ArrowDown","ArrowLeft","ArrowRight"," "].includes(e.key)) e.preventDefault();
+        if(e.key === 'ArrowUp' || e.key === 'w' || e.key === 'W') handleInput(0,-1);
+        if(e.key === 'ArrowDown' || e.key === 's' || e.key === 'S') handleInput(0,1);
+        if(e.key === 'ArrowLeft' || e.key === 'a' || e.key === 'A') handleInput(-1,0);
+        if(e.key === 'ArrowRight' || e.key === 'd' || e.key === 'D') handleInput(1,0);
     };
 
     loadLevel(1);

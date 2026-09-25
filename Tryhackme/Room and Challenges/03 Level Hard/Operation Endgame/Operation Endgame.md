@@ -22,7 +22,7 @@ La sala pide obtener la flag final tras comprometer el Domain Controller. La cad
 
 | # | Pregunta | Respuesta |
 |---|----------|-----------|
-| 1 | What's the flag? | `THM{...redacted...}` |
+| 1 | What's the flag? | `THM{INFILTRATION_COMPLETE_OUR_COMMAND_OVER_NETWORK_ASSERTS}` |
 
 ---
 

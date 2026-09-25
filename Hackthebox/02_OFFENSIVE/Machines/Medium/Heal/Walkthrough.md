@@ -132,3 +132,6 @@ And by searching from exploit-db, we found
 `Hashicorp Consul v1.0 - Remote Command Execution (RCE)`
 Let's run the script and over this machine.
 
+## Fuentes / Sources
+
+- [IppSec: Heal (video)](https://youtube.com/watch?v=7KsIks7bdp8) - IppSec - fecha de acceso: 2026-09-24.

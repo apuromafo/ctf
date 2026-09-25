@@ -171,4 +171,7 @@ root@kali# smbmap -H 10.10.10.100 -d active.htb -u administrator -p Ticketmaster
  I want to get a shell. Now that the shares are writable and I have administrator access, I can get a shell with PSExec. There’s a bunch of ways to do this directly from Kali. Sticking with the Impacket tools, I’ll use psexec.py:
  `psexec.py active.htb/administrator@10.10.10.100`
  Then we can get the SYSTEM shell.
- 
+
+## Fuentes / Sources
+
+- [IppSec: Active (video)](https://youtube.com/watch?v=jUc1J31DNdw) - IppSec - fecha de acceso: 2026-09-24.

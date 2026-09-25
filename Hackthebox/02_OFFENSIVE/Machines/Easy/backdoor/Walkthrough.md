@@ -87,3 +87,6 @@ screen -x root/root
 
 finally we can get the root shell !!!
 
+## Fuentes / Sources
+
+- [IppSec: backdoor (video)](https://youtube.com/watch?v=4zrypJMVWpc) - IppSec - fecha de acceso: 2026-09-24.

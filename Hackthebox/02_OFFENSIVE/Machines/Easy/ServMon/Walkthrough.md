@@ -150,3 +150,6 @@ Now df shows up as a scheduled task, and I can see it has both key/values:
 
 Go to Control –> Reload. Then Wait. It can take longer than it feels like it should. This box can be very frustrating.
 
+## Fuentes / Sources
+
+- [IppSec: ServMon (video)](https://youtube.com/watch?v=4tCD0GemXYg) - IppSec - fecha de acceso: 2026-09-24.

@@ -15,12 +15,19 @@
 
 ---
 
+## Fuentes / Sources
+
+- [IppSec: Crafty (video)](https://youtube.com/watch?v=sdV8s6EtJ9I) - IppSec - fecha de acceso: 2026-09-24.
+
 ## 🎯 Objetivo / Goal
 
 > **ES:** Conseguir `user.txt` y `root.txt` vía Log4Shell (CVE-2021-44228) en el chat de Minecraft → password en plugin → RunasCs a Administrator.
 > **EN:** Get `user.txt` and `root.txt` via Log4Shell (CVE-2021-44228) in the Minecraft chat → password in plugin → RunasCs to Administrator.
 
 ---
+
+## Fuentes / Sources
+
 
 ## 🛠️ Herramientas usadas / Tools used
 
@@ -33,6 +40,9 @@
 - [ ] RunasCs
 
 ---
+
+## Fuentes / Sources
+
 
 ## 📋 Pasos / Steps
 
@@ -120,6 +130,9 @@ cat C:\users\administrator\desktop\root.txt  # formato: f513... (ofuscado)
 
 ---
 
+## Fuentes / Sources
+
+
 ## 🧠 Lo aprendido / Learned
 
 > **ES:** Servicios no-HTTP (Minecraft) también son superficie Log4Shell; estabilizar con meterpreter ayuda a exfiltrar; los plugins custom esconden secretos; RunasCs permite reutilizar credenciales sin RDP.
@@ -132,6 +145,9 @@ cat C:\users\administrator\desktop\root.txt  # formato: f513... (ofuscado)
 
 ---
 
+## Fuentes / Sources
+
+
 ## 📚 Fuentes y Referencias / Sources
 
 - **Fuente:** Nota local `index.md` (notas propias en chino/inglés, con capturas en `img/`) — randark/nota migrada. Nota: la nota china indica OS Windows, coincidente con la fuente oficial; sin contradicción.
@@ -141,6 +157,9 @@ cat C:\users\administrator\desktop\root.txt  # formato: f513... (ofuscado)
 - **Autor de este walkthrough:** Apuromafo (contenido propio salvo cita)
 
 ---
+
+## Fuentes / Sources
+
 
 ## ⚠️ Aviso Legal / Disclaimer
 

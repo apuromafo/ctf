@@ -361,3 +361,7 @@ Repeat: Until: Time:                  N/A
 Repeat: Until: Duration:              N/A
 Repeat: Stop If Still Running:        N/A
 ```
+
+## Fuentes / Sources
+
+- [IppSec: Forest (video)](https://youtube.com/watch?v=H9FcE_FMZio) - IppSec - fecha de acceso: 2026-09-24.

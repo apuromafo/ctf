@@ -172,3 +172,7 @@ Now I just run the exploit through the tunnel with nc waiting (work with either 
 `python3 cloudme-bof.py `
 
 Then we get the SYSTEM shell.
+
+## Fuentes / Sources
+
+- [IppSec: Buff (video)](https://youtube.com/watch?v=-KBm3tBNK74) - IppSec - fecha de acceso: 2026-09-24.

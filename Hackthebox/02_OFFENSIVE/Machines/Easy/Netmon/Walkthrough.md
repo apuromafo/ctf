@@ -116,3 +116,7 @@ SMBMap - Samba Share Enumerator v1.10.5 | Shawn Evans - ShawnDEvans@gmail.com
 
 We can also use `psexec.py` to get the shell
 `psexec.py 'anon:p3nT3st!@10.10.10.152'`
+
+## Fuentes / Sources
+
+- [IppSec: Netmon (video)](https://youtube.com/watch?v=ZxvgniJXbOo) - IppSec - fecha de acceso: 2026-09-24.

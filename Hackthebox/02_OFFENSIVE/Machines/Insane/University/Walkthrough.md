@@ -182,3 +182,6 @@ if __name__ == '__main__':
 
 ```
 
+## Fuentes / Sources
+
+- [IppSec: University (video)](https://youtube.com/watch?v=q9ms9k02fUM) - IppSec - fecha de acceso: 2026-09-24.

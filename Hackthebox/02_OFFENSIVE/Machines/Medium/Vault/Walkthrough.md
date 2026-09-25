@@ -315,3 +315,7 @@ gpg: encrypted with 4096-bit RSA key, ID D1EB1F03, created 2018-07-24
 ca468370b91d1f5906e31093d9bfe819
 
 ```
+
+## Fuentes / Sources
+
+- [IppSec: Vault (video)](https://youtube.com/watch?v=LfbwlPxToBc) - IppSec - fecha de acceso: 2026-09-24.

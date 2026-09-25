@@ -165,3 +165,7 @@ SolarPutty's Sessions Decrypter by VoidSec
 ```
 
 Then we can successfully su root and get the root shell.
+
+## Fuentes / Sources
+
+- [IppSec: Instant (video)](https://youtube.com/watch?v=Oyh84PHjzsQ) - IppSec - fecha de acceso: 2026-09-24.

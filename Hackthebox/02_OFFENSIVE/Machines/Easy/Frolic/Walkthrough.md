@@ -201,3 +201,6 @@ root@kali# ./rop $(python -c 'print "A"*500')
 Segmentation fault
 ```
 
+## Fuentes / Sources
+
+- [IppSec: Frolic (video)](https://youtube.com/watch?v=b6WGQSJu_zQ) - IppSec - fecha de acceso: 2026-09-24.

@@ -324,3 +324,7 @@ But we can use the cat command to show the output (stdout) from the screen. Down
 ![](images/Pasted%20image%2020240830110537.png)
 Well, the root user has shaky hands. We guess the password is duplicatedly depicted to us, that it should be Q3Eddtdw3pMB: Use the password and su root from tomas shell, we compromise root:
 ![](images/Pasted%20image%2020240830110618.png)
+
+## Fuentes / Sources
+
+- [IppSec: Lantern (video)](https://youtube.com/watch?v=nuwlmlEp4qY) - IppSec - fecha de acceso: 2026-09-24.

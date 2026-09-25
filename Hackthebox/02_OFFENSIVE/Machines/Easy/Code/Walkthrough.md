@@ -15,12 +15,19 @@
 
 ---
 
+## Fuentes / Sources
+
+- [IppSec: Code (video)](https://youtube.com/watch?v=-qGAM0Mt2V0) - IppSec - fecha de acceso: 2026-09-24.
+
 ## 🎯 Objetivo / Goal
 
 > **ES:** Conseguir `user.txt` y `root.txt` vía escape del sandbox Python → hash MD5 crackeado (martin) → abuso de `backy.sh` con `sudo`.
 > **EN:** Get `user.txt` and `root.txt` via Python sandbox escape → cracked MD5 hash (martin) → abusing `backy.sh` with `sudo`.
 
 ---
+
+## Fuentes / Sources
+
 
 ## 🛠️ Herramientas usadas / Tools used
 
@@ -31,6 +38,9 @@
 - [ ] ssh
 
 ---
+
+## Fuentes / Sources
+
 
 ## 📋 Pasos / Steps
 
@@ -138,6 +148,9 @@ cat /root/root.txt  # formato: 892e... (ofuscado)
 
 ---
 
+## Fuentes / Sources
+
+
 ## 🧠 Lo aprendido / Learned
 
 > **ES:** Las denylist en pyjails se evaden con introspección (`__class__`, `__globals__`); los hashes débiles (MD5) + reutilización dan salto lateral; validar paths con un solo `gsub` y reescribir el JSON antes de usarlo abre carreras.
@@ -149,6 +162,9 @@ cat /root/root.txt  # formato: 892e... (ofuscado)
 
 ---
 
+## Fuentes / Sources
+
+
 ## 📚 Fuentes y Referencias / Sources
 
 - **Fuente:** Nota local `index.md` (notas propias en chino/inglés, con capturas en `img/`) — randark/nota migrada
@@ -158,6 +174,9 @@ cat /root/root.txt  # formato: 892e... (ofuscado)
 - **Autor de este walkthrough:** Apuromafo (contenido propio salvo cita)
 
 ---
+
+## Fuentes / Sources
+
 
 ## ⚠️ Aviso Legal / Disclaimer
 

@@ -469,3 +469,7 @@ Info: Establishing connection to remote endpoint
 
 # Description
 Very typical AD machine, not too much, every step is very obvious.
+
+## Fuentes / Sources
+
+- [IppSec: Certified (video)](https://youtube.com/watch?v=edW9sOyAS9Q) - IppSec - fecha de acceso: 2026-09-24.

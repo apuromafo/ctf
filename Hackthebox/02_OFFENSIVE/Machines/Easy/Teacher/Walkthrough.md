@@ -183,3 +183,7 @@ Or, if I wanted to be blunt, I could just point it at /, and let chmod recursive
 `ln -s /root`
 Then wait for a minute, we got:
 `drwxrwxrwx  3 root root  4096 Nov 21 08:56 root`
+
+## Fuentes / Sources
+
+- [IppSec: Teacher (video)](https://youtube.com/watch?v=u2-te8n2WbY) - IppSec - fecha de acceso: 2026-09-24.

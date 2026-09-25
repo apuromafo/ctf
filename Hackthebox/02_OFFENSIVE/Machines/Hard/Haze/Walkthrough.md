@@ -389,3 +389,7 @@ Then we can successfully get the reverse shell as SYSTEM
 Bonus
 `evil-winrm -u 'Administrator' -H '06dc954d32cb91ac2831d67e3e12027f' -i 10.10.11.61`
 ```
+
+## Fuentes / Sources
+
+- [IppSec: Haze (video)](https://youtube.com/watch?v=XwGwz8alwUU) - IppSec - fecha de acceso: 2026-09-24.

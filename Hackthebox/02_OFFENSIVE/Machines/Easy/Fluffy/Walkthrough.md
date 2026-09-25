@@ -53,6 +53,10 @@ Service detection performed. Please report any incorrect results at https://nmap
 # Nmap done at Sat Jul 12 06:12:21 2025 -- 1 IP address (1 host up) scanned in 132.91 seconds
 ```
 
+## Fuentes / Sources
+
+- [IppSec: Fluffy (video)](https://youtube.com/watch?v=KvUC7bakm-E) - IppSec - fecha de acceso: 2026-09-24.
+
 ## Port 445 SMB
 
 I would prefer to start with smb service because we have known the credit 

@@ -290,3 +290,7 @@ Welcome to Ubuntu 20.04.6 LTS (GNU/Linux 5.4.0-216-generic x86_64)
 Due to the difficulty of making this equipment, we will provide you with a clear version of each step.
 
 The main demand for using docker is to solve the problem of building an environment in Python 3, which is free and compatible.
+
+## Fuentes / Sources
+
+- [IppSec: Artificial (video)](https://youtube.com/watch?v=uGgnWQaG-bA) - IppSec - fecha de acceso: 2026-09-24.

@@ -92,7 +92,6 @@ While not the intended method, strings will immediately reveal the flag if run o
 
 ![](images/Pasted%20image%2020241102101443.png)
 
+## Fuentes / Sources
 
-
-
-
+- [IppSec: Mirai (video)](https://youtube.com/watch?v=SRmvRGUuuno) - IppSec - fecha de acceso: 2026-09-24.

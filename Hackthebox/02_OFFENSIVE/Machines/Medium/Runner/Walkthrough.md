@@ -15,12 +15,19 @@
 
 ---
 
+## Fuentes / Sources
+
+- [IppSec: Runner (video)](https://youtube.com/watch?v=5G0sCI3DUtE) - IppSec - fecha de acceso: 2026-09-24.
+
 ## 🎯 Objetivo / Goal
 
 > **ES:** Conseguir `user.txt` y `root.txt` vía TeamCity CVE-2023-42793, backup HSQLDB → SSH como `john`, y Portainer + CVE-2024-21626 (runc).
 > **EN:** Get `user.txt` and `root.txt` via TeamCity CVE-2023-42793, HSQLDB backup → SSH as `john`, and Portainer + CVE-2024-21626 (runc).
 
 ---
+
+## Fuentes / Sources
+
 
 ## 🛠️ Herramientas usadas / Tools used
 
@@ -32,6 +39,9 @@
 - [ ] Portainer (build de imagen) + PoC CVE-2024-21626
 
 ---
+
+## Fuentes / Sources
+
 
 ## 📋 Pasos / Steps
 
@@ -114,6 +124,9 @@ cat /root/root.txt  # formato parcial ofuscado
 
 ---
 
+## Fuentes / Sources
+
+
 ## 🧠 Lo aprendido / Learned
 
 > **ES:** Cadena TeamCity → backup → SSH y escapes de contenedor vía plataforma de orquestación.
@@ -124,6 +137,9 @@ cat /root/root.txt  # formato parcial ofuscado
 
 ---
 
+## Fuentes / Sources
+
+
 ## 📚 Fuentes y Referencias / Sources
 
 - **Fuente:** Nota local `Soluciones/Machines/unclasified/Runner/index.md` (nota breve: nmap 22/80/8000) — randark/nota migrada
@@ -133,6 +149,9 @@ cat /root/root.txt  # formato parcial ofuscado
 - **Autor de este walkthrough:** Apuromafo (contenido propio salvo cita; migración y normalización de la nota local, paráfrasis sin copiar literal ni publicar flags completas)
 
 ---
+
+## Fuentes / Sources
+
 
 ## ⚠️ Aviso Legal / Disclaimer
 

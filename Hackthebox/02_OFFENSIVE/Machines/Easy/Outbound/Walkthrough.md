@@ -338,3 +338,7 @@ The system /etc/passwd is overwritten, and a new user with UID 0 is added;
 
 # Description
 This Linux machine uses some of the latest vulnerabilities, but the symbolic link vulnerability used for privilege escalation will seriously damage the synchronous use of the machine. At the same time, when the foothold goes to the user, it directly skips the docker escape part. Overall, it is not a very interesting machine.
+
+## Fuentes / Sources
+
+- [IppSec: Outbound (video)](https://youtube.com/watch?v=bDql3eTHgZ8) - IppSec - fecha de acceso: 2026-09-24.

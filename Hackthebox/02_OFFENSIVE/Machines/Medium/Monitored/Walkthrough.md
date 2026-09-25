@@ -15,12 +15,19 @@
 
 ---
 
+## Fuentes / Sources
+
+- [IppSec: Monitored (video)](https://youtube.com/watch?v=Ulb2rm2qbJY) - IppSec - fecha de acceso: 2026-09-24.
+
 ## 🎯 Objetivo / Goal
 
 > **ES:** Conseguir `user.txt` y `root.txt` vía SNMP → API Nagios → SQLi CVE-2023-40931 → RCE como `nagios`, y secuestro del binario `nagios` con sudo.
 > **EN:** Get `user.txt` and `root.txt` via SNMP → Nagios API → SQLi CVE-2023-40931 → RCE as `nagios`, and hijack of the `nagios` binary with sudo.
 
 ---
+
+## Fuentes / Sources
+
 
 ## 🛠️ Herramientas usadas / Tools used
 
@@ -34,6 +41,9 @@
 - [ ] sudo -l + análisis de `manage_services.sh` / `/usr/local/nagios/bin/nagios`
 
 ---
+
+## Fuentes / Sources
+
 
 ## 📋 Pasos / Steps
 
@@ -138,6 +148,9 @@ cat /root/root.txt  # formato parcial ofuscado
 
 ---
 
+## Fuentes / Sources
+
+
 ## 🧠 Lo aprendido / Learned
 
 > **ES:** SNMP como fuente de credenciales (líneas de proceso), SQLi autenticada en Nagios XI (dump de `xi_users` → `api_key` → crear admin), RCE vía Commands/Services y privesc por sudo laxo + binario escribible.
@@ -149,6 +162,9 @@ cat /root/root.txt  # formato parcial ofuscado
 
 ---
 
+## Fuentes / Sources
+
+
 ## 📚 Fuentes y Referencias / Sources
 
 - **Fuente:** Nota local `index.md` (notas propias en chino/inglés, con capturas en `img/`) — randark/nota migrada
@@ -159,6 +175,9 @@ cat /root/root.txt  # formato parcial ofuscado
 - **Autor de este walkthrough:** Apuromafo (contenido propio salvo cita)
 
 ---
+
+## Fuentes / Sources
+
 
 ## ⚠️ Aviso Legal / Disclaimer
 

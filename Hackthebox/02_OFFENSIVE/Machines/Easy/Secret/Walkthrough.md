@@ -98,3 +98,7 @@ That’s because it’s the memory of the process at the time of the crash. Runn
 
 Finally we get ssh private key from .viminfo
 then use it to get root flag.
+
+## Fuentes / Sources
+
+- [IppSec: Secret (video)](https://youtube.com/watch?v=byYZl9CSFtM) - IppSec - fecha de acceso: 2026-09-24.

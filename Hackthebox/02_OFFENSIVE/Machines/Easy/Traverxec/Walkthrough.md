@@ -194,3 +194,7 @@ I’ll start with a small terminal, and run the command as I can as root:
 ![[Pasted image 20240921074723.png]]
 Then we can get shell as root.
 This is very tricky and funny/
+
+## Fuentes / Sources
+
+- [IppSec: Traverxec (video)](https://youtube.com/watch?v=6_C9ShH9v2w) - IppSec - fecha de acceso: 2026-09-24.

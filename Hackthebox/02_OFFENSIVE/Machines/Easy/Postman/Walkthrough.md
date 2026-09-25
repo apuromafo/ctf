@@ -213,3 +213,7 @@ Then we can get the root shell.
 PS: remember do not write the virtual host name in the `RHOST` position, it would blocking reverse shells.
 
 Then we can get the root shell.
+
+## Fuentes / Sources
+
+- [IppSec: Postman (video)](https://youtube.com/watch?v=jJnHET1o8ZQ) - IppSec - fecha de acceso: 2026-09-24.

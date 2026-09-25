@@ -15,12 +15,19 @@
 
 ---
 
+## Fuentes / Sources
+
+- [IppSec: Codify (video)](https://youtube.com/watch?v=wH1Lp-sEVv4) - IppSec - fecha de acceso: 2026-09-24.
+
 ## 🎯 Objetivo / Goal
 
 > **ES:** Escapar del sandbox vm2 → shell como `svc` → credencial `joshua` vía `tickets.db` → root vía `/opt/scripts/mysql-backup.sh`.
 > **EN:** Escape vm2 sandbox → shell as `svc` → `joshua` credential via `tickets.db` → root via `/opt/scripts/mysql-backup.sh`.
 
 ---
+
+## Fuentes / Sources
+
 
 ## 🛠️ Herramientas usadas / Tools used
 
@@ -32,6 +39,9 @@
 - [ ] pspy (captura de `mysqldump -p...` en `ps`)
 
 ---
+
+## Fuentes / Sources
+
 
 ## 📋 Pasos / Steps
 
@@ -143,6 +153,9 @@ cat /root/root.txt
 
 ---
 
+## Fuentes / Sources
+
+
 ## 🧠 Lo aprendido / Learned
 
 - [ ] vm2 <=3.9.19 no es frontera de seguridad: 4 CVEs encadenables a RCE (30547, 32314, 37466, 37903).
@@ -152,6 +165,9 @@ cat /root/root.txt
 - [ ] Password en argv (`-p...`) se fuga vía `/proc`/pspy.
 
 ---
+
+## Fuentes / Sources
+
 
 ## 📚 Fuentes y Referencias / Sources
 
@@ -163,6 +179,9 @@ cat /root/root.txt
 - **Nota de migración:** este archivo normaliza `unclasified/Codify/index.md`. Pendiente mover carpeta a `Machines/Easy/Codify/` con `img/`.
 
 ---
+
+## Fuentes / Sources
+
 
 ## ⚠️ Aviso Legal / Disclaimer
 

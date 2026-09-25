@@ -566,3 +566,7 @@ nt authority\system
 # Description
 
 It mainly exploited the `CVE-2024-32002` vulnerability of git to gain a foothold, then enumerated the `gitea` database to obtain the credentials of other users. Finally, it used `CVE-2024-20656` to escalate permissions.
+
+## Fuentes / Sources
+
+- [IppSec: Compiled (video)](https://youtube.com/watch?v=aG_N2ZiCfxk) - IppSec - fecha de acceso: 2026-09-24.

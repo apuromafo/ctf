@@ -104,3 +104,6 @@ But I think this would be rabbit hole, so let's come to port 8089
 Then we have the username `shaun` and password `Guitar123`
 We can run this exploit and get the root shell.
 
+## Fuentes / Sources
+
+- [IppSec: Doctor (video)](https://youtube.com/watch?v=JcOR9krOPFY) - IppSec - fecha de acceso: 2026-09-24.

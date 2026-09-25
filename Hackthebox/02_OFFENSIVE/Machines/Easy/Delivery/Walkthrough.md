@@ -87,3 +87,7 @@ From the comment of root
 By cracking it, we get `PleaseSubscribe!21`
 
 Then just su root.
+
+## Fuentes / Sources
+
+- [IppSec: Delivery (video)](https://youtube.com/watch?v=gbs43E71mFM) - IppSec - fecha de acceso: 2026-09-24.

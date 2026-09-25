@@ -135,3 +135,7 @@ Checking the following output, at the top we see a file called emergency that ha
 I guess `/var/htb/bin/emergency` could help us get the root shell.
 
 When we execute it, then we successfully get the root shell.
+
+## Fuentes / Sources
+
+- [IppSec: Bank (video)](https://youtube.com/watch?v=JRPWFSzFaG0) - IppSec - fecha de acceso: 2026-09-24.

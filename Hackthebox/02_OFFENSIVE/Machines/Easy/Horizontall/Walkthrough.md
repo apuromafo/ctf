@@ -66,3 +66,7 @@ then just make sure poc is useful, the we can get the root shell
 
 Then just use ssh to connect the root shell.
 End!
+
+## Fuentes / Sources
+
+- [IppSec: Horizontall (video)](https://youtube.com/watch?v=v0OQowfK9Pk) - IppSec - fecha de acceso: 2026-09-24.

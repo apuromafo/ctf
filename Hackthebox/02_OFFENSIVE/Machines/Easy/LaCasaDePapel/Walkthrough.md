@@ -338,3 +338,6 @@ lacasadepapel [~]$ ls -l memcached.ini
 
 Then handle the nc and get the reverse shell of root.
 
+## Fuentes / Sources
+
+- [IppSec: LaCasaDePapel (video)](https://youtube.com/watch?v=OSRCEOQQJ4E) - IppSec - fecha de acceso: 2026-09-24.

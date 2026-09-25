@@ -140,3 +140,7 @@ evil-winrm -u "Administrator" -H "admin_hash" -i <ip>
 ```
 
 Then we get the SYSTEM shell.
+
+## Fuentes / Sources
+
+- [IppSec: Cicada (video)](https://youtube.com/watch?v=21Z_byocGhI) - IppSec - fecha de acceso: 2026-09-24.

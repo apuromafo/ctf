@@ -162,3 +162,7 @@ root@traceback:~# crontab -l
 ```
 
 The first just runs, and the second does a sleep for 30 seconds, and then runs the same thing. This effectively has the cleanup run every 30 seconds.
+
+## Fuentes / Sources
+
+- [IppSec: TraceBack (video)](https://youtube.com/watch?v=OI7PbBT589E) - IppSec - fecha de acceso: 2026-09-24.

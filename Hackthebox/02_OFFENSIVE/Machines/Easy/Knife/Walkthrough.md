@@ -81,3 +81,7 @@ sudo knife exec -E 'exec "/bin/sh"'
 ```
 
 So just try them and get our root shell.
+
+## Fuentes / Sources
+
+- [IppSec: Knife (video)](https://youtube.com/watch?v=93JnRTF5sQM) - IppSec - fecha de acceso: 2026-09-24.

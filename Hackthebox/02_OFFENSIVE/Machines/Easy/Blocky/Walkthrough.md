@@ -94,3 +94,7 @@ User notch may run the following commands on Blocky:
 ```
 
 so we just need to `sudo /bin/bash -p`, then get the root shell.
+
+## Fuentes / Sources
+
+- [IppSec: Blocky (video)](https://youtube.com/watch?v=C2O-rilXA6I) - IppSec - fecha de acceso: 2026-09-24.

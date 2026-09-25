@@ -77,3 +77,7 @@ system("/bin/bash")
 
 Then we can run /bin/bash as root
 ```
+
+## Fuentes / Sources
+
+- [IppSec: ScriptKiddie (video)](https://youtube.com/watch?v=Yn3iGF8xMQI) - IppSec - fecha de acceso: 2026-09-24.

@@ -15,12 +15,19 @@
 
 ---
 
+## Fuentes / Sources
+
+- [IppSec: LinkVortex (video)](https://youtube.com/watch?v=SoPIw2flzFQ) - IppSec - fecha de acceso: 2026-09-24.
+
 ## 🎯 Objetivo / Goal
 
 > **ES:** Conseguir `user.txt` y `root.txt` vía Ghost (login + file-read CVE-2023-40028) hasta SSH como `bob` y abuso de `clean_symlink.sh` con sudo.
 > **EN:** Get `user.txt` and `root.txt` via Ghost (login + file read CVE-2023-40028) to SSH as `bob` and abuse of `clean_symlink.sh` with sudo.
 
 ---
+
+## Fuentes / Sources
+
 
 ## 🛠️ Herramientas usadas / Tools used
 
@@ -31,6 +38,9 @@
 - [ ] ssh / sudo -l / getcap
 
 ---
+
+## Fuentes / Sources
+
 
 ## 📋 Pasos / Steps
 
@@ -129,6 +139,9 @@ cat /root/root.txt  # formato: 6605... (ofuscado)
 
 ---
 
+## Fuentes / Sources
+
+
 ## 🧠 Lo aprendido / Learned
 
 > **ES:** Riesgo de exponer `.git` en dev; credenciales en tests/Docker; LFI autenticado en Ghost; privesc con scripts sudo que siguen symlinks y variables de entorno heredadas.
@@ -140,6 +153,9 @@ cat /root/root.txt  # formato: 6605... (ofuscado)
 
 ---
 
+## Fuentes / Sources
+
+
 ## 📚 Fuentes y Referencias / Sources
 
 - **Fuente:** Nota local `index.md` (notas propias en chino/inglés, con capturas en `img/`) — randark/nota migrada
@@ -149,6 +165,9 @@ cat /root/root.txt  # formato: 6605... (ofuscado)
 - **Autor de este walkthrough:** Apuromafo (contenido propio salvo cita)
 
 ---
+
+## Fuentes / Sources
+
 
 ## ⚠️ Aviso Legal / Disclaimer
 

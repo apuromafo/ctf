@@ -15,12 +15,19 @@
 
 ---
 
+## Fuentes / Sources
+
+- [IppSec: Nocturnal (video)](https://youtube.com/watch?v=tjA3sXsnPqw) - IppSec - fecha de acceso: 2026-09-24.
+
 ## 🎯 Objetivo / Goal
 
 > **ES:** Conseguir `user.txt` y `root.txt` vía IDOR (`view.php`) → credencial de `amanda` → panel admin → backup con SQLite → SSH como `tobias` → CVE-2023-46818 en ISPConfig.
 > **EN:** Get `user.txt` and `root.txt` via IDOR (`view.php`) → `amanda`'s credential → admin panel → backup with SQLite → SSH as `tobias` → CVE-2023-46818 in ISPConfig.
 
 ---
+
+## Fuentes / Sources
+
 
 ## 🛠️ Herramientas usadas / Tools used
 
@@ -32,6 +39,9 @@
 - [ ] exploit ISPConfig CVE-2023-46818 (bipbopbup)
 
 ---
+
+## Fuentes / Sources
+
 
 ## 📋 Pasos / Steps
 
@@ -120,6 +130,9 @@ cat /root/root.txt  # formato parcial ofuscado
 
 ---
 
+## Fuentes / Sources
+
+
 ## 🧠 Lo aprendido / Learned
 
 > **ES:** IDOR en visores de ficheros (`username` manipulable); backups descargables = código + hashes; reuse de clave de sistema (`tobias` → admin ISPConfig); servicios solo-loopback (8080) vía port-forward; privesc vía app de hosting.
@@ -131,6 +144,9 @@ cat /root/root.txt  # formato parcial ofuscado
 
 ---
 
+## Fuentes / Sources
+
+
 ## 📚 Fuentes y Referencias / Sources
 
 - **Fuente:** Nota local `index.md` (nota parcial/TODO con capturas en `img/`) — randark/nota migrada
@@ -141,6 +157,9 @@ cat /root/root.txt  # formato parcial ofuscado
 - **Autor de este walkthrough:** Apuromafo (contenido propio salvo cita)
 
 ---
+
+## Fuentes / Sources
+
 
 ## ⚠️ Aviso Legal / Disclaimer
 

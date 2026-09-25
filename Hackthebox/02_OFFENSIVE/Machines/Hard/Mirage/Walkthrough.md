@@ -922,3 +922,7 @@ Mirage-Service$:des-cbc-md5:c42ffd455b91f208
 # Description
 
 As expected of another legendary AD domain machine by the author of Dark Corp, it is very challenging and crazy. Although it is rated as hard difficulty, I think it can be considered insane, especially the part of privilege escalation, which is full of rabbit holes. You have to try one by one and ensure the correct cache is exported.
+
+## Fuentes / Sources
+
+- [IppSec: Mirage (video)](https://youtube.com/watch?v=0oSGKL9jbAQ) - IppSec - fecha de acceso: 2026-09-24.

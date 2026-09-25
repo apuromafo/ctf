@@ -456,3 +456,7 @@ root@safe:/home/user#
 First of all, I must admit that I am not good at binary reverse engineering. Secondly, I use the Kali Linux virtual machine of the arm64 Mac, so it is really a headache for me to reverse this machine. Although I know some basic gdb and IDA skills, it is really difficult for me to reverse the x86_64 program on the arm64 architecture.
 
 This also tells us that if you want to learn reverse engineering, please don't choose Mac.
+
+## Fuentes / Sources
+
+- [IppSec: Safe (video)](https://youtube.com/watch?v=CO_g3wtC7rk) - IppSec - fecha de acceso: 2026-09-24.

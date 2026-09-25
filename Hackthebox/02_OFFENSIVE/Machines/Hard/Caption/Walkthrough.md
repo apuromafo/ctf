@@ -187,3 +187,7 @@ if __name__ == '__main__':
 ```
 
 4.Root shell is then via `/bin/bash -p`.
+
+## Fuentes / Sources
+
+- [IppSec: Caption (video)](https://youtube.com/watch?v=JY_xds4LsW0) - IppSec - fecha de acceso: 2026-09-24.

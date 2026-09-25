@@ -73,3 +73,7 @@ Then just search about that, we can find
 `pfSense < 2.1.4 - 'status_rrd_graph_img.php' Command Injection`
 
 Or just use msf to get shell.
+
+## Fuentes / Sources
+
+- [IppSec: Sense (video)](https://youtube.com/watch?v=d2nVDoVr0jE) - IppSec - fecha de acceso: 2026-09-24.

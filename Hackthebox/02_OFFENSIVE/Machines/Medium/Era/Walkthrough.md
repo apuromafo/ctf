@@ -478,3 +478,7 @@ exit $ALLOW
 
 ```
 I think it's just a coincidence, very CTF style.
+
+## Fuentes / Sources
+
+- [IppSec: Era (video)](https://youtube.com/watch?v=xhbKMAHxHcE) - IppSec - fecha de acceso: 2026-09-24.

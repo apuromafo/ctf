@@ -612,3 +612,7 @@ Info: Establishing connection to remote endpoint
 I think the most difficult part is the malicious compression used as a foothold. At the beginning, I couldn't imagine it would be like this.
 
 The user and root parts are very regular AD paths, nothing special.
+
+## Fuentes / Sources
+
+- [IppSec: Certificate (video)](https://youtube.com/watch?v=-4c5QcW3r4Q) - IppSec - fecha de acceso: 2026-09-24.

@@ -1106,3 +1106,7 @@ if access_token:
 else:
     print("Failed to retrieve access token")
 ```
+
+## Fuentes / Sources
+
+- [IppSec: BigBang (video)](https://youtube.com/watch?v=Xta6fGBhLXo) - IppSec - fecha de acceso: 2026-09-24.

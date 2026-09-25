@@ -258,3 +258,7 @@ uid=0(firefart) gid=0(root) groups=0(root)
 ```
 
 PS: in this place, kernel exploits would sometimes broken the machine and it would not reversible.
+
+## Fuentes / Sources
+
+- [IppSec: Valentine (video)](https://youtube.com/watch?v=XYXNvemgJUo) - IppSec - fecha de acceso: 2026-09-24.

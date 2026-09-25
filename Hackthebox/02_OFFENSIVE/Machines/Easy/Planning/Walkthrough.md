@@ -229,3 +229,7 @@ Finally we get the root shell now.
 # Description
 This is a very simple machine, and each step is easy to see and think of. There is even a direct exploit script to get a shell in one click.
 This is a very simple machine, and each step is easy to see and think of. There is even a direct exploit script to get a shell in one click.
+
+## Fuentes / Sources
+
+- [IppSec: Planning (video)](https://youtube.com/watch?v=eS176ucdzhY) - IppSec - fecha de acceso: 2026-09-24.

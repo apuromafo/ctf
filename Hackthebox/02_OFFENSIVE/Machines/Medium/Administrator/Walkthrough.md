@@ -314,3 +314,7 @@ evil-winrm -i administrator.htb -u administrator -H "3dc553ce4b9fd20bd016e098d2d
 ```
 
 Finally we can get the administrator shell now.
+
+## Fuentes / Sources
+
+- [IppSec: Administrator (video)](https://youtube.com/watch?v=Miam4nw9pmE) - IppSec - fecha de acceso: 2026-09-24.

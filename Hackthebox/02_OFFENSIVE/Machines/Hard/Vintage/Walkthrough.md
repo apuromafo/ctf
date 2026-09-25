@@ -503,3 +503,7 @@ C:\> whoami
 vintage\l.bianchi_adm
 C:\> type Users\Administrator\Desktop\root.txt
 ```
+
+## Fuentes / Sources
+
+- [IppSec: Vintage (video)](https://youtube.com/watch?v=-JM--KfVhpA) - IppSec - fecha de acceso: 2026-09-24.

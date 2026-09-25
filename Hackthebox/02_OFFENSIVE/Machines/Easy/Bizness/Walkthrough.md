@@ -15,12 +15,19 @@
 
 ---
 
+## Fuentes / Sources
+
+- [IppSec: Bizness (video)](https://youtube.com/watch?v=VcxSqLEr3kY) - IppSec - fecha de acceso: 2026-09-24.
+
 ## 🎯 Objetivo / Goal
 
 > **ES:** Conseguir `user.txt` y `root.txt` vía RCE en OFBiz (CVE-2023-49070 / CVE-2023-51467) y craqueo de hash SHA-1 de la base Derby reutilizado como clave de root.
 > **EN:** Get `user.txt` and `root.txt` via OFBiz RCE (CVE-2023-49070 / CVE-2023-51467) and cracking a Derby DB SHA-1 hash reused as the root password.
 
 ---
+
+## Fuentes / Sources
+
 
 ## 🛠️ Herramientas usadas / Tools used
 
@@ -32,6 +39,9 @@
 - [ ] grep sobre ficheros Derby (`seg0/c*.dat`) + `ij` (Derby tools)
 
 ---
+
+## Fuentes / Sources
+
 
 ## 📋 Pasos / Steps
 
@@ -127,6 +137,9 @@ cat /root/root.txt  # formato: 1396... (ofuscado)
 
 ---
 
+## Fuentes / Sources
+
+
 ## 🧠 Lo aprendido / Learned
 
 > **ES:** Explotación de deserialización Java vía XMLRPC en OFBiz y flujo de transformación de hash propietario a formato craqueable.
@@ -138,6 +151,9 @@ cat /root/root.txt  # formato: 1396... (ofuscado)
 
 ---
 
+## Fuentes / Sources
+
+
 ## 📚 Fuentes y Referencias / Sources
 
 - **Fuente:** Nota local `index.md` (notas propias en chino/inglés, con capturas en `img/`) — randark/nota migrada
@@ -147,6 +163,9 @@ cat /root/root.txt  # formato: 1396... (ofuscado)
 - **Autor de este walkthrough:** Apuromafo (contenido propio salvo cita)
 
 ---
+
+## Fuentes / Sources
+
 
 ## ⚠️ Aviso Legal / Disclaimer
 

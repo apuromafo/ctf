@@ -473,3 +473,7 @@ bash-5.0#
 # Description
 
 Although the difficulty of this machine is set to hard, I don’t think it is hard at all. All the vulnerabilities and exploits are very clear and simple, without any complicated or difficult visual obstacles or confusion.
+
+## Fuentes / Sources
+
+- [IppSec: Eureka (video)](https://youtube.com/watch?v=14X4yCgNRVQ) - IppSec - fecha de acceso: 2026-09-24.

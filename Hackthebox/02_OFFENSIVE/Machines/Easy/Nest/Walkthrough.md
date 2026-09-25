@@ -590,3 +590,7 @@ can re-use the code from earlier and just change the parameters.
 
 Then we can use `psexec.py` to get the SYSTEM shell:
 `python3 /opt/impacket/examples/psexec.py administrator:XtH4nkS4Pl4y1nGX@10.10.10.178`
+
+## Fuentes / Sources
+
+- [IppSec: Nest (video)](https://youtube.com/watch?v=tDbVw6uGx8g) - IppSec - fecha de acceso: 2026-09-24.

@@ -15,12 +15,19 @@
 
 ---
 
+## Fuentes / Sources
+
+- [IppSec: Titanic (video)](https://youtube.com/watch?v=2tQ3VhdwVsU) - IppSec - fecha de acceso: 2026-09-24.
+
 ## 🎯 Objetivo / Goal
 
 > **ES:** Conseguir `user.txt` y `root.txt` vía LFI (`download?ticket=`) → robo de `gitea.db` → SSH como `developer` → abuso de cron `identify_images.sh` (ImageMagick CVE-2024-41817).
 > **EN:** Get `user.txt` and `root.txt` via LFI (`download?ticket=`) → `gitea.db` theft → SSH as `developer` → `identify_images.sh` cron abuse (ImageMagick CVE-2024-41817).
 
 ---
+
+## Fuentes / Sources
+
 
 ## 🛠️ Herramientas usadas / Tools used
 
@@ -32,6 +39,9 @@
 - [ ] pspy64 + gcc (privesc ImageMagick)
 
 ---
+
+## Fuentes / Sources
+
 
 ## 📋 Pasos / Steps
 
@@ -128,6 +138,9 @@ cat /root/root.txt  # formato: 4fce... (ofuscado)
 
 ---
 
+## Fuentes / Sources
+
+
 ## 🧠 Lo aprendido / Learned
 
 > **ES:** LFI por concatenación de rutas en Flask; exfiltración de `gitea.db` y crack offline; privesc con cron + ImageMagick (CVE-2024-41817).
@@ -139,6 +152,9 @@ cat /root/root.txt  # formato: 4fce... (ofuscado)
 
 ---
 
+## Fuentes / Sources
+
+
 ## 📚 Fuentes y Referencias / Sources
 
 - **Fuente:** Nota local `index.md` (notas propias en chino/inglés, con capturas en `img/`) — randark/nota migrada
@@ -149,6 +165,9 @@ cat /root/root.txt  # formato: 4fce... (ofuscado)
 - **Autor de este walkthrough:** Apuromafo (contenido propio salvo cita)
 
 ---
+
+## Fuentes / Sources
+
 
 ## ⚠️ Aviso Legal / Disclaimer
 

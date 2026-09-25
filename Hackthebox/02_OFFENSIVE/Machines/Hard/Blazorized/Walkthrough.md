@@ -697,3 +697,7 @@ Info: Establishing connection to remote endpoint
 # Description
 The footpath of this machine is very unexpected, especially considering that decompiling the corresponding DDL is a difficult thing to think of.
 The root path is very conventional, but you need to pay attention that all commands need to rely on PowerShell and PowerView
+
+## Fuentes / Sources
+
+- [IppSec: Blazorized (video)](https://youtube.com/watch?v=Dmc5pnNwvO8) - IppSec - fecha de acceso: 2026-09-24.

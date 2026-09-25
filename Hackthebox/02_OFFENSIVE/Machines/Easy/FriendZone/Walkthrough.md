@@ -317,3 +317,7 @@ s.close()
 ```
 
 Then we can get the root shell
+
+## Fuentes / Sources
+
+- [IppSec: FriendZone (video)](https://youtube.com/watch?v=Zf8p49IzEEA) - IppSec - fecha de acceso: 2026-09-24.

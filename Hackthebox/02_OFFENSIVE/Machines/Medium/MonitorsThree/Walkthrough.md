@@ -119,4 +119,6 @@ Lets's get it in our own machine
 Then if we successfully login, we just need to backup the /source/root/root.txt
 And we can find it in the folder /opt/duplicati/config/
 
+## Fuentes / Sources
 
+- [IppSec: MonitorsThree (video)](https://youtube.com/watch?v=4y2gp_GTBqQ) - IppSec - fecha de acceso: 2026-09-24.

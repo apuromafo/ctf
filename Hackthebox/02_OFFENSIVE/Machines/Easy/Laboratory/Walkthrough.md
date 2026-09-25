@@ -181,3 +181,7 @@ Make a file named chmod contains /bin/bash then give it execution permission wit
 `PATH=$(pwd):$PATH docker-security`
 
 Then we can handle shell as root.
+
+## Fuentes / Sources
+
+- [IppSec: Laboratory (video)](https://youtube.com/watch?v=ozmHeApuSj8) - IppSec - fecha de acceso: 2026-09-24.

@@ -250,3 +250,7 @@ I can use this to get a shell using psexec.py:
 `KRB5CCNAME=ticket.ccache python3 psexec.py support.htb/administrator@dc.support.htb -k -no-pass`
 
 And grab root.txt!
+
+## Fuentes / Sources
+
+- [IppSec: Support (video)](https://youtube.com/watch?v=iIveZ-raTTQ) - IppSec - fecha de acceso: 2026-09-24.

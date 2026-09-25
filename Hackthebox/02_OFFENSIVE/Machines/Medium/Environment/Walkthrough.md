@@ -350,3 +350,7 @@ Then upload the web shell to get the reverse shell as `www-data`
 Enumerating the file system, decrypte the message to get the valid credit of user `hish`
 
 For root shell, by changing the `/usr/bin/systeminfo` environment variable, use `sudo` to elevate privileges.
+
+## Fuentes / Sources
+
+- [IppSec: Environment (video)](https://youtube.com/watch?v=XUEr-CM3Y6Q) - IppSec - fecha de acceso: 2026-09-24.

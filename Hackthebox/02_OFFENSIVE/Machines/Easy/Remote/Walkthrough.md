@@ -277,3 +277,7 @@ run
 ```
 
 Then we can also get the unattended password.
+
+## Fuentes / Sources
+
+- [IppSec: Remote (video)](https://youtube.com/watch?v=iyYqgseKUPM) - IppSec - fecha de acceso: 2026-09-24.

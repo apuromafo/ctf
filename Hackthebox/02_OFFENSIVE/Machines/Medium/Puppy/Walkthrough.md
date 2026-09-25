@@ -645,3 +645,7 @@ Then we can use this hash to get the administrator shell
 # Description
 
 A very good Active Directory machine, with a difficulty similar to that of the `OSCP` exam, which mainly requires continuous enumeration and continuous information collection at the current stage.
+
+## Fuentes / Sources
+
+- [IppSec: Puppy (video)](https://youtube.com/watch?v=QZQ-IjsI5Qk) - IppSec - fecha de acceso: 2026-09-24.

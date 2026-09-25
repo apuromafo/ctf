@@ -673,3 +673,7 @@ I think the main thing that surprised me in the foothold was `Timeroasting to ha
 There are also restrictions on protected objects. When I first tried it, I suspected that it was my network problem, but it was actually because it was restricted by security.
 
 For the subsequent privilege escalation, AddAllowedToAct is an exploit point that I rarely encounter. Setting IT-COMPUTER$3 to pretend to be a DC and then conducting RBCD attacks is indeed very unique and interesting.
+
+## Fuentes / Sources
+
+- [IppSec: RustyKey (video)](https://youtube.com/watch?v=vkbIVr4_ZdE) - IppSec - fecha de acceso: 2026-09-24.

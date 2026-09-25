@@ -15,12 +15,19 @@
 
 ---
 
+## Fuentes / Sources
+
+- [IppSec: Headless (video)](https://youtube.com/watch?v=FDCpJbS1OuQ) - IppSec - fecha de acceso: 2026-09-24.
+
 ## 🎯 Objetivo / Goal
 
 > **ES:** Conseguir `user.txt` y `root.txt` vía XSS + RCE en el panel y abuso de `sudo /usr/bin/syscheck`.
 > **EN:** Get `user.txt` and `root.txt` via XSS + RCE on the panel and abuse of `sudo /usr/bin/syscheck`.
 
 ---
+
+## Fuentes / Sources
+
 
 ## 🛠️ Herramientas usadas / Tools used
 
@@ -31,6 +38,9 @@
 - [ ] sudo -l / análisis de scripts bash
 
 ---
+
+## Fuentes / Sources
+
 
 ## 📋 Pasos / Steps
 
@@ -109,6 +119,9 @@ cat /root/root.txt  # solo en lab retirado
 
 ---
 
+## Fuentes / Sources
+
+
 ## 🧠 Lo aprendido / Learned
 
 > **ES:** XSS para robo de sesión cuando un bot/admin revisa el input; RCE por concatenación en parámetros de fecha; peligro de invocar sub-scripts por ruta relativa con sudo NOPASSWD.
@@ -120,6 +133,9 @@ cat /root/root.txt  # solo en lab retirado
 
 ---
 
+## Fuentes / Sources
+
+
 ## 📚 Fuentes y Referencias / Sources
 
 - **Fuente:** Notas locales `index.md` + capturas en `img/` (contenido propio previo, sin normalizar)
@@ -129,6 +145,9 @@ cat /root/root.txt  # solo en lab retirado
 - **Nota de migración:** Nota original en chino/inglés migrada al molde bilingüe ES/EN; flags ofuscadas, payloads parafraseados.
 
 ---
+
+## Fuentes / Sources
+
 
 ## ⚠️ Aviso Legal / Disclaimer
 

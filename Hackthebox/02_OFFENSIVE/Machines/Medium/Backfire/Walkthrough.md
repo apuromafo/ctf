@@ -572,3 +572,7 @@ sergej@backfire:~$ sudo /usr/sbin/iptables-save -f /root/.ssh/authorized_keys
 ```
 
 Finally use ssh to connect it and get the root shell.
+
+## Fuentes / Sources
+
+- [IppSec: Backfire (video)](https://youtube.com/watch?v=dZjd4XTms7E) - IppSec - fecha de acceso: 2026-09-24.

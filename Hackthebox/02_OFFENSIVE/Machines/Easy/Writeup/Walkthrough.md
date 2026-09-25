@@ -76,3 +76,7 @@ chmod u+s /bin/wither
 
 Then just restart the ssh
 `/bin/wither -p` , we can get the root shell.
+
+## Fuentes / Sources
+
+- [IppSec: Writeup (video)](https://youtube.com/watch?v=GKq4cwBfH24) - IppSec - fecha de acceso: 2026-09-24.

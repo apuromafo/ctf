@@ -250,4 +250,6 @@ We’ve signed keypair-cert.pub for user ‘root’ now lets login as root and g
 then we just connect the root shell
 `ssh -o CertificateFile=keypair-cert.pub -i keypair root@ssg.htb -p 2222`
 
+## Fuentes / Sources
 
+- [IppSec: Resource (video)](https://youtube.com/watch?v=ZIzxodu8axg) - IppSec - fecha de acceso: 2026-09-24.

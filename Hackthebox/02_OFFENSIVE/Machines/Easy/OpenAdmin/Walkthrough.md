@@ -236,3 +236,7 @@ Sudoers audit plugin version 1.9.7p1
 ```
 In this place, It doesn't seem that this user can run sudoedit as root.
 So `sudo 1.8.0 to 1.9.12p1 - Privilege Escalation` seems did not work.
+
+## Fuentes / Sources
+
+- [IppSec: OpenAdmin (video)](https://youtube.com/watch?v=fdD-JTlkd3k) - IppSec - fecha de acceso: 2026-09-24.

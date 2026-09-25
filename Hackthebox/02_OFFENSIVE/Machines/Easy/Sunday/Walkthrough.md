@@ -124,3 +124,7 @@ User sammy may run the following commands on sunday:
 
 ```
 Then we just need to `sudo su `and input the password, then get the root shell.
+
+## Fuentes / Sources
+
+- [IppSec: Sunday (video)](https://youtube.com/watch?v=xUrq29OTSuM) - IppSec - fecha de acceso: 2026-09-24.

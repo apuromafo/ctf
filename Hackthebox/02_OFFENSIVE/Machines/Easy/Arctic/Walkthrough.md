@@ -92,6 +92,6 @@ Then just handle the nc and run the exploit script
 
 Then we can get the SYSTEM shell.
 
+## Fuentes / Sources
 
-
-
+- [IppSec: Arctic (video)](https://youtube.com/watch?v=e9lVyFH7-4o) - IppSec - fecha de acceso: 2026-09-24.

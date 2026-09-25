@@ -15,12 +15,19 @@
 
 ---
 
+## Fuentes / Sources
+
+- [IppSec: CozyHosting (video)](https://youtube.com/watch?v=okTl6kWrncg) - IppSec - fecha de acceso: 2026-09-24.
+
 ## 🎯 Objetivo / Goal
 
 > **ES:** Conseguir `user.txt` y `root.txt` vía `/actuator/sessions` → secuestro de `JSESSIONID` admin → inyección en `host`/`username` (Función de SSH) → reverse shell → `sudo python`.
 > **EN:** Get `user.txt` and `root.txt` via `/actuator/sessions` → admin `JSESSIONID` hijack → injection in `host`/`username` (SSH feature) → reverse shell → `sudo python`.
 
 ---
+
+## Fuentes / Sources
+
 
 ## 🛠️ Herramientas usadas / Tools used
 
@@ -31,6 +38,9 @@
 - [ ] python (privesc)
 
 ---
+
+## Fuentes / Sources
+
 
 ## 📋 Pasos / Steps
 
@@ -110,6 +120,9 @@ cat /root/root.txt
 
 ---
 
+## Fuentes / Sources
+
+
 ## 🧠 Lo aprendido / Learned
 
 > **ES:** Endurecer Spring Boot Actuator; riesgo de concatenar input en comandos SSH; reutilización de secretos del JAR; sudo python = root.
@@ -121,6 +134,9 @@ cat /root/root.txt
 
 ---
 
+## Fuentes / Sources
+
+
 ## 📚 Fuentes y Referencias / Sources
 
 - **Fuente:** HTB CozyHosting — 0xdf (https://0xdf.gitlab.io/2024/03/02/htb-cozyhosting.html) — 0xdf
@@ -130,6 +146,9 @@ cat /root/root.txt
 - **Nota de migración:** Contenido normalizado desde el suelto `Soluciones/Machines/unclasified/cozyhosting.md` (solo cabecera `Machine: CozyHosting / Pwned`); procedimiento reconstruido por técnica conocida (Spring Boot actuator/session) y fuentes citadas; el archivo suelto se deja intacto.
 
 ---
+
+## Fuentes / Sources
+
 
 ## ⚠️ Aviso Legal / Disclaimer
 

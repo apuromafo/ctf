@@ -680,3 +680,7 @@ Info: Establishing connection to remote endpoint
 # Description
 
 A typical Active Directory machine, with the main focus on using the Golden Ticket to collect information and synchronizing time with the DC server.
+
+## Fuentes / Sources
+
+- [IppSec: Voleur (video)](https://youtube.com/watch?v=G7FOSfZMC1I) - IppSec - fecha de acceso: 2026-09-24.

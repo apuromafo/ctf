@@ -77,3 +77,7 @@ So we have to migrate the original payload process
 	`migrate -N explorer.exe` migrate it to this free process
 
 Then we can just exploit and get system shell.
+
+## Fuentes / Sources
+
+- [IppSec: Driver (video)](https://youtube.com/watch?v=N2ahkarb-zI) - IppSec - fecha de acceso: 2026-09-24.

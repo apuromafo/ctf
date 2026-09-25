@@ -280,3 +280,6 @@ Run admin_tasks.sh calling the web backup option (6):
 
 Then just `./.wither -p` , we get the root shell.
 
+## Fuentes / Sources
+
+- [IppSec: Admirer (video)](https://youtube.com/watch?v=_zMg0fHwwfw) - IppSec - fecha de acceso: 2026-09-24.

@@ -482,3 +482,7 @@ Info: Establishing connection to remote endpoint
 # Description
 
 The Active Directory machine is not difficult, but the process is relatively long. It is suitable for beginners of AD environment to practice.
+
+## Fuentes / Sources
+
+- [IppSec: TombWatcher (video)](https://youtube.com/watch?v=um8b-TN76bY) - IppSec - fecha de acceso: 2026-09-24.

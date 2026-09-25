@@ -414,3 +414,6 @@ sudo /usr/local/bin/easy_install /tmp/wither
 
 Then we can get the root shell.
 
+## Fuentes / Sources
+
+- [IppSec: UpDown (video)](https://youtube.com/watch?v=yW_lxWB1Yd0) - IppSec - fecha de acceso: 2026-09-24.

@@ -366,3 +366,7 @@ wither-5.1#
 # Description
 For the footpath, it is very interesting to use `LFI` to get the 2FA code.
 For the root, I am not talented in reverse engineering and binary vulnerable, so please check it from others.
+
+## Fuentes / Sources
+
+- [IppSec: Checker (video)](https://youtube.com/watch?v=mywIX1F1Cr8) - IppSec - fecha de acceso: 2026-09-24.

@@ -230,5 +230,6 @@ output = "/etc/crontab"
 
 Remember to open the netcat and listening the port 443, and wait a minute to get the shell back.
 
+## Fuentes / Sources
 
-
+- [IppSec: Curling (video)](https://youtube.com/watch?v=Paajc2Dupms) - IppSec - fecha de acceso: 2026-09-24.

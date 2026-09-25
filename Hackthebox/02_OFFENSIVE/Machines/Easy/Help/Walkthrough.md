@@ -154,3 +154,6 @@ Linux Kernel < 4.4.0-116 (Ubuntu 16.04.4) - Local Privilege Escalation
 
 After compilation, and exec it then we can get the root shell.
 
+## Fuentes / Sources
+
+- [IppSec: Help (video)](https://youtube.com/watch?v=XB8CbhfOczU) - IppSec - fecha de acceso: 2026-09-24.

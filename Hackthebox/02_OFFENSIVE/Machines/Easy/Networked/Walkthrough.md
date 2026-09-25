@@ -305,3 +305,7 @@ php_value session.save_path    "/var/lib/php/session"
 ```
 
 I can see `AddHander` for `.php`, which will has implied wildcards on each side, so it will match on `.php` anywhere in filename.
+
+## Fuentes / Sources
+
+- [IppSec: Networked (video)](https://youtube.com/watch?v=H3t3G70bakM) - IppSec - fecha de acceso: 2026-09-24.

@@ -10,6 +10,10 @@
 | **Maker** | [verificar en app.hackthebox.com/machines/Blurry] |
 | **URL** | https://app.hackthebox.com/machines/Blurry |
 
+## Fuentes / Sources
+
+- [IppSec: Blurry (video)](https://youtube.com/watch?v=Ygkp4QkGKaY) - IppSec - fecha de acceso: 2026-09-24.
+
 ## Opciones de solución en esta carpeta / Solution options in this folder
 
 | # | Opción / Option | Archivo / File |

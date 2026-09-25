@@ -166,3 +166,7 @@ access\administrator
 ```
 
 In other words, here, runas is mainly used to elevate permissions and execute remote reverse shell to get SYSTEM.
+
+## Fuentes / Sources
+
+- [IppSec: Access (video)](https://youtube.com/watch?v=Rr6Oxrj2IjU) - IppSec - fecha de acceso: 2026-09-24.

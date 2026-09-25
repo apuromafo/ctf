@@ -57,3 +57,7 @@ whoami
 nt authority\system
 ```
 We found it was SYSYEM user.
+
+## Fuentes / Sources
+
+- [IppSec: Jerry (video)](https://youtube.com/watch?v=PJeBIey8gc4) - IppSec - fecha de acceso: 2026-09-24.

@@ -185,3 +185,7 @@ Then when we get the meterpreter shell, we can use `multi/recon/local_exploit_su
 ```
 
 In this place, I use `exploit/windows/local/ms16_075_reflection_juicy` and then successfully get the shell as SYSTEM.
+
+## Fuentes / Sources
+
+- [IppSec: Bounty (video)](https://youtube.com/watch?v=7ur4om1K98Y) - IppSec - fecha de acceso: 2026-09-24.

@@ -696,3 +696,7 @@ DVJTokldQ0d4ghAAAAD3Jvb3RAaW50ZW50aW9ucwECAw==
 ```
 
 Then ssh to root shell.
+
+## Fuentes / Sources
+
+- [IppSec: Intentions (video)](https://youtube.com/watch?v=YmRDV0JR4qg) - IppSec - fecha de acceso: 2026-09-24.

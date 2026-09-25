@@ -257,3 +257,7 @@ python3 mremoteng_decrypt.py -s V22XaC5eW4epRxRgXEM5RjuQe2UNrHaZSGMUenOvA1Cit/z3
 Password: thXLHM96BeKL0ER2
 ```
 Then just use ssh to connect it and get the SYSTEM shell.
+
+## Fuentes / Sources
+
+- [IppSec: Bastion (video)](https://youtube.com/watch?v=2j3FNp5pjQ4) - IppSec - fecha de acceso: 2026-09-24.

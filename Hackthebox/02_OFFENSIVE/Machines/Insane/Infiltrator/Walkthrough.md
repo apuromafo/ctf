@@ -373,3 +373,7 @@ Then  login to database, and check the file
 mysql -h 127.0.0.1 -P 9292 --skip-ssl -u root -pibWijteig5
 SELECT LOAD_FILE('C:\\Users\\Administrator\\Desktop\\root.txt');
 ```
+
+## Fuentes / Sources
+
+- [IppSec: Infiltrator (video)](https://youtube.com/watch?v=YD8uatymgLk) - IppSec - fecha de acceso: 2026-09-24.

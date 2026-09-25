@@ -15,12 +15,19 @@
 
 ---
 
+## Fuentes / Sources
+
+- [IppSec: EscapeTwo (video)](https://youtube.com/watch?v=fE6BYs4P1t4) - IppSec - fecha de acceso: 2026-09-24.
+
 ## 🎯 Objetivo / Goal
 
 > **ES:** Conseguir `user.txt` y `root.txt` vía credenciales iniciales `rose` → Excel con creds MSSQL `sa` → shell `sql_svc` → `ryan` (config SQL) → shadow creds + ADCS ESC4 → `Administrator`.
 > **EN:** Get `user.txt` and `root.txt` via starter creds `rose` → Excel with MSSQL `sa` creds → `sql_svc` shell → `ryan` (SQL config) → shadow creds + ADCS ESC4 → `Administrator`.
 
 ---
+
+## Fuentes / Sources
+
 
 ## 🛠️ Herramientas usadas / Tools used
 
@@ -33,6 +40,9 @@
 - [ ] bloodyAD + dacledit.py + certipy-ad (shadow/find/template/req/auth)
 
 ---
+
+## Fuentes / Sources
+
 
 ## 📋 Pasos / Steps
 
@@ -138,6 +148,9 @@ evil-winrm -i 10.10.11.51 -u Administrator -H 7a8d4e04986afa8ed4060f75e5a0b3ff
 
 ---
 
+## Fuentes / Sources
+
+
 ## 🧠 Lo aprendido / Learned
 
 > **ES:** Escenario assume-breach; Excel con secretos; MSSQL como foothold en DC; ADCS ESC4 (plantillas con ACL débiles) hasta Domain Admin.
@@ -151,6 +164,9 @@ evil-winrm -i 10.10.11.51 -u Administrator -H 7a8d4e04986afa8ed4060f75e5a0b3ff
 
 ---
 
+## Fuentes / Sources
+
+
 ## 📚 Fuentes y Referencias / Sources
 
 - **Fuente:** Nota local `index.md` (notas propias en chino/inglés, con capturas en `img/`) — randark/nota migrada
@@ -161,6 +177,9 @@ evil-winrm -i 10.10.11.51 -u Administrator -H 7a8d4e04986afa8ed4060f75e5a0b3ff
 - **Autor de este walkthrough:** Apuromafo (contenido propio salvo cita)
 
 ---
+
+## Fuentes / Sources
+
 
 ## ⚠️ Aviso Legal / Disclaimer
 

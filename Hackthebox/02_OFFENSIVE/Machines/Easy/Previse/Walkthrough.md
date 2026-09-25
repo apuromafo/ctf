@@ -77,6 +77,6 @@ Then `sudo /opt/scripts/access_backup.sh`
 
 Now when the script goes to call gzip, the first one it will find is mine and run it. I’ll start nc and run!
 
+## Fuentes / Sources
 
-
-
+- [IppSec: Previse (video)](https://youtube.com/watch?v=LI9mw1rMKVw) - IppSec - fecha de acceso: 2026-09-24.

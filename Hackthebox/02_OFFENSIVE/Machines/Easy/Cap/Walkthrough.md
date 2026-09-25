@@ -15,12 +15,19 @@
 
 ---
 
+## Fuentes / Sources
+
+- [IppSec: Cap (video)](https://youtube.com/watch?v=O_z6o2xuvlw) - IppSec - fecha de acceso: 2026-09-24.
+
 ## 🎯 Objetivo / Goal
 
 > **ES:** Conseguir `user.txt` y `root.txt` vía IDOR en descarga PCAP → credenciales FTP/SSH reutilizadas → `cap_setuid` en Python.
 > **EN:** Get `user.txt` and `root.txt` via IDOR on PCAP download → reused FTP/SSH credentials → `cap_setuid` on Python.
 
 ---
+
+## Fuentes / Sources
+
 
 ## 🛠️ Herramientas usadas / Tools used
 
@@ -31,6 +38,9 @@
 - [ ] linpeas (`linpeas.sh`)
 
 ---
+
+## Fuentes / Sources
+
 
 ## 📋 Pasos / Steps
 
@@ -111,6 +121,9 @@ cat /root/root.txt  # formato: e7cc... (ofuscado)
 
 ---
 
+## Fuentes / Sources
+
+
 ## 🧠 Lo aprendido / Learned
 
 > **ES:** Los IDs predecibles en descargas (IDOR) exponen datos de otros usuarios; el FTP en claro en PCAPs regala credenciales; revisar `getcap` es tan importante como `sudo -l`.
@@ -123,6 +136,9 @@ cat /root/root.txt  # formato: e7cc... (ofuscado)
 
 ---
 
+## Fuentes / Sources
+
+
 ## 📚 Fuentes y Referencias / Sources
 
 - **Fuente:** Nota local `index.md` (notas propias en chino/inglés, con capturas en `img/`) — randark/nota migrada
@@ -132,6 +148,9 @@ cat /root/root.txt  # formato: e7cc... (ofuscado)
 - **Autor de este walkthrough:** Apuromafo (contenido propio salvo cita)
 
 ---
+
+## Fuentes / Sources
+
 
 ## ⚠️ Aviso Legal / Disclaimer
 

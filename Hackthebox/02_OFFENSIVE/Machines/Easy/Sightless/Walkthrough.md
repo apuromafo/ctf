@@ -153,3 +153,6 @@ Then we get ssh credit
 
 Then we can get the root shell by ssh.
 
+## Fuentes / Sources
+
+- [IppSec: Sightless (video)](https://youtube.com/watch?v=6CsH0DO_00w) - IppSec - fecha de acceso: 2026-09-24.

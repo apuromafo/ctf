@@ -99,6 +99,6 @@ So, we can use msfvenom to make a payload.
 
 Then just upload it to the machine and exec it .Then we can get the SYSTEM shell.
 
+## Fuentes / Sources
 
-
-
+- [IppSec: Love (video)](https://youtube.com/watch?v=V_7ubkfnPK4) - IppSec - fecha de acceso: 2026-09-24.

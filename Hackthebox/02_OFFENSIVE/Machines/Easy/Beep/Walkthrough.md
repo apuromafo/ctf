@@ -113,3 +113,6 @@ sudo nmap --interactive
 nmap> !sh
 ```
 
+## Fuentes / Sources
+
+- [IppSec: Beep (video)](https://youtube.com/watch?v=XJmBpOd__N8) - IppSec - fecha de acceso: 2026-09-24.

@@ -593,3 +593,7 @@ We can just `sudo su` with the password of `neo` and get the root shell.
 
 Root hash
 `root:$y$j9T$Rx7IRKAooZBFEEKqpflWl1$fK0BeVoPRj.EwPj9sYKZMu.Ti0EmrFpmQQZmayCKdL/:19962:0:99999:7:::`
+
+## Fuentes / Sources
+
+- [IppSec: WhiteRabbit (video)](https://youtube.com/watch?v=IVwZAINSCwo) - IppSec - fecha de acceso: 2026-09-24.

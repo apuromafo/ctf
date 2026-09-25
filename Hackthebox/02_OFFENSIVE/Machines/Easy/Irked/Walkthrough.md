@@ -132,3 +132,6 @@ uid=0(root) gid=1000(djmardov) groups=1000(djmardov),24(cdrom),25(floppy),29(aud
 
 Then we finally get shell as root.
 
+## Fuentes / Sources
+
+- [IppSec: Irked (video)](https://youtube.com/watch?v=OGFTM_qvtVI) - IppSec - fecha de acceso: 2026-09-24.

@@ -392,3 +392,7 @@ evil-winrm -i 10.10.11.65 -u Administrator -H 'a291ead3493f9773dc615e66c2ea21c4'
 # Description
 
 This machine mainly exploits the abuse of the certificate authentication part, especially the exploit of ESC 14. It is an AD domain machine that is worth studying and reviewing repeatedly.
+
+## Fuentes / Sources
+
+- [IppSec: Scepter (video)](https://youtube.com/watch?v=EEMNIIEzq24) - IppSec - fecha de acceso: 2026-09-24.

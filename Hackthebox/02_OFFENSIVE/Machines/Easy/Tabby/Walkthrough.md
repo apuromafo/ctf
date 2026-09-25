@@ -120,3 +120,7 @@ Then just exit the container and we can get the root bash
 ```
 There are a better way to get the great shell
 `https://blog.m0noc.com/2018/10/lxc-container-privilege-escalation-in.html?m=1`
+
+## Fuentes / Sources
+
+- [IppSec: Tabby (video)](https://youtube.com/watch?v=yTHtLi9YZ2s) - IppSec - fecha de acceso: 2026-09-24.

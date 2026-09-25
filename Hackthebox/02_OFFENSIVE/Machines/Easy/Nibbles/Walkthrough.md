@@ -90,3 +90,6 @@ just change the file `/home/nibbler/personal/stuff/monitor.sh`
 Just `sudo /home/nibbler/personal/stuff/monitor.sh`
 Then we get the root shell.
 
+## Fuentes / Sources
+
+- [IppSec: Nibbles (video)](https://youtube.com/watch?v=s_0GcRGv6Ds) - IppSec - fecha de acceso: 2026-09-24.

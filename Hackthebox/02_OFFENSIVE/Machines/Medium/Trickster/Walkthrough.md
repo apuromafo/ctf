@@ -231,3 +231,6 @@ Then we can see the really liked password `#YouC4ntCatchMe#`
 Come to james shell, and su root. 
 Get the root shell.
 
+## Fuentes / Sources
+
+- [IppSec: Trickster (video)](https://youtube.com/watch?v=eDhsfl_GYQQ) - IppSec - fecha de acceso: 2026-09-24.

@@ -57,3 +57,7 @@ target system matches.
 After a bit of searching and some trial and error, ms16_032_secondary_logon_handle_privesc
 ends up successfully creating a root shell. 
 ```
+
+## Fuentes / Sources
+
+- [IppSec: Optimum (video)](https://youtube.com/watch?v=kWTnVBIpNsE) - IppSec - fecha de acceso: 2026-09-24.

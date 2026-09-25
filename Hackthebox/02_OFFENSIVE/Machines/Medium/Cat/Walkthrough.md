@@ -267,3 +267,7 @@ exit;
 ```
 
 Then `su root` and get your root shell.
+
+## Fuentes / Sources
+
+- [IppSec: Cat (video)](https://youtube.com/watch?v=x3UvO2DDbbA) - IppSec - fecha de acceso: 2026-09-24.

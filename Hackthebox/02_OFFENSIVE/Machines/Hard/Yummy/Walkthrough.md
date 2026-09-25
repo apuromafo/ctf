@@ -249,3 +249,6 @@ Finally, we can run this bash as root
 `/opt/app/bash -p`
 `whoami root`
 
+## Fuentes / Sources
+
+- [IppSec: Yummy (video)](https://youtube.com/watch?v=w6nYrsKsYBQ) - IppSec - fecha de acceso: 2026-09-24.

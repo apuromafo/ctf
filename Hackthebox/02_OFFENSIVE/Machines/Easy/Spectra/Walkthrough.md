@@ -15,12 +15,19 @@
 
 ---
 
+## Fuentes / Sources
+
+- [IppSec: Spectra (video)](https://youtube.com/watch?v=mC7G3i2gV54) - IppSec - fecha de acceso: 2026-09-24.
+
 ## 🎯 Objetivo / Goal
 
 > **ES:** Conseguir `user.txt` y `root.txt` vía WordPress (credencial reutilizada + plugin webshell) → `katie` (autologin) → job Upstart malicioso con `sudo /sbin/initctl`.
 > **EN:** Get `user.txt` and `root.txt` via WordPress (reused credential + plugin webshell) → `katie` (autologin) → malicious Upstart job with `sudo /sbin/initctl`.
 
 ---
+
+## Fuentes / Sources
+
 
 ## 🛠️ Herramientas usadas / Tools used
 
@@ -33,6 +40,9 @@
 - [ ] ssh / sudo -l (initctl)
 
 ---
+
+## Fuentes / Sources
+
 
 ## 📋 Pasos / Steps
 
@@ -129,6 +139,9 @@ cat /root/root.txt  # formato parcial ofuscado
 
 ---
 
+## Fuentes / Sources
+
+
 ## 🧠 Lo aprendido / Learned
 
 > **ES:** Backups con extensión `.save` servidos en claro; reutilización DB→admin; webshell vía plugins WP (temas bloqueados); Chromium OS/autologin como fuente de creds; privesc con jobs Upstart escribibles + `SETENV` NOPASSWD.
@@ -140,6 +153,9 @@ cat /root/root.txt  # formato parcial ofuscado
 
 ---
 
+## Fuentes / Sources
+
+
 ## 📚 Fuentes y Referencias / Sources
 
 - **Fuente:** Nota local `index.md` (notas propias en chino/inglés, con capturas en `img/`) — randark/nota migrada
@@ -149,6 +165,9 @@ cat /root/root.txt  # formato parcial ofuscado
 - **Autor de este walkthrough:** Apuromafo (contenido propio salvo cita)
 
 ---
+
+## Fuentes / Sources
+
 
 ## ⚠️ Aviso Legal / Disclaimer
 

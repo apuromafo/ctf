@@ -573,3 +573,7 @@ This is a machine that can be regarded as a treasure. Under the premise of such 
 It is well worth studying and reviewing again and again, and truly exceeds the complexity of pro lab.
 
 **This machine is not suitable for beginners, and even experts have to spend a lot of effort here.**
+
+## Fuentes / Sources
+
+- [IppSec: DarkCorp (video)](https://youtube.com/watch?v=miOE_yYh1JY) - IppSec - fecha de acceso: 2026-09-24.

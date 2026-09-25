@@ -1,7 +1,7 @@
 # Username
 bandit0
 # Password
-bandit0
+[omitida - ver Rules.md]
 # Method of solve
 read the readme file
 ```

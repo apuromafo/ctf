@@ -1,7 +1,7 @@
 # username
 bandit11
 # password
-dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr
+[omitida - ver Rules.md]
 # method of solve
 Use the Tr command to emulate ROT13 decryption.
 ```

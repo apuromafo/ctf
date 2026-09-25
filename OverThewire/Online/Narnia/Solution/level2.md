@@ -1,5 +1,5 @@
 # username / password
-narnia2 / 5agRAXeBdG
+narnia2 / [omitida - ver Rules.md]
 # concept
 * stack buffer overflow via binary command arguments
 # method of solve

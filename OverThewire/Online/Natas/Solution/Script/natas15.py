@@ -6,7 +6,7 @@ from concurrent.futures import ThreadPoolExecutor
 
 # --- CONFIGURACIÓN ---
 URL = 'http://natas15.natas.labs.overthewire.org/'
-AUTH = ('natas15', 'SdqIqBsFcz3yotlNYErZSZwblkm0lrvx')
+AUTH = ('natas15', '[omitida - ver Rules.md]')  # tu password de natas15, no publicar
 CHARSET = sorted(string.ascii_letters + string.digits)
 THREADS = 10 
 TOTAL_REQUESTS = 0 # Contador global de peticiones

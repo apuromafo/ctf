@@ -1,6 +1,6 @@
 Usuario: krypton7
 
-Contraseña: LFSRISNOTRANDOM
+Contraseña: [omitida - ver Rules.md]
 
 ssh krypton7@krypton.labs.overthewire.org -p 2231
 

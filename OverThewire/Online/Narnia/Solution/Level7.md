@@ -1,3 +1,3 @@
 ssh narnia7@narnia.labs.overthewire.org
-pwd:  ahkiaziphu
+pwd: [omitida - ver Rules.md]
  

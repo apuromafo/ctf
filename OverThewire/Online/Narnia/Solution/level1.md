@@ -1,5 +1,5 @@
 # username / password
-narnia1 / WDcYUTG5ul
+narnia1 / [omitida - ver Rules.md]
 # concept
 * arbitrary ret() function abuse
 * ret2shellcode

@@ -1,5 +1,5 @@
 # username / password
-narnia4 / iqNWNk173q
+narnia4 / [omitida - ver Rules.md]
 # concept
 
 # source code

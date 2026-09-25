@@ -1,7 +1,7 @@
 # username / password
 ssh narnia0@narnia.labs.overthewire.org -p2226
 
-narnia0 / narnia0
+narnia0 / [omitida - ver Rules.md]
 # Concept
 * variable overwrite via buffer overflow
 # Method of solve

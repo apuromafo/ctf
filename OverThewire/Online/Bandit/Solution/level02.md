@@ -1,7 +1,7 @@
 # Username
 bandit2
 # Password
-263JGJPfgU6LtdEvgfWU1XP5yac29mFx
+[omitida - ver Rules.md]
 # Method of solve
 read the file named "spaces in this filename"
 ```

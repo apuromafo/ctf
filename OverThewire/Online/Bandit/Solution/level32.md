@@ -1,7 +1,7 @@
 # username
 bandit32
 # password
-3O9RfhqyAlVBEZpVb6LYStshZoqoSx5K
+[omitida - ver Rules.md]
 # objective
 * After all this git stuff, it’s time for another escape. Good luck!
 # method of solve

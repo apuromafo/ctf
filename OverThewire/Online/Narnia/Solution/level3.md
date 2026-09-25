@@ -1,5 +1,5 @@
 # username / password
-narnia3 / 2xszzNl6uG
+narnia3 / [omitida - ver Rules.md]
 # concept
 * stack buffer overflow
 # sourcecode

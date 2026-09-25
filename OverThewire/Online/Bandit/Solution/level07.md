@@ -1,7 +1,7 @@
 # Username
 bandit7
 # Password
-morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
+[omitida - ver Rules.md]
 # Method of solve
 Use the Grep command to locate the line in the file that contains the word "millionth"
 ```

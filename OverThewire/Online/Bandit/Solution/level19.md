@@ -1,7 +1,7 @@
 # username
 bandit19
 # password
-cGWpMaKXVwDUNgPAVJbWYuGHVn9zl3j8
+[omitida - ver Rules.md]
 # objective
 To gain access to the next level, you should use the setuid binary in the homedirectory. Execute it without arguments to find out how to use it. The password for this level can be found in the usual place (/etc/bandit_pass), after you have used the setuid binary.
 # method of solve

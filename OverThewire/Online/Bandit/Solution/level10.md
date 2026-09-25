@@ -1,7 +1,7 @@
 # Username
 bandit10
 # Password
-FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
+[omitida - ver Rules.md]
 # Method of solve
 Use the base64 program to decode the contents of the data.txt file.
 ```

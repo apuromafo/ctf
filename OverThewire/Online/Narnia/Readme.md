@@ -1,3 +1,5 @@
+# Narnia
+
 SSH Information
 Host: narnia.labs.overthewire.org
 Port: 2226

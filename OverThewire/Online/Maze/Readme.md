@@ -1,3 +1,5 @@
+# Maze
+
 SSH Information
 Host: maze.labs.overthewire.org
 Port: 2225

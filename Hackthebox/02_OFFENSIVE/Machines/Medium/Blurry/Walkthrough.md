@@ -1,3 +1,24 @@
+# Blurry [MEDIUM]
+
+> **ES:** Máquina Medium Linux (ClearML en app.blurry.htb). Solución en esta carpeta en varias opciones (ver abajo).
+> **EN:** Medium Linux machine (ClearML on app.blurry.htb). Solution in this folder in several options (see below).
+
+| Campo | Valor |
+|-------|-------|
+| **Dificultad / Difficulty** | Medium |
+| **OS** | Linux |
+| **Maker** | [verificar en app.hackthebox.com/machines/Blurry] |
+| **URL** | https://app.hackthebox.com/machines/Blurry |
+
+## Opciones de solución en esta carpeta / Solution options in this folder
+
+| # | Opción / Option | Archivo / File |
+|---|-----------------|----------------|
+| 1 | Nota detallada EN (legacy) | Walkthrough.md (este archivo, abajo) |
+| 2 | Informe PDF en ES | Gorkaaaa_BLURRY.pdf ([Gorkaaaa/Write-Up-BLURRY-HTB](https://github.com/Gorkaaaa/Write-Up-BLURRY-HTB), acceso 2026-09-24) |
+
+---
+
 # Nmap
 ```
 ┌──(wither㉿localhost)-[~/Templates/htb-labs/Blurry]

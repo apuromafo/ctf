@@ -105,6 +105,8 @@ aws-cli/2.0.30 Python/3.7.7 Windows/10 botocore/2.0.0dev34
 54.242.59.197
 ```
 
+> **ES:** No verificado localmente. **EN:** Not locally verified.
+
 ## Task 2 — Primer objeto S3 accedido / First accessed S3 object
 
 > [ZH] "TA 访问的第一个记录的 s3 对象的时间、文件名和账户 ID 是什么？"
@@ -404,4 +406,4 @@ TODO 做不出来
 > **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. Evidencia y respuestas con contexto, no solo la respuesta suelta.
 > **EN:** Educational and personal use only. Not affiliated with HackTheBox. Evidence and contextual answers, not bare answers.
 
-_Fecha de edición: 2026-09-24_
+_Fecha de edición: 2026-09-26_

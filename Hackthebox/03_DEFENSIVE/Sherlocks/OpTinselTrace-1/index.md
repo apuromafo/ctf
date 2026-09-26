@@ -44,6 +44,8 @@ d----          2023/12/11     1:30                top-secret
 eM Client
 ```
 
+> **ES:** No verificado localmente. **EN:** Not locally verified.
+
 ## Task 2
 
 > 威胁者正在使用的电子邮件是什么？
@@ -60,6 +62,8 @@ eM Client
 definitelynotthegrinch@gmail.com
 ```
 
+> **ES:** No verificado localmente. **EN:** Not locally verified.
+
 ## Task 3
 
 > 威胁者什么时候联系小精灵？
@@ -67,6 +71,8 @@ definitelynotthegrinch@gmail.com
 ```plaintext title="Answer"
 2023-11-27 17:27:26
 ```
+
+> **ES:** No verificado localmente. **EN:** Not locally verified.
 
 ## Task 4
 
@@ -76,6 +82,8 @@ definitelynotthegrinch@gmail.com
 elfuttin bigelf
 ```
 
+> **ES:** No verificado localmente. **EN:** Not locally verified.
+
 ## Task 5
 
 > 小精灵首次提及他可以访问圣诞老人特殊文件的电子邮件的标题是什么？
@@ -83,6 +91,8 @@ elfuttin bigelf
 ```plaintext title="Answer"
 Re: work
 ```
+
+> **ES:** No verificado localmente. **EN:** Not locally verified.
 
 ## Task 6
 
@@ -92,6 +102,8 @@ Re: work
 Wendy Elflower, 2023-11-28 10:00:21
 ```
 
+> **ES:** No verificado localmente. **EN:** Not locally verified.
+
 ## Task 7
 
 > 小精灵提议与威胁者会面的酒吧的名字是什么？
@@ -100,6 +112,8 @@ Wendy Elflower, 2023-11-28 10:00:21
 SnowGlobe
 ```
 
+> **ES:** No verificado localmente. **EN:** Not locally verified.
+
 ## Task 8
 
 > 小精灵什么时候提出向参与者发送秘密文件？
@@ -107,6 +121,8 @@ SnowGlobe
 ```plaintext title="Answer"
 2023-11-28 16:56:13
 ```
+
+> **ES:** No verificado localmente. **EN:** Not locally verified.
 
 ## Task 9
 
@@ -118,6 +134,8 @@ SnowGlobe
 how to get around work security
 ```
 
+> **ES:** No verificado localmente. **EN:** Not locally verified.
+
 ## Task 10
 
 > 撰写中情局实地手册文章的作者姓名是什么？
@@ -128,6 +146,8 @@ how to get around work security
 Joost Minnaar
 ```
 
+> **ES:** No verificado localmente. **EN:** Not locally verified.
+
 ## Task 11
 
 > 小精灵发送给参与者的圣诞老人秘密文件的名字是什么？
@@ -135,6 +155,8 @@ Joost Minnaar
 ```plaintext title="Answer"
 santa_deliveries.zip
 ```
+
+> **ES:** No verificado localmente. **EN:** Not locally verified.
 
 ## Task 12
 
@@ -157,6 +179,8 @@ File Inode Change Date/Time     : 2023:12:19 23:53:16+09:00
 2023-11-28 17:01:29
 ```
 
+> **ES:** No verificado localmente. **EN:** Not locally verified.
+
 ## Task 13
 
 > 小精灵将文件存储在哪个完整目录名中？
@@ -166,6 +190,8 @@ File Inode Change Date/Time     : 2023:12:19 23:53:16+09:00
 ```plaintext title="Answer"
 C:\users\Elfin\Appdata\Roaming\top-secret
 ```
+
+> **ES:** No verificado localmente. **EN:** Not locally verified.
 
 ## Task 14
 
@@ -177,6 +203,8 @@ C:\users\Elfin\Appdata\Roaming\top-secret
 greece
 ```
 
+> **ES:** No verificado localmente. **EN:** Not locally verified.
+
 ## Task 15
 
 > 用户（小精灵）写出但未发送的道歉信的电子邮件地址是什么？
@@ -184,6 +212,8 @@ greece
 ```plaintext title="Answer"
 santa.claus@gmail.com
 ```
+
+> **ES:** No verificado localmente. **EN:** Not locally verified.
 
 ## Task 16
 
@@ -206,6 +236,8 @@ Elfin:1001:aad3b435b51404eeaad3b435b51404ee:529848fe56902d9595be4a608f9fbe89:::
 Santaknowskungfu
 ```
 
+> **ES:** No verificado localmente. **EN:** Not locally verified.
+
 ## Reference
 
 - [Hack The Box Sherlocks - OpTinselTrace-1 Writeup - はまやんはまやんはまやん](https://blog.hamayanhamayan.com/entry/2023/12/27/201532)
@@ -223,4 +255,4 @@ Santaknowskungfu
 > **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. Evidencia y respuestas con contexto, no solo la respuesta suelta.
 > **EN:** Educational and personal use only. Not affiliated with HackTheBox. Evidence and contextual answers, not bare answers.
 
-_Fecha de edición: 2026-09-24_
+_Fecha de edición: 2026-09-26_

@@ -102,7 +102,7 @@ It seems our precious technology has been leaked to the threat actor. Our head E
 ![img](img/image_20240319-201928.png)
 
 ```plaintext title="Answer"
-62d5c1f1f9020c98f97d8085b9456b05 
+62d5c1f1f9020c98f97d8085b9456b05
 ```
 
 ## Task 2
@@ -118,6 +118,7 @@ It seems our precious technology has been leaked to the threat actor. Our head E
 ## Task 3
 
 > 威胁参与者完成自动检索我们公开的 S3 存储桶内容的时间是几点？
+> **ES:** Pendiente — sin evidencia local verificada. **EN:** Pending — no locally verified evidence.
 
 ```plaintext title="Answer"
 
@@ -126,6 +127,7 @@ It seems our precious technology has been leaked to the threat actor. Our head E
 ## Task 4
 
 > 根据威胁参与者的用户代理 - TA 可能使用什么脚本语言来检索文件？
+> **ES:** Pendiente — sin evidencia local verificada. **EN:** Pending — no locally verified evidence.
 
 ```plaintext title="Answer"
 
@@ -134,6 +136,7 @@ It seems our precious technology has been leaked to the threat actor. Our head E
 ## Task 5
 
 > 威胁参与者在哪个文件中找到了一些硬编码的凭证？
+> **ES:** Pendiente — sin evidencia local verificada. **EN:** Pending — no locally verified evidence.
 
 ```plaintext title="Answer"
 
@@ -142,6 +145,7 @@ It seems our precious technology has been leaked to the threat actor. Our head E
 ## Task 6
 
 > 请详细说明所有已确认的恶意 IP 地址。（升序）
+> **ES:** Pendiente — sin evidencia local verificada. **EN:** Pending — no locally verified evidence.
 
 ```plaintext title="Answer"
 
@@ -150,6 +154,7 @@ It seems our precious technology has been leaked to the threat actor. Our head E
 ## Task 7
 
 > 我们非常担心 TA 设法入侵我们的私有 S3 存储桶，其中包含一个重要的 VPN 文件。请确认此 VPN 文件的名称以及 TA 检索该文件的时间。
+> **ES:** Pendiente — sin evidencia local verificada. **EN:** Pending — no locally verified evidence.
 
 ```plaintext title="Answer"
 
@@ -158,6 +163,7 @@ It seems our precious technology has been leaked to the threat actor. Our head E
 ## Task 8
 
 > 请确认受感染的 AWS 帐户的用户名？
+> **ES:** Pendiente — sin evidencia local verificada. **EN:** Pending — no locally verified evidence.
 
 ```plaintext title="Answer"
 
@@ -166,6 +172,7 @@ It seems our precious technology has been leaked to the threat actor. Our head E
 ## Task 9
 
 > 根据完成的分析，圣诞老人提出了一些建议。需要锁定的 S3 存储桶的 ARN 是什么？
+> **ES:** Pendiente — sin evidencia local verificada. **EN:** Pending — no locally verified evidence.
 
 ```plaintext title="Answer"
 
@@ -183,4 +190,4 @@ It seems our precious technology has been leaked to the threat actor. Our head E
 > **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. Evidencia y respuestas con contexto, no solo la respuesta suelta.
 > **EN:** Educational and personal use only. Not affiliated with HackTheBox. Evidence and contextual answers, not bare answers.
 
-_Fecha de edición: 2026-09-24_
+_Fecha de edición: 2026-09-26_

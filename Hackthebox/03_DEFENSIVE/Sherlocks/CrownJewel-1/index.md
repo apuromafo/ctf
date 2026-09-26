@@ -36,7 +36,7 @@ TODO 未完成 / pendiente / pending
 
 ## Task 2
 
->
+> **ES:** Pendiente — evidencia cifrada, sin contraseña local. **EN:** Pending — encrypted evidence, no local password.
 
 ```plaintext title="Answer"
 
@@ -44,7 +44,7 @@ TODO 未完成 / pendiente / pending
 
 ## Task 3
 
->
+> **ES:** Pendiente — evidencia cifrada, sin contraseña local. **EN:** Pending — encrypted evidence, no local password.
 
 ```plaintext title="Answer"
 
@@ -52,7 +52,7 @@ TODO 未完成 / pendiente / pending
 
 ## Task 4
 
->
+> **ES:** Pendiente — evidencia cifrada, sin contraseña local. **EN:** Pending — encrypted evidence, no local password.
 
 ```plaintext title="Answer"
 
@@ -60,7 +60,7 @@ TODO 未完成 / pendiente / pending
 
 ## Task 5
 
->
+> **ES:** Pendiente — evidencia cifrada, sin contraseña local. **EN:** Pending — encrypted evidence, no local password.
 
 ```plaintext title="Answer"
 
@@ -68,7 +68,7 @@ TODO 未完成 / pendiente / pending
 
 ## Task 6
 
->
+> **ES:** Pendiente — evidencia cifrada, sin contraseña local. **EN:** Pending — encrypted evidence, no local password.
 
 ```plaintext title="Answer"
 
@@ -76,7 +76,7 @@ TODO 未完成 / pendiente / pending
 
 ## Task 7
 
->
+> **ES:** Pendiente — evidencia cifrada, sin contraseña local. **EN:** Pending — encrypted evidence, no local password.
 
 ```plaintext title="Answer"
 
@@ -84,7 +84,7 @@ TODO 未完成 / pendiente / pending
 
 ## Task 8
 
->
+> **ES:** Pendiente — evidencia cifrada, sin contraseña local. **EN:** Pending — encrypted evidence, no local password.
 
 ```plaintext title="Answer"
 
@@ -92,7 +92,7 @@ TODO 未完成 / pendiente / pending
 
 ## Task 9
 
->
+> **ES:** Pendiente — evidencia cifrada, sin contraseña local. **EN:** Pending — encrypted evidence, no local password.
 
 ```plaintext title="Answer"
 
@@ -100,7 +100,7 @@ TODO 未完成 / pendiente / pending
 
 ## Task 10
 
->
+> **ES:** Pendiente — evidencia cifrada, sin contraseña local. **EN:** Pending — encrypted evidence, no local password.
 
 ```plaintext title="Answer"
 
@@ -108,7 +108,7 @@ TODO 未完成 / pendiente / pending
 
 ## Task 11
 
->
+> **ES:** Pendiente — evidencia cifrada, sin contraseña local. **EN:** Pending — encrypted evidence, no local password.
 
 ```plaintext title="Answer"
 
@@ -116,7 +116,7 @@ TODO 未完成 / pendiente / pending
 
 ## Task 12
 
->
+> **ES:** Pendiente — evidencia cifrada, sin contraseña local. **EN:** Pending — encrypted evidence, no local password.
 
 ```plaintext title="Answer"
 
@@ -124,7 +124,7 @@ TODO 未完成 / pendiente / pending
 
 ## Task 13
 
->
+> **ES:** Pendiente — evidencia cifrada, sin contraseña local. **EN:** Pending — encrypted evidence, no local password.
 
 ```plaintext title="Answer"
 
@@ -132,7 +132,7 @@ TODO 未完成 / pendiente / pending
 
 ## Task 14
 
->
+> **ES:** Pendiente — evidencia cifrada, sin contraseña local. **EN:** Pending — encrypted evidence, no local password.
 
 ```plaintext title="Answer"
 
@@ -140,7 +140,7 @@ TODO 未完成 / pendiente / pending
 
 ## Task 15
 
->
+> **ES:** Pendiente — evidencia cifrada, sin contraseña local. **EN:** Pending — encrypted evidence, no local password.
 
 ```plaintext title="Answer"
 
@@ -158,4 +158,4 @@ TODO 未完成 / pendiente / pending
 > **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. Evidencia y respuestas con contexto, no solo la respuesta suelta.
 > **EN:** Educational and personal use only. Not affiliated with HackTheBox. Evidence and contextual answers, not bare answers.
 
-_Fecha de edición: 2026-09-24_
+_Fecha de edición: 2026-09-26_

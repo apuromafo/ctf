@@ -233,3 +233,12 @@ Remember to open the netcat and listening the port 443, and wait a minute to get
 ## Fuentes / Sources
 
 - [IppSec: Curling (video)](https://youtube.com/watch?v=Paajc2Dupms) - IppSec - fecha de acceso: 2026-09-24.
+
+---
+
+## ⚠️ Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. No publicar flags de contenido activo.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox. Do not publish active content flags.
+
+_Fecha de edición: 2026-09-26_

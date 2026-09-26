@@ -255,3 +255,12 @@ evil-winrm -i 10.10.10.149 -u SUPPORTDESK\\administrator -p '4dD!5}x/re8]FBuZ'
 ## Fuentes / Sources
 
 - [IppSec: Heist (video)](https://youtube.com/watch?v=fmBb6BgLsC8) - IppSec - fecha de acceso: 2026-09-24.
+
+---
+
+## ⚠️ Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. No publicar flags de contenido activo.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox. Do not publish active content flags.
+
+_Fecha de edición: 2026-09-26_

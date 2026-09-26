@@ -574,3 +574,12 @@ https://www.kali.org/blog/new-kali-archive-signing-key/
 In addition, we must always remember that in a domain environment, the time zone of the local machine should always be kept consistent with the time zone of the domain control server. Otherwise, we will not be able to obtain the `TGT` ticket normally, and naturally we will not be able to obtain the correct bloodhound results.
 
 `sudo ntpdate dc01.fluffy.htb`
+
+---
+
+## ⚠️ Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. No publicar flags de contenido activo.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox. Do not publish active content flags.
+
+_Fecha de edición: 2026-09-26_

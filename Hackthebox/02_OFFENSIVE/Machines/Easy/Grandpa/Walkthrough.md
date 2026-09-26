@@ -55,3 +55,16 @@ SERVICE. In this case davcdata.exe seemed to be the only stable process availabl
 migrate 1796
 ```
 Then continue to run the exploit script, then we can get the SYSTEM shell.
+
+## 📚 Fuentes / Sources
+
+Autor notas: Apuromafo
+
+---
+
+## ⚠️ Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. No publicar flags de contenido activo.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox. Do not publish active content flags.
+
+_Fecha de edición: 2026-09-26_

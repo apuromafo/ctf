@@ -55,7 +55,7 @@ python3 HTB_Zipping_poc.py <TU_IP> 4444
 ## 📚 Fuentes / Sources
 
 - PoC: [saoGITo/HTB_Zipping](https://github.com/saoGITo/HTB_Zipping) — saoGITo — acceso 2026-09-25
-- Video: IppSec (`C78yku9WC0o`) vía [dataset](https://ippsec.rocks/) — acceso 2026-09-24
+- [IppSec: Zipping (video)](https://youtube.com/watch?v=C78yku9WC0o) - IppSec - fecha de acceso: 2026-09-26.
 - Foro: [Official Zipping Discussion](https://forum.hackthebox.com/t/official-zipping-discussion/295961) — HTB Forum
 - Autor notas: Apuromafo
 

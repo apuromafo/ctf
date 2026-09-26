@@ -25,7 +25,8 @@ I would like use msf to exploit it.(as like before, we have done that in Grandpa
 
 ## 📚 Fuentes / Sources
 
-Autor notas: Apuromafo
+- [IppSec: Granny and Grandpa (video, cubre las dos máquinas)](https://youtube.com/watch?v=ZfPVGJGkORQ) - IppSec - fecha de acceso: 2026-09-26.
+- Autor notas: Apuromafo
 
 ---
 

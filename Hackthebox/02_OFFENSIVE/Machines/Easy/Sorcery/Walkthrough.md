@@ -74,7 +74,8 @@ Open the google tool console, press the `WebAuthn`
 
 ## 📚 Fuentes / Sources
 
-Autor notas: Apuromafo
+- [IppSec: Sorcery (video)](https://youtube.com/watch?v=aFa1ike_Q7I) - IppSec - fecha de acceso: 2026-09-26.
+- Autor notas: Apuromafo
 
 ---
 

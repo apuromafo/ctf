@@ -61,7 +61,7 @@ python3 HTB_Cybermonday_poc.py <TU_IP> 4444
 
 - Sinopsis oficial: [Cybermonday (Hard) — HTB](https://www.hackthebox.com/machines/cybermonday) — Tr1s0n — acceso 2026-09-25
 - PoC: [saoGITo/HTB_Cybermonday](https://github.com/saoGITo/HTB_Cybermonday) — saoGITo — acceso 2026-09-25
-- Video: IppSec (`VNMn5bXA8XY`) vía [dataset](https://ippsec.rocks/) — acceso 2026-09-24
+- [IppSec: CyberMonday (video)](https://youtube.com/watch?v=VNMn5bXA8XY) - IppSec - fecha de acceso: 2026-09-26.
 - Autor notas: Apuromafo
 
 ---

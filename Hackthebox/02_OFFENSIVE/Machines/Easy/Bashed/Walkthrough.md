@@ -62,6 +62,7 @@ crontab -l
 
 ## 📚 Fuentes / Sources
 
+- [IppSec: Bashed (video)](https://youtube.com/watch?v=2DqdPcbYcy8) - IppSec - fecha de acceso: 2026-09-26.
 - Autor notas: Apuromafo
 
 ---

@@ -201,6 +201,7 @@ root:Br3@k-G!@ss-r00t-evilcups
 
 ## 📚 Fuentes / Sources
 
+- [IppSec: EvilCUPS (video)](https://youtube.com/watch?v=7oMSQPST7H8) - IppSec - fecha de acceso: 2026-09-26.
 - Autor notas: Apuromafo
 
 ---

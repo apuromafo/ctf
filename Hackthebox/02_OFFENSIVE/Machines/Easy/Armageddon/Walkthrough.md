@@ -163,6 +163,7 @@ Then we can shell as root.
 
 ## 📚 Fuentes / Sources
 
+- [IppSec: Armageddon (video)](https://youtube.com/watch?v=8ikdbyOQsLg) - IppSec - fecha de acceso: 2026-09-26.
 - Autor notas: Apuromafo
 
 ---

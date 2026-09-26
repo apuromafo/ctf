@@ -84,7 +84,7 @@ cat /root/root.txt
 ## 📚 Fuentes / Sources
 
 - [HTB: Shocker — 0xdf](https://0xdf.gitlab.io/2021/05/25/htb-shocker.html) — 0xdf — fecha de acceso: 2026-09-24 (paráfrasis; comandos verificados contra el original)
-- [HackTheBox - Shocker (IppSec, video)](https://www.youtube.com/watch?v=IBlTdguhgfY) — IppSec
+- [IppSec: Shocker (video)](https://youtube.com/watch?v=IBlTdguhgfY) - IppSec - fecha de acceso: 2026-09-26.
 - Autor notas: Apuromafo
 
 ---

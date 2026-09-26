@@ -56,4 +56,15 @@ then we can get root shell!
 5, beyond the root.
 when we try to exploit sql injection, If we do not have permission to write to the file, we can only use UNION select to enumerate the database, but manual operation is too inefficient, so we can use a script to save time.
 
+## 📚 Fuentes / Sources
 
+Autor notas: Apuromafo
+
+---
+
+## ⚠️ Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. No publicar flags de contenido activo.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox. Do not publish active content flags.
+
+_Fecha de edición: 2026-09-26_

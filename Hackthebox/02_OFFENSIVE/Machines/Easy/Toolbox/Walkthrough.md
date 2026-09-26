@@ -127,4 +127,15 @@ BUG_REPORT_URL="https://github.com/boot2docker/boot2docker/issues"
 There’s an interesting folder at the system root, c
 It looks like it has mounted the Users directory, which is standard in a Windows system
 
+## 📚 Fuentes / Sources
 
+Autor notas: Apuromafo
+
+---
+
+## ⚠️ Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. No publicar flags de contenido activo.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox. Do not publish active content flags.
+
+_Fecha de edición: 2026-09-26_

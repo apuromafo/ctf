@@ -309,3 +309,12 @@ I can see `AddHander` for `.php`, which will has implied wildcards on each side,
 ## Fuentes / Sources
 
 - [IppSec: Networked (video)](https://youtube.com/watch?v=H3t3G70bakM) - IppSec - fecha de acceso: 2026-09-24.
+
+---
+
+## ⚠️ Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. No publicar flags de contenido activo.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox. Do not publish active content flags.
+
+_Fecha de edición: 2026-09-26_

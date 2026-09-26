@@ -262,3 +262,16 @@ root
 cat root.txt
 4d7c6f680cfe41ebfa19df7b06ac2273
 ```
+
+## 📚 Fuentes / Sources
+
+- Autor notas: Apuromafo.
+
+---
+
+## ⚠️ Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. No publicar flags de contenido activo.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox. Do not publish active content flags.
+
+_Fecha de edición: 2026-09-26_

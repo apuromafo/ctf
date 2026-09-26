@@ -74,3 +74,16 @@ The other is using a Shebang (#!) and setting the script itself to executable. W
 另一种是使用 Shebang ( #! ) 并将脚本本身设置为可执行文件。当 Linux 尝试将脚本加载为可执行文件时，该行会告诉它要使用哪个解释器。由于某种原因，AppArmor 开发人员认为解释器的规则不应该适用于此，因此他们不这样做。
 
 That means if I just run ./shell.pl, it works and we get root shell.
+
+## 📚 Fuentes / Sources
+
+- Autor notas: Apuromafo.
+
+---
+
+## ⚠️ Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. No publicar flags de contenido activo.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox. Do not publish active content flags.
+
+_Fecha de edición: 2026-09-26_

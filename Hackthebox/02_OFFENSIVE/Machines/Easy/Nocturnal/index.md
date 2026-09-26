@@ -85,3 +85,16 @@ Server: nginx/1.18.0 (Ubuntu)
 过滤很严格，重心不应该放在这块的文件上传绕过
 
 TODO 未完成
+
+## 📚 Fuentes / Sources
+
+- Autor notas: Apuromafo.
+
+---
+
+## ⚠️ Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. No publicar flags de contenido activo.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox. Do not publish active content flags.
+
+_Fecha de edición: 2026-09-26_

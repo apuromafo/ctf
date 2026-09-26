@@ -22,7 +22,7 @@ solucion que realicé para ctf.hacklabme.me — Saludos Apuromafo".
 | Malware | 5 | 1650 (250+300+350+400+350) | 5/5 | Muestras no ejecutadas/extraídas (solo metadatos); `Lenguaje de programación` con encoding roto; ver aviso abajo |
 | OSINT | 11 | 3200 (200+300+300+300+350+350+400+400+200+200+200) | 11/11 | 03-Primer Tweet y 11-Call Me SIN archivos de reto ni `Descripcion` (solo `Solucion/`); `Quién es` y `Cámara` con encoding roto |
 | Reversing | 3 | 950 (200+250+500) | 3/3 | `Código 1/2` con encoding roto; binarios `.exe` no ejecutados (solo nombre+tamaño) |
-| Steganography | 6 | 2000 (200+300+350+400+450+300) | 6/6 | 06-Radar referencia host muerto `pcte.co/radar`; 02 usa `solucion/` en minúscula |
+| Steganography | 6 | 2000 (200+300+350+400+450+300) | 6/6 | 06-Radar referencia host muerto `pcte.co/radar`; 02 normalizada a `Solucion/` |
 | Web | 2 | s/p en nombre (Descriptions: 300+200=~500) | 2/2 | Sin puntos en nombres; referencian hosts muertos (`pcte.co`); 02 incluye `BarCampSE.html` (1003 B) |
 | **Total** | **45** | **13450 nominales (+~500 Web no nominal)** | **45/45 carpetas Solucion** | Ver notas |
 

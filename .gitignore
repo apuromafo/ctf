@@ -1,6 +1,5 @@
 
 *.db
-*.db
 Tryhackme/Advent 2025/SideQuest_23-12-2025.rar
 /Hackthebox/02_OFFENSIVE/Machines/json
 /Tryhackme/_PLANIFICACION
@@ -17,3 +16,11 @@ Tryhackme/Advent 2025/SideQuest_23-12-2025.rar
 /Proving Ground Play/_PLANIFICACION
 /try2hack.me/_PLANIFICACION
 /xss-game.appspot.com/_PLANIFICACION
+# Patrón genérico: futuras _PLANIFICACION quedan cubiertas
+**/_PLANIFICACION/
+
+# Artefactos locales genéricos
+*.log
+*.tmp
+__pycache__/
+status/

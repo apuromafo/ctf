@@ -19,6 +19,10 @@ Total: 4 archivos md (~1.5 KB en conjunto).
 > **ES:** Los 4 tracks son stubs de menos de 1 KB, pendientes de desarrollar. Solo inventario: no se reescribieron contenidos.
 > **EN:** All 4 tracks are stubs under 1 KB, pending development. Inventory only: no contents were rewritten.
 
+## 📚 Fuentes / Sources
+
+- Autor notas: Apuromafo
+
 ## ⚠️ Aviso Legal / Disclaimer
 
 > **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox.

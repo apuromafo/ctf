@@ -43,6 +43,10 @@ Total: 27 archivos md + `img/` (12 .png). Nota: el encargo mencionaba 28 md, per
 > **ES:** 23 arenas con notas de tamaño normal; 4 stubs casi vacíos (Liana, Myron, Defy, Brooklyn) pendientes de ampliar. Solo inventario: no se reescribieron walkthroughs.
 > **EN:** 23 arenas with normal-sized notes; 4 near-empty stubs (Liana, Myron, Defy, Brooklyn) pending expansion. Inventory only: no walkthroughs were rewritten.
 
+## 📚 Fuentes / Sources
+
+- Autor notas: Apuromafo
+
 ## ⚠️ Aviso Legal / Disclaimer
 
 > **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox.

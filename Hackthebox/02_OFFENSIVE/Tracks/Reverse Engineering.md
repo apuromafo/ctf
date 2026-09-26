@@ -15,6 +15,10 @@
 
 [RAuth](../Challenges/Reversing/RAuth/)
 
+## 📚 Fuentes / Sources
+
+- Autor notas: Apuromafo
+
 ---
 
 ## ⚠️ Aviso Legal / Disclaimer

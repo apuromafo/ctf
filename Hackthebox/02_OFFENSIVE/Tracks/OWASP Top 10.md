@@ -43,6 +43,10 @@
 
 [baby breaking grad](../Challenges/Web/baby%20breaking%20grad/)
 
+## 📚 Fuentes / Sources
+
+- Autor notas: Apuromafo
+
 ---
 
 ## ⚠️ Aviso Legal / Disclaimer

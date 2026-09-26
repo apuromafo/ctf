@@ -24,6 +24,10 @@ Total: 6 fortalezas, ~178 files (mayoría imágenes en `Tutorial/`).
 > **ES:** Cada fortaleza conserva su `Readme.md` y árbol `Tutorial/` con walkthroughs e imágenes. AWS y Context concentran la mayor parte del volumen. Solo inventario: no se reescribieron walkthroughs.
 > **EN:** Each fortress keeps its `Readme.md` and `Tutorial/` tree with walkthroughs and images. AWS and Context hold most of the volume. Inventory only: no walkthroughs were rewritten.
 
+## 📚 Fuentes / Sources
+
+- Autor notas: Apuromafo
+
 ## ⚠️ Aviso Legal / Disclaimer
 
 > **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. Solo contenido retirado.

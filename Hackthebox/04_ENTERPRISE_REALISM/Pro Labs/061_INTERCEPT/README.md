@@ -25,6 +25,9 @@
 | New time-efficient Pro Labs available on HTB Labs (changelog: Intercept 2 machines/2 flags, relay + coercion) | https://roadmap.hackthebox.com/changelog/new-time-efficient-pro-labs-available-on-htb-labs | HackTheBox | 2026-09-25 |
 | Professional Lab Scenarios (Intercept: AD lab, 2 machines/2 flags, coercion, NTLM relay, AD CS) | https://enterprise-help.hackthebox.com/en/articles/13185385-professional-lab-scenarios | HackTheBox (Diablo) | 2026-09-25 |
 
+
+- Autor notas: Apuromafo
+
 ## ⚠️ Aviso Legal / Disclaimer
 
 > **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. Este lab está activo: no se publican flags ni soluciones.

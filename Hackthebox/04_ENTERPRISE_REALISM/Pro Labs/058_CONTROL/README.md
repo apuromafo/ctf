@@ -25,6 +25,9 @@
 | New time-efficient Pro Labs available on HTB Labs (changelog: Control 2 machines/3 flags, web + OSCTRL/osquery + container escape) | https://roadmap.hackthebox.com/changelog/new-time-efficient-pro-labs-available-on-htb-labs | HackTheBox | 2026-09-25 |
 | Professional Lab Scenarios (Control: Linux red-team lab, 2 machines/3 flags, OSCTRL/osquery, container escape) | https://enterprise-help.hackthebox.com/en/articles/13185385-professional-lab-scenarios | HackTheBox (Diablo) | 2026-09-25 |
 
+
+- Autor notas: Apuromafo
+
 ## ⚠️ Aviso Legal / Disclaimer
 
 > **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. Este lab está activo: no se publican flags ni soluciones.

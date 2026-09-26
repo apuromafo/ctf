@@ -21,6 +21,10 @@ Total: 3 PDFs en `Retired/` (~4.3 MB).
 > **ES:** Cobertura completa de los endgames retirados disponibles (Hades, POO, Xen). Solo inventario: no se modificaron los PDFs.
 > **EN:** Full coverage of the available retired endgames (Hades, POO, Xen). Inventory only: no PDFs were modified.
 
+## 📚 Fuentes / Sources
+
+- Autor notas: Apuromafo
+
 ## ⚠️ Aviso Legal / Disclaimer
 
 > **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. Solo contenido retirado.

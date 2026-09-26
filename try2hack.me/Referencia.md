@@ -296,12 +296,54 @@ sqlmap -u "https://try2hack.me/a/1*" --dbs --dump
 
 > **Nota de alcance / Scope note (ES/EN):** Las fuentes públicas solicitadas (vídeos de ISOstuff y repo de dsolstad) documentan **try2hack.nl** (reto holandés clásico, niveles 1-13), **no try2hack.me** (15 retos, registro requerido). Se resumen aquí con el mismo formato como referencia cruzada; **no son soluciones de los retos 2, 8, 9 de try2hack.me**. / The requested public sources cover **try2hack.nl** (classic Dutch challenges, levels 1-13), **not try2hack.me** (15 tasks, login required). Summarized here in the same format as cross-reference; **not solutions for try2hack.me challenges 2, 8, 9**.
 
+### Level 1: Password en JavaScript inline
+
+**Método (ES):** Ver el fuente (`Ctrl+U`): la función `Try(passwd)` compara en claro con `'h4x0r'` y redirige al level 2.
+**Method (EN):** View source: `Try(passwd)` compares in cleartext against `'h4x0r'` and redirects to level 2.
+
+> **BANDERA:** `h4x0r`
+
 ### Level 2: Credenciales en Flash (SWF)
 
 **Método (ES):** El clic derecho está deshabilitado; ver el código fuente (`Ctrl+U`) revela un objeto Flash `level2.swf`. Inspeccionar el SWF como texto expone `txtUsername` / `txtPassword` en claro.
 **Method (EN):** Right-click is disabled; view source (`Ctrl+U`) reveals an embedded `level2.swf` Flash object. Inspecting the SWF as text exposes `txtUsername` / `txtPassword` in cleartext.
 
 > **BANDERA:** `try2hack` / `irtehh4x0r!`
+
+### Level 3: JavaScript externo (señuelo inline)
+
+**Método (ES):** El JS inline es señuelo (`AbCdE`); el real está en el `JavaScript` externo (`view-source:.../JavaScript`) con `PASSWORD="try2hackrawks"`.
+**Method (EN):** The inline JS is a decoy; the real one is the external `JavaScript` file with `PASSWORD="try2hackrawks"`.
+
+> **BANDERA:** `try2hackrawks`
+
+### Level 4: Applet Java + archivo `level4`
+
+**Método (ES):** Decompilar `PasswdLevel4.class`: lee el archivo `level4` por URL y compara login/pass contra sus líneas; el archivo trae usuario, password y URL del level 5.
+**Method (EN):** Decompile `PasswdLevel4.class`: it reads the `level4` file and matches login/pass against its lines; the file holds user, password and the level 5 URL.
+
+> **BANDERA:** `appletking` / `pieceofcake`
+
+### Level 5: VB3 + `Mid()` sobre alfabeto
+
+**Método (ES):** Decompilar `LEVEL5.EXE` (VB3, requiere `vbrun300.dll`): usuario y password se arman con `Mid()` sobre la constante `gc0006` (verificado localmente).
+**Method (EN):** Decompile `LEVEL5.EXE` (VB3): user and password are built with `Mid()` over the `gc0006` alphabet (verified locally).
+
+> **BANDERA:** `Try2Hack` / `ILoveDodi`
+
+### Level 6: Bacon por sniffer
+
+**Método (ES):** Capturar el tráfico de `LEVEL6.EXE` (Wireshark): usuario, password y página viajan en código Bacon (grupos de 5 `a`/`b`); tabla a 26 letras decodifica el trío.
+**Method (EN):** Sniff `LEVEL6.EXE` traffic: user, password and page travel as Bacon cipher (5-letter `a`/`b` groups); map to a–z to decode.
+
+> **BANDERA:** `dabomb` / `encryptionrawks` (página `xfkohc`)
+
+### Level 7: Cabeceras HTTP (UA + referer)
+
+**Método (ES):** Forjar petición con `User-Agent: MSIE 7.66 + Linux` y `Referer` de microsoft.com (socket/PHP); el servidor conforme entrega la URL del level 8.
+**Method (EN):** Forge UA `MSIE 7.66 + Linux` and a microsoft.com referer; the satisfied server returns the level 8 URL.
+
+> **BANDERA:** URL del level 8 (sin credencial publicada)
 
 ### Level 8: Explotación CGI `phf` + cracking DES
 
@@ -317,9 +359,23 @@ sqlmap -u "https://try2hack.me/a/1*" --dbs --dump
 
 > **BANDERA:** sesión como `admin` (sin contraseña adicional publicada)
 
+### Level 10: IRC + inyección eggdrop (CTCP PING)
+
+**Método (ES):** Canal `#try2hack.level10` (key publicada): mensaje binario→texto, script del bot en ROT13 (eggdrop), inyección Tcl vía CTCP PING (`[adduser]`/`[chattr]`), cambio de pass y DCC chat que entrega el level 11.
+**Method (EN):** IRC channel with key: binary→text welcome, ROT13 eggdrop script, Tcl injection via CTCP PING, password change and DCC chat yielding level 11.
+
+> **BANDERA:** acceso al level 11 (pass del bot fijado a `123456` en el procedimiento)
+
+### Level 11: Cálculo de posiciones (script)
+
+**Método (ES):** Script que lee posiciones y cadena aleatoria, multiplica `ord()` de esos caracteres y postea los 5 primeros dígitos como `answer`.
+**Method (EN):** Script multiplies `ord()` of the characters at the given positions and posts the first 5 digits as `answer`.
+
+> **BANDERA:** paso a `level12-kvdsju.xhtml`
+
 ### Fuentes / Sources
 
-* dsolstad, `walkthrough-try2hack.nl` — `level02.md`, `level08.md`, `level09.md` (repo, niveles 1-13). URL: `https://github.com/dsolstad/walkthrough-try2hack.nl`. Acceso: 2026-09-26.
+* dsolstad, `walkthrough-try2hack.nl` — `level01.md`, `level03.md`, `level04.md`, `level05.md`, `level06.md`, `level07.md`, `level02.md`, `level08.md`, `level09.md`, `level10.md`, `level11.md` (repo, niveles 1-13). URL: `https://github.com/dsolstad/walkthrough-try2hack.nl`. Acceso: 2026-09-26.
 * ISOstuff, `Try2hack walkthrough (part 1) - Level 1 - 6`, YouTube (~10 años, ~15K vistas). URL: `https://www.youtube.com/watch?v=eT2ct1NOQS0`. Acceso: 2026-09-26.
 * ISOstuff, `Try2hack walkthrough (part 2) - Level 7 - 11`, YouTube (citado en resultados de búsqueda; URL no verificada, sin login). Acceso: 2026-09-26.
 * Dan Schwarzentraub, `Try2hack.nl Level 8`, Medium (URL con acceso 403 sin autenticación; contenido verificado vía `level08.md` del repo). Acceso: 2026-09-26.

@@ -369,3 +369,16 @@ root.txt
 # Description
 
 This machine mainly examines the use and enumeration of Kubelet services. At the same time, the use can create and generate a malicious Pod, and then use Kubectl to run commands in the Pod to read the root flag.
+
+## 📚 Fuentes / Sources
+
+Autor notas: Apuromafo
+
+---
+
+## ⚠️ Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. No publicar flags de contenido activo.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox. Do not publish active content flags.
+
+_Fecha de edición: 2026-09-26_

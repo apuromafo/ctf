@@ -513,3 +513,12 @@ root@blurry:/models#
 
 The CVE exploitation of the footprint is relatively complex, and mainly requires reading the POC document.
 For root, its cleanup script runs too frequently, and it needs to be completed as soon as possible when exploiting it.
+
+---
+
+## ⚠️ Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. No publicar flags de contenido activo.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox. Do not publish active content flags.
+
+_Fecha de edición: 2026-09-26_

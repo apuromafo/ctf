@@ -84,3 +84,16 @@ When the service fails to start in a service way (there are specific requirement
  The shell comes back and lives past the timeout:
 
 
+
+## 📚 Fuentes / Sources
+
+Autor notas: Apuromafo
+
+---
+
+## ⚠️ Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. No publicar flags de contenido activo.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox. Do not publish active content flags.
+
+_Fecha de edición: 2026-09-26_

@@ -169,3 +169,12 @@ Then we can successfully su root and get the root shell.
 ## Fuentes / Sources
 
 - [IppSec: Instant (video)](https://youtube.com/watch?v=Oyh84PHjzsQ) - IppSec - fecha de acceso: 2026-09-24.
+
+---
+
+## ⚠️ Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. No publicar flags de contenido activo.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox. Do not publish active content flags.
+
+_Fecha de edición: 2026-09-26_

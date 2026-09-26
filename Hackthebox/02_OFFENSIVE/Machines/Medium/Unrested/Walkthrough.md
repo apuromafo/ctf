@@ -348,3 +348,17 @@ Then we can press `Data collection` to check what we keys we run before
 The main point is to examine our use and enumeration of `Zabbit` interfaces. I think reading documents is the most time-consuming thing. The SQL injection part is not complicated.
 
 For root, it is very interesting to use a shell packaging script here, which just corresponds to the name of the machine reset, which is very interesting.
+
+## 📚 Fuentes / Sources
+
+Autor notas: Apuromafo
+
+---
+
+## ⚠️ Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. No publicar flags de contenido activo.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox. Do not publish active content flags.
+
+_Fecha de edición: 2026-09-26_
+

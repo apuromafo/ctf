@@ -477,3 +477,12 @@ Although the difficulty of this machine is set to hard, I don’t think it is ha
 ## Fuentes / Sources
 
 - [IppSec: Eureka (video)](https://youtube.com/watch?v=14X4yCgNRVQ) - IppSec - fecha de acceso: 2026-09-24.
+
+---
+
+## ⚠️ Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox. No publicar flags de contenido activo.
+> **EN:** Educational and personal use only. Not affiliated with HackTheBox. Do not publish active content flags.
+
+_Fecha de edición: 2026-09-26_

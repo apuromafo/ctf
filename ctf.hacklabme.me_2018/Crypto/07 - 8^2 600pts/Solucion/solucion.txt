@@ -1,17 +1,73 @@
-# Crypto 07 - 8^2 (600pts) — Solución pendiente
+# Crypto 07 - 8^2 (600 pts) — Solución
 
-> **ES:** Reto 8^2 sin solución documentada (Description: "You can do it!!!"). Pendiente de resolver y documentar con método.
-> **EN:** Unsolved 8^2 challenge. Pending solution with method.
+> **ES:** El archivo `flag_crypto` (124362 B, 1232 líneas) no es legible directamente: es un único blob base64 partido en líneas de ~100 caracteres (saltos `\r\n`), codificado en base64 de forma iterada (29 capas). Decodificando en bucle hasta que el contenido deja de ser base64 se obtiene la flag.
+> **EN:** The `flag_crypto` file (124362 B, 1232 lines) is a single base64 blob wrapped at ~100 chars per line (`\r\n`), iteratively base64-encoded (29 layers). Decoding in a loop until the output is no longer base64 yields the flag.
+
+## Método / Method
+
+1. Unir todas las líneas (quitar `\r\n`): se obtienen 121900 caracteres base64 válidos (`mod 4 == 0`, alfabeto `[A-Za-z0-9+/=]`).
+   Cada línea suelta NO decodifica (longitud 99/31, `mod 4 == 3`); hay que concatenar primero.
+2. Decodificar base64 en bucle: cada capa reduce el tamaño (~×3/4) y el resultado sigue siendo base64, hasta la capa 29.
+3. La capa 29 ya no es base64: es la flag en claro. Verificado con re-codificado: codificar la flag 29 veces reproduce el archivo byte a byte (`roundtrip match: True`).
+4. Nota sobre el título: `8^2 = 64` sugiere "muchas capas base64", pero el número real de capas es **29**, no 64.
+
+## Comandos / Commands
+
+```powershell
+# PowerShell + Python (Windows): unir líneas y decodificar hasta la flag
+py -c "
+import base64, re
+p = 'flag_crypto'
+raw = open(p,'rb').read()
+data = re.sub(rb'\s+', b'', raw)   # unir las 1232 líneas
+print('joined len', len(data))      # 121900
+layers = 0
+while True:
+    data = base64.b64decode(data, validate=True)
+    layers += 1
+    if not re.match(rb'^[A-Za-z0-9+/]*={0,2}$', data) or len(data) % 4 != 0:
+        break
+print('layers:', layers)            # 29
+print('flag:', data.decode())       # HackLabMe(TryHarderB4s364)
+"
+```
+
+```bash
+# Linux equivalente
+tr -d '\r\n' < flag_crypto > joined.b64
+python3 -c "
+import base64, re
+data = open('joined.b64','rb').read()
+layers = 0
+while True:
+    data = base64.b64decode(data, validate=True)
+    layers += 1
+    if not re.match(rb'^[A-Za-z0-9+/]*={0,2}\$', data) or len(data) % 4 != 0:
+        break
+print('layers:', layers)
+print('flag:', data.decode())
+"
+```
+
+## Flag
+
+```text
+HackLabMe(TryHarderB4s364)
+```
+
+- Capas base64 verificadas: 29 (tamaños 121900 → 91424 → … → 36 → 26).
+- Formato coherente con el resto del evento (`HackLabMe(...)`).
 
 ## 📚 Fuentes / Sources
 
+- Archivos del reto: `Description.txt` ("You can do it!!!"), `flag_crypto`.
 - Autor notas: Apuromafo.
 
 ---
 
 ## ⚠️ Aviso Legal / Disclaimer
 
-> **ES:** Uso educativo y personal únicamente.
-> **EN:** Educational and personal use only.
+> **ES:** Uso educativo y personal únicamente. Evento retirado (2018); la flag se publica con fines de archivo/documentación.
+> **EN:** Educational and personal use only. Retired event (2018); flag published for archival/documentation purposes.
 
-_Fecha de edición: 2026-09-25_
+_Fecha de edición: 2026-09-26_

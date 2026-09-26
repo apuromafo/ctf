@@ -292,4 +292,45 @@ sqlmap -u "https://try2hack.me/a/1*" --dbs --dump
 
 ---
 
+## 📎 Anexo: try2hack.nl (sitio distinto) — referencia cruzada / cross-site reference
+
+> **Nota de alcance / Scope note (ES/EN):** Las fuentes públicas solicitadas (vídeos de ISOstuff y repo de dsolstad) documentan **try2hack.nl** (reto holandés clásico, niveles 1-13), **no try2hack.me** (15 retos, registro requerido). Se resumen aquí con el mismo formato como referencia cruzada; **no son soluciones de los retos 2, 8, 9 de try2hack.me**. / The requested public sources cover **try2hack.nl** (classic Dutch challenges, levels 1-13), **not try2hack.me** (15 tasks, login required). Summarized here in the same format as cross-reference; **not solutions for try2hack.me challenges 2, 8, 9**.
+
+### Level 2: Credenciales en Flash (SWF)
+
+**Método (ES):** El clic derecho está deshabilitado; ver el código fuente (`Ctrl+U`) revela un objeto Flash `level2.swf`. Inspeccionar el SWF como texto expone `txtUsername` / `txtPassword` en claro.
+**Method (EN):** Right-click is disabled; view source (`Ctrl+U`) reveals an embedded `level2.swf` Flash object. Inspecting the SWF as text exposes `txtUsername` / `txtPassword` in cleartext.
+
+> **BANDERA:** `try2hack` / `irtehh4x0r!`
+
+### Level 8: Explotación CGI `phf` + cracking DES
+
+**Método (ES):** Explotar el CGI vulnerable `phf` para ejecutar `cat /etc/passwd` (`?Qalias=%0A/bin/cat%20/etc/passwd`), guardar el hash DES clásico de `root` y romperlo con John the Ripper.
+**Method (EN):** Exploit the vulnerable `phf` CGI to run `cat /etc/passwd`, save `root`'s classic DES hash and crack it with John the Ripper.
+
+> **BANDERA:** `arse` (usuario `root`)
+
+### Level 9: Manipulación de cookies (`auth=yes`)
+
+**Método (ES):** El servidor fija cookies `str_username`, `str_password` y `auth=no`. Reenviar la petición POST de login con la cookie `auth=yes` omite la verificación.
+**Method (EN):** The server sets `str_username`, `str_password` and `auth=no` cookies. Replaying the login POST with cookie `auth=yes` bypasses the check.
+
+> **BANDERA:** sesión como `admin` (sin contraseña adicional publicada)
+
+### Fuentes / Sources
+
+* dsolstad, `walkthrough-try2hack.nl` — `level02.md`, `level08.md`, `level09.md` (repo, niveles 1-13). URL: `https://github.com/dsolstad/walkthrough-try2hack.nl`. Acceso: 2026-09-26.
+* ISOstuff, `Try2hack walkthrough (part 1) - Level 1 - 6`, YouTube (~10 años, ~15K vistas). URL: `https://www.youtube.com/watch?v=eT2ct1NOQS0`. Acceso: 2026-09-26.
+* ISOstuff, `Try2hack walkthrough (part 2) - Level 7 - 11`, YouTube (citado en resultados de búsqueda; URL no verificada, sin login). Acceso: 2026-09-26.
+* Dan Schwarzentraub, `Try2hack.nl Level 8`, Medium (URL con acceso 403 sin autenticación; contenido verificado vía `level08.md` del repo). Acceso: 2026-09-26.
+
+### Pendientes (honesto) / Pending (honest)
+
+* **Reto 2 de try2hack.me (hash `$6$VQoztKJH$...`): SIN resolver.** El hash en este archivo está truncado con `...`, insuficiente para `hashcat -m 1800`; el intento con `rockyou.txt` agotó el diccionario (0/1 recuperado). Intentado: búsqueda web del fragmento de sal `VQoztKJH` (sin resultados) y revisión de fuentes públicas (corresponden a try2hack.nl, sin relación). Falta: hash completo y acceso autenticado a try2hack.me (no se hizo login).
+* **Retos 8-9 de try2hack.me: SIN documentar.** try2hack.me exige registro para ver los enunciados (verificado en `https://try2hack.me` el 2026-09-26); sin login no se pueden recuperar. Los *Level 8/9* de try2hack.nl de este anexo son de otro sitio y no deben confundirse con ellos.
+
+---
+*Documentación con fines educativos. / Educational purposes only.*
+_Fecha de edición: 2026-09-26_
+
 ¿Hay algún reto específico que quieras que intentemos resolver ahora usando más técnicas de **pwn** o explotación de binarios? Sería un excelente paso siguiente.

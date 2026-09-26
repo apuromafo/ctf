@@ -14,8 +14,8 @@
 
 ## Notas / Notes
 
-- **ES:** Tamaños verificados por listado local, sin abrir los PDFs (binarios). Las soluciones propias futuras irán en `Solucion/<categoria>/<reto>.md` según `AGENT.md`, no en `Book/`.
-- **EN:** Sizes verified via local listing, without opening the PDFs (binaries). Future own writeups go in `Solucion/<categoria>/<reto>.md` per `AGENT.md`, not in `Book/`.
+- **ES:** Tamaños verificados por listado local, sin abrir los PDFs (binarios). Las soluciones propias futuras irán en `Solution/<categoria>/<reto>.md` según `AGENT.md`, no en `Book/`.
+- **EN:** Sizes verified via local listing, without opening the PDFs (binaries). Future own writeups go in `Solution/<categoria>/<reto>.md` per `AGENT.md`, not in `Book/`.
 
 ---
 *Documentación con fines educativos. / Educational purposes only.*

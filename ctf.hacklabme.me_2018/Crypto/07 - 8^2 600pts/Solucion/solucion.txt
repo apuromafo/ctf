@@ -1,0 +1,17 @@
+# Crypto 07 - 8^2 (600pts) — Solución pendiente
+
+> **ES:** Reto 8^2 sin solución documentada (Description: "You can do it!!!"). Pendiente de resolver y documentar con método.
+> **EN:** Unsolved 8^2 challenge. Pending solution with method.
+
+## 📚 Fuentes / Sources
+
+- Autor notas: Apuromafo.
+
+---
+
+## ⚠️ Aviso Legal / Disclaimer
+
+> **ES:** Uso educativo y personal únicamente.
+> **EN:** Educational and personal use only.
+
+_Fecha de edición: 2026-09-25_

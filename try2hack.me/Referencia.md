@@ -373,9 +373,23 @@ sqlmap -u "https://try2hack.me/a/1*" --dbs --dump
 
 > **BANDERA:** paso a `level12-kvdsju.xhtml`
 
+### Level 12: `.pyc` + password auto-generada
+
+**Método (ES):** Decompilar `level12.pyc` (uncompyle2): los 3 primeros dígitos generan el resto del password por fórmula; el válido legible es `648tryharder` y el usuario sale del MD5 `3e3a378c63aa1…` → `lamer` (Google).
+**Method (EN):** Decompile `level12.pyc`: the first 3 digits generate the rest of the password; readable one is `648tryharder`, user from MD5 lookup → `lamer`.
+
+> **BANDERA:** `lamer` / `648tryharder`
+
+### Level 13: Forense ext3 + borrado (sleuthkit)
+
+**Método (ES):** Montar la imagen ext3: `.password_part1.txt` visible, parte 3 oculta al final del bloque del GIF (strings sobre `dd`), parte 2 borrada y recuperada con `fls`/`ext3grep`; las 3 partes concatenan el password.
+**Method (EN):** Mount the ext3 image: part1 visible, part3 hidden past the GIF block end, deleted part2 recovered via `fls`/`ext3grep`; concatenation is the password.
+
+> **BANDERA:** `f1ff950850ac2f1f51fa82d839f0bd1b`
+
 ### Fuentes / Sources
 
-* dsolstad, `walkthrough-try2hack.nl` — `level01.md`, `level03.md`, `level04.md`, `level05.md`, `level06.md`, `level07.md`, `level02.md`, `level08.md`, `level09.md`, `level10.md`, `level11.md` (repo, niveles 1-13). URL: `https://github.com/dsolstad/walkthrough-try2hack.nl`. Acceso: 2026-09-26.
+* dsolstad, `walkthrough-try2hack.nl` — `level01.md` a `level13.md` (repo, niveles 1-13; anexo cubre 1-13 salvo mención). URL: `https://github.com/dsolstad/walkthrough-try2hack.nl`. Acceso: 2026-09-26.
 * ISOstuff, `Try2hack walkthrough (part 1) - Level 1 - 6`, YouTube (~10 años, ~15K vistas). URL: `https://www.youtube.com/watch?v=eT2ct1NOQS0`. Acceso: 2026-09-26.
 * ISOstuff, `Try2hack walkthrough (part 2) - Level 7 - 11`, YouTube (citado en resultados de búsqueda; URL no verificada, sin login). Acceso: 2026-09-26.
 * Dan Schwarzentraub, `Try2hack.nl Level 8`, Medium (URL con acceso 403 sin autenticación; contenido verificado vía `level08.md` del repo). Acceso: 2026-09-26.

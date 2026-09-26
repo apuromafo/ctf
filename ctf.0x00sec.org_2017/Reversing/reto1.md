@@ -22,7 +22,8 @@
 
 ## 📚 Fuentes / Sources
 
-- Nota original local (`reto1 reversing.txt`) + `referencia.png` y `tabla final.jpg` en esta carpeta.
+- Nota original local (`nota-reto1.txt`) + `referencia.png` y `tabla final.jpg` en esta carpeta.
+- **ES:** `referencia.png` cubre solo reto1; `tabla final.jpg` es leaderboard global sin Apuromafo. / **EN:** `referencia.png` covers only reto1; `tabla final.jpg` is the global leaderboard without Apuromafo.
 - [0x00ctf-2017 write-up — st98 (Harekaze, 3er puesto)](https://st98.github.io/diary/posts/2017-12-18-0x00ctf-2017.html) — st98 — acceso 2026-09-25 (paráfrasis del método OllyDbg).
 - Autor notas: Apuromafo.
 
@@ -33,4 +34,4 @@
 > **ES:** Uso educativo y personal únicamente.
 > **EN:** Educational and personal use only.
 
-_Fecha de edición: 2026-09-25_
+_Fecha de edición: 2026-09-26_

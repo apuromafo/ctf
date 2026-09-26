@@ -10,6 +10,7 @@ EN: Short inventory of `ctf.hacklabme.me_2018/` from folder names + small
 
 Fuente raíz / Root note: `Descripcion.txt` (85 B): "Estos son los retos y
 solucion que realicé para ctf.hacklabme.me — Saludos Apuromafo".
+Imagen raíz / Root image: `vista del reto.jpg` (87780 B, JPEG 413×549): captura de la plataforma, sin vínculo a reto concreto.
 
 ## Tabla por categoría / Table by category
 

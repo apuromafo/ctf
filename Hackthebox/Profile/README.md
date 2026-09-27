@@ -10,7 +10,16 @@
 | **Usuario / User** | [apuromafo](https://app.hackthebox.com/profile/271644) |
 | **ID** | 271644 |
 | **Equipo / Team** | p4rtyhack |
-| **Arte local / Local art** | `ART/Profile_HTB_Apuromafo_271644.png` |
+| **Arte local / Local art** | `ART/Profile_HTB_Apuromafo_271644.png` (1697×934, copia local de la tarjeta pública) |
+
+## 🖼️ Arte del perfil / Profile art
+
+> **ES:** Copia local de la tarjeta pública del perfil, guardada para que siga renderizando aunque
+> el perfil cambie o HTB retire la imagen. No es una captura de box ni contiene datos de retos.
+> **EN:** Local copy of the public profile card, kept so it keeps rendering even if the profile
+> changes or HTB removes the image. Not a box capture and it contains no challenge data.
+
+![Tarjeta pública del perfil de Apuromafo en HackTheBox (ID 271644)](ART/Profile_HTB_Apuromafo_271644.png)
 
 ---
 

@@ -15,6 +15,14 @@
 
 `0x00CTF{F1SH1N9_R3QU1R3S_G00D_B4IT}`
 
+## 🖼️ Captura / Screenshot
+
+> **ES:** Diálogo «Register Me!» tras introducir el serial. Es la única imagen del proyecto que
+> corresponde a un reto, y corresponde solo a este. / **EN:** «Register Me!» dialog after entering
+> the serial. The only project image tied to a challenge, and tied solely to this one.
+
+![Diálogo Register Me! con el serial 0G932SE1L48Y6G y la flag](../img/referencia.png)
+
 ## 🛠️ Método / Method
 
 > **ES:** Diálogo pide serial. El código tras `GetDlgItemTextW` viene con bytes basura anti-debug: reinterpretar desde `0x4013e3` revela el check real en `0x401560` (≥13 chars, comparación de 4 en 4 en `sub_401450`). Con OllyDbg, breakpoint en `cmp ax,[edx]` e ingresar cualquier serial: `edx` apunta al serial real `0G932SE1L48Y6G`. Ingresarlo entrega la flag.
@@ -22,8 +30,13 @@
 
 ## 📚 Fuentes / Sources
 
-- Nota original local (`nota-reto1.txt`) + `referencia.png` y `tabla final.jpg` en esta carpeta.
-- **ES:** `referencia.png` cubre solo reto1; `tabla final.jpg` es leaderboard global sin Apuromafo. / **EN:** `referencia.png` covers only reto1; `tabla final.jpg` is the global leaderboard without Apuromafo.
+- Nota original local (`nota-reto1.txt`, mismo directorio) + captura `../img/referencia.png`.
+- **ES:** El detalle de ambas imágenes del proyecto está en `../img/README.md`.
+  `referencia.png` cubre solo este reto; `tabla final.jpg` es la clasificación global top-10 del
+  evento, sin `Apuromafo`, y es contexto — no una puntuación propia.
+  / **EN:** Details of both project images are in `../img/README.md`.
+  `referencia.png` covers only this challenge; `tabla final.jpg` is the event's global top-10
+  leaderboard, without `Apuromafo`, and is context — not an own score.
 - [0x00ctf-2017 write-up — st98 (Harekaze, 3er puesto)](https://st98.github.io/diary/posts/2017-12-18-0x00ctf-2017.html) — st98 — acceso 2026-09-25 (paráfrasis del método OllyDbg).
 - Autor notas: Apuromafo.
 

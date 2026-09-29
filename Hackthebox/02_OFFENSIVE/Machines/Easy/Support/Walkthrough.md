@@ -131,7 +131,9 @@ There’s a user named support with an interesting info field:
 I guess it would be the password of one of user.
 
 Looking at the Bloodhound data, support shows up there as a member of Remote Management Users:
-![](images/Pasted%20image%2020240905125823.png)
+> ⚠️ **Captura no disponible / Screenshot unavailable:** `images/Pasted image 20240905125823.png` no está en el
+> repositorio — nunca se versionó. El texto alrededor es lo que hay. /
+> Not in the repository — never committed. The surrounding text is what exists.
 
 crackmapexec confirms:
 ```
@@ -147,7 +149,9 @@ Then we can get the user.txt
 
 3, shell as SYSTEM
 Looking at the Bloodhound data again, the support user is a member of the Shared Support Accounts group, which has GenericAll on the computer object, DC.SUPPORT.HTB:
-![](images/Pasted%20image%2020240905130300.png)
+> ⚠️ **Captura no disponible / Screenshot unavailable:** `images/Pasted image 20240905130300.png` no está en el
+> repositorio — nunca se versionó. El texto alrededor es lo que hay. /
+> Not in the repository — never committed. The surrounding text is what exists.
 
 ```
 I’m going to abuse resource-based constrained delegation. First I’ll add a fake computer to the domain under my control. Then I can act as the DC to request Kerberos tickets for the fake computer giving the ability to impersonate other accounts, like Administrator. For this to work, I’ll need an authenticated user who can add machines to the domain (by default, any user can add up to 10). This is configured in the ms-ds-machineaccountquota attribute, which needs to be larger than 0. Finally, I need write privileges over a domain joined computer (which GenericALL on the DC gets me.)

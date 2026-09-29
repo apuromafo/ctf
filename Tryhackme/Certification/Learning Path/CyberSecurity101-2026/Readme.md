@@ -20,7 +20,7 @@ El **nuevo path de entrada** de TryHackMe que reemplaza a los antiguos "Complete
 
 **¡Sí!** Es la preparación oficial para la certificación **Cyber Security 101 (SEC1)**: https://tryhackme.com/certification/cyber-security-101
 
-> Ficha local: [Cyber Security 101 (SEC1)](../Tryhackme%20SEC1/Readme.md)
+> Ficha local: [Cyber Security 101 (SEC1)](../../Tryhackme%20SEC1/Readme.md)
 
 ### Datos de examen SEC1 / SEC1 exam facts (verificado / verified)
 

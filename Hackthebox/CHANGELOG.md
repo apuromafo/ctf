@@ -3,6 +3,18 @@
 > **ES:** Cambios notables del lado HTB, recientes primero.
 > **EN:** Notable HTB-side changes, newest first.
 
+## 2026-09-30
+
+- Auditoría de las cifras de `INDICE.md` contra la tabla contigua del mismo fichero: 10/10 exactas.
+  Única imprecisión anotada sin tocar el fichero: "164 walkthroughs" cuenta ficheros con pie estándar
+  (164 de 176 `.md`; solo 142 son `Walkthrough.md`).
+- IppSec reconciliado contra `COMANDOS.md`: **133/142** Machine Writeups con link (131 canónicos +
+  Granny/Grandpa + 9 sin link), **132 IDs distintos**. La cifra "124/428" de la planificación local no
+  era reproducible.
+- `Machines/json/`: 868 dumps fuera del tracking (ya hecho el 2026-09-24, confirmado).
+- **Sin cambios en contenido de writeups.** La deriva detectada en `_PLANIFICACION/` (flags 21 → 28,
+  infomachine 17 → 20) se corrigió **solo en la capa local no versionada**.
+
 ## 2026-09-24
 
 - 24 fichas Challenges <5 KB con cabecera ES/EN + pie (contenido ZH preservado como cita + paráfrasis).
@@ -19,4 +31,4 @@
 > **ES:** Uso educativo y personal únicamente. No afiliado a HackTheBox.
 > **EN:** Educational and personal use only. Not affiliated with HackTheBox.
 
-_Fecha de edición: 2026-09-24_
+_Fecha de edición: 2026-09-30_

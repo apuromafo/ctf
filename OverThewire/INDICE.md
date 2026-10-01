@@ -19,33 +19,33 @@ credenciales; es una decisión consciente y documentada, no un descuido. Ver § 
 
 | Juego / Game | Fichas | Rango | Patrón de ficheros | Conexión | Estado |
 |---|---|---|---|---|---|
-| [Bandit](Online/Bandit/Readme.md) | 33 | 0-32 | `level00.md`…`level32.md` | `ssh bandit0@bandit.labs.overthewire.org -p2220` | Completo |
-| [Behemoth](Online/Behemoth/Readme.md) | 1 | 0 | `level00.md` | `ssh behemoth0@behemoth.labs.overthewire.org -p2221` | Solo nivel 0 |
-| [Drifter](Online/Drifter/Readme.md) | 1 | 0 | `level00.md` | `ssh drifter0@drifter.labs.overthewire.org -p2230` | Solo nivel 0 |
-| [FormulaOne](Online/FormulaOne/Readme.md) | 1 | 0 | `level00.md` | `ssh formulaone0@formulaone.labs.overthewire.org -p2232` | Solo nivel 0 |
-| [Krypton](Online/Krypton/Readme.md) | 8 | 0-7 | `Nivel0.md`…`Nivel7.md` | `ssh krypton1@krypton.labs.overthewire.org -p2231` | Completo |
-| [Leviathan](Online/Leviathan/Readme.md) | 8 | 0-7 | `level00.md`…`level07.md` | `ssh leviathan0@leviathan.labs.overthewire.org -p2223` | Completo |
-| [Manpage](Online/Manpage/Readme.md) | 1 | 0 | `level00.md` | `ssh manpage0@manpage.labs.overthewire.org -p2224` | Solo nivel 0 |
-| [Maze](Online/Maze/Readme.md) | 1 | 0 | `level00.md` | `ssh maze0@maze.labs.overthewire.org -p2225` | Solo nivel 0 |
-| [Narnia](Online/Narnia/Readme.md) | 10 | 0-9 | `level0.md`…`Level9.md` | `ssh narnia0@narnia.labs.overthewire.org -p2226` | Completo |
-| [Natas](Online/Natas/Readme.md) | 35 | 0-34 | `00.md`…`34.md` | `http://natasX.natas.labs.overthewire.org` (HTTP, no SSH) | Completo |
-| [Utumno](Online/Utumno/Readme.md) | 1 | 0 | `level00.md` | `ssh utumno0@utumno.labs.overthewire.org -p2227` | Solo nivel 0 |
-| [Vortex](Online/Vortex/Readme.md) | 2 | 0-1 | `level00.md`, `level01.md` | `ssh vortex0@vortex.labs.overthewire.org -p2228` | 02+ bloqueado |
+| [Bandit](Online/Bandit/README.md) | 33 | 0-32 | `level00.md`…`level32.md` | `ssh bandit0@bandit.labs.overthewire.org -p2220` | Completo |
+| [Behemoth](Online/Behemoth/README.md) | 1 | 0 | `level00.md` | `ssh behemoth0@behemoth.labs.overthewire.org -p2221` | Solo nivel 0 |
+| [Drifter](Online/Drifter/README.md) | 1 | 0 | `level00.md` | `ssh drifter0@drifter.labs.overthewire.org -p2230` | Solo nivel 0 |
+| [FormulaOne](Online/FormulaOne/README.md) | 1 | 0 | `level00.md` | `ssh formulaone0@formulaone.labs.overthewire.org -p2232` | Solo nivel 0 |
+| [Krypton](Online/Krypton/README.md) | 8 | 0-7 | `level00.md`…`level07.md` | `ssh krypton1@krypton.labs.overthewire.org -p2231` | Completo |
+| [Leviathan](Online/Leviathan/README.md) | 8 | 0-7 | `level00.md`…`level07.md` | `ssh leviathan0@leviathan.labs.overthewire.org -p2223` | Completo |
+| [Manpage](Online/Manpage/README.md) | 1 | 0 | `level00.md` | `ssh manpage0@manpage.labs.overthewire.org -p2224` | Solo nivel 0 |
+| [Maze](Online/Maze/README.md) | 1 | 0 | `level00.md` | `ssh maze0@maze.labs.overthewire.org -p2225` | Solo nivel 0 |
+| [Narnia](Online/Narnia/README.md) | 10 | 0-9 | `level00.md`…`level09.md` | `ssh narnia0@narnia.labs.overthewire.org -p2226` | Completo |
+| [Natas](Online/Natas/README.md) | 35 | 0-34 | `level00.md`…`level34.md` | `http://natasX.natas.labs.overthewire.org` (HTTP, no SSH) | Completo |
+| [Utumno](Online/Utumno/README.md) | 1 | 0 | `level00.md` | `ssh utumno0@utumno.labs.overthewire.org -p2227` | Solo nivel 0 |
+| [Vortex](Online/Vortex/README.md) | 2 | 0-1 | `level00.md`, `level01.md` | `ssh vortex0@vortex.labs.overthewire.org -p2228` | 02+ bloqueado |
 
 ## Offline — 1 juego, 12 fichas
 
 | Juego / Game | Fichas | Rango | Patrón | Estado |
 |---|---|---|---|---|
-| [Semtex](Offline/Semtex/Readme.md) | 12 | 0-11 | `level00.md`…`level11.md` | Completo (partido desde una transcripción única) |
+| [Semtex](Offline/Semtex/README.md) | 12 | 0-11 | `level00.md`…`level11.md` | Completo (partido desde una transcripción única) |
 
 ## Released — 4 juegos, 0 fichas
 
 | Juego / Game | Conferencia | Descarga | Estado |
 |---|---|---|---|
-| [Abraxas](Released/Abraxas/Readme.md) | HES 2011 | `.ova` | Ficha del juego; **sin niveles jugados** |
-| [HES2010](Released/HES2010/Readme.md) | HES 2010 | `.ova` | Ficha del juego; **sin niveles jugados** |
-| [Monxla](Released/Monxla/Readme.md) | HES 2012 | `.iso` | Ficha del juego; **sin niveles jugados** |
-| [Kishi](Released/Kishi/Readme.md) | HES 2013 + NSC 2013 | `vagrant init StevenVanAcker/kishi` | Ficha del juego; **sin niveles jugados** |
+| [Abraxas](Released/Abraxas/README.md) | HES 2011 | `.ova` | Ficha del juego; **sin niveles jugados** |
+| [HES2010](Released/HES2010/README.md) | HES 2010 | `.ova` | Ficha del juego; **sin niveles jugados** |
+| [Monxla](Released/Monxla/README.md) | HES 2012 | `.iso` | Ficha del juego; **sin niveles jugados** |
+| [Kishi](Released/Kishi/README.md) | HES 2013 + NSC 2013 | `vagrant init StevenVanAcker/kishi` | Ficha del juego; **sin niveles jugados** |
 
 **Total: 17 juegos, 114 fichas de nivel.** Cobertura: 102 Online + 12 Offline + 0 Released.
 
@@ -75,12 +75,14 @@ fichas de texto y terminal.
 
 No corregidas: renombrar niveles ya publicados requiere OK del propietario (`NO-TOCAR.md`).
 
-| Juego | Inconsistencia |
+| Normalización aplicada (2026-09-30) | Detalle |
 |---|---|
-| [Narnia](Online/Narnia/Readme.md) | `level0.md`…`level6.md`, luego `Level7.md`, `level8.md`, `Level9.md` — `L` mayúscula en 7 y 9 |
-| [Krypton](Online/Krypton/Readme.md) | `Nivel0.md`…`Nivel7.md` en español, frente a `level*.md` en el resto |
-| [Natas](Online/Natas/Readme.md) | `00.md`…`34.md`, sin prefijo `level` |
-| Bandit, Natas y los 4 de `Released/` | 6 usan `README.md` en mayúsculas; los otros 11 juegos usan `Readme.md` |
+| Ficheros `README.md` | Los 17 juegos usan `README.md` en mayúsculas (antes 6 sí y 11 con `Readme.md`) |
+| [Narnia](Online/Narnia/README.md) `Solution/` | `level00.md`…`level09.md`, todos en minúscula y con 2 dígitos |
+| [Krypton](Online/Krypton/README.md) `Solution/` | `level00.md`…`level07.md`; antes en español (`Nivel*.md`) |
+| [Natas](Online/Natas/README.md) `Solution/` | `level00.md`…`level34.md`; antes sin prefijo (`00.md`…`34.md`) |
+| `tabla final.jpg` (0x00sec) | Renombrado a `tabla_final.jpg` |
+| **Bandit ya era la referencia** | `level00.md`…`level32.md`; convención adoptada por los otros tres juegos |
 
 ## Ver convención de nivel / See the level convention
 

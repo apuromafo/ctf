@@ -5,6 +5,12 @@
 
 ## 2026-09-30
 
+- Nombres normalizados: `Narnia/Solution/Level7.md` y `Level9.md` → minúscula (sus hermanos 0-6 y 8 ya
+  lo estaban); `img/tabla final.jpg` → `img/tabla_final.jpg`.
+- `Machines/Medium/Compiled/Walkthrough.md`: **1 carácter** U+FFFD restaurado (`Versión` en la cadena de
+  `ver`). Único caso de los 11 U+FFFD de HTB reconstruible con certeza. Los otros 10 se dejan intactos:
+  2 en `Certificate` (frase citada de HTB que no aparece en ningún otro fichero, sin término de
+  comparación) y 8 en `The Needle` (salida de terminal de la plataforma). No se inventa texto.
 - Auditoría de las cifras de `INDICE.md` contra la tabla contigua del mismo fichero: 10/10 exactas.
   Única imprecisión anotada sin tocar el fichero: "164 walkthroughs" cuenta ficheros con pie estándar
   (164 de 176 `.md`; solo 142 son `Walkthrough.md`).

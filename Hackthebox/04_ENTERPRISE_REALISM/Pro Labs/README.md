@@ -16,7 +16,7 @@
 | 008 | FULLHOUSE | Walkthrough `07_FULLHOUSE.md` + `Flags/` + `Writeup/` (21 files) | `008_FULLHOUSE/` |
 | 009 | ALCHEMY | Walkthrough `12_ALCHEMY.md` + `infomachine.md` + `flags/` | `009_ALCHEMY/` |
 | 010 | XEN | Walkthrough `09_XEN.md` + `infomachine.md` + `flags/` | `010_XEN/` |
-| 011 | POO | Walkthrough `11_POO.md` + `Readme.md` + `flags/` | `011_POO/` |
+| 011 | POO | Walkthrough `11_POO.md` + `README.md` + `flags/` | `011_POO/` |
 | 012 | HADES | Walkthrough `10_HADES.md` + `infomachine.md` + `flags/` | `012_HADES/` |
 | 013 | RPG | Walkthrough `13_RPG.md` + `infomachine.md` + `flags/` | `013_RPG/` |
 | 014 | SOLAR | Walkthrough `14_SOLAR.md` + `infomachine.md` + `flags/` | `014_SOLAR/` |

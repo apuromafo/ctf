@@ -10,8 +10,8 @@
 | 1 | Nombre no documentado localmente / Name not documented locally | Activo (lab de pago / paid lab) |
 | 2 | Nombre no documentado localmente / Name not documented locally | Activo (lab de pago / paid lab) |
 
-> **ES:** `infomachine.md` local declara 2 máquinas y 2 flags pero no incluye los nombres. `flags/Readme.md` está vacío (plantilla sin entradas).
-> **EN:** Local `infomachine.md` declares 2 machines and 2 flags but includes no names. `flags/Readme.md` is empty (template with no entries).
+> **ES:** `infomachine.md` local declara 2 máquinas y 2 flags pero no incluye los nombres. `flags/README.md` está vacío (plantilla sin entradas).
+> **EN:** Local `infomachine.md` declares 2 machines and 2 flags but includes no names. `flags/README.md` is empty (template with no entries).
 
 ## 📝 Cobertura / Coverage
 

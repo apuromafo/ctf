@@ -10,19 +10,19 @@
 
 | Nombre (no traducir) | Contenido / Contents | Nº files (recursivo) | Ruta / Path |
 |---|---|---|---|
-| Akerva | `Readme.md` + `Tutorial/` | 5 | `Akerva/` |
-| AWS | `Readme.md` + `Tutorial/tut1/` (`index2.md` + `img2/`) + `tut2/` (`Walkthrough.md` + `images/`) + `tut3/` (`index.md` + `img/`) | 66 | `AWS/` |
-| Context | `Readme.md` + `Tutorial/` | 47 | `Context/` |
-| Faraday | `Readme.md` + `Tutorial/` | 16 | `Faraday/` |
-| JET | `Readme.md` + `Tutorial/` | 20 | `JET/` |
-| Synacktiv | `Readme.md` + `Tutorial/` | 24 | `Synacktiv/` |
+| Akerva | `README.md` + `Tutorial/` | 5 | `Akerva/` |
+| AWS | `README.md` + `Tutorial/tut1/` (`index2.md` + `img2/`) + `tut2/` (`Walkthrough.md` + `images/`) + `tut3/` (`index.md` + `img/`) | 66 | `AWS/` |
+| Context | `README.md` + `Tutorial/` | 47 | `Context/` |
+| Faraday | `README.md` + `Tutorial/` | 16 | `Faraday/` |
+| JET | `README.md` + `Tutorial/` | 20 | `JET/` |
+| Synacktiv | `README.md` + `Tutorial/` | 24 | `Synacktiv/` |
 
 Total: 6 fortalezas, ~178 files (mayoría imágenes en `Tutorial/`).
 
 ## 📝 Cobertura / Coverage
 
-> **ES:** Cada fortaleza conserva su `Readme.md` y árbol `Tutorial/` con walkthroughs e imágenes. AWS y Context concentran la mayor parte del volumen. Solo inventario: no se reescribieron walkthroughs.
-> **EN:** Each fortress keeps its `Readme.md` and `Tutorial/` tree with walkthroughs and images. AWS and Context hold most of the volume. Inventory only: no walkthroughs were rewritten.
+> **ES:** Cada fortaleza conserva su `README.md` y árbol `Tutorial/` con walkthroughs e imágenes. AWS y Context concentran la mayor parte del volumen. Solo inventario: no se reescribieron walkthroughs.
+> **EN:** Each fortress keeps its `README.md` and `Tutorial/` tree with walkthroughs and images. AWS and Context hold most of the volume. Inventory only: no walkthroughs were rewritten.
 
 ## 📚 Fuentes / Sources
 

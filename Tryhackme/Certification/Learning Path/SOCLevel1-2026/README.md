@@ -9,7 +9,7 @@ Outline oficial / Official outline: https://tryhackme.com/path/outline/soclevel1
 
 Path defensivo que entrega las habilidades prácticas de un **SOC Analyst Tier 1**: triage de alertas, SIEM, phishing, monitoreo de red/endpoint, threat intel y respuesta a incidentes. Al completarlo se obtiene **Certificate of Completion** (requiere Premium) y quedas preparado para la certificación **SAL1**.
 
-> Ficha local: [Security Analyst Level 1 (SAL1)](../../TryHackMe%20SAL1/Readme.md)
+> Ficha local: [Security Analyst Level 1 (SAL1)](../../TryHackMe%20SAL1/README.md)
 
 ## Estructura / Structure
 

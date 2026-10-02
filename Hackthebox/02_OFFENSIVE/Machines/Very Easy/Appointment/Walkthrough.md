@@ -20,7 +20,7 @@
 |---|-----------------|----------------|
 | 1 | Write-up PDF (principal / main) | `htb_Appointment.pdf` |
 | 2 | Write-up PDF (copia en subcarpeta / copy in subfolder) | `Writeup/Appointment Write-up.pdf` |
-| 3 | Enlace oficial / Official link | `Readme.md` |
+| 3 | Enlace oficial / Official link | `README.md` |
 
 ## 🎯 Objetivo / Objective
 

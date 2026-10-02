@@ -10,8 +10,8 @@
 | 1 | Domain controller (nombre no documentado localmente / name not documented locally) | Activo (lab de pago / paid lab) |
 | 2 | Member server (nombre no documentado localmente / name not documented locally) | Activo (lab de pago / paid lab) |
 
-> **ES:** Los roles (DC + member server) vienen de la documentación pública de HTB; `infomachine.md` local declara 2 máquinas y 2 flags pero no incluye los nombres. `flags/Readme.md` está vacío.
-> **EN:** Roles (DC + member server) come from HTB public docs; local `infomachine.md` declares 2 machines and 2 flags but includes no names. `flags/Readme.md` is empty.
+> **ES:** Los roles (DC + member server) vienen de la documentación pública de HTB; `infomachine.md` local declara 2 máquinas y 2 flags pero no incluye los nombres. `flags/README.md` está vacío.
+> **EN:** Roles (DC + member server) come from HTB public docs; local `infomachine.md` declares 2 machines and 2 flags but includes no names. `flags/README.md` is empty.
 
 ## 📝 Cobertura / Coverage
 

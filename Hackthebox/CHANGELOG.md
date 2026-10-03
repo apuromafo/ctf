@@ -15,9 +15,11 @@
   Única imprecisión anotada sin tocar el fichero: "164 walkthroughs" cuenta ficheros con pie estándar
   (164 de 176 `.md`; solo 142 son `Walkthrough.md`).
 - **Clave de API de Google redactada** en `02_OFFENSIVE/Challenges/Forensics/Scripts and Formulas/index.md`
-  (2 apariciones: una en texto plano, otra **dentro de una cadena base64** que hubo que decodificar,
-  sustituir y recodificar). No es una credencial propia: es el artefacto del reto de Business CTF 2023.
-  El resto del material del reto queda intacto. `grep` de `AIza` en el repo: **0 apariciones**.
+  (2 apariciones: L72 en texto plano, y L35 que la tenía **codificada en base64 dentro del payload
+  ofuscado** de PowerShell). No es una credencial propia: es el artefacto del reto de Business CTF
+  2023. Verificado decodificando en ambas capas: el base64 pasa de 232 a 212 caracteres, sigue siendo
+  base64 válido, los parámetros `ranges` e `includeGridData` quedan idénticos y solo cambia `key`.
+  `grep` de `AIza` en el repo: **0 apariciones**.
 - **81 renombrados solo de capitalización** en `README.md` → mayúsculas, más 8 referencias de texto
   y 5 enlaces relativos actualizados para que no quedaran obsoletos.
   Requiere `core.ignorecase=false`: con el valor anterior (`true`, habitual en Windows) git no

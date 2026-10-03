@@ -27,6 +27,17 @@
 - `02 Level Medium/AD Authenticated Enumeration/ad authenticated enumeration.md` → `AD
   Authenticated Enumeration.md`, para casar con el título de la room y con sus 400+ hermanos. Divergencia
   de capitalización **preexistente** que `core.ignorecase=true` ocultaba. Ver §E2.
+- **Cobertura de IppSec verificada al 100 %: 133/133.** Descargado el índice oficial de IppSec
+  (`ippsec.rocks/dataset.json`, 9 245 entradas / 516 vídeos) y contrastado máquina a máquina:
+  128 links coinciden exactamente con su `videoId`, **0 discrepancias**, y los 5 que no figuran en el
+  índice (`Bashed`, `Grandpa`, `Granny`, `Sorcery`, `Zipping` — máquinas retiradas por HTB) se
+  confirman por `oEmbed`: autor `IppSec`, títulos `HackTheBox - Bashed`,
+  `HackTheBox - Granny and Grandpa` (un solo vídeo para las dos), `HackTheBox - Sorcery`,
+  `HackTheBox - Zipping`. No se modifica ningún fichero.
+- Las 9 máquinas sin link (**`Antique`, `Appointment`, `Nunchucks`, `Return`, `SteamCloud`,
+  `Strutted`, `Toolbox`, `Unrested`, `Validation`**) **no tienen vídeo de IppSec**: están ausentes de
+  su índice. `Validation` es un falso positivo descartado: la entrada es `UHC - Validation`
+  (Underground Hacking), otra máquina. Se deja como está, sin inventar enlace.
 - IppSec reconciliado contra `COMANDOS.md`: **133/142** Machine Writeups con link (131 canónicos +
   Granny/Grandpa + 9 sin link), **132 IDs distintos**. La cifra "124/428" de la planificación local no
   era reproducible.

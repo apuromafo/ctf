@@ -2133,8 +2133,8 @@ I'm still working on the reddish box. Maybe something else needs to be done with
 [^6]: https://www.exploit-db.com/exploits/48505
 [^7]: https://www.exploit-db.com/exploits/47502
 [^8]: https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
-[^9]: https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/
-[^10]: https://www.immunityinc.com/products/debugger/
+[^9]: https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/
+[^10]: https://github.com/kbandla/ImmunityDebugger/releases
 [^11]: https://github.com/corelan/mona
 [^12]: http://docs.pwntools.com/en/stable/
 [^13]: https://github.com/jpillora/chisel/releases/

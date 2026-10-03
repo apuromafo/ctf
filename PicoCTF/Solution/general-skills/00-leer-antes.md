@@ -1,7 +1,7 @@
 # Antes de resolver: proceso piloto / Read first: pilot process
 
-> **ES:** Los retos de PicoCTF exigen cuenta en `play.picoctf.org` (verificado 2026-09-26: la plataforma devuelve 403 sin sesión; no se creó cuenta). Este archivo documenta el proceso para que el primer reto resuelto siga la plantilla.
-> **EN:** PicoCTF challenges require an account (verified 2026-09-26: 403 without session; no account created). This file records the process for the first solved challenge.
+> **ES:** Los retos exigían cuenta en `play.picoctf.org` (verificado 2026-09-26: 403 sin sesión). **Actualizado 2026-10-02: `play.picoctf.org` ya no resuelve por DNS**; la plataforma pasó a llamarse **CyLab Security Academy** (Carnegie Mellon University) y está en `https://cylabacademy.org/`. Este archivo documenta el proceso para que el primer reto resuelto siga la plantilla.
+> **EN:** The challenges required an account at `play.picoctf.org` (verified 2026-09-26: 403 without session). **Updated 2026-10-02: `play.picoctf.org` no longer resolves in DNS**; the platform is now **CyLab Security Academy** (Carnegie Mellon University) at `https://cylabacademy.org/`. This file records the process for the first solved challenge.
 
 ## Proceso / Process
 
@@ -12,7 +12,8 @@
 
 ## 📚 Fuentes / Sources
 
-- PicoCTF practice: `https://play.picoctf.org/practice` — acceso 2026-09-26 (403 sin login).
+- PicoCTF practice: `https://cylabacademy.org/` — acceso 2026-10-02.
+  **picoCTF ya no existe como tal:** pasó a ser **CyLab Security Academy** ( Carnegie Mellon University), y `play.picoctf.org` **dejó de resolver por DNS**. Enlace actualizado 2026-10-02; el anterior (`https://play.picoctf.org/practice`) está muerto. El espacio de práctica equivalente es el *Challenge Library* de CyLab Security Academy. / picoCTF is now **CyLab Security Academy** (CMU); `play.picoctf.org` no longer resolves in DNS.
 - Autor notas: Apuromafo.
 
 ---

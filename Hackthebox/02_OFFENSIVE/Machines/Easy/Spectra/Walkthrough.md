@@ -148,7 +148,7 @@ cat /root/root.txt  # formato parcial ofuscado
 
 - **Fuente:** Nota local `index.md` (notas propias en chino/inglés, con capturas en `img/`) — randark/nota migrada
 - **Walkthrough de referencia:** Nota previa en inglés `Walkthrough.md` (legacy: nano `.save`, Chromium OS, `autologin.conf.orig`, job `test`) — wither/nota migrada
-- **Referencia técnica:** GTFOBins — init (privesc sudo) — https://gtfobins.github.io/gtfobins/init/ — GTFOBins
+- **Referencia técnica:** GTFOBins — init (privesc sudo) — https://gtfobins.github.io/#init — GTFOBins (enlace corregido 2026-10-02: la ruta `/gtfobins/init/` devuelve 404 desde hace tiempo; GTFOBins es una SPA con anclas `#init`)
 - **Fecha de acceso:** 2026-09-24
 - **Autor de este walkthrough:** Apuromafo (contenido propio salvo cita)
 

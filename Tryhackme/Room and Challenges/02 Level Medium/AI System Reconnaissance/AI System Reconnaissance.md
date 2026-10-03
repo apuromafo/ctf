@@ -4,7 +4,7 @@
 | **Slug** | `ai-system-reconnaissance` |
 | **Link** | [TryHackMe](https://tryhackme.com/room/ai-system-reconnaissance) |
 | **Sección** | Secure AI Systems (Section 2 of 5) |
-| **Fuente** | [vanshksingh/TryHackMe-AI-Security-Path](https://github.com/vanshksingh/TryHackMe-AI-Security-Path) — `ai-system-reconnaissance\Readme.md` |
+| **Fuente** | `vanshksingh/TryHackMe-AI-Security-Path` (repositorio eliminado; no se halló copia del contenido citado, comprobado 2026-10-03) — `ai-system-reconnaissance\Readme.md` |
 | **Componentes** | NVIDIA Triton, TensorFlow Serving, TorchServe, Ollama, vLLM, MLflow, Kubeflow, Ray, Qdrant, Weaviate, Milvus, Chroma, Jupyter, MinIO, Prometheus, gRPC (grpcurl), Shodan, MLOKit, Nmap, SIEM, MITRE ATLAS |
 | **Impacto** | Descubre e identifica infraestructura de IA/ML expuesta en una red: componentes, puertos y endpoints, fingerprinting de servicios, enumeración de MLflow/vector DBs, mapeo a MITRE ATLAS y detección en logs SIEM. |
 ---

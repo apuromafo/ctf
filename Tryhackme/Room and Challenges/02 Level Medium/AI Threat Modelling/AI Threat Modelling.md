@@ -4,7 +4,7 @@
 | **Slug** | `ai-threat-modelling` |
 | **Link** | [TryHackMe](https://tryhackme.com/room/ai-threat-modelling) |
 | **Sección** | Secure AI Systems (Section 2 of 5) |
-| **Fuente** | [vanshksingh/TryHackMe-AI-Security-Path](https://github.com/vanshksingh/TryHackMe-AI-Security-Path) — `ai-threat-modelling\Readme.md` |
+| **Fuente** | `vanshksingh/TryHackMe-AI-Security-Path` (repositorio eliminado; no se halló copia del contenido citado, comprobado 2026-10-03) — `ai-threat-modelling\Readme.md` |
 | **Componentes** | Threat modelling, STRIDE adaptado a IA, MITRE ATLAS, OWASP LLM Top 10 (2025), RAG, chatbot LLM, modelos de detección de fraude, Denial of Wallet, prompt injection |
 | **Impacto** | Enseña a identificar activos y superficies de ataque específicos de IA, aplicar STRIDE a sistemas IA/ML, usar MITRE ATLAS, mapear riesgos con OWASP LLM Top 10 y producir evaluaciones de amenazas de IA estructuradas (escenario MegaCorp). |
 ---

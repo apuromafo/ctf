@@ -645,7 +645,7 @@ Descargue el archivo `manifest.wav`.
 
 [manifest.wav](assets/manifest.wav)
 
-Intente clonar el sonido usando [PlayAI](https://app.play.ht).
+Intente clonar el sonido usando PlayAI. _Nota: el servicio ya no existe — `play.ht` y `play.ai` no resuelven por DNS y `app.play.ht` devuelve 404 (comprobado 2026-10-03)._
 
 ![img](img/image_20250319-141952.png)
 

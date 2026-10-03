@@ -37,6 +37,17 @@
   **no se ha regenerado**.
 - **Alcance de la auditoría:** solo las secciones de citación. Los enlaces sueltos en el cuerpo de los
   walkthroughs (1 773 URLs de tipo documental) **quedan sin auditar**.
+- **Ampliación del mismo día: los enlaces markdown del cuerpo de los walkthroughs** (830 URLs
+  pendientes, 6 min con reintento ante 429). Se cambió el criterio de extracción a **solo destinos de
+  enlaces markdown `[texto](url)`**, que son decisiones deliberadas, en vez de URLs sueltas, que son
+  comandos y objetivos de laboratorio. Resultado: **648 vivas · 98 bloqueadas · 71 muertas ·
+  13 ambiguas**. De las 71 muertas, **65 están en material de terceros** (53 en el blog de TryHackMe,
+  8 en `node_modules/` de paquetes npm, 2 en `fortresses/`, 2 en writeups importados) y no se tocan.
+  Las **6 en ficheros propios** son las del punto siguiente y del bloque de TryHackMe.
+- **`Pro Labs/008_FULLHOUSE/Writeup/index.md`:** el paso de clonar la voz con PlayAI apuntaba a
+  `https://app.play.ht`, que devuelve 404. **El servicio ya no existe**: `play.ht` y `play.ai` no
+  tienen registro A y `app.play.ht` resuelve a una IP de Vercel sin servir nada. Se retiró el enlace
+  y se dejó constancia del cierre, porque el paso del writeup hoy no es reproducible tal como está.
 
 ## 2026-09-30
 

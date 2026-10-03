@@ -40,6 +40,6 @@ Prompt injection (directa/indirecta), jailbreaking (DAN, sufijos adversariales G
 
 ---
 
-**Fuente / Source:** [TryHackMe AI Security outline](https://tryhackme.com/path/outline/aisecurity) · [AI Security landing](https://tryhackme.com/aisecurity) · [SecBurg blog - AI Security](https://secburg.com) · [THM AI Security Path (walkthroughs GitHub: gresium, RAHULKATARA1, vanshsaini48, WillieShei)](https://github.com/gresium/tryhackme-walkthroughs) · [help.tryhackme.com - AI1 Support/Exam Guide](https://help.tryhackme.com)
+**Fuente / Source:** [TryHackMe AI Security outline](https://tryhackme.com/path/outline/aisecurity) · [AI Security landing](https://tryhackme.com/aisecurity) · [SecBurg blog - AI Security](https://secburg.com) · THM AI Security Path (walkthroughs en GitHub de gresium, RAHULKATARA1, vanshsaini48 y WillieShei; el repositorio de gresium fue eliminado y no se halló copia verificable, comprobado 2026-10-03) · [help.tryhackme.com - AI1 Support/Exam Guide](https://help.tryhackme.com)
 **Autor del documento / Document author:** Apuromafo
 **Fecha de acceso / Access date:** 2026-09-21

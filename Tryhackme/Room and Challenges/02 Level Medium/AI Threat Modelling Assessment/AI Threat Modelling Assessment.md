@@ -4,7 +4,7 @@
 | **Slug** | `ai-threat-modelling-assessment` |
 | **Link** | [TryHackMe](https://tryhackme.com/room/ai-threat-modelling-assessment) |
 | **Sección** | Secure AI Systems (Section 2 of 5) |
-| **Fuente** | [vanshksingh/TryHackMe-AI-Security-Path](https://github.com/vanshksingh/TryHackMe-AI-Security-Path) — `ai-threat-modelling-assessment\Readme.md` |
+| **Fuente** | `vanshksingh/TryHackMe-AI-Security-Path` (repositorio eliminado; no se halló copia del contenido citado, comprobado 2026-10-03) — `ai-threat-modelling-assessment\Readme.md` |
 | **Componentes** | Evaluación: IA/ML offensivo+defensivo, threat modelling (STRIDE-AI, MITRE ATLAS, OWASP LLM Top 10), enumeración de superficies de ataque de IA, explotación |
 | **Impacto** | Evaluación final del AI Security Path: analizar una aplicación habilitada con IA, identificar sus superficies de ataque, aplicar threat modelling de IA, enumerar componentes relacionados y explotar debilidades para recuperar las flags. |
 ---

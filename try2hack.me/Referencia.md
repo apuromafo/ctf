@@ -18,7 +18,8 @@ Este documento consolida las metodologías para resolver los retos de seguridad 
 
 La forma más efectiva es consultar los registros de **Transparencia de Certificados (CT Logs)**, que son públicos.
 
-* **Herramienta:** `Sublist3r` o inspección en [crt.sh](https://www.google.com/search?q=https://crt.sh/%3Fq%3Dtry2hack.me).
+* **Herramienta:** `Sublist3r` o inspección en [crt.sh](https://crt.sh/?q=try2hack.me).
+  * Enlace corregido 2026-10-02: antes apuntaba a una búsqueda de Google de la URL de crt.sh doblemente codificada (`%3Fq%3D`), o sea que no llevaba a crt.sh. **NO VERIFICABLE en línea el 2026-10-02**: `crt.sh` devolvió HTTP 502 tanto por petición directa como vía IDM (servicio intermitente). La forma `https://crt.sh/?q=<dominio>` es su formato de consulta documentado. / Link fixed 2026-10-02; **NOT VERIFIABLE online**: crt.sh returned HTTP 502 both directly and via IDM.
 * **Comando:**
 ```bash
 python sublist3r.py -d try2hack.me
@@ -397,10 +398,9 @@ sqlmap -u "https://try2hack.me/a/1*" --dbs --dump
 ### Pendientes (honesto) / Pending (honest)
 
 * **Reto 2 de try2hack.me (hash `$6$VQoztKJH$...`): SIN resolver.** El hash en este archivo está truncado con `...`, insuficiente para `hashcat -m 1800`; el intento con `rockyou.txt` agotó el diccionario (0/1 recuperado). Intentado: búsqueda web del fragmento de sal `VQoztKJH` (sin resultados) y revisión de fuentes públicas (corresponden a try2hack.nl, sin relación). Falta: hash completo y acceso autenticado a try2hack.me (no se hizo login).
-* **Retos 8-9 de try2hack.me: SIN documentar.** try2hack.me exige registro para ver los enunciados (verificado en `https://try2hack.me` el 2026-09-26); sin login no se pueden recuperar. Los *Level 8/9* de try2hack.nl de este anexo son de otro sitio y no deben confundirse con ellos.
+* **Retos 8-9 de try2hack.me: resueltos, pero SIN writeup.** El owner los hizo (dejó únicamente el reto 2, abandonado; cuenta en top 10 con 90-99 %), pero no hay transcripción de su procedimiento. Recoverir el enunciado exige sesión con registro, así que no se pueden documentar desde aquí. Los *Level 8/9* del anexo de arriba son de **try2hack.nl**, otro sitio, y no sirven como solución de estos dos.
+  *ES-EN:* Challenges 8-9 of try2hack.me are **solved but not written up**. Reading the statement needs a logged-in session. Do not confuse with the `.nl` levels 8/9 in the annex above.
 
 ---
 *Documentación con fines educativos. / Educational purposes only.*
-_Fecha de edición: 2026-09-26_
-
-¿Hay algún reto específico que quieras que intentemos resolver ahora usando más técnicas de **pwn** o explotación de binarios? Sería un excelente paso siguiente.
+_Fecha de edición: 2026-10-02_

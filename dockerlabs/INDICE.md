@@ -218,4 +218,3 @@
 | [Corruptress](Labs/DockerLabs_Practices/sindato_Corruptress/README.md) | Sin dato | 3 | 3 | 0 | con refs |
 | [sjd](Labs/DockerLabs_Practices/sindato_sjd/README.md) | Sin dato | 14 | 11 | 3 | con refs |
 | [Vendetta](Labs/DockerLabs_Practices/sindato_Vendetta/README.md) | Sin dato | 6 | 5 | 1 | con refs |
-| [yjhjg](Labs/DockerLabs_Practices/sindato_yjhjg/README.md) | Sin dato | 0 | 0 | 0 | con refs |

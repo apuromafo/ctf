@@ -36,7 +36,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 4 | Andr3 | 📝 | https://github.com/giustiand/DockerLabs-Writeups/blob/main/Medio/Unrecover.md |
 | 5 | Lavafuego | 📝 | https://github.com/lavafuego/writeups/blob/main/unrecover.md |
 | 6 | El Pingüino de Mario | 🎥 | https://youtu.be/DwuHCZVSDRQ?si=swBionQcVgsCcrKM |
-| 7 | incommatose | 📝 | https://incommatose.github.io/Unrecover-Writeup/ |
+| 7 | incommatose | 📝 | https://incommatose.github.io/Unrecover-Writeup/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 8 | incommatose | 📝 | https://incommatose.github.io/Unrecover-Dockerlabs-Writeup/ |
 | 9 | Alx SG | 📝 | https://github.com/AlxSAGA/Practical-Hacking-Labs/blob/main/01-DockerLabs/03-Media/58-Unrecover.md |
 | 10 | mikisbd | 📝 | https://drive.google.com/file/d/17Ao49e3ZvnGuUP3ceFvqu6KFIcmzw6OI/view?usp=sharing |

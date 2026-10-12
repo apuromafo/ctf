@@ -30,8 +30,8 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 
 | # | Autor / Author | Tipo / Type | Enlace / Link |
 |---|----------------|-------------|---------------|
-| 1 | Litio7 | 📝 | https://litio7.github.io/posts/dockerlabs-writeup-balufood/ |
-| 2 | HYH | 📝 | https://www.hyhforever.top/dockerlabs-balufood/ |
+| 1 | Litio7 | 📝 | https://litio7.github.io/posts/dockerlabs-writeup-balufood/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+| 2 | HYH | 📝 | https://www.hyhforever.top/dockerlabs-balufood/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 3 | Shinkirou | 📝 | https://boletuss-organization.gitbook.io/dw/write-ups/quickstart/maquinas-faciles/balufood-write-up |
 | 4 | TBrux | 🎥 | https://youtu.be/lRUPLTMZIV8 |
 | 5 | firstatack | 📝 | https://firstatack.github.io/posts/balufood/ |

@@ -30,16 +30,16 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 
 | # | Autor / Author | Tipo / Type | Enlace / Link |
 |---|----------------|-------------|---------------|
-| 1 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/0xc0ffee |
+| 1 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/0xc0ffee ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 2 | Gm4tsy | 📝 | https://gm4tsy.hashnode.dev/dockerlabs-0xc0ffee |
-| 3 | maciiii___ | 📝 | https://github.com/Maciferna/dockerlabs/blob/main/maquina-0xc0ffee/0xc0ffee.md |
+| 3 | maciiii___ | 📝 | https://github.com/Maciferna/dockerlabs/blob/main/maquina-0xc0ffee/0xc0ffee.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 4 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/my-ctfs/ctfs/ctf-0xc0ffee-intermediate |
 | 5 | Th3HackTF | 📝 | https://github.com/GustavoUA/WriteUp/wiki/writeup-0xc0ffee-(Dockerlabs) |
 | 6 | JuanR | 📝 | https://github.com/JuanAntonioRodriguez68/Dockerlabs/blob/main/0xc0ffee.pdf |
 | 7 | miguel0x1985 | 📝 | https://github.com/miguellofredo85/PwnLabs/blob/main/dockerlabs/0xc0ffee.pdf |
 | 8 | Pentester95 | 📝 | https://github.com/dfalla/Hacking---Dockerlabs/blob/0xc0ffee/0xc0ffee.md |
 | 9 | Pentester95 | 📝 | https://github.com/dfalla/Hacking---Dockerlabs/blob/0xc0ffee/0xc0ffee.md |
-| 10 | victorCybsec | 📝 | https://github.com/victorCybsec/PwnVault/blob/main/WRITE%20UPS/DOCKERLABS/MEDIO/0xc0ffee.md |
+| 10 | victorCybsec | 📝 | https://github.com/victorCybsec/PwnVault/blob/main/WRITE%20UPS/DOCKERLABS/MEDIO/0xc0ffee.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 11 | XoanOuteiro | 📝 | https://xoanouteiro.dev/posts/es_0xc0ffee_writeup/ |
 | 12 | Shinkirou | 📝 | https://boletuss-organization.gitbook.io/dw/write-ups/quickstart/maquinas-medio/0xc0ffee-write-up |
 | 13 | Alx SG | 🎥 | https://github.com/AlxSAGA/Practical-Hacking-Labs/blob/main/01-DockerLabs/03-Media/14-0xc0ffee.md |

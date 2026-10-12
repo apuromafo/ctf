@@ -44,7 +44,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 6 | haw441kings | 📝 | https://github.com/haw441kings/DockerLabsWriteUps/blob/main/Faciles/BuscaLove.md |
 | 7 | MindMeld7 | 🎥 | https://youtu.be/OHtWB6b81xU |
 | 8 | Jhonycz | 📝 | https://medium.com/@jhonysylcz/dockerlabs-buscalove-37318271afe6 |
-| 9 | HenkoSec | 📝 | https://henkosec.gitbook.io/henkosec/writeups-dockerlabs/buscalove-dockerlabs |
+| 9 | HenkoSec | 📝 | https://henkosec.gitbook.io/henkosec/writeups-dockerlabs/buscalove-dockerlabs ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 10 | HenkoSec | 🎥 | https://www.youtube.com/watch?v=HNvBNEyLUf4 |
 | 11 | G0nch1s | 🎥 | https://youtu.be/2fq23EvIu0U |
 | 12 | cyb3rNAV | 🎥 | https://www.youtube.com/watch?v=0GiSHDuxUl8 |

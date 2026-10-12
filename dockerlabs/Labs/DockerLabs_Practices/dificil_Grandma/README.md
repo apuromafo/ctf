@@ -31,8 +31,8 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | # | Autor / Author | Tipo / Type | Enlace / Link |
 |---|----------------|-------------|---------------|
 | 1 | Pylon | 📝 | https://pylonet.pages.dev/posts/grandma/ |
-| 2 | briancgx | 📝 | https://briancgx.github.io/dockerlabs-writeup-grandma |
-| 3 | s4botai | 📝 | https://s4botai.github.io/DockerLabs-Grandma-writeup/ |
+| 2 | briancgx | 📝 | https://briancgx.github.io/dockerlabs-writeup-grandma ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+| 3 | s4botai | 📝 | https://s4botai.github.io/DockerLabs-Grandma-writeup/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 4 | Pyth0nK1d | 📝 | https://pyth0nk1d.medium.com/dockerlabs-writeup-grandma-spanish-618f9d58a65e |
 
 > **Nota:** los enlaces de terceros se citan como anexos. Fecha de índice: 2026-10-12.

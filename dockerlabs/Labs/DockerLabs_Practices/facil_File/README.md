@@ -36,8 +36,8 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 4 | Dark0547 | 📝 | https://dark0547.gitbook.io/tdlc/writeups/dockerlabs/facil/file |
 | 5 | firstatack | 📝 | https://firstatack.github.io/posts/file/ |
 | 6 | JuanR | 📝 | https://github.com/JuanAntonioRodriguez68/Dockerlabs/blob/main/File.pdf |
-| 7 | Rick Alvarez | 📝 | https://lordcodigo.blogspot.com/2025/01/resolucion-de-la-maquina-file.html |
-| 8 | Rick Alvarez | 📝 | https://lordcodigo.blogspot.com/2025/01/resolucion-de-la-maquina-file.html |
+| 7 | Rick Alvarez | 📝 | https://lordcodigo.blogspot.com/2025/01/resolucion-de-la-maquina-file.html ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+| 8 | Rick Alvarez | 📝 | https://lordcodigo.blogspot.com/2025/01/resolucion-de-la-maquina-file.html ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 9 | Wintxx | 📝 | https://github.com/Jean25-sys/CTFs_Wintxx./blob/main/Writeups/dockerlabs/file.md |
 | 10 | Shinkirou | 📝 | https://boletuss-organization.gitbook.io/dw/write-ups/quickstart/maquinas-faciles/file-write-up |
 | 11 | Alx SG | 📝 | https://github.com/AlxSAGA/Practical-Hacking-Labs/blob/main/01-DockerLabs/02-Facil/32-File.md |

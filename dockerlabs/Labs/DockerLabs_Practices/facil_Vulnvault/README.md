@@ -35,7 +35,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 
 | # | Autor / Author | Tipo / Type | Enlace / Link |
 |---|----------------|-------------|---------------|
-| 1 | maciiii___ | 📝 | https://github.com/Maciferna/dockerlabs/blob/main/maquina-vulnvault/vulnvault.md |
+| 1 | maciiii___ | 📝 | https://github.com/Maciferna/dockerlabs/blob/main/maquina-vulnvault/vulnvault.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 2 | Gm4tsy | 📝 | https://gm4tsy.hashnode.dev/esta-es-una-maquina-de-dockerlabs-de-nivel-dificil |
 | 3 | G0nch1s | 🎥 | https://youtu.be/7iixqR3Q7_g |
 | 4 | Torral | 📝 | https://github.com/t0rr4l/Writeups_Hacking/blob/main/DockerLabs/Vulnvault.md |
@@ -43,7 +43,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 6 | Er3b0r | 📝 | https://github.com/Er3b0r/Dockerlabs_WriteUPs/blob/main/%F0%9F%9F%A2F%C3%A1cil/%F0%9F%97%9D%EF%B8%8FVulnvault%F0%9F%97%9D%EF%B8%8F.md |
 | 7 | elWeoner | 📝 | https://www.notion.so/Vulnvault-3cd5020a897b41c789d59f89550fe602 |
 | 8 | frogtheripper | 📝 | https://frogtheripper.gitbook.io/frogtheripper-writeups/thehackerlabs/facil/maquina-vulnvault |
-| 9 | MykeMR | 📝 | https://mykemr.github.io/Vulnvault |
+| 9 | MykeMR | 📝 | https://mykemr.github.io/Vulnvault ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 10 | Andr3 | 📝 | https://github.com/giustiand/DockerLabs-Writeups/blob/main/F%C3%A1cil/vulnvault.md |
 | 11 | Pentester95 | 📝 | https://github.com/dfalla/Hacking---Dockerlabs/blob/vulnvault/vulnvault.md |
 | 12 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/my-ctfs/ctfs/ctf-vulnvault-intermediate |

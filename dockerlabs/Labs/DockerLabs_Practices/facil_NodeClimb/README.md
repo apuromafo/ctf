@@ -38,9 +38,9 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 1 | firstatack | 📝 | https://firstatack.github.io/posts/nodeclimb/ |
 | 2 | MindMeld7 | 📝 | https://mindmeld7.hashnode.dev/writeup-nodeclimb-from-dockerlabs |
 | 3 | MindMeld7 | 🎥 | https://youtu.be/9dgguemkPhQ |
-| 4 | murrusko | 📝 | https://murrusko.github.io/posts/nodeclimb/ |
+| 4 | murrusko | 📝 | https://murrusko.github.io/posts/nodeclimb/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 5 | JuanR | 📝 | https://docs.google.com/document/d/1RglfhHSJlp8IRkwFH0PAwDEAavO_dKvmBbAXlbyP3Jg/edit?usp=sharing |
-| 6 | Alv-fh | 📝 | https://alv-fh.gitbook.io/main/writeups/dockerlabs_index/nodeclimb |
+| 6 | Alv-fh | 📝 | https://alv-fh.gitbook.io/main/writeups/dockerlabs_index/nodeclimb ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 7 | G0nch1s | 🎥 | https://youtu.be/8eUb7NBTUEA |
 | 8 | 1NCO6N1TO | 📝 | https://github.com/1NCO6N1TO/WriteUps_DockerLabs/blob/main/Nodeclimb.md |
 | 9 | Gm4tsy | 📝 | https://gm4tsy.hashnode.dev/dockerlabs-nodeclimb |
@@ -49,7 +49,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 12 | PedroM11 | 📝 | https://github.com/PedroMontoya11/Laboratorios-CTF/blob/main/Dockerlabs/M%C3%A1quina%20NodeClimb.md |
 | 13 | Owl3r | 📝 | https://github.com/owl3r/Dockerlabs.-ES/blob/main/Nodeclimb.md |
 | 14 | WEED_SUAVE | 📝 | https://medium.com/@juanchos7106/nodeclimb-dockerlabs-2a33a6f61594 |
-| 15 | MykeMR | 📝 | https://mykemr.github.io/NodeClimb |
+| 15 | MykeMR | 📝 | https://mykemr.github.io/NodeClimb ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 16 | Andr3 | 📝 | https://github.com/giustiand/DockerLabs-Writeups/blob/main/F%C3%A1cil/nodeclimb.md |
 | 17 | El Pingüino de Mario | 🎥 | https://youtu.be/0gP9OZ3ToJk?si=nZfZCm1hEHHMQQA_ |
 | 18 | skopjee | 📝 | https://github.com/sk0pj3e/Dockerlabs/blob/main/nodeclimb/nodeclimb.md |
@@ -58,7 +58,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 21 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/dockerlabs-writeups/dockerlabs/nodeclimb-dockerlabs-easy |
 | 22 | Shinkirou | 📝 | https://boletuss-organization.gitbook.io/dw/write-ups/quickstart/maquinas-faciles/nodeclimb-write-up |
 | 23 | hypnopompicman | 📝 | https://github.com/hypnopompicman/Writeups_Dockerlabs/blob/master/nodeclimb.md |
-| 24 | billy el calvo | 🎥 | https://youtu.be/5iq5eQ2_a4w?si=uTrvgi2Oe_RRWJUE |
+| 24 | billy el calvo | 🎥 | https://youtu.be/5iq5eQ2_a4w?si=uTrvgi2Oe_RRWJUE ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 25 | beafn28 | 📝 | https://beafn28.gitbook.io/beafn28/writeups/dockerlabs/nodeclimb |
 | 26 | Aguilar | 📝 | https://github.com/Aguilar-aoj/Pentesting/blob/main/DockerLabs/Facil/NodeClimb.md |
 | 27 | AlejandroSL | 📝 | https://github.com/Alejandro609x/Dockerlabs/blob/main/NodeClimb/NodeClimb.md |
@@ -67,7 +67,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 30 | Bandit0 | 🎥 | https://github.com/8andit0/BanditBox/blob/main/Maquinas%20De%20Dockerlabs/Maquinas%20Faciles/nodeclimb.md |
 | 31 | 1gnotus | 📝 | https://1gnotus.gitbook.io/ignotus_pwn/dockerlabs/writeup/maquina-nodeclimb-ftp-anonymous-zip2john-privesc-binario-node |
 | 32 | Alx SG | 📝 | https://github.com/AlxSAGA/Practical-Hacking-Labs/blob/main/01-DockerLabs/02-Facil/05-NodeClimb.md |
-| 33 | Litio7 | 📝 | https://litio7.github.io/posts/dockerlabs-writeup-nodeclimb/ |
+| 33 | Litio7 | 📝 | https://litio7.github.io/posts/dockerlabs-writeup-nodeclimb/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 34 | brias | 📝 | https://brias.gitbook.io/brias/dockerlabs/dificultad-facil/nodeclimb |
 | 35 | Pyth0nK1d | 📝 | https://pyth0nk1d.medium.com/dockerlabs-writeup-nodeclimb-spanish-10b9b9b23d30 |
 

@@ -50,13 +50,13 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 13 | NytroMG | 📝 | https://medium.com/@nytromg/pinguinazo-writeup-dockerlabs-6fabdc4df18f |
 | 14 | PedroM11 | 📝 | https://github.com/PedroMontoya11/Laboratorios-CTF/blob/main/Dockerlabs/M%C3%A1quina%20Pinguinazo.md |
 | 15 | WEED_SUAVE | 📝 | https://medium.com/@juanchos7106/41dce95dcbbc |
-| 16 | MykeMR | 📝 | https://mykemr.github.io/Pinguinazo |
+| 16 | MykeMR | 📝 | https://mykemr.github.io/Pinguinazo ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 17 | elWeoner | 📝 | https://darkened-raisin-b9c.notion.site/Pinguinazo-15a5f89f923880388a27f7e89d34e13b?pvs=74 |
 | 18 | Joukerr | 📝 | https://github.com/joukerr/CTF/blob/main/Dockerlabs/M%C3%A1quina%20Ping%C3%BCinazo%20Dockerlabs.pdf |
 | 19 | 104567 | 🎥 | https://www.bilibili.com/video/BV1B1wpetErb/ |
 | 20 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/dockerlabs-writeups/dockerlabs/pinguinazo-dockerlabs-easy |
 | 21 | Shinkirou | 📝 | https://boletuss-organization.gitbook.io/dw/write-ups/quickstart/maquinas-faciles/pinguinazo-write-up |
-| 22 | billy el calvo | 🎥 | https://youtu.be/33gPQx88qhs?si=rZNmUqRQ-fb0bGu1 |
+| 22 | billy el calvo | 🎥 | https://youtu.be/33gPQx88qhs?si=rZNmUqRQ-fb0bGu1 ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 23 | beafn28 | 📝 | https://beafn28.gitbook.io/beafn28/writeups/dockerlabs/pinguinazo |
 | 24 | DpCoding | 📝 | https://dpcoding.com/dockerlabs-maquina-pinguinazo/ |
 | 25 | Pokerreal | 📝 | https://github.com/Pokerreal/DockerLabs-WriteUps/blob/main/Pinguinazo.md |
@@ -65,6 +65,6 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 28 | Aguilar | 📝 | https://github.com/Aguilar-aoj/Pentesting/blob/main/DockerLabs/Facil/Pinguinazo.md |
 | 29 | brias | 📝 | https://brias.gitbook.io/brias/dockerlabs/dificultad-facil/pinguinazo |
 | 30 | Pyth0nK1d | 📝 | https://pyth0nk1d.medium.com/dockerlabs-writeup-pinguinazo-spanish-83e895fdbfe1 |
-| 31 | X02_Security | 📝 | https://galizaragozadev.gitbook.io/galizaragozadev-docs/dockerlabs/pinguinazo-easy-dockerlabs |
+| 31 | X02_Security | 📝 | https://galizaragozadev.gitbook.io/galizaragozadev-docs/dockerlabs/pinguinazo-easy-dockerlabs ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 
 > **Nota:** los enlaces de terceros se citan como anexos. Fecha de índice: 2026-10-12.

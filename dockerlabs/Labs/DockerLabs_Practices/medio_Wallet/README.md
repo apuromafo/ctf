@@ -38,10 +38,10 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 6 | Shinbi | 📝 | https://drive.google.com/file/d/1tLbAFztAi2m86zOubu5Ib7pDE4iIV0A5/view?usp=sharing |
 | 7 | zunderrub | 🎥 | https://youtu.be/QJiEnmpISDI?si=jMJ8a3HwBnYF8_Gi |
 | 8 | G0nch1s | 🎥 | https://youtu.be/BsdNy1iwTDY |
-| 9 | Rick Alvarez | 📝 | https://lordcodigo.blogspot.com/2024/08/resolucion-de-la-maquina-wallet.html |
+| 9 | Rick Alvarez | 📝 | https://lordcodigo.blogspot.com/2024/08/resolucion-de-la-maquina-wallet.html ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 10 | Gm4tsy | 📝 | https://gm4tsy.hashnode.dev/dockerlabs-wallet |
-| 11 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/wallet |
-| 12 | s4botai | 📝 | https://s4botai.github.io/DockerLabs-Wallet-writeup/ |
+| 11 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/wallet ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+| 12 | s4botai | 📝 | https://s4botai.github.io/DockerLabs-Wallet-writeup/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 13 | 4bytes | 📝 | https://github.com/4bytess/writeups/blob/main/dockerlabs/wallet.md |
 | 14 | maciiii___ | 📝 | https://maciferna.gitbook.io/maci/writeups/dockerlabs/wallet |
 | 15 | Andr3 | 📝 | https://github.com/giustiand/DockerLabs-Writeups/blob/main/Medio/Wallet.md |

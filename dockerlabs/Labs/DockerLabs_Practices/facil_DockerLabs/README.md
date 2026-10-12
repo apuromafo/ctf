@@ -41,9 +41,9 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 3 | firstatack | 📝 | https://firstatack.github.io/posts/dockerlabs/ |
 | 4 | Romabri | 📝 | https://romabri.github.io/DockerLabs |
 | 5 | zunderrub | 🎥 | https://youtu.be/Xmfed6tcsG0?si=UeD0ew74MKA4zpRo |
-| 6 | TBrux | 📝 | https://github.com/TBrux/DOCKERLABS/blob/main/DockerLabs.md |
-| 7 | JuanR | 📝 | https://online.publuu.com/516647/1178073 |
-| 8 | thedakah | 🎥 | https://www.youtube.com/watch?v=7p0aBldctHA |
+| 6 | TBrux | 📝 | https://github.com/TBrux/DOCKERLABS/blob/main/DockerLabs.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+| 7 | JuanR | 📝 | https://online.publuu.com/516647/1178073 ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+| 8 | thedakah | 🎥 | https://www.youtube.com/watch?v=7p0aBldctHA ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 9 | G0nch1s | 🎥 | https://youtu.be/-qMGNsr65UE |
 | 10 | elWeoner | 📝 | https://darkened-raisin-b9c.notion.site/Dockerlabs-1661f50525954142a5291e5e3ce4f51a?pvs=4 |
 | 11 | Gm4tsy | 📝 | https://gm4tsy.hashnode.dev/dockerlabs-dockerlabs |
@@ -54,7 +54,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 16 | Barre | 📝 | https://hacking-3.gitbook.io/hacking/write-up/dockerlabs/facil/dockerlabs |
 | 17 | Klaus | 📝 | https://github.com/valanyrr/Maquinas-DockerLabs/blob/main/Easy/MaquinaDockerLabs.md |
 | 18 | JuanR | 📝 | https://github.com/JuanAntonioRodriguez68/Dockerlabs/blob/main/DockerLabs.pdf |
-| 19 | MykeMR | 📝 | https://mykemr.github.io/DockerLabs |
+| 19 | MykeMR | 📝 | https://mykemr.github.io/DockerLabs ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 20 | WEED_SUAVE | 📝 | https://medium.com/@juanchos7106/dockerlabs-6c9c1587b303 |
 | 21 | Andr3 | 📝 | https://github.com/giustiand/DockerLabs-Writeups/blob/main/F%C3%A1cil/dockerlabs.md |
 | 22 | El Pingüino de Mario | 🎥 | https://youtu.be/kyBl6bwGT4U?si=lVklXoIRVBaaPQw4 |

@@ -44,7 +44,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 6 | zunderrub | 🎥 | https://www.youtube.com/watch?v=gkaJ6JWPDJM |
 | 7 | AlbertoMD3 | 📝 | https://albertomd3.gitbook.io/cibersecurity1/writeups/dockerlabs-espanol/maquina-library |
 | 8 | haw441kings | 📝 | https://github.com/haw441kings/DockerLabsWriteUps/blob/main/Faciles/Library.md |
-| 9 | TBrux | 📝 | https://github.com/TBrux/DOCKERLABS/blob/main/Library.md |
+| 9 | TBrux | 📝 | https://github.com/TBrux/DOCKERLABS/blob/main/Library.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 10 | JuanR | 📝 | https://drive.google.com/file/d/1Qs5ZqP9sXKniUSU6R2XNjDbQAfUJ7wHr/view?usp=drive_link |
 | 11 | elWeoner | 📝 | https://darkened-raisin-b9c.notion.site/Library-79281c5ce88b45288e873fe69dd2cf53?pvs=4 |
 | 12 | Jhonycz | 📝 | https://medium.com/@jhonysylcz/dockerlabs-library-dc6a7aabec56 |
@@ -56,9 +56,9 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 18 | PedroM11 | 📝 | https://github.com/PedroMontoya11/Laboratorios-CTF/blob/main/Dockerlabs/M%C3%A1quina%20Library.md |
 | 19 | Barre | 📝 | https://hacking-3.gitbook.io/hacking/write-up/dockerlabs/facil/library |
 | 20 | D4nYeD | 📝 | https://medium.com/@D4nYeD/dockerlabs-máquina-hiddencat-93d805554bf1 |
-| 21 | Romy | 📝 | https://github.com/Romyy1/Obsidian/blob/main/Mi%20Aprendimiento/DockerLabs/Library.pdf |
+| 21 | Romy | 📝 | https://github.com/Romyy1/Obsidian/blob/main/Mi%20Aprendimiento/DockerLabs/Library.pdf ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 22 | Klaus | 📝 | https://github.com/valanyrr/Maquinas-DockerLabs/blob/main/Easy/MaquinaLibrary.md |
-| 23 | MykeMR | 📝 | https://mykemr.github.io/Library |
+| 23 | MykeMR | 📝 | https://mykemr.github.io/Library ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 24 | Ankb | 📝 | https://github.com/AnkbNikas/DockerLabs-Writeups/blob/957be585c46e2c22cd9312cc52e44161c38f01b0/M%C3%A1quina%20Library.md |
 | 25 | Pentester95 | 📝 | https://github.com/dfalla/Hacking---Dockerlabs/blob/library/library.md |
 | 26 | El Pingüino de Mario | 🎥 | https://youtu.be/3MYp7TCQ_Uo?si=b1YxpUrhVy_iAoSo |
@@ -74,7 +74,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 36 | Xavis3c | 📝 | https://github.com/xavis3c/Writeups-dockerlabs/blob/main/f%C3%A1cil/Library.md |
 | 37 | Bandit0 | 🎥 | https://github.com/8andit0/BanditBox/blob/main/Maquinas%20De%20Dockerlabs/Maquinas%20Faciles/Library.md |
 | 38 | Alx SG | 📝 | https://github.com/AlxSAGA/Practical-Hacking-Labs/blob/main/01-DockerLabs/02-Facil/04-Library.md |
-| 39 | Litio7 | 📝 | https://litio7.github.io/posts/dockerlabs-writeup-library/ |
+| 39 | Litio7 | 📝 | https://litio7.github.io/posts/dockerlabs-writeup-library/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 40 | brias | 📝 | https://brias.gitbook.io/brias/dockerlabs/dificultad-facil/library |
 | 41 | Pyth0nK1d | 📝 | https://pyth0nk1d.medium.com/dockerlabs-writeup-library-spanish-426d48a7e71c |
 | 42 | propus | 📝 | https://app.gitbook.com/o/aDsQQ0j1OI1IwQjv2Rbm/s/haHYQaFsZAHOyVtSUS1x/writeups/dockerlabs/library |

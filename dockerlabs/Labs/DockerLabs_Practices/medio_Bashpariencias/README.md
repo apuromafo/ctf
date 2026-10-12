@@ -44,7 +44,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 12 | Barre | 📝 | https://hacking-3.gitbook.io/hacking/write-up/dockerlabs/medio/bashpariencias#maquina |
 | 13 | Er3b0r | 📝 | https://github.com/Er3b0r/Dockerlabs_WriteUPs/blob/main/%F0%9F%9F%A0Medio/%F0%9F%94%90Bashpariencias%F0%9F%94%90.md |
 | 14 | Jeshua Masté | 🎥 | https://youtu.be/UmdIIXh5Ud8 |
-| 15 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/bashpariencias |
+| 15 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/bashpariencias ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 16 | Damjav | 📝 | https://github.com/Damjavm/CTF-S---WRITE-UP/blob/main/Bashpariencias.md |
 | 17 | skopjee | 📝 | https://github.com/sk0pj3e/Dockerlabs/blob/main/bashpariencias/bashpariencias.md |
 | 18 | skopjee | 📝 | https://github.com/sk0pj3e/Dockerlabs/tree/main/bashpariencias |

@@ -34,7 +34,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 2 | incommatose | 📝 | https://github.com/incommatose/dockerlabs-writeups/blob/main/machines/Hard/Norc%20-%20Hard.md |
 | 3 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/norc.md |
 | 4 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/dockerlabs-writeups/dockerlabs/norc-dockerlabs-hard |
-| 5 | Litio7 | 📝 | https://litio7.github.io/posts/dockerlabs-writeup-norc/ |
+| 5 | Litio7 | 📝 | https://litio7.github.io/posts/dockerlabs-writeup-norc/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 6 | incommatose | 📝 | https://incommatose.github.io/Norc-Dockerlabs-Writeup/ |
 
 > **Nota:** los enlaces de terceros se citan como anexos. Fecha de índice: 2026-10-12.

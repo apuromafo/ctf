@@ -35,18 +35,18 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 3 | Shinkirou | 📝 | https://boletuss-organization.gitbook.io/dw/write-ups/quickstart/maquinas-muy-faciles/tproot-write-up |
 | 4 | beafn28 | 📝 | https://beafn28.gitbook.io/beafn28/writeups/dockerlabs/tproot |
 | 5 | Lavafuego | 📝 | https://github.com/lavafuego/writeups/blob/main/Tproot.md |
-| 6 | Litio7 | 📝 | https://litio7.github.io/posts/dockerlabs-writeup-tproot/ |
+| 6 | Litio7 | 📝 | https://litio7.github.io/posts/dockerlabs-writeup-tproot/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 7 | Enciall | 📝 | https://github.com/enciall01/dockerlabs/blob/main/Tproot.md |
 | 8 | enciall | 📝 | https://github.com/enciall01/dockerlabs/blob/main/Tproot.md |
 | 9 | Xavis3c | 📝 | https://elyoxsecurity.com/maquina-tproot/ |
 | 10 | NormalMan | 📝 | https://jotayepes.notion.site/Tproot-1e0d3f3b9d34809990b4f31ec5e20e44?pvs=4 |
 | 11 | AlejandroSL | 📝 | https://github.com/Alejandro609x/Dockerlabs/blob/main/Tproot/Tproot.md |
 | 12 | Aguilar | 📝 | https://github.com/Aguilar-aoj/Pentesting/blob/main/DockerLabs/Muy_Facil/Tproot.md |
-| 13 | Caan31 | 📝 | https://github.com/Caan31/Maquinas_DockerLabs/blob/master/MAQUINA_TPROOT.pdf |
+| 13 | Caan31 | 📝 | https://github.com/Caan31/Maquinas_DockerLabs/blob/master/MAQUINA_TPROOT.pdf ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 14 | SkyW4r33x | 📝 | https://skyw4r33x.lovable.app/writeup/1748489801167 |
 | 15 | Abr4hack | 📝 | https://drive.google.com/file/d/1WhrYEX6_ph1TTPz1S50BxoTn5Lyvzktn/view?usp=sharing |
 | 16 | Bandit0 | 📝 | https://github.com/8andit0/BanditBox/blob/main/Maquinas%20De%20Dockerlabs/Maquinas%20Muy%20Faciles/Tproot.md |
-| 17 | Rick Alvarez | 📝 | https://lordcodigo.blogspot.com/2025/06/resolucion-de-la-maquina-tproot.html |
+| 17 | Rick Alvarez | 📝 | https://lordcodigo.blogspot.com/2025/06/resolucion-de-la-maquina-tproot.html ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 18 | whoisnmc | 📝 | https://whoisnmc.github.io/posts/tproot/ |
 | 19 | Ciberap | 📝 | https://ciberap.gitbook.io/ciberaprt/dockerlbas/muy-facil/tproot |
 | 20 | PedroM11 | 📝 | https://github.com/PedroMontoya11/Laboratorios-CTF/blob/main/Dockerlabs/M%C3%A1quina%20Tproot.md |
@@ -58,7 +58,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 26 | tri | 📝 | https://poltrias.gitbook.io/writeups/dockerlabs/tproot |
 | 27 | Ghost Hack-RD | 🎥 | https://youtu.be/dlsyqzOT7eA |
 | 28 | Miguel Angel Torres Castrillon | 📝 | https://docs.google.com/document/d/1JskGkPZblG3OxFSg_K_zJ0u9cs8jDrfJizPnBjCVYJo/edit?tab=t.0#heading=h.jc7bqz2ykong |
-| 29 | JuanFranco | 📝 | https://drive.google.com/file/d/1vuT1nZwpbjBe1kqalp_cOaLoH5R06suk/view?usp=sharing |
+| 29 | JuanFranco | 📝 | https://drive.google.com/file/d/1vuT1nZwpbjBe1kqalp_cOaLoH5R06suk/view?usp=sharing ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 30 | propus | 📝 | https://propus.gitbook.io/hackbook/writeups/dockerlabs/tproot |
 
 > **Nota:** los enlaces de terceros se citan como anexos. Fecha de índice: 2026-10-12.

@@ -31,16 +31,16 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | # | Autor / Author | Tipo / Type | Enlace / Link |
 |---|----------------|-------------|---------------|
 | 1 | El Pingüino De Mario | 🎥 | https://youtu.be/8mbzmzQ7em4 |
-| 2 | FakeLuci | 📝 | https://github.com/FakeLuci/Dockerlabs-Writups/blob/main/domain.md |
+| 2 | FakeLuci | 📝 | https://github.com/FakeLuci/Dockerlabs-Writups/blob/main/domain.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 3 | AlbertoMD3 | 📝 | https://github.com/albertomarcostic/DockerLabs-WriteUps/blob/main/M%C3%A1quina%20Domain.md |
 | 4 | Xerosec | 🎥 | https://youtu.be/BT6VKnAzg4k |
 | 5 | 404azz | 📝 | https://404azz.github.io/posts/Domain-Writeup/ |
 | 6 | Rinku | 🎥 | https://www.youtube.com/watch?v=2RuSfGmo0Gg |
 | 7 | H3g0c1v | 📝 | https://github.com/h3g0c1v/DockerLabs-Machine-Write-Ups/blob/main/Medium-Machines/Domain.md |
 | 8 | blackpist0l | 📝 | https://blackpist0l.hashnode.dev/domain-dockerlab-machine |
-| 9 | Rodgar | 📝 | https://rodgar.gitbook.io/rodgar/ctf-writeups/docker-labs/docker-labs-domain |
+| 9 | Rodgar | 📝 | https://rodgar.gitbook.io/rodgar/ctf-writeups/docker-labs/docker-labs-domain ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 10 | Romabri | 📝 | https://romabri.github.io/Domain |
-| 11 | M4nu | 📝 | https://github.com/M4nuTCP/Dockerlabs-Writups/blob/main/Medio/domain.md |
+| 11 | M4nu | 📝 | https://github.com/M4nuTCP/Dockerlabs-Writups/blob/main/Medio/domain.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 12 | MindMeld7 | 🎥 | https://youtu.be/ZquANSO9sM4 |
 | 13 | haw441kings | 📝 | https://github.com/haw441kings/DockerLabsWriteUps/blob/main/Medio/Domain.md |
 | 14 | TerrorAterrador | 📝 | https://github.com/TerrorAterrador/WriteUps/blob/main/DockerLabs/Domain.md |
@@ -51,7 +51,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 19 | Gm4tsy | 📝 | https://gm4tsy.hashnode.dev/dockerlabs-domain |
 | 20 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/dockerlabs-writeups/dockerlabs/domain-dockerlabs-intermediate |
 | 21 | Th3HackTF | 📝 | https://github.com/GustavoUA/WriteUp/wiki/Writeup-%E2%80%90-Domain |
-| 22 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/Domain.md |
+| 22 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/Domain.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 23 | maciiii___ | 🎥 | https://youtu.be/MpESR5sV0dU |
 | 24 | Pentester95 | 📝 | https://github.com/dfalla/Hacking---Dockerlabs/blob/domain/domain.md |
 | 25 | kamilfire | 📝 | https://kamilfire.github.io/posts/Domain/ |

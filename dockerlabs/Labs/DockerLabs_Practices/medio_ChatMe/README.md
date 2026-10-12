@@ -30,8 +30,8 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 
 | # | Autor / Author | Tipo / Type | Enlace / Link |
 |---|----------------|-------------|---------------|
-| 1 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/chatme |
-| 2 | Pylon | 📝 | https://pylonet.gitbook.io/pylonblog/writeups/dockerlabs/chatme |
+| 1 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/chatme ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+| 2 | Pylon | 📝 | https://pylonet.gitbook.io/pylonblog/writeups/dockerlabs/chatme ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 3 | maciiii___ | 🎥 | https://youtu.be/kIdiCuO0W9A |
 | 4 | Pylon | 🎥 | https://youtu.be/ul27k4P6Em8?si=WRSG3WgIbSydHrG_ |
 | 5 | JuanR | 📝 | https://github.com/JuanAntonioRodriguez68/Dockerlabs/blob/main/Chatme.pdf |

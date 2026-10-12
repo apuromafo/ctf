@@ -39,7 +39,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 7 | Gm4tsy | 📝 | https://gm4tsy.hashnode.dev/dockerlabs-paradise |
 | 8 | PedroM11 | 📝 | https://github.com/PedroMontoya11/Laboratorios-CTF/blob/main/Dockerlabs/M%C3%A1quina%20Paradise.md |
 | 9 | JuanR | 📝 | https://github.com/JuanAntonioRodriguez68/Dockerlabs/blob/main/Paradise.pdf |
-| 10 | maciiii___ | 📝 | https://github.com/Maciferna/DockerLabs/blob/main/maquina-paradise/paradise.md |
+| 10 | maciiii___ | 📝 | https://github.com/Maciferna/DockerLabs/blob/main/maquina-paradise/paradise.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 11 | Neobrain | 🎥 | https://youtu.be/fAW8jhZeBT0 |
 | 12 | Sergio Lubo | 📝 | https://github.com/sergiolubo/DockerLabs-WriteUps/blob/main/Paradise.md |
 | 13 | Joukerr | 📝 | https://github.com/joukerr/CTF/blob/main/Dockerlabs/Maquina%20Paradise.pdf |

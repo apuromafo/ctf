@@ -31,7 +31,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | # | Autor / Author | Tipo / Type | Enlace / Link |
 |---|----------------|-------------|---------------|
 | 1 | CrisstianPDX | 📝 | https://github.com/Crisstianpdx/CTFs-WriteUps/blob/main/DockerLabs/HackZones/hackzones.md |
-| 2 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/hackzones.md |
+| 2 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/hackzones.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 3 | maciiii___ | 🎥 | https://youtu.be/zNsbjUxnLjE |
 | 4 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/my-ctfs/ctfs/ctf-hackzones-intermediate |
 | 5 | Zunderrub | 🎥 | https://youtu.be/uMc470ocmHM?si=I-xOBxb4GTXEabBk |
@@ -39,7 +39,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 7 | Pentester95 | 📝 | https://github.com/dfalla/Hacking---Dockerlabs/blob/hackzones/hackzones.md |
 | 8 | Pentester95 | 📝 | https://github.com/dfalla/Hacking---Dockerlabs/blob/hackzones/hackzones.md |
 | 9 | Pentester95 | 📝 | https://github.com/dfalla/Hacking---Dockerlabs/blob/hackzones/hackzones.md |
-| 10 | victorCybsec | 📝 | https://github.com/victorCybsec/PwnVault/blob/main/WRITE%20UPS/DOCKERLABS/MEDIO/Hackzones.md |
+| 10 | victorCybsec | 📝 | https://github.com/victorCybsec/PwnVault/blob/main/WRITE%20UPS/DOCKERLABS/MEDIO/Hackzones.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 11 | Shinkirou | 📝 | https://boletuss-organization.gitbook.io/dw/write-ups/quickstart/maquinas-medio/hackzones-write-up |
 | 12 | elWeoner | 📝 | https://darkened-raisin-b9c.notion.site/HackZones-21d5f89f923880ff9e3cd18d399e6456?source=copy_link |
 | 13 | Alx SG | 📝 | https://github.com/AlxSAGA/Practical-Hacking-Labs/blob/main/01-DockerLabs/03-Media/08-Hackzones.md |

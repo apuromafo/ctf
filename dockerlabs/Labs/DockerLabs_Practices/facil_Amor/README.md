@@ -46,7 +46,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 8 | AnonimPlayer_ | 📝 | https://github.com/AnonimPlayerr/DockerLabsWriteUps/blob/main/Amor(EN).md |
 | 9 | AnonimPlayer_ | 📝 | https://github.com/AnonimPlayerr/DockerLabsWriteUps/blob/main/Amor(ES).md |
 | 10 | juandas13 | 🎥 | https://www.youtube.com/watch?v=hRucqK7EdOo |
-| 11 | TBrux | 📝 | https://github.com/TBrux/DOCKERLABS/blob/main/Amor.md |
+| 11 | TBrux | 📝 | https://github.com/TBrux/DOCKERLABS/blob/main/Amor.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 12 | haw441kings | 📝 | https://github.com/haw441kings/DockerLabsWriteUps/blob/main/Faciles/Amor.md |
 | 13 | danielgcab | 📝 | https://github.com/danielgcab/apuntesCiber/blob/main/Writeups/Amor%20-%20DockerLabs.md |
 | 14 | MindMeld7 | 🎥 | https://youtu.be/yS2SqEzZ9sc |
@@ -54,7 +54,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 16 | JuanR | 📝 | https://heyzine.com/flip-book/ea1c7de01c.html |
 | 17 | elWeoner | 📝 | https://darkened-raisin-b9c.notion.site/Amor-f1c8b9d18fbb40b3814952193964801a |
 | 18 | NormalMan | 📝 | https://jotayepes.notion.site/Amor-9d1ba8ff75e74a1eb338c290cd30633c?pvs=4 |
-| 19 | Romy | 📝 | https://github.com/Romyy1/Obsidian/blob/main/Mi%20Aprendimiento/DockerLabs/Amor.pdf |
+| 19 | Romy | 📝 | https://github.com/Romyy1/Obsidian/blob/main/Mi%20Aprendimiento/DockerLabs/Amor.pdf ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 20 | G0nch1s | 🎥 | https://youtu.be/IsCAiudrplw |
 | 21 | NytroMG | 📝 | https://medium.com/@nytromg/amor-writeup-dockerlabs-0e02f6773bfc |
 | 22 | Gm4tsy | 📝 | https://gm4tsy.hashnode.dev/dockerlabs-amor |
@@ -69,15 +69,15 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 31 | Abr4hack | 📝 | https://drive.google.com/file/d/17FGZe3LGrryhHD1URl1eEcbzQttyuNos/view?usp=sharing |
 | 32 | Ninj470 | 📝 | https://book.h4ck.cl/v/labs/hackerlabs/amor-dockerlab |
 | 33 | Ninj470 | 📝 | https://labs.h4ck.cl/dockerlabs/amor |
-| 34 | Alv-fh | 📝 | https://alv-fh.gitbook.io/main/writeups/dockerlabs_index/amor |
+| 34 | Alv-fh | 📝 | https://alv-fh.gitbook.io/main/writeups/dockerlabs_index/amor ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 35 | Klaus | 📝 | https://github.com/valanyrr/Maquinas-DockerLabs/blob/main/Easy/MaquinaAmor.md |
-| 36 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/amor |
-| 37 | MarckWeb | 📝 | https://marckweb.github.io/writeUps/Amor/Maquina_amor.html |
+| 36 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/amor ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+| 37 | MarckWeb | 📝 | https://marckweb.github.io/writeUps/Amor/Maquina_amor.html ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 38 | ByMorcilllo | 📝 | https://github.com/ByMorcillo/WriteUps/tree/main/Dockerlabs/Amor |
 | 39 | Ocortes | 📝 | https://honey-smelt-e38.notion.site/Amor-Dockerlabs-891bcdcc6a354169b24ab61ce53d7b94?pvs=4 |
 | 40 | G0nch1s | 📝 | https://g0nch1s.blogspot.com/2024/09/write-up-maquina-amor-dockerlabs.html |
 | 41 | CyberLand | 📝 | https://www.linkedin.com/posts/thomasoneil%C3%A1lvarez_cyberlandsec-cyberlandacademy-ethicalhacking-activity-7248844310731730944-eupx?utm_source=share&utm_medium=member_desktop |
-| 42 | MykeMR | 📝 | https://mykemr.github.io/Amor |
+| 42 | MykeMR | 📝 | https://mykemr.github.io/Amor ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 43 | Anakin1267 | 📝 | https://github.com/Anakin1267/DockerLabs-WriteUps/blob/9989cf5d09dcd97d28f304d51a6379448c27f4bb/FACILES/Amor.md |
 | 44 | Pentester95 | 📝 | https://github.com/dfalla/Hacking---Dockerlabs/blob/amor/amor.md |
 | 45 | Andr3 | 📝 | https://github.com/giustiand/DockerLabs-Writeups/blob/main/F%C3%A1cil/amor.md |
@@ -102,7 +102,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 64 | Alx SG | 📝 | https://github.com/AlxSAGA/Practical-Hacking-Labs/blob/main/01-DockerLabs/02-Facil/37-Amor.md |
 | 65 | Pyth0nK1d | 📝 | https://pyth0nk1d.medium.com/dockerlabs-writeup-amor-spanish-30d1db0f6b49 |
 | 66 | tri | 📝 | https://poltrias.gitbook.io/writeups/dockerlabs/amor |
-| 67 | X02_Security | 📝 | https://galizaragozadev.gitbook.io/galizaragozadev-docs/dockerlabs/amor-easy-dockerlabs |
+| 67 | X02_Security | 📝 | https://galizaragozadev.gitbook.io/galizaragozadev-docs/dockerlabs/amor-easy-dockerlabs ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 68 | Aguilar | 📝 | https://github.com/Aguilar-aoj/Pentesting/blob/main/DockerLabs/Facil/Amor.md |
 | 69 | propus | 📝 | https://propus.gitbook.io/hackbook/writeups/dockerlabs/amor |
 

@@ -30,8 +30,8 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 
 | # | Autor / Author | Tipo / Type | Enlace / Link |
 |---|----------------|-------------|---------------|
-| 1 | cxfr4 | 📝 | https://cxfr4.vercel.app/blog/Gallery |
-| 2 | HYH | 📝 | https://www.hyhforever.top/dockerlabs-gallery/ |
+| 1 | cxfr4 | 📝 | https://cxfr4.vercel.app/blog/Gallery ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+| 2 | HYH | 📝 | https://www.hyhforever.top/dockerlabs-gallery/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 3 | incommatose | 📝 | https://incommatose.github.io/Gallery-Dockerlabs-Writeup/ |
 | 4 | maciiii___ | 📝 | https://maciferna.gitbook.io/maci/writeups/dockerlabs/gallery |
 | 5 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/ctf/dockerlabs/gallery-dockerlabs-hard |

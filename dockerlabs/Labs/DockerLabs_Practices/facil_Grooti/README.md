@@ -33,7 +33,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 1 | Grooti16 | 📝 | https://github.com/alexitocvf16/Solved-machines/tree/main/M%C3%A1quina%20grooti |
 | 2 | mikisbd | 🎥 | https://drive.google.com/file/d/1PoSa414XW5qp53yOmC_QzsuY7FE36mN8/view?usp=sharing |
 | 3 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/ctf/dockerlabs/grooti-dockerlabs-easy |
-| 4 | xyler349 | 📝 | https://docs.google.com/document/d/17QuML4Fs7KGoTUihVxc8crXF1gkSJlRMMNcfWb1Z2VM/edit?usp=sharing |
+| 4 | xyler349 | 📝 | https://docs.google.com/document/d/17QuML4Fs7KGoTUihVxc8crXF1gkSJlRMMNcfWb1Z2VM/edit?usp=sharing ⚠️ MUERTA (HTTP 410, verificado 2026-10-12) |
 | 5 | lavafuego | 📝 | https://github.com/lavafuego/writeups/blob/main/grooti.md |
 | 6 | ivansuitooo | 🎥 | https://youtu.be/51xNRR9iWaM |
 | 7 | APS88 | 📝 | https://medium.com/p/e27a1d3ce95b |

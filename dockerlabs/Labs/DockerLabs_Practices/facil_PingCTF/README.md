@@ -35,9 +35,9 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 3 | Alx SG | 📝 | https://github.com/AlxSAGA/Practical-Hacking-Labs/blob/main/01-DockerLabs/02-Facil/53-PingCTF.md |
 | 4 | incommatose | 📝 | https://incommatose.github.io/PingCTF-Dockerlabs-Writeup/ |
 | 5 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/ctf/dockerlabs/pingctf-dockerlabs-easy |
-| 6 | xyler349 | 📝 | https://docs.google.com/document/d/1IaT5nBRTrLwljYnHE71Lzhpzifg8P1KLoZ_eZEZB31s/edit?usp=sharing |
+| 6 | xyler349 | 📝 | https://docs.google.com/document/d/1IaT5nBRTrLwljYnHE71Lzhpzifg8P1KLoZ_eZEZB31s/edit?usp=sharing ⚠️ MUERTA (HTTP 410, verificado 2026-10-12) |
 | 7 | Zwique | 📝 | https://zwique.gitbook.io/zwique_notes/writeups/dockerlabs/pingctf |
-| 8 | rtt | 📝 | https://drive.google.com/file/d/1cUNyanIxtZQQeIM0N0xzbeS5PYnUVvs1/view?usp=drive_link |
+| 8 | rtt | 📝 | https://drive.google.com/file/d/1cUNyanIxtZQQeIM0N0xzbeS5PYnUVvs1/view?usp=drive_link ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 9 | firstatack | 📝 | https://firstatack.github.io/posts/pingctf/ |
 | 10 | Lavafuego | 📝 | https://github.com/lavafuego/writeups/blob/main/PingCTF.md |
 | 11 | TBrux | 🎥 | https://youtu.be/x2OrLkruBTw?si=7o0favj_zbw-JvSU |

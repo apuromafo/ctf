@@ -38,11 +38,11 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 6 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/dockerlabs-writeups/dockerlabs/collections-dockerlabs-intermediate |
 | 7 | Gm4tsy | 📝 | https://gm4tsy.hashnode.dev/dockerlabs-collections |
 | 8 | NytroMG | 📝 | https://medium.com/@nytromg/collections-writeup-dockerlabs-06bc44f57327 |
-| 9 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/collections |
+| 9 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/collections ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 10 | Er3b0r | 📝 | https://github.com/Er3b0r/Dockerlabs_WriteUPs/blob/main/%F0%9F%9F%A0Medio/%F0%9F%8F%B5%EF%B8%8FCollections%F0%9F%8F%B5%EF%B8%8F.md |
 | 11 | Pentester95 | 📝 | https://github.com/dfalla/Hacking---Dockerlabs/blob/collections/collections.md |
 | 12 | kamilfire | 📝 | https://kamilfire.github.io/posts/Collections/ |
-| 13 | victorCybsec | 📝 | https://github.com/victorCybsec/PwnVault/blob/main/WRITE%20UPS/DOCKERLABS/MEDIO/Collections.md |
+| 13 | victorCybsec | 📝 | https://github.com/victorCybsec/PwnVault/blob/main/WRITE%20UPS/DOCKERLABS/MEDIO/Collections.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 14 | El Pingüino de Mario | 🎥 | https://youtu.be/J23U554sF4s?si=A886_2Ce5UN6rkx4 |
 | 15 | El Pingüino de Mario | 🎥 | https://youtu.be/J23U554sF4s?si=skmmqQT4ZiN6Oqin |
 | 16 | Shinkirou | 📝 | https://boletuss-organization.gitbook.io/dw/write-ups/quickstart/maquinas-medio/collections-write-up |

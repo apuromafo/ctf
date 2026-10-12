@@ -32,6 +32,6 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 |---|----------------|-------------|---------------|
 | 1 | maciiii___ | 📝 | https://maciferna.gitbook.io/maci/writeups/dockerlabs/smashing |
 | 2 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/ctf/dockerlabs/smashing-dockerlabs-hard |
-| 3 | Litio7 | 📝 | https://litio7.github.io/posts/dockerlabs-writeup-smashing/ |
+| 3 | Litio7 | 📝 | https://litio7.github.io/posts/dockerlabs-writeup-smashing/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 
 > **Nota:** los enlaces de terceros se citan como anexos. Fecha de índice: 2026-10-12.

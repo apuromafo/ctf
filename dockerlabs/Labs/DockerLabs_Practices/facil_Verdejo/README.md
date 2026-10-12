@@ -48,11 +48,11 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 11 | NytroMG | 📝 | https://medium.com/@nytromg/verdejo-writeup-dockerlabs-cd36a2938fd2 |
 | 12 | Gm4tsy | 📝 | https://gm4tsy.hashnode.dev/dockerlabs-verdejo |
 | 13 | Er3b0r | 📝 | https://github.com/Er3b0r/Dockerlabs_WriteUPs/blob/main/%F0%9F%9F%A2F%C3%A1cil/%F0%9F%8D%87Verdejo%F0%9F%8D%87.md |
-| 14 | Yw4rf | 📝 | https://yw4rf.vercel.app/posts/dockerlabs/verdejo/ |
-| 15 | MykeMR | 📝 | https://mykemr.github.io/Verdejo |
+| 14 | Yw4rf | 📝 | https://yw4rf.vercel.app/posts/dockerlabs/verdejo/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+| 15 | MykeMR | 📝 | https://mykemr.github.io/Verdejo ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 16 | Dark0547 | 📝 | https://dark0547.gitbook.io/tdlc/writeups/dockerlabs/facil/upload |
 | 17 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/dockerlabs-writeups/dockerlabs/verdejo-dockerlabs-easy |
-| 18 | Litio7 | 📝 | https://litio7.github.io/posts/dockerlabs-writeup-verdejo/ |
+| 18 | Litio7 | 📝 | https://litio7.github.io/posts/dockerlabs-writeup-verdejo/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 19 | Shinki | 📝 | https://boletuss-organization.gitbook.io/dw/write-ups/quickstart/maquinas-faciles/verdejo-write-up |
 | 20 | beafn28 | 📝 |  https://beafn28.gitbook.io/beafn28/writeups/dockerlabs/verdejo |
 | 21 | Shinkirou | 📝 | https://boletuss-organization.gitbook.io/dw/write-ups/quickstart/maquinas-faciles/verdejo-write-up |

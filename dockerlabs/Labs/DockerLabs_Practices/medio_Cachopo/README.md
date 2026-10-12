@@ -40,9 +40,9 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 8 | NytroMG | 📝 | https://medium.com/@nytromg/cachopo-writeup-dockerlabs-19b7f461f358 |
 | 9 | Barre | 📝 | https://hacking-3.gitbook.io/hacking/write-up/dockerlabs/medio/cachopo |
 | 10 | RviSecx | 📝 | https://docs.google.com/document/d/1wUfICsRH-HUr-97UkjEfjbMZmb4e_zJRukr0lrhBAgU/edit |
-| 11 | RviSecx | 📝 | https://docs.google.com/document/d/13mvAfXDbslntEMneJcYSTYp6HoSXajrYC9TU38jutJ4/edit |
+| 11 | RviSecx | 📝 | https://docs.google.com/document/d/13mvAfXDbslntEMneJcYSTYp6HoSXajrYC9TU38jutJ4/edit ⚠️ MUERTA (HTTP 410, verificado 2026-10-12) |
 | 12 | Er3b0r | 📝 | https://github.com/Er3b0r/Dockerlabs_WriteUPs/blob/main/%F0%9F%9F%A0Medio/%F0%9F%A5%A9Cachopo%F0%9F%A5%A9.md |
-| 13 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/cachopo |
+| 13 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/cachopo ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 14 | Th3HackTF | 📝 | https://github.com/GustavoUA/WriteUp/wiki/Writeup-Cachopo-%E2%80%90Dockerlabs |
 | 15 | Pentester95 | 📝 | https://github.com/dfalla/Hacking---Dockerlabs/blob/cachopo/cachopo.md |
 | 16 | Sergio Lubo | 📝 | https://github.com/sergiolubo/DockerLabs-WriteUps/blob/main/Cachopo.md |

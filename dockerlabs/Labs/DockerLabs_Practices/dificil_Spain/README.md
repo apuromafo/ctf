@@ -30,7 +30,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 
 | # | Autor / Author | Tipo / Type | Enlace / Link |
 |---|----------------|-------------|---------------|
-| 1 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/spain.md |
+| 1 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/spain.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 2 | 4bytes | 📝 | https://4bytes.gitbook.io/4bytes/writeups/dockerlabs/spain |
 | 3 | maciiii___ | 📝 | https://maciferna.gitbook.io/maci/writeups/dockerlabs/spain |
 | 4 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/dockerlabs-writeups/dockerlabs/spain-dockerlabs-hard |

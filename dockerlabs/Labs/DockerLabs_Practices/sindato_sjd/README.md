@@ -38,7 +38,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 6 | B0end | 📝 | https://b0end.uno/docs/writeups/dockerlabs/very-easy/sjd |
 | 7 | seohack | 📝 | https://albertoestrada.es/hacking/write-up/dockerlabs/sjd/ |
 | 8 | Lavafuego | 📝 | https://github.com/lavafuego/writeups/blob/main/sjd-dockerlabs.md |
-| 9 | victorCybsec | 📝 | https://github.com/victorCybsec/PwnVault/blob/main/WRITE%20UPS/DOCKERLABS/MUY%20FACIL/sjd.md |
+| 9 | victorCybsec | 📝 | https://github.com/victorCybsec/PwnVault/blob/main/WRITE%20UPS/DOCKERLABS/MUY%20FACIL/sjd.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 10 | MatthyGD | 🎥 | https://www.youtube.com/watch?v=QOAMw15gqvg |
 | 11 | Pentester95 | 📝 | https://github.com/dfalla/Hacking---Dockerlabs/blob/sjd/sjd.md |
 | 12 | Stolas | 🎥 | https://stolas.gitbook.io/almacen-de-stolas/sjd |

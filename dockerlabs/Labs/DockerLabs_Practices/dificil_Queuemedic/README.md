@@ -32,7 +32,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 |---|----------------|-------------|---------------|
 | 1 | b0ySie7e | 📝 | https://b0ysie7e.gitbook.io/articulos/write-up/dockerlabs/2024-10-8-queuemedic |
 | 2 | p0mb3r0 | 📝 | https://github.com/raa2015/ctf-write-ups/blob/master/Queuemedic.md |
-| 3 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/queuemedic.md |
+| 3 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/queuemedic.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 4 | maciiii___ | 🎥 | https://youtu.be/pJStB6iWlpY |
 | 5 | skopjee | 📝 | https://github.com/sk0pj3e/Dockerlabs/blob/main/Queuemedic/Queuemedic.md |
 | 6 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/dockerlabs-writeups/dockerlabs/queuemedic-dockerlabs-hard |

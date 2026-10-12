@@ -30,9 +30,9 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 
 | # | Autor / Author | Tipo / Type | Enlace / Link |
 |---|----------------|-------------|---------------|
-| 1 | maciiii___ | 📝 | https://github.com/Maciferna/dockerlabs/blob/main/maquina-apolos/apolos.md |
+| 1 | maciiii___ | 📝 | https://github.com/Maciferna/dockerlabs/blob/main/maquina-apolos/apolos.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 2 | Gm4tsy | 📝 | https://gm4tsy.hashnode.dev/dockerlabs-apolos |
-| 3 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/apolo |
+| 3 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/apolo ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 4 | Isma_yo | 📝 | https://github.com/Isma-yo/Write-Ups-DockerLabs/blob/main/M%C3%A1quina%20Apolos/Maquina%20Apolos.md |
 | 5 | Pentester95 | 📝 | https://github.com/dfalla/Hacking---Dockerlabs/blob/apolos/apolos.md |
 | 6 | Zharaman | 📝 | https://github.com/valdivialopezf/DockerLabs/blob/main/Apolo_Dockelrabs.pdf |
@@ -41,7 +41,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 9 | Th3HackTF | 📝 | https://github.com/GustavoUA/WriteUp/wiki/Writeup-Apolo |
 | 10 | JuanR | 📝 | https://github.com/JuanAntonioRodriguez68/Dockerlabs/blob/main/Apolos.pdf |
 | 11 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/dockerlabs-writeups/dockerlabs/apolos-dockerlabs-intermediate |
-| 12 | victorCybsec | 📝 | https://github.com/victorCybsec/PwnVault/blob/main/WRITE%20UPS/DOCKERLABS/MEDIO/Apolos.md |
+| 12 | victorCybsec | 📝 | https://github.com/victorCybsec/PwnVault/blob/main/WRITE%20UPS/DOCKERLABS/MEDIO/Apolos.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 13 | Shinkirou | 📝 | https://boletuss-organization.gitbook.io/dw/write-ups/quickstart/maquinas-medio/apolos-write-up |
 | 14 | juanbelin | 🎥 | https://github.com/juanbelin/Writeups-CTFs-Challenges/blob/main/Dockerlabs/M%C3%A1quina%20Apolo.pdf |
 | 15 | elWeoner | 📝 | https://darkened-raisin-b9c.notion.site/Apolos-1ec5f89f92388048a32de3b034f804d0?pvs=4 |

@@ -34,7 +34,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 2 | Shinkirou | 📝 | https://boletuss-organization.gitbook.io/dw/write-ups/quickstart/maquinas-faciles/internship-write-up |
 | 3 | Lavafuego | 📝 | https://github.com/lavafuego/writeups/blob/main/Internship.md |
 | 4 | beafn28 | 📝 | https://beafn28.gitbook.io/beafn28/writeups/dockerlabs/internship |
-| 5 | Yw4rf | 📝 | https://yw4rf.vercel.app/posts/dockerlabs/internship/ |
+| 5 | Yw4rf | 📝 | https://yw4rf.vercel.app/posts/dockerlabs/internship/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 6 | El Pingüino de Mario | 🎥 | https://youtu.be/6TmjzNtw3nU |
 | 7 | TBrux | 🎥 | https://youtu.be/Cz4Zlz7FsLY?si=r3_34GWjSrrxGaF6 |
 | 8 | AlejandroSL | 🎥 | https://github.com/Alejandro609x/Dockerlabs/blob/main/Internship/Internship.md |

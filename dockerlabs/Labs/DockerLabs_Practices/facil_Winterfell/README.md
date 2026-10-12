@@ -37,7 +37,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 |---|----------------|-------------|---------------|
 | 1 | zunderrub | 🎥 | https://youtu.be/KD5U-LZ6Fyc?si=tL6cQNorJ3mJmxWO |
 | 2 | rxffsec | 📝 | https://www.linkedin.com/pulse/dockerlabs-winterfell-rafael-alvarez-mqdjc/ |
-| 3 | maciiii___ | 📝 | https://github.com/Maciferna/DockerLabs/blob/main/maquina-winterfell/Winterfell.md |
+| 3 | maciiii___ | 📝 | https://github.com/Maciferna/DockerLabs/blob/main/maquina-winterfell/Winterfell.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 4 | 1NCO6N1TO | 📝 | https://github.com/1NCO6N1TO/WriteUps_DockerLabs/blob/main/Winterfell.md |
 | 5 | Torral | 📝 | https://github.com/t0rr4l/Writeups_Hacking/blob/main/DockerLabs/Winterfell.md |
 | 6 | G0nch1s | 🎥 | https://youtu.be/fe0jT1u6fwc |
@@ -45,7 +45,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 8 | NytroMG | 📝 | https://medium.com/@nytromg/winterfell-writeup-dockerlabs-60456431d713 |
 | 9 | JuanR | 📝 | https://docs.google.com/document/d/1Q3khzNqlIqKzt5CS2Va2Zh0tdeXAffgW2B9rHgGzeLo/edit?usp=sharing |
 | 10 | Er3b0r | 📝 | https://github.com/Er3b0r/Dockerlabs_WriteUPs/blob/main/%F0%9F%9F%A2F%C3%A1cil/%F0%9F%90%BA%F0%9F%90%89Winterfell%F0%9F%90%89%F0%9F%90%BA.md |
-| 11 | Romy | 📝 | https://github.com/Romyy1/Obsidian/blob/main/Mi%20Aprendimiento/DockerLabs/Winterfell.pdf |
+| 11 | Romy | 📝 | https://github.com/Romyy1/Obsidian/blob/main/Mi%20Aprendimiento/DockerLabs/Winterfell.pdf ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 12 | Andr3 | 📝 | https://github.com/giustiand/DockerLabs-Writeups/blob/main/F%C3%A1cil/winterfell.md |
 | 13 | El Pingüino de Mario | 🎥 | https://youtu.be/zsyre2EBb24?si=1mC_jhr5nawFvV67 |
 | 14 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/dockerlabs-writeups/dockerlabs/winterfell-dockerlabs-easy |

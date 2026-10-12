@@ -31,9 +31,9 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | # | Autor / Author | Tipo / Type | Enlace / Link |
 |---|----------------|-------------|---------------|
 | 1 | suraxddq | 📝 | https://byte-mind.net/dockerlabs-machines-hackmedaddy-writeup/ |
-| 2 | maciiii___ | 📝 | https://github.com/Maciferna/DockerLabs/blob/main/maquina-HackMeDaddy/HackMeDaddy.md |
+| 2 | maciiii___ | 📝 | https://github.com/Maciferna/DockerLabs/blob/main/maquina-HackMeDaddy/HackMeDaddy.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 3 | Gm4tsy | 📝 | https://gm4tsy.hashnode.dev/dockerlabs-hackmedaddy |
-| 4 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/HackMeDaddy |
+| 4 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/HackMeDaddy ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 5 | Barre | 📝 | https://hacking-3.gitbook.io/hacking/write-up/dockerlabs/dificil/hackmedaddy |
 | 6 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/my-ctfs/ctfs/ctf-hackmedaddy-hard |
 | 7 | buda-sys | 📝 | https://buda-sys.gitbook.io/maquinas-linux |

@@ -31,7 +31,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | # | Autor / Author | Tipo / Type | Enlace / Link |
 |---|----------------|-------------|---------------|
 | 1 | dise0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/ctf/ctfs/ctf-minecraft-intermediate |
-| 2 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/Minecraft.md |
+| 2 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/Minecraft.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 3 | Ciberap | 📝 | https://ciberap.gitbook.io/ciberaprt/dificil/minecraft |
 | 4 | Pyth0nK1d | 📝 | https://pyth0nk1d.medium.com/dockerlabs-writeup-minecraft-spanish-ca2a58a80df4 |
 

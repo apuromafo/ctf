@@ -36,7 +36,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | # | Autor / Author | Tipo / Type | Enlace / Link |
 |---|----------------|-------------|---------------|
 | 1 | G0nch1s | 🎥 | https://youtu.be/bgO-sEHxsLU |
-| 2 | maciiii___ | 📝 | https://github.com/Maciferna/DockerLabs/blob/main/maquina-pntopntobarra/pntopntobarra.md |
+| 2 | maciiii___ | 📝 | https://github.com/Maciferna/DockerLabs/blob/main/maquina-pntopntobarra/pntopntobarra.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 3 | Barre | 📝 | https://hacking-3.gitbook.io/hacking/write-up/dockerlabs/facil/pntopntobarra |
 | 4 | JuanR | 📝 | https://docs.google.com/document/d/1Q0jcOvxHjtnVzAB9yRzkVZYW0lqknlrsadC0DdIv7l0/edit?usp=sharing |
 | 5 | zunderrub | 🎥 | https://youtu.be/KJ4Ml5_Ltx0 |
@@ -45,8 +45,8 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 8 | PedroM11 | 📝 | https://github.com/PedroMontoya11/Laboratorios-CTF/blob/main/Dockerlabs/M%C3%A1quina%20Pntopntobarra.md |
 | 9 | elWeoner | 📝 | https://darkened-raisin-b9c.notion.site/Pntopntobarra-1045f89f923880c9adb4e1b84eabf038?pvs=4 |
 | 10 | Klaus | 📝 | https://github.com/valanyrr/Maquinas-DockerLabs/blob/main/Easy/MaquinaPntopntobarra.md |
-| 11 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/pntopntobarra |
-| 12 | MykeMR | 📝 | https://mykemr.github.io/Pntopntobarra |
+| 11 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/pntopntobarra ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+| 12 | MykeMR | 📝 | https://mykemr.github.io/Pntopntobarra ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 13 | Andr3 | 📝 | https://github.com/giustiand/DockerLabs-Writeups/blob/main/F%C3%A1cil/pntopntobarra.md |
 | 14 | Pentester95 | 📝 | https://github.com/dfalla/Hacking---Dockerlabs/blob/pntopntobarra/pntopntobarra.md |
 | 15 | El Pingüino de Mario | 🎥 | https://youtu.be/rFYUKJzpwmU?si=Cs0UvXYJPRJTVlDa |

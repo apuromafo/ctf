@@ -30,8 +30,8 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 
 | # | Autor / Author | Tipo / Type | Enlace / Link |
 |---|----------------|-------------|---------------|
-| 1 | HYH | 📝 | https://www.hyhforever.top/dockerlabs-stackinferno/ |
-| 2 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/stackinferno.md |
+| 1 | HYH | 📝 | https://www.hyhforever.top/dockerlabs-stackinferno/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+| 2 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/stackinferno.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 3 | Shinkirou | 📝 | https://boletuss-organization.gitbook.io/dw/write-ups/quickstart/maquinas-medio/stackinferno-write-up |
 | 4 | Alx SG | 📝 | https://github.com/AlxSAGA/Practical-Hacking-Labs/blob/main/01-DockerLabs/03-Media/31-StackInfierno.md |
 

@@ -30,15 +30,15 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 
 | # | Autor / Author | Tipo / Type | Enlace / Link |
 |---|----------------|-------------|---------------|
-| 1 | maciiii___ | 📝 | https://github.com/Maciferna/DockerLabs/blob/main/maquina-Stellarjwt/Stellarjwt.md |
+| 1 | maciiii___ | 📝 | https://github.com/Maciferna/DockerLabs/blob/main/maquina-Stellarjwt/Stellarjwt.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 2 | Alv-fh | 🎥 | https://youtu.be/qnQ2cHklurU?si=ubgCqQMjVgHNuHpr |
 | 3 | bauti | 📝 | https://bau-1.gitbook.io/bau-docs/write-ups/dockerlabs/stellarjwt |
 | 4 | zunderrub | 🎥 | https://youtu.be/bKf-LoIoS1U |
-| 5 | jiduhack | 📝 | https://angelcorral2021.github.io/maquinas/post-3/ |
+| 5 | jiduhack | 📝 | https://angelcorral2021.github.io/maquinas/post-3/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 6 | JuanR | 📝 | https://github.com/JuanAntonioRodriguez68/Dockerlabs/blob/main/Stellarjwt.pdf |
-| 7 | Yw4rf | 📝 | https://yw4rf.vercel.app/posts/dockerlabs/stellarjwt/ |
+| 7 | Yw4rf | 📝 | https://yw4rf.vercel.app/posts/dockerlabs/stellarjwt/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 8 | El Pingüino de Mario | 🎥 | https://youtu.be/VapnEcotU9A?si=qGWRIWAryq0apQW- |
-| 9 | Litio7 | 📝 | https://litio7.github.io/posts/dockerlabs-writeup-stellarjwt/ |
+| 9 | Litio7 | 📝 | https://litio7.github.io/posts/dockerlabs-writeup-stellarjwt/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 10 | beafn28 | 📝 | https://beafn28.gitbook.io/beafn28/writeups/dockerlabs/stellarjwt |
 | 11 | AlejandroSL | 📝 | https://github.com/Alejandro609x/Dockerlabs/blob/main/Stellarjwt/stellarjwt.md |
 | 12 | Shinkirou | 📝 | https://boletuss-organization.gitbook.io/dw/write-ups/quickstart/maquinas-faciles/stellarjwt-write-up |

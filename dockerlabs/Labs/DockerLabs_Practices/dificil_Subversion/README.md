@@ -31,8 +31,8 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | # | Autor / Author | Tipo / Type | Enlace / Link |
 |---|----------------|-------------|---------------|
 | 1 | maciiii___ | 📝 | https://maciferna.gitbook.io/maci/writeups/dockerlabs/subversion |
-| 2 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/subversion.md |
-| 3 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/subversion.md |
+| 2 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/subversion.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+| 3 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/subversion.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 4 | Lenam | 📝 | https://len4m.github.io/es/posts/subversion-writeup-dockerlabs-es/ |
 
 > **Nota:** los enlaces de terceros se citan como anexos. Fecha de índice: 2026-10-12.

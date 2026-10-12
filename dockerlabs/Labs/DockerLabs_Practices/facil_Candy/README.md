@@ -35,7 +35,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 
 | # | Autor / Author | Tipo / Type | Enlace / Link |
 |---|----------------|-------------|---------------|
-| 1 | maciiii___ | 📝 | https://github.com/Maciferna/DockerLabs/blob/main/maquina-candy/candy.md |
+| 1 | maciiii___ | 📝 | https://github.com/Maciferna/DockerLabs/blob/main/maquina-candy/candy.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 2 | Klaus | 📝 | https://github.com/valanyrr/Maquinas-DockerLabs/blob/main/Easy/MaquinaCandy.md |
 | 3 | Gm4tsy | 📝 | https://gm4tsy.hashnode.dev/dockerlabs-candy |
 | 4 | CyberConper | 🎥 | https://youtu.be/oko4fXi-J7k |
@@ -55,7 +55,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 18 | AlejandroSL | 📝 | https://github.com/Alejandro609x/Dockerlabs/blob/main/Candy/Candy.md |
 | 19 | Bandit0 | 📝 | https://github.com/8andit0/BanditBox/blob/main/Maquinas%20De%20Dockerlabs/Maquinas%20Faciles/Candy.md |
 | 20 | Alx SG | 📝 | https://github.com/AlxSAGA/Practical-Hacking-Labs/blob/main/01-DockerLabs/02-Facil/07-Candy.md |
-| 21 | Litio7 | 📝 | https://litio7.github.io/posts/dockerlabs-writeup-candy/ |
+| 21 | Litio7 | 📝 | https://litio7.github.io/posts/dockerlabs-writeup-candy/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 22 | ivansuitooo | 🎥 | https://www.youtube.com/watch?v=uOu72RthI-A&t=9s |
 | 23 | brias | 📝 | https://brias.gitbook.io/brias/dockerlabs/dificultad-facil/candy |
 | 24 | Pyth0nK1d | 📝 | https://pyth0nk1d.medium.com/dockerlabs-writeup-candy-spanish-e10fc64bd69f |

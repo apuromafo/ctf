@@ -30,11 +30,11 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 
 | # | Autor / Author | Tipo / Type | Enlace / Link |
 |---|----------------|-------------|---------------|
-| 1 | murrusko | 📝 | https://murrusko.github.io/posts/r00tless/ |
+| 1 | murrusko | 📝 | https://murrusko.github.io/posts/r00tless/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 2 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/r00tless |
 | 3 | afgsanchez | 🎥 | https://www.youtube.com/watch?v=jcKmIRV78eQ |
 | 4 | Isma_yo | 📝 | https://github.com/Isma-yo/Write-Ups-DockerLabs/blob/main/Maquina%20r00tless/M%C3%A1quina%20r00tless.md |
-| 5 | maciiii___ | 📝 | https://github.com/Maciferna/DockerLabs/blob/main/maquina-r00tless/r00tless.md |
+| 5 | maciiii___ | 📝 | https://github.com/Maciferna/DockerLabs/blob/main/maquina-r00tless/r00tless.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 6 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/my-ctfs/ctfs/ctf-r00tless-hard |
 | 7 | skopjee | 📝 | https://github.com/sk0pj3e/Dockerlabs/blob/main/r00tless/r00tless.md |
 | 8 | JuanR | 📝 | https://github.com/JuanAntonioRodriguez68/Dockerlabs/blob/main/R00tless.pdf |

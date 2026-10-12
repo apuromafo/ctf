@@ -31,7 +31,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | # | Autor / Author | Tipo / Type | Enlace / Link |
 |---|----------------|-------------|---------------|
 | 1 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/ctf/ctfs/ctf-gitea-intermediate |
-| 2 | incommatose | 📝 | https://incommatose.github.io/Gitea-Writeup/ |
+| 2 | incommatose | 📝 | https://incommatose.github.io/Gitea-Writeup/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 3 | firstatack | 📝 | https://firstatack.github.io/posts/gitea/ |
 | 4 | skopjee | 📝 | https://github.com/sk0pj3e/Dockerlabs/blob/main/Gitea/gitea.md |
 | 5 | incommatose | 📝 | https://incommatose.github.io/Gitea-Dockerlabs-Writeup/ |

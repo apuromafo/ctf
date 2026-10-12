@@ -32,9 +32,9 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 |---|----------------|-------------|---------------|
 | 1 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/my-ctfs/ctfs/ctf-lifeordead-hard |
 | 2 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/my-ctfs/ctfs/ctf-lifeordead-hard |
-| 3 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/lifeordead.md |
+| 3 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/lifeordead.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 4 | maciiii___ | 📝 | https://maciferna.gitbook.io/maci/writeups/dockerlabs/lifeordead |
-| 5 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/lifeordead.md |
+| 5 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/lifeordead.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 6 | incommatose | 📝 | https://medium.com/@incommatose/writeup-lifeordead-dockerlabs-dif%C3%ADcil-62464b57504c |
 | 7 | incommatose | 📝 | https://incommatose.github.io/Lifeordead-Dockerlabs-Writeup/ |
 

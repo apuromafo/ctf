@@ -42,10 +42,10 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 10 | haw441kings | 📝 | https://github.com/haw441kings/DockerLabsWriteUps/blob/main/Medio/Eclipse.md |
 | 11 | firstatack | 📝 | https://firstatack.github.io/posts/eclipse/ |
 | 12 | JuanR | 📝 | https://docs.google.com/document/d/1lX_jk42vyruNpWiLzkbfBx7sTA3SnOwJKTOLd3n21ug/edit?usp=sharing |
-| 13 | Rick Alvarez | 📝 | https://lordcodigo.blogspot.com/2024/06/resolucion-de-la-maquina-eclipse.html |
+| 13 | Rick Alvarez | 📝 | https://lordcodigo.blogspot.com/2024/06/resolucion-de-la-maquina-eclipse.html ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 14 | G0nch1s | 🎥 | https://youtu.be/EuNSXInbWuU |
 | 15 | Gm4tsy | 📝 | https://gm4tsy.hashnode.dev/dockerlabs-eclipse |
-| 16 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/eclipse |
+| 16 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/eclipse ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 17 | 4bytes | 📝 | https://github.com/4bytess/writeups/blob/main/dockerlabs/eclipse.md |
 | 18 | maciiii___ | 📝 | https://maciferna.gitbook.io/maci/writeups/dockerlabs/eclipse |
 | 19 | kamilfire | 📝 | https://kamilfire.github.io/posts/eclipse/ |

@@ -34,8 +34,8 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 2 | B0end | 📝 | https://b0end.uno/docs/writeups/dockerlabs/medium/seeker |
 | 3 | maciiii___ | 📝 | https://maciferna.gitbook.io/maci/writeups/dockerlabs/seeker |
 | 4 | skopjee | 📝 | https://github.com/sk0pj3e/Dockerlabs/blob/main/seeker/seeker.md |
-| 5 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/seeker.md |
-| 6 | victorCybsec | 📝 | https://github.com/victorCybsec/PwnVault/blob/main/WRITE%20UPS/DOCKERLABS/MEDIO/Seeker.md |
+| 5 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/seeker.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+| 6 | victorCybsec | 📝 | https://github.com/victorCybsec/PwnVault/blob/main/WRITE%20UPS/DOCKERLABS/MEDIO/Seeker.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 7 | Shinkirou | 📝 | https://boletuss-organization.gitbook.io/dw/write-ups/quickstart/maquinas-medio/seeker-write-up |
 | 8 | Alx SG | 📝 | https://github.com/AlxSAGA/Practical-Hacking-Labs/blob/main/01-DockerLabs/03-Media/29-Seeker.md |
 

@@ -31,9 +31,9 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | # | Autor / Author | Tipo / Type | Enlace / Link |
 |---|----------------|-------------|---------------|
 | 1 | maciiii___ | 🎥 | https://youtu.be/9ufc2zGpVSE |
-| 2 | maciiii___ | 📝 | https://github.com/Maciferna/DockerLabs/blob/main/maquina-bruteshock/bruteshock.md |
+| 2 | maciiii___ | 📝 | https://github.com/Maciferna/DockerLabs/blob/main/maquina-bruteshock/bruteshock.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 3 | incommatose | 📝 | https://github.com/incommatose/dockerlabs-writeups/blob/main/machines/Medium/Bruteshock%20-%20Medium.md |
-| 4 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/bruteshock.md |
+| 4 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/bruteshock.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 5 | zunderrub | 🎥 | https://youtu.be/y9ciKKWeXi0?si=did28OrizXk-0RG0 |
 | 6 | El Pingüino de Mario | 🎥 | https://youtu.be/_YCcAYEDVq0?si=bu35qPCreAR0lwJo |
 | 7 | redPentester | 📝 | https://pentesterarchive.github.io/posts/bruteShock/ |

@@ -30,7 +30,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 
 | # | Autor / Author | Tipo / Type | Enlace / Link |
 |---|----------------|-------------|---------------|
-| 1 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/memesploit |
+| 1 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/memesploit ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 2 | condorhacks | 🎥 | https://youtu.be/yFqBDUQqyAw |
 | 3 | burple | 📝 | https://burples-organization.gitbook.io/burple-blog/dockerlabs/medio/memesploit-linux |
 | 4 | JuanR | 📝 | https://github.com/JuanAntonioRodriguez68/Dockerlabs/blob/main/Memesploit.pdf |

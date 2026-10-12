@@ -45,7 +45,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 7 | JuanR | 📝 | https://docs.google.com/document/d/1aQLyh69NNZM42g3BwuHCT6SVN3cQz_AW0srSNYd0J2g/edit?usp=sharing |
 | 8 | Mindmeld7 | 🎥 | https://m.youtube.com/watch?v=_oH6ypVjxgQ |
 | 9 | elWeoner | 📝 | https://darkened-raisin-b9c.notion.site/AguaDeMayo-04400b94720547f7853d81d43cf1bd39?pvs=25 |
-| 10 | Romy | 📝 | https://github.com/Romyy1/Obsidian/blob/main/Mi%20Aprendimiento/DockerLabs/AguaDeMayo.pdf |
+| 10 | Romy | 📝 | https://github.com/Romyy1/Obsidian/blob/main/Mi%20Aprendimiento/DockerLabs/AguaDeMayo.pdf ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 11 | G0nch1s | 🎥 | https://youtu.be/SYhB72ij_J0 |
 | 12 | NytroMG | 📝 | https://medium.com/@nytromg/aguademayo-writeup-dockerlabs-264e9efeecae |
 | 13 | Shinbi | 📝 | https://drive.google.com/file/d/1LCWEvnfxyv0kqJw5vUnB4HKUt5uMj1zw/view?usp=sharing |
@@ -57,8 +57,8 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 19 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/dockerlabs-writeups/dockerlabs/aaguademayo-dockerlabs-easy |
 | 20 | Ninj470 | 📝 | https://book.h4ck.cl/v/labs/hackerlabs/aguademayo-dockerlabs |
 | 21 | Ninj470 | 📝 | https://labs.h4ck.cl/dockerlabs/aguademayo |
-| 22 | MarckWeb | 📝 | https://marckweb.github.io/writeUps/AguaDeMayo/Maquina_agua_de_mayo.html |
-| 23 | TBrux | 📝 | https://github.com/TBrux/DOCKERLABS/blob/main/AguaDeMayo.md |
+| 22 | MarckWeb | 📝 | https://marckweb.github.io/writeUps/AguaDeMayo/Maquina_agua_de_mayo.html ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+| 23 | TBrux | 📝 | https://github.com/TBrux/DOCKERLABS/blob/main/AguaDeMayo.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 24 | Klaus | 📝 | https://github.com/valanyrr/Maquinas-DockerLabs/blob/main/Easy/MaquinaAguaDeMayo.md |
 | 25 | G0nch1s | 📝 | https://g0nch1s.blogspot.com/2024/09/write-up-maquina-aguademayo-dockerlabs.html |
 | 26 | JuanR | 📝 | https://github.com/JuanAntonioRodriguez68/Dockerlabs/blob/main/AguaDeMayo.pdf |
@@ -68,10 +68,10 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 30 | Pentester95 | 📝 | https://github.com/dfalla/Hacking---Dockerlabs/blob/aguademayo/aguademayo.md |
 | 31 | Andr3 | 📝 | https://github.com/giustiand/DockerLabs-Writeups/blob/main/F%C3%A1cil/aguademayo.md |
 | 32 | Ankb | 📝 | https://github.com/AnkbNikas/DockerLabs-Writeups/blob/6932ae654acc7ee6c63381ff827bc0fc3f64ec65/M%C3%A1quina%20AguaDeMayo.md |
-| 33 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/aguademayo.md |
+| 33 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/aguademayo.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 34 | hypnopompicman | 📝 | https://github.com/hypnopompicman/Writeups_Dockerlabs/blob/master/aguademayo.md |
 | 35 | v3d0m | 📝 | https://cved0m.gitbook.io/cved0m-docs/writeups/dockerlabs/faciles/aguademayo |
-| 36 | Litio7 | 📝 | https://litio7.github.io/posts/dockerlabs-writeup-aguademayo/ |
+| 36 | Litio7 | 📝 | https://litio7.github.io/posts/dockerlabs-writeup-aguademayo/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 37 | beafn28 | 📝 | https://beafn28.gitbook.io/beafn28/writeups/dockerlabs/aguademayo |
 | 38 | DpCoding | 📝 | https://dpcoding.com/dockerlabs-maquina-agua-de-mayo/ |
 | 39 | AlejandroSL | 📝 | https://github.com/Alejandro609x/Dockerlabs/blob/main/AguaDeMayo/AguaDeMayo.md |

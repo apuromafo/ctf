@@ -31,7 +31,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | # | Autor / Author | Tipo / Type | Enlace / Link |
 |---|----------------|-------------|---------------|
 | 1 | qingquan12 | 📝 | https://qingquan12.hashnode.dev/dockerlabs-findyourstyle |
-| 2 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/findyourstyle |
+| 2 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/findyourstyle ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 3 | Klaus | 📝 | https://github.com/valanyrr/Maquinas-DockerLabs/blob/main/Easy/MaquinaFindYourStyle.md |
 | 4 | Andre | 📝 | https://github.com/giustiand/DockerLabs-Writeups/blob/main/F%C3%A1cil/findyourstyle.md |
 | 5 | JuanR | 📝 | https://github.com/JuanAntonioRodriguez68/Dockerlabs/blob/main/Findyourstyle.pdf |
@@ -47,6 +47,6 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 15 | Aguilar | 📝 | https://github.com/Aguilar-aoj/Pentesting/blob/main/DockerLabs/Facil/FindYourStyle.md |
 | 16 | brias | 📝 | https://brias.gitbook.io/brias/dockerlabs/dificultad-facil/findyourstyle |
 | 17 | Pyth0nK1d | 📝 | https://pyth0nk1d.medium.com/dockerlabs-writeup-findyourstyle-spanish-466d543adaf0 |
-| 18 | X02_Security | 📝 | https://galizaragozadev.gitbook.io/galizaragozadev-docs/dockerlabs/find-your-style-easy-dockerlabs |
+| 18 | X02_Security | 📝 | https://galizaragozadev.gitbook.io/galizaragozadev-docs/dockerlabs/find-your-style-easy-dockerlabs ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 
 > **Nota:** los enlaces de terceros se citan como anexos. Fecha de índice: 2026-10-12.

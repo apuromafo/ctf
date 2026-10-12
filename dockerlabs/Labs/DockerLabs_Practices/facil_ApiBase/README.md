@@ -33,7 +33,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 1 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/ctf/dockerlabs/apibase-dockerlabs-easy |
 | 2 | skopjee | 📝 | https://github.com/sk0pj3e/Dockerlabs/blob/main/apibase/apibase.md |
 | 3 | Shinkirou | 📝 | https://boletuss-organization.gitbook.io/dw/write-ups/quickstart/maquinas-faciles/apibase-write-up |
-| 4 | Yw4rf | 📝 | https://yw4rf.vercel.app/posts/dockerlabs/apibase/ |
+| 4 | Yw4rf | 📝 | https://yw4rf.vercel.app/posts/dockerlabs/apibase/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 5 | El Pingüino de Mario | 🎥 | https://youtu.be/rrYj5EBHIek |
 | 6 | AlejandroSL | 📝 | https://github.com/Alejandro609x/Dockerlabs/blob/main/ApiBase/ApiBase.md |
 | 7 | Aguilar | 📝 | https://github.com/Aguilar-aoj/Pentesting/blob/main/DockerLabs/Facil/ApiBase.md |

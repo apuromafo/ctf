@@ -40,11 +40,11 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 3 | Romabri | 📝 | https://github.com/romabri/romabri.github.io/blob/master/_posts/2024-05-07-Pn.md |
 | 4 | Quokka | 📝 | https://github.com/Qu0kk4/Quokka/blob/main/DockerLabs/-Pn.md |
 | 5 | AnonimPlayer_ | 📝 | https://github.com/AnonimPlayerr/DockerLabsWriteUps/blob/main/-Pn(ES).md |
-| 6 | M4nu | 📝 | https://github.com/M4nuTCP/Dockerlabs-Writups/blob/main/Facil/-Pn.md |
+| 6 | M4nu | 📝 | https://github.com/M4nuTCP/Dockerlabs-Writups/blob/main/Facil/-Pn.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 7 | TBrux | 📝 | https://github.com/TBrux/DOCKERLABS/blob/main/-Pn.md |
 | 8 | NormalMan | 📝 | https://jotayepes.notion.site/Pn-dabf7ce174e145499f468d08377a52cf?pvs=4 |
 | 9 | haw441kings | 📝 | https://github.com/haw441kings/DockerLabsWriteUps/blob/main/Faciles/Pn.md |
-| 10 | JuanR | 📝 | https://online.publuu.com/516647/1172305 |
+| 10 | JuanR | 📝 | https://online.publuu.com/516647/1172305 ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 11 | TerrorAterrador | 📝 | https://github.com/TerrorAterrador/WriteUps/blob/main/DockerLabs/-Pn.md |
 | 12 | elWeoner | 📝 | https://darkened-raisin-b9c.notion.site/Pn-9397a18aae9649cda949b87c91342434?pvs=25 |
 | 13 | G0nch1s | 🎥 | https://youtu.be/tmrXiOlrBao |
@@ -66,6 +66,6 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 29 | Alx SG | 📝 | https://github.com/AlxSAGA/Practical-Hacking-Labs/blob/main/01-DockerLabs/02-Facil/29-Pn.md |
 | 30 | Aguilar | 📝 | https://github.com/Aguilar-aoj/Pentesting/blob/main/DockerLabs/Facil/-Pn.md |
 | 31 | brias | 📝 | https://brias.gitbook.io/brias/dockerlabs/dificultad-facil/pn |
-| 32 | X02_Security | 📝 | https://galizaragozadev.gitbook.io/galizaragozadev-docs/dockerlabs/pn-easy-dockerlabs |
+| 32 | X02_Security | 📝 | https://galizaragozadev.gitbook.io/galizaragozadev-docs/dockerlabs/pn-easy-dockerlabs ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 
 > **Nota:** los enlaces de terceros se citan como anexos. Fecha de índice: 2026-10-12.

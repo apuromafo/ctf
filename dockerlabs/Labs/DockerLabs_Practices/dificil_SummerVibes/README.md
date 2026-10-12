@@ -36,15 +36,15 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 4 | El Pingüino de Mario | 🎥 | https://youtu.be/137XmnAfJdo |
 | 5 | firstatack | 📝 | https://firstatack.github.io/posts/summervibes/ |
 | 6 | CiberGon | 🎥 | https://youtu.be/auxjIQwYmLk |
-| 7 | M4nu | 📝 | https://github.com/M4nuTCP/Dockerlabs-Writups/blob/main/Dificil/SummerVibes.md |
+| 7 | M4nu | 📝 | https://github.com/M4nuTCP/Dockerlabs-Writups/blob/main/Dificil/SummerVibes.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 8 | haw441kings | 📝 | https://github.com/haw441kings/DockerLabsWriteUps/blob/main/Dificiles/SummerVibes.md |
 | 9 | JuanR | 📝 | https://docs.google.com/document/d/1vCTDITyNfU8M0JIQdnPCLIiimuhkbnhpEjRsNhR8RMo/edit?usp=sharing |
 | 10 | 1NCO6N1TO | 📝 | https://github.com/1NCO6N1TO/WriteUps_DockerLabs/blob/main/Summervibes.md |
-| 11 | elc4br4 | 📝 | https://elc4br4wiki.gitbook.io/elc4br4wiki/dockerlabs/summervibes-dockerlabs |
+| 11 | elc4br4 | 📝 | https://elc4br4wiki.gitbook.io/elc4br4wiki/dockerlabs/summervibes-dockerlabs ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 12 | PedroM11 | 📝 | https://github.com/PedroMontoya11/Laboratorios-CTF/blob/main/Dockerlabs/M%C3%A1quina%20SummerVibes.md |
 | 13 | G0nch1s | 🎥 | https://youtu.be/gSLv0Hwkv3k |
 | 14 | Gm4tsy | 📝 | https://gm4tsy.hashnode.dev/dockerlabs-summervibes |
-| 15 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/summervibes |
+| 15 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/summervibes ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 16 | skopjee | 📝 | https://github.com/sk0pj3e/Dockerlabs/tree/main/summervibes |
 | 17 | El Pingüino de Mario | 🎥 | https://youtu.be/7St6YnMvYBI?si=QKLBVY-pbd3uGFxT |
 | 18 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/dockerlabs-writeups/dockerlabs/summervibes-dockerlabs-hard |

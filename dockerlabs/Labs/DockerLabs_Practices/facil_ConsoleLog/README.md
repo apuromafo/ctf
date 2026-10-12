@@ -60,7 +60,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 22 | AlejandroSL | 📝 | https://github.com/Alejandro609x/Dockerlabs/blob/main/ConsoleLog/ConsoleLog.md |
 | 23 | Bandit0 | 📝 | https://github.com/8andit0/BanditBox/blob/main/Maquinas%20De%20Dockerlabs/Maquinas%20Faciles/Console%20log.md |
 | 24 | Alx SG | 📝 | https://github.com/AlxSAGA/Practical-Hacking-Labs/blob/main/01-DockerLabs/02-Facil/06-ConsoleLog.md |
-| 25 | Litio7 | 📝 | https://litio7.github.io/posts/dockerlabs-writeup-consolelog/ |
+| 25 | Litio7 | 📝 | https://litio7.github.io/posts/dockerlabs-writeup-consolelog/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 26 | brias | 📝 | https://brias.gitbook.io/brias/dockerlabs/dificultad-facil/consolelog |
 | 27 | tri | 📝 | https://poltrias.gitbook.io/writeups/dockerlabs/consolelog |
 | 28 | Pyth0nK1d | 📝 | https://pyth0nk1d.medium.com/dockerlabs-writeup-consolelog-spanish-9f6b5224c926 |

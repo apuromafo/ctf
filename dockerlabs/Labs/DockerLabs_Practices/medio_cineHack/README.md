@@ -35,9 +35,9 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 3 | JuanR | 📝 | https://github.com/JuanAntonioRodriguez68/Dockerlabs/blob/main/Cinehack.pdf |
 | 4 | JuanR | 📝 | https://github.com/JuanAntonioRodriguez68/Dockerlabs/blob/main/Cinehack.pdf |
 | 5 | El Pingüino de Mario | 🎥 | https://youtu.be/n5H1Fr_h4bU |
-| 6 | Litio7 | 📝 | https://litio7.github.io/posts/dockerlabs-writeup-cinehack/ |
+| 6 | Litio7 | 📝 | https://litio7.github.io/posts/dockerlabs-writeup-cinehack/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 7 | El Pingüino de Mario | 🎥 | https://youtu.be/n5H1Fr_h4bU?si=5-_G0qBqv6Yi8t4O |
-| 8 | victorCybsec | 📝 | https://github.com/victorCybsec/PwnVault/blob/main/WRITE%20UPS/DOCKERLABS/MEDIO/CineHack.md |
+| 8 | victorCybsec | 📝 | https://github.com/victorCybsec/PwnVault/blob/main/WRITE%20UPS/DOCKERLABS/MEDIO/CineHack.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 9 | Shinkirou | 📝 | https://boletuss-organization.gitbook.io/dw/write-ups/quickstart/maquinas-medio/cinehack-write-up |
 | 10 | Alx SG | 📝 | https://github.com/AlxSAGA/Practical-Hacking-Labs/blob/main/01-DockerLabs/03-Media/28-CineHack.md |
 

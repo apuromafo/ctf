@@ -37,7 +37,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 5 | JuanR | 📝 | https://docs.google.com/document/d/1SfF-0gW1pYbCOvaiiFcB8gsrEir3YDWFNsVeoW0nckY/edit?usp=sharing |
 | 6 | G0nch1s | 🎥 | https://youtu.be/usMrwVMObAA |
 | 7 | Gm4tsy | 📝 | https://gm4tsy.hashnode.dev/dockerlabs-usersearch |
-| 8 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/usersearch |
+| 8 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/usersearch ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 9 | maciiii___ | 📝 | https://maciferna.gitbook.io/maci/writeups/dockerlabs/usersearch |
 | 10 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/dockerlabs-writeups/dockerlabs/usersearch-dockerlabs-intermediate |
 | 11 | Andr3 | 📝 | https://github.com/giustiand/DockerLabs-Writeups/blob/main/Medio/UserSearch.md |

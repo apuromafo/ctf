@@ -31,11 +31,11 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | # | Autor / Author | Tipo / Type | Enlace / Link |
 |---|----------------|-------------|---------------|
 | 1 | suraxddq | 📝 | https://byte-mind.net/dockerlabs-machines-lfi-elf-writeup/ |
-| 2 | maciiii___ | 📝 | https://github.com/Maciferna/DockerLabs/blob/main/maquina-lfi.elf/lfi.elf.md |
+| 2 | maciiii___ | 📝 | https://github.com/Maciferna/DockerLabs/blob/main/maquina-lfi.elf/lfi.elf.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 3 | Gm4tsy | 📝 | https://gm4tsy.hashnode.dev/dockerlabs-lfielf |
-| 4 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/lfi.elf |
+| 4 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/lfi.elf ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 5 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/my-ctfs/ctfs/ctf-lfi.elf-easy |
 | 6 | MatthyGD | 🎥 | https://www.youtube.com/watch?v=AVDp99gzeu4 |
-| 7 | Litio7 | 📝 | https://litio7.github.io/posts/dockerlabs-writeup-lfi.elf/ |
+| 7 | Litio7 | 📝 | https://litio7.github.io/posts/dockerlabs-writeup-lfi.elf/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 
 > **Nota:** los enlaces de terceros se citan como anexos. Fecha de índice: 2026-10-12.

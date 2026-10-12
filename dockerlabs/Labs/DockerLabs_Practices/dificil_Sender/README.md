@@ -32,6 +32,6 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 |---|----------------|-------------|---------------|
 | 1 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/my-ctfs/ctfs/ctf-sender-intermediate |
 | 2 | maciiii___ | 📝 | https://maciferna.gitbook.io/maci/writeups/dockerlabs/sender |
-| 3 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/sender.md |
+| 3 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/sender.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 
 > **Nota:** los enlaces de terceros se citan como anexos. Fecha de índice: 2026-10-12.

@@ -37,7 +37,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 5 | Gm4tsy | 📝 | https://gm4tsy.hashnode.dev/dockerlabs-skullnet |
 | 6 | G0nch1s | 🎥 | https://youtu.be/WvVNEq-TSIM |
 | 7 | skopjee | 📝 | https://github.com/sk0pj3e/Dockerlabs/tree/main/skullnet |
-| 8 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/skullnet.md |
+| 8 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/skullnet.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 9 | AnkbNikas | 📝 | https://github.com/AnkbNikas/DockerLabs-Writeups/blob/29123b5201fb9575afc0ced5cf749e60509a1821/M%C3%A1quina%20Skullnet.md |
 | 10 | El Pingüino de Mario | 🎥 | https://youtu.be/8In_wMxyAM4?si=-DBmi1UslxQtDG0D |
 | 11 | El Pingüino de Mario | 🎥 | https://youtu.be/8In_wMxyAM4?si=Hcxvjh1x-BHOK5O4 |

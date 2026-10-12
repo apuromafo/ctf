@@ -30,7 +30,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 
 | # | Autor / Author | Tipo / Type | Enlace / Link |
 |---|----------------|-------------|---------------|
-| 1 | murrusko | 📝 | https://murrusko.github.io/posts/RoadToOlympus/ |
-| 2 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/Road%20to%20Olympus |
+| 1 | murrusko | 📝 | https://murrusko.github.io/posts/RoadToOlympus/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+| 2 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/Road%20to%20Olympus ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 
 > **Nota:** los enlaces de terceros se citan como anexos. Fecha de índice: 2026-10-12.

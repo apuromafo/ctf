@@ -31,14 +31,14 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | # | Autor / Author | Tipo / Type | Enlace / Link |
 |---|----------------|-------------|---------------|
 | 1 | Gm4tsy | 📝 | https://gm4tsy.hashnode.dev/dockerlabs-rubiks |
-| 2 | maciiii___ | 📝 | https://github.com/Maciferna/DockerLabs/blob/main/maquina-rubiks/rubiks.md |
-| 3 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/Rubiks |
+| 2 | maciiii___ | 📝 | https://github.com/Maciferna/DockerLabs/blob/main/maquina-rubiks/rubiks.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+| 3 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/Rubiks ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 4 | Isma_yo | 📝 | https://github.com/Isma-yo/Write-Ups-DockerLabs/blob/main/Maquina%20Rubiks/M%C3%A1quina%20Rubiks.md |
 | 5 | G0nch1s | 🎥 | https://youtu.be/salo4ycXU5M |
 | 6 | JuanR | 📝 | https://github.com/JuanAntonioRodriguez68/Dockerlabs/blob/main/Rubiks.pdf |
 | 7 | miguel0x1985 | 📝 | https://github.com/miguellofredo85/PwnLabs/blob/main/dockerlabs/Rubiks.pdf |
 | 8 | Pentester95 | 📝 | https://github.com/dfalla/Hacking---Dockerlabs/blob/rubiks/rubiks.md |
-| 9 | victorCybsec | 📝 | https://github.com/victorCybsec/PwnVault/blob/main/WRITE%20UPS/DOCKERLABS/MEDIO/Rubiks.md |
+| 9 | victorCybsec | 📝 | https://github.com/victorCybsec/PwnVault/blob/main/WRITE%20UPS/DOCKERLABS/MEDIO/Rubiks.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 10 | Shinkirou | 📝 | https://boletuss-organization.gitbook.io/dw/write-ups/quickstart/maquinas-medio/rubiks-write-up |
 | 11 | Alx SG | 📝 | https://github.com/AlxSAGA/Practical-Hacking-Labs/blob/main/01-DockerLabs/03-Media/23-Rubiks.md |
 | 12 | Pyth0nK1d | 📝 | https://pyth0nk1d.medium.com/dockerlabs-writeup-rubiks-spanish-fa6ec72b29f8 |

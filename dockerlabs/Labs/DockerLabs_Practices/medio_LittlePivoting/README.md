@@ -37,11 +37,11 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 5 | JuanR | 📝 | https://docs.google.com/document/d/1bhb-asmF_P_72xAd2OUYjGZlPPZNVlc1UIHozSWG0SA/edit?usp=sharing |
 | 6 | 1NCO6N1TO | 📝 | https://github.com/1NCO6N1TO/WriteUps_DockerLabs/blob/main/LittlePivoting.md |
 | 7 | Gm4tsy | 📝 | https://gm4tsy.hashnode.dev/dockerlabs-littlepivoting |
-| 8 | Rick Alvarez | 📝 | https://lordcodigo.blogspot.com/2024/08/resolucion-del-laboratorio.html |
+| 8 | Rick Alvarez | 📝 | https://lordcodigo.blogspot.com/2024/08/resolucion-del-laboratorio.html ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 9 | zunderrub | 🎥 | https://youtu.be/U-ETHA-V7ZU?si=RY41Q_h7jK98yr9g |
-| 10 | Tomas V | 📝 | https://github.com/usuario-nombre/WriteUps/blob/main/DockerLabs/LittlePivoting.md |
+| 10 | Tomas V | 📝 | https://github.com/usuario-nombre/WriteUps/blob/main/DockerLabs/LittlePivoting.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 11 | Barre | 📝 | https://hacking-3.gitbook.io/hacking/write-up/dockerlabs/medio/littlepivoting#maquina |
-| 12 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/littlepivoting |
+| 12 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/littlepivoting ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 13 | burple | 📝 | https://burples-organization.gitbook.io/burple-blog/dockerlabs/medio/littlepivoting-linux |
 | 14 | incommatose | 📝 | https://github.com/incommatose/dockerlabs-writeups/blob/main/machines/Medium/Little%20Pivoting%20-%20Medium.md |
 | 15 | El Pingüino de Mario | 🎥 | https://youtu.be/niGOqDP3zfA?si=NpYRX85il8MvljaS |

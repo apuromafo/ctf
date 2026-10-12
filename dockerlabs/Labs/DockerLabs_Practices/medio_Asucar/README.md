@@ -43,7 +43,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 11 | juandas13 | 📝 | https://github.com/JSinning/asucar/blob/master/Azucar.md |
 | 12 | NytroMG | 📝 | https://medium.com/@nytromg/asucar-writeup-dockerlabs-60a5c5e69925 |
 | 13 | Barre | 📝 | https://hacking-3.gitbook.io/hacking/write-up/dockerlabs/medio/asucar |
-| 14 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/asucar |
+| 14 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/asucar ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 15 | Er3b0r | 📝 | https://github.com/Er3b0r/Dockerlabs_WriteUPs/blob/main/%F0%9F%9F%A0Medio/Asucar.md |
 | 16 | Damjav | 📝 | https://github.com/Damjavm/CTF-S---WRITE-UP/issues/1 |
 | 17 | Th3HackTF | 📝 | https://github.com/GustavoUA/WriteUp/wiki/WriteUp-Asucar%E2%80%90-DockerLabs |

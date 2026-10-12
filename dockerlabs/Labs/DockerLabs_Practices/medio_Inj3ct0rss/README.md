@@ -31,7 +31,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | # | Autor / Author | Tipo / Type | Enlace / Link |
 |---|----------------|-------------|---------------|
 | 1 | suraxddq | 📝 | https://byte-mind.net/dockerlabs-machines-inj3ct0rss-writeup/ |
-| 2 | maciiii___ | 📝 | https://github.com/Maciferna/DockerLabs/blob/main/maquina-inj3ct0rss/inj3ct0rss.md |
+| 2 | maciiii___ | 📝 | https://github.com/Maciferna/DockerLabs/blob/main/maquina-inj3ct0rss/inj3ct0rss.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 3 | Gm4tsy | 📝 | https://gm4tsy.hashnode.dev/dockerlabs-inj3ct0rs |
 | 4 | G0nch1s | 🎥 | https://youtu.be/IbMHzoQlNkI |
 | 5 | JuanR | 📝 | https://docs.google.com/document/d/1_GaTJuhu1Hv8ti2SbT5oS2PXPzz5sNI0ajDQgnYjgtg/edit?usp=sharing |

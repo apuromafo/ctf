@@ -39,12 +39,12 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 7 | Barre | 📝 | https://hacking-3.gitbook.io/hacking/write-up/dockerlabs/medio/dark#maquina |
 | 8 | 0xEden | 📝 | https://apuntes-varios.gitbook.io/hacking/indice/writeups/dockerlabs/medio/dark |
 | 9 | G0nch1s | 🎥 | https://youtu.be/qfSJLHvQk84 |
-| 10 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/darks |
+| 10 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/darks ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 11 | Er3b0r | 📝 | https://github.com/Er3b0r/Dockerlabs_WriteUPs/blob/main/%F0%9F%9F%A0Medio/%F0%9F%95%B3%EF%B8%8F%F0%9F%95%B0%EF%B8%8FDark%F0%9F%95%B0%EF%B8%8F%F0%9F%95%B3%EF%B8%8F.md |
 | 12 | redPentester | 📝 | https://pentesterarchive.github.io/posts/dark/ |
-| 13 | Litio7 | 📝 | https://litio7.github.io/posts/dockerlabs-writeup-darkweb/ |
+| 13 | Litio7 | 📝 | https://litio7.github.io/posts/dockerlabs-writeup-darkweb/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 14 | Shinkirou | 📝 | https://boletuss-organization.gitbook.io/dw/write-ups/quickstart/maquinas-medio/dark-write-up |
 | 15 | Alx SG | 📝 | https://github.com/AlxSAGA/Practical-Hacking-Labs/blob/main/01-DockerLabs/03-Media/22-Dark.md |
-| 16 | Grooti16 | 📝 | https://github.com/alexitocvf16/Solved-machines/blob/main/Darkweb.md |
+| 16 | Grooti16 | 📝 | https://github.com/alexitocvf16/Solved-machines/blob/main/Darkweb.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 
 > **Nota:** los enlaces de terceros se citan como anexos. Fecha de índice: 2026-10-12.

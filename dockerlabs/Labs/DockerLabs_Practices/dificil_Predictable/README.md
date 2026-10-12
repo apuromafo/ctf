@@ -30,8 +30,8 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 
 | # | Autor / Author | Tipo / Type | Enlace / Link |
 |---|----------------|-------------|---------------|
-| 1 | c4rta | 📝 | https://ic4rta.github.io/docs/Dockerlabs/Predictable/ |
-| 2 | murrusko | 📝 | https://murrusko.github.io/posts/predictable/ |
+| 1 | c4rta | 📝 | https://ic4rta.github.io/docs/Dockerlabs/Predictable/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+| 2 | murrusko | 📝 | https://murrusko.github.io/posts/predictable/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 3 | skopjee | 📝 | https://github.com/sk0pj3e/Dockerlabs/blob/main/predictable/predictable.md |
 | 4 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/dockerlabs-writeups/dockerlabs/predictable-dockerlabs-hard |
 | 5 | JuanR | 📝 | https://github.com/JuanAntonioRodriguez68/Dockerlabs/blob/main/Predictable.pdf |

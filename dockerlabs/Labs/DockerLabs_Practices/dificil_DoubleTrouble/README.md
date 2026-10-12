@@ -30,7 +30,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 
 | # | Autor / Author | Tipo / Type | Enlace / Link |
 |---|----------------|-------------|---------------|
-| 1 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/doubletroublee.md |
+| 1 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/doubletroublee.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 2 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/dockerlabs-writeups/dockerlabs/doubletrouble-dockerlabs-hard |
 | 3 | Lavafuego | 📝 | https://github.com/lavafuego/writeups/blob/main/DoubleTrouble.md |
 

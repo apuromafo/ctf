@@ -30,7 +30,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 
 | # | Autor / Author | Tipo / Type | Enlace / Link |
 |---|----------------|-------------|---------------|
-| 1 | maciiii___ | 📝 | https://github.com/Maciferna/DockerLabs/blob/main/maquina-corruptress/Corruptress.md |
+| 1 | maciiii___ | 📝 | https://github.com/Maciferna/DockerLabs/blob/main/maquina-corruptress/Corruptress.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 2 | suraxddq | 📝 | https://byte-mind.net/dockerlabs-machines-corruptress-writeup/ |
 | 3 | rxffsec | 📝 | https://www.linkedin.com/pulse/dockerlabs-corruptress-rafael-alvarez-9b62c/ |
 

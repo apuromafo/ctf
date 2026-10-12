@@ -43,13 +43,13 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 5 | Anton-Hacks | 📝 | https://aanton94.github.io/blog/2024/05/14/hiddencat-dl/ |
 | 6 | haw441kings | 📝 | https://github.com/haw441kings/DockerLabsWriteUps/blob/main/Faciles/HiddentCat.md |
 | 7 | danielgcab | 📝 | https://github.com/danielgcab/apuntesCiber/blob/main/Writeups/HiddenCat%20-%20DockerLabs.md |
-| 8 | JuanR | 📝 | https://online.publuu.com/516647/1175419 |
+| 8 | JuanR | 📝 | https://online.publuu.com/516647/1175419 ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 9 | Jhonycz | 📝 | https://medium.com/@jhonysylcz/dockerlabs-hiddencat-d270c43a532a |
 | 10 | elWeoner | 📝 | https://darkened-raisin-b9c.notion.site/HiddenCat-f21d5183399c40baa11b5960c01eb803?pvs=4 |
 | 11 | zunderrub | 🎥 | https://www.youtube.com/watch?v=H6qoJWRW9EA |
 | 12 | Dached | 🎥 | https://youtu.be/JZzin6mUFOA?si=th6QsXUWNW93LXBr |
-| 13 | Alv-fh | 📝 | https://alv-fh.gitbook.io/main/writeups/dockerlabs_index/hiddencat |
-| 14 | Romy | 📝 | https://github.com/Romyy1/Obsidian/blob/main/Mi%20Aprendimiento/DockerLabs/HiddenCat.pdf |
+| 13 | Alv-fh | 📝 | https://alv-fh.gitbook.io/main/writeups/dockerlabs_index/hiddencat ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+| 14 | Romy | 📝 | https://github.com/Romyy1/Obsidian/blob/main/Mi%20Aprendimiento/DockerLabs/HiddenCat.pdf ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 15 | G0nch1s | 🎥 | https://youtu.be/I2AuIrBd9JE |
 | 16 | MindMeld7 | 📝 | https://mindmeld7.hashnode.dev/writeup-hiddencat-from-dockerlabs |
 | 17 | MindMeld7 | 🎥 | https://www.youtube.com/watch?v=7ZK1Y0aV7oE |

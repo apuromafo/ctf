@@ -34,9 +34,9 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 2 | Lenam | 📝 | https://len4m.github.io/es/posts/debugme-writeup-dockerlabs-es/ |
 | 3 | maciiii___ | 📝 | https://github.com/Maciferna/dockerlabs/blob/main/maquina-debugme/debugme.md |
 | 4 | Rick Alvarez | 🎥 | https://youtu.be/qWj9FzybKXk |
-| 5 | Rick Alvarez | 📝 | https://lordcodigo.blogspot.com/2024/09/resolucion-de-la-maquina-debugme.html |
+| 5 | Rick Alvarez | 📝 | https://lordcodigo.blogspot.com/2024/09/resolucion-de-la-maquina-debugme.html ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 6 | kamilfire | 📝 | https://kamilfire.github.io/posts/DebugMe/ |
-| 7 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/DebugMe.md |
+| 7 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/DebugMe.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 8 | skopjee | 📝 | https://github.com/sk0pj3e/Dockerlabs/blob/main/debugme/debugme.md |
 | 9 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/dockerlabs-writeups/dockerlabs/debugme-dockerlabs-hard |
 | 10 | skopjee | 📝 | https://github.com/sk0pj3e/Dockerlabs/tree/main/debugme |

@@ -34,7 +34,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 2 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/ctf/dockerlabs/chocoping-dockerlabs-intermediate |
 | 3 | firstatack | 📝 | https://firstatack.github.io/posts/chocoping/ |
 | 4 | TBrux | 🎥 | https://youtu.be/3jQhhl065Lg?si=1HP1LyFW1jav1r0D |
-| 5 | HYH | 📝 | https://www.hyhforever.top/dockerlabs-chocoping/ |
+| 5 | HYH | 📝 | https://www.hyhforever.top/dockerlabs-chocoping/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 6 | El Pingüino de Mario | 🎥 | https://youtu.be/5Z6neZomInA |
 | 7 | asdas | 🎥 | dasdasd |
 | 8 | Shinkirou | 📝 | https://boletuss-organization.gitbook.io/dw/write-ups/quickstart/maquinas-medio/chocoping-write-up |

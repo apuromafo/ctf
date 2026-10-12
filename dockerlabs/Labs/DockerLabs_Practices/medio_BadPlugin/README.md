@@ -35,7 +35,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 3 | SkyW4r33x | 📝 | https://github.com/SkyW4r33x/Dockerlabs/blob/main/Maquina%20Media/BadPlugin.md |
 | 4 | El Pingüino de Mario | 🎥 | https://youtu.be/fYzYpbFEgEs?si=VwDtD_UA_J-o-5Tg |
 | 5 | JuanR | 📝 | https://github.com/JuanAntonioRodriguez68/Dockerlabs/blob/main/Badplugin.pdf |
-| 6 | victorCybsec | 📝 | https://github.com/victorCybsec/PwnVault/blob/main/WRITE%20UPS/DOCKERLABS/MEDIO/BadPlugin.md |
+| 6 | victorCybsec | 📝 | https://github.com/victorCybsec/PwnVault/blob/main/WRITE%20UPS/DOCKERLABS/MEDIO/BadPlugin.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 7 | Shinkirou | 📝 | https://boletuss-organization.gitbook.io/dw/write-ups/quickstart/maquinas-medio/badplugin-write-up |
 | 8 | Alx SG | 📝 | https://github.com/AlxSAGA/Practical-Hacking-Labs/blob/main/01-DockerLabs/03-Media/27-BadPluggin.md |
 

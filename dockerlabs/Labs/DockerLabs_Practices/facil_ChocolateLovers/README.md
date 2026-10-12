@@ -41,11 +41,11 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 3 | zunderrub | 🎥 | https://youtu.be/pW5VN60PNt8?si=LJgh-4JkOKsG2QWD |
 | 4 | MindMeld7 | 🎥 | https://youtu.be/UGOL7PGDXYc |
 | 5 | firstatack | 📝 | https://firstatack.github.io/posts/chocoletelovers/ |
-| 6 | Quokka | 📝 | https://github.com/Qu0kk4/Quokka/blob/main/DockerLabs/Chocolate.md |
+| 6 | Quokka | 📝 | https://github.com/Qu0kk4/Quokka/blob/main/DockerLabs/Chocolate.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 7 | haw441kings | 📝 | https://github.com/haw441kings/DockerLabsWriteUps/blob/main/Faciles/Chocolatelovers.md |
 | 8 | JuanR | 📝 | https://heyzine.com/flip-book/1113a276cb.html |
 | 9 | elWeoner | 📝 | https://darkened-raisin-b9c.notion.site/ChocolateLovers-0418abf2c2c44a9690f0eedc3c53b85d?pvs=25 |
-| 10 | Romy | 📝 | https://github.com/Romyy1/Obsidian/blob/main/Mi%20Aprendimiento/DockerLabs/ChocolateLovers.pdf |
+| 10 | Romy | 📝 | https://github.com/Romyy1/Obsidian/blob/main/Mi%20Aprendimiento/DockerLabs/ChocolateLovers.pdf ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 11 | G0nch1s | 🎥 | https://youtu.be/ENAr3HGfyY8 |
 | 12 | NytroMG | 📝 | https://medium.com/@nytromg/chocolatelovers-writeup-dockerlabs-e52d32692f3d |
 | 13 | NormalMan | 📝 | https://jotayepes.notion.site/ChocolateLovers-91b9d09200ab49d384c3812a52395cf4?pvs=4 |
@@ -58,7 +58,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 20 | 0xEden | 📝 | https://apuntes-varios.gitbook.io/hacking/indice/writeups/dockerlabs/facil/chocolatelovers |
 | 21 | Klaus | 📝 | https://github.com/valanyrr/Maquinas-DockerLabs/blob/main/Easy/MaquinaChocolateLovers.md |
 | 22 | WEED_SUAVE | 📝 | https://medium.com/@juanchos7106/chocolate-lovers-docker-labs-d94150c4d362 |
-| 23 | MykeMR | 📝 | https://mykemr.github.io/ChocolateLovers |
+| 23 | MykeMR | 📝 | https://mykemr.github.io/ChocolateLovers ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 24 | Andr3 | 📝 | https://github.com/giustiand/DockerLabs-Writeups/blob/main/F%C3%A1cil/chocolate_lovers.md |
 | 25 | v3d0m | 📝 | https://cved0m.gitbook.io/cved0m-docs/writeups/dockerlabs/faciles/chocolatelovers |
 | 26 | hypnopompicman | 📝 | https://github.com/hypnopompicman/Writeups_Dockerlabs/blob/master/chocolatelovers.md |
@@ -72,7 +72,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 34 | Aguilar | 📝 | https://github.com/Aguilar-aoj/Pentesting/blob/main/DockerLabs/Facil/ChocolateLovers.md |
 | 35 | brias | 📝 | https://brias.gitbook.io/brias/dockerlabs/dificultad-facil/chocolatelovers |
 | 36 | Pyth0nK1d | 📝 | https://pyth0nk1d.medium.com/dockerlabs-writeup-chocolatelovers-spanish-c203c209bb09 |
-| 37 | X02_Security | 📝 | https://galizaragozadev.gitbook.io/galizaragozadev-docs/dockerlabs/chocolate-lovers-easy-dockerlabs |
+| 37 | X02_Security | 📝 | https://galizaragozadev.gitbook.io/galizaragozadev-docs/dockerlabs/chocolate-lovers-easy-dockerlabs ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 38 | propus | 📝 | https://propus.gitbook.io/hackbook/writeups/dockerlabs/chocolatelovers |
 
 > **Nota:** los enlaces de terceros se citan como anexos. Fecha de índice: 2026-10-12.

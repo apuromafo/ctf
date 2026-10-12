@@ -31,7 +31,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | # | Autor / Author | Tipo / Type | Enlace / Link |
 |---|----------------|-------------|---------------|
 | 1 | makak | 📝 | https://github.com/makak77/WriteUps/blob/main/WriteUp%20chocolatefire.pdf |
-| 2 | murrusko | 📝 | https://murrusko.github.io/posts/chocolatefire/ |
+| 2 | murrusko | 📝 | https://murrusko.github.io/posts/chocolatefire/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 3 | firstatack | 📝 | https://firstatack.github.io/posts/chocolatefire/ |
 | 4 | Romabri | 📝 | https://romabri.github.io/ChocolateFire |
 | 5 | MindMeld7 | 🎥 | https://youtu.be/exBLUQjw_ng |
@@ -45,7 +45,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 13 | Alvarigno22 | 📝 | https://alvarigno22.github.io/ChocolateFire-DockerLab/ |
 | 14 | NytroMG | 📝 | https://medium.com/@nytromg/chocolatefire-writeup-dockerlabs-160a30b08ce8 |
 | 15 | Er3b0r | 📝 | https://github.com/Er3b0r/Dockerlabs_WriteUPs/blob/main/%F0%9F%9F%A0Medio/%F0%9F%8D%AB%F0%9F%94%A5ChocolateFire%F0%9F%94%A5%F0%9F%8D%AB.md |
-| 16 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/chocolatefire |
+| 16 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/chocolatefire ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 17 | Th3HackTF | 📝 | https://github.com/GustavoUA/WriteUp/wiki/WriteUp-%E2%80%90-chocolatefire |
 | 18 | Pentester95 | 📝 | https://github.com/dfalla/Hacking---Dockerlabs/blob/chocolatefire/chocolatefire.md |
 | 19 | El Pingüino de Mario | 🎥 | https://youtu.be/6MvVNrGcN2M?si=9G-Yc9kX-jhRQkD0 |

@@ -41,7 +41,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 9 | G0nch1s | 🎥 | https://youtu.be/XOtibdHoDOo |
 | 10 | MyNick | 📝 | https://github.com/Marco-Anonimous/DockerlabsUP/blob/main/Medio%20-%20docker |
 | 11 | Gm4tsy | 📝 | https://gm4tsy.hashnode.dev/dockerlabs-fooding |
-| 12 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/fooding |
+| 12 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/fooding ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 13 | Th3HackTF | 📝 | https://github.com/GustavoUA/WriteUp/wiki/Writeup-%E2%80%90-Fooding |
 | 14 | Pentester95 | 📝 | https://github.com/dfalla/Hacking---Dockerlabs/blob/fooding/fodding.md |
 | 15 | d1se0 | 📝 | https://github.com/D1se0/h4cker_b00k/blob/main/dockerlabs-writeups/dockerlabs/fooding-dockerlabs-intermediate.md |

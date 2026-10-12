@@ -41,13 +41,13 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 9 | JuanR | 📝 | https://docs.google.com/document/d/1f--JEpKExwZ3xYwcd-2VyF1schcSMPLtubsJ6XT7yi0/edit?usp=sharing |
 | 10 | G0nch1s | 🎥 | https://youtu.be/z4Qa-FXwQT4 |
 | 11 | Gm4tsy | 📝 | https://gm4tsy.hashnode.dev/dockerlabs-stranger |
-| 12 | maciiii___ | 📝 | https://github.com/Maciferna/dockerlabs/blob/main/maquina-stranger/stranger.md |
-| 13 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/stranger |
+| 12 | maciiii___ | 📝 | https://github.com/Maciferna/dockerlabs/blob/main/maquina-stranger/stranger.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+| 13 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/stranger ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 14 | incommatose | 📝 | https://github.com/incommatose/dockerlabs-writeups/blob/main/machines/Medium/Stranger%20-%20Medium.md |
 | 15 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/dockerlabs-writeups/dockerlabs/stranger-dockerlabs-intermediate |
 | 16 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/dockerlabs-writeups/dockerlabs/stranger-dockerlabs-intermediate |
 | 17 | Pentester95 | 📝 | https://github.com/dfalla/Hacking---Dockerlabs/blob/stranger/stranger.md |
-| 18 | victorCybsec | 📝 | https://github.com/victorCybsec/PwnVault/blob/main/WRITE%20UPS/DOCKERLABS/MEDIO/Stranger.md |
+| 18 | victorCybsec | 📝 | https://github.com/victorCybsec/PwnVault/blob/main/WRITE%20UPS/DOCKERLABS/MEDIO/Stranger.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 19 | Shinkirou | 📝 | https://boletuss-organization.gitbook.io/dw/write-ups/quickstart/maquinas-medio/stranger-write-up |
 | 20 | Alx SG | 📝 | https://github.com/AlxSAGA/Practical-Hacking-Labs/blob/main/01-DockerLabs/03-Media/15-Stranger.md |
 | 21 | Pyth0nK1d | 📝 | https://pyth0nk1d.medium.com/dockerlabs-writeup-stranger-spanish-46793d365e80 |

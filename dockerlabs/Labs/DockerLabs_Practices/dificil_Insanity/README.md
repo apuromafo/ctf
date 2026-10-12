@@ -31,9 +31,9 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | # | Autor / Author | Tipo / Type | Enlace / Link |
 |---|----------------|-------------|---------------|
 | 1 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/dockerlabs-writeups/dockerlabs/insanity-dockerlabs-hard |
-| 2 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/insanity.md |
+| 2 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/insanity.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 3 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/dockerlabs-writeups/dockerlabs/insanity-dockerlabs-hard |
-| 4 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/insanity.md |
+| 4 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/insanity.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 5 | skopjee | 📝 | https://github.com/sk0pj3e/Dockerlabs/blob/main/Insanity/Insanity.md |
 | 6 | B0end | 📝 | https://b0end.uno/docs/writeups/dockerlabs/hard/insanity |
 

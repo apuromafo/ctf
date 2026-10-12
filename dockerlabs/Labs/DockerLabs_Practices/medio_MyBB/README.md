@@ -30,7 +30,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 
 | # | Autor / Author | Tipo / Type | Enlace / Link |
 |---|----------------|-------------|---------------|
-| 1 | Pylon | 📝 | https://pylonet.gitbook.io/pylonblog/writeups/dockerlabs/mybb |
+| 1 | Pylon | 📝 | https://pylonet.gitbook.io/pylonblog/writeups/dockerlabs/mybb ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 2 | haw441kings | 📝 | https://github.com/haw441kings/DockerLabsWriteUps/blob/main/Medio/MyBB.md |
 | 3 | CondorHacks | 🎥 | https://youtu.be/jn-OITTjkvo |
 | 4 | JuanR | 📝 | https://docs.google.com/document/d/1A5SP0ewJoo4MgLv-VUO8xG_yZz0mNWmM1roDn8sHShA/edit?usp=sharing |
@@ -40,14 +40,14 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 8 | 1NCO6N1TO | 📝 | https://1nco6n1to.gitbook.io/1nco6n1to/writeups/dockerlabs/mybb |
 | 9 | G0nch1s | 🎥 | https://youtu.be/lF5-HsUv4K8 |
 | 10 | Gm4tsy | 📝 | https://gm4tsy.hashnode.dev/dockerlabs-mybb |
-| 11 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/mybb |
+| 11 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/mybb ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 12 | Andr3 | 📝 | https://github.com/giustiand/DockerLabs-Writeups/blob/main/Medio/MyBB.md |
 | 13 | miguel0x1985 | 📝 | https://github.com/miguellofredo85/PwnLabs/blob/main/dockerlabs/mybb.pdf |
 | 14 | miguel0x1985 | 📝 | https://github.com/miguellofredo85/PwnLabs/blob/main/dockerlabs/mybb.pdf |
 | 15 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/dockerlabs-writeups/dockerlabs/mybb-dockerlabs-intermediate |
 | 16 | Pentester95 | 📝 | https://github.com/dfalla/Hacking---Dockerlabs/blob/mybb/mybb.md |
-| 17 | Litio7 | 📝 | https://litio7.github.io/posts/dockerlabs-writeup-mybb/ |
-| 18 | victorCybsec | 📝 | https://github.com/victorCybsec/PwnVault/blob/main/WRITE%20UPS/DOCKERLABS/MEDIO/MyBB.md |
+| 17 | Litio7 | 📝 | https://litio7.github.io/posts/dockerlabs-writeup-mybb/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+| 18 | victorCybsec | 📝 | https://github.com/victorCybsec/PwnVault/blob/main/WRITE%20UPS/DOCKERLABS/MEDIO/MyBB.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 19 | Shinkirou | 📝 | https://boletuss-organization.gitbook.io/dw/write-ups/quickstart/maquinas-medio/mybb-write-up |
 | 20 | Alx SG | 📝 | https://github.com/AlxSAGA/Practical-Hacking-Labs/blob/main/01-DockerLabs/03-Media/11-MyBB.md |
 | 21 | Zwique | 📝 | https://zwique.gitbook.io/zwique_notes/writeups/dockerlabs/mybb |

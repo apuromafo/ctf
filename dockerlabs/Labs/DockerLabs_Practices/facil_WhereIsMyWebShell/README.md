@@ -41,8 +41,8 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 4 | Xerosec | 🎥 | https://www.youtube.com/watch?v=fH8VcB_-MF8 |
 | 5 | firstatack | 📝 | https://firstatack.github.io/posts/whereismywebshell/ |
 | 6 | Romabri | 📝 | https://romabri.github.io/WhereIsMyShell |
-| 7 | M4nu | 📝 | https://github.com/M4nuTCP/Dockerlabs-Writups/blob/main/Facil/WhereIsMyWebShell.md |
-| 8 | TBrux | 📝 | https://github.com/TBrux/DOCKERLABS/blob/main/WhereIsMyWebShell.md |
+| 7 | M4nu | 📝 | https://github.com/M4nuTCP/Dockerlabs-Writups/blob/main/Facil/WhereIsMyWebShell.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+| 8 | TBrux | 📝 | https://github.com/TBrux/DOCKERLABS/blob/main/WhereIsMyWebShell.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 9 | NormalMan | 📝 | https://jotayepes.notion.site/WhereIsMyWebShell-9d0bafe1042a4bc2982e6fafea40d784?pvs=4 |
 | 10 | haw441kings | 📝 | https://github.com/haw441kings/DockerLabsWriteUps/blob/main/Faciles/WhereIsMyWebShell.md |
 | 11 | kh4ndr4 | 📝 | https://kh4ndr4.github.io/ctfs/WhereIsMyWebShell/ |

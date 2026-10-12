@@ -43,12 +43,12 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 5 | Romabri | 📝 | https://romabri.github.io/AnonymousPenguin |
 | 6 | El Pingüino de Mario | 🎥 | https://www.youtube.com/watch?v=zgn_uM7kjNY&pp=ygUOYW5vbnltb3VzcGluZ3U%3D |
 | 7 | Quokka | 📝 | https://github.com/Qu0kk4/Quokka/blob/main/DockerLabs/AnonymousPingu.md |
-| 8 | TBrux | 📝 | https://github.com/TBrux/DOCKERLABS/blob/main/AnonymousPingu.md |
-| 9 | JuanR | 📝 | https://online.publuu.com/516647/1172316 |
+| 8 | TBrux | 📝 | https://github.com/TBrux/DOCKERLABS/blob/main/AnonymousPingu.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+| 9 | JuanR | 📝 | https://online.publuu.com/516647/1172316 ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 10 | haw441kings | 📝 | https://github.com/haw441kings/DockerLabsWriteUps/blob/main/Faciles/Anonymouspingu.md |
 | 11 | elWeoner | 📝 | https://darkened-raisin-b9c.notion.site/AnonymousPingu-cbe805c551794abf9573e30867943251?pvs=25 |
 | 12 | Jhonycz | 📝 | https://medium.com/@jhonysylcz/dockerlabs-anonymouspingu-ebbb2ef6fa3c |
-| 13 | Romy | 📝 | https://github.com/Romyy1/Obsidian/blob/main/Mi%20Aprendimiento/DockerLabs/Anonymous%20Pingu.pdf |
+| 13 | Romy | 📝 | https://github.com/Romyy1/Obsidian/blob/main/Mi%20Aprendimiento/DockerLabs/Anonymous%20Pingu.pdf ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 14 | NormalMan | 📝 | https://jotayepes.notion.site/AnonymousPingu-d5a3799a76154d2d9107b1b8d58471e9?pvs=4 |
 | 15 | MindMeld7 | 🎥 | https://youtu.be/_hycMRaBP8s |
 | 16 | Shinbi | 📝 | https://drive.google.com/file/d/1ziDXwHEbWDjNppJahnh1nNtZNTN7C3kU/view?usp=sharing |
@@ -59,10 +59,10 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 21 | Felidvn | 📝 | https://github.com/Felidvnn/WriteUps/blob/main/DockerLabs/F%C3%A1ciles/AnonymousPingu.md |
 | 22 | Klaus | 📝 | https://github.com/valanyrr/Maquinas-DockerLabs/blob/main/Easy/MaquinaAnonymousPingu.md |
 | 23 | Er3b0r | 📝 | https://github.com/Er3b0r/Dockerlabs_WriteUPs/blob/main/%F0%9F%9F%A2F%C3%A1cil/%F0%9F%90%A7AnonymousPingu%F0%9F%90%A7.md |
-| 24 | maciiii___ | 📝 | https://github.com/Maciferna/DockerLabs/blob/main/maquina-anonymouspingu/anonymouspingu.md |
+| 24 | maciiii___ | 📝 | https://github.com/Maciferna/DockerLabs/blob/main/maquina-anonymouspingu/anonymouspingu.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 25 | WEED_SUAVE | 📝 | https://medium.com/@juanchos7106/anonymouspingu-87c0d5984c87 |
 | 26 | JuanR | 📝 | https://github.com/JuanAntonioRodriguez68/Dockerlabs/blob/main/AnonymousPingu.pdf |
-| 27 | MykeMR | 📝 | https://mykemr.github.io/AnonymousPingu |
+| 27 | MykeMR | 📝 | https://mykemr.github.io/AnonymousPingu ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 28 | Alv-fh | 🎥 | https://www.youtube.com/watch?v=OsuW5YMU1Lw&t=9s |
 | 29 | Pentester95 | 📝 | https://github.com/dfalla/Hacking---Dockerlabs/blob/anonymouspingu/anonymouspingu.md |
 | 30 | Andr3 | 📝 | https://github.com/giustiand/DockerLabs-Writeups/blob/main/F%C3%A1cil/anonymous_pingu.md |
@@ -78,7 +78,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 40 | Ciberap | 📝 | https://ciberap.gitbook.io/ciberaprt/facil/anonymouspingu |
 | 41 | brias | 📝 | https://brias.gitbook.io/brias/dockerlabs/dificultad-facil/anonymouspingu |
 | 42 | tri | 📝 | https://poltrias.gitbook.io/writeups/dockerlabs/anonymouspingu |
-| 43 | X02_Security | 📝 | https://galizaragozadev.gitbook.io/galizaragozadev-docs/dockerlabs/anonymous-pingu-easy-dockerlabs |
+| 43 | X02_Security | 📝 | https://galizaragozadev.gitbook.io/galizaragozadev-docs/dockerlabs/anonymous-pingu-easy-dockerlabs ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 44 | Pyth0nK1d | 📝 | https://pyth0nk1d.medium.com/dockerlabs-writeup-anonymouspingu-spanish-fa2e2f01a0af |
 | 45 | propus | 📝 | https://propus.gitbook.io/hackbook/writeups/dockerlabs/anonymouspingu |
 

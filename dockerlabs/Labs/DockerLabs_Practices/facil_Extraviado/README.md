@@ -40,7 +40,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 8 | beafn28 | 📝 | https://beafn28.gitbook.io/beafn28/writeups/dockerlabs/extraviado |
 | 9 | TBrux | 🎥 | https://www.youtube.com/watch?v=lXApO03QDRE |
 | 10 | Pentester95 | 📝 | https://github.com/dfalla/Hacking---Dockerlabs/blob/extraviado/extraviado.md |
-| 11 | victorCybsec | 📝 | https://github.com/victorCybsec/PwnVault/blob/main/WRITE%20UPS/DOCKERLABS/FACIL/Extraviado.md |
+| 11 | victorCybsec | 📝 | https://github.com/victorCybsec/PwnVault/blob/main/WRITE%20UPS/DOCKERLABS/FACIL/Extraviado.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 12 | Shinkirou | 📝 | https://boletuss-organization.gitbook.io/docker-writeups/writeups/quickstart/maquinas-faciles/extraviado-writeup |
 | 13 | AlejandroSL | 📝 | https://github.com/Alejandro609x/Dockerlabs/blob/main/Extraviado/Extraviado.md |
 | 14 | Aguilar | 📝 | https://github.com/Aguilar-aoj/Pentesting/blob/main/DockerLabs/Facil/Extraviado.md |

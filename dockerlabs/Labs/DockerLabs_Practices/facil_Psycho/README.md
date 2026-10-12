@@ -47,8 +47,8 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 10 | Er3b0r | 📝 | https://github.com/Er3b0r/Dockerlabs_WriteUPs/blob/main/%F0%9F%9F%A2F%C3%A1cil/%F0%9F%98%B5%E2%80%8D%F0%9F%92%ABPsycho%F0%9F%98%B5%E2%80%8D%F0%9F%92%AB.md |
 | 11 | Torral | 📝 | https://github.com/t0rr4l/Writeups_Hacking/blob/main/DockerLabs/Psycho.md |
 | 12 | PedroM11 | 📝 | https://github.com/PedroMontoya11/Laboratorios-CTF/blob/main/Dockerlabs/M%C3%A1quina%20Psycho.md |
-| 13 | Romy | 📝 | https://github.com/Romyy1/Obsidian/blob/main/Mi%20Aprendimiento/DockerLabs/Psycho.pdf |
-| 14 | MykeMR | 📝 | https://mykemr.github.io/Psycho |
+| 13 | Romy | 📝 | https://github.com/Romyy1/Obsidian/blob/main/Mi%20Aprendimiento/DockerLabs/Psycho.pdf ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+| 14 | MykeMR | 📝 | https://mykemr.github.io/Psycho ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 15 | El Pingüino de Mario | 🎥 | https://youtu.be/ux326VPrEpo?si=6Cj6OQnZVlQdtL-s |
 | 16 | hypnopompicman | 📝 | https://github.com/hypnopompicman/Writeups_Dockerlabs/blob/master/psycho.md |
 | 17 | Joukerr | 📝 | https://github.com/joukerr/CTF/blob/main/Dockerlabs/Maquina%20Psycho%20Dockerlabs.pdf |
@@ -60,16 +60,16 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 23 | 104567 | 🎥 | https://www.bilibili.com/video/BV17owBeKE4Y/ |
 | 24 | MatthyGD | 🎥 | https://www.youtube.com/watch?v=sLBkfgUxj3Y |
 | 25 | Shinkirou | 📝 | https://boletuss-organization.gitbook.io/docker-writeups/writeups/quickstart/maquinas-faciles/psycho-writeup |
-| 26 | Litio7 | 📝 | https://litio7.github.io/posts/dockerlabs-writeup-psycho/ |
+| 26 | Litio7 | 📝 | https://litio7.github.io/posts/dockerlabs-writeup-psycho/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 27 | Stolas | 📝 | https://stolas.gitbook.io/almacen-de-stolas/psycho |
-| 28 | jidu | 🎥 | https://angelcorral2021.github.io/maquinas/post-5/ |
-| 29 | buy7or | 📝 | https://buy7or.github.io/machines/Psycho/ |
-| 30 | billy el calvo | 📝 | https://github.com/DiegoMoraB/DockerLabs-Writeups/blob/main/Categoria%20-%20Facil/Pyscho.md |
+| 28 | jidu | 🎥 | https://angelcorral2021.github.io/maquinas/post-5/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+| 29 | buy7or | 📝 | https://buy7or.github.io/machines/Psycho/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+| 30 | billy el calvo | 📝 | https://github.com/DiegoMoraB/DockerLabs-Writeups/blob/main/Categoria%20-%20Facil/Pyscho.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 31 | Wintxx | 📝 | https://github.com/Jean25-sys/CTFs_Wintxx./blob/main/Writeups/dockerlabs/Psycho.md |
 | 32 | wix | 🎥 | https://www.youtube.com/?gl=ES&hl=es&app=desktop |
 | 33 | beafn28 | 📝 | https://beafn28.gitbook.io/beafn28/writeups/dockerlabs/psycho |
 | 34 | Xavis3c | 📝 | https://elyoxsecurity.com/maquina-psycho/ |
-| 35 | Say | 📝 | https://github.com/JohanI18/DockerLabs/blob/main/psycho/psycho.md |
+| 35 | Say | 📝 | https://github.com/JohanI18/DockerLabs/blob/main/psycho/psycho.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 36 | XoanOuteiro | 📝 | https://xoanouteiro.dev/posts/es_psycho_writeup/ |
 | 37 | Aguilar | 📝 | https://github.com/Aguilar-aoj/Pentesting/blob/main/DockerLabs/Facil/Psycho.md |
 | 38 | AlejandroSL | 📝 | https://github.com/Alejandro609x/Dockerlabs/blob/main/Psycho/Psycho.md |
@@ -80,6 +80,6 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 43 | brias | 📝 | https://brias.gitbook.io/brias/dockerlabs/dificultad-facil/psycho |
 | 44 | AidenClownEN | 📝 | https://github.com/AidenClownEN/CTF-Writeups/blob/main/CTF-DockerLabs/CTF-psycho/writeup%20-%20psycho.md |
 | 45 | tri | 📝 | https://poltrias.gitbook.io/writeups/dockerlabs/psycho |
-| 46 | gstxx | 📝 | https://redspydersec.github.io/Blog/PSYCO/psyco.html |
+| 46 | gstxx | 📝 | https://redspydersec.github.io/Blog/PSYCO/psyco.html ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 
 > **Nota:** los enlaces de terceros se citan como anexos. Fecha de índice: 2026-10-12.

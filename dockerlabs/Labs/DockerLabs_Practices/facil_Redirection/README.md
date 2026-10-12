@@ -35,6 +35,6 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 3 | Alx SG | 📝 | https://github.com/AlxSAGA/Practical-Hacking-Labs/blob/main/01-DockerLabs/02-Facil/28-Redirection.md |
 | 4 | Aguilar | 📝 | https://github.com/Aguilar-aoj/Pentesting/blob/main/DockerLabs/Facil/Redirection.md |
 | 5 | brias | 📝 | https://brias.gitbook.io/brias/dockerlabs/dificultad-facil/redirection |
-| 6 | X02_Security | 📝 | https://galizaragozadev.gitbook.io/galizaragozadev-docs/dockerlabs/redirection-easy-dockerlabs |
+| 6 | X02_Security | 📝 | https://galizaragozadev.gitbook.io/galizaragozadev-docs/dockerlabs/redirection-easy-dockerlabs ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 
 > **Nota:** los enlaces de terceros se citan como anexos. Fecha de índice: 2026-10-12.

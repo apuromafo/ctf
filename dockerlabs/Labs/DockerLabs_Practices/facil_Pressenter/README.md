@@ -35,13 +35,13 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 
 | # | Autor / Author | Tipo / Type | Enlace / Link |
 |---|----------------|-------------|---------------|
-| 1 | maciiii___ | 📝 | https://github.com/Maciferna/DockerLabs/blob/main/maquina-pressenter/pressenter.md |
+| 1 | maciiii___ | 📝 | https://github.com/Maciferna/DockerLabs/blob/main/maquina-pressenter/pressenter.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 2 | Gm4tsy | 📝 | https://gm4tsy.hashnode.dev/dockerlabs-pressenter |
 | 3 | G0nch1s | 🎥 | https://youtu.be/ucxmJR0O6vk |
 | 4 | Er3b0r | 📝 | https://github.com/Er3b0r/Dockerlabs_WriteUPs/blob/main/%F0%9F%9F%A2F%C3%A1cil/%F0%9F%91%87Pressenter%F0%9F%91%87.md |
 | 5 | JuanR | 📝 | https://docs.google.com/document/d/1IwHUXlDF7xOwHgBBc4EiWZZTaJmJNL-3-XMm39h0bTM/edit?usp=sharing |
 | 6 | elWeoner | 📝 | https://darkened-raisin-b9c.notion.site/Pressenter-1065f89f923880b8998be23b98a509fc?pvs=4 |
-| 7 | MykeMR | 📝 | https://mykemr.github.io/Pressenter |
+| 7 | MykeMR | 📝 | https://mykemr.github.io/Pressenter ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 8 | Andr3 | 📝 | https://github.com/giustiand/DockerLabs-Writeups/blob/main/F%C3%A1cil/pressenter.md |
 | 9 | Pentester95 | 📝 | https://github.com/dfalla/Hacking---Dockerlabs/blob/pressenter/pressenter.md |
 | 10 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/my-ctfs/ctfs/ctf-pressenter-easy |

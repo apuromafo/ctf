@@ -30,8 +30,8 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 
 | # | Autor / Author | Tipo / Type | Enlace / Link |
 |---|----------------|-------------|---------------|
-| 1 | HYH | 📝 | https://www.hyhforever.top/dockerlabs-bicho/ |
-| 2 | hyhforever | 📝 | https://www.hyhforever.top/dockerlabs-bicho/ |
+| 1 | HYH | 📝 | https://www.hyhforever.top/dockerlabs-bicho/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+| 2 | hyhforever | 📝 | https://www.hyhforever.top/dockerlabs-bicho/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 3 | Shinkirou | 📝 | https://boletuss-organization.gitbook.io/dw/write-ups/quickstart/maquinas-faciles/bicho-write-up |
 | 4 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/ctf/dockerlabs/bicho-dockerlabs-easy |
 | 5 | AlejandroSL | 📝 | https://github.com/Alejandro609x/Dockerlabs/blob/main/Bicho/Bicho.md |

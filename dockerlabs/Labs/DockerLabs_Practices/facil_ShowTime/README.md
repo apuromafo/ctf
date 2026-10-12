@@ -35,7 +35,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 
 | # | Autor / Author | Tipo / Type | Enlace / Link |
 |---|----------------|-------------|---------------|
-| 1 | maciiii___ | 📝 | https://github.com/Maciferna/DockerLabs/blob/main/maquina-showtime/SHOWTIME.md |
+| 1 | maciiii___ | 📝 | https://github.com/Maciferna/DockerLabs/blob/main/maquina-showtime/SHOWTIME.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 2 | zunderrub | 🎥 | https://youtu.be/m4P92Fkj2HA |
 | 3 | Torral | 📝 | https://github.com/t0rr4l/Writeups_Hacking/blob/main/DockerLabs/Showtime.md |
 | 4 | 4bytes | 📝 | https://github.com/4bytess/writeups/blob/main/dockerlabs/show%20time.md |
@@ -48,18 +48,18 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 11 | JuanR | 📝 | https://docs.google.com/document/d/1EbYAyEshkjTxs1oQpacmS7WPPk7V2J7mEJYizoh3KcA/edit?usp=sharing |
 | 12 | frogtheripper | 📝 | https://frogtheripper.gitbook.io/frogtheripper-writeups/thehackerlabs/facil/maquina-showtime_sql |
 | 13 | WEED_SUAVE | 📝 | https://medium.com/@juanchos7106/showtime-dockerlabs-b9b4ae0a1a85 |
-| 14 | MykeMR | 📝 | https://mykemr.github.io/ShowTime |
+| 14 | MykeMR | 📝 | https://mykemr.github.io/ShowTime ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 15 | Andr3 | 📝 | https://github.com/giustiand/DockerLabs-Writeups/blob/main/F%C3%A1cil/showtime.md |
 | 16 | elWeoner | 📝 | https://darkened-raisin-b9c.notion.site/Showtime-15e5f89f9238800f937ec22f1e0edf79 |
 | 17 | 104567 | 🎥 | https://www.bilibili.com/video/BV1wzwpeYECZ/ |
 | 18 | Shinkirou | 📝 | https://boletuss-organization.gitbook.io/dw/write-ups/quickstart/maquinas-faciles/showtime-write-up |
-| 19 | jidu | 🎥 | https://angelcorral2021.github.io/maquinas/post-7/ |
+| 19 | jidu | 🎥 | https://angelcorral2021.github.io/maquinas/post-7/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 20 | beafn28 | 📝 | https://beafn28.gitbook.io/beafn28/writeups/dockerlabs/showtime |
 | 21 | Alx SG | 📝 | https://github.com/AlxSAGA/Practical-Hacking-Labs/blob/main/01-DockerLabs/02-Facil/24-ShowTime.md |
 | 22 | Aguilar | 📝 | https://github.com/Aguilar-aoj/Pentesting/blob/main/DockerLabs/Facil/ShowTime.md |
 | 23 | brias | 📝 | https://brias.gitbook.io/brias/dockerlabs/dificultad-facil/showtime |
 | 24 | ivansuitooo | 🎥 | https://www.youtube.com/watch?v=pj0sJs1AJxU |
-| 25 | X02_Security | 📝 | https://galizaragozadev.gitbook.io/galizaragozadev-docs/dockerlabs/showtime-easy-dockerlabs |
+| 25 | X02_Security | 📝 | https://galizaragozadev.gitbook.io/galizaragozadev-docs/dockerlabs/showtime-easy-dockerlabs ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 26 | Pyth0nK1d | 📝 | https://pyth0nk1d.medium.com/dockerlabs-writeup-showtime-spanish-c4fc22d8cb80 |
 
 > **Nota:** los enlaces de terceros se citan como anexos. Fecha de índice: 2026-10-12.

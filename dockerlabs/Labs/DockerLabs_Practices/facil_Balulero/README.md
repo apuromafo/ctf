@@ -30,12 +30,12 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 
 | # | Autor / Author | Tipo / Type | Enlace / Link |
 |---|----------------|-------------|---------------|
-| 1 | maciiii___ | 📝 | https://github.com/Maciferna/DockerLabs/blob/main/maquina-balulero/balulero.md |
+| 1 | maciiii___ | 📝 | https://github.com/Maciferna/DockerLabs/blob/main/maquina-balulero/balulero.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 2 | 4bytes | 📝 | https://github.com/4bytess/writeups/blob/main/dockerlabs/balulero.md |
 | 3 | Er3b0r | 📝 | https://github.com/Er3b0r/Dockerlabs_WriteUPs/blob/main/%F0%9F%9F%A2F%C3%A1cil/%F0%9F%90%BEBalulero%F0%9F%90%BE.md |
 | 4 | JuanR | 📝 | https://github.com/JuanAntonioRodriguez68/Dockerlabs/blob/main/Balulero.pdf |
 | 5 | frogtheripper | 📝 | https://frogtheripper.gitbook.io/frogtheripper-writeups/thehackerlabs/facil/maquina-balulero |
-| 6 | Romy | 📝 | https://github.com/Romyy1/Obsidian/blob/main/Mi%20Aprendimiento/DockerLabs/Balulero.pdf |
+| 6 | Romy | 📝 | https://github.com/Romyy1/Obsidian/blob/main/Mi%20Aprendimiento/DockerLabs/Balulero.pdf ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 7 | Andr3 | 📝 | https://github.com/giustiand/DockerLabs-Writeups/blob/main/F%C3%A1cil/balulero.md |
 | 8 | El Pingüino de Mario | 🎥 | https://youtu.be/rYf6MUjsh6A?si=hgSj31NH8sSVe4jg |
 | 9 | 104567 | 🎥 | https://www.bilibili.com/video/BV1cFwpeFEav/ |
@@ -47,7 +47,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 15 | Alx SG | 📝 | https://github.com/AlxSAGA/Practical-Hacking-Labs/blob/main/01-DockerLabs/02-Facil/26-Balulero.md |
 | 16 | Aguilar | 📝 | https://github.com/Aguilar-aoj/Pentesting/blob/main/DockerLabs/Facil/Balulero.md |
 | 17 | brias | 📝 | https://brias.gitbook.io/brias/dockerlabs/dificultad-facil/balulero |
-| 18 | X02_Security | 📝 | https://galizaragozadev.gitbook.io/galizaragozadev-docs/dockerlabs/balulero-easy-dockerlabs |
+| 18 | X02_Security | 📝 | https://galizaragozadev.gitbook.io/galizaragozadev-docs/dockerlabs/balulero-easy-dockerlabs ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 19 | Pyth0nK1d | 📝 | https://pyth0nk1d.medium.com/dockerlabs-writeup-balulero-spanish-00d771c99c19 |
 
 > **Nota:** los enlaces de terceros se citan como anexos. Fecha de índice: 2026-10-12.

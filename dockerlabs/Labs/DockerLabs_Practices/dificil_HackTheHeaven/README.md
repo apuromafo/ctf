@@ -37,7 +37,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 5 | Rinku | 🎥 | https://www.youtube.com/watch?v=dFvUFp8Aods |
 | 6 | JuanR | 📝 | https://docs.google.com/document/d/1YiiVBTRl4d1r7Fgz_w-LUBoK-tVcJZHjjibyszP-5Fs/edit?usp=sharing |
 | 7 | G0nch1s | 🎥 | https://youtu.be/WGb4YR4VJUQ |
-| 8 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/hacktheheaven |
+| 8 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/hacktheheaven ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 9 | El Pingüino de Mario | 🎥 | https://youtu.be/ygnmetl-xH0?si=rhuUI3e7ygmY1y8U |
 
 > **Nota:** los enlaces de terceros se citan como anexos. Fecha de índice: 2026-10-12.

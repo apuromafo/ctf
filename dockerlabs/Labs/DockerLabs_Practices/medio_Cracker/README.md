@@ -31,7 +31,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | # | Autor / Author | Tipo / Type | Enlace / Link |
 |---|----------------|-------------|---------------|
 | 1 | CrisstianPDX | 📝 | https://github.com/Crisstianpdx/CTFs-WriteUps/blob/main/DockerLabs/Cracker/cracker.md |
-| 2 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/cracker.md |
+| 2 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/cracker.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 3 | maciiii___ | 📝 | https://maciferna.gitbook.io/maci/writeups/dockerlabs/cracker |
 | 4 | skopjee | 📝 | https://github.com/sk0pj3e/Dockerlabs/blob/main/cracker/cracker.md |
 | 5 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/my-ctfs/ctfs/ctf-cracker-intermediate |

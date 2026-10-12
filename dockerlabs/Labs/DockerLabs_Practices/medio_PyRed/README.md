@@ -34,9 +34,9 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 2 | AlbertoMD3 | 📝 | https://github.com/albertomarcostic/DockerLabs-WriteUps/blob/main/M%C3%A1quina%20PyRed.md |
 | 3 | firstatack | 📝 | https://firstatack.github.io/pyred |
 | 4 | Romabri | 📝 | https://romabri.github.io/Pyred |
-| 5 | M4nu | 📝 | https://github.com/M4nuTCP/Dockerlabs-Writups/blob/main/Medio/pyred.md |
+| 5 | M4nu | 📝 | https://github.com/M4nuTCP/Dockerlabs-Writups/blob/main/Medio/pyred.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 6 | Quokka | 📝 | https://github.com/Qu0kk4/Quokka/blob/main/DockerLabs/Pyred.md |
-| 7 | TBrux | 📝 | https://github.com/TBrux/DOCKERLABS/blob/main/PyRed.md |
+| 7 | TBrux | 📝 | https://github.com/TBrux/DOCKERLABS/blob/main/PyRed.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 8 | haw441kings | 📝 | https://github.com/haw441kings/DockerLabsWriteUps/blob/main/Medio/PyRed.md |
 | 9 | TerrorAterrador | 📝 | https://github.com/TerrorAterrador/WriteUps/blob/main/DockerLabs/PyRead.md |
 | 10 | ByMorcillo | 📝 | https://github.com/ByMorcillo/WriteUps/tree/main/Dockerlabs/PyRed |
@@ -47,7 +47,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 15 | G0nch1s | 🎥 | https://youtu.be/C-1qoZW7Y64 |
 | 16 | PedroM11 | 📝 | https://github.com/PedroMontoya11/Laboratorios-CTF/blob/main/Dockerlabs/M%C3%A1quina%20PyRed.md |
 | 17 | Gm4tsy | 📝 | https://gm4tsy.hashnode.dev/dockerlabs-pyred |
-| 18 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/pyred |
+| 18 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/pyred ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 19 | burple | 📝 | https://burples-organization.gitbook.io/burple-blog/dockerlabs/medio/pyred-linux |
 | 20 | 4bytes | 📝 | https://4bytes.gitbook.io/4bytes/writeups/dockerlabs/pyred |
 | 21 | El Pingüino de Mario | 🎥 | https://youtu.be/nZ37mf5IWdg?si=1XW_4k3XgfQ_clTm |

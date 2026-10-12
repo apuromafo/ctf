@@ -30,8 +30,8 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 
 | # | Autor / Author | Tipo / Type | Enlace / Link |
 |---|----------------|-------------|---------------|
-| 1 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/mapache2 |
-| 2 | maciiii___ | 📝 | https://github.com/Maciferna/dockerlabs/blob/main/maquina-mapache2/mapache2.md |
+| 1 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/mapache2 ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+| 2 | maciiii___ | 📝 | https://github.com/Maciferna/dockerlabs/blob/main/maquina-mapache2/mapache2.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 3 | Gm4tsy | 📝 | https://gm4tsy.hashnode.dev/dockerlabs-mapache2 |
 | 4 | Isma_yo | 📝 | https://github.com/Isma-yo/Write-Ups-DockerLabs/blob/main/Maquina%20Mapache2/M%C3%A1quina%20Mapache2.md |
 | 5 | G0nch1s | 🎥 | https://youtu.be/XAlcVyx5FMA |

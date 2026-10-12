@@ -31,7 +31,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | # | Autor / Author | Tipo / Type | Enlace / Link |
 |---|----------------|-------------|---------------|
 | 1 | misk0z | 📝 | https://hackwithmisk0z.hashnode.dev/mi-primera-maquina-vulnerable |
-| 2 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/vendetta.md |
+| 2 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/vendetta.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 3 | JuanR | 📝 | https://github.com/JuanAntonioRodriguez68/Dockerlabs/blob/main/Vendetta.pdf |
 | 4 | 104567 | 🎥 | https://www.bilibili.com/video/BV1ZgwseFEFC/ |
 | 5 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/dockerlabs-writeups/dockerlabs/vendetta-dockerlabs-easy |

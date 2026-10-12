@@ -40,18 +40,18 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 8 | MindMeld7 | 📝 | https://mindmeld7.hashnode.dev/writeup-database-dockerlabs |
 | 9 | 1NCO6N1TO | 📝 | https://1nco6n1to.gitbook.io/1nco6n1to/writeups/dockerlabs/database |
 | 10 | G0nch1s | 🎥 | https://youtu.be/a9NVVryL2dg |
-| 11 | Sk8ware | 📝 | https://github.com/sk8ware/Preparacion_para_la_certificacion_eJPTv2/blob/main/N%C2%B04%20Identificaci%C3%B3n%20y%20Explotaci%C3%B3n%20de%20Vulnera/N%C2%B013%20Inyecciones%20SQL%20%E2%80%93%20SQLmap%20en%20Acci%C3%B3n%20%E2%80%93%20EJEMPLO%202.md |
+| 11 | Sk8ware | 📝 | https://github.com/sk8ware/Preparacion_para_la_certificacion_eJPTv2/blob/main/N%C2%B04%20Identificaci%C3%B3n%20y%20Explotaci%C3%B3n%20de%20Vulnera/N%C2%B013%20Inyecciones%20SQL%20%E2%80%93%20SQLmap%20en%20Acci%C3%B3n%20%E2%80%93%20EJEMPLO%202.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 12 | Gm4tsy | 📝 | https://gm4tsy.hashnode.dev/dockerlabs-database0 |
 | 13 | NytroMG | 📝 | https://medium.com/@nytromg/database-writeup-dockerlabs-79a49cc3e4cd |
-| 14 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/database |
+| 14 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/database ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 15 | Er3b0r | 📝 | https://github.com/Er3b0r/Dockerlabs_WriteUPs/blob/main/%F0%9F%9F%A0Medio/%F0%9F%97%83%EF%B8%8FDatabase%F0%9F%97%83%EF%B8%8F.md |
 | 16 | Th3HackTF | 📝 | https://github.com/GustavoUA/WriteUp/wiki/WriteUp-Database-%E2%80%90-DockerLabs |
 | 17 | kamilfire | 📝 | https://kamilfire.github.io/posts/mi-nota.md-Database/ |
 | 18 | El Pingüino de Mario | 🎥 | https://youtu.be/MqCbOtczlZo?si=yt8AF9hg4tSQ6iKx |
 | 19 | Pentester95 | 📝 | https://github.com/dfalla/Hacking---Dockerlabs/blob/database/database.md |
 | 20 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/dockerlabs-writeups/dockerlabs/database-dockerlabs-intermediate |
-| 21 | Rick Alvarez | 📝 | https://lordcodigo.blogspot.com/2025/02/resolucion-de-la-maquina-database.html |
-| 22 | victorCybsec | 📝 | https://github.com/victorCybsec/PwnVault/blob/main/WRITE%20UPS/DOCKERLABS/MEDIO/Database.md |
+| 21 | Rick Alvarez | 📝 | https://lordcodigo.blogspot.com/2025/02/resolucion-de-la-maquina-database.html ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+| 22 | victorCybsec | 📝 | https://github.com/victorCybsec/PwnVault/blob/main/WRITE%20UPS/DOCKERLABS/MEDIO/Database.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 23 | elWeoner | 📝 | https://darkened-raisin-b9c.notion.site/Database-1ef5f89f923880fba977f5743cc5a148?pvs=4 |
 | 24 | Shinkirou | 📝 | https://boletuss-organization.gitbook.io/dw/write-ups/quickstart/maquinas-medio/database-write-up |
 | 25 | Alx SG | 📝 | https://github.com/AlxSAGA/Practical-Hacking-Labs/blob/main/01-DockerLabs/03-Media/21-Database.md |

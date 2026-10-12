@@ -35,8 +35,8 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 3 | G0nch1s | 🎥 | https://youtu.be/o7EfKnoIWWw |
 | 4 | Gm4tsy | 📝 | https://gm4tsy.hashnode.dev/dockerlabs-rutas |
 | 5 | JuanR | 📝 | https://docs.google.com/document/d/1npwkYkmvG_BhO9uBEUlDe5mAX2cZVAP3Soiu23hU-X4/edit?usp=sharing |
-| 6 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/rutas |
-| 7 | Rick Alvarez | 📝 | https://lordcodigo.blogspot.com/2025/02/resolucion-de-la-maquina-rutas.html |
+| 6 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/rutas ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+| 7 | Rick Alvarez | 📝 | https://lordcodigo.blogspot.com/2025/02/resolucion-de-la-maquina-rutas.html ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 8 | Alx SG | 📝 | https://github.com/AlxSAGA/Practical-Hacking-Labs/blob/main/01-DockerLabs/03-Media/36-Rutas.md |
 | 9 | Pyth0nK1d | 📝 | https://pyth0nk1d.medium.com/dockerlabs-writeup-rutas-spanish-e0fd0e089207 |
 

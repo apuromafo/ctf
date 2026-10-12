@@ -38,7 +38,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 6 | KaliGK | 📝 | https://github.com/KaliGK/CyberSecurity/wiki/WriteUp-%7C-HedgeHog |
 | 7 | El Pingüino de Mario | 🎥 | https://youtu.be/d96qJBNe4yU?si=LSC0SlLTgpnX95-F |
 | 8 | hypnopompicman | 📝 | https://github.com/hypnopompicman/Writeups_Dockerlabs/blob/master/hedgehog.md |
-| 9 | Enciall | 📝 | https://github.com/Enciall/dockerlabs/blob/main/hedgehog.md |
+| 9 | Enciall | 📝 | https://github.com/Enciall/dockerlabs/blob/main/hedgehog.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 10 | RedShenlong | 📝 | https://red-shenlong.gitbook.io/red-shenlong/dockerlabs/muy-facil/hedgehog |
 | 11 | JuanR | 📝 | https://github.com/JuanAntonioRodriguez68/Dockerlabs/blob/main/HedgeHog.pdf |
 | 12 | 104567 | 🎥 | https://www.bilibili.com/video/BV1MnwretEJ6/ |
@@ -48,7 +48,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 16 | Shinki | 📝 | https://app.gitbook.com/o/wY7LtUP9ot9AVA1Nstx4/s/tgtRbXiV3TKrR36CLHEu/writeups/quickstart/maquinas-muy-faciles/hedgehog-writeup |
 | 17 | Stolas | 🎥 | https://stolas.gitbook.io/almacen-de-stolas/hedgehog |
 | 18 | Shinkirou | 📝 | https://boletuss-organization.gitbook.io/docker-writeups/writeups/quickstart/maquinas-muy-faciles/hedgehog-writeup |
-| 19 | Litio7 | 📝 | https://litio7.github.io/posts/dockerlabs-writeup-hedgehog/ |
+| 19 | Litio7 | 📝 | https://litio7.github.io/posts/dockerlabs-writeup-hedgehog/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 20 | hardco | 📝 | https://hardco.gitbook.io/hardcoprotocol/ctf/dockerlabs/muy-facil/hedghog |
 | 21 | absorbedfihs | 🎥 | https://youtu.be/oJFEnVbYSr4?si=XSLV1BkTBOwcPBzJ |
 | 22 | beafn28 | 📝 | https://beafn28.gitbook.io/beafn28/writeups/dockerlabs/hedgehog |

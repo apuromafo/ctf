@@ -36,7 +36,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | # | Autor / Author | Tipo / Type | Enlace / Link |
 |---|----------------|-------------|---------------|
 | 1 | El Pingüino De Mario | 🎥 | https://youtu.be/iMH9-Rex2C8 |
-| 2 | Alv-fh | 📝 | https://github.com/Alv-fh/Dockerlabs_machines_writeups/blob/main/Move.md |
+| 2 | Alv-fh | 📝 | https://github.com/Alv-fh/Dockerlabs_machines_writeups/blob/main/Move.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 3 | AlbertoMD3 | 📝 | https://github.com/albertomarcostic/DockerLabs-WriteUps/blob/main/M%C3%A1quina%20Move.md |
 | 4 | Romabri | 📝 | https://romabri.github.io/Move |
 | 5 | NotbadHax | 🎥 | https://youtu.be/xzgx7ysLe7k |
@@ -44,7 +44,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 7 | NormalMan | 📝 | https://jotayepes.notion.site/Move-5cd823b261764f9393e5c1d46e650065?pvs=4 |
 | 8 | MindMeld7 | 🎥 | https://youtu.be/RpZLIcffxKA |
 | 9 | haw441kings | 📝 | https://github.com/haw441kings/DockerLabsWriteUps/blob/main/Faciles/Move.md |
-| 10 | TBrux | 📝 | https://github.com/TBrux/DOCKERLABS/blob/main/Move.md |
+| 10 | TBrux | 📝 | https://github.com/TBrux/DOCKERLABS/blob/main/Move.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 11 | TerrorAterrador | 📝 | https://github.com/TerrorAterrador/WriteUps/blob/main/DockerLabs/Move.md |
 | 12 | elWeoner | 📝 | https://darkened-raisin-b9c.notion.site/Move-9cf0ef7f81384ac09ec37d3d2be2b8bc?pvs=4 |
 | 13 | juandas13 | 🎥 | https://www.youtube.com/watch?v=EyHR5ETS-wU |
@@ -60,9 +60,9 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 23 | Er3b0r | 📝 | https://github.com/Er3b0r/Dockerlabs_WriteUPs/blob/main/%F0%9F%9F%A2F%C3%A1cil/%F0%9F%91%A8%E2%80%8D%F0%9F%A6%BDMove%F0%9F%91%A8%E2%80%8D%F0%9F%A6%BD.md |
 | 24 | Fifas5ec | 🎥 | https://youtu.be/PzX2lZwCaMQ |
 | 25 | 4bytes | 📝 | https://github.com/4bytess/writeups/blob/main/dockerlabs/move.md |
-| 26 | Romy | 📝 | https://github.com/Romyy1/Obsidian/blob/main/Mi%20Aprendimiento/DockerLabs/Move.pdf |
+| 26 | Romy | 📝 | https://github.com/Romyy1/Obsidian/blob/main/Mi%20Aprendimiento/DockerLabs/Move.pdf ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 27 | G0nch1s | 📝 | https://g0nch1s.blogspot.com/2024/09/write-up-maquina-move-dockerlabs.html |
-| 28 | MykeMR | 📝 | https://mykemr.github.io/Move |
+| 28 | MykeMR | 📝 | https://mykemr.github.io/Move ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 29 | Andr3 | 📝 | https://github.com/giustiand/DockerLabs-Writeups/blob/main/F%C3%A1cil/move.md |
 | 30 | El Pingüino de Mario | 🎥 | https://youtu.be/iMH9-Rex2C8?si=l8Wy7KSdTM7rg3Q6 |
 | 31 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/dockerlabs-writeups/dockerlabs/move-dockerlabs-easy |
@@ -72,7 +72,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 35 | Aguilar | 📝 | https://github.com/Aguilar-aoj/Pentesting/blob/main/DockerLabs/Facil/Move.md |
 | 36 | Bandit0 | 📝 | https://github.com/8andit0/BanditBox/blob/main/Maquinas%20De%20Dockerlabs/Maquinas%20Faciles/Move.md |
 | 37 | Alx SG | 📝 | https://github.com/AlxSAGA/Practical-Hacking-Labs/blob/main/01-DockerLabs/02-Facil/10-Move.md |
-| 38 | Litio7 | 📝 | https://litio7.github.io/posts/dockerlabs-writeup-move/ |
+| 38 | Litio7 | 📝 | https://litio7.github.io/posts/dockerlabs-writeup-move/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 39 | brias | 📝 | https://brias.gitbook.io/brias/dockerlabs/dificultad-facil/move |
 | 40 | Pyth0nK1d | 📝 | https://pyth0nk1d.medium.com/dockerlabs-writeup-move-spanish-9823fa1e04f3 |
 

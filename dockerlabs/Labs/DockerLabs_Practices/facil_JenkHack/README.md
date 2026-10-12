@@ -30,12 +30,12 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 
 | # | Autor / Author | Tipo / Type | Enlace / Link |
 |---|----------------|-------------|---------------|
-| 1 | maciiii___ | 📝 | https://github.com/Maciferna/dockerlabs/blob/main/maquina-jenkhack/jenkhack.md |
+| 1 | maciiii___ | 📝 | https://github.com/Maciferna/dockerlabs/blob/main/maquina-jenkhack/jenkhack.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 2 | JuanR | 📝 | https://github.com/JuanAntonioRodriguez68/Dockerlabs/blob/main/Jenkhack.pdf |
 | 3 | Pablodiz | 📝 | https://github.com/Pablodiz/Writeups/blob/main/Dockerlabs/F%C3%A1ciles/Jenkhack.md |
 | 4 | Isma_yo | 📝 | https://github.com/Isma-yo/Write-Ups-DockerLabs/blob/main/Maquina%20JenkHack/M%C3%A1quina%20JenkHack.md |
 | 5 | PedroM11 | 📝 | https://github.com/PedroMontoya11/Laboratorios-CTF/blob/main/Dockerlabs/M%C3%A1quina%20JenkHack.md |
-| 6 | Romy | 📝 | https://github.com/Romyy1/Obsidian/blob/main/Mi%20Aprendimiento/DockerLabs/Jenhack.pdf |
+| 6 | Romy | 📝 | https://github.com/Romyy1/Obsidian/blob/main/Mi%20Aprendimiento/DockerLabs/Jenhack.pdf ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 7 | elWeoner | 📝 | https://darkened-raisin-b9c.notion.site/JenkHack-11a5f89f923880b2ac7aeb51cff88e2f?pvs=4 |
 | 8 | zunderrub | 🎥 | https://youtu.be/VBGZlORhdg4?si=1-tsGP2GVg8WGuLW |
 | 9 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/my-ctfs/ctfs/ctf-jenkhack-easy |

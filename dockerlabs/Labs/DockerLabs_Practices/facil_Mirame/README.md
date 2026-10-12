@@ -35,7 +35,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 
 | # | Autor / Author | Tipo / Type | Enlace / Link |
 |---|----------------|-------------|---------------|
-| 1 | maciiii___ | 📝 | https://github.com/Maciferna/DockerLabs/blob/main/maquina-mirame/MIRAME.md |
+| 1 | maciiii___ | 📝 | https://github.com/Maciferna/DockerLabs/blob/main/maquina-mirame/MIRAME.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 2 | BanYio | 📝 | https://github.com/BanYio/DockerLabs/blob/main/Mirame.md |
 | 3 | Gm4tsy | 📝 | https://gm4tsy.hashnode.dev/dockerlabs-mirame |
 | 4 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/dockerlabs-writeups/dockerlabs/mirame-dockerlabs-easy |
@@ -49,9 +49,9 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 12 | Henkosec | 🎥 | https://www.youtube.com/watch?v=TgFc8epNdgE |
 | 13 | Er3b0r | 📝 | https://github.com/Er3b0r/Dockerlabs_WriteUPs/blob/main/%F0%9F%9F%A2F%C3%A1cil/%F0%9F%91%80Mirame%F0%9F%91%80.md |
 | 14 | frogtheripper | 📝 | https://frogtheripper.gitbook.io/frogtheripper-writeups/thehackerlabs/facil/maquina-mirame |
-| 15 | MykeMR | 📝 | https://mykemr.github.io/Mirame |
+| 15 | MykeMR | 📝 | https://mykemr.github.io/Mirame ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 16 | Joukerr | 📝 | https://github.com/joukerr/CTF/blob/main/Dockerlabs/Maquina%20Mirame%20Dockerlabs.pdf |
-| 17 | Litio7 | 📝 | https://litio7.github.io/posts/dockerlabs-writeup-mirame/ |
+| 17 | Litio7 | 📝 | https://litio7.github.io/posts/dockerlabs-writeup-mirame/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 18 | MatthyGD | 🎥 | https://www.youtube.com/watch?v=moRUTveFIzw |
 | 19 | MatthyGD | 🎥 | https://www.youtube.com/watch?v=moRUTveFIzw&lc=Ugyonfk54Vn_nHhyp7t4AaABAg |
 | 20 | Shinkirou | 📝 | https://boletuss-organization.gitbook.io/dw/write-ups/quickstart/maquinas-faciles/mirame-write-up |

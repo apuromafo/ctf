@@ -37,8 +37,8 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 5 | Condorhacks | 🎥 | https://youtu.be/cM7R9aCGjQ4?si=bWrpdmI0vBLGzlAQ |
 | 6 | G0nch1s | 🎥 | https://youtu.be/65DMLs3pFp8 |
 | 7 | Gm4tsy | 📝 | https://gm4tsy.hashnode.dev/dockerlabs-vulnerame |
-| 8 | maciiii___ | 📝 | https://github.com/Maciferna/dockerlabs/blob/main/maquina-vulnerame/vulnerame.md |
-| 9 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/vulnerame |
+| 8 | maciiii___ | 📝 | https://github.com/Maciferna/dockerlabs/blob/main/maquina-vulnerame/vulnerame.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+| 9 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/vulnerame ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 10 | JuanR | 📝 | https://github.com/JuanAntonioRodriguez68/Dockerlabs/blob/main/Vulnerame.pdf |
 | 11 | skopjee | 📝 | https://github.com/sk0pj3e/Dockerlabs/blob/main/vulnerame/vulnerame.md |
 

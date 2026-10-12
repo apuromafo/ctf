@@ -31,7 +31,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | # | Autor / Author | Tipo / Type | Enlace / Link |
 |---|----------------|-------------|---------------|
 | 1 | AlbertoMD3 | 📝 | https://github.com/albertomarcostic/DockerLabs-WriteUps/blob/main/M%C3%A1quina%20Inclusion.md |
-| 2 | M4nu | 📝 | https://github.com/M4nuTCP/Dockerlabs-Writups/blob/main/Medio/inclusion.md |
+| 2 | M4nu | 📝 | https://github.com/M4nuTCP/Dockerlabs-Writups/blob/main/Medio/inclusion.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 3 | blackpist0l | 📝 | https://blackpist0l.hashnode.dev/inclusion-dockerlab-machine |
 | 4 | firstatack | 📝 | https://firstatack.github.io/posts/inclusion/ |
 | 5 | Romabri | 📝 | https://romabri.github.io/Inclusion |
@@ -43,13 +43,13 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 11 | 1NCO6N1TO | 📝 | https://github.com/1NCO6N1TO/WriteUps_DockerLabs/blob/main/Inclusion.md |
 | 12 | juandas13 | 📝 | https://github.com/JSinning/inclution/blob/master/Inclution.md |
 | 13 | Gm4tsy | 📝 | https://gm4tsy.hashnode.dev/dockerlabs-inclusion |
-| 14 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/inclusion.md |
+| 14 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/inclusion.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 15 | redPentester | 📝 | https://pentesterarchive.github.io/posts/inclusion/ |
 | 16 | Th3HackTF | 📝 | https://github.com/GustavoUA/WriteUp/wiki/Writeup-inclusion |
 | 17 | Dark0547 | 📝 | https://dark0547.gitbook.io/tdlc/writeups/dockerlabs/medio/inclusion |
 | 18 | Pentester95 | 📝 | https://github.com/dfalla/Hacking---Dockerlabs/blob/inclusion/inclusion.md |
 | 19 | Andr3 | 📝 | https://github.com/giustiand/DockerLabs-Writeups/blob/main/Medio/Inclusion.md |
-| 20 | victorCybsec | 📝 | https://github.com/victorCybsec/PwnVault/blob/main/WRITE%20UPS/DOCKERLABS/MEDIO/Inclusion.md |
+| 20 | victorCybsec | 📝 | https://github.com/victorCybsec/PwnVault/blob/main/WRITE%20UPS/DOCKERLABS/MEDIO/Inclusion.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 21 | Shinkirou | 📝 | https://boletuss-organization.gitbook.io/dw/write-ups/quickstart/maquinas-medio/inclusion-write-up |
 | 22 | Alx SG | 📝 | https://github.com/AlxSAGA/Practical-Hacking-Labs/blob/main/01-DockerLabs/03-Media/06-Inclusion.md |
 | 23 | 1gnotus | 📝 | https://1gnotus.gitbook.io/ignotus_pwn/dockerlabs/writeup/maquina-inclusion-fuzz-web-lfi-brute-force-user-privesc-php |

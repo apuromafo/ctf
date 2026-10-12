@@ -39,9 +39,9 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 7 | MindMeld7 | 🎥 | https://www.youtube.com/watch?v=LwUahiP8mWA |
 | 8 | 1NCO6N1TO | 📝 | https://1nco6n1to.gitbook.io/1nco6n1to/writeups/dockerlabs/strongjenkins |
 | 9 | G0nch1s | 🎥 | https://youtu.be/96YUjvSMxQU |
-| 10 | elc4br4 | 📝 | https://elc4br4wiki.gitbook.io/elc4br4wiki/dockerlabs/strongjenkins-dockerlabs |
+| 10 | elc4br4 | 📝 | https://elc4br4wiki.gitbook.io/elc4br4wiki/dockerlabs/strongjenkins-dockerlabs ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 11 | Gm4tsy | 📝 | https://gm4tsy.hashnode.dev/dockerlabs-strongjenkins |
-| 12 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/strongjenkins |
+| 12 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/strongjenkins ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 13 | miguel0x1985 | 📝 | https://github.com/miguellofredo85/PwnLabs/blob/main/dockerlabs/Strongjenkins.pdf |
 | 14 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/ctf/dockerlabs/strongjenkins-dockerlabs-intermediate |
 | 15 | MatthyGD | 🎥 | https://www.youtube.com/watch?v=CXBqO1-ht58&list=PL8iWeKBFGOO4MUR0EWq6CoM6D4tPI7ogk |

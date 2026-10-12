@@ -43,8 +43,8 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 6 | haw441kings | 📝 | https://github.com/haw441kings/DockerLabsWriteUps/blob/main/Faciles/Secretjenkins.md |
 | 7 | Pylon | 🎥 | https://youtu.be/uqGSPXYb5iE?si=jJd7cMZvLqGySEm2 |
 | 8 | JuanR | 📝 | https://heyzine.com/flip-book/937fb802b8.html |
-| 9 | Rick Alvarez | 📝 | https://lordcodigo.blogspot.com/2024/06/resolucion-de-la-maquina-secretjenkins.html |
-| 10 | Alv-fh | 📝 | https://github.com/Alv-fh/Dockerlabs_machines_writeups/blob/main/SecretJenkins.md |
+| 9 | Rick Alvarez | 📝 | https://lordcodigo.blogspot.com/2024/06/resolucion-de-la-maquina-secretjenkins.html ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+| 10 | Alv-fh | 📝 | https://github.com/Alv-fh/Dockerlabs_machines_writeups/blob/main/SecretJenkins.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 11 | Jhonycz | 📝 | https://medium.com/@jhonysylcz/dockerlabs-stronjenkins-a4c89e32467c |
 | 12 | elWeoner | 📝 | https://darkened-raisin-b9c.notion.site/SecretJenkins-28d93babcd8949a882e4d5466146b7ce?pvs=25 |
 | 13 | G0nch1s | 🎥 | https://youtu.be/F-DniNGBk1g |
@@ -52,9 +52,9 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 15 | Gm4tsy | 📝 | https://gm4tsy.hashnode.dev/dockerlabs-secretjenkins |
 | 16 | Shinbi | 📝 | https://drive.google.com/file/d/1JpQfntPKyctSaWC7qEr6zsiSINwbtPYJ/view?usp=sharing |
 | 17 | Er3b0r | 📝 | https://github.com/Er3b0r/Dockerlabs_WriteUPs/blob/main/%F0%9F%9F%A2F%C3%A1cil/%F0%9F%A4%B5SecretJenkins%F0%9F%A4%B5.md |
-| 18 | rodsteph | 📝 | https://rainherz.github.io/rodsteph/posts/Dockerlabs-Writeup-SecretJenkins/ |
+| 18 | rodsteph | 📝 | https://rainherz.github.io/rodsteph/posts/Dockerlabs-Writeup-SecretJenkins/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 19 | WEED_SUAVE | 📝 | https://medium.com/@juanchos7106/secretjenkins-docker-labs-c258ec27e2d5 |
-| 20 | MykeMR | 📝 | https://mykemr.github.io/SecretJenkins |
+| 20 | MykeMR | 📝 | https://mykemr.github.io/SecretJenkins ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 21 | El Pingüino de Mario | 🎥 | https://youtu.be/CHDm8sM77r4?si=mMhD2XwIFU1vpO8t |
 | 22 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/dockerlabs-writeups/dockerlabs/secretjenkins-dockerlabs-easy |
 | 23 | Shinkirou | 📝 | https://boletuss-organization.gitbook.io/dw/write-ups/quickstart/maquinas-faciles/secretjenkins-write-up |

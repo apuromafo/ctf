@@ -37,7 +37,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 |---|----------------|-------------|---------------|
 | 1 | kaikoperez | 📝 | https://github.com/kiket25/Write-Ups/blob/main/picadilly-writeup.pdf |
 | 2 | zakayuka | 📝 | https://github.com/davidcali9/WRITE_UPS/blob/main/WRITE%20UP%20DE%20LA%20M%C3%81QUINA%20PICADILLY.pdf |
-| 3 | thedakah | 🎥 | https://www.youtube.com/watch?v=m22QrQJA13A |
+| 3 | thedakah | 🎥 | https://www.youtube.com/watch?v=m22QrQJA13A ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 4 | firstatack | 📝 | https://firstatack.github.io/posts/picadilly/ |
 | 5 | Romabri | 📝 | https://romabri.github.io/Picadilly |
 | 6 | MindMeld7 | 🎥 | https://youtu.be/CRwPLJFKD4E |
@@ -52,7 +52,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 15 | PedroM11 | 📝 | https://github.com/PedroMontoya11/Laboratorios-CTF/blob/main/Dockerlabs/M%C3%A1quina%20Picadilly.md |
 | 16 | 4bytes | 📝 | https://github.com/4bytess/writeups/blob/main/dockerlabs/picadilly.md |
 | 17 | WEED_SUAVE | 📝 | https://medium.com/@juanchos7106/picadilly-docker-labs-1487119bfe6c |
-| 18 | MykeMR | 📝 | https://mykemr.github.io/Picadilly |
+| 18 | MykeMR | 📝 | https://mykemr.github.io/Picadilly ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 19 | Andr3 | 📝 | https://github.com/giustiand/DockerLabs-Writeups/blob/main/F%C3%A1cil/picadilly.md |
 | 20 | Joukerr | 🎥 | https://www.youtube.com/watch?v=9HqO2HV3EB4 |
 | 21 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/dockerlabs-writeups/dockerlabs/picadilly-dockerlabs-easy |

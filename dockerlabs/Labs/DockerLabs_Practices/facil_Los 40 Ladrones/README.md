@@ -37,14 +37,14 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 |---|----------------|-------------|---------------|
 | 1 | MindMeld7 | 📝 | https://mindmeld7.hashnode.dev/writeup-los-40-ladrones-from-dockerlabs |
 | 2 | MindMeld7 | 🎥 | https://www.youtube.com/watch?v=o42APQ5mFWs |
-| 3 | murrusko | 📝 | https://murrusko.github.io/posts/los40ladrones/ |
+| 3 | murrusko | 📝 | https://murrusko.github.io/posts/los40ladrones/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 4 | DaemonHackzy | 🎥 | https://www.youtube.com/watch?v=WBNETHE5u_c |
 | 5 | JuanR | 📝 | https://docs.google.com/document/d/1z0a-APBKDCjr97fDy-rnPjnnXTnBcr0QgBRRPDYq_FY/edit?usp=sharing |
 | 6 | afgsanchez | 📝 | https://github.com/afgsanchez/writeups/blob/main/Los40Ladrones.md |
 | 7 | G0nch1s | 🎥 | https://youtu.be/qsFhDCVAbmI |
 | 8 | NytroMG | 📝 | https://medium.com/@nytromg/los40ladrones-writeup-dockerlabs-ef2b5d5ebbf8 |
 | 9 | Gm4tsy | 📝 | https://gm4tsy.hashnode.dev/dockerlabs-los40ladrones |
-| 10 | TBrux | 📝 | https://github.com/TBrux/DOCKERLABS/blob/main/Los%2040%20Ladrones.md |
+| 10 | TBrux | 📝 | https://github.com/TBrux/DOCKERLABS/blob/main/Los%2040%20Ladrones.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 11 | firstatack | 📝 | https://firstatack.github.io/posts/los40ladrones/ |
 | 12 | 4bytes | 📝 | https://github.com/4bytess/writeups/blob/main/dockerlabs/los%2040%20ladrones.md |
 | 13 | Er3b0r | 📝 | https://github.com/Er3b0r/Dockerlabs_WriteUPs/blob/main/%F0%9F%9F%A2F%C3%A1cil/%F0%9F%91%AE%E2%80%8D%E2%99%82%EF%B8%8FLos%2040%20Ladrones%F0%9F%91%AE%E2%80%8D%E2%99%82%EF%B8%8F.md |
@@ -53,15 +53,15 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 16 | 0xEden | 📝 | https://apuntes-varios.gitbook.io/hacking/indice/writeups/dockerlabs/facil/los-40-ladrones |
 | 17 | Owl3r | 📝 | https://github.com/owl3r/Dockerlabs.-ES/blob/main/Los40ladrones.md |
 | 18 | D4nYeD | 📝 | https://medium.com/@D4nYeD/dockerlabs-m%C3%A1quina-los-40-ladrones-ca32b96e255d |
-| 19 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/40ladrones |
+| 19 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/40ladrones ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 20 | G0nch1s | 📝 | https://g0nch1s.blogspot.com/2024/09/write-up-maquina-los-40-ladrones.html |
-| 21 | MykeMR | 📝 | https://mykemr.github.io/Los_40_Ladrones |
+| 21 | MykeMR | 📝 | https://mykemr.github.io/Los_40_Ladrones ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 22 | Andr3 | 📝 | https://github.com/giustiand/DockerLabs-Writeups/blob/main/F%C3%A1cil/los40ladrones.md |
 | 23 | KaliGK | 📝 | https://github.com/KaliGK/CyberSecurity/wiki/WriteUp-%7C-Los40Ladrones |
 | 24 | El Pingüino de Mario | 🎥 | https://youtu.be/8qCLQJUH7fk?si=tpRaFUK134XCI0DT |
 | 25 | Joukerr | 🎥 | https://www.youtube.com/watch?v=mqsOOD1oR4U |
 | 26 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/dockerlabs-writeups/dockerlabs/los-40-ladrones-dockerlabs-easy |
-| 27 | eliferrob | 📝 | https://github.com/eliferrob/CTFs/blob/main/DockerLabs%20-%20Los40Ladrones/WriteUp.md |
+| 27 | eliferrob | 📝 | https://github.com/eliferrob/CTFs/blob/main/DockerLabs%20-%20Los40Ladrones/WriteUp.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 28 | beafn28 | 📝 | https://beafn28.gitbook.io/beafn28/writeups/dockerlabs/los-40-ladrones |
 | 29 | AlejandroSL | 📝 | https://github.com/Alejandro609x/Dockerlabs/blob/main/Los_40_Ladrones/Los_40_Ladrones.md |
 | 30 | chiara spettro web | 🎥 | https://www.youtube.com/watch?v=NTwKnin0vKQ |

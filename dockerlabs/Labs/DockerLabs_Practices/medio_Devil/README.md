@@ -30,10 +30,10 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 
 | # | Autor / Author | Tipo / Type | Enlace / Link |
 |---|----------------|-------------|---------------|
-| 1 | maciiii___ | 📝 | https://github.com/Maciferna/DockerLabs/blob/main/maquina-devil/devil.md |
-| 2 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/devil |
+| 1 | maciiii___ | 📝 | https://github.com/Maciferna/DockerLabs/blob/main/maquina-devil/devil.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+| 2 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/devil ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 3 | Gm4tsy | 📝 | https://gm4tsy.hashnode.dev/dockerlabs-devil |
-| 4 | kaikoperez | 📝 | https://kiket25.github.io/HackStry/blog.html?post=devil |
+| 4 | kaikoperez | 📝 | https://kiket25.github.io/HackStry/blog.html?post=devil ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 5 | JuanR | 📝 | https://github.com/JuanAntonioRodriguez68/Dockerlabs/blob/main/Devil.pdf |
 | 6 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/dockerlabs-writeups/dockerlabs/devil-dockerlabs-intermediate |
 | 7 | Alx SG | 📝 | https://github.com/AlxSAGA/Practical-Hacking-Labs/blob/main/01-DockerLabs/03-Media/44-Devil.md |

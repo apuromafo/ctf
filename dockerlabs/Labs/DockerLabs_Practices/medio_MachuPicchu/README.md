@@ -30,7 +30,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 
 | # | Autor / Author | Tipo / Type | Enlace / Link |
 |---|----------------|-------------|---------------|
-| 1 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/machupichhu.md |
+| 1 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/machupichhu.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 2 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/ctf/dockerlabs/machupicchu-dockerlabs-intermediate |
 | 3 | maciiii___ | 📝 | https://maciferna.gitbook.io/maci/writeups/dockerlabs/machupichu |
 | 4 | suraxddq | 📝 | https://byte-mind.net/dockerlabs-machines-machupicchu-writeup/ |

@@ -53,7 +53,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 16 | beafn28 | 📝 | https://beafn28.gitbook.io/beafn28/writeups/dockerlabs/whoiam |
 | 17 | AlejandroSL | 📝 | https://github.com/Alejandro609x/Dockerlabs/blob/main/Whoiam/Whoiam.md |
 | 18 | Alx SG | 📝 | https://github.com/AlxSAGA/Practical-Hacking-Labs/blob/main/01-DockerLabs/02-Facil/34-Whoiam.md |
-| 19 | X02_Security | 📝 | https://galizaragozadev.gitbook.io/galizaragozadev-docs/dockerlabs/whoiam-easy-dockerlabs |
+| 19 | X02_Security | 📝 | https://galizaragozadev.gitbook.io/galizaragozadev-docs/dockerlabs/whoiam-easy-dockerlabs ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 20 | Aguilar | 📝 | https://github.com/Aguilar-aoj/Pentesting/blob/main/DockerLabs/Facil/Whoiam.md |
 | 21 | Pyth0nK1d | 📝 | https://pyth0nk1d.medium.com/dockerlabs-writeup-whoiam-spanish-fd826fb561ea |
 

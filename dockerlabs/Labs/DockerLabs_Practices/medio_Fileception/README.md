@@ -34,7 +34,7 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 2 | AlbertoMD3 | 📝 | https://github.com/albertomarcostic/DockerLabs-WriteUps/blob/main/M%C3%A1quina%20Fileception.md |
 | 3 | Hackavis | 🎥 | https://www.youtube.com/watch?v=y9NiIUUdghQ |
 | 4 | zunderrub | 🎥 | https://www.youtube.com/watch?v=kse0zQpwNcw |
-| 5 | thedakah | 🎥 | https://www.youtube.com/watch?v=FY260TSGcCw |
+| 5 | thedakah | 🎥 | https://www.youtube.com/watch?v=FY260TSGcCw ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 6 | Romabri | 📝 | https://romabri.github.io/Fileception |
 | 7 | firstatack | 📝 | https://firstatack.github.io/posts/fileception/ |
 | 8 | TerrorAterrador | 📝 | https://github.com/TerrorAterrador/WriteUps/blob/main/DockerLabs/Fileception.md |
@@ -43,10 +43,10 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | 11 | G0nch1s | 🎥 | https://youtu.be/Rz5d217ftHQ |
 | 12 | Gm4tsy | 📝 | https://gm4tsy.hashnode.dev/dockerlabs-fileception |
 | 13 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/dockerlabs-writeups/dockerlabs/fileception-dockerlabs-intermediate |
-| 14 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/fileception |
+| 14 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/fileception ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 15 | kamilfire | 📝 | https://kamilfire.github.io/posts/Fileception/ |
 | 16 | Pentester95 | 📝 | https://github.com/dfalla/Hacking---Dockerlabs/blob/fileception/fileception.md |
-| 17 | victorCybsec | 📝 | https://github.com/victorCybsec/PwnVault/blob/main/WRITE%20UPS/DOCKERLABS/MEDIO/Fileception.md |
+| 17 | victorCybsec | 📝 | https://github.com/victorCybsec/PwnVault/blob/main/WRITE%20UPS/DOCKERLABS/MEDIO/Fileception.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 18 | Shinkirou | 📝 | https://boletuss-organization.gitbook.io/dw/write-ups/quickstart/maquinas-medio/fileception-write-up |
 | 19 | Alx SG | 📝 | https://github.com/AlxSAGA/Practical-Hacking-Labs/blob/main/01-DockerLabs/03-Media/24-FileCeption.md |
 | 20 | Pyth0nK1d | 📝 | https://pyth0nk1d.medium.com/dockerlabs-writeup-fileception-spanish-7787a19a4458 |

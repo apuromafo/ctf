@@ -32,9 +32,9 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 |---|----------------|-------------|---------------|
 | 1 | Klaus | 📝 | https://github.com/valanyrr/Maquinas-DockerLabs/blob/main/Easy/MaquinaAllien.md |
 | 2 | TBrux | 📝 | https://github.com/TBrux/DOCKERLABS/blob/main/F%C3%A1cil/Allien.md |
-| 3 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/allien |
-| 4 | maciiii___ | 📝 | https://github.com/Maciferna/DockerLabs/blob/main/maquina-allien/allien.md |
-| 5 | MykeMR | 📝 | https://mykemr.github.io/Allien |
+| 3 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/allien ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+| 4 | maciiii___ | 📝 | https://github.com/Maciferna/DockerLabs/blob/main/maquina-allien/allien.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+| 5 | MykeMR | 📝 | https://mykemr.github.io/Allien ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 6 | zunderrub | 🎥 | https://youtu.be/DbvQI-46fFQ |
 | 7 | juandas13 | 📝 | https://github.com/JSinning/allien/blob/master/Allien.md |
 | 8 | JuanR | 📝 | https://github.com/JuanAntonioRodriguez68/Dockerlabs/blob/main/Allien.pdf |

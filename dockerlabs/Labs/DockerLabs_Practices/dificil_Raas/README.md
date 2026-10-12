@@ -31,9 +31,9 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 | # | Autor / Author | Tipo / Type | Enlace / Link |
 |---|----------------|-------------|---------------|
 | 1 | maciiii___ | 📝 | https://maciferna.gitbook.io/maci/writeups/dockerlabs/raas |
-| 2 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/raas.md |
+| 2 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/raas.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 3 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/dockerlabs-writeups/dockerlabs/raas-dockerlabs-hard |
 | 4 | skopjee | 📝 | https://github.com/sk0pj3e/Dockerlabs/blob/main/rass/rass.md |
-| 5 | Litio7 | 📝 | https://litio7.github.io/posts/dockerlabs-writeup-raas/ |
+| 5 | Litio7 | 📝 | https://litio7.github.io/posts/dockerlabs-writeup-raas/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 
 > **Nota:** los enlaces de terceros se citan como anexos. Fecha de índice: 2026-10-12.

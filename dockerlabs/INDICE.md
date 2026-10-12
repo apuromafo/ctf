@@ -1,179 +1,179 @@
 # DockerLabs — Índice de máquinas / Machine index
 
-> **ES:** 172 máquinas · 3294 referencias (📝 2772 · 🎥 522). 🆕 = solo en índice moderno (7).
-> **EN:** 172 machines · 3294 references. 🆕 = only in modern index (7).
+> **ES:** 172 máquinas · 3294 referencias. Carpetas como `dificultad_Nombre`.
+> **EN:** 172 machines · 3294 references. Folders as `difficulty_Name`.
 
-| Máquina / Machine | Refs | 📝 | 🎥 | Estado / Status |
-|---|---|---|---|---|
-| [-Pn](Labs/DockerLabs_Practices/-Pn/README.md) | 32 | 27 | 5 | documentada |
-| [0xc0ffee](Labs/DockerLabs_Practices/0xc0ffee/README.md) | 15 | 14 | 1 | documentada |
-| [404-not-found](Labs/DockerLabs_Practices/404-not-found/README.md) | 16 | 14 | 2 | documentada |
-| [AguaDeMayo](Labs/DockerLabs_Practices/AguaDeMayo/README.md) | 48 | 44 | 4 | documentada |
-| [Allien](Labs/DockerLabs_Practices/Allien/README.md) | 21 | 19 | 2 | documentada |
-| [Amor](Labs/DockerLabs_Practices/Amor/README.md) | 69 | 62 | 7 | documentada |
-| [AnonymousPingu](Labs/DockerLabs_Practices/AnonymousPingu/README.md) | 45 | 38 | 7 | documentada |
-| [ApacheByte](Labs/DockerLabs_Practices/ApacheByte/README.md) | 4 | 4 | 0 | documentada |
-| [ApiBase](Labs/DockerLabs_Practices/ApiBase/README.md) | 11 | 10 | 1 | documentada |
-| [ApiRoot](Labs/DockerLabs_Practices/ApiRoot/README.md) | 10 | 9 | 1 | documentada |
-| [Apolos](Labs/DockerLabs_Practices/Apolos/README.md) | 17 | 16 | 1 | documentada |
-| [Asucar](Labs/DockerLabs_Practices/Asucar/README.md) | 23 | 21 | 2 | documentada |
-| [Backend](Labs/DockerLabs_Practices/Backend/README.md) | 20 | 18 | 2 | documentada |
-| [BadPlugin](Labs/DockerLabs_Practices/BadPlugin/README.md) | 8 | 6 | 2 | documentada |
-| [BaluFood](Labs/DockerLabs_Practices/BaluFood/README.md) | 16 | 13 | 3 | documentada |
-| [Balulero](Labs/DockerLabs_Practices/Balulero/README.md) | 19 | 17 | 2 | documentada |
-| [Bashpariencias](Labs/DockerLabs_Practices/Bashpariencias/README.md) | 20 | 18 | 2 | documentada |
-| [Bicho](Labs/DockerLabs_Practices/Bicho/README.md) | 7 | 7 | 0 | documentada |
-| [BigPivoting](Labs/DockerLabs_Practices/BigPivoting/README.md) | 6 | 5 | 1 | documentada |
-| [Bola](Labs/DockerLabs_Practices/Bola/README.md) | 6 | 6 | 0 | documentada |
-| [BorazuwarahCTF](Labs/DockerLabs_Practices/BorazuwarahCTF/README.md) | 74 | 55 | 19 | documentada |
-| [BreakMySSH](Labs/DockerLabs_Practices/BreakMySSH/README.md) | 85 | 70 | 15 | documentada |
-| [BruteShock](Labs/DockerLabs_Practices/BruteShock/README.md) | 9 | 6 | 3 | documentada |
-| [Buffered](Labs/DockerLabs_Practices/Buffered/README.md) | 4 | 3 | 1 | documentada |
-| [BuscaLove](Labs/DockerLabs_Practices/BuscaLove/README.md) | 27 | 21 | 6 | documentada |
-| [Bypassme](Labs/DockerLabs_Practices/Bypassme/README.md) | 6 | 6 | 0 | documentada |
-| [Cachopo](Labs/DockerLabs_Practices/Cachopo/README.md) | 20 | 17 | 3 | documentada |
-| [Canario](Labs/DockerLabs_Practices/Canario/README.md) | 2 | 2 | 0 | documentada |
-| [Candy](Labs/DockerLabs_Practices/Candy/README.md) | 24 | 19 | 5 | documentada |
-| [ChatMe](Labs/DockerLabs_Practices/ChatMe/README.md) | 11 | 8 | 3 | documentada |
-| [ChocoPing](Labs/DockerLabs_Practices/ChocoPing/README.md) | 11 | 7 | 4 | documentada |
-| [ChocolateFire](Labs/DockerLabs_Practices/ChocolateFire/README.md) | 25 | 19 | 6 | documentada |
-| [ChocolateLovers](Labs/DockerLabs_Practices/ChocolateLovers/README.md) | 38 | 34 | 4 | documentada |
-| [Ciberguard](Labs/DockerLabs_Practices/Ciberguard/README.md) | 6 | 6 | 0 | documentada |
-| [Collections](Labs/DockerLabs_Practices/Collections/README.md) | 19 | 17 | 2 | documentada |
-| [ConsoleLog](Labs/DockerLabs_Practices/ConsoleLog/README.md) | 29 | 25 | 4 | documentada |
-| [Corruptress](Labs/DockerLabs_Practices/Corruptress/README.md) | 3 | 3 | 0 | documentada |
-| [Cracker](Labs/DockerLabs_Practices/Cracker/README.md) | 9 | 8 | 1 | documentada |
-| [Crackoff](Labs/DockerLabs_Practices/Crackoff/README.md) | 6 | 6 | 0 | documentada |
-| [Crystalteam](Labs/DockerLabs_Practices/Crystalteam/README.md) | 5 | 5 | 0 | documentada |
-| [Dance-Samba](Labs/DockerLabs_Practices/Dance-Samba/README.md) | 24 | 20 | 4 | documentada |
-| [Dark](Labs/DockerLabs_Practices/Dark/README.md) | 16 | 14 | 2 | documentada |
-| [Darkweb](Labs/DockerLabs_Practices/Darkweb/README.md) | 13 | 10 | 3 | documentada |
-| [Database](Labs/DockerLabs_Practices/Database/README.md) | 26 | 22 | 4 | documentada |
-| [DebugMe](Labs/DockerLabs_Practices/DebugMe/README.md) | 12 | 9 | 3 | documentada |
-| [DevTools](Labs/DockerLabs_Practices/DevTools/README.md) | 14 | 13 | 1 | documentada |
-| [Devil](Labs/DockerLabs_Practices/Devil/README.md) | 7 | 7 | 0 | documentada |
-| [DockHackLab](Labs/DockerLabs_Practices/DockHackLab/README.md) | 15 | 13 | 2 | documentada |
-| [DockerLabs](Labs/DockerLabs_Practices/DockerLabs/README.md) | 29 | 23 | 6 | documentada |
-| [Domain](Labs/DockerLabs_Practices/Domain/README.md) | 35 | 29 | 6 | documentada |
-| [DoubleFlow](Labs/DockerLabs_Practices/DoubleFlow/README.md) | 4 | 3 | 1 | documentada |
-| [DoubleTrouble](Labs/DockerLabs_Practices/DoubleTrouble/README.md) | 3 | 3 | 0 | documentada |
-| [Eclipse](Labs/DockerLabs_Practices/Eclipse/README.md) | 22 | 16 | 6 | documentada |
-| [Ejotapete](Labs/DockerLabs_Practices/Ejotapete/README.md) | 12 | 12 | 0 | 🆕 nueva |
-| [Elevator](Labs/DockerLabs_Practices/Elevator/README.md) | 12 | 11 | 1 | documentada |
-| [Escolares](Labs/DockerLabs_Practices/Escolares/README.md) | 40 | 33 | 7 | documentada |
-| [Express](Labs/DockerLabs_Practices/Express/README.md) | 8 | 8 | 0 | documentada |
-| [Extraviado](Labs/DockerLabs_Practices/Extraviado/README.md) | 20 | 18 | 2 | documentada |
-| [File](Labs/DockerLabs_Practices/File/README.md) | 13 | 13 | 0 | documentada |
-| [Fileception](Labs/DockerLabs_Practices/Fileception/README.md) | 20 | 16 | 4 | documentada |
-| [FindYourStyle](Labs/DockerLabs_Practices/FindYourStyle/README.md) | 18 | 17 | 1 | documentada |
-| [FirstHacking](Labs/DockerLabs_Practices/FirstHacking/README.md) | 87 | 69 | 18 | documentada |
-| [Flow](Labs/DockerLabs_Practices/Flow/README.md) | 8 | 8 | 0 | documentada |
-| [Fooding](Labs/DockerLabs_Practices/Fooding/README.md) | 17 | 15 | 2 | documentada |
-| [ForbiddenHack](Labs/DockerLabs_Practices/ForbiddenHack/README.md) | 5 | 4 | 1 | documentada |
-| [Force](Labs/DockerLabs_Practices/Force/README.md) | 0 | 0 | 0 | documentada |
-| [Forgotten_Portal](Labs/DockerLabs_Practices/Forgotten_Portal/README.md) | 15 | 14 | 1 | documentada |
-| [Gallery](Labs/DockerLabs_Practices/Gallery/README.md) | 7 | 7 | 0 | documentada |
-| [Gitea](Labs/DockerLabs_Practices/Gitea/README.md) | 7 | 7 | 0 | documentada |
-| [Grandma](Labs/DockerLabs_Practices/Grandma/README.md) | 4 | 4 | 0 | documentada |
-| [Grooti](Labs/DockerLabs_Practices/Grooti/README.md) | 14 | 12 | 2 | 🆕 nueva |
-| [HackMeDaddy](Labs/DockerLabs_Practices/HackMeDaddy/README.md) | 7 | 7 | 0 | documentada |
-| [HackPenguin](Labs/DockerLabs_Practices/HackPenguin/README.md) | 23 | 18 | 5 | documentada |
-| [HackTheHeaven](Labs/DockerLabs_Practices/HackTheHeaven/README.md) | 9 | 5 | 4 | documentada |
-| [HackZones](Labs/DockerLabs_Practices/HackZones/README.md) | 14 | 12 | 2 | documentada |
-| [HedgeHog](Labs/DockerLabs_Practices/HedgeHog/README.md) | 39 | 31 | 8 | documentada |
-| [HereBash](Labs/DockerLabs_Practices/HereBash/README.md) | 16 | 13 | 3 | documentada |
-| [Hidden](Labs/DockerLabs_Practices/Hidden/README.md) | 20 | 19 | 1 | documentada |
-| [HiddenCat](Labs/DockerLabs_Practices/HiddenCat/README.md) | 29 | 25 | 4 | documentada |
-| [Inclusion](Labs/DockerLabs_Practices/Inclusion/README.md) | 25 | 24 | 1 | documentada |
-| [InfluencerHate](Labs/DockerLabs_Practices/InfluencerHate/README.md) | 5 | 5 | 0 | 🆕 nueva |
-| [Inj3ct0rss](Labs/DockerLabs_Practices/Inj3ct0rss/README.md) | 15 | 13 | 2 | documentada |
-| [Injection](Labs/DockerLabs_Practices/Injection/README.md) | 98 | 83 | 15 | documentada |
-| [Insanity](Labs/DockerLabs_Practices/Insanity/README.md) | 6 | 6 | 0 | documentada |
-| [Insecure](Labs/DockerLabs_Practices/Insecure/README.md) | 5 | 4 | 1 | documentada |
-| [Internship](Labs/DockerLabs_Practices/Internship/README.md) | 13 | 10 | 3 | documentada |
-| [JenkHack](Labs/DockerLabs_Practices/JenkHack/README.md) | 18 | 16 | 2 | documentada |
-| [Lfi.elf](Labs/DockerLabs_Practices/Lfi.elf/README.md) | 7 | 6 | 1 | documentada |
-| [Library](Labs/DockerLabs_Practices/Library/README.md) | 43 | 36 | 7 | documentada |
-| [Lifeordead](Labs/DockerLabs_Practices/Lifeordead/README.md) | 7 | 7 | 0 | documentada |
-| [LittlePivoting](Labs/DockerLabs_Practices/LittlePivoting/README.md) | 17 | 14 | 3 | documentada |
-| [LogisticCloud](Labs/DockerLabs_Practices/LogisticCloud/README.md) | 4 | 4 | 0 | documentada |
-| [Los 40 Ladrones](Labs/DockerLabs_Practices/Los 40 Ladrones/README.md) | 33 | 27 | 6 | documentada |
-| [MachuPicchu](Labs/DockerLabs_Practices/MachuPicchu/README.md) | 5 | 5 | 0 | documentada |
-| [Mapache2](Labs/DockerLabs_Practices/Mapache2/README.md) | 8 | 7 | 1 | documentada |
-| [Master](Labs/DockerLabs_Practices/Master/README.md) | 17 | 13 | 4 | documentada |
-| [Memesploit](Labs/DockerLabs_Practices/Memesploit/README.md) | 11 | 9 | 2 | documentada |
-| [Minecraft](Labs/DockerLabs_Practices/Minecraft/README.md) | 4 | 4 | 0 | documentada |
-| [Mirame](Labs/DockerLabs_Practices/Mirame/README.md) | 24 | 19 | 5 | documentada |
-| [Move](Labs/DockerLabs_Practices/Move/README.md) | 40 | 31 | 9 | documentada |
-| [MyBB](Labs/DockerLabs_Practices/MyBB/README.md) | 22 | 19 | 3 | documentada |
-| [NodeClimb](Labs/DockerLabs_Practices/NodeClimb/README.md) | 35 | 29 | 6 | documentada |
-| [NorC](Labs/DockerLabs_Practices/NorC/README.md) | 6 | 6 | 0 | documentada |
-| [Obsession](Labs/DockerLabs_Practices/Obsession/README.md) | 67 | 53 | 14 | documentada |
-| [Ofuskeit](Labs/DockerLabs_Practices/Ofuskeit/README.md) | 5 | 4 | 1 | documentada |
-| [Paradise](Labs/DockerLabs_Practices/Paradise/README.md) | 21 | 18 | 3 | documentada |
-| [Patriaquerida](Labs/DockerLabs_Practices/Patriaquerida/README.md) | 24 | 18 | 6 | documentada |
-| [Pequeñas-Mentirosas](Labs/DockerLabs_Practices/Pequeñas-Mentirosas/README.md) | 30 | 23 | 7 | documentada |
-| [Picadilly](Labs/DockerLabs_Practices/Picadilly/README.md) | 29 | 23 | 6 | documentada |
-| [PingCTF](Labs/DockerLabs_Practices/PingCTF/README.md) | 13 | 11 | 2 | 🆕 nueva |
-| [PingPong](Labs/DockerLabs_Practices/PingPong/README.md) | 20 | 18 | 2 | documentada |
-| [Pinguinazo](Labs/DockerLabs_Practices/Pinguinazo/README.md) | 31 | 26 | 5 | documentada |
-| [PkgPoison](Labs/DockerLabs_Practices/PkgPoison/README.md) | 9 | 8 | 1 | documentada |
-| [Pntopntobarra](Labs/DockerLabs_Practices/Pntopntobarra/README.md) | 23 | 19 | 4 | documentada |
-| [Predictable](Labs/DockerLabs_Practices/Predictable/README.md) | 8 | 7 | 1 | documentada |
-| [Pressenter](Labs/DockerLabs_Practices/Pressenter/README.md) | 18 | 17 | 1 | documentada |
-| [Psycho](Labs/DockerLabs_Practices/Psycho/README.md) | 46 | 36 | 10 | documentada |
-| [PyRed](Labs/DockerLabs_Practices/PyRed/README.md) | 25 | 21 | 4 | documentada |
-| [Queuemedic](Labs/DockerLabs_Practices/Queuemedic/README.md) | 9 | 8 | 1 | documentada |
-| [Raas](Labs/DockerLabs_Practices/Raas/README.md) | 5 | 5 | 0 | documentada |
-| [Redirection](Labs/DockerLabs_Practices/Redirection/README.md) | 6 | 5 | 1 | documentada |
-| [Reflection](Labs/DockerLabs_Practices/Reflection/README.md) | 16 | 13 | 3 | documentada |
-| [Report](Labs/DockerLabs_Practices/Report/README.md) | 13 | 13 | 0 | documentada |
-| [Reverse](Labs/DockerLabs_Practices/Reverse/README.md) | 11 | 11 | 0 | documentada |
-| [Road to Olympus](Labs/DockerLabs_Practices/Road to Olympus/README.md) | 2 | 2 | 0 | documentada |
-| [Rubiks](Labs/DockerLabs_Practices/Rubiks/README.md) | 12 | 11 | 1 | documentada |
-| [Rutas](Labs/DockerLabs_Practices/Rutas/README.md) | 9 | 8 | 1 | documentada |
-| [SecretJenkins](Labs/DockerLabs_Practices/SecretJenkins/README.md) | 30 | 26 | 4 | documentada |
-| [Seeker](Labs/DockerLabs_Practices/Seeker/README.md) | 8 | 8 | 0 | documentada |
-| [Sender](Labs/DockerLabs_Practices/Sender/README.md) | 3 | 3 | 0 | documentada |
-| [ShowTime](Labs/DockerLabs_Practices/ShowTime/README.md) | 26 | 20 | 6 | documentada |
-| [Sites](Labs/DockerLabs_Practices/Sites/README.md) | 17 | 14 | 3 | documentada |
-| [SkullNet](Labs/DockerLabs_Practices/SkullNet/README.md) | 11 | 8 | 3 | documentada |
-| [Smashing](Labs/DockerLabs_Practices/Smashing/README.md) | 3 | 3 | 0 | documentada |
-| [Spain](Labs/DockerLabs_Practices/Spain/README.md) | 7 | 7 | 0 | documentada |
-| [SpiderRoot](Labs/DockerLabs_Practices/SpiderRoot/README.md) | 6 | 6 | 0 | 🆕 nueva |
-| [Stack](Labs/DockerLabs_Practices/Stack/README.md) | 9 | 9 | 0 | documentada |
-| [StackInferno](Labs/DockerLabs_Practices/StackInferno/README.md) | 4 | 4 | 0 | documentada |
-| [Status](Labs/DockerLabs_Practices/Status/README.md) | 3 | 3 | 0 | documentada |
-| [Stellarjwt](Labs/DockerLabs_Practices/Stellarjwt/README.md) | 14 | 11 | 3 | documentada |
-| [Stranger](Labs/DockerLabs_Practices/Stranger/README.md) | 21 | 18 | 3 | documentada |
-| [StrongJenkins](Labs/DockerLabs_Practices/StrongJenkins/README.md) | 16 | 12 | 4 | documentada |
-| [Subversion](Labs/DockerLabs_Practices/Subversion/README.md) | 4 | 4 | 0 | documentada |
-| [SummerVibes](Labs/DockerLabs_Practices/SummerVibes/README.md) | 21 | 17 | 4 | documentada |
-| [Swiss](Labs/DockerLabs_Practices/Swiss/README.md) | 10 | 9 | 1 | documentada |
-| [TheDog](Labs/DockerLabs_Practices/TheDog/README.md) | 10 | 8 | 2 | documentada |
-| [Tproot](Labs/DockerLabs_Practices/Tproot/README.md) | 30 | 28 | 2 | documentada |
-| [Trust](Labs/DockerLabs_Practices/Trust/README.md) | 116 | 90 | 26 | documentada |
-| [Unrecover](Labs/DockerLabs_Practices/Unrecover/README.md) | 10 | 8 | 2 | documentada |
-| [Upload](Labs/DockerLabs_Practices/Upload/README.md) | 75 | 60 | 15 | documentada |
-| [UserSearch](Labs/DockerLabs_Practices/UserSearch/README.md) | 19 | 16 | 3 | documentada |
-| [Vacaciones](Labs/DockerLabs_Practices/Vacaciones/README.md) | 85 | 66 | 19 | documentada |
-| [Vendetta](Labs/DockerLabs_Practices/Vendetta/README.md) | 6 | 5 | 1 | documentada |
-| [Veneno](Labs/DockerLabs_Practices/Veneno/README.md) | 16 | 15 | 1 | documentada |
-| [Verdejo](Labs/DockerLabs_Practices/Verdejo/README.md) | 29 | 25 | 4 | documentada |
-| [Vulnerame](Labs/DockerLabs_Practices/Vulnerame/README.md) | 11 | 8 | 3 | documentada |
-| [Vulnvault](Labs/DockerLabs_Practices/Vulnvault/README.md) | 23 | 21 | 2 | documentada |
-| [Waffy](Labs/DockerLabs_Practices/Waffy/README.md) | 4 | 4 | 0 | 🆕 nueva |
-| [Walking Dead](Labs/DockerLabs_Practices/Walking Dead/README.md) | 13 | 11 | 2 | documentada |
-| [WalkingCMS](Labs/DockerLabs_Practices/WalkingCMS/README.md) | 46 | 37 | 9 | documentada |
-| [Wallet](Labs/DockerLabs_Practices/Wallet/README.md) | 21 | 18 | 3 | documentada |
-| [WhereIsMyWebShell](Labs/DockerLabs_Practices/WhereIsMyWebShell/README.md) | 41 | 33 | 8 | documentada |
-| [Whoiam](Labs/DockerLabs_Practices/Whoiam/README.md) | 21 | 17 | 4 | documentada |
-| [WinFake](Labs/DockerLabs_Practices/WinFake/README.md) | 1 | 1 | 0 | 🆕 nueva |
-| [Winterfell](Labs/DockerLabs_Practices/Winterfell/README.md) | 20 | 16 | 4 | documentada |
-| [chmod-4755](Labs/DockerLabs_Practices/chmod-4755/README.md) | 8 | 7 | 1 | documentada |
-| [cineHack](Labs/DockerLabs_Practices/cineHack/README.md) | 10 | 8 | 2 | documentada |
-| [galeria](Labs/DockerLabs_Practices/galeria/README.md) | 11 | 8 | 3 | documentada |
-| [r00tless](Labs/DockerLabs_Practices/r00tless/README.md) | 9 | 8 | 1 | documentada |
-| [secureLAB](Labs/DockerLabs_Practices/secureLAB/README.md) | 2 | 1 | 1 | documentada |
-| [sjd](Labs/DockerLabs_Practices/sjd/README.md) | 14 | 11 | 3 | documentada |
-| [yjhjg](Labs/DockerLabs_Practices/yjhjg/README.md) | 0 | 0 | 0 | documentada |
+| Máquina / Machine | Dificultad / Difficulty | Refs | 📝 | 🎥 | Estado |
+|---|---|---|---|---|---|
+| [BorazuwarahCTF](Labs/DockerLabs_Practices/muyfacil_BorazuwarahCTF/README.md) | Muy Fácil | 74 | 55 | 19 | · |
+| [BreakMySSH](Labs/DockerLabs_Practices/muyfacil_BreakMySSH/README.md) | Muy Fácil | 85 | 70 | 15 | · |
+| [FirstHacking](Labs/DockerLabs_Practices/muyfacil_FirstHacking/README.md) | Muy Fácil | 87 | 69 | 18 | · |
+| [HedgeHog](Labs/DockerLabs_Practices/muyfacil_HedgeHog/README.md) | Muy Fácil | 39 | 31 | 8 | · |
+| [Obsession](Labs/DockerLabs_Practices/muyfacil_Obsession/README.md) | Muy Fácil | 67 | 53 | 14 | · |
+| [Tproot](Labs/DockerLabs_Practices/muyfacil_Tproot/README.md) | Muy Fácil | 30 | 28 | 2 | · |
+| [Trust](Labs/DockerLabs_Practices/muyfacil_Trust/README.md) | Muy Fácil | 116 | 90 | 26 | · |
+| [Vacaciones](Labs/DockerLabs_Practices/muyfacil_Vacaciones/README.md) | Muy Fácil | 85 | 66 | 19 | · |
+| [-Pn](Labs/DockerLabs_Practices/facil_-Pn/README.md) | Fácil | 32 | 27 | 5 | · |
+| [AguaDeMayo](Labs/DockerLabs_Practices/facil_AguaDeMayo/README.md) | Fácil | 48 | 44 | 4 | · |
+| [Allien](Labs/DockerLabs_Practices/facil_Allien/README.md) | Fácil | 21 | 19 | 2 | · |
+| [Amor](Labs/DockerLabs_Practices/facil_Amor/README.md) | Fácil | 69 | 62 | 7 | · |
+| [AnonymousPingu](Labs/DockerLabs_Practices/facil_AnonymousPingu/README.md) | Fácil | 45 | 38 | 7 | · |
+| [ApiBase](Labs/DockerLabs_Practices/facil_ApiBase/README.md) | Fácil | 11 | 10 | 1 | · |
+| [Backend](Labs/DockerLabs_Practices/facil_Backend/README.md) | Fácil | 20 | 18 | 2 | · |
+| [BaluFood](Labs/DockerLabs_Practices/facil_BaluFood/README.md) | Fácil | 16 | 13 | 3 | · |
+| [Balulero](Labs/DockerLabs_Practices/facil_Balulero/README.md) | Fácil | 19 | 17 | 2 | · |
+| [Bicho](Labs/DockerLabs_Practices/facil_Bicho/README.md) | Fácil | 7 | 7 | 0 | · |
+| [BuscaLove](Labs/DockerLabs_Practices/facil_BuscaLove/README.md) | Fácil | 27 | 21 | 6 | · |
+| [Bypassme](Labs/DockerLabs_Practices/facil_Bypassme/README.md) | Fácil | 6 | 6 | 0 | · |
+| [Candy](Labs/DockerLabs_Practices/facil_Candy/README.md) | Fácil | 24 | 19 | 5 | · |
+| [ChocolateLovers](Labs/DockerLabs_Practices/facil_ChocolateLovers/README.md) | Fácil | 38 | 34 | 4 | · |
+| [ConsoleLog](Labs/DockerLabs_Practices/facil_ConsoleLog/README.md) | Fácil | 29 | 25 | 4 | · |
+| [DockerLabs](Labs/DockerLabs_Practices/facil_DockerLabs/README.md) | Fácil | 29 | 23 | 6 | · |
+| [Ejotapete](Labs/DockerLabs_Practices/facil_Ejotapete/README.md) | Fácil | 12 | 12 | 0 | 🆕 |
+| [Elevator](Labs/DockerLabs_Practices/facil_Elevator/README.md) | Fácil | 12 | 11 | 1 | · |
+| [Escolares](Labs/DockerLabs_Practices/facil_Escolares/README.md) | Fácil | 40 | 33 | 7 | · |
+| [Extraviado](Labs/DockerLabs_Practices/facil_Extraviado/README.md) | Fácil | 20 | 18 | 2 | · |
+| [File](Labs/DockerLabs_Practices/facil_File/README.md) | Fácil | 13 | 13 | 0 | · |
+| [FindYourStyle](Labs/DockerLabs_Practices/facil_FindYourStyle/README.md) | Fácil | 18 | 17 | 1 | · |
+| [ForbiddenHack](Labs/DockerLabs_Practices/facil_ForbiddenHack/README.md) | Fácil | 5 | 4 | 1 | · |
+| [galeria](Labs/DockerLabs_Practices/facil_galeria/README.md) | Fácil | 11 | 8 | 3 | · |
+| [Grooti](Labs/DockerLabs_Practices/facil_Grooti/README.md) | Fácil | 14 | 12 | 2 | 🆕 |
+| [HiddenCat](Labs/DockerLabs_Practices/facil_HiddenCat/README.md) | Fácil | 29 | 25 | 4 | · |
+| [InfluencerHate](Labs/DockerLabs_Practices/facil_InfluencerHate/README.md) | Fácil | 5 | 5 | 0 | 🆕 |
+| [Injection](Labs/DockerLabs_Practices/facil_Injection/README.md) | Fácil | 98 | 83 | 15 | · |
+| [Internship](Labs/DockerLabs_Practices/facil_Internship/README.md) | Fácil | 13 | 10 | 3 | · |
+| [JenkHack](Labs/DockerLabs_Practices/facil_JenkHack/README.md) | Fácil | 18 | 16 | 2 | · |
+| [Library](Labs/DockerLabs_Practices/facil_Library/README.md) | Fácil | 43 | 36 | 7 | · |
+| [Los 40 Ladrones](Labs/DockerLabs_Practices/facil_Los 40 Ladrones/README.md) | Fácil | 33 | 27 | 6 | · |
+| [Mirame](Labs/DockerLabs_Practices/facil_Mirame/README.md) | Fácil | 24 | 19 | 5 | · |
+| [Move](Labs/DockerLabs_Practices/facil_Move/README.md) | Fácil | 40 | 31 | 9 | · |
+| [NodeClimb](Labs/DockerLabs_Practices/facil_NodeClimb/README.md) | Fácil | 35 | 29 | 6 | · |
+| [Paradise](Labs/DockerLabs_Practices/facil_Paradise/README.md) | Fácil | 21 | 18 | 3 | · |
+| [Patriaquerida](Labs/DockerLabs_Practices/facil_Patriaquerida/README.md) | Fácil | 24 | 18 | 6 | · |
+| [Pequeñas-Mentirosas](Labs/DockerLabs_Practices/facil_Pequeñas-Mentirosas/README.md) | Fácil | 30 | 23 | 7 | · |
+| [Picadilly](Labs/DockerLabs_Practices/facil_Picadilly/README.md) | Fácil | 29 | 23 | 6 | · |
+| [PingCTF](Labs/DockerLabs_Practices/facil_PingCTF/README.md) | Fácil | 13 | 11 | 2 | 🆕 |
+| [Pinguinazo](Labs/DockerLabs_Practices/facil_Pinguinazo/README.md) | Fácil | 31 | 26 | 5 | · |
+| [PkgPoison](Labs/DockerLabs_Practices/facil_PkgPoison/README.md) | Fácil | 9 | 8 | 1 | · |
+| [Pntopntobarra](Labs/DockerLabs_Practices/facil_Pntopntobarra/README.md) | Fácil | 23 | 19 | 4 | · |
+| [Pressenter](Labs/DockerLabs_Practices/facil_Pressenter/README.md) | Fácil | 18 | 17 | 1 | · |
+| [Psycho](Labs/DockerLabs_Practices/facil_Psycho/README.md) | Fácil | 46 | 36 | 10 | · |
+| [Redirection](Labs/DockerLabs_Practices/facil_Redirection/README.md) | Fácil | 6 | 5 | 1 | · |
+| [Reflection](Labs/DockerLabs_Practices/facil_Reflection/README.md) | Fácil | 16 | 13 | 3 | · |
+| [SecretJenkins](Labs/DockerLabs_Practices/facil_SecretJenkins/README.md) | Fácil | 30 | 26 | 4 | · |
+| [ShowTime](Labs/DockerLabs_Practices/facil_ShowTime/README.md) | Fácil | 26 | 20 | 6 | · |
+| [Stellarjwt](Labs/DockerLabs_Practices/facil_Stellarjwt/README.md) | Fácil | 14 | 11 | 3 | · |
+| [Upload](Labs/DockerLabs_Practices/facil_Upload/README.md) | Fácil | 75 | 60 | 15 | · |
+| [Verdejo](Labs/DockerLabs_Practices/facil_Verdejo/README.md) | Fácil | 29 | 25 | 4 | · |
+| [Vulnvault](Labs/DockerLabs_Practices/facil_Vulnvault/README.md) | Fácil | 23 | 21 | 2 | · |
+| [Walking Dead](Labs/DockerLabs_Practices/facil_Walking Dead/README.md) | Fácil | 13 | 11 | 2 | · |
+| [WalkingCMS](Labs/DockerLabs_Practices/facil_WalkingCMS/README.md) | Fácil | 46 | 37 | 9 | · |
+| [WhereIsMyWebShell](Labs/DockerLabs_Practices/facil_WhereIsMyWebShell/README.md) | Fácil | 41 | 33 | 8 | · |
+| [Whoiam](Labs/DockerLabs_Practices/facil_Whoiam/README.md) | Fácil | 21 | 17 | 4 | · |
+| [WinFake](Labs/DockerLabs_Practices/facil_WinFake/README.md) | Fácil | 1 | 1 | 0 | 🆕 |
+| [Winterfell](Labs/DockerLabs_Practices/facil_Winterfell/README.md) | Fácil | 20 | 16 | 4 | · |
+| [0xc0ffee](Labs/DockerLabs_Practices/medio_0xc0ffee/README.md) | Medio | 15 | 14 | 1 | · |
+| [404-not-found](Labs/DockerLabs_Practices/medio_404-not-found/README.md) | Medio | 16 | 14 | 2 | · |
+| [ApacheByte](Labs/DockerLabs_Practices/medio_ApacheByte/README.md) | Medio | 4 | 4 | 0 | · |
+| [ApiRoot](Labs/DockerLabs_Practices/medio_ApiRoot/README.md) | Medio | 10 | 9 | 1 | · |
+| [Apolos](Labs/DockerLabs_Practices/medio_Apolos/README.md) | Medio | 17 | 16 | 1 | · |
+| [Asucar](Labs/DockerLabs_Practices/medio_Asucar/README.md) | Medio | 23 | 21 | 2 | · |
+| [BadPlugin](Labs/DockerLabs_Practices/medio_BadPlugin/README.md) | Medio | 8 | 6 | 2 | · |
+| [Bashpariencias](Labs/DockerLabs_Practices/medio_Bashpariencias/README.md) | Medio | 20 | 18 | 2 | · |
+| [Bola](Labs/DockerLabs_Practices/medio_Bola/README.md) | Medio | 6 | 6 | 0 | · |
+| [BruteShock](Labs/DockerLabs_Practices/medio_BruteShock/README.md) | Medio | 9 | 6 | 3 | · |
+| [Cachopo](Labs/DockerLabs_Practices/medio_Cachopo/README.md) | Medio | 20 | 17 | 3 | · |
+| [ChatMe](Labs/DockerLabs_Practices/medio_ChatMe/README.md) | Medio | 11 | 8 | 3 | · |
+| [chmod-4755](Labs/DockerLabs_Practices/medio_chmod-4755/README.md) | Medio | 8 | 7 | 1 | · |
+| [ChocolateFire](Labs/DockerLabs_Practices/medio_ChocolateFire/README.md) | Medio | 25 | 19 | 6 | · |
+| [ChocoPing](Labs/DockerLabs_Practices/medio_ChocoPing/README.md) | Medio | 11 | 7 | 4 | · |
+| [Ciberguard](Labs/DockerLabs_Practices/medio_Ciberguard/README.md) | Medio | 6 | 6 | 0 | · |
+| [cineHack](Labs/DockerLabs_Practices/medio_cineHack/README.md) | Medio | 10 | 8 | 2 | · |
+| [Collections](Labs/DockerLabs_Practices/medio_Collections/README.md) | Medio | 19 | 17 | 2 | · |
+| [Cracker](Labs/DockerLabs_Practices/medio_Cracker/README.md) | Medio | 9 | 8 | 1 | · |
+| [Crystalteam](Labs/DockerLabs_Practices/medio_Crystalteam/README.md) | Medio | 5 | 5 | 0 | · |
+| [Dance-Samba](Labs/DockerLabs_Practices/medio_Dance-Samba/README.md) | Medio | 24 | 20 | 4 | · |
+| [Dark](Labs/DockerLabs_Practices/medio_Dark/README.md) | Medio | 16 | 14 | 2 | · |
+| [Database](Labs/DockerLabs_Practices/medio_Database/README.md) | Medio | 26 | 22 | 4 | · |
+| [Devil](Labs/DockerLabs_Practices/medio_Devil/README.md) | Medio | 7 | 7 | 0 | · |
+| [DevTools](Labs/DockerLabs_Practices/medio_DevTools/README.md) | Medio | 14 | 13 | 1 | · |
+| [DockHackLab](Labs/DockerLabs_Practices/medio_DockHackLab/README.md) | Medio | 15 | 13 | 2 | · |
+| [Domain](Labs/DockerLabs_Practices/medio_Domain/README.md) | Medio | 35 | 29 | 6 | · |
+| [Eclipse](Labs/DockerLabs_Practices/medio_Eclipse/README.md) | Medio | 22 | 16 | 6 | · |
+| [Express](Labs/DockerLabs_Practices/medio_Express/README.md) | Medio | 8 | 8 | 0 | · |
+| [Fileception](Labs/DockerLabs_Practices/medio_Fileception/README.md) | Medio | 20 | 16 | 4 | · |
+| [Fooding](Labs/DockerLabs_Practices/medio_Fooding/README.md) | Medio | 17 | 15 | 2 | · |
+| [Forgotten_Portal](Labs/DockerLabs_Practices/medio_Forgotten_Portal/README.md) | Medio | 15 | 14 | 1 | · |
+| [Gitea](Labs/DockerLabs_Practices/medio_Gitea/README.md) | Medio | 7 | 7 | 0 | · |
+| [HackPenguin](Labs/DockerLabs_Practices/medio_HackPenguin/README.md) | Medio | 23 | 18 | 5 | · |
+| [HackZones](Labs/DockerLabs_Practices/medio_HackZones/README.md) | Medio | 14 | 12 | 2 | · |
+| [HereBash](Labs/DockerLabs_Practices/medio_HereBash/README.md) | Medio | 16 | 13 | 3 | · |
+| [Hidden](Labs/DockerLabs_Practices/medio_Hidden/README.md) | Medio | 20 | 19 | 1 | · |
+| [Inclusion](Labs/DockerLabs_Practices/medio_Inclusion/README.md) | Medio | 25 | 24 | 1 | · |
+| [Inj3ct0rss](Labs/DockerLabs_Practices/medio_Inj3ct0rss/README.md) | Medio | 15 | 13 | 2 | · |
+| [LittlePivoting](Labs/DockerLabs_Practices/medio_LittlePivoting/README.md) | Medio | 17 | 14 | 3 | · |
+| [LogisticCloud](Labs/DockerLabs_Practices/medio_LogisticCloud/README.md) | Medio | 4 | 4 | 0 | · |
+| [MachuPicchu](Labs/DockerLabs_Practices/medio_MachuPicchu/README.md) | Medio | 5 | 5 | 0 | · |
+| [Mapache2](Labs/DockerLabs_Practices/medio_Mapache2/README.md) | Medio | 8 | 7 | 1 | · |
+| [Master](Labs/DockerLabs_Practices/medio_Master/README.md) | Medio | 17 | 13 | 4 | · |
+| [Memesploit](Labs/DockerLabs_Practices/medio_Memesploit/README.md) | Medio | 11 | 9 | 2 | · |
+| [MyBB](Labs/DockerLabs_Practices/medio_MyBB/README.md) | Medio | 22 | 19 | 3 | · |
+| [Ofuskeit](Labs/DockerLabs_Practices/medio_Ofuskeit/README.md) | Medio | 5 | 4 | 1 | · |
+| [PingPong](Labs/DockerLabs_Practices/medio_PingPong/README.md) | Medio | 20 | 18 | 2 | · |
+| [PyRed](Labs/DockerLabs_Practices/medio_PyRed/README.md) | Medio | 25 | 21 | 4 | · |
+| [Report](Labs/DockerLabs_Practices/medio_Report/README.md) | Medio | 13 | 13 | 0 | · |
+| [Reverse](Labs/DockerLabs_Practices/medio_Reverse/README.md) | Medio | 11 | 11 | 0 | · |
+| [Rubiks](Labs/DockerLabs_Practices/medio_Rubiks/README.md) | Medio | 12 | 11 | 1 | · |
+| [Rutas](Labs/DockerLabs_Practices/medio_Rutas/README.md) | Medio | 9 | 8 | 1 | · |
+| [Seeker](Labs/DockerLabs_Practices/medio_Seeker/README.md) | Medio | 8 | 8 | 0 | · |
+| [Sites](Labs/DockerLabs_Practices/medio_Sites/README.md) | Medio | 17 | 14 | 3 | · |
+| [SpiderRoot](Labs/DockerLabs_Practices/medio_SpiderRoot/README.md) | Medio | 6 | 6 | 0 | 🆕 |
+| [Stack](Labs/DockerLabs_Practices/medio_Stack/README.md) | Medio | 9 | 9 | 0 | · |
+| [StackInferno](Labs/DockerLabs_Practices/medio_StackInferno/README.md) | Medio | 4 | 4 | 0 | · |
+| [Status](Labs/DockerLabs_Practices/medio_Status/README.md) | Medio | 3 | 3 | 0 | · |
+| [Stranger](Labs/DockerLabs_Practices/medio_Stranger/README.md) | Medio | 21 | 18 | 3 | · |
+| [StrongJenkins](Labs/DockerLabs_Practices/medio_StrongJenkins/README.md) | Medio | 16 | 12 | 4 | · |
+| [Swiss](Labs/DockerLabs_Practices/medio_Swiss/README.md) | Medio | 10 | 9 | 1 | · |
+| [TheDog](Labs/DockerLabs_Practices/medio_TheDog/README.md) | Medio | 10 | 8 | 2 | · |
+| [Unrecover](Labs/DockerLabs_Practices/medio_Unrecover/README.md) | Medio | 10 | 8 | 2 | · |
+| [UserSearch](Labs/DockerLabs_Practices/medio_UserSearch/README.md) | Medio | 19 | 16 | 3 | · |
+| [Veneno](Labs/DockerLabs_Practices/medio_Veneno/README.md) | Medio | 16 | 15 | 1 | · |
+| [Wallet](Labs/DockerLabs_Practices/medio_Wallet/README.md) | Medio | 21 | 18 | 3 | · |
+| [BigPivoting](Labs/DockerLabs_Practices/dificil_BigPivoting/README.md) | Difícil | 6 | 5 | 1 | · |
+| [Buffered](Labs/DockerLabs_Practices/dificil_Buffered/README.md) | Difícil | 4 | 3 | 1 | · |
+| [Canario](Labs/DockerLabs_Practices/dificil_Canario/README.md) | Difícil | 2 | 2 | 0 | · |
+| [Crackoff](Labs/DockerLabs_Practices/dificil_Crackoff/README.md) | Difícil | 6 | 6 | 0 | · |
+| [Darkweb](Labs/DockerLabs_Practices/dificil_Darkweb/README.md) | Difícil | 13 | 10 | 3 | · |
+| [DebugMe](Labs/DockerLabs_Practices/dificil_DebugMe/README.md) | Difícil | 12 | 9 | 3 | · |
+| [DoubleFlow](Labs/DockerLabs_Practices/dificil_DoubleFlow/README.md) | Difícil | 4 | 3 | 1 | · |
+| [DoubleTrouble](Labs/DockerLabs_Practices/dificil_DoubleTrouble/README.md) | Difícil | 3 | 3 | 0 | · |
+| [Flow](Labs/DockerLabs_Practices/dificil_Flow/README.md) | Difícil | 8 | 8 | 0 | · |
+| [Force](Labs/DockerLabs_Practices/dificil_Force/README.md) | Difícil | 0 | 0 | 0 | · |
+| [Gallery](Labs/DockerLabs_Practices/dificil_Gallery/README.md) | Difícil | 7 | 7 | 0 | · |
+| [Grandma](Labs/DockerLabs_Practices/dificil_Grandma/README.md) | Difícil | 4 | 4 | 0 | · |
+| [HackMeDaddy](Labs/DockerLabs_Practices/dificil_HackMeDaddy/README.md) | Difícil | 7 | 7 | 0 | · |
+| [HackTheHeaven](Labs/DockerLabs_Practices/dificil_HackTheHeaven/README.md) | Difícil | 9 | 5 | 4 | · |
+| [Insanity](Labs/DockerLabs_Practices/dificil_Insanity/README.md) | Difícil | 6 | 6 | 0 | · |
+| [Insecure](Labs/DockerLabs_Practices/dificil_Insecure/README.md) | Difícil | 5 | 4 | 1 | · |
+| [Lfi.elf](Labs/DockerLabs_Practices/dificil_Lfi.elf/README.md) | Difícil | 7 | 6 | 1 | · |
+| [Lifeordead](Labs/DockerLabs_Practices/dificil_Lifeordead/README.md) | Difícil | 7 | 7 | 0 | · |
+| [Minecraft](Labs/DockerLabs_Practices/dificil_Minecraft/README.md) | Difícil | 4 | 4 | 0 | · |
+| [NorC](Labs/DockerLabs_Practices/dificil_NorC/README.md) | Difícil | 6 | 6 | 0 | · |
+| [Predictable](Labs/DockerLabs_Practices/dificil_Predictable/README.md) | Difícil | 8 | 7 | 1 | · |
+| [Queuemedic](Labs/DockerLabs_Practices/dificil_Queuemedic/README.md) | Difícil | 9 | 8 | 1 | · |
+| [r00tless](Labs/DockerLabs_Practices/dificil_r00tless/README.md) | Difícil | 9 | 8 | 1 | · |
+| [Raas](Labs/DockerLabs_Practices/dificil_Raas/README.md) | Difícil | 5 | 5 | 0 | · |
+| [Road to Olympus](Labs/DockerLabs_Practices/dificil_Road to Olympus/README.md) | Difícil | 2 | 2 | 0 | · |
+| [secureLAB](Labs/DockerLabs_Practices/dificil_secureLAB/README.md) | Difícil | 2 | 1 | 1 | · |
+| [Sender](Labs/DockerLabs_Practices/dificil_Sender/README.md) | Difícil | 3 | 3 | 0 | · |
+| [SkullNet](Labs/DockerLabs_Practices/dificil_SkullNet/README.md) | Difícil | 11 | 8 | 3 | · |
+| [Smashing](Labs/DockerLabs_Practices/dificil_Smashing/README.md) | Difícil | 3 | 3 | 0 | · |
+| [Spain](Labs/DockerLabs_Practices/dificil_Spain/README.md) | Difícil | 7 | 7 | 0 | · |
+| [Subversion](Labs/DockerLabs_Practices/dificil_Subversion/README.md) | Difícil | 4 | 4 | 0 | · |
+| [SummerVibes](Labs/DockerLabs_Practices/dificil_SummerVibes/README.md) | Difícil | 21 | 17 | 4 | · |
+| [Vulnerame](Labs/DockerLabs_Practices/dificil_Vulnerame/README.md) | Difícil | 11 | 8 | 3 | · |
+| [Waffy](Labs/DockerLabs_Practices/dificil_Waffy/README.md) | Difícil | 4 | 4 | 0 | 🆕 |
+| [Corruptress](Labs/DockerLabs_Practices/sindato_Corruptress/README.md) | Sin dato | 3 | 3 | 0 | · |
+| [sjd](Labs/DockerLabs_Practices/sindato_sjd/README.md) | Sin dato | 14 | 11 | 3 | · |
+| [Vendetta](Labs/DockerLabs_Practices/sindato_Vendetta/README.md) | Sin dato | 6 | 5 | 1 | · |
+| [yjhjg](Labs/DockerLabs_Practices/sindato_yjhjg/README.md) | Sin dato | 0 | 0 | 0 | · |

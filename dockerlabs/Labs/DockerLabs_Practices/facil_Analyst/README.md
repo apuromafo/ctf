@@ -4,7 +4,7 @@
 > **EN:** Pending sheet. Machine listed on dockerlabs.es with no references in local indexes.
 
 **Dificultad oficial / Official difficulty:** Fácil
-**Referencias:** 0 (sin writeups indexados)
+**Referencias:** 6 API + 0 previas
 
 ## Metodología propia / Own methodology
 
@@ -27,4 +27,13 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 
 ## Anexos — Referencias de terceros / Annexes — Third-party references
 
-_(Sin referencias indexadas. Añadir al documentar.)_
+_Fuente API oficial dockerlabs.es (6 writeups) + 0 de índices previos._
+
+| # | ID | Autor / Author | Tipo | Fecha / Date | Enlace / Link |
+|---|---|---|---|---|---|
+| 1 | 5249 | El Pingüino de Mario | 📝 | 2026-09-30 | https://github.com/Maalfer/writeups-ctf/blob/main/M%C3%81QUINA%20ANALYST.pdf |
+| 2 | 5251 | bapee | 📝 | 2026-09-30 | https://github.com/bapee0/CTF-Writeups/blob/master/DockerLabs/Facil/Analyst_Writeup.md |
+| 3 | 5255 | v1nl4nd_ | 📝 | 2026-10-01 | https://v1nl4nd.com/analyst.html |
+| 4 | 5290 | Starlet | 📝 | 2026-10-07 | https://github.com/St4rtl3t/ctf-writeups/tree/main/dockerlabs/analyst |
+| 5 | 5303 | javierbautistadev | 📝 | 2026-10-09 | https://github.com/javierbautistadev/Maquinas-realizadas-Ciberseguridad/blob/main/DockersLabs/Analyst.md |
+| 6 | 5307 | borazuwarah | 📝 | 2026-10-10 | https://seguridad.pabloramirez.es/writeup.php?id=80 |

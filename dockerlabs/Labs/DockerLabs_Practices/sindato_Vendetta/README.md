@@ -5,7 +5,7 @@
 > **ES:** Ficha de laboratorio DockerLabs. Referencias de terceros como anexos; notas propias metodológicas.
 > **EN:** DockerLabs lab sheet. Third-party references as annexes; own methodological notes.
 
-**Referencias:** 6 total · 📝 5 · 🎥 1
+**Referencias:** 5 API + 1 previas
 
 ## Metodología propia / Own methodology
 
@@ -28,13 +28,16 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 
 ## Anexos — Referencias de terceros / Annexes — Third-party references
 
-| # | Autor / Author | Tipo / Type | Enlace / Link |
-|---|----------------|-------------|---------------|
-| 1 | misk0z | 📝 | https://hackwithmisk0z.hashnode.dev/mi-primera-maquina-vulnerable |
-| 2 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/vendetta.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-| 3 | JuanR | 📝 | https://github.com/JuanAntonioRodriguez68/Dockerlabs/blob/main/Vendetta.pdf |
-| 4 | 104567 | 🎥 | https://www.bilibili.com/video/BV1ZgwseFEFC/ |
-| 5 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/dockerlabs-writeups/dockerlabs/vendetta-dockerlabs-easy |
-| 6 | Shinkirou | 📝 | https://boletuss-organization.gitbook.io/dw/write-ups/quickstart/maquinas-faciles/vendetta-write-up |
+_Fuente API oficial dockerlabs.es (5 writeups) + 1 de índices previos._
 
-> **Nota:** los enlaces de terceros se citan como anexos. Fecha de índice: 2026-10-12.
+| # | ID | Autor / Author | Tipo | Fecha / Date | Enlace / Link |
+|---|---|---|---|---|---|
+| 1 | 2726 | misk0z | 📝 | 2025-11-20 | https://hackwithmisk0z.hashnode.dev/mi-primera-maquina-vulnerable |
+| 2 | 2728 | JuanR | 📝 | 2025-11-20 | https://github.com/JuanAntonioRodriguez68/Dockerlabs/blob/main/Vendetta.pdf |
+| 3 | 2729 | 104567 | 🎥 | 2025-11-20 | https://www.bilibili.com/video/BV1ZgwseFEFC |
+| 4 | 2730 | d1se0 | 📝 | 2025-11-20 | https://dise0.gitbook.io/h4cker_b00k/dockerlabs-writeups/dockerlabs/vendetta-dockerlabs-easy |
+| 5 | 2731 | Shinkirou | 📝 | 2025-11-20 | https://boletuss-organization.gitbook.io/dw/write-ups/quickstart/maquinas-faciles/vendetta-write-up |
+
+_Índices previos (no en la API actual):_
+
+|  |  | darksblack | 📝 |  | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/vendetta.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |

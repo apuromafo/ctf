@@ -5,7 +5,7 @@
 > **ES:** Ficha de laboratorio DockerLabs. Referencias de terceros como anexos; notas propias metodológicas.
 > **EN:** DockerLabs lab sheet. Third-party references as annexes; own methodological notes.
 
-**Referencias:** 2 total · 📝 2 · 🎥 0
+**Referencias:** 3 API + 2 previas
 
 ## Metodología propia / Own methodology
 
@@ -28,9 +28,15 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 
 ## Anexos — Referencias de terceros / Annexes — Third-party references
 
-| # | Autor / Author | Tipo / Type | Enlace / Link |
-|---|----------------|-------------|---------------|
-| 1 | murrusko | 📝 | https://murrusko.github.io/posts/RoadToOlympus/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-| 2 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/Road%20to%20Olympus ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+_Fuente API oficial dockerlabs.es (3 writeups) + 2 de índices previos._
 
-> **Nota:** los enlaces de terceros se citan como anexos. Fecha de índice: 2026-10-12.
+| # | ID | Autor / Author | Tipo | Fecha / Date | Enlace / Link |
+|---|---|---|---|---|---|
+| 1 | 2409 | nohh022 | 📝 | 2025-11-20 | https://github.com/nohh022/writeups/blob/main/Dockerlabs/Road_to_Olympus/road_to_olympus.md |
+| 2 | 4665 | Punchis | 📝 | 2026-07-14 | https://github.com/Pablogbl/vulnerable-machines/blob/main/dockerlabs/Road%20To%20Olimpus/Road%20To%20Olimpus.md |
+| 3 | 4744 | wo1f | 🎥 | 2026-07-26 | https://furry-harrier-d80.notion.site/REPORT-Road-to-Olympus-3a6eaf26dd9b80ecb963d5b419c8f40b?source=copy_link |
+
+_Índices previos (no en la API actual):_
+
+|  |  | murrusko | 📝 |  | https://murrusko.github.io/posts/RoadToOlympus |
+|  |  | darksblack | 📝 |  | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/Road%20to%20Olympus ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |

@@ -5,7 +5,7 @@
 > **ES:** Ficha de laboratorio DockerLabs. Referencias de terceros como anexos; notas propias metodológicas.
 > **EN:** DockerLabs lab sheet. Third-party references as annexes; own methodological notes.
 
-**Referencias:** 7 total · 📝 7 · 🎥 0
+**Referencias:** 8 API + 2 previas
 
 ## Metodología propia / Own methodology
 
@@ -28,14 +28,20 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 
 ## Anexos — Referencias de terceros / Annexes — Third-party references
 
-| # | Autor / Author | Tipo / Type | Enlace / Link |
-|---|----------------|-------------|---------------|
-| 1 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/ctf/ctfs/ctf-gitea-intermediate |
-| 2 | incommatose | 📝 | https://incommatose.github.io/Gitea-Writeup/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-| 3 | firstatack | 📝 | https://firstatack.github.io/posts/gitea/ |
-| 4 | skopjee | 📝 | https://github.com/sk0pj3e/Dockerlabs/blob/main/Gitea/gitea.md |
-| 5 | incommatose | 📝 | https://incommatose.github.io/Gitea-Dockerlabs-Writeup/ |
-| 6 | Shinkirou | 📝 | https://boletuss-organization.gitbook.io/dw/write-ups/quickstart/maquinas-medio/gitea-write-up |
-| 7 | Alx SG | 📝 | https://github.com/AlxSAGA/Practical-Hacking-Labs/blob/main/01-DockerLabs/03-Media/30-Gitea.md |
+_Fuente API oficial dockerlabs.es (8 writeups) + 2 de índices previos._
 
-> **Nota:** los enlaces de terceros se citan como anexos. Fecha de índice: 2026-10-12.
+| # | ID | Autor / Author | Tipo | Fecha / Date | Enlace / Link |
+|---|---|---|---|---|---|
+| 1 | 3217 | d1se0 | 📝 | 2025-11-20 | https://dise0.gitbook.io/h4cker_b00k/ctf/ctfs/ctf-gitea-intermediate |
+| 2 | 3219 | firstatack | 📝 | 2025-11-20 | https://firstatack.github.io/posts/gitea |
+| 3 | 3220 | skopjee | 📝 | 2025-11-20 | https://github.com/sk0pj3e/Dockerlabs/blob/main/Gitea/gitea.md |
+| 4 | 3221 | incommatose | 📝 | 2025-11-20 | https://incommatosereal.github.io/Gitea-Dockerlabs-Writeup |
+| 5 | 3222 | Shinkirou | 📝 | 2025-11-20 | https://boletuss-organization.gitbook.io/dw/write-ups/quickstart/maquinas-medio/gitea-write-up |
+| 6 | 3223 | Alx SG | 📝 | 2025-11-20 | https://github.com/AlxSAGA/Practical-Hacking-Labs/blob/main/01-DockerLabs/03-Media/30-Gitea.md |
+| 7 | 3435 | Pyth0nK1d | 📝 | 2025-11-22 | https://pyth0nk1d.medium.com/dockerlabs-writeup-gitea-spanish-8ced40326f31 |
+| 8 | 3924 | ElCyberCurioso | 📝 | 2026-02-04 | https://elcybercurioso.github.io/posts/dockerlabs-gitea |
+
+_Índices previos (no en la API actual):_
+
+|  |  | incommatose | 📝 |  | https://incommatose.github.io/Gitea-Writeup |
+|  |  | incommatose | 📝 |  | https://incommatose.github.io/Gitea-Dockerlabs-Writeup |

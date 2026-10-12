@@ -5,7 +5,7 @@
 > **ES:** Ficha de laboratorio DockerLabs. Referencias de terceros como anexos; notas propias metodológicas.
 > **EN:** DockerLabs lab sheet. Third-party references as annexes; own methodological notes.
 
-**Referencias:** 15 total · 📝 14 · 🎥 1
+**Referencias:** 15 API + 3 previas
 
 ## Metodología propia / Own methodology
 
@@ -28,22 +28,28 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 
 ## Anexos — Referencias de terceros / Annexes — Third-party references
 
-| # | Autor / Author | Tipo / Type | Enlace / Link |
-|---|----------------|-------------|---------------|
-| 1 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/0xc0ffee ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-| 2 | Gm4tsy | 📝 | https://gm4tsy.hashnode.dev/dockerlabs-0xc0ffee |
-| 3 | maciiii___ | 📝 | https://github.com/Maciferna/dockerlabs/blob/main/maquina-0xc0ffee/0xc0ffee.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-| 4 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/my-ctfs/ctfs/ctf-0xc0ffee-intermediate |
-| 5 | Th3HackTF | 📝 | https://github.com/GustavoUA/WriteUp/wiki/writeup-0xc0ffee-(Dockerlabs) |
-| 6 | JuanR | 📝 | https://github.com/JuanAntonioRodriguez68/Dockerlabs/blob/main/0xc0ffee.pdf |
-| 7 | miguel0x1985 | 📝 | https://github.com/miguellofredo85/PwnLabs/blob/main/dockerlabs/0xc0ffee.pdf |
-| 8 | Pentester95 | 📝 | https://github.com/dfalla/Hacking---Dockerlabs/blob/0xc0ffee/0xc0ffee.md |
-| 9 | Pentester95 | 📝 | https://github.com/dfalla/Hacking---Dockerlabs/blob/0xc0ffee/0xc0ffee.md |
-| 10 | victorCybsec | 📝 | https://github.com/victorCybsec/PwnVault/blob/main/WRITE%20UPS/DOCKERLABS/MEDIO/0xc0ffee.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-| 11 | XoanOuteiro | 📝 | https://xoanouteiro.dev/posts/es_0xc0ffee_writeup/ |
-| 12 | Shinkirou | 📝 | https://boletuss-organization.gitbook.io/dw/write-ups/quickstart/maquinas-medio/0xc0ffee-write-up |
-| 13 | Alx SG | 🎥 | https://github.com/AlxSAGA/Practical-Hacking-Labs/blob/main/01-DockerLabs/03-Media/14-0xc0ffee.md |
-| 14 | mikisbd | 📝 | https://drive.google.com/file/d/1mJByrLkgGnRQYeZ-bwAiZxeTYlx6VEnV/view?usp=sharing |
-| 15 | Pyth0nK1d | 📝 | https://pyth0nk1d.medium.com/dockerlabs-writeup-0xc0ffee-spanish-daa84fea033f |
+_Fuente API oficial dockerlabs.es (15 writeups) + 3 de índices previos._
 
-> **Nota:** los enlaces de terceros se citan como anexos. Fecha de índice: 2026-10-12.
+| # | ID | Autor / Author | Tipo | Fecha / Date | Enlace / Link |
+|---|---|---|---|---|---|
+| 1 | 2534 | Gm4tsy | 📝 | 2025-11-20 | https://gm4tsy.hashnode.dev/dockerlabs-0xc0ffee |
+| 2 | 2536 | d1se0 | 📝 | 2025-11-20 | https://dise0.gitbook.io/h4cker_b00k/my-ctfs/ctfs/ctf-0xc0ffee-intermediate |
+| 3 | 2537 | Th3HackTF | 📝 | 2025-11-20 | https://github.com/GustavoUA/WriteUp/wiki/writeup-0xc0ffee-(Dockerlabs) |
+| 4 | 2538 | JuanR | 📝 | 2025-11-20 | https://github.com/JuanAntonioRodriguez68/Dockerlabs/blob/main/0xc0ffee.pdf |
+| 5 | 2539 | miguel0x1985 | 📝 | 2025-11-20 | https://github.com/miguellofredo85/PwnLabs/blob/main/dockerlabs/0xc0ffee.pdf |
+| 6 | 2540 | Pentester95 | 📝 | 2025-11-20 | https://github.com/dfalla/Hacking---Dockerlabs/blob/0xc0ffee/0xc0ffee.md |
+| 7 | 2543 | XoanOuteiro | 📝 | 2025-11-20 | https://xoanouteiro.dev/posts/es_0xc0ffee_writeup |
+| 8 | 2544 | Shinkirou | 📝 | 2025-11-20 | https://boletuss-organization.gitbook.io/dw/write-ups/quickstart/maquinas-medio/0xc0ffee-write-up |
+| 9 | 2545 | Alx SG | 🎥 | 2025-11-20 | https://github.com/AlxSAGA/Practical-Hacking-Labs/blob/main/01-DockerLabs/03-Media/14-0xc0ffee.md |
+| 10 | 2546 | mikisbd | 📝 | 2025-11-20 | https://drive.google.com/file/d/1mJByrLkgGnRQYeZ-bwAiZxeTYlx6VEnV/view?usp=sharing |
+| 11 | 2547 | Pyth0nK1d | 📝 | 2025-11-20 | https://pyth0nk1d.medium.com/dockerlabs-writeup-0xc0ffee-spanish-daa84fea033f |
+| 12 | 3695 | Ung4m | 📝 | 2025-12-31 | https://www.notion.so/ung4m/0xc0ffee-2c3c8cbdfd3c80efaab1f0a138ba1027 |
+| 13 | 3792 | ElCyberCurioso | 📝 | 2026-01-13 | https://elcybercurioso.github.io/posts/dockerlabs-0xc0ffee |
+| 14 | 3967 | Gangster-PC | 📝 | 2026-02-13 | https://github.com/Gangster-PC/Maquinas_Laboratorios/blob/main/MAQUINAS/Dockerlabs/Medio/0xc0ffee.md |
+| 15 | 4039 | ASMODAX | 📝 | 2026-02-27 | https://github.com/ASMODAX-OPS/ASMODAX-OPS-amodax-writeups/blob/main/Docker-labs./Machines/Medium/0xc0ffee.md |
+
+_Índices previos (no en la API actual):_
+
+|  |  | darksblack | 📝 |  | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/0xc0ffee ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+|  |  | maciiii___ | 📝 |  | https://github.com/Maciferna/dockerlabs/blob/main/maquina-0xc0ffee/0xc0ffee.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+|  |  | victorCybsec | 📝 |  | https://github.com/victorCybsec/PwnVault/blob/main/WRITE%20UPS/DOCKERLABS/MEDIO/0xc0ffee.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |

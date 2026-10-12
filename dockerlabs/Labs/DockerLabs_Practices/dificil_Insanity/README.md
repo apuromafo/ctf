@@ -5,7 +5,7 @@
 > **ES:** Ficha de laboratorio DockerLabs. Referencias de terceros como anexos; notas propias metodológicas.
 > **EN:** DockerLabs lab sheet. Third-party references as annexes; own methodological notes.
 
-**Referencias:** 6 total · 📝 6 · 🎥 0
+**Referencias:** 5 API + 2 previas
 
 ## Metodología propia / Own methodology
 
@@ -28,13 +28,17 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 
 ## Anexos — Referencias de terceros / Annexes — Third-party references
 
-| # | Autor / Author | Tipo / Type | Enlace / Link |
-|---|----------------|-------------|---------------|
-| 1 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/dockerlabs-writeups/dockerlabs/insanity-dockerlabs-hard |
-| 2 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/insanity.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-| 3 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/dockerlabs-writeups/dockerlabs/insanity-dockerlabs-hard |
-| 4 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/insanity.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-| 5 | skopjee | 📝 | https://github.com/sk0pj3e/Dockerlabs/blob/main/Insanity/Insanity.md |
-| 6 | B0end | 📝 | https://b0end.uno/docs/writeups/dockerlabs/hard/insanity |
+_Fuente API oficial dockerlabs.es (5 writeups) + 2 de índices previos._
 
-> **Nota:** los enlaces de terceros se citan como anexos. Fecha de índice: 2026-10-12.
+| # | ID | Autor / Author | Tipo | Fecha / Date | Enlace / Link |
+|---|---|---|---|---|---|
+| 1 | 3080 | d1se0 | 📝 | 2025-11-20 | https://dise0.gitbook.io/h4cker_b00k/dockerlabs-writeups/dockerlabs/insanity-dockerlabs-hard |
+| 2 | 3084 | skopjee | 📝 | 2025-11-20 | https://github.com/sk0pj3e/Dockerlabs/blob/main/Insanity/Insanity.md |
+| 3 | 3085 | B0end | 📝 | 2025-11-20 | https://b0end.uno/docs/writeups/dockerlabs/hard/insanity |
+| 4 | 3806 | l-craft-l | 📝 | 2026-01-15 | https://github.com/l-craft-l/Dockerlabs-Writeups/blob/main/hard/Insanity/Spanish/Maquina%20Insanity%20-%20Dockerlabs.md |
+| 5 | 4644 | darksblack | 📝 | 2026-07-11 | https://gitlab.com/darksblack/writeupdockerlabs/-/blob/main/insanity.md |
+
+_Índices previos (no en la API actual):_
+
+|  |  | darksblack | 📝 |  | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/insanity.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+|  |  | darksblack | 📝 |  | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/insanity.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |

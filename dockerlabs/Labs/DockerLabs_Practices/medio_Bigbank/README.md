@@ -4,7 +4,7 @@
 > **EN:** Pending sheet. Machine listed on dockerlabs.es with no references in local indexes.
 
 **Dificultad oficial / Official difficulty:** Medio
-**Referencias:** 0 (sin writeups indexados)
+**Referencias:** 0 — sin writeups publicados aún en dockerlabs.es (verificado 2026-10-12)
 
 ## Metodología propia / Own methodology
 
@@ -27,4 +27,4 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 
 ## Anexos — Referencias de terceros / Annexes — Third-party references
 
-_(Sin referencias indexadas. Añadir al documentar.)_
+_(Sin writeups publicados aún. Máquina reciente en el site oficial.)_

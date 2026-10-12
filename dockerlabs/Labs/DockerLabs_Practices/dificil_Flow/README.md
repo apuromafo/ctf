@@ -5,7 +5,7 @@
 > **ES:** Ficha de laboratorio DockerLabs. Referencias de terceros como anexos; notas propias metodológicas.
 > **EN:** DockerLabs lab sheet. Third-party references as annexes; own methodological notes.
 
-**Referencias:** 8 total · 📝 8 · 🎥 0
+**Referencias:** 6 API + 2 previas
 
 ## Metodología propia / Own methodology
 
@@ -28,15 +28,18 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 
 ## Anexos — Referencias de terceros / Annexes — Third-party references
 
-| # | Autor / Author | Tipo / Type | Enlace / Link |
-|---|----------------|-------------|---------------|
-| 1 | maciiii___ | 📝 | https://maciferna.gitbook.io/maci/writeups/dockerlabs/flow |
-| 2 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/my-ctfs/ctfs/ctf-flow-hard |
-| 3 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/flow.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-| 4 | JuanR | 📝 | https://github.com/JuanAntonioRodriguez68/Dockerlabs/blob/main/Flow.pdf |
-| 5 | miguel0x1985 | 📝 | https://github.com/miguellofredo85/PwnLabs/blob/main/dockerlabs/Flow.pdf |
-| 6 | miguel0x1985 | 📝 | https://github.com/miguellofredo85/PwnLabs/blob/main/dockerlabs/Flow.pdf |
-| 7 | 4bytes | 📝 | https://4bytes.gitbook.io/4bytes/writeups/dockerlabs/flow |
-| 8 | Litio7 | 📝 | https://litio7.github.io/posts/dockerlabs-writeup-flow/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+_Fuente API oficial dockerlabs.es (6 writeups) + 2 de índices previos._
 
-> **Nota:** los enlaces de terceros se citan como anexos. Fecha de índice: 2026-10-12.
+| # | ID | Autor / Author | Tipo | Fecha / Date | Enlace / Link |
+|---|---|---|---|---|---|
+| 1 | 2954 | maciiii___ | 📝 | 2025-11-20 | https://maciferna.gitbook.io/maci/writeups/dockerlabs/flow |
+| 2 | 2955 | d1se0 | 📝 | 2025-11-20 | https://dise0.gitbook.io/h4cker_b00k/my-ctfs/ctfs/ctf-flow-hard |
+| 3 | 2957 | JuanR | 📝 | 2025-11-20 | https://github.com/JuanAntonioRodriguez68/Dockerlabs/blob/main/Flow.pdf |
+| 4 | 2958 | miguel0x1985 | 📝 | 2025-11-20 | https://github.com/miguellofredo85/PwnLabs/blob/main/dockerlabs/Flow.pdf |
+| 5 | 2960 | 4bytes | 📝 | 2025-11-20 | https://4bytes.gitbook.io/4bytes/writeups/dockerlabs/flow |
+| 6 | 4639 | darksblack | 📝 | 2026-07-11 | https://gitlab.com/darksblack/writeupdockerlabs/-/blob/main/flow.md |
+
+_Índices previos (no en la API actual):_
+
+|  |  | darksblack | 📝 |  | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/flow.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-flow |

@@ -5,7 +5,7 @@
 > **ES:** Ficha de laboratorio DockerLabs. Referencias de terceros como anexos; notas propias metodológicas.
 > **EN:** DockerLabs lab sheet. Third-party references as annexes; own methodological notes.
 
-**Referencias:** 0 total · 📝 0 · 🎥 0
+**Referencias:** 2 API + 0 previas
 
 ## Metodología propia / Own methodology
 
@@ -28,7 +28,9 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 
 ## Anexos — Referencias de terceros / Annexes — Third-party references
 
-| # | Autor / Author | Tipo / Type | Enlace / Link |
-|---|----------------|-------------|---------------|
+_Fuente API oficial dockerlabs.es (2 writeups) + 0 de índices previos._
 
-> **Nota:** los enlaces de terceros se citan como anexos. Fecha de índice: 2026-10-12.
+| # | ID | Autor / Author | Tipo | Fecha / Date | Enlace / Link |
+|---|---|---|---|---|---|
+| 1 | 3705 | maciiii___ | 📝 | 2026-01-02 | https://maciferna.gitbook.io/book/writeups/dockerlabs/force |
+| 2 | 5306 | Pyth0nK1d | 📝 | 2026-10-09 | https://pyth0nk1d.medium.com/dockerlabs-writeup-force-spanish-00b716a7d265 |

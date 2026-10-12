@@ -5,7 +5,7 @@
 > **ES:** Ficha de laboratorio DockerLabs. Referencias de terceros como anexos; notas propias metodológicas.
 > **EN:** DockerLabs lab sheet. Third-party references as annexes; own methodological notes.
 
-**Referencias:** 6 total · 📝 6 · 🎥 0
+**Referencias:** 5 API + 3 previas
 
 ## Metodología propia / Own methodology
 
@@ -28,13 +28,18 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 
 ## Anexos — Referencias de terceros / Annexes — Third-party references
 
-| # | Autor / Author | Tipo / Type | Enlace / Link |
-|---|----------------|-------------|---------------|
-| 1 | Gm4tsy | 📝 | https://gm4tsy.hashnode.dev/dockerlabs-norc |
-| 2 | incommatose | 📝 | https://github.com/incommatose/dockerlabs-writeups/blob/main/machines/Hard/Norc%20-%20Hard.md |
-| 3 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/norc.md |
-| 4 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/dockerlabs-writeups/dockerlabs/norc-dockerlabs-hard |
-| 5 | Litio7 | 📝 | https://litio7.github.io/posts/dockerlabs-writeup-norc/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-| 6 | incommatose | 📝 | https://incommatose.github.io/Norc-Dockerlabs-Writeup/ |
+_Fuente API oficial dockerlabs.es (5 writeups) + 3 de índices previos._
 
-> **Nota:** los enlaces de terceros se citan como anexos. Fecha de índice: 2026-10-12.
+| # | ID | Autor / Author | Tipo | Fecha / Date | Enlace / Link |
+|---|---|---|---|---|---|
+| 1 | 120 | Gm4tsy | 📝 | 2025-11-20 | https://gm4tsy.hashnode.dev/dockerlabs-norc |
+| 2 | 121 | incommatose | 📝 | 2025-11-20 | https://github.com/incommatose/dockerlabs-writeups/blob/main/machines/Hard/Norc%20-%20Hard.md |
+| 3 | 123 | d1se0 | 📝 | 2025-11-20 | https://dise0.gitbook.io/h4cker_b00k/dockerlabs-writeups/dockerlabs/norc-dockerlabs-hard |
+| 4 | 125 | incommatose | 📝 | 2025-11-20 | https://incommatosereal.github.io/Norc-Dockerlabs-Writeup |
+| 5 | 4650 | darksblack | 📝 | 2026-07-11 | https://gitlab.com/darksblack/writeupdockerlabs/-/blob/main/norc.md |
+
+_Índices previos (no en la API actual):_
+
+|  |  | darksblack | 📝 |  | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/norc.md |
+|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-norc |
+|  |  | incommatose | 📝 |  | https://incommatose.github.io/Norc-Dockerlabs-Writeup |

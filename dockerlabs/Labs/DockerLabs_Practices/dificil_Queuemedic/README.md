@@ -5,7 +5,7 @@
 > **ES:** Ficha de laboratorio DockerLabs. Referencias de terceros como anexos; notas propias metodológicas.
 > **EN:** DockerLabs lab sheet. Third-party references as annexes; own methodological notes.
 
-**Referencias:** 9 total · 📝 8 · 🎥 1
+**Referencias:** 8 API + 1 previas
 
 ## Metodología propia / Own methodology
 
@@ -28,16 +28,19 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 
 ## Anexos — Referencias de terceros / Annexes — Third-party references
 
-| # | Autor / Author | Tipo / Type | Enlace / Link |
-|---|----------------|-------------|---------------|
-| 1 | b0ySie7e | 📝 | https://b0ysie7e.gitbook.io/articulos/write-up/dockerlabs/2024-10-8-queuemedic |
-| 2 | p0mb3r0 | 📝 | https://github.com/raa2015/ctf-write-ups/blob/master/Queuemedic.md |
-| 3 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/queuemedic.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-| 4 | maciiii___ | 🎥 | https://youtu.be/pJStB6iWlpY |
-| 5 | skopjee | 📝 | https://github.com/sk0pj3e/Dockerlabs/blob/main/Queuemedic/Queuemedic.md |
-| 6 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/dockerlabs-writeups/dockerlabs/queuemedic-dockerlabs-hard |
-| 7 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/dockerlabs-writeups/dockerlabs/queuemedic-dockerlabs-hard |
-| 8 | JuanR | 📝 | https://github.com/JuanAntonioRodriguez68/Dockerlabs/blob/main/Queuemedic.pdf |
-| 9 | Anonymous17 | 📝 | https://novahacking.gitbook.io/anonymous17/ctf/dockerlabs/queuemedic |
+_Fuente API oficial dockerlabs.es (8 writeups) + 1 de índices previos._
 
-> **Nota:** los enlaces de terceros se citan como anexos. Fecha de índice: 2026-10-12.
+| # | ID | Autor / Author | Tipo | Fecha / Date | Enlace / Link |
+|---|---|---|---|---|---|
+| 1 | 2627 | b0ySie7e | 📝 | 2025-11-20 | https://b0ysie7e.gitbook.io/articulos/write-up/dockerlabs/2024-10-8-queuemedic |
+| 2 | 2628 | p0mb3r0 | 📝 | 2025-11-20 | https://github.com/raa2015/ctf-write-ups/blob/master/Queuemedic.md |
+| 3 | 2630 | maciiii___ | 🎥 | 2025-11-20 | https://youtu.be/pJStB6iWlpY |
+| 4 | 2631 | skopjee | 📝 | 2025-11-20 | https://github.com/sk0pj3e/Dockerlabs/blob/main/Queuemedic/Queuemedic.md |
+| 5 | 2632 | d1se0 | 📝 | 2025-11-20 | https://dise0.gitbook.io/h4cker_b00k/dockerlabs-writeups/dockerlabs/queuemedic-dockerlabs-hard |
+| 6 | 2634 | JuanR | 📝 | 2025-11-20 | https://github.com/JuanAntonioRodriguez68/Dockerlabs/blob/main/Queuemedic.pdf |
+| 7 | 2635 | Anonymous17 | 📝 | 2025-11-20 | https://novahacking.gitbook.io/anonymous17/ctf/dockerlabs/queuemedic |
+| 8 | 4651 | darksblack | 📝 | 2026-07-11 | https://gitlab.com/darksblack/writeupdockerlabs/-/blob/main/queuemedic.md |
+
+_Índices previos (no en la API actual):_
+
+|  |  | darksblack | 📝 |  | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/queuemedic.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |

@@ -5,7 +5,7 @@
 > **ES:** Ficha de laboratorio DockerLabs. Referencias de terceros como anexos; notas propias metodológicas.
 > **EN:** DockerLabs lab sheet. Third-party references as annexes; own methodological notes.
 
-**Referencias:** 6 total · 📝 6 · 🎥 0
+**Referencias:** 13 API + 0 previas
 
 ## Metodología propia / Own methodology
 
@@ -28,13 +28,20 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 
 ## Anexos — Referencias de terceros / Annexes — Third-party references
 
-| # | Autor / Author | Tipo / Type | Enlace / Link |
-|---|----------------|-------------|---------------|
-| 1 | HYH | 📝 | https://www.hyhforever.top/posts/2025/06/dockerlabs-bola/ |
-| 2 | APS88 | 📝 | https://medium.com/@aps88/write-up-bola-dockerlabs-es-2371f4bf9ab5 |
-| 3 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/ctf/dockerlabs/bola-dockerlabs-intermediate |
-| 4 | Zwique | 📝 | https://zwique.gitbook.io/zwique_notes/writeups/dockerlabs/bola |
-| 5 | Alx SG | 📝 | https://github.com/AlxSAGA/Practical-Hacking-Labs/blob/main/01-DockerLabs/03-Media/64-Bola.md |
-| 6 | Pyth0nK1d | 📝 | https://pyth0nk1d.medium.com/dockerlabs-writeup-bola-spanish-27d78d2c8d8b |
+_Fuente API oficial dockerlabs.es (13 writeups) + 0 de índices previos._
 
-> **Nota:** los enlaces de terceros se citan como anexos. Fecha de índice: 2026-10-12.
+| # | ID | Autor / Author | Tipo | Fecha / Date | Enlace / Link |
+|---|---|---|---|---|---|
+| 1 | 3352 | HYH | 📝 | 2025-11-20 | https://www.hyhforever.top/posts/2025/06/dockerlabs-bola |
+| 2 | 3353 | APS88 | 📝 | 2025-11-20 | https://medium.com/@aps88/write-up-bola-dockerlabs-es-2371f4bf9ab5 |
+| 3 | 3354 | d1se0 | 📝 | 2025-11-20 | https://dise0.gitbook.io/h4cker_b00k/ctf/dockerlabs/bola-dockerlabs-intermediate |
+| 4 | 3355 | Zwique | 📝 | 2025-11-20 | https://zwique.gitbook.io/zwique_notes/writeups/dockerlabs/bola |
+| 5 | 3356 | Alx SG | 📝 | 2025-11-20 | https://github.com/AlxSAGA/Practical-Hacking-Labs/blob/main/01-DockerLabs/03-Media/64-Bola.md |
+| 6 | 3357 | Pyth0nK1d | 📝 | 2025-11-20 | https://pyth0nk1d.medium.com/dockerlabs-writeup-bola-spanish-27d78d2c8d8b |
+| 7 | 3487 | nohh022 | 📝 | 2025-11-27 | https://github.com/nohh022/writeups/blob/main/Dockerlabs/Bola/Bola.md |
+| 8 | 3702 | Ung4m | 📝 | 2026-01-01 | https://www.notion.so/ung4m/Bola-2c3c8cbdfd3c80e4bbe4c2f8d520e2e9 |
+| 9 | 4062 | firstatack | 📝 | 2026-02-28 | https://firstatack.github.io/posts/bola |
+| 10 | 4894 | borazuwarah | 📝 | 2026-08-11 | https://seguridad.pabloramirez.es/writeup.html?id=24 |
+| 11 | 5110 | ikerb | 📝 | 2026-09-11 | https://ikerb.gitbook.io/portfolio/writeups/dockerlabs/medium/bola |
+| 12 | 5111 | vareCruzz | 📝 | 2026-09-11 | https://github.com/CruzVaree/dockerlabs-ctfs/blob/main/Bola/bola.md |
+| 13 | 5158 | r3leant | 🎥 | 2026-09-16 | https://youtu.be/N0xzjpG_qaE?is=FE9tNP_qoJkuiMv9 |

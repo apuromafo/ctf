@@ -5,7 +5,7 @@
 > **ES:** Ficha de laboratorio DockerLabs. Referencias de terceros como anexos; notas propias metodológicas.
 > **EN:** DockerLabs lab sheet. Third-party references as annexes; own methodological notes.
 
-**Referencias:** 4 total · 📝 4 · 🎥 0
+**Referencias:** 3 API + 2 previas
 
 ## Metodología propia / Own methodology
 
@@ -28,11 +28,15 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 
 ## Anexos — Referencias de terceros / Annexes — Third-party references
 
-| # | Autor / Author | Tipo / Type | Enlace / Link |
-|---|----------------|-------------|---------------|
-| 1 | HYH | 📝 | https://www.hyhforever.top/dockerlabs-stackinferno/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-| 2 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/stackinferno.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-| 3 | Shinkirou | 📝 | https://boletuss-organization.gitbook.io/dw/write-ups/quickstart/maquinas-medio/stackinferno-write-up |
-| 4 | Alx SG | 📝 | https://github.com/AlxSAGA/Practical-Hacking-Labs/blob/main/01-DockerLabs/03-Media/31-StackInfierno.md |
+_Fuente API oficial dockerlabs.es (3 writeups) + 2 de índices previos._
 
-> **Nota:** los enlaces de terceros se citan como anexos. Fecha de índice: 2026-10-12.
+| # | ID | Autor / Author | Tipo | Fecha / Date | Enlace / Link |
+|---|---|---|---|---|---|
+| 1 | 3228 | Shinkirou | 📝 | 2025-11-20 | https://boletuss-organization.gitbook.io/dw/write-ups/quickstart/maquinas-medio/stackinferno-write-up |
+| 2 | 3229 | Alx SG | 📝 | 2025-11-20 | https://github.com/AlxSAGA/Practical-Hacking-Labs/blob/main/01-DockerLabs/03-Media/31-StackInfierno.md |
+| 3 | 4625 | darksblack | 📝 | 2026-07-11 | https://gitlab.com/darksblack/writeupdockerlabs/-/blob/main/stackinferno.md |
+
+_Índices previos (no en la API actual):_
+
+|  |  | HYH | 📝 |  | https://www.hyhforever.top/dockerlabs-stackinferno |
+|  |  | darksblack | 📝 |  | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/stackinferno.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |

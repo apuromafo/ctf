@@ -5,7 +5,7 @@
 > **ES:** Ficha de laboratorio DockerLabs. Referencias de terceros como anexos; notas propias metodológicas.
 > **EN:** DockerLabs lab sheet. Third-party references as annexes; own methodological notes.
 
-**Referencias:** 5 total · 📝 5 · 🎥 0
+**Referencias:** 6 API + 2 previas
 
 ## Metodología propia / Own methodology
 
@@ -28,12 +28,18 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 
 ## Anexos — Referencias de terceros / Annexes — Third-party references
 
-| # | Autor / Author | Tipo / Type | Enlace / Link |
-|---|----------------|-------------|---------------|
-| 1 | maciiii___ | 📝 | https://maciferna.gitbook.io/maci/writeups/dockerlabs/raas |
-| 2 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/raas.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-| 3 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/dockerlabs-writeups/dockerlabs/raas-dockerlabs-hard |
-| 4 | skopjee | 📝 | https://github.com/sk0pj3e/Dockerlabs/blob/main/rass/rass.md |
-| 5 | Litio7 | 📝 | https://litio7.github.io/posts/dockerlabs-writeup-raas/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+_Fuente API oficial dockerlabs.es (6 writeups) + 2 de índices previos._
 
-> **Nota:** los enlaces de terceros se citan como anexos. Fecha de índice: 2026-10-12.
+| # | ID | Autor / Author | Tipo | Fecha / Date | Enlace / Link |
+|---|---|---|---|---|---|
+| 1 | 3011 | maciiii___ | 📝 | 2025-11-20 | https://maciferna.gitbook.io/maci/writeups/dockerlabs/raas |
+| 2 | 3013 | d1se0 | 📝 | 2025-11-20 | https://dise0.gitbook.io/h4cker_b00k/dockerlabs-writeups/dockerlabs/raas-dockerlabs-hard |
+| 3 | 3014 | skopjee | 📝 | 2025-11-20 | https://github.com/sk0pj3e/Dockerlabs/blob/main/rass/rass.md |
+| 4 | 4492 | l-craft-l | 📝 | 2026-06-11 | https://github.com/l-craft-l/Dockerlabs-Writeups/blob/main/hard/Raas/Spanish/Maquina%20Raas%20-%20Dockerlabs.md |
+| 5 | 4652 | darksblack | 📝 | 2026-07-11 | https://gitlab.com/darksblack/writeupdockerlabs/-/blob/main/raas.md |
+| 6 | 4943 | komori_lugh | 📝 | 2026-08-16 | https://github.com/amegakuredojo/Amegakure_CTFs_Labs_WriteUps/blob/main/dockerlabs%2FRaaS%2Faudit%2Fintel_consolidada%2FWRITEUP_RaaS.md |
+
+_Índices previos (no en la API actual):_
+
+|  |  | darksblack | 📝 |  | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/raas.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-raas |

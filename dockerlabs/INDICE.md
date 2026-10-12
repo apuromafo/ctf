@@ -1,7 +1,7 @@
 # DockerLabs — Índice de máquinas / Machine index
 
-> **ES:** 209 máquinas en dockerlabs.es · 172 con referencias (3294) · 42 pendientes.
-> **EN:** 209 machines on dockerlabs.es · 172 with references (3294) · 42 pending.
+> **ES:** 209 maquinas en dockerlabs.es + 3 retiradas | 4640 writeups via API oficial (2026-10-12). Carpetas como dificultad_Nombre.
+> **EN:** 209 machines on dockerlabs.es + 3 retired | 4640 writeups via official API (2026-10-12). Folders as difficulty_Name.
 
 | Máquina / Machine | Dificultad / Difficulty | Refs | 📝 | 🎥 | Estado |
 |---|---|---|---|---|---|

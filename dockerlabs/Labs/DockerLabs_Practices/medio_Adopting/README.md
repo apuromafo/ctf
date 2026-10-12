@@ -4,7 +4,7 @@
 > **EN:** Pending sheet. Machine listed on dockerlabs.es with no references in local indexes.
 
 **Dificultad oficial / Official difficulty:** Medio
-**Referencias:** 0 (sin writeups indexados)
+**Referencias:** 2 API + 0 previas
 
 ## Metodología propia / Own methodology
 
@@ -27,4 +27,9 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 
 ## Anexos — Referencias de terceros / Annexes — Third-party references
 
-_(Sin referencias indexadas. Añadir al documentar.)_
+_Fuente API oficial dockerlabs.es (2 writeups) + 0 de índices previos._
+
+| # | ID | Autor / Author | Tipo | Fecha / Date | Enlace / Link |
+|---|---|---|---|---|---|
+| 1 | 5228 | Adrirg86 | 📝 | 2026-09-27 | https://github.com/adrirg86/DockerLabs/blob/main/MaquinasM/AdoptingAdri.md |
+| 2 | 5278 | Pyth0nK1d | 📝 | 2026-10-02 | https://pyth0nk1d.medium.com/dockerlabs-writeup-adopting-spanish-352eeeaa5e9f |

@@ -5,7 +5,7 @@
 > **ES:** Ficha de laboratorio DockerLabs. Referencias de terceros como anexos; notas propias metodológicas.
 > **EN:** DockerLabs lab sheet. Third-party references as annexes; own methodological notes.
 
-**Referencias:** 7 total · 📝 7 · 🎥 0
+**Referencias:** 7 API + 2 previas
 
 ## Metodología propia / Own methodology
 
@@ -28,14 +28,19 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 
 ## Anexos — Referencias de terceros / Annexes — Third-party references
 
-| # | Autor / Author | Tipo / Type | Enlace / Link |
-|---|----------------|-------------|---------------|
-| 1 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/my-ctfs/ctfs/ctf-lifeordead-hard |
-| 2 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/my-ctfs/ctfs/ctf-lifeordead-hard |
-| 3 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/lifeordead.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-| 4 | maciiii___ | 📝 | https://maciferna.gitbook.io/maci/writeups/dockerlabs/lifeordead |
-| 5 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/lifeordead.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-| 6 | incommatose | 📝 | https://medium.com/@incommatose/writeup-lifeordead-dockerlabs-dif%C3%ADcil-62464b57504c |
-| 7 | incommatose | 📝 | https://incommatose.github.io/Lifeordead-Dockerlabs-Writeup/ |
+_Fuente API oficial dockerlabs.es (7 writeups) + 2 de índices previos._
 
-> **Nota:** los enlaces de terceros se citan como anexos. Fecha de índice: 2026-10-12.
+| # | ID | Autor / Author | Tipo | Fecha / Date | Enlace / Link |
+|---|---|---|---|---|---|
+| 1 | 3095 | d1se0 | 📝 | 2025-11-20 | https://dise0.gitbook.io/h4cker_b00k/my-ctfs/ctfs/ctf-lifeordead-hard |
+| 2 | 3098 | maciiii___ | 📝 | 2025-11-20 | https://maciferna.gitbook.io/maci/writeups/dockerlabs/lifeordead |
+| 3 | 3100 | incommatose | 📝 | 2025-11-20 | https://medium.com/@incommatose/writeup-lifeordead-dockerlabs-dif%C3%ADcil-62464b57504c |
+| 4 | 3101 | incommatose | 📝 | 2025-11-20 | https://incommatose.github.io/Lifeordead-Dockerlabs-Writeup |
+| 5 | 3485 | nohh022 | 📝 | 2025-11-27 | https://github.com/nohh022/writeups/blob/main/Dockerlabs/LifeOrDead/LifeOrDead.md |
+| 6 | 3593 | l-craft-l | 📝 | 2025-12-13 | https://github.com/l-craft-l/Dockerlabs-Writeups/blob/main/hard/lifeordead/Spanish/Maquina%20lifeordead%20-%20Dockerlabs.md |
+| 7 | 4646 | darksblack | 📝 | 2026-07-11 | https://gitlab.com/darksblack/writeupdockerlabs/-/blob/main/lifeordead.md |
+
+_Índices previos (no en la API actual):_
+
+|  |  | darksblack | 📝 |  | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/lifeordead.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+|  |  | darksblack | 📝 |  | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/lifeordead.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |

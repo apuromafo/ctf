@@ -5,7 +5,7 @@
 > **ES:** Ficha de laboratorio DockerLabs. Referencias de terceros como anexos; notas propias metodológicas.
 > **EN:** DockerLabs lab sheet. Third-party references as annexes; own methodological notes.
 
-**Referencias:** 4 total · 📝 4 · 🎥 0
+**Referencias:** 3 API + 1 previas
 
 ## Metodología propia / Own methodology
 
@@ -28,11 +28,14 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 
 ## Anexos — Referencias de terceros / Annexes — Third-party references
 
-| # | Autor / Author | Tipo / Type | Enlace / Link |
-|---|----------------|-------------|---------------|
-| 1 | Pylon | 📝 | https://pylonet.pages.dev/posts/grandma/ |
-| 2 | briancgx | 📝 | https://briancgx.github.io/dockerlabs-writeup-grandma ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-| 3 | s4botai | 📝 | https://s4botai.github.io/DockerLabs-Grandma-writeup/ ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-| 4 | Pyth0nK1d | 📝 | https://pyth0nk1d.medium.com/dockerlabs-writeup-grandma-spanish-618f9d58a65e |
+_Fuente API oficial dockerlabs.es (3 writeups) + 1 de índices previos._
 
-> **Nota:** los enlaces de terceros se citan como anexos. Fecha de índice: 2026-10-12.
+| # | ID | Autor / Author | Tipo | Fecha / Date | Enlace / Link |
+|---|---|---|---|---|---|
+| 1 | 2285 | 0xR0_ | 📝 | 2025-11-20 | https://pylonet.pages.dev/posts/grandma |
+| 2 | 2286 | briancgx | 📝 | 2025-11-20 | https://briancgx.github.io/dockerlabs-writeup-grandma ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+| 3 | 2288 | Pyth0nK1d | 📝 | 2025-11-20 | https://pyth0nk1d.medium.com/dockerlabs-writeup-grandma-spanish-618f9d58a65e |
+
+_Índices previos (no en la API actual):_
+
+|  |  | s4botai | 📝 |  | https://s4botai.github.io/DockerLabs-Grandma-writeup |

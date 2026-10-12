@@ -5,7 +5,7 @@
 > **ES:** Ficha de laboratorio DockerLabs. Referencias de terceros como anexos; notas propias metodológicas.
 > **EN:** DockerLabs lab sheet. Third-party references as annexes; own methodological notes.
 
-**Referencias:** 7 total · 📝 7 · 🎥 0
+**Referencias:** 8 API + 1 previas
 
 ## Metodología propia / Own methodology
 
@@ -28,14 +28,19 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 
 ## Anexos — Referencias de terceros / Annexes — Third-party references
 
-| # | Autor / Author | Tipo / Type | Enlace / Link |
-|---|----------------|-------------|---------------|
-| 1 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/spain.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-| 2 | 4bytes | 📝 | https://4bytes.gitbook.io/4bytes/writeups/dockerlabs/spain |
-| 3 | maciiii___ | 📝 | https://maciferna.gitbook.io/maci/writeups/dockerlabs/spain |
-| 4 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/dockerlabs-writeups/dockerlabs/spain-dockerlabs-hard |
-| 5 | miguel0x1985 | 📝 | https://github.com/miguellofredo85/PwnLabs/blob/main/dockerlabs/Spain.pdf |
-| 6 | miguel0x1985 | 📝 | https://github.com/miguellofredo85/PwnLabs/blob/main/dockerlabs/Spain.pdf |
-| 7 | JuanR | 📝 | https://github.com/JuanAntonioRodriguez68/Dockerlabs/blob/main/Spain.pdf |
+_Fuente API oficial dockerlabs.es (8 writeups) + 1 de índices previos._
 
-> **Nota:** los enlaces de terceros se citan como anexos. Fecha de índice: 2026-10-12.
+| # | ID | Autor / Author | Tipo | Fecha / Date | Enlace / Link |
+|---|---|---|---|---|---|
+| 1 | 3005 | 4bytes | 📝 | 2025-11-20 | https://4bytes.gitbook.io/4bytes/writeups/dockerlabs/spain |
+| 2 | 3006 | maciiii___ | 📝 | 2025-11-20 | https://maciferna.gitbook.io/maci/writeups/dockerlabs/spain |
+| 3 | 3007 | d1se0 | 📝 | 2025-11-20 | https://dise0.gitbook.io/h4cker_b00k/dockerlabs-writeups/dockerlabs/spain-dockerlabs-hard |
+| 4 | 3008 | miguel0x1985 | 📝 | 2025-11-20 | https://github.com/miguellofredo85/PwnLabs/blob/main/dockerlabs/Spain.pdf |
+| 5 | 3010 | JuanR | 📝 | 2025-11-20 | https://github.com/JuanAntonioRodriguez68/Dockerlabs/blob/main/Spain.pdf |
+| 6 | 3676 | xoelrdgz | 📝 | 2025-12-29 | https://xoelrdgz.github.io/guides/spain-writeup |
+| 7 | 3776 | l-craft-l | 📝 | 2026-01-11 | https://github.com/l-craft-l/Dockerlabs-Writeups/blob/main/hard/Spain/Spanish/Maquina%20Spain%20-%20Dockerlabs.md |
+| 8 | 4657 | darksblack | 📝 | 2026-07-11 | https://gitlab.com/darksblack/writeupdockerlabs/-/blob/main/spain.md |
+
+_Índices previos (no en la API actual):_
+
+|  |  | darksblack | 📝 |  | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/spain.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |

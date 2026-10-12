@@ -5,7 +5,7 @@
 > **ES:** Ficha de laboratorio DockerLabs. Referencias de terceros como anexos; notas propias metodológicas.
 > **EN:** DockerLabs lab sheet. Third-party references as annexes; own methodological notes.
 
-**Referencias:** 15 total · 📝 13 · 🎥 2
+**Referencias:** 16 API + 1 previas
 
 ## Metodología propia / Own methodology
 
@@ -28,22 +28,27 @@ _(Registrar comandos usados, qué funcionó, qué no, y por qué.)_
 
 ## Anexos — Referencias de terceros / Annexes — Third-party references
 
-| # | Autor / Author | Tipo / Type | Enlace / Link |
-|---|----------------|-------------|---------------|
-| 1 | suraxddq | 📝 | https://byte-mind.net/dockerlabs-machines-dockhacklab-writeup/ |
-| 2 | 1NCO6N1TO | 📝 | https://github.com/1NCO6N1TO/WriteUps_DockerLabs/blob/main/dockhacklab.md |
-| 3 | afgsanchez | 📝 | https://github.com/afgsanchez/writeups/blob/main/DockHackLab.md |
-| 4 | Condorhacks | 🎥 | https://youtu.be/b82CBK5i080?si=c2vd71wQTjZIkjMR |
-| 5 | firstatack | 📝 | https://firstatack.github.io/posts/dockhacklab/ |
-| 6 | G0nch1s | 🎥 | https://youtu.be/VzkAsBTtA50 |
-| 7 | Gm4tsy | 📝 | https://gm4tsy.hashnode.dev/dockerlabs-dockhacklab |
-| 8 | m44lr0m | 📝 | https://m44lr0m.vercel.app/writeups/dockhacklab-dockerlabs |
-| 9 | JuanR | 📝 | https://docs.google.com/document/d/1BgfTjuAQeepSaP1Jj6GzKVKPMu6TSyBHhKePB4Nun7s/edit?usp=sharing |
-| 10 | darksblack | 📝 | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/dockhacklab |
-| 11 | kamilfire | 📝 | https://kamilfire.github.io/posts/DockHackLab/ |
-| 12 | Pentester95 | 📝 | https://github.com/dfalla/Hacking---Dockerlabs/blob/dockhacklab/dockhacklab.md |
-| 13 | d1se0 | 📝 | https://dise0.gitbook.io/h4cker_b00k/dockerlabs-writeups/dockerlabs/dockhacklab-dockerlabs-intermediate |
-| 14 | Anonymous17 | 📝 | https://novahacking.gitbook.io/anonymous17/ctf/dockerlabs/dockhacklab |
-| 15 | Alx SG | 📝 | https://github.com/AlxSAGA/Practical-Hacking-Labs/blob/main/01-DockerLabs/03-Media/49-DockHackLab.md |
+_Fuente API oficial dockerlabs.es (16 writeups) + 1 de índices previos._
 
-> **Nota:** los enlaces de terceros se citan como anexos. Fecha de índice: 2026-10-12.
+| # | ID | Autor / Author | Tipo | Fecha / Date | Enlace / Link |
+|---|---|---|---|---|---|
+| 1 | 2056 | suraxddq | 📝 | 2025-11-20 | https://byte-mind.net/dockerlabs-machines-dockhacklab-writeup |
+| 2 | 2057 | 1NCO6N1TO | 📝 | 2025-11-20 | https://github.com/1NCO6N1TO/WriteUps_DockerLabs/blob/main/dockhacklab.md |
+| 3 | 2058 | afgsanchez | 📝 | 2025-11-20 | https://github.com/afgsanchez/writeups/blob/main/DockHackLab.md |
+| 4 | 2059 | Condorhacks | 🎥 | 2025-11-20 | https://youtu.be/b82CBK5i080?si=c2vd71wQTjZIkjMR |
+| 5 | 2060 | firstatack | 📝 | 2025-11-20 | https://firstatack.github.io/posts/dockhacklab |
+| 6 | 2061 | G0nch1s | 🎥 | 2025-11-20 | https://youtu.be/VzkAsBTtA50 |
+| 7 | 2062 | Gm4tsy | 📝 | 2025-11-20 | https://gm4tsy.hashnode.dev/dockerlabs-dockhacklab |
+| 8 | 2063 | m44lr0m | 📝 | 2025-11-20 | https://m44lr0m.vercel.app/writeups/dockhacklab-dockerlabs |
+| 9 | 2064 | JuanR | 📝 | 2025-11-20 | https://docs.google.com/document/d/1BgfTjuAQeepSaP1Jj6GzKVKPMu6TSyBHhKePB4Nun7s/edit?usp=sharing |
+| 10 | 2066 | kamilfire | 📝 | 2025-11-20 | https://kamilfire.github.io/posts/DockHackLab |
+| 11 | 2067 | Pentester95 | 📝 | 2025-11-20 | https://github.com/dfalla/Hacking---Dockerlabs/blob/dockhacklab/dockhacklab.md |
+| 12 | 2068 | d1se0 | 📝 | 2025-11-20 | https://dise0.gitbook.io/h4cker_b00k/dockerlabs-writeups/dockerlabs/dockhacklab-dockerlabs-intermediate |
+| 13 | 2069 | Anonymous17 | 📝 | 2025-11-20 | https://novahacking.gitbook.io/anonymous17/ctf/dockerlabs/dockhacklab |
+| 14 | 2070 | Alx SG | 📝 | 2025-11-20 | https://github.com/AlxSAGA/Practical-Hacking-Labs/blob/main/01-DockerLabs/03-Media/49-DockHackLab.md |
+| 15 | 4049 | ASMODAX | 📝 | 2026-02-27 | https://github.com/ASMODAX-OPS/ASMODAX-OPS-amodax-writeups/blob/main/Docker-labs./Machines/Medium/dockhacklab.md |
+| 16 | 4368 | Pyth0nK1d | 📝 | 2026-05-08 | https://pyth0nk1d.medium.com/dockerlabs-writeup-dockhacklab-spanish-9d835d2164dc |
+
+_Índices previos (no en la API actual):_
+
+|  |  | darksblack | 📝 |  | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/dockhacklab |

@@ -24,3 +24,5 @@ Tryhackme/Advent 2025/SideQuest_23-12-2025.rar
 *.tmp
 __pycache__/
 status/
+dockerlabs/
+dockerlabs/

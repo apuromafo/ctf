@@ -1,6 +1,6 @@
 # sindato_Vendetta
 
-**Dificultad oficial / Official difficulty:** Sin dato
+**Dificultad oficial / Official difficulty:** Sin dato (retirada del site oficial; no listada en dockerlabs.es a 2026-10-12)
 
 > **ES:** Ficha de laboratorio DockerLabs. Referencias de terceros como anexos; notas propias metodológicas.
 > **EN:** DockerLabs lab sheet. Third-party references as annexes; own methodological notes.

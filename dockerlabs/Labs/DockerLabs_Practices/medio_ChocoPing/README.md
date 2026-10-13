@@ -47,5 +47,5 @@ _Fuente API oficial dockerlabs.es (12 writeups) + 2 de índices previos._
 
 _Índices previos (no en la API actual):_
 
-|  |  | HYH | 📝 |  | https://www.hyhforever.top/dockerlabs-chocoping |
+|  |  | HYH | 📝 |  | https://www.hyhforever.top/dockerlabs-chocoping ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | asdas | 🎥 |  | dasdasd |

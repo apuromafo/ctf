@@ -59,5 +59,5 @@ _Fuente API oficial dockerlabs.es (24 writeups) + 2 de índices previos._
 
 _Índices previos (no en la API actual):_
 
-|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-balufood |
-|  |  | HYH | 📝 |  | https://www.hyhforever.top/dockerlabs-balufood |
+|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-balufood ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+|  |  | HYH | 📝 |  | https://www.hyhforever.top/dockerlabs-balufood ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |

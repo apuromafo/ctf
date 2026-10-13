@@ -43,6 +43,6 @@ _Fuente API oficial dockerlabs.es (7 writeups) + 4 de índices previos._
 _Índices previos (no en la API actual):_
 
 |  |  | cxfr4 | 📝 |  | https://cxfr4.vercel.app/blog/Gallery ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-|  |  | HYH | 📝 |  | https://www.hyhforever.top/dockerlabs-gallery |
+|  |  | HYH | 📝 |  | https://www.hyhforever.top/dockerlabs-gallery ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | incommatose | 📝 |  | https://incommatose.github.io/Gallery-Dockerlabs-Writeup |
 |  |  | darksblack | 📝 |  | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/Gallery.md |

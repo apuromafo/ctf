@@ -43,5 +43,5 @@ _Fuente API oficial dockerlabs.es (8 writeups) + 2 de índices previos._
 
 _Índices previos (no en la API actual):_
 
-|  |  | incommatose | 📝 |  | https://incommatose.github.io/Gitea-Writeup |
+|  |  | incommatose | 📝 |  | https://incommatose.github.io/Gitea-Writeup ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | incommatose | 📝 |  | https://incommatose.github.io/Gitea-Dockerlabs-Writeup |

@@ -64,4 +64,4 @@ _Fuente API oficial dockerlabs.es (28 writeups) + 2 de índices previos._
 _Índices previos (no en la API actual):_
 
 |  |  | Aguilar | 📝 |  | https://github.com/Aguilar-aoj/Pentesting/blob/main/DockerLabs/Muy_Facil/Ejotapete.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-|  |  | Pylon | 📝 |  | https://pylonet.github.io/writeups/dockerlabs/ejotapete |
+|  |  | Pylon | 📝 |  | https://pylonet.github.io/writeups/dockerlabs/ejotapete ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |

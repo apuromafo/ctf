@@ -46,7 +46,7 @@ _Fuente API oficial dockerlabs.es (18 writeups) + 2 de índices previos._
 | 12 | 2309 | Alx SG | 📝 | 2025-11-20 | https://github.com/AlxSAGA/Practical-Hacking-Labs/blob/main/01-DockerLabs/03-Media/38-Inj3ct0rss.md |
 | 13 | 2310 | mikisbd | 📝 | 2025-11-20 | https://drive.google.com/file/d/1-I6-YiJAef8zb59sf7nQQtjsSkHiMiSu/view?usp=sharing |
 | 14 | 3520 | Pyth0nK1d | 📝 | 2025-11-30 | https://pyth0nk1d.medium.com/dockerlabs-writeup-inj3ct0rss-spanish-75821bc88052 |
-| 15 | 3546 | oliv3r | 📝 | 2025-12-03 | https://oliver-3.gitbook.io/write-ups/dockerlabs/inj3ct0rss |
+| 15 | 3546 | oliv3r | 📝 | 2025-12-03 | https://oliver-3.gitbook.io/write-ups/dockerlabs/inj3ct0rss ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 16 | 3755 | Anonymous17 | 📝 | 2026-01-05 | https://novahacking.gitbook.io/anonymous17/ctf/dockerlabs/inj3ct0rss |
 | 17 | 4032 | ivansuitooo | 🎥 | 2026-02-26 | https://youtube.com/live/KHfYdVTTCD4 |
 | 18 | 4242 | Wolder | 📝 | 2026-04-13 | https://wolder-hackverse.gitbook.io/wolders-docs/writeups/dockerlabs/medium/inj3ct0rs |

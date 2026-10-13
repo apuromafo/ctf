@@ -133,9 +133,9 @@ _Índices previos (no en la API actual):_
 |  |  | 4k4m1m3 | 📝 |  | https://4k4m1m3.github.io/blog/CTF-Dockerlabs-Upload ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | NytroMG | 📝 |  | https://github.com/NytroMG/WriteUps/blob/main/DockerLabs/UploadWriteUp/Upload.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | Anakin | 📝 |  | https://github.com/1A2N6K7/DockerLabs-WriteUps/blob/main/Upload.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-|  |  | rodsteph | 📝 |  | https://rainherz.github.io/rodsteph/posts/Dockerlabs-Writeup-Upload |
+|  |  | rodsteph | 📝 |  | https://rainherz.github.io/rodsteph/posts/Dockerlabs-Writeup-Upload ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | Enciall | 📝 |  | https://github.com/Enciall/dockerlabs/blob/main/Upload.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | MykeMR | 📝 |  | https://mykemr.github.io/Upload ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | x4nder | 📝 |  | https://github.com/x4nderjs/CTFs/blob/main/DockerLabs/Easy/Upload/Upload.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | DpCoding | 📝 |  | https://dpcoding.com/dockerlab-maquina-upload |
-|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-upload |
+|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-upload ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |

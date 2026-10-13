@@ -39,4 +39,4 @@ _Fuente API oficial dockerlabs.es (4 writeups) + 1 de índices previos._
 
 _Índices previos (no en la API actual):_
 
-|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-smashing |
+|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-smashing ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |

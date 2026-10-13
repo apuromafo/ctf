@@ -127,7 +127,7 @@ _Fuente API oficial dockerlabs.es (103 writeups) + 20 de índices previos._
 | 93 | 4437 | Adrirg86 | 📝 | 2026-05-24 | https://github.com/adrirg86/DockerLabs-Adrirg86/blob/main/MaquinasE/InyectionAdri.md |
 | 94 | 4489 | Prometheus13 | 🎥 | 2026-06-11 | https://youtu.be/fH9Pp_bsgjs?si=JGv9i4nLsUGH-FSv |
 | 95 | 4506 | Brandeiks | 📝 | 2026-06-16 | https://brandeiks.github.io/writeups/dockerlabs/facil/injection.html |
-| 96 | 4585 | vicvic | 📝 | 2026-06-28 | https://drive.google.com/drive/u/0/folders/1HJRAWgqYh18NLQxWCcgro60d70WPMEkW |
+| 96 | 4585 | vicvic | 📝 | 2026-06-28 | https://drive.google.com/drive/u/0/folders/1HJRAWgqYh18NLQxWCcgro60d70WPMEkW ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 97 | 4591 | stuv403 | 📝 | 2026-06-28 | https://github.com/cristianpatz/security-writeups/blob/main/DockerLabs/injection.md |
 | 98 | 4611 | Punchis | 📝 | 2026-07-04 | https://github.com/Pablogbl/vulnerable-machines/tree/main/dockerlabs/Injection |
 | 99 | 4836 | noneofyour | 📝 | 2026-08-08 | https://github.com/setyanoegraha/dockerlabs-writeups/blob/main/injection/injection.md |
@@ -143,17 +143,17 @@ _Índices previos (no en la API actual):_
 |  |  | 4k4m1m3 | 📝 |  | https://4k4m1m3.github.io/blog/CTF-Dockerlabs-Injection ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | Sergio Vigil Díaz | 📝 |  | https://luxurious-buttercup-71d.notion.site/Injection-Muy-f-cil-0dc76993c20b43748169de28c46e30f6 |
 |  |  | NytroMG | 📝 |  | https://github.com/NytroMG/WriteUps/blob/main/Injection/Injection.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-|  |  | rodsteph | 📝 |  | https://rainherz.github.io/rodsteph/posts/Dockerlabs-Writeup-Injection |
+|  |  | rodsteph | 📝 |  | https://rainherz.github.io/rodsteph/posts/Dockerlabs-Writeup-Injection ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | kenobi | 📝 |  | https://github.com/Kenobi02/very-easy-machine/blob/main/Inyection.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | maciiii___ | 📝 |  | https://github.com/Maciferna/DockerLabs/blob/main/maquina-injection/injection.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-|  |  | yw4rf | 📝 |  | https://yw4rf.vercel.app/posts/dockerlabs/machine-injection |
-|  |  | D3LTT4 | 📝 |  | https://delta-39.github.io/theD3lt4Protocol/maquinas-vulnerables/dockerlabs/injection |
+|  |  | yw4rf | 📝 |  | https://yw4rf.vercel.app/posts/dockerlabs/machine-injection ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+|  |  | D3LTT4 | 📝 |  | https://delta-39.github.io/theD3lt4Protocol/maquinas-vulnerables/dockerlabs/injection ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | Pentester95 | 📝 |  | https://github.com/dfalla/Hacking---Dockerlabs/blob/main/Injection.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | Ciberap | 📝 |  | https://ciberap.gitbook.io/ciberaprt/dockerlbas/muy-facil/obsession |
 |  |  | Shinki | 📝 |  | https://app.gitbook.com/o/wY7LtUP9ot9AVA1Nstx4/s/tgtRbXiV3TKrR36CLHEu/writeups/quickstart/maquinas-muy-faciles/injection-writeup |
 |  |  | Shinki | 📝 |  | https://app.gitbook.com/o/wY7LtUP9ot9AVA1Nstx4/s/tgtRbXiV3TKrR36CLHEu/writeups/quickstart/maquinas-muy-faciles/injection-writeup |
 |  |  | eliferrob | 📝 |  | https://github.com/eliferrob/CTFs/blob/main/DockerLabs%20-%20Injection/WriteUp.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-injection |
+|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-injection ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | BitThor | 📝 |  | https://drive.google.com/file/d/1RMu109OfjSl7AOusrtCvxLUfv4HQMZpA/view?usp=sharing ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | Aguilar | 📝 |  | https://github.com/Aguilar-aoj/Pentesting/blob/main/DockerLabs/Muy_Facil/Inyection.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | Héctor423 | 📝 |  | https://github.com/Hector423/Dockerlabs/blob/main/injection.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |

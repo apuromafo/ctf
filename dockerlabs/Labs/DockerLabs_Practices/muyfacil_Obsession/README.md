@@ -119,7 +119,7 @@ _Fuente API oficial dockerlabs.es (98 writeups) + 11 de índices previos._
 | 85 | 4980 | ro0tk1D | 📝 | 2026-08-21 | https://app.notion.com/p/3c22690bd21680ebb539f87c4cc37670?source=copy_link |
 | 86 | 4982 | darnellestrada | 📝 | 2026-08-21 | https://github.com/Alonso3s/DockerLabsResueltos |
 | 87 | 5000 | CLOWNCYBER | 📝 | 2026-08-24 | https://github.com/CLOWNCYBER/Cybersecurity-Labs/blob/main/Dockkerlabs/Obsession.md |
-| 88 | 5019 | Hnnbe | 📝 | 2026-08-27 | https://github.com/hnnbe/DockerLabs-Writeups/blob/main/Maquinas/MuyFacil/Obsession/README.md |
+| 88 | 5019 | Hnnbe | 📝 | 2026-08-27 | https://github.com/hnnbe/DockerLabs-Writeups/blob/main/Maquinas/MuyFacil/Obsession/README.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 89 | 5029 | kaskamilla | 📝 | 2026-08-27 | https://github.com/kaskamilla/dockerlabs-writeups/blob/main/Obsession/README.md |
 | 90 | 5099 | Cosmos | 📝 | 2026-09-11 | https://github.com/jloffsec/writeups/tree/main/Dockerlabs/Obsession |
 | 91 | 5143 | cristobalmaier | 📝 | 2026-09-16 | https://github.com/cristobalmaier/pentesting-labs/blob/main/DockerLabs/Muy%20Facil/Obsession.md |
@@ -133,14 +133,14 @@ _Fuente API oficial dockerlabs.es (98 writeups) + 11 de índices previos._
 
 _Índices previos (no en la API actual):_
 
-|  |  | murrusko | 📝 |  | https://murrusko.github.io/posts/obsession |
+|  |  | murrusko | 📝 |  | https://murrusko.github.io/posts/obsession ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | TBrux | 📝 |  | https://github.com/TBrux/DOCKERLABS/blob/main/Obsession.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-|  |  | rodsteph | 📝 |  | https://rainherz.github.io/rodsteph/posts/Dockerlabs-Writeup-Obsession |
+|  |  | rodsteph | 📝 |  | https://rainherz.github.io/rodsteph/posts/Dockerlabs-Writeup-Obsession ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | RedShenlong | 🎥 |  | https://youtu.be/TqcnsMTLaVg?si=7wrZw2s1EXiNvAS5 |
 |  |  | Shinki | 📝 |  | https://app.gitbook.com/o/wY7LtUP9ot9AVA1Nstx4/s/tgtRbXiV3TKrR36CLHEu/writeups/quickstart/maquinas-muy-faciles/obsession-writeup |
 |  |  | Shinki | 📝 |  | https://app.gitbook.com/o/wY7LtUP9ot9AVA1Nstx4/s/tgtRbXiV3TKrR36CLHEu/writeups/quickstart/maquinas-muy-faciles/obsession-writeup |
-|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-obsession |
+|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-obsession ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | xyveroz | 📝 |  | https://xyveroz.gitbook.io/xyveroz/ctf/dockerlabs/muy-facil/obsession ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | Say | 📝 |  | https://github.com/JohanI18/DockerLabs/blob/main/obsession/obsession.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-|  |  | Yorve.csec | 📝 |  | https://yorve.github.io/secnotes/DockerLabs-Obsession |
+|  |  | Yorve.csec | 📝 |  | https://yorve.github.io/secnotes/DockerLabs-Obsession ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | JuanFranco | 📝 |  | https://drive.google.com/file/d/1b4-84nyx5ndwgOh5s-f6nnyCKNQ6FHma/view?usp=sharing ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |

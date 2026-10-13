@@ -37,7 +37,7 @@ _Fuente API oficial dockerlabs.es (8 writeups) + 2 de índices previos._
 | 3 | 695 | Gm4tsy | 📝 | 2025-11-20 | https://gm4tsy.hashnode.dev/dockerlabs-bigpivoting |
 | 4 | 698 | MatthyGD | 🎥 | 2025-11-20 | https://www.youtube.com/watch?v=DWqAytqqcUQ |
 | 5 | 3656 | l-craft-l | 📝 | 2025-12-23 | https://github.com/l-craft-l/Dockerlabs-Writeups/blob/main/hard/BigPivoting/Spanish/Maquina%20BigPivoting%20-%20Dockerlabs.md |
-| 6 | 4717 | enrique | 🎥 | 2026-07-23 | https://github.com/EnriquePortfolio/BigPivoting-Writeup |
+| 6 | 4717 | enrique | 🎥 | 2026-07-23 | https://github.com/EnriquePortfolio/BigPivoting-Writeup ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 7 | 4767 | wo1f | 🎥 | 2026-07-27 | https://furry-harrier-d80.notion.site/REPORT-BigPivoting-3a7eaf26dd9b80829530f3d902a85962?source=copy_link |
 | 8 | 5300 | El Pingüino de Mario | 📝 | 2026-10-08 | https://github.com/Maalfer/writeups-ctf/blob/main/MAQUINA%20BIG%20PIVOTING.pdf |
 

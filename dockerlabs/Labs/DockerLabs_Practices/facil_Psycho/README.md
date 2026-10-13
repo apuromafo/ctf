@@ -107,9 +107,9 @@ _Índices previos (no en la API actual):_
 
 |  |  | Romy | 📝 |  | https://github.com/Romyy1/Obsidian/blob/main/Mi%20Aprendimiento/DockerLabs/Psycho.pdf ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | MykeMR | 📝 |  | https://mykemr.github.io/Psycho ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-psycho |
-|  |  | jidu | 🎥 |  | https://angelcorral2021.github.io/maquinas/post-5 |
-|  |  | buy7or | 📝 |  | https://buy7or.github.io/machines/Psycho |
+|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-psycho ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+|  |  | jidu | 🎥 |  | https://angelcorral2021.github.io/maquinas/post-5 ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+|  |  | buy7or | 📝 |  | https://buy7or.github.io/machines/Psycho ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | billy el calvo | 📝 |  | https://github.com/DiegoMoraB/DockerLabs-Writeups/blob/main/Categoria%20-%20Facil/Pyscho.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | Say | 📝 |  | https://github.com/JohanI18/DockerLabs/blob/main/psycho/psycho.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | gstxx | 📝 |  | https://redspydersec.github.io/Blog/PSYCO/psyco.html ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |

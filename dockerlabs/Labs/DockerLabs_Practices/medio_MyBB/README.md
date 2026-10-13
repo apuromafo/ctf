@@ -57,5 +57,5 @@ _Índices previos (no en la API actual):_
 
 |  |  | Pylon | 📝 |  | https://pylonet.gitbook.io/pylonblog/writeups/dockerlabs/mybb ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | darksblack | 📝 |  | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/mybb ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-mybb |
+|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-mybb ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | victorCybsec | 📝 |  | https://github.com/victorCybsec/PwnVault/blob/main/WRITE%20UPS/DOCKERLABS/MEDIO/MyBB.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |

@@ -53,6 +53,6 @@ _Fuente API oficial dockerlabs.es (17 writeups) + 4 de índices previos._
 _Índices previos (no en la API actual):_
 
 |  |  | maciiii___ | 📝 |  | https://github.com/Maciferna/DockerLabs/blob/main/maquina-Stellarjwt/Stellarjwt.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-|  |  | jiduhack | 📝 |  | https://angelcorral2021.github.io/maquinas/post-3 |
-|  |  | Yw4rf | 📝 |  | https://yw4rf.vercel.app/posts/dockerlabs/stellarjwt |
-|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-stellarjwt |
+|  |  | jiduhack | 📝 |  | https://angelcorral2021.github.io/maquinas/post-3 ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+|  |  | Yw4rf | 📝 |  | https://yw4rf.vercel.app/posts/dockerlabs/stellarjwt ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-stellarjwt ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |

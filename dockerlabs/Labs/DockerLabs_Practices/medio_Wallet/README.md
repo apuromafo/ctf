@@ -54,4 +54,4 @@ _Índices previos (no en la API actual):_
 
 |  |  | Rick Alvarez | 📝 |  | https://lordcodigo.blogspot.com/2024/08/resolucion-de-la-maquina-wallet.html ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | darksblack | 📝 |  | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/wallet ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-|  |  | s4botai | 📝 |  | https://s4botai.github.io/DockerLabs-Wallet-writeup |
+|  |  | s4botai | 📝 |  | https://s4botai.github.io/DockerLabs-Wallet-writeup ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |

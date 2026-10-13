@@ -41,4 +41,4 @@ _Índices previos (no en la API actual):_
 
 |  |  | maciiii___ | 📝 |  | https://github.com/Maciferna/DockerLabs/blob/main/maquina-lfi.elf/lfi.elf.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | darksblack | 📝 |  | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/lfi.elf ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-lfi.elf |
+|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-lfi.elf ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |

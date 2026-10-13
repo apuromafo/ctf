@@ -104,4 +104,4 @@ _Índices previos (no en la API actual):_
 |  |  | TBrux | 📝 |  | https://github.com/TBrux/DOCKERLABS/blob/main/Library.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | Romy | 📝 |  | https://github.com/Romyy1/Obsidian/blob/main/Mi%20Aprendimiento/DockerLabs/Library.pdf ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | MykeMR | 📝 |  | https://mykemr.github.io/Library ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-library |
+|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-library ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |

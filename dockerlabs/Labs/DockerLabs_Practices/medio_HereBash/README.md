@@ -53,6 +53,6 @@ _Fuente API oficial dockerlabs.es (18 writeups) + 3 de índices previos._
 
 _Índices previos (no en la API actual):_
 
-|  |  | murrusko | 📝 |  | https://murrusko.github.io/posts/hereBash |
+|  |  | murrusko | 📝 |  | https://murrusko.github.io/posts/hereBash ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | darksblack | 📝 |  | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/herebash.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | victorCybsec | 📝 |  | https://github.com/victorCybsec/PwnVault/blob/main/WRITE%20UPS/DOCKERLABS/MEDIO/HereBash.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |

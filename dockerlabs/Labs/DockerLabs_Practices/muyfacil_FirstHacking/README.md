@@ -143,7 +143,7 @@ _Fuente API oficial dockerlabs.es (132 writeups) + 14 de índices previos._
 | 109 | 4710 | Makelele | 📝 | 2026-07-23 | https://github.com/PabloSanchezIglesias/DockerLabs/blob/main/Muy%20facil/FirstHacking.md |
 | 110 | 4712 | D4Nyos | 📝 | 2026-07-23 | https://github.com/d4nysj/Dockerlabs/blob/main/Muy%20Facil/First%20Hacking.md |
 | 111 | 4754 | IHATEFW | 🎥 | 2026-07-26 | https://www.youtube.com/watch?v=uplziylkcE4&t=4s |
-| 112 | 4814 | arcanis | 📝 | 2026-08-08 | https://github.com/CARLOSGRCIAGRCIA/Dockerlabs/blob/main/veryEasy/FirstHacking.md |
+| 112 | 4814 | arcanis | 📝 | 2026-08-08 | https://github.com/CARLOSGRCIAGRCIA/Dockerlabs/blob/main/veryEasy/FirstHacking.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 113 | 4890 | Assassin | 📝 | 2026-08-11 | https://github.com/EAguilar87/Mis-DockerLabs/blob/main/FirstHacking.pdf |
 | 114 | 4910 | d1egu1nh10 | 📝 | 2026-08-12 | https://github.com/ddrf70/Cibersecurity-WriteUps/blob/main/firsthacking.md |
 | 115 | 4952 | kaskamilla | 📝 | 2026-08-17 | https://github.com/kaskamilla/dockerlabs-writeups/blob/main/FirstHacking/README.md |
@@ -171,13 +171,13 @@ _Índices previos (no en la API actual):_
 |  |  | JuanR | 📝 |  | https://online.publuu.com/516647/1158671 ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | 4k4m1m3 | 📝 |  | https://4k4m1m3.github.io/blog/CTF-Dockerlabs-FirstHacking ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | Alv-fh | 📝 |  | https://github.com/Alv-fh/Dockerlabs_machines_writeups/blob/main/Firsthacking.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-|  |  | rodsteph | 📝 |  | https://rainherz.github.io/rodsteph/posts/Dockerlabs-Writeup-MyFirstHacking |
+|  |  | rodsteph | 📝 |  | https://rainherz.github.io/rodsteph/posts/Dockerlabs-Writeup-MyFirstHacking ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | Rick Alvarez | 📝 |  | https://lordcodigo.blogspot.com/2024/07/resolucion-de-la-maquina-firsthacking.html ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-|  |  | yw4rf | 📝 |  | https://yw4rf.vercel.app/posts/dockerlabs/machine-firsthacking |
-|  |  | D3LTT4 | 📝 |  | https://delta-39.github.io/theD3lt4Protocol/maquinas-vulnerables/dockerlabs/firsthacking |
+|  |  | yw4rf | 📝 |  | https://yw4rf.vercel.app/posts/dockerlabs/machine-firsthacking ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+|  |  | D3LTT4 | 📝 |  | https://delta-39.github.io/theD3lt4Protocol/maquinas-vulnerables/dockerlabs/firsthacking ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | eliferrob | 📝 |  | https://github.com/eliferrob/CTFs/tree/main/DockerLabs%20-%20FirstHacking ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | Shinki | 📝 |  | https://app.gitbook.com/o/wY7LtUP9ot9AVA1Nstx4/s/tgtRbXiV3TKrR36CLHEu/writeups/quickstart/maquinas-muy-faciles/firsthacking-writeup |
 |  |  | Shinki | 📝 |  | https://app.gitbook.com/o/wY7LtUP9ot9AVA1Nstx4/s/tgtRbXiV3TKrR36CLHEu/writeups/quickstart/maquinas-muy-faciles/firsthacking-writeup |
-|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-firsthacking |
-|  |  | Loaxert | 📝 |  | https://loaxert.github.io/dockerlabs/firsthacking |
+|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-firsthacking ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+|  |  | Loaxert | 📝 |  | https://loaxert.github.io/dockerlabs/firsthacking ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | Godack | 📝 |  | https://github.com/godack1905/ciberseguridad-portfolio/blob/main/WriteUps/Dockerlabs_Espa%C3%B1ol/1_FirstHacking.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |

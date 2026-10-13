@@ -48,4 +48,4 @@ _Fuente API oficial dockerlabs.es (12 writeups) + 2 de índices previos._
 _Índices previos (no en la API actual):_
 
 |  |  | darksblack | 📝 |  | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/darksweb.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-darkweb |
+|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-darkweb ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |

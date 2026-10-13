@@ -80,7 +80,7 @@ _Fuente API oficial dockerlabs.es (157 writeups) + 22 de índices previos._
 | 46 | 62 | Abr4hack | 📝 | 2025-11-20 | https://drive.google.com/file/d/15ECe_N6183pRCxqt9fD4PhUSwitEm4uI/view?usp=sharing |
 | 47 | 63 | GutsNet | 📝 | 2025-11-20 | https://github.com/GutsNet/DockerLabs-WriteUp/blob/main/Muy%20F%C3%A1cil/Trust.md |
 | 48 | 64 | Klaus | 📝 | 2025-11-20 | https://github.com/valanyrr/Maquinas-DockerLabs/blob/main/VeryEasy/MaquinaTrust.md |
-| 49 | 65 | briancgx | 📝 | 2025-11-20 | https://briancgx.github.io/dockerlabs-writeup-trust |
+| 49 | 65 | briancgx | 📝 | 2025-11-20 | https://briancgx.github.io/dockerlabs-writeup-trust ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 50 | 66 | ElMili72 | 🎥 | 2025-11-20 | https://www.youtube.com/watch?v=Gy59k6QtWk0&t=254s |
 | 51 | 67 | G0nch1s | 📝 | 2025-11-20 | https://g0nch1s.blogspot.com/2024/09/write-up-maquina-trust-dockerlabs.html |
 | 52 | 68 | Anakin | 📝 | 2025-11-20 | https://github.com/1A2N6K7/DockerLabs-WriteUps/blob/b39e7a7463fbdf9181ea16ba635a95b67d059d6c/MUY-FACILES/trust.md |
@@ -174,7 +174,7 @@ _Fuente API oficial dockerlabs.es (157 writeups) + 22 de índices previos._
 | 140 | 4928 | GerManInTheMiddle | 📝 | 2026-08-13 | https://drive.google.com/file/d/1AKgKck24YankiNoihyxOPYKViRrK6s6s/view?usp=sharing |
 | 141 | 4984 | ro0tk1D | 📝 | 2026-08-21 | https://app.notion.com/p/Trust-3c22690bd21680098d8cfed5a3ca6f3f?source=copy_link |
 | 142 | 5015 | kaskamilla | 📝 | 2026-08-27 | https://github.com/kaskamilla/dockerlabs-writeups/blob/main/Trust/README.md |
-| 143 | 5016 | Hnnbe | 📝 | 2026-08-27 | https://github.com/hnnbe/DockerLabs-Writeups/blob/main/Maquinas/MuyFacil/Trust/README.md |
+| 143 | 5016 | Hnnbe | 📝 | 2026-08-27 | https://github.com/hnnbe/DockerLabs-Writeups/blob/main/Maquinas/MuyFacil/Trust/README.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 144 | 5033 | osdanfx | 📝 | 2026-08-28 | https://github.com/osdan/DockerLabs-WriteUps/blob/main/Very%20Easy/Trust.md |
 | 145 | 5080 | borazuwarah | 📝 | 2026-09-05 | https://seguridad.pabloramirez.es/writeup.php?id=61 |
 | 146 | 5100 | Cosmos | 📝 | 2026-09-11 | https://github.com/jloffsec/writeups/tree/main/Dockerlabs/Trust |
@@ -207,10 +207,10 @@ _Índices previos (no en la API actual):_
 |  |  | s0ksy | 📝 |  | https://s0ksy.github.io/writeups/Dockerlabs/post1.html ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | Noon3 | 📝 |  | https://noon3.gitbook.io/blog/practica-de-hacking-plataformas-y-recursos/walkthroughs-de-maquinas/trust |
 |  |  | Enciall | 📝 |  | https://github.com/Enciall/dockerlabs/blob/main/Trust.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-|  |  | rodsteph | 📝 |  | https://rainherz.github.io/rodsteph/posts/Dockerlabs-Writeup-Trust |
-|  |  | yw4rf | 📝 |  | https://yw4rf.vercel.app/posts/dockerlabs/machine-trust |
+|  |  | rodsteph | 📝 |  | https://rainherz.github.io/rodsteph/posts/Dockerlabs-Writeup-Trust ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+|  |  | yw4rf | 📝 |  | https://yw4rf.vercel.app/posts/dockerlabs/machine-trust ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | Shinki | 📝 |  | https://app.gitbook.com/o/wY7LtUP9ot9AVA1Nstx4/s/tgtRbXiV3TKrR36CLHEu/writeups/quickstart/maquinas-muy-faciles/trust-writeup |
 |  |  | Shinki | 📝 |  | https://app.gitbook.com/o/wY7LtUP9ot9AVA1Nstx4/s/tgtRbXiV3TKrR36CLHEu/writeups/quickstart/maquinas-muy-faciles/trust-writeup |
-|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-trust |
+|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-trust ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | Caan31 | 📝 |  | https://github.com/Caan31/Maquinas_DockerLabs/blob/master/MAQUINA_TRUST.pdf ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | MorfeoX | 🎥 |  | https://www.youtube.com/watch?v=Uvbf7GAYpBA&list=PLeXvuZvyPQ_wxJQmFeg3Sh95w7pxB2fBz&index=6 |

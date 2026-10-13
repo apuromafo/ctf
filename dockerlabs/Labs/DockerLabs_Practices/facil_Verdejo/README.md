@@ -80,6 +80,6 @@ _Fuente API oficial dockerlabs.es (40 writeups) + 3 de índices previos._
 
 _Índices previos (no en la API actual):_
 
-|  |  | Yw4rf | 📝 |  | https://yw4rf.vercel.app/posts/dockerlabs/verdejo |
+|  |  | Yw4rf | 📝 |  | https://yw4rf.vercel.app/posts/dockerlabs/verdejo ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | MykeMR | 📝 |  | https://mykemr.github.io/Verdejo ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-verdejo |
+|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-verdejo ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |

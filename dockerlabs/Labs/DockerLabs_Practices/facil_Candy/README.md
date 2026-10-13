@@ -81,4 +81,4 @@ _Fuente API oficial dockerlabs.es (40 writeups) + 2 de índices previos._
 _Índices previos (no en la API actual):_
 
 |  |  | maciiii___ | 📝 |  | https://github.com/Maciferna/DockerLabs/blob/main/maquina-candy/candy.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-candy |
+|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-candy ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |

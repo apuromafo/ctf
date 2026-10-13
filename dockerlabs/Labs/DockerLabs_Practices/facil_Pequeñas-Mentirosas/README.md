@@ -85,5 +85,5 @@ _Fuente API oficial dockerlabs.es (49 writeups) + 3 de índices previos._
 _Índices previos (no en la API actual):_
 
 |  |  | MykeMR | 📝 |  | https://mykemr.github.io/Peque%C3%B1as-Mentirosas ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-|  |  | buy7or | 📝 |  | https://buy7or.github.io/machines/Pequenas-Mentirosas |
-|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-pequenas-mentirosas |
+|  |  | buy7or | 📝 |  | https://buy7or.github.io/machines/Pequenas-Mentirosas ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-pequenas-mentirosas ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |

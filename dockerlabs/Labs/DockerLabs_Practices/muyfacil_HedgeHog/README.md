@@ -89,7 +89,7 @@ _Fuente API oficial dockerlabs.es (65 writeups) + 4 de índices previos._
 | 55 | 4803 | borazuwarah | 📝 | 2026-08-05 | https://seguridad.pabloramirez.es/writeup.html?id=15 |
 | 56 | 4911 | d1egu1nh10 | 📝 | 2026-08-12 | https://github.com/ddrf70/Cibersecurity-WriteUps/blob/main/hedgehog.md |
 | 57 | 4924 | victor | 📝 | 2026-08-13 | https://github.com/VictorGlass/DockerLabs-Writeups/tree/main/muy-facil/Hedgehog |
-| 58 | 5023 | Hnnbe | 📝 | 2026-08-27 | https://github.com/BRkXCH/DockerLabs-Writeups/blob/main/Maquinas/MuyFacil/Hedgehog/README.md |
+| 58 | 5023 | Hnnbe | 📝 | 2026-08-27 | https://github.com/BRkXCH/DockerLabs-Writeups/blob/main/Maquinas/MuyFacil/Hedgehog/README.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 59 | 5032 | osdanfx | 📝 | 2026-08-28 | https://github.com/osdan/DockerLabs-WriteUps/blob/main/Very%20Easy/HedgeHog.md |
 | 60 | 5064 | kaskamilla | 📝 | 2026-09-01 | https://github.com/kaskamilla/dockerlabs-writeups/blob/main/HedgeHog/README.md |
 | 61 | 5120 | Cosmos | 📝 | 2026-09-11 | https://github.com/jloffsec/writeups/tree/main/Dockerlabs/Hedgehog |
@@ -103,4 +103,4 @@ _Índices previos (no en la API actual):_
 |  |  | Enciall | 📝 |  | https://github.com/Enciall/dockerlabs/blob/main/hedgehog.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | Shinki | 📝 |  | https://app.gitbook.com/o/wY7LtUP9ot9AVA1Nstx4/s/tgtRbXiV3TKrR36CLHEu/writeups/quickstart/maquinas-muy-faciles/hedgehog-writeup |
 |  |  | Shinki | 📝 |  | https://app.gitbook.com/o/wY7LtUP9ot9AVA1Nstx4/s/tgtRbXiV3TKrR36CLHEu/writeups/quickstart/maquinas-muy-faciles/hedgehog-writeup |
-|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-hedgehog |
+|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-hedgehog ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |

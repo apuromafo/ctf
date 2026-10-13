@@ -105,8 +105,8 @@ _Índices previos (no en la API actual):_
 |  |  | TBrux | 📝 |  | https://github.com/TBrux/DOCKERLABS/blob/main/WalkingCMS.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | JuanR | 📝 |  | https://online.publuu.com/516647/1166057 ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | Romy | 📝 |  | https://github.com/Romyy1/Obsidian/blob/main/Mi%20Aprendimiento/DockerLabs/WalkingCMS.pdf ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-|  |  | rodsteph | 📝 |  | https://rainherz.github.io/rodsteph/posts/Dockerlabs-Writeup-O+WalkingCMS |
-|  |  | Yw4rf | 📝 |  | https://yw4rf.vercel.app/posts/dockerlabs/machine-trust |
+|  |  | rodsteph | 📝 |  | https://rainherz.github.io/rodsteph/posts/Dockerlabs-Writeup-O+WalkingCMS ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+|  |  | Yw4rf | 📝 |  | https://yw4rf.vercel.app/posts/dockerlabs/machine-trust ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | MykeMR | 📝 |  | https://mykemr.github.io/Walkingcms ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-|  |  | jidu | 🎥 |  | https://angelcorral2021.github.io/maquinas/post-6 |
+|  |  | jidu | 🎥 |  | https://angelcorral2021.github.io/maquinas/post-6 ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | billy el calvo | 📝 |  | https://github.com/DiegoMoraB/DockerLabs-Writeups/blob/main/Categoria%20-%20Facil/WalkingCMS.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |

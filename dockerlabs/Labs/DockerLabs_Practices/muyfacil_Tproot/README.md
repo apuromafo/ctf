@@ -89,7 +89,7 @@ _Fuente API oficial dockerlabs.es (70 writeups) + 4 de índices previos._
 | 55 | 4809 | PlasysX | 🎥 | 2026-08-05 | https://www.youtube.com/watch?v=fs5zlg40_Q0 |
 | 56 | 4892 | Assassin | 📝 | 2026-08-11 | https://github.com/EAguilar87/Mis-DockerLabs/blob/main/tproot.pdf |
 | 57 | 4965 | ro0tk1D | 🎥 | 2026-08-21 | https://app.notion.com/p/3c02690bd21680379915c0ce5106a395?source=copy_link |
-| 58 | 4996 | CLOWNCYBER | 📝 | 2026-08-24 | https://github.com/CLOWNCYBER/Cybersecurity-Labs/blob/main/Dockkerlabs/Tproot.md |
+| 58 | 4996 | CLOWNCYBER | 📝 | 2026-08-24 | https://github.com/CLOWNCYBER/Cybersecurity-Labs/blob/main/Dockkerlabs/Tproot.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 59 | 5004 | DaiGeass | 📝 | 2026-08-24 | https://github.com/DaiGeass/Pentest-practico/blob/main/DockerLabs/Tproot/Tproot.md |
 | 60 | 5028 | kaskamilla | 📝 | 2026-08-27 | https://github.com/kaskamilla/dockerlabs-writeups/blob/main/Tproot/README.md |
 | 61 | 5039 | Hnnbe | 📝 | 2026-08-31 | https://github.com/BRkXCH/DockerLabs-Writeups/blob/main/Maquinas/MuyFacil/Tproot/Tproot.md |
@@ -105,7 +105,7 @@ _Fuente API oficial dockerlabs.es (70 writeups) + 4 de índices previos._
 
 _Índices previos (no en la API actual):_
 
-|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-tproot |
+|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-tproot ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | Caan31 | 📝 |  | https://github.com/Caan31/Maquinas_DockerLabs/blob/master/MAQUINA_TPROOT.pdf ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | Rick Alvarez | 📝 |  | https://lordcodigo.blogspot.com/2025/06/resolucion-de-la-maquina-tproot.html ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | JuanFranco | 📝 |  | https://drive.google.com/file/d/1vuT1nZwpbjBe1kqalp_cOaLoH5R06suk/view?usp=sharing ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |

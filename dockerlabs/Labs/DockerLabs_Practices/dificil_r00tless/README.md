@@ -40,6 +40,6 @@ _Fuente API oficial dockerlabs.es (5 writeups) + 3 de índices previos._
 
 _Índices previos (no en la API actual):_
 
-|  |  | murrusko | 📝 |  | https://murrusko.github.io/posts/r00tless |
+|  |  | murrusko | 📝 |  | https://murrusko.github.io/posts/r00tless ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | darksblack | 📝 |  | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/r00tless |
 |  |  | maciiii___ | 📝 |  | https://github.com/Maciferna/DockerLabs/blob/main/maquina-r00tless/r00tless.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |

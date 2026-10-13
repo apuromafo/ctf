@@ -51,5 +51,5 @@ _Índices previos (no en la API actual):_
 
 |  |  | darksblack | 📝 |  | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/report ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | maciiii___ | 📝 |  | https://github.com/Maciferna/DockerLabs/blob/main/maquina-Report/report.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-report |
+|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-report ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | victorCybsec | 📝 |  | https://github.com/victorCybsec/PwnVault/blob/main/WRITE%20UPS/DOCKERLABS/MEDIO/Report.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |

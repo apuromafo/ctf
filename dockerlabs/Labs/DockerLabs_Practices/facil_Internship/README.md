@@ -59,4 +59,4 @@ _Fuente API oficial dockerlabs.es (24 writeups) + 1 de índices previos._
 
 _Índices previos (no en la API actual):_
 
-|  |  | Yw4rf | 📝 |  | https://yw4rf.vercel.app/posts/dockerlabs/internship |
+|  |  | Yw4rf | 📝 |  | https://yw4rf.vercel.app/posts/dockerlabs/internship ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |

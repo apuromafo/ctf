@@ -82,6 +82,6 @@ _Índices previos (no en la API actual):_
 
 |  |  | Rick Alvarez | 📝 |  | https://lordcodigo.blogspot.com/2024/06/resolucion-de-la-maquina-secretjenkins.html ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | Alv-fh | 📝 |  | https://github.com/Alv-fh/Dockerlabs_machines_writeups/blob/main/SecretJenkins.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-|  |  | rodsteph | 📝 |  | https://rainherz.github.io/rodsteph/posts/Dockerlabs-Writeup-SecretJenkins |
+|  |  | rodsteph | 📝 |  | https://rainherz.github.io/rodsteph/posts/Dockerlabs-Writeup-SecretJenkins ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | MykeMR | 📝 |  | https://mykemr.github.io/SecretJenkins ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | Bandit0 | 📝 |  | https://github.com/8andit0/BanditBox/blob/main/Maquinas%20De%20Dockerlabs/Maquinas%20Faciles/SecretJenkins.md |

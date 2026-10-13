@@ -85,4 +85,4 @@ _Fuente API oficial dockerlabs.es (44 writeups) + 1 de índices previos._
 
 _Índices previos (no en la API actual):_
 
-|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-consolelog |
+|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-consolelog ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |

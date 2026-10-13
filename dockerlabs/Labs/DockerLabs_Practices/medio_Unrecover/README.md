@@ -47,5 +47,5 @@ _Fuente API oficial dockerlabs.es (12 writeups) + 2 de índices previos._
 
 _Índices previos (no en la API actual):_
 
-|  |  | incommatose | 📝 |  | https://incommatose.github.io/Unrecover-Writeup |
+|  |  | incommatose | 📝 |  | https://incommatose.github.io/Unrecover-Writeup ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | incommatose | 📝 |  | https://incommatose.github.io/Unrecover-Dockerlabs-Writeup |

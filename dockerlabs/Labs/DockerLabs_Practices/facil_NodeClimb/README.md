@@ -90,7 +90,7 @@ _Fuente API oficial dockerlabs.es (50 writeups) + 4 de índices previos._
 
 _Índices previos (no en la API actual):_
 
-|  |  | murrusko | 📝 |  | https://murrusko.github.io/posts/nodeclimb |
+|  |  | murrusko | 📝 |  | https://murrusko.github.io/posts/nodeclimb ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | Alv-fh | 📝 |  | https://alv-fh.gitbook.io/main/writeups/dockerlabs_index/nodeclimb ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | MykeMR | 📝 |  | https://mykemr.github.io/NodeClimb ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-nodeclimb |
+|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-nodeclimb ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |

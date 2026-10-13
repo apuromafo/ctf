@@ -139,12 +139,12 @@ _Fuente API oficial dockerlabs.es (122 writeups) + 14 de índices previos._
 | 105 | 4713 | D4Nyos | 📝 | 2026-07-23 | https://github.com/d4nysj/Dockerlabs/blob/main/Muy%20Facil/Break%20My%20SSH.md |
 | 106 | 4726 | Chechito01010101 | 📝 | 2026-07-23 | https://github.com/Chechito01010101/dockerlabs-writeups/blob/main/Muy%20F%C3%A1cil/BreakMySSH.pdf |
 | 107 | 4771 | d4nok | 📝 | 2026-07-27 | https://docs.google.com/document/d/1jckvI58X7b_MgDb7IFhD5YU07LdL2-hDiasbpVxrQi8/edit?usp=sharing |
-| 108 | 4817 | arcanis | 📝 | 2026-08-08 | https://github.com/CARLOSGRCIAGRCIA/Dockerlabs/blob/main/veryEasy/BreakMySSH.md |
+| 108 | 4817 | arcanis | 📝 | 2026-08-08 | https://github.com/CARLOSGRCIAGRCIA/Dockerlabs/blob/main/veryEasy/BreakMySSH.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 109 | 4904 | d1egu1nh10 | 📝 | 2026-08-11 | https://github.com/ddrf70/Cibersecurity-WriteUps/blob/main/breakmyssh.md |
 | 110 | 4931 | GerManInTheMiddle | 📝 | 2026-08-13 | https://drive.google.com/file/d/1MHEwXqEGFyQiy7VCt-ZmXXwDgRAFBlk6/view?usp=sharing |
 | 111 | 4945 | kaskamilla | 📝 | 2026-08-16 | https://github.com/kaskamilla/dockerlabs-writeups/blob/main/BreakMySSH/README.md |
 | 112 | 4985 | ro0tk1D | 📝 | 2026-08-21 | https://app.notion.com/p/BreakMySSH-3c22690bd216808bacbcf39b33ef3153?source=copy_link |
-| 113 | 5017 | Hnnbe | 📝 | 2026-08-27 | https://github.com/hnnbe/DockerLabs-Writeups/blob/main/Maquinas/MuyFacil/BreakMySSH/README.md |
+| 113 | 5017 | Hnnbe | 📝 | 2026-08-27 | https://github.com/hnnbe/DockerLabs-Writeups/blob/main/Maquinas/MuyFacil/BreakMySSH/README.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 114 | 5031 | osdanfx | 📝 | 2026-08-28 | https://github.com/osdan/DockerLabs-WriteUps/blob/main/Very%20Easy/BreakMySSH.md |
 | 115 | 5106 | borazuwarah | 📝 | 2026-09-11 | https://seguridad.pabloramirez.es/writeup.php?id=65 |
 | 116 | 5118 | Cosmos | 📝 | 2026-09-11 | https://github.com/jloffsec/writeups/tree/main/Dockerlabs/Breakmyssh |
@@ -161,13 +161,13 @@ _Índices previos (no en la API actual):_
 |  |  | JuanR | 📝 |  | https://online.publuu.com/516647/1159026 ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | 4k4m1m3 | 📝 |  | https://4k4m1m3.github.io/blog/CTF-Dockerlabs-Breakmyssh ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | ANAKIN | 📝 |  | https://github.com/1A2N6K7/DockerLabs-WriteUps/blob/main/BreakMySSH.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-|  |  | rodsteph | 📝 |  | https://rainherz.github.io/rodsteph/posts/Dockerlabs-Writeup-BreakMySSH |
+|  |  | rodsteph | 📝 |  | https://rainherz.github.io/rodsteph/posts/Dockerlabs-Writeup-BreakMySSH ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | Enciall | 📝 |  | https://github.com/Enciall/dockerlabs/blob/main/BreakMySSH.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-|  |  | Yw4rf | 📝 |  | https://yw4rf.vercel.app/posts/dockerlabs/machine-breakmyssh |
+|  |  | Yw4rf | 📝 |  | https://yw4rf.vercel.app/posts/dockerlabs/machine-breakmyssh ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | Shinki | 📝 |  | https://app.gitbook.com/o/wY7LtUP9ot9AVA1Nstx4/s/tgtRbXiV3TKrR36CLHEu/writeups/quickstart/breakmyssh-writeup |
 |  |  | Shinki | 📝 |  | https://app.gitbook.com/o/wY7LtUP9ot9AVA1Nstx4/s/tgtRbXiV3TKrR36CLHEu/writeups/quickstart/maquinas-muy-faciles/breakmyssh-writeup |
 |  |  | Shinki | 📝 |  | https://app.gitbook.com/o/wY7LtUP9ot9AVA1Nstx4/s/tgtRbXiV3TKrR36CLHEu/writeups/quickstart/maquinas-muy-faciles/breakmyssh-writeup |
-|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-breakmyssh |
+|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-breakmyssh ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | Xavis3c | 📝 |  | https://elyoxsecurity.com/maquina-breakmyssh |
 |  |  | Hector423 | 📝 |  | https://github.com/Hector423/Dockerlabs/blob/main/breakmySSH.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | nacsan | 📝 |  | https://nacsan.com/maquina-breakmyssh-muy-facil/?ref=home-nacsan-newsletter |

@@ -45,5 +45,5 @@ _Fuente API oficial dockerlabs.es (10 writeups) + 2 de índices previos._
 
 _Índices previos (no en la API actual):_
 
-|  |  | HYH | 📝 |  | https://www.hyhforever.top/dockerlabs-bicho |
-|  |  | hyhforever | 📝 |  | https://www.hyhforever.top/dockerlabs-bicho |
+|  |  | HYH | 📝 |  | https://www.hyhforever.top/dockerlabs-bicho ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+|  |  | hyhforever | 📝 |  | https://www.hyhforever.top/dockerlabs-bicho ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |

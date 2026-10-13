@@ -134,7 +134,7 @@ _Fuente API oficial dockerlabs.es (113 writeups) + 12 de índices previos._
 | 100 | 4966 | nombredeusuario | 📝 | 2026-08-21 | https://gist.github.com/costantiniconrado/61c0277a6e75f4ec9ecd69e5e49a053e |
 | 101 | 4983 | ro0tk1D | 📝 | 2026-08-21 | https://app.notion.com/p/borazuwarah-3c22690bd216807c8499e13c1815984d?source=copy_link |
 | 102 | 4999 | victor | 📝 | 2026-08-24 | https://github.com/VictorGlass/DockerLabs-Writeups/tree/main/muy-facil/BorazuwarahCTF |
-| 103 | 5024 | Hnnbe | 📝 | 2026-08-27 | https://github.com/BRkXCH/DockerLabs-Writeups/blob/main/Maquinas/MuyFacil/BorazuwarahCTF/README.md |
+| 103 | 5024 | Hnnbe | 📝 | 2026-08-27 | https://github.com/BRkXCH/DockerLabs-Writeups/blob/main/Maquinas/MuyFacil/BorazuwarahCTF/README.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 104 | 5042 | kaskamilla | 📝 | 2026-08-31 | https://github.com/kaskamilla/dockerlabs-writeups/blob/main/BorazuwarahCTF/README.md |
 | 105 | 5057 | borazuwarah | 📝 | 2026-08-31 | https://seguridad.pabloramirez.es/writeup.php?id=58 |
 | 106 | 5114 | Cosmos | 📝 | 2026-09-11 | https://github.com/jloffsec/writeups/tree/main/Dockerlabs/BorazuwarahCTF |
@@ -150,7 +150,7 @@ _Índices previos (no en la API actual):_
 
 |  |  | 4k4m1m3 | 📝 |  | https://4k4m1m3.github.io/blog/CTF-Dockerlabs-BorazuwarahCTF ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | Romy | 📝 |  | https://github.com/Romyy1/Obsidian/blob/main/Mi%20Aprendimiento/DockerLabs/borazuwarahCTF.pdf ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-|  |  | rodsteph | 📝 |  | https://rainherz.github.io/rodsteph/posts/Dockerlabs-Writeup-BorazuwarahCTF |
+|  |  | rodsteph | 📝 |  | https://rainherz.github.io/rodsteph/posts/Dockerlabs-Writeup-BorazuwarahCTF ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | TBrux | 📝 |  | https://github.com/TBrux/DOCKERLABS/blob/main/BorazuwarahCTF.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | maciiii___ | 📝 |  | https://github.com/Maciferna/DockerLabs/blob/main/maquina-borazuwarahctf/borazuwarahctf.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | Enciall | 📝 |  | https://github.com/Enciall/dockerlabs/blob/main/BorazuwarahCTF.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
@@ -158,5 +158,5 @@ _Índices previos (no en la API actual):_
 |  |  | Shinki | 📝 |  | https://app.gitbook.com/o/wY7LtUP9ot9AVA1Nstx4/s/tgtRbXiV3TKrR36CLHEu/writeups/quickstart/maquinas-muy-faciles/borazuwarahctf-writeup |
 |  |  | MatthyGD | 🎥 |  | https://www.youtube.com/watch?v=7yaVc-dGe14 |
 |  |  | MatthyGD | 🎥 |  | https://www.youtube.com/watch?v=7yaVc-dGe14 |
-|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-borazuwarahctf |
+|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-borazuwarahctf ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | Xavis3c | 📝 |  | https://elyoxsecurity.com/maquina-borazuwarahctf |

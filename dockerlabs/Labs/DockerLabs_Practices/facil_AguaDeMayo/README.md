@@ -95,5 +95,5 @@ _Índices previos (no en la API actual):_
 |  |  | MarckWeb | 📝 |  | https://marckweb.github.io/writeUps/AguaDeMayo/Maquina_agua_de_mayo.html ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | TBrux | 📝 |  | https://github.com/TBrux/DOCKERLABS/blob/main/AguaDeMayo.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | darksblack | 📝 |  | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/aguademayo.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-aguademayo |
+|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-aguademayo ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | DpCoding | 📝 |  | https://dpcoding.com/dockerlabs-maquina-agua-de-mayo |

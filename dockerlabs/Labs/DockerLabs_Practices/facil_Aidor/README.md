@@ -36,7 +36,7 @@ _Fuente API oficial dockerlabs.es (25 writeups) + 0 de índices previos._
 | 3 | 3432 | incommatose | 📝 | 2025-11-22 | https://incommatosereal.github.io/Aidor-Dockerlabs-Writeup |
 | 4 | 3433 | Pyth0nK1d | 📝 | 2025-11-22 | https://pyth0nk1d.medium.com/dockerlabs-writeup-aidor-spanish-e93f598aec8c |
 | 5 | 3434 | l-craft-l | 📝 | 2025-11-22 | https://github.com/l-craft-l/Dockerlabs-Writeups/blob/main/easy/Aidor/Spanish/Maquina%20Aidor%20-%20Dockerlabs.md |
-| 6 | 3440 | 0xR0_ | 📝 | 2025-11-23 | https://pylonet.gitbook.io/notes/writeups/dockerlabs/aidor |
+| 6 | 3440 | 0xR0_ | 📝 | 2025-11-23 | https://pylonet.gitbook.io/notes/writeups/dockerlabs/aidor ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 7 | 3446 | d1se0 | 📝 | 2025-11-24 | https://dise0.gitbook.io/h4cker_b00k/ctf/dockerlabs/aidor-dockerlabs-easy |
 | 8 | 3475 | letalandroid | 🎥 | 2025-11-26 | https://www.youtube.com/watch?v=SqV71xoKTVI |
 | 9 | 3489 | mikisbd | 📝 | 2025-11-27 | https://drive.google.com/file/d/1ph7MoGbX-vcljZ7sKbt-hfH2so-F0Qux/view?usp=sharing |

@@ -38,5 +38,5 @@ _Fuente API oficial dockerlabs.es (3 writeups) + 2 de índices previos._
 
 _Índices previos (no en la API actual):_
 
-|  |  | murrusko | 📝 |  | https://murrusko.github.io/posts/RoadToOlympus |
+|  |  | murrusko | 📝 |  | https://murrusko.github.io/posts/RoadToOlympus ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | darksblack | 📝 |  | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/Road%20to%20Olympus ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |

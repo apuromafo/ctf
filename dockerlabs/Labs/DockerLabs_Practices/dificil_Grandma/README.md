@@ -38,4 +38,4 @@ _Fuente API oficial dockerlabs.es (3 writeups) + 1 de índices previos._
 
 _Índices previos (no en la API actual):_
 
-|  |  | s4botai | 📝 |  | https://s4botai.github.io/DockerLabs-Grandma-writeup |
+|  |  | s4botai | 📝 |  | https://s4botai.github.io/DockerLabs-Grandma-writeup ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |

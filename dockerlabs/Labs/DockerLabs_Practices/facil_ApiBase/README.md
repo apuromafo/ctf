@@ -57,5 +57,5 @@ _Fuente API oficial dockerlabs.es (22 writeups) + 2 de índices previos._
 
 _Índices previos (no en la API actual):_
 
-|  |  | Yw4rf | 📝 |  | https://yw4rf.vercel.app/posts/dockerlabs/apibase |
+|  |  | Yw4rf | 📝 |  | https://yw4rf.vercel.app/posts/dockerlabs/apibase ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | Alx SG | 📝 |  | https://github.com/AlxSAGA/Practical-Hacking-Labs/blob/main/01-DockerLabs/02-Facil/18-AppiBAse.md |

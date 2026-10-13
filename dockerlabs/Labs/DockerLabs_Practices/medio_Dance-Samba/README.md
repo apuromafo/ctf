@@ -71,4 +71,4 @@ _Índices previos (no en la API actual):_
 |  |  | Gomu | 📝 |  | https://github.com/Ezequiel59/Machines_hacked/blob/dockerlabs/dance-samba.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | victorCybsec | 📝 |  | https://github.com/victorCybsec/PwnVault/blob/main/WRITE%20UPS/DOCKERLABS/MEDIO/Dance-Samba.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | 1gnotus | 📝 |  | https://1gnotus.gitbook.io/ignotus_pwn/dockerlabs/writeup/maquina-dance-samba-enum4linux-smbclient-ssh-keygen-id_rsa-privesc-file-1 ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-|  |  | Nyx | 📝 |  | https://maxibarcia.github.io/write-up/privilege%20escalation/laboratory/dockerlabs/Dance-Samba-DockerLabs |
+|  |  | Nyx | 📝 |  | https://maxibarcia.github.io/write-up/privilege%20escalation/laboratory/dockerlabs/Dance-Samba-DockerLabs ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |

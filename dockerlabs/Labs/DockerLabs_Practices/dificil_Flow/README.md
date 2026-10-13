@@ -42,4 +42,4 @@ _Fuente API oficial dockerlabs.es (6 writeups) + 2 de índices previos._
 _Índices previos (no en la API actual):_
 
 |  |  | darksblack | 📝 |  | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/flow.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-flow |
+|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-flow ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |

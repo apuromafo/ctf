@@ -128,12 +128,12 @@ _Fuente API oficial dockerlabs.es (108 writeups) + 15 de índices previos._
 | 94 | 4752 | IHATEFW | 🎥 | 2026-07-26 | https://www.youtube.com/watch?v=D8mci-U0RTE&t=235s |
 | 95 | 4774 | ro0tk1D | 📝 | 2026-07-31 | https://possible-koi-073.notion.site/Vacaciones-3ab2690bd216808f8437db10a3b5bde0?source=copy_link |
 | 96 | 4775 | ro0tk1D | 📝 | 2026-07-31 | https://possible-koi-073.notion.site/Vacaciones-3ab2690bd216808f8437db10a3b5bde0 |
-| 97 | 4816 | arcanis | 📝 | 2026-08-08 | https://github.com/CARLOSGRCIAGRCIA/Dockerlabs/blob/main/veryEasy/vacaciones.md |
-| 98 | 4903 | borazuwarah | 📝 | 2026-08-11 | https://seguridad.pabloramirez.es/admin-estadisticas.html |
+| 97 | 4816 | arcanis | 📝 | 2026-08-08 | https://github.com/CARLOSGRCIAGRCIA/Dockerlabs/blob/main/veryEasy/vacaciones.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+| 98 | 4903 | borazuwarah | 📝 | 2026-08-11 | https://seguridad.pabloramirez.es/admin-estadisticas.html ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 99 | 4929 | GerManInTheMiddle | 📝 | 2026-08-13 | https://drive.google.com/file/d/1cJbRpvSTLatptTNSF0mz8rZ5CPS7Rd67/view?usp=sharing |
 | 100 | 4940 | PlasysX | 🎥 | 2026-08-16 | https://www.youtube.com/watch?v=JTOiXJ82nN4 |
 | 101 | 4949 | victor | 📝 | 2026-08-16 | https://github.com/VictorGlass/DockerLabs-Writeups/tree/main/muy-facil/Vacaciones |
-| 102 | 5018 | Hnnbe | 📝 | 2026-08-27 | https://github.com/hnnbe/DockerLabs-Writeups/blob/main/Maquinas/MuyFacil/Vacaciones/README.md |
+| 102 | 5018 | Hnnbe | 📝 | 2026-08-27 | https://github.com/hnnbe/DockerLabs-Writeups/blob/main/Maquinas/MuyFacil/Vacaciones/README.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 | 103 | 5041 | kaskamilla | 📝 | 2026-08-31 | https://github.com/kaskamilla/dockerlabs-writeups/blob/main/Vacaciones/README.md |
 | 104 | 5105 | Cosmos | 📝 | 2026-09-11 | https://github.com/jloffsec/writeups/tree/main/Dockerlabs/Vacaciones |
 | 105 | 5144 | cristobalmaier | 📝 | 2026-09-16 | https://github.com/cristobalmaier/pentesting-labs/blob/main/DockerLabs/Muy%20Facil/Vacaciones.md |
@@ -149,12 +149,12 @@ _Índices previos (no en la API actual):_
 |  |  | JuanR | 📝 |  | https://online.publuu.com/516647/1163337 ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | Romy | 📝 |  | https://github.com/Romyy1/Obsidian/blob/main/Mi%20Aprendimiento/DockerLabs/Vacaciones.pdf ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | Alv-fh | 📝 |  | https://github.com/Alv-fh/Dockerlabs_machines_writeups/blob/main/Vacaciones.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-|  |  | rodsteph | 📝 |  | https://rainherz.github.io/rodsteph/posts/Dockerlabs-Writeup-Vacaciones |
+|  |  | rodsteph | 📝 |  | https://rainherz.github.io/rodsteph/posts/Dockerlabs-Writeup-Vacaciones ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | Rick Alvarez | 📝 |  | https://lordcodigo.blogspot.com/2024/08/resolucion-de-la-maquina-vacaciones.html ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | KaliGK | 📝 |  | https://github.com/KaliGK/CyberSecurity |
 |  |  | xyveroz | 📝 |  | https://xyveroz.gitbook.io/xyveroz/ctf/dockerlabs/muy-facil/vacaciones ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | Shinki | 📝 |  | https://app.gitbook.com/o/wY7LtUP9ot9AVA1Nstx4/s/tgtRbXiV3TKrR36CLHEu/writeups/quickstart/maquinas-muy-faciles/vacaciones-writeup |
 |  |  | Shinki | 📝 |  | https://app.gitbook.com/o/wY7LtUP9ot9AVA1Nstx4/s/tgtRbXiV3TKrR36CLHEu/writeups/quickstart/maquinas-muy-faciles/vacaciones-writeup |
-|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-vacaciones |
+|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-vacaciones ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | Caan31 | 📝 |  | https://github.com/Caan31/Maquinas_DockerLabs/blob/master/MAQUINA_VACACIONES.pdf ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-|  |  | Yorve.csec | 📝 |  | https://yorve.github.io/secnotes/DockerLabs-Vacaciones |
+|  |  | Yorve.csec | 📝 |  | https://yorve.github.io/secnotes/DockerLabs-Vacaciones ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |

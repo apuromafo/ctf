@@ -97,4 +97,4 @@ _Índices previos (no en la API actual):_
 |  |  | TBrux | 📝 |  | https://github.com/TBrux/DOCKERLABS/blob/main/Move.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | Romy | 📝 |  | https://github.com/Romyy1/Obsidian/blob/main/Mi%20Aprendimiento/DockerLabs/Move.pdf ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | MykeMR | 📝 |  | https://mykemr.github.io/Move ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-move |
+|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-move ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |

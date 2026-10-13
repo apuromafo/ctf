@@ -79,7 +79,7 @@ _Fuente API oficial dockerlabs.es (39 writeups) + 5 de índices previos._
 
 _Índices previos (no en la API actual):_
 
-|  |  | murrusko | 📝 |  | https://murrusko.github.io/posts/los40ladrones |
+|  |  | murrusko | 📝 |  | https://murrusko.github.io/posts/los40ladrones ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | TBrux | 📝 |  | https://github.com/TBrux/DOCKERLABS/blob/main/Los%2040%20Ladrones.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | darksblack | 📝 |  | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/40ladrones ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | MykeMR | 📝 |  | https://mykemr.github.io/Los_40_Ladrones ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |

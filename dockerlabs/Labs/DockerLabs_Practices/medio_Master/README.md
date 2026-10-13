@@ -52,5 +52,5 @@ _Fuente API oficial dockerlabs.es (17 writeups) + 2 de índices previos._
 
 _Índices previos (no en la API actual):_
 
-|  |  | murrusko | 📝 |  | https://murrusko.github.io/posts/master |
+|  |  | murrusko | 📝 |  | https://murrusko.github.io/posts/master ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | darksblack | 📝 |  | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/master ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |

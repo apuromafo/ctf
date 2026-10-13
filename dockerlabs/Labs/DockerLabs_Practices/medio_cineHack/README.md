@@ -47,5 +47,5 @@ _Fuente API oficial dockerlabs.es (12 writeups) + 2 de índices previos._
 
 _Índices previos (no en la API actual):_
 
-|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-cinehack |
+|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-cinehack ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | victorCybsec | 📝 |  | https://github.com/victorCybsec/PwnVault/blob/main/WRITE%20UPS/DOCKERLABS/MEDIO/CineHack.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |

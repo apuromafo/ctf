@@ -71,5 +71,5 @@ _Fuente API oficial dockerlabs.es (36 writeups) + 2 de índices previos._
 
 _Índices previos (no en la API actual):_
 
-|  |  | murrusko | 📝 |  | https://murrusko.github.io/posts/chocolatefire |
+|  |  | murrusko | 📝 |  | https://murrusko.github.io/posts/chocolatefire ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | darksblack | 📝 |  | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/chocolatefire ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |

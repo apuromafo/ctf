@@ -41,5 +41,5 @@ _Fuente API oficial dockerlabs.es (5 writeups) + 3 de índices previos._
 _Índices previos (no en la API actual):_
 
 |  |  | darksblack | 📝 |  | https://github.com/DarksBlackSk/writeupdockerlabs/blob/main/norc.md |
-|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-norc |
+|  |  | Litio7 | 📝 |  | https://litio7.github.io/posts/dockerlabs-writeup-norc ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | incommatose | 📝 |  | https://incommatose.github.io/Norc-Dockerlabs-Writeup |

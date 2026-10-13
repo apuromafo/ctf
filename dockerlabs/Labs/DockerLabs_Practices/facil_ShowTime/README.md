@@ -78,5 +78,5 @@ _Índices previos (no en la API actual):_
 
 |  |  | maciiii___ | 📝 |  | https://github.com/Maciferna/DockerLabs/blob/main/maquina-showtime/SHOWTIME.md ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | MykeMR | 📝 |  | https://mykemr.github.io/ShowTime ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
-|  |  | jidu | 🎥 |  | https://angelcorral2021.github.io/maquinas/post-7 |
+|  |  | jidu | 🎥 |  | https://angelcorral2021.github.io/maquinas/post-7 ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
 |  |  | X02_Security | 📝 |  | https://galizaragozadev.gitbook.io/galizaragozadev-docs/dockerlabs/showtime-easy-dockerlabs ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |

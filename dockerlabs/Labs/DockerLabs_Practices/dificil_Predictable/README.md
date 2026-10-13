@@ -41,5 +41,5 @@ _Fuente API oficial dockerlabs.es (6 writeups) + 2 de índices previos._
 
 _Índices previos (no en la API actual):_
 
-|  |  | c4rta | 📝 |  | https://ic4rta.github.io/docs/Dockerlabs/Predictable |
-|  |  | murrusko | 📝 |  | https://murrusko.github.io/posts/predictable |
+|  |  | c4rta | 📝 |  | https://ic4rta.github.io/docs/Dockerlabs/Predictable ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
+|  |  | murrusko | 📝 |  | https://murrusko.github.io/posts/predictable ⚠️ MUERTA (HTTP 404, verificado 2026-10-12) |
